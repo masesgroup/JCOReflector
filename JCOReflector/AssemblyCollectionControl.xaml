@@ -1,0 +1,45 @@
+﻿<ContentControl x:Class="MASES.C2JReflector.AssemblyCollectionControl"
+                x:Name="assemblyCollectionControl"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                 xmlns:local="clr-namespace:MASES.C2JReflector"
+                 mc:Ignorable="d">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Top" LastChildFill="False">
+            <Button Name="btnSelectAll" Content="Select all" Click="btnSelectAll_Click"/>
+            <Button Name="btnUnselectAll" Content="Unselect all" Click="btnUnselectAll_Click"/>
+            <Label Content="Total folders" />
+            <TextBox Text="{Binding ElementName=assemblyCollectionControl, Path=TotalFolders, Mode=OneWay}" VerticalContentAlignment="Center" IsReadOnly="True"/>
+        </DockPanel>
+    <ListView Name="propertyMapping" ItemsSource="{Binding ElementName=assemblyCollectionControl, Path=AssemblyDataCollection, Mode=TwoWay}" 
+              ScrollViewer.VerticalScrollBarVisibility="Auto" DockPanel.Dock="Bottom">
+        <ListView.View>
+            <GridView>
+                <GridViewColumn Width="AUTO">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsSelected}"/>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn Width="AUTO" Header="Framework">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Framework}" IsReadOnly="True"/>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn Width="AUTO" Header="AssemblyFullName">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding AssemblyFullName}" IsReadOnly="True"/>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+            </GridView>
+        </ListView.View>
+    </ListView>
+    </DockPanel>
+</ContentControl>

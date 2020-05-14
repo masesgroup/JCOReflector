@@ -1,0 +1,115 @@
+﻿<!--
+ MIT License
+
+ Copyright (c) 2020 MASES s.r.l.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+ -->
+
+<Window x:Class="MASES.C2JReflector.MainWindow"
+        x:Name="mainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MASES.C2JReflector"
+        mc:Ignorable="d" SizeToContent="WidthAndHeight">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Left" Name="commandPanel">
+            <GroupBox DockPanel.Dock="Top" Header="General settings">
+                <DockPanel MinHeight="30">
+                    <Label Content="Log Level" VerticalAlignment="Center" />
+                    <ComboBox Name="cbLogLevel" VerticalContentAlignment="Center"/>
+                    <ComboBox Name="cbTarget" ToolTip="Java version to use; NotSet means the same as JDK in JDK Folder" VerticalContentAlignment="Center"/>
+                    <Label Content="JDK folder" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+                    <TextBox Name="tbJDKFolder" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+                </DockPanel>
+            </GroupBox>
+            <GroupBox Header="Reflection generation" DockPanel.Dock="Top">
+                <DockPanel DockPanel.Dock="Top">
+                    <DockPanel DockPanel.Dock="Left">
+                        <DockPanel DockPanel.Dock="Top" MinHeight="30">
+                            <Label Content="Assembly name" VerticalAlignment="Center" MinWidth="120"/>
+                            <TextBox Name="tbAssembly" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+                        </DockPanel>
+                        <DockPanel DockPanel.Dock="Top" MinHeight="30">
+                            <Label Content="Destination folder" VerticalAlignment="Stretch" MinWidth="120"/>
+                            <TextBox Name="tbDestinationFolder" VerticalContentAlignment="Center" VerticalAlignment="Stretch" />
+                        </DockPanel>
+                        <DockPanel DockPanel.Dock="Bottom" MinHeight="30" LastChildFill="False">
+                            <Button Name="btnExecute" Content="Execute build..." MinWidth="100" Click="btnExecute_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+                            <Button Name="btnClear"  Content="Clear console..." MinWidth="100" Click="btnClear_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
+                            <Button Name="btnReset"  Content="Reset statistics..." MinWidth="100" Click="btnReset_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
+                        </DockPanel>
+                        <GroupBox DockPanel.Dock="Bottom" Header="Options">
+                            <DockPanel>
+                                <DockPanel DockPanel.Dock="Top" MinHeight="30">
+                                    <CheckBox Name="cbEnableSplitFolder" Content="Split by Assembly" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Split generated files in different foldernamed with assembly name"/>
+                                    <CheckBox Name="cbForceRebuildIfFolderExist" Content="Force Rebuild" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Force rebuild even if the assembly folder exists"/>
+                                    <CheckBox Name="cbUseParallel" Content="Use parallel build" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Use parallel build generation"/>
+                                    <CheckBox Name="cbDryRun" Content="Dry Run" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Do not write any file on disk"/>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Bottom" MinHeight="30">
+                                    <CheckBox Name="cbExportArray" Content="Array" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable arrays export"/>
+                                    <CheckBox Name="cbExportAbstract" Content="Abstract" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable abstract classes export"/>
+                                    <CheckBox Name="cbEnableInheritance" Content="Inheritance" IsChecked="False" IsEnabled="False" VerticalContentAlignment="Center" ToolTip="Enable inheritance"/>
+                                    <CheckBox Name="cbExportExceptions" Content="Exceptions" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable exceptions export"/>
+                                    <Label Content="Max Depth" VerticalContentAlignment="Center" ToolTip="Analyzing depth to search for exception; -1 means no limits"/>
+                                    <TextBox Name="tbMaxDepth" Text="{Binding ElementName=mainWindow, Path=MaxDepth, Mode=TwoWay}" ToolTip="Analyzing depth to search for exception; -1 means no limits"/>
+                                </DockPanel>
+                            </DockPanel>
+                        </GroupBox>
+                    </DockPanel>
+                </DockPanel>
+            </GroupBox>
+            <GroupBox Header="Build classes and JARs" DockPanel.Dock="Top">
+                <DockPanel>
+                    <DockPanel DockPanel.Dock="Top" LastChildFill="False" MinHeight="30">
+                        <Button Name="btnGetFolders" Content="Get folders..." Click="btnGetFolders_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
+                        <Button Name="btnBuild" Content="Build classes..." Click="btnBuild_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
+                        <Button Name="btnCreateJars" Content="Create JARs..." Click="btnCreateJars_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Top" MinHeight="30">
+                        <Label Content="JAR destination folder" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
+                        <TextBox Name="tbJarDestinationFolder" VerticalContentAlignment="Center" VerticalAlignment="Stretch" />
+                    </DockPanel>
+                    <local:AssemblyCollectionControl DockPanel.Dock="Bottom" AssemblyDataCollection="{Binding ElementName=mainWindow, Path=AssemblyDataCollection, Mode=TwoWay}"/>
+                </DockPanel>
+            </GroupBox>
+        </DockPanel>
+        <Grid DockPanel.Dock="Right" MinWidth="400">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="50*"/>
+            </Grid.RowDefinitions>
+            <GroupBox Grid.Row="0" Header="Report">
+                <TextBox IsReadOnly="True" Name="tbReport" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+            </GroupBox>
+            <GridSplitter Grid.Row="1" 
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Center"
+              ResizeDirection="Auto"
+              Height="5"/>
+            <GroupBox Grid.Row="2" Header="Console">
+                <TextBox DockPanel.Dock="Top" IsReadOnly="True" Name="tbConsole" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+            </GroupBox>
+        </Grid>
+    </DockPanel>
+</Window>

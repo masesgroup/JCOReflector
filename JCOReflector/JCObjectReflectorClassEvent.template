@@ -1,0 +1,15 @@
+    public STATIC_KEYWORDvoid addEVENT_NAME(EVENT_HANDLER_TYPE handler) throws Throwable {
+        try {
+            EVENT_OBJECT.RegisterEventListener("EVENT_NAME", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public STATIC_KEYWORDvoid removeEVENT_NAME(EVENT_HANDLER_TYPE handler) throws Throwable {
+        try {
+            EVENT_OBJECT.UnregisterEventListener("EVENT_NAME", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }

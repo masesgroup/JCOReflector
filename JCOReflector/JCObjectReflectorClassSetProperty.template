@@ -1,0 +1,7 @@
+    public STATIC_KEYWORDvoid setPROPERTY_NAME(PROPERTY_INPUTTYPE PROPERTY_INPUTNAME) throws Throwable {
+        try {
+            PROPERTY_OBJECT.Set("PROPERTY_NAME"PROPERTY_VALUE);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }

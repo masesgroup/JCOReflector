@@ -1,0 +1,14 @@
+    public STATIC_KEYWORDPROPERTY_OUTPUTTYPE[] getPROPERTY_NAME(PROPERTY_PARAMETERS) throws Throwable {
+        try {
+            ArrayList<PROPERTY_OUTPUTTYPE> resultingArrayList = new ArrayList<PROPERTY_OUTPUTTYPE>();
+            JCObject resultingObjects = (JCObject)PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new PROPERTY_OUTPUTTYPE(resultingObject));
+            }
+            PROPERTY_OUTPUTTYPE[] resultingArray = new PROPERTY_OUTPUTTYPE[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }

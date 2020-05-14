@@ -1,0 +1,7 @@
+    public STATIC_KEYWORDPROPERTY_OUTPUTTYPE getPROPERTY_NAME(PROPERTY_PARAMETERS) throws Throwable {
+        try {
+            return (PROPERTY_OUTPUTTYPE)PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }

@@ -1,0 +1,14 @@
+    public STATIC_KEYWORDMETHOD_RETURN_TYPE[] METHOD_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
+        try {
+            ArrayList<METHOD_RETURN_TYPE> resultingArrayList = new ArrayList<METHOD_RETURN_TYPE>();
+            JCObject resultingObjects = (JCObject)METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new METHOD_RETURN_TYPE(resultingObject));
+            }
+            METHOD_RETURN_TYPE[] resultingArray = new METHOD_RETURN_TYPE[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }

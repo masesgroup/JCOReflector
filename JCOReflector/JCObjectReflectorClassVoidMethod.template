@@ -1,0 +1,7 @@
+    public STATIC_KEYWORDvoid METHOD_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
+        try {
+            METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }

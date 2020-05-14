@@ -1,0 +1,8 @@
+# Compiled source #
+###################
+*.class
+
+# Intermediate files #
+###################
+*.filelist
+*.manifest

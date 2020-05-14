@@ -1,0 +1,16 @@
+    public STATIC_KEYWORDPROPERTY_OUTPUTTYPE[] getPROPERTY_NAME(PROPERTY_PARAMETERS) throws Throwable {
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            PROPERTY_OUTPUTTYPE[] resultingArray = new PROPERTY_OUTPUTTYPE[resultingArrayList.size()];
+			for(int indexPROPERTY_NAME = 0; indexPROPERTY_NAME < resultingArrayList.size(); indexPROPERTY_NAME++ ) {
+				resultingArray[indexPROPERTY_NAME] = (PROPERTY_OUTPUTTYPE)resultingArrayList.get(indexPROPERTY_NAME);
+			}
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }

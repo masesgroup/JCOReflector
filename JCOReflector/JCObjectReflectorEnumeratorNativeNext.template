@@ -1,0 +1,7 @@
+	public PACKAGE_INNER_CLASS_NAME next() {
+		try {
+			return (PACKAGE_INNER_CLASS_NAME)classInstance.next().toString();
+		} catch (Throwable jce) {
+			throw new java.util.NoSuchElementException(jce.getMessage());
+		}
+	}

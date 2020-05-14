@@ -1,0 +1,106 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>JCOReflector</AssemblyName>
+    <RootNamespace>MASES.C2JReflector</RootNamespace>
+    <Title>JCOReflector - Java class generator based on JCOBridge</Title>
+    <Description>JCOReflector - Java class generator based on JCOBridge</Description>
+    <Copyright>Copyright ©  MASES s.r.l. 2020</Copyright>
+    <Company>MASES s.r.l.</Company>
+    <Version>1.0.0.0</Version>
+    <Product>JCOReflector</Product>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TargetFrameworks>net461;netcoreapp3.1</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <OutputPath>..\bin\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+    <DefineConstants>$(DefineConstants);NET_CORE;</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="JCObjectReflectorClassEnumerable.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorClassEvent.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorClassNativeGetPropertyArray.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorClassNativeMethodArray.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorClassObjectGetPropertyArray.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorClassObjectMethodArray.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorEnumeratorNativeNext.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorEnumeratorObjectNext.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorEnumerator.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorObjectDelegateClass.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorNativeDelegateClass.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorNonVoidDelegateInterface.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorVoidDelegateInterface.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorVoidDelegateClass.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCOManifest.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorEnumFlags.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorThrowableClass.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorEnum.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorClass.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorClassNativeGetProperty.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorClassSetProperty.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorClassObjectMethod.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorClassNativeMethod.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorClassObjectGetProperty.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorClassVoidMethod.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JCObjectReflectorClassConstructor.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JCOBridge" Version="2.2.0" />
+  </ItemGroup>
+</Project>

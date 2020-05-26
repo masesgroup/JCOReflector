@@ -48,7 +48,7 @@ The basic and simple rules for the project are:
 
 This section guides you through submitting an enhancement suggestion for JCOReflector, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion and find related suggestions.
 
-Before creating enhancement suggestions, please check this list as you might find out that you don't need to create one. When you are creating an enhancement suggestion, please include as many details as possible.
+Before creating enhancement suggestions, please check this list as you might find out that you don't need to create one. When you are creating an enhancement suggestion, please include as many details as possible. Fill in [the template](PULL_REQUEST_TEMPLATE.md), including the steps that you imagine you would take if the feature you're requesting existed.
 
 ### How Do I Submit A (Good) Enhancement Suggestion?
 
@@ -73,7 +73,7 @@ Before creating bug reports, please check this list as you might find out that y
 
 ### How Do I Submit A (Good) Bug Report?
 
-Bugs are tracked as GitHub issues. Create an issue on that repository and provide the following information by filling in the template.
+Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/). Create an issue on that repository and provide the following information by filling in [the template](PULL_REQUEST_TEMPLATE.md).
 
 Explain the problem and include additional details to help maintainers reproduce the problem:
 

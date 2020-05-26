@@ -4,6 +4,8 @@ JCOReflector is a reflection engine which automatically writes Java classes usin
 The generated classes are based on the powerful [JCOBridge](https://www.jcobridge.com) engine and extends its use to simplify the use of .NET from Java(JVM).
 It was created internally from us to support our customers, now we made it available for everyone.
 
+This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.
+
 ## Scope of the project
 
 This project aims to create a set of Java (JVM) classes which mimic .NET (Framework/Core) conterparts.
@@ -116,4 +118,4 @@ For .NET Framework it is possible to execute:
 
 ## Reflected Assemblies
 
-The folder ![netreflected](/netreflected/src) contains all reflected classes.
+The folder [netreflected](/netreflected/src) contains all reflected classes.

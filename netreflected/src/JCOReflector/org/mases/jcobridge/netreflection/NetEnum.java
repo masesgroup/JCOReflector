@@ -28,7 +28,6 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import org.mases.jcobridge.*;
-import org.mases.jcobridge.netreflection.NetObject;
 
 /**
  * The base .NET class managing System.Enum, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}

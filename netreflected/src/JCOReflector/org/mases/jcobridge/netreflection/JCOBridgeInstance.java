@@ -36,15 +36,65 @@ import java.lang.reflect.*;
  * Manages all instances of {@link JCOBridge}
  * 
  */
-public final class JCOBridgeInstance {
+public final class JCOBridgeInstance implements IJCEventLog {
     static boolean _useFullname = false;
     static boolean _isDebug = false;
     static boolean _isLogging = false;
+    static IJCEventLog _logger = null;
+    static String _loggingFilename = "JCOReflector.log";
     static boolean _isMultiInstance = false;
     static boolean initialized = false;
     static Object synchObj = new Object();
     static HashMap<String, JCOBridge> bridgeInstances = new HashMap<String, JCOBridge>();
     static JCOBridge bridgeInstance = null;
+
+    BufferedWriter bw = null;
+    FileWriter fw = null;
+    String mfileName;
+
+    JCOBridgeInstance(String fileName) throws IOException {
+        mfileName = fileName;
+        fw = new FileWriter(mfileName);
+        bw = new BufferedWriter(fw);
+    }
+
+    /**
+     * Invoked when a fusion event happens.
+     * 
+     * @param msg The message associated
+     */
+    public void FusionLog(String msg) {
+        synchronized (synchObj) {
+            if (!_isLogging)
+                return;
+        }
+
+        try {
+            bw.write(msg);
+            bw.newLine();
+        } catch (IOException ioe) {
+            // nothing can do
+        }
+    }
+
+    /**
+     * Invoked when an event happens.
+     * 
+     * @param msg The message associated
+     */
+    public void EventLog(String msg) {
+        synchronized (synchObj) {
+            if (!_isLogging)
+                return;
+        }
+
+        try {
+            bw.write(msg);
+            bw.newLine();
+        } catch (IOException ioe) {
+            // nothing can do
+        }
+    }
 
     /**
      * Get UseFullAssemblyName state
@@ -100,15 +150,37 @@ public final class JCOBridgeInstance {
     /**
      * Set Logging state
      * <p>
-     * If the logging operations are started on a {@link JCOBridge} instance, it is
-     * not possible to stop them during runtime. The reset does not impact newly
-     * created {@link JCOBridge} instances
      * 
      * @param isLogging the new logging state
      */
     public static void setLogging(boolean isLogging) {
         synchronized (synchObj) {
             _isLogging = isLogging;
+        }
+    }
+
+    /**
+     * Get Logging filename
+     * 
+     * @return the log filename
+     */
+    public static String getLogFilename() {
+        synchronized (synchObj) {
+            return _loggingFilename;
+        }
+    }
+
+    /**
+     * Set Logging filename
+     * <p>
+     * If the logging operations are started on a {@link JCOBridge} instance, it is
+     * not possible to change the name during runtime.
+     * 
+     * @param loggingFilename the new log filename
+     */
+    public static void setLogFilename(String loggingFilename) {
+        synchronized (synchObj) {
+            _loggingFilename = loggingFilename;
         }
     }
 
@@ -170,6 +242,13 @@ public final class JCOBridgeInstance {
                 } else {
                     try {
                         theBridgeInstance = JCOBridge.CreateNew();
+                        try {
+                            _logger = new JCOBridgeInstance(_loggingFilename);
+                            theBridgeInstance.RegisterEventLog(_logger);
+                        } catch (Throwable t) {
+                            if (_isDebug)
+                                t.printStackTrace();
+                        }
                         bridgeInstances.put(assemblyName, theBridgeInstance);
                     } catch (JCException e) {
                         if (_isDebug)
@@ -180,6 +259,13 @@ public final class JCOBridgeInstance {
                 if (bridgeInstance == null) {
                     try {
                         bridgeInstance = JCOBridge.CreateNew();
+                        try {
+                            _logger = new JCOBridgeInstance(_loggingFilename);
+                            bridgeInstance.RegisterEventLog(_logger);
+                        } catch (Throwable t) {
+                            if (_isDebug)
+                                t.printStackTrace();
+                        }
                     } catch (JCException e) {
                         if (_isDebug)
                             e.printStackTrace();
@@ -189,5 +275,41 @@ public final class JCOBridgeInstance {
             }
             return theBridgeInstance;
         }
+    }
+
+    public static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+        if (input == null)
+            return new Object[0];
+        Object[] returnArray = new Object[input.length];
+        ArrayList<Object> lst = new ArrayList<Object>();
+        for (T t : input) {
+            IJCOBridgeReflected obj = (IJCOBridgeReflected) t;
+            lst.add(obj.getJCOInstance());
+        }
+        return lst.toArray();
+    }
+
+    public static Throwable translateException(JCNativeException ne) throws Throwable {
+        if (ne == null)
+            throw new IllegalArgumentException();
+        String clrEx = ne.getCLRType();
+        int index = clrEx.lastIndexOf('.');
+        String nameSpace = clrEx.substring(0, index).toLowerCase();
+        clrEx = nameSpace + clrEx.substring(index, clrEx.length());
+        if (clrEx != null) {
+            Class<?> clazz = null;
+            try {
+                clazz = Class.forName(clrEx);
+            } catch (ClassNotFoundException cnfe) {
+                return ne;
+            }
+            Throwable obj = (Throwable) clazz.getDeclaredConstructor(Object.class).newInstance(ne);
+            return obj;
+            /*
+             * if (obj instanceof NetException) { NetException netEx = (NetException) obj;
+             * netEx.setJCNativeException(ne); return netEx; }
+             */
+        }
+        return ne;
     }
 }

@@ -27,21 +27,38 @@ package org.mases.jcobridge.netreflection;
 import org.mases.jcobridge.*;
 
 /**
- * The base .NET class managing System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}
+ * The base .NET class managing System.Type, mscorlib, Version=4.0.0.0,
+ * Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}
  */
 public class NetType extends NetObject {
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
     public static final String assemblyShortName = "mscorlib";
-    public final String className = "System.Type";
-    IJCOBridgeReflected classInstance = null;
-    static JCType classType = null;
+    public static final String className = "System.Type";
+    static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    public static JCType classType = createType();
     static JCEnum enumInstance = null;
+    JCType classInstance = null;
+
+    static JCType createType() {
+        try {
+            return bridge.GetType(className + ", "
+                    + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        } catch (JCException e) {
+            return null;
+        }
+    }
 
     public NetType(Object instance) throws Throwable {
         if (instance instanceof IJCOBridgeReflected) {
-            classInstance = (IJCOBridgeReflected) instance;
+            JCObject obj = (JCObject)((IJCOBridgeReflected) instance).getJCOInstance();
+            classInstance = (JCType)obj.Invoke("GetType");
+        } else if (instance instanceof JCType) {
+            classInstance = (JCType) instance;
+        } else if (instance instanceof JCObject) {
+            JCObject obj = (JCObject)instance;
+            classInstance = (JCType)obj.Invoke("GetType");
         } else
-            throw new Exception("Cannot manage object, it is not a JCObject");
+            throw new Exception("Cannot manage object, cannot found a JCType");
     }
 
     public String getJCOAssemblyName() {
@@ -64,27 +81,52 @@ public class NetType extends NetObject {
         return classType;
     }
 
-    static boolean IsAssignableFrom(IJCOBridgeReflected first, IJCOBridgeReflected second) throws Throwable {
-        return IsAssignableFrom(first.getJCOType(), second.getJCOType());
+    public static void AssertCast(IJCOBridgeReflected to, IJCOBridgeReflected from) throws Throwable {
+        if (!NetType.CanCast(to, from)) {
+            throw new UnsupportedOperationException(String.format("%s cannot be casted to %s", from.getJCOObjectName(),
+                    (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName)));
+        }
     }
 
-    static boolean IsAssignableFrom(JCType first, JCType second) throws Throwable {
+    public static void AssertCast(JCType to, IJCOBridgeReflected from) throws Throwable {
+        if (!NetType.CanCast(to, from)) {
+            throw new UnsupportedOperationException(String.format("%s cannot be casted to %s", from.getJCOObjectName(),
+                    (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName)));
+        }
+    }
+
+    public static boolean CanCast(IJCOBridgeReflected to, IJCOBridgeReflected from) throws Throwable {
+        return IsAssignableFrom(to.getJCOType(), from.getJCOType())
+                || IsSubclassOf(to.getJCOType(), from.getJCOType());
+    }
+
+    public static boolean CanCast(JCType to, IJCOBridgeReflected from) throws Throwable {
+        return IsAssignableFrom(to, from.getJCOType()) || IsSubclassOf(to, from.getJCOType());
+    }
+
+    public static boolean CanCast(JCType to, JCType from) throws Throwable {
+        return IsAssignableFrom(to, from) || IsSubclassOf(to, from);
+    }
+
+    public static boolean IsAssignableFrom(IJCOBridgeReflected to, IJCOBridgeReflected from) throws Throwable {
+        return IsAssignableFrom(to.getJCOType(), from.getJCOType());
+    }
+
+    public static boolean IsAssignableFrom(JCType to, JCType from) throws Throwable {
         try {
-            return (boolean) first.Invoke("IsAssignableFrom", second); // doesn't work, evolution/bug fixing/feature
-                                                                       // requested to the JCOBridge Core team
+            return (boolean) to.InvokeOnType("IsAssignableFrom", from);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    static boolean IsSubclassOf(IJCOBridgeReflected first, IJCOBridgeReflected second) throws Throwable {
+    public static boolean IsSubclassOf(IJCOBridgeReflected first, IJCOBridgeReflected second) throws Throwable {
         return IsSubclassOf(first.getJCOType(), second.getJCOType());
     }
 
-    static boolean IsSubclassOf(JCType first, JCType second) throws Throwable {
+    public static boolean IsSubclassOf(JCType first, JCType second) throws Throwable {
         try {
-            return (boolean) first.Invoke("IsSubclassOf", second); // doesn't work, evolution/bug fixing/feature
-                                                                   // requested to the JCOBridge Core team
+            return (boolean) first.InvokeOnType("IsSubclassOf", second);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -25,6 +25,9 @@
 package org.mases.jcobridge.netreflection;
 
 import org.mases.jcobridge.*;
+import org.mases.jcobridge.netreflection.IJCOBridgeReflected;
+import org.mases.jcobridge.netreflection.JCOBridgeInstance;
+import org.mases.jcobridge.netreflection.NetType;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -37,7 +40,7 @@ import java.util.Collection;
 public class NetObject implements IJCOBridgeReflected {
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
     public static final String assemblyShortName = "mscorlib";
-    public final static String className = "System.Object";
+    public static final String className = "System.Object";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
@@ -52,12 +55,18 @@ public class NetObject implements IJCOBridgeReflected {
         }
     }
 
+    public final static NetObject Null = new NetObject();
+
     public NetObject() {
-        super();
     }
 
     public NetObject(Object instance) {
-        classInstance = instance;
+        if (instance instanceof IJCOBridgeReflected) {
+            if (((IJCOBridgeReflected) instance).getJCOInstance() instanceof JCObject)
+                classInstance = (JCObject) ((IJCOBridgeReflected) instance).getJCOInstance();
+        } else {
+            classInstance = instance;
+        }
     }
 
     public String getJCOAssemblyName() {
@@ -76,44 +85,28 @@ public class NetObject implements IJCOBridgeReflected {
         return classInstance;
     }
 
+    public void setJCOInstance(JCObject instance) {
+        classInstance = instance;
+    }
+
     public JCType getJCOType() {
         return classType;
     }
 
-    public static NetObject castFrom(IJCOBridgeReflected from) throws Throwable {
+    public static NetObject cast(IJCOBridgeReflected from) throws Throwable {
+        if (!NetType.CanCast(classType, from.getJCOType())) {
+            throw new UnsupportedOperationException(String.format("%s cannot be casted to %s", from.getJCOObjectName(),
+                    (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName)));
+        }
         return new NetObject(from.getJCOInstance());
     }
 
     static protected Throwable translateException(JCNativeException ne) throws Throwable {
-        String clrEx = ne.getCLRType();
-        int index = clrEx.lastIndexOf('.');
-        String nameSpace = clrEx.substring(0, index).toLowerCase();
-        clrEx = nameSpace + clrEx.substring(index, clrEx.length());
-        if (clrEx != null) {
-            Class<?> clazz = null;
-            try {
-                clazz = Class.forName(clrEx);
-            } catch (ClassNotFoundException cnfe) {
-                return ne;
-            }
-            Object obj = clazz.newInstance();
-            if (obj instanceof NetException) {
-                NetException netEx = (NetException) obj;
-                netEx.setJCNativeException(ne);
-                return netEx;
-            }
-        }
-        return ne;
+        return JCOBridgeInstance.translateException(ne);
     }
 
     protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
-        Object[] returnArray = new Object[input.length];
-        ArrayList<Object> lst = new ArrayList<Object>();
-        for (T t : input) {
-            IJCOBridgeReflected obj = (IJCOBridgeReflected) t;
-            lst.add(obj.getJCOInstance());
-        }
-        return lst.toArray();
+        return JCOBridgeInstance.toObjectFromArray(input);
     }
 
     protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[][] input) {
@@ -147,6 +140,10 @@ public class NetObject implements IJCOBridgeReflected {
     }
 
     public NetType GetType() throws Throwable {
+        if (classInstance instanceof JCObject || classInstance instanceof IJCOBridgeReflected)
+        {
+            return new NetType(classInstance);
+        } 
         return new NetType(getJCOType());
     }
 

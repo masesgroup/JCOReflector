@@ -24,14 +24,15 @@
 
 package org.mases.jcobridge.netreflection;
 
-import org.mases.jcobridge.JCOBridge;
+import org.mases.jcobridge.*;
+import org.mases.jcobridge.netreflection.JCOBridgeInstance;
 
 import java.util.ArrayList;
 
-import org.mases.jcobridge.*;
-
 /**
- * The base .NET class managing System.Exception, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link Throwable}. Implements {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Exception, mscorlib, Version=4.0.0.0,
+ * Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link Throwable}.
+ * Implements {@link IJCOBridgeReflected}
  */
 public class NetException extends Throwable implements IJCOBridgeReflected {
     static long serialVersionUID = 6575785859373L;
@@ -60,6 +61,9 @@ public class NetException extends Throwable implements IJCOBridgeReflected {
     public NetException(Object instance) {
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
+        } else if (instance instanceof JCNativeException) {
+            jcNativeException = (JCNativeException) instance;
+            classInstance = jcNativeException.getCLRException();
         }
     }
 
@@ -91,44 +95,28 @@ public class NetException extends Throwable implements IJCOBridgeReflected {
         return classInstance;
     }
 
+    public void setJCOInstance(JCObject instance) {
+        classInstance = instance;
+    }
+
     public JCType getJCOType() {
         return classType;
     }
-
+/*
     public final void setJCNativeException(JCNativeException jcne) {
         jcNativeException = jcne;
     }
+*/
+    public static NetException cast(IJCOBridgeReflected from) throws Throwable {
+        return new NetException(from.getJCOInstance());
+    }
 
     protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
-        Object[] returnArray = new Object[input.length];
-        ArrayList<Object> lst = new ArrayList<Object>();
-        for (T t : input) {
-            IJCOBridgeReflected obj = (IJCOBridgeReflected) t;
-            lst.add(obj.getJCOInstance());
-        }
-        return lst.toArray();
+        return JCOBridgeInstance.toObjectFromArray(input);
     }
 
     static protected Throwable translateException(JCNativeException ne) throws Throwable {
-        String clrEx = ne.getCLRType();
-        int index = clrEx.lastIndexOf('.');
-        String nameSpace = clrEx.substring(0, index).toLowerCase();
-        clrEx = nameSpace + clrEx.substring(index, clrEx.length());
-        if (clrEx != null) {
-            Class<?> clazz = null;
-            try {
-                clazz = Class.forName(clrEx);
-            } catch (ClassNotFoundException cnfe) {
-                return ne;
-            }
-            Object obj = clazz.newInstance();
-            if (obj instanceof NetException) {
-                NetException netEx = (NetException) obj;
-                netEx.setJCNativeException(ne);
-                return netEx;
-            }
-        }
-        return ne;
+        return JCOBridgeInstance.translateException(ne);
     }
 
     // Instance Properties section

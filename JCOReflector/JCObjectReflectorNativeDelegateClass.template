@@ -45,10 +45,11 @@ PACKAGE_IMPORT_SECTION
  */
 public class PACKAGE_CLASS_NAME extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
     public static final String assemblyFullName = "FULL_ASSEMBLY_CLASS_NAME";
-	public static final String assemblyShortName = "SHORT_ASSEMBLY_CLASS_NAME";
+    public static final String assemblyShortName = "SHORT_ASSEMBLY_CLASS_NAME";
     public static final String className = "FULLYQUALIFIED_CLASS_NAME";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     public static JCType classType = createType();
+    JCObject classInstance = null;
     IPACKAGE_CLASS_NAME callerInstance = null;
 
     static JCType createType() {
@@ -129,6 +130,28 @@ DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK
         super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         callerInstance = instance;
     }
+
+    public PACKAGE_CLASS_NAME(Object instance) throws Throwable {
+        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
+        if (instance instanceof IPACKAGE_CLASS_NAME) {
+            callerInstance = (IPACKAGE_CLASS_NAME) instance;
+        } else if (instance instanceof JCObject) {
+            classInstance = (JCObject) instance;
+        } else
+            throw new UnsupportedOperationException(
+                    String.format("Class %s is not supported.", instance.getClass().getTypeName()));
+    }
+
+    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+        return JCOBridgeInstance.toObjectFromArray(input);
+    }
+
+    static protected Throwable translateException(JCNativeException ne) throws Throwable {
+        return JCOBridgeInstance.translateException(ne);
+    }
+
+DELEGATE_DYNAMIC_INVOKE_SECTION
 
     public DELEGATE_RETURN_TYPE Invoke(DELEGATE_PARAMETERS) {
         return DELEGATE_PRIMITIVE_DEFAULT_VALUE;

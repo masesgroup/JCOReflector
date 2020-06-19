@@ -94,6 +94,7 @@ namespace MASES.C2JReflector
         static long implementedEnumerators = 0;
         static long analyzedDelegates = 0;
         static long implementedDelegates = 0;
+        static long implementedInterfaces = 0;
         static long implementedClasses = 0;
         static long implementedExceptions = 0;
         static long analyzedCtors = 0;
@@ -114,7 +115,6 @@ namespace MASES.C2JReflector
         }
 
         static string reflectorVersion = typeof(Reflector).Assembly.GetName().Version.ToString();
-
 
         static string checkForkeyword(string inputName)
         {
@@ -141,6 +141,7 @@ namespace MASES.C2JReflector
             implementedEnumerators = 0;
             analyzedDelegates = 0;
             implementedDelegates = 0;
+            implementedInterfaces = 0;
             implementedClasses = 0;
             implementedExceptions = 0;
             analyzedCtors = 0;
@@ -176,11 +177,6 @@ namespace MASES.C2JReflector
             EnableInheritance = args.EnableInheritance;
             EnableWrite = !args.DryRun;
 
-            if (ForceRebuild)
-            {
-                assemblyReferenced.Clear();
-            }
-
             string reportStr = string.Empty;
             try
             {
@@ -214,6 +210,8 @@ namespace MASES.C2JReflector
                 sb.AppendFormat("> * Total Delegates: Analyzed = {0} - Implemented = {1}", analyzedDelegates, implementedDelegates);
                 sb.AppendLine();
                 sb.AppendFormat("> * Total Enums: Implemented = {0} - Flags = {1}", implementedEnums, implementedEnumsFlags);
+                sb.AppendLine();
+                sb.AppendFormat("> * Total Interfaces: Implemented = {0}", implementedInterfaces);
                 sb.AppendLine();
                 sb.AppendFormat("> * Total Classes: Implemented = {0} Exceptions = {1}", implementedClasses, implementedExceptions);
                 sb.AppendLine();
@@ -382,8 +380,9 @@ namespace MASES.C2JReflector
 
         static bool checkForEnumerator(Type type)
         {
-            if (typeof(IEnumerator).IsAssignableFrom(type)
-                || type.FullName == Const.SpecialNames.StringEnumerator)
+            if (!type.IsInterface
+                && (typeof(IEnumerator).IsAssignableFrom(type) || type.FullName == Const.SpecialNames.StringEnumerator)
+               )
             {
                 return true;
             }
@@ -418,6 +417,10 @@ namespace MASES.C2JReflector
                 string returnEnumerableType = string.Empty;
                 exportingEnumerator(typeToExport, destFolder, assemblyname, out returnEnumerableType);
             }
+            else if (typeToExport.IsInterface)
+            {
+                exportingInterface(typeToExport, destFolder, assemblyname);
+            }
             else if (typeToExport.IsEnum)
             {
                 exportingEnum(typeToExport, destFolder, assemblyname);
@@ -431,7 +434,7 @@ namespace MASES.C2JReflector
 
         static void exportingEnum(Type item, string destFolder, string assemblyname)
         {
-            var reflectorEnumTemplate = File.ReadAllText(Const.Templates.ReflectorEnumTemplate);
+            var reflectorEnumTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumTemplate);
             var packageName = item.Namespace.ToLowerInvariant();
             reflectorEnumTemplate = reflectorEnumTemplate.Replace(Const.Class.PACKAGE_NAME, packageName)
                                                          .Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name)
@@ -459,7 +462,7 @@ namespace MASES.C2JReflector
             if (hasFlags)
             {
                 Interlocked.Increment(ref implementedEnumsFlags);
-                var reflectorEnumFlagsTemplate = File.ReadAllText(Const.Templates.ReflectorEnumFlagsTemplate);
+                var reflectorEnumFlagsTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumFlagsTemplate);
                 flagsStr = reflectorEnumFlagsTemplate.Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name);
             }
 
@@ -480,26 +483,115 @@ namespace MASES.C2JReflector
             Interlocked.Increment(ref implementedEnums);
         }
 
+        static void exportingInterface(Type item, string destFolder, string assemblyname)
+        {
+            bool isException = false;
+            string reflectorInterfaceClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceClassTemplate);
+            string reflectorInterfaceTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceTemplate);
+
+            IList<Type> imports = new List<Type>();
+
+            string packageBaseInterface = Const.SpecialNames.IJCOBridgeReflected;
+            bool withInheritance = false;
+            if (EnableInheritance)
+            {
+                withInheritance = true;
+                foreach (var inter in item.GetInterfaces())
+                {
+                    packageBaseInterface += string.Format(", {0}", inter.Name);
+                }
+            }
+
+            string implementsStr = string.Empty;
+            var packageName = item.Namespace.ToLowerInvariant();
+            reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.PACKAGE_NAME, packageName)
+                                                                             .Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name)
+                                                                             .Replace(Const.Class.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
+                                                                             .Replace(Const.Class.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
+                                                                             .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName);
+
+            reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.PACKAGE_NAME, packageName)
+                                                                   .Replace(Const.Class.PACKAGE_CLASS_BASE_CLASS, packageBaseInterface)
+                                                                   .Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name)
+                                                                   .Replace(Const.Class.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
+                                                                   .Replace(Const.Class.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
+                                                                   .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName);
+
+            var typeName = item.Name;
+
+            string returnEnumerableType = string.Empty;
+            string returnInterfaceSection = string.Empty;
+            AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", typeName);
+            var methodsStr = exportingMethods(item, imports, withInheritance, destFolder, assemblyname, out returnEnumerableType, out returnInterfaceSection);
+            reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.METHODS_SECTION, methodsStr);
+            reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.METHODS_SECTION, returnInterfaceSection);
+
+            AppendToConsole(LogLevel.Verbose, "Starting creating public Properties from {0}", typeName);
+            var propInstanceStr = exportingProperties(item, imports, withInheritance, isException, destFolder, assemblyname, out returnInterfaceSection);
+            reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.GETTER_SETTER_SECTION, propInstanceStr);
+            reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.GETTER_SETTER_SECTION, returnInterfaceSection);
+
+            var eventsInstanceStr = exportingEvents(item, imports, withInheritance, false, isException, destFolder, assemblyname, out returnInterfaceSection);
+            reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.INSTANCE_EVENTS_SECTION, eventsInstanceStr);
+            reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.INSTANCE_EVENTS_SECTION, returnInterfaceSection);
+
+            var importStr = exportingImports(imports);
+            reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.PACKAGE_IMPORT_SECTION, importStr);
+            reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.PACKAGE_IMPORT_SECTION, importStr);
+
+            reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.JCOREFLECTOR_VERSION, reflectorVersion);
+            reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.JCOREFLECTOR_VERSION, reflectorVersion);
+
+            var pathToSaveTo = packageName.Replace('.', '\\');
+            pathToSaveTo = System.IO.Path.Combine(destFolder, pathToSaveTo);
+            if (!Directory.Exists(pathToSaveTo))
+            {
+                AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
+                Directory.CreateDirectory(pathToSaveTo);
+            }
+            var fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", typeName));
+            writeFile(fileName, reflectorInterfaceTemplate);
+
+            fileName = Path.Combine(pathToSaveTo, string.Format("{0}" + Const.SpecialNames.ImplementationTrailer + ".java", typeName));
+            writeFile(fileName, reflectorInterfaceClassTemplate);
+
+            Interlocked.Increment(ref implementedInterfaces);
+        }
+
         static void exportingClass(Type item, string destFolder, string assemblyname)
         {
             bool isException = false;
             string reflectorClassTemplate = string.Empty;
+            string packageBaseClass = string.Empty;
             if (typeof(Exception).IsAssignableFrom(item))
             {
                 isException = true;
                 Interlocked.Increment(ref implementedExceptions);
-                reflectorClassTemplate = File.ReadAllText(Const.Templates.ReflectorThrowableClassTemplate);
+                reflectorClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorThrowableClassTemplate);
+                packageBaseClass = Const.SpecialNames.NetException;
             }
             else
             {
-                reflectorClassTemplate = File.ReadAllText(Const.Templates.ReflectorClassTemplate);
+                reflectorClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorClassTemplate);
+                packageBaseClass = Const.SpecialNames.NetObject;
             }
 
             IList<Type> imports = new List<Type>();
+            bool withInheritance = false;
+            if (EnableInheritance)
+            {
+                withInheritance = true;
+                if (item.BaseType != typeof(object) && item.BaseType != typeof(Exception))
+                {
+                    packageBaseClass = item.BaseType.Name;
+                    imports.Add(item.BaseType);
+                }
+            }
 
             string implementsStr = string.Empty;
             var packageName = item.Namespace.ToLowerInvariant();
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.PACKAGE_NAME, packageName)
+                                                           .Replace(Const.Class.PACKAGE_CLASS_BASE_CLASS, packageBaseClass)
                                                            .Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name)
                                                            .Replace(Const.Class.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                            .Replace(Const.Class.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
@@ -516,15 +608,16 @@ namespace MASES.C2JReflector
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.CONSTRUCTORS_SECTION, ctorStr);
 
             string returnEnumerableType = string.Empty;
+            string returnInterfaceSection = string.Empty;
             AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", typeName);
-            var methodsStr = exportingMethods(item, imports, destFolder, assemblyname, out returnEnumerableType);
+            var methodsStr = exportingMethods(item, imports, withInheritance, destFolder, assemblyname, out returnEnumerableType, out returnInterfaceSection);
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.METHODS_SECTION, methodsStr);
 
             AppendToConsole(LogLevel.Verbose, "Starting creating public Properties from {0}", typeName);
-            var propInstanceStr = exportingProperties(item, imports, isException, destFolder, assemblyname);
+            var propInstanceStr = exportingProperties(item, imports, withInheritance, isException, destFolder, assemblyname, out returnInterfaceSection);
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.GETTER_SETTER_SECTION, propInstanceStr);
 
-            var eventsInstanceStr = exportingEvents(item, imports, false, isException, destFolder, assemblyname);
+            var eventsInstanceStr = exportingEvents(item, imports, withInheritance, false, isException, destFolder, assemblyname, out returnInterfaceSection);
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.INSTANCE_EVENTS_SECTION, eventsInstanceStr);
 
             var importStr = exportingImports(imports);
@@ -532,8 +625,14 @@ namespace MASES.C2JReflector
 
             if (!string.IsNullOrEmpty(returnEnumerableType) && typeof(IEnumerable).IsAssignableFrom(item))
             {
-                if (string.IsNullOrEmpty(implementsStr)) implementsStr += Const.Class.PACKAGE_CLASS_IMPLEMENTS_PROTO + string.Format(Const.Class.PACKAGE_CLASS_IMPLEMENTS_ITERABLE, returnEnumerableType);
-                else implementsStr += ", " + string.Format(Const.Class.PACKAGE_CLASS_IMPLEMENTS_ITERABLE, returnEnumerableType); // proto for other interface
+                string implStr = string.Format(Const.Class.PACKAGE_CLASS_IMPLEMENTS_ITERABLE, returnEnumerableType);
+                if (returnEnumerableType == Const.SpecialNames.NetObject)
+                {
+                    implStr = Const.SpecialNames.NetIEnumerable;
+                }
+
+                if (string.IsNullOrEmpty(implementsStr)) implementsStr += Const.Class.PACKAGE_CLASS_IMPLEMENTS_PROTO + implStr;
+                else implementsStr += ", " + implStr; // proto for other interface
             }
 
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.PACKAGE_CLASS_IMPLEMENTS_SECTION, implementsStr);
@@ -595,7 +694,7 @@ namespace MASES.C2JReflector
             var ctorTypes = type.GetConstructors();
             if (ctorTypes.Length == 0) return string.Empty;
 
-            var ctorClassTemplate = File.ReadAllText(Const.Templates.ReflectorClassConstructorTemplate);
+            var ctorClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorClassConstructorTemplate);
             ctorClassTemplate = ctorClassTemplate.Replace(Const.Class.PACKAGE_CLASS_NAME, type.Name);
 
             var defaultCtor = ctorClassTemplate.Replace(Const.CTor.CTOR_PARAMETERS, string.Empty)
@@ -639,7 +738,13 @@ namespace MASES.C2JReflector
 
                     string formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
                     if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
-                    newObjectParams.Append(string.Format(formatter, (isArray && IsParams(parameter) && !isPrimitive ? "(Object[])" : (isPrimitive && paramType != Const.SpecialNames.NativeStringType) ? string.Empty : "(Object)"), paramName));
+
+                    string objectCaster = string.Empty;
+                    if (isArray && parameters.Length == 1)
+                    {
+                        objectCaster = "(Object)";
+                    }
+                    newObjectParams.Append(string.Format(formatter, objectCaster, paramName));
                 }
                 if (!isManaged) continue; // found not managed type, jump to next 
                 string ctorParamStr = ctorParams.ToString();
@@ -725,11 +830,12 @@ namespace MASES.C2JReflector
 
             if (avoidWrite) return true;
 
-            var nextTemplateToUse = File.ReadAllText(isPrimitive ? Const.Templates.ReflectorEnumerableNativeNextTemplate : Const.Templates.ReflectorEnumerableObjectNextTemplate);
+            var nextTemplateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorEnumerableNativeNextTemplate : Const.Templates.ReflectorEnumerableObjectNextTemplate);
 
-            string nextSection = nextTemplateToUse.Replace(Const.Enumerator.PACKAGE_INNER_CLASS_NAME, returnEnumeratorType);
+            string nextSection = nextTemplateToUse.Replace(Const.Enumerator.PACKAGE_INNER_CLASS_NAME, returnEnumeratorType)
+                                                  .Replace(Const.Enumerator.PACKAGE_IMPLEMENTATION_INNER_CLASS_NAME, propertyMethod.PropertyType.IsInterface ? returnEnumeratorType + Const.SpecialNames.ImplementationTrailer : returnEnumeratorType);
 
-            var reflectorEnumeratorTemplate = File.ReadAllText(Const.Templates.ReflectorEnumeratorTemplate);
+            var reflectorEnumeratorTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumeratorTemplate);
 
             var importsStr = exportingImports(imports);
 
@@ -737,6 +843,7 @@ namespace MASES.C2JReflector
             var enumeratorStr = reflectorEnumeratorTemplate.Replace(Const.Enumerator.PACKAGE_NAME, packageName)
                                                            .Replace(Const.Enumerator.PACKAGE_IMPORT_SECTION, importsStr)
                                                            .Replace(Const.Enumerator.PACKAGE_INNER_CLASS_NAME, returnEnumeratorType)
+                                                           .Replace(Const.Enumerator.PACKAGE_IMPLEMENTATION_INNER_CLASS_NAME, propertyMethod.PropertyType.IsInterface ? returnEnumeratorType + Const.SpecialNames.ImplementationTrailer : returnEnumeratorType)
                                                            .Replace(Const.Enumerator.PACKAGE_CLASS_NAME, item.Name)
                                                            .Replace(Const.Enumerator.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                            .Replace(Const.Enumerator.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
@@ -764,22 +871,54 @@ namespace MASES.C2JReflector
             return param.IsDefined(typeof(ParamArrayAttribute), false);
         }
 
-        static string exportingMethods(Type type, IList<Type> imports, string destFolder, string assemblyname, out string returnEnumeratorType)
+        static void searchMethods(Type type, IList<MethodInfo> allMethods)
         {
+            foreach (var item in type.GetMethods())
+            {
+                allMethods.Add(item);
+            }
+
+            foreach (var item in type.GetInterfaces())
+            {
+                searchMethods(item, allMethods);
+            }
+        }
+
+        static string exportingMethods(Type type, IList<Type> imports, bool withInheritance, string destFolder, string assemblyname, out string returnEnumeratorType, out string returnInterfaceSection)
+        {
+            bool isInterface = false;
+            returnInterfaceSection = string.Empty;
+
             returnEnumeratorType = string.Empty;
-            var methods = type.GetMethods();
+
+            MethodInfo[] methods = null;
+
+            if (type.IsInterface && !withInheritance)
+            {
+                isInterface = true;
+                List<MethodInfo> allMethods = new List<MethodInfo>();
+                searchMethods(type, allMethods);
+                methods = allMethods.ToArray();
+            }
+            else
+            {
+                methods = type.GetMethods();
+            }
+
             if (methods.Length == 0) return string.Empty;
 
+            string templateInterfaceToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceMethodTemplate);
             string templateToUse = string.Empty;
 
             bool hasEnumerable = typeof(IEnumerable).IsAssignableFrom(type);
 
+            StringBuilder methodInterfaceBuilder = new StringBuilder();
             StringBuilder methodBuilder = new StringBuilder();
-            methodBuilder.AppendLine();
             bool isPrimitive = true;
             string defaultPrimitiveValue = string.Empty;
             bool isSpecial = false;
             bool isArray = false;
+            bool isRetValArray = false;
             bool isManaged = true;
 
             List<string> methodsSignatureCreated = new List<string>();
@@ -795,7 +934,7 @@ namespace MASES.C2JReflector
                     || item.IsSpecialName // remove properties
                     || item.IsGenericMethod // don't manage generic methods
                     || item.ContainsGenericParameters
-                    || (EnableInheritance ? item.DeclaringType != type : item.IsAbstract)
+                    || (withInheritance ? item.DeclaringType != type : false)
                     || !item.IsPublic
                     || (!methodsNameCreated.Contains(methodName) ? false : isDifferentOnlyForRetVal(methodsSignatureCreated, item.ToString(), methodName))
                    ) continue;
@@ -807,11 +946,11 @@ namespace MASES.C2JReflector
                 if (methodName == "GetType" && parameters.Length == 0) continue;
                 if (methodName == "Equals" && parameters.Length == 1 && parameters[0].ParameterType == typeof(object)) continue;
 
-                //if (!isManagedType(item.ReturnType)) continue;
+                string methodInterfaceStr = string.Empty;
                 var methodStr = string.Empty;
                 if (hasEnumerable && methodName == "GetEnumerator" && parameters.Length == 0)
                 {
-                    templateToUse = File.ReadAllText(Const.Templates.ReflectorEnumerableTemplate);
+                    templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumerableTemplate);
 
                     if (!exportingEnumerator(item.ReturnType, null, null, out returnEnumeratorType, true))
                     {
@@ -827,28 +966,33 @@ namespace MASES.C2JReflector
                     }
 
                     methodStr = templateToUse.Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
-                                              .Replace(Const.Methods.METHOD_RETURN_INNER_TYPE, returnEnumeratorType);
+                                             .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, item.ReturnType.IsInterface ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
+                                             .Replace(Const.Methods.METHOD_RETURN_INNER_TYPE, returnEnumeratorType);
                 }
                 else
                 {
+                    isRetValArray = false;
                     string returnType = "void";
+                    bool isInterfaceRetVal = false;
                     if (item.ReturnType == typeof(void))
                     {
-                        templateToUse = File.ReadAllText(Const.Templates.ReflectorClassVoidMethodTemplate);
+                        templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassVoidMethodTemplate);
                     }
                     else
                     {
-                        returnType = convertType(imports, item.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                        returnType = convertType(imports, item.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isRetValArray);
                         if (!isManaged) continue;
                         isPrimitive |= typeof(Delegate).IsAssignableFrom(item.ReturnType);
 
-                        if (isArray)
+                        if (isRetValArray)
                         {
-                            templateToUse = File.ReadAllText(isPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
+                            isInterfaceRetVal = item.ReturnType.GetElementType().IsInterface;
+                            templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
                         }
                         else
                         {
-                            templateToUse = File.ReadAllText(isPrimitive ? Const.Templates.ReflectorClassNativeMethodTemplate : Const.Templates.ReflectorClassObjectMethodTemplate);
+                            isInterfaceRetVal = item.ReturnType.IsInterface;
+                            templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeMethodTemplate : Const.Templates.ReflectorClassObjectMethodTemplate);
                         }
                     }
 
@@ -866,7 +1010,14 @@ namespace MASES.C2JReflector
 
                         string formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
                         if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
-                        execParams.Append(string.Format(formatter, (isArray && IsParams(parameter) && !isPrimitive ? "(Object[])" : (isPrimitive && paramType != Const.SpecialNames.NativeStringType) ? string.Empty : "(Object)"), paramName));
+
+                        string objectCaster = string.Empty;
+                        if (isArray && parameters.Length == 1)
+                        {
+                            objectCaster = "(Object)";
+                        }
+
+                        execParams.Append(string.Format(formatter, objectCaster, paramName));
                     }
                     if (!isManaged) continue; // found not managed type, jump to next 
                     string inputParamStr = inputParams.ToString();
@@ -881,25 +1032,42 @@ namespace MASES.C2JReflector
 
                     methodStr = templateToUse.Replace(Const.Methods.METHOD_NAME, methodName)
                                              .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
+                                             .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
                                              .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
                                              .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                                             .Replace(Const.Methods.STATIC_KEYWORD, item.IsStatic ? Const.Parameters.STATIC_KEYWORD : string.Empty)
+                                             .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
                                              .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
                                              .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+
+                    if (isInterface)
+                    {
+                        methodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                   .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
+                                                                   .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                                   .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                                   .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+                    }
                 }
 
                 methodsSignatureCreated.Add(item.ToString());
                 methodsNameCreated.Add(item.Name);
+
+                if (isInterface)
+                {
+                    methodInterfaceBuilder.AppendLine(methodInterfaceStr);
+                }
 
                 methodBuilder.AppendLine(methodStr);
 
                 Interlocked.Increment(ref implementedMethods);
             }
 
+            returnInterfaceSection = methodInterfaceBuilder.ToString();
+
             return methodBuilder.ToString();
         }
 
-        static string buildPropertySignature(string templateToUse, string propertyName, string propertyType, bool isPrimitive, bool isArray, bool statics)
+        static string buildPropertySignature(string templateToUse, string propertyName, string propertyType, string exceptionStr, bool isPrimitive, bool isArray, bool needInterfaceImplementation, bool statics)
         {
             StringBuilder inputParams = new StringBuilder();
             StringBuilder execParams = new StringBuilder();
@@ -917,38 +1085,64 @@ namespace MASES.C2JReflector
 
             string execParamStr = execParams.ToString();
             var propertyStr = templateToUse.Replace(Const.Properties.PROPERTY_NAME, propertyName)
+                                           .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr)
                                            .Replace(Const.Properties.PROPERTY_INPUTTYPE, (isArray) ? propertyType + Const.SpecialNames.ArrayTrailer : propertyType)
                                            .Replace(Const.Properties.PROPERTY_INPUTNAME, propertyName)
                                            .Replace(Const.Properties.PROPERTY_OUTPUTTYPE, propertyType)
+                                           .Replace(Const.Properties.PROPERTY_IMPLEMENTATION_OUTPUTTYPE, needInterfaceImplementation ? propertyType + Const.SpecialNames.ImplementationTrailer : propertyType)
                                            .Replace(Const.Properties.PROPERTY_PARAMETERS, string.Empty)
                                            .Replace(Const.Properties.PROPERTY_INVOKE_PARAMETERS, string.Empty)
-                                           .Replace(Const.Properties.PROPERTY_VALUE, string.Format(formatter, (isPrimitive && propertyType != Const.SpecialNames.NativeStringType) ? string.Empty : "(Object)", propertyName))
-                                           .Replace(Const.Methods.STATIC_KEYWORD, statics ? Const.Parameters.STATIC_KEYWORD : string.Empty)
+                                           .Replace(Const.Properties.PROPERTY_VALUE, string.Format(formatter, string.Empty, propertyName))
+                                           .Replace(Const.Properties.METHOD_MODIFIER_KEYWORD, statics ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
                                            .Replace(Const.Properties.PROPERTY_OBJECT, statics ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME);
 
             return propertyStr;
         }
 
-        static string exportingProperties(Type type, IList<Type> imports, bool isException, string destFolder, string assemblyname)
+        static void searchProperties(Type type, BindingFlags flags, IList<Tuple<bool, PropertyInfo>> allProperties)
         {
-            List<Tuple<bool, PropertyInfo>> properties = new List<Tuple<bool, PropertyInfo>>();
-            var props = type.GetProperties(BindingFlags.Public | BindingFlags.Instance); // prefer instance properties against static, Java don't like same name of functions
-            foreach (var item in props)
+            foreach (var item in type.GetProperties(flags))
             {
-                properties.Add(new Tuple<bool, PropertyInfo>(false, item));
+                allProperties.Add(new Tuple<bool, PropertyInfo>(false, item));
             }
-            props = type.GetProperties(BindingFlags.Public | BindingFlags.Static);
-            foreach (var item in props)
+
+            foreach (var item in type.GetInterfaces())
             {
-                properties.Add(new Tuple<bool, PropertyInfo>(true, item));
+                searchProperties(item, flags, allProperties);
+            }
+        }
+
+        static string exportingProperties(Type type, IList<Type> imports, bool withInheritance, bool isException, string destFolder, string assemblyname, out string returnInterfaceSection)
+        {
+            bool isInterface = false;
+            returnInterfaceSection = string.Empty;
+            List<Tuple<bool, PropertyInfo>> properties = new List<Tuple<bool, PropertyInfo>>();
+
+            if (type.IsInterface && !withInheritance)
+            {
+                isInterface = true;
+                searchProperties(type, BindingFlags.Public | BindingFlags.Instance, properties);
+            }
+            else
+            {
+                var props = type.GetProperties(BindingFlags.Public | BindingFlags.Instance); // prefer instance properties against static, Java don't like same name of functions
+                foreach (var item in props)
+                {
+                    properties.Add(new Tuple<bool, PropertyInfo>(false, item));
+                }
+                props = type.GetProperties(BindingFlags.Public | BindingFlags.Static);
+                foreach (var item in props)
+                {
+                    properties.Add(new Tuple<bool, PropertyInfo>(true, item));
+                }
             }
 
             if (properties.Count == 0) return string.Empty;
 
             string templateToUse = string.Empty;
 
+            StringBuilder propertyInterfaceBuilder = new StringBuilder();
             StringBuilder propertyBuilder = new StringBuilder();
-            propertyBuilder.AppendLine();
             bool isPrimitive = true;
             string defaultPrimitiveValue = string.Empty;
             bool isManaged = true;
@@ -975,7 +1169,7 @@ namespace MASES.C2JReflector
 
                 if (propertiesSignaturesCreated.Contains(item.ToString())
                     || item.IsSpecialName
-                    || (EnableInheritance ? item.DeclaringType != type : false)
+                    || (withInheritance ? item.DeclaringType != type : false)
                     || (!propertiesNameCreated.Contains(propertyName) ? false : isDifferentOnlyForRetVal(propertiesSignaturesCreated, item.ToString(), propertyName))
                    ) continue;
 
@@ -984,27 +1178,49 @@ namespace MASES.C2JReflector
                 propertyType = convertType(imports, item.PropertyType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                 if (!isManaged) continue; // found not managed type, jump to next 
 
+                bool isPropertyTypeInterface = isArray ? item.PropertyType.GetElementType().IsInterface : item.PropertyType.IsInterface;
+
                 if (item.CanRead) // get
                 {
                     if (item.GetMethod.GetParameters().Length != 0) continue; // only get without parameters are managed
                     isPrimitive |= typeof(Delegate).IsAssignableFrom(item.PropertyType);
 
+                    var exceptionStr = exceptionStringBuilder(item.GetMethod, imports);
+
+                    if (isInterface)
+                    {
+                        string propertyInterfaceTemplate = Const.Templates.GetTemplate(isArray ? Const.Templates.ReflectorInterfaceGetArrayTemplate : Const.Templates.ReflectorInterfaceGetTemplate);
+
+                        var propertyInterfaceStr = buildPropertySignature(propertyInterfaceTemplate, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics);
+                        propertyInterfaceBuilder.AppendLine(propertyInterfaceStr);
+                    }
+
                     if (isArray)
                     {
-                        templateToUse = File.ReadAllText(isPrimitive ? Const.Templates.ReflectorClassNativeArrayGetTemplate : Const.Templates.ReflectorClassObjectArrayGetTemplate);
+                        templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayGetTemplate : Const.Templates.ReflectorClassObjectArrayGetTemplate);
                     }
                     else
                     {
-                        templateToUse = File.ReadAllText(isPrimitive ? Const.Templates.ReflectorClassNativeGetTemplate : Const.Templates.ReflectorClassObjectGetTemplate);
+                        templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeGetTemplate : Const.Templates.ReflectorClassObjectGetTemplate);
                     }
 
-                    var propertyStr = buildPropertySignature(templateToUse, propertyName, propertyType, isPrimitive, isArray, statics);
+                    var propertyStr = buildPropertySignature(templateToUse, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics);
                     propertyBuilder.AppendLine(propertyStr);
                 }
                 if (item.CanWrite) // set
                 {
-                    templateToUse = File.ReadAllText(Const.Templates.ReflectorClassSetTemplate);
-                    var propertyStr = buildPropertySignature(templateToUse, propertyName, propertyType, isPrimitive, isArray, statics);
+                    var exceptionStr = exceptionStringBuilder(item.SetMethod, imports);
+
+                    if (isInterface)
+                    {
+                        string propertyInterfaceTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceSetTemplate);
+
+                        var propertyInterfaceStr = buildPropertySignature(propertyInterfaceTemplate, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics);
+                        propertyInterfaceBuilder.AppendLine(propertyInterfaceStr);
+                    }
+
+                    templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassSetTemplate);
+                    var propertyStr = buildPropertySignature(templateToUse, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics);
                     propertyBuilder.AppendLine(propertyStr);
                 }
 
@@ -1013,6 +1229,8 @@ namespace MASES.C2JReflector
 
                 Interlocked.Increment(ref implementedProperties);
             }
+
+            returnInterfaceSection = propertyInterfaceBuilder.ToString();
 
             return propertyBuilder.ToString();
         }
@@ -1035,10 +1253,12 @@ namespace MASES.C2JReflector
 
             var parameters = invokeMethod.GetParameters();
             string returnType = "void";
+            string dynamicInvokeTemplateToUse = string.Empty;
             string interfaceTemplateToUse = string.Empty;
             string classTemplateToUse = string.Empty;
             bool isPrimitive = true;
             bool isRetValPrimitive = false;
+            bool isInterfaceRetVal = false;
             string defaultPrimitiveReturnValue = string.Empty;
             bool isSpecial = false;
             bool isRetValArray = false;
@@ -1046,20 +1266,32 @@ namespace MASES.C2JReflector
             bool isManaged = true;
             if (invokeMethod.ReturnType == typeof(void))
             {
-                classTemplateToUse = File.ReadAllText(Const.Templates.VoidDelegateClassTemplate);
-                interfaceTemplateToUse = File.ReadAllText(Const.Templates.VoidDelegateInterfaceTemplate);
+                classTemplateToUse = Const.Templates.GetTemplate(Const.Templates.VoidDelegateClassTemplate);
+                interfaceTemplateToUse = Const.Templates.GetTemplate(Const.Templates.VoidDelegateInterfaceTemplate);
+                dynamicInvokeTemplateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassVoidMethodTemplate);
             }
             else
             {
                 returnType = convertType(imports, invokeMethod.ReturnType, out isRetValPrimitive, out defaultPrimitiveReturnValue, out isManaged, out isSpecial, out isRetValArray);
                 if (!isManaged) return false;
-                classTemplateToUse = File.ReadAllText(isRetValPrimitive ? Const.Templates.NativeDelegateClassTemplate : Const.Templates.ObjectDelegateClassTemplate);
-                interfaceTemplateToUse = File.ReadAllText(Const.Templates.NonVoidDelegateInterfaceTemplate);
+                classTemplateToUse = Const.Templates.GetTemplate(isRetValPrimitive ? Const.Templates.NativeDelegateClassTemplate : Const.Templates.ObjectDelegateClassTemplate);
+                interfaceTemplateToUse = Const.Templates.GetTemplate(Const.Templates.NonVoidDelegateInterfaceTemplate);
+                if (isRetValArray)
+                {
+                    isInterfaceRetVal = invokeMethod.ReturnType.GetElementType().IsInterface;
+                    dynamicInvokeTemplateToUse = Const.Templates.GetTemplate(isRetValPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
+                }
+                else
+                {
+                    isInterfaceRetVal = invokeMethod.ReturnType.IsInterface;
+                    dynamicInvokeTemplateToUse = Const.Templates.GetTemplate(isRetValPrimitive ? Const.Templates.ReflectorClassNativeMethodTemplate : Const.Templates.ReflectorClassObjectMethodTemplate);
+                }
             }
 
             StringBuilder converterBlock = new StringBuilder();
             StringBuilder inputParams = new StringBuilder();
             StringBuilder execParams = new StringBuilder();
+            StringBuilder dynamicInvokeExecParams = new StringBuilder();
             int paramCounter = 0;
             string defaultPrimitiveValue = string.Empty;
             foreach (var parameter in parameters)
@@ -1076,6 +1308,7 @@ namespace MASES.C2JReflector
                     formatter = isPrimitive ? Const.Delegates.CONVERTER_BLOCK_PARAMETER_PRIMITIVE_ARRAY : Const.Delegates.CONVERTER_BLOCK_PARAMETER_NONPRIMITIVE_ARRAY;
 
                     formatter = formatter.Replace(Const.Delegates.CONVERTER_BLOCK_PARAM_TYPE, paramType)
+                                         .Replace(Const.Delegates.CONVERTER_BLOCK_IMPLEMENTATION_PARAM_TYPE, parameter.ParameterType.IsInterface ? paramType + Const.SpecialNames.ImplementationTrailer : paramType)
                                          .Replace(Const.Delegates.CONVERTER_BLOCK_PARAM_NAME, paramName)
                                          .Replace(Const.Delegates.CONVERTER_BLOCK_PARAM_INDEX, paramCounter.ToString());
 
@@ -1083,12 +1316,22 @@ namespace MASES.C2JReflector
                 }
                 else
                 {
-                    converterBlock.AppendLine(string.Format(isPrimitive ? Const.Delegates.CONVERTER_BLOCK_PARAMETER_PRIMITIVE : Const.Delegates.CONVERTER_BLOCK_PARAMETER_NONPRIMITIVE, paramType, paramName, paramCounter));
+                    converterBlock.AppendLine(string.Format(isPrimitive ? Const.Delegates.CONVERTER_BLOCK_PARAMETER_PRIMITIVE : Const.Delegates.CONVERTER_BLOCK_PARAMETER_NONPRIMITIVE, parameter.ParameterType.IsInterface ? paramType + Const.SpecialNames.ImplementationTrailer : paramType, paramName, paramCounter));
                 }
 
                 inputParams.Append(string.Format(Const.Delegates.INPUT_INVOKE_PARAMETER, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType, paramName));
                 execParams.Append(string.Format(Const.Delegates.INVOKE_PARAMETER, paramName));
 
+                string dynamicFormatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
+                if (!isPrimitive && isArray) dynamicFormatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
+
+                string objectCaster = string.Empty;
+                if (isArray && parameters.Length == 1)
+                {
+                    objectCaster = "(Object)";
+                }
+
+                dynamicInvokeExecParams.Append(string.Format(dynamicFormatter, objectCaster, paramName));
                 paramCounter++;
             }
             if (!isManaged) return false; // found not managed type, jump to next 
@@ -1138,6 +1381,16 @@ namespace MASES.C2JReflector
 
             importsStr = importsStr + string.Format(Const.Imports.IMPORT, packageName, string.Format("I{0}", delegateName));
 
+            string dynamicInvokeExecParamStr = dynamicInvokeExecParams.ToString();
+            var dynamicInvokeStr = dynamicInvokeTemplateToUse.Replace(Const.Methods.METHOD_NAME, Const.SpecialNames.METHOD_DYNAMICINVOKE_NAME)
+                                                             .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
+                                                             .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
+                                                             .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                             .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, dynamicInvokeExecParamStr)
+                                                             .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, Const.SpecialNames.FINAL_KEYWORD)
+                                                             .Replace(Const.Methods.METHOD_OBJECT, Const.Class.INSTANCE_CLASS_NAME)
+                                                             .Replace(Const.Exceptions.THROWABLE_TEMPLATE, string.Empty);
+
             var delegateStr = classTemplateToUse.Replace(Const.Delegates.PACKAGE_NAME, packageName)
                                                 .Replace(Const.Delegates.PACKAGE_IMPORT_SECTION, importsStr)
                                                 .Replace(Const.Delegates.PACKAGE_CLASS_NAME, delegateName)
@@ -1150,6 +1403,8 @@ namespace MASES.C2JReflector
                                                 .Replace(Const.Delegates.DELEGATE_RETURN_STATEMENT, strReturnStatement)
                                                 .Replace(Const.Delegates.DELEGATE_RETURN_TYPE, (isRetValArray) ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
                                                 .Replace(Const.Delegates.DELEGATE_PRIMITIVE_DEFAULT_VALUE, defaultPrimitiveReturnValue)
+                                                .Replace(Const.Delegates.DELEGATE_PRIMITIVE_DEFAULT_VALUE, defaultPrimitiveReturnValue)
+                                                .Replace(Const.Delegates.DELEGATE_DYNAMIC_INVOKE_SECTION, dynamicInvokeStr)
                                                 .Replace(Const.Class.JCOREFLECTOR_VERSION, reflectorVersion);
 
             pathToSaveTo = packageName.Replace('.', '\\');
@@ -1167,15 +1422,48 @@ namespace MASES.C2JReflector
             return true;
         }
 
-        static string exportingEvents(Type type, IList<Type> imports, bool statics, bool isException, string destFolder, string assemblyname)
+
+        static void searchEvents(Type type, BindingFlags flags, IList<EventInfo> allEvents)
         {
+            foreach (var item in type.GetEvents(flags))
+            {
+                allEvents.Add(item);
+            }
+
+            foreach (var item in type.GetInterfaces())
+            {
+                searchEvents(item, flags, allEvents);
+            }
+        }
+
+        static string exportingEvents(Type type, IList<Type> imports, bool withInheritance, bool statics, bool isException, string destFolder, string assemblyname, out string returnInterfaceSection)
+        {
+            bool isInterface = false;
+            returnInterfaceSection = string.Empty;
+
             BindingFlags flags = BindingFlags.Public;
             flags |= statics ? BindingFlags.Static : BindingFlags.Instance;
-            var events = type.GetEvents(flags);
+
+            EventInfo[] events = null;
+
+            List<EventInfo> allEvents = new List<EventInfo>();
+            if (type.IsInterface && !withInheritance)
+            {
+                isInterface = true;
+                searchEvents(type, flags, allEvents);
+                events = allEvents.ToArray();
+            }
+            else
+            {
+                events = type.GetEvents(flags);
+            }
+
             if (events.Length == 0) return string.Empty;
 
-            string templateToUse = File.ReadAllText(Const.Templates.ReflectorEventsTemplate);
+            string templateInterfaceToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceEventTemplate);
+            string templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassEventTemplate);
 
+            StringBuilder eventInterfaceBuilder = new StringBuilder();
             StringBuilder eventBuilder = new StringBuilder();
             eventBuilder.AppendLine();
             bool isPrimitive = true;
@@ -1201,7 +1489,7 @@ namespace MASES.C2JReflector
 
                 if (eventsSignaturesCreated.Contains(item.ToString())
                     || item.IsSpecialName
-                    || (EnableInheritance ? item.DeclaringType != type : false)
+                    || (withInheritance ? item.DeclaringType != type : false)
                     || (!eventsNameCreated.Contains(eventName) ? false : isDifferentOnlyForRetVal(eventsSignaturesCreated, item.ToString(), eventName))
                    ) continue;
 
@@ -1216,16 +1504,28 @@ namespace MASES.C2JReflector
 
                 var eventStr = templateToUse.Replace(Const.Events.EVENT_NAME, eventName)
                                             .Replace(Const.Events.EVENT_HANDLER_TYPE, item.EventHandlerType.Name)
-                                            .Replace(Const.Methods.STATIC_KEYWORD, statics ? Const.Events.STATIC_KEYWORD : string.Empty)
+                                            .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, statics ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
                                             .Replace(Const.Events.EVENT_OBJECT, statics ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME);
 
                 eventsSignaturesCreated.Add(item.ToString());
                 eventsNameCreated.Add(item.Name);
 
+                if (isInterface)
+                {
+                    var eventInterfaceStr = templateInterfaceToUse.Replace(Const.Events.EVENT_NAME, eventName)
+                                              .Replace(Const.Events.EVENT_HANDLER_TYPE, item.EventHandlerType.Name)
+                                              .Replace(Const.Events.METHOD_MODIFIER_KEYWORD, statics ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
+                                              .Replace(Const.Events.EVENT_OBJECT, statics ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME);
+
+                    eventInterfaceBuilder.AppendLine(eventInterfaceStr);
+                }
+
                 eventBuilder.AppendLine(eventStr);
 
                 Interlocked.Increment(ref implementedEvents);
             }
+
+            if (isInterface) returnInterfaceSection = eventInterfaceBuilder.ToString();
 
             return eventBuilder.ToString();
         }
@@ -1235,7 +1535,18 @@ namespace MASES.C2JReflector
             StringBuilder importsToExport = new StringBuilder();
             foreach (var item in imports)
             {
-                importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, item.Namespace.ToLowerInvariant(), item.Name));
+                if (item.IsInterface)
+                {
+                    if (isManagedType(item, 0, 1) && item != typeof(IEnumerator))
+                    {
+                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, item.Namespace.ToLowerInvariant(), item.Name));
+                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, item.Namespace.ToLowerInvariant(), item.Name + Const.SpecialNames.ImplementationTrailer));
+                    }
+                }
+                else
+                {
+                    importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, item.Namespace.ToLowerInvariant(), item.Name));
+                }
             }
 
             return importsToExport.ToString();
@@ -1264,8 +1575,8 @@ namespace MASES.C2JReflector
             if (!type.IsPublic // only public types are managed
                 || !(type.IsAnsiClass || type.IsClass || type.IsEnum)
                  || (EnableAbstract ? false : (type.IsAbstract && !type.IsSealed)) // discard real abstract class for now, but abstract/sealed classes are what in .NET are "public static class"
-                 || type.IsInterface // discard interfaces for now
-                 || type.IsGenericType || type.IsGenericParameter || type.IsInterface)
+                                                                                   //  || type.IsInterface // discard interfaces for now
+                 || type.IsGenericType || type.IsGenericParameter)
             {
                 return false;
             }
@@ -1329,6 +1640,8 @@ namespace MASES.C2JReflector
             if (type == typeof(Type)) { isSpecial = true; return Const.SpecialNames.NetType; }
             if (type == typeof(Exception)) { isSpecial = true; return Const.SpecialNames.NetException; }
             if (type == typeof(ArrayList)) { isSpecial = true; return Const.SpecialNames.NetArrayList; }
+            if (type == typeof(IEnumerable)) { isSpecial = true; return Const.SpecialNames.NetIEnumerable; }
+            if (type == typeof(IEnumerator)) { isSpecial = true; return Const.SpecialNames.NetIEnumerator; }
 
             return type.Name;
         }

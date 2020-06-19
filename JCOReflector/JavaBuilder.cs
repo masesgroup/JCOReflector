@@ -153,6 +153,7 @@ namespace MASES.C2JReflector
         public string OriginFolder { get; set; }
         public string DestinationFolder { get; set; }
         public bool SplitFolderByAssembly { get; set; }
+        public bool WithJARSource { get; set; }
         public IList<string> AssembliesToUse { get; set; }
     }
 
@@ -211,7 +212,6 @@ namespace MASES.C2JReflector
 
             string jdkFolder = args.JDKFolder;
             string originFolder = args.OriginFolder;
-            bool splitFolder = args.SplitFolderByAssembly;
 
             try
             {
@@ -322,7 +322,7 @@ namespace MASES.C2JReflector
                 JavaBuilderEventArgs args = o as JavaBuilderEventArgs;
                 logLevel = args.LogLevel;
 
-                var jars = CreateJars(args.JDKFolder, args.OriginFolder, args.DestinationFolder, (args.AssembliesToUse == null) ? CreateFolderList(args.OriginFolder) : args.AssembliesToUse);
+                var jars = CreateJars(args.JDKFolder, args.OriginFolder, args.DestinationFolder, (args.AssembliesToUse == null) ? CreateFolderList(args.OriginFolder) : args.AssembliesToUse, args.WithJARSource);
                 reportStr = string.Format("{0} Jars created in {1}.", jars, DateTime.Now - dtStart);
             }
             catch (Exception ex)
@@ -336,13 +336,10 @@ namespace MASES.C2JReflector
             }
         }
 
-        public static int CreateJars(string jdkFolder, string originFolder, string destFolder, IEnumerable<string> assemblies, int timeout = Timeout.Infinite)
+        public static int CreateJars(string jdkFolder, string originFolder, string destFolder, IEnumerable<string> assemblies, bool withSource, int timeout = Timeout.Infinite)
         {
             var counter = 0;
-            var location = typeof(JavaBuilder).Assembly.Location;
-            location = Path.GetDirectoryName(location);
-            location = Path.Combine(location, Const.Templates.ManifestTemplate);
-            var manifestTemplate = File.ReadAllText(location);
+            var manifestTemplate = Const.Templates.GetTemplate(Const.Templates.ManifestTemplate);
             StringBuilder sb = new StringBuilder(manifestTemplate);
             foreach (var item in assemblies)
             {
@@ -355,8 +352,11 @@ namespace MASES.C2JReflector
                     sb.AppendLine(str);
                     counter++;
                 }
-                CreateSingleJar(jdkFolder, originFolder, item, JarType.Source, destFolder, timeout);
-                counter++;
+                if (withSource)
+                {
+                    CreateSingleJar(jdkFolder, originFolder, item, JarType.Source, destFolder, timeout);
+                    counter++;
+                }
             }
             sb.AppendLine();
             var manifestStr = sb.ToString();
@@ -366,9 +366,11 @@ namespace MASES.C2JReflector
 
             CreateSingleJar(jdkFolder, originFolder, Const.FileNameAndDirectory.CommonDirectory, JarType.Compiled, destFolder, timeout, manifestFileName);
             counter++;
-            CreateSingleJar(jdkFolder, originFolder, Const.FileNameAndDirectory.CommonDirectory, JarType.Source, destFolder, timeout);
-            counter++;
-
+            if (withSource)
+            {
+                CreateSingleJar(jdkFolder, originFolder, Const.FileNameAndDirectory.CommonDirectory, JarType.Source, destFolder, timeout);
+                counter++;
+            }
             return counter;
         }
 

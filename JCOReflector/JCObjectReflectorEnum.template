@@ -44,7 +44,7 @@ import org.mases.jcobridge.netreflection.*;
  */
 public class PACKAGE_CLASS_NAME extends NetObject  {
     public static final String assemblyFullName = "FULL_ASSEMBLY_CLASS_NAME";
-	public static final String assemblyShortName = "SHORT_ASSEMBLY_CLASS_NAME";
+    public static final String assemblyShortName = "SHORT_ASSEMBLY_CLASS_NAME";
     public static final String className = "FULLYQUALIFIED_CLASS_NAME";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     public static JCType classType = createType();
@@ -76,6 +76,7 @@ public class PACKAGE_CLASS_NAME extends NetObject  {
     }
 
     public PACKAGE_CLASS_NAME(Object instance) {
+        super(instance);
         if (instance instanceof JCObject) {
             try {
                 String enumName = NetEnum.GetName(classType, (JCObject)instance);

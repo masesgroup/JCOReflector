@@ -23,6 +23,9 @@
  */
 
 using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.IO;
 
 namespace MASES.C2JReflector
 {
@@ -65,18 +68,25 @@ namespace MASES.C2JReflector
 
         public class SpecialNames
         {
+            public const string ImplementationTrailer = "Implementation";
             public const string Internal = "internal";
             public const string VarArgsTrailer = "...";
             public const string ArrayTrailer = "[]";
             public const string MultiArrayTrailer = "[,";
             public const string NativeStringType = "java.lang.String";
+            public const string IJCOBridgeReflected = "IJCOBridgeReflected";
             public const string NetObject = "NetObject";
             public const string NetType = "NetType";
             public const string NetException = "NetException";
             public const string NetArrayList = "NetArrayList";
+            public const string NetIEnumerable = "IEnumerable";
+            public const string NetIEnumerator = "IEnumerator";
             public const string StringEnumerator = "System.Collections.Specialized.StringEnumerator";
             public const string XamlReader = "System.Xaml.XamlReader";
             public const string WsdlImporter = "System.ServiceModel.Description.WsdlImporter";
+            public const string STATIC_KEYWORD = "static ";
+            public const string FINAL_KEYWORD = "final ";
+            public const string METHOD_DYNAMICINVOKE_NAME = "DynamicInvoke";
         }
 
         public class FileNameAndDirectory
@@ -103,8 +113,92 @@ namespace MASES.C2JReflector
 
         public class Templates
         {
+            static string[] templateStrings = new string[]
+            {
+                ReflectorInterfaceTemplate,
+                ReflectorInterfaceClassTemplate,
+                ReflectorInterfaceEventTemplate ,
+                ReflectorInterfaceMethodTemplate ,
+                ReflectorInterfaceGetTemplate,
+                ReflectorInterfaceGetArrayTemplate,
+                ReflectorInterfaceSetTemplate ,
+
+                ReflectorThrowableClassTemplate ,
+                ReflectorClassTemplate,
+
+                ReflectorClassConstructorTemplate ,
+
+                ReflectorClassVoidMethodTemplate ,
+                ReflectorClassNativeMethodTemplate ,
+                ReflectorClassNativeArrayMethodTemplate ,
+                ReflectorClassObjectMethodTemplate ,
+                ReflectorClassObjectArrayMethodTemplate,
+
+                ReflectorClassSetTemplate ,
+                ReflectorClassNativeGetTemplate ,
+                ReflectorClassNativeArrayGetTemplate ,
+                ReflectorClassObjectGetTemplate,
+                ReflectorClassObjectArrayGetTemplate,
+
+                ReflectorEnumTemplate ,
+                ReflectorEnumFlagsTemplate ,
+
+                ReflectorEnumeratorTemplate,
+                ReflectorEnumerableTemplate ,
+                ReflectorEnumerableNativeNextTemplate,
+                ReflectorEnumerableObjectNextTemplate ,
+
+                ReflectorClassEventTemplate ,
+
+
+                VoidDelegateClassTemplate ,
+                VoidDelegateInterfaceTemplate ,
+                NativeDelegateClassTemplate,
+                ObjectDelegateClassTemplate ,
+                NonVoidDelegateInterfaceTemplate ,
+
+                ManifestTemplate,
+            };
+
+            static Templates()
+            {
+                foreach (var item in templateStrings)
+                {
+                    string template = string.Empty;
+                    using (var stream = typeof(Const).Assembly.GetManifestResourceStream(typeof(Const).Namespace + "." + item))
+                    {
+                        using (var sr = new StreamReader(stream))
+                        {
+                            template = sr.ReadToEnd();
+                        }
+                    }
+                    templates.Add(item, template);
+                }
+            }
+
+            static IDictionary<string, string> templates = new ConcurrentDictionary<string, string>();
+            const string namespaceName = "";
+            public static string GetTemplate(string templateName)
+            {
+                string template = string.Empty;
+                if (!templates.TryGetValue(templateName, out template))
+                {
+                    throw new InvalidOperationException(string.Format("Missing template {0}", templateName));
+                }
+                return template;
+            }
+
+            public const string ReflectorInterfaceTemplate = "JCObjectReflectorInterface.template";
+            public const string ReflectorInterfaceClassTemplate = "JCObjectReflectorInterfaceClass.template";
+            public const string ReflectorInterfaceEventTemplate = "JCObjectReflectorInterfaceEvent.template";
+            public const string ReflectorInterfaceMethodTemplate = "JCObjectReflectorInterfaceMethod.template";
+            public const string ReflectorInterfaceGetTemplate = "JCObjectReflectorInterfaceGetProperty.template";
+            public const string ReflectorInterfaceGetArrayTemplate = "JCObjectReflectorInterfaceGetPropertyArray.template";
+            public const string ReflectorInterfaceSetTemplate = "JCObjectReflectorInterfaceSetProperty.template";
+
             public const string ReflectorThrowableClassTemplate = "JCObjectReflectorThrowableClass.template";
             public const string ReflectorClassTemplate = "JCObjectReflectorClass.template";
+
             public const string ReflectorClassConstructorTemplate = "JCObjectReflectorClassConstructor.template";
 
             public const string ReflectorClassVoidMethodTemplate = "JCObjectReflectorClassVoidMethod.template";
@@ -127,7 +221,8 @@ namespace MASES.C2JReflector
             public const string ReflectorEnumerableNativeNextTemplate = "JCObjectReflectorEnumeratorNativeNext.template";
             public const string ReflectorEnumerableObjectNextTemplate = "JCObjectReflectorEnumeratorObjectNext.template";
 
-            public const string ReflectorEventsTemplate = "JCObjectReflectorClassEvent.template";
+            public const string ReflectorClassEventTemplate = "JCObjectReflectorClassEvent.template";
+
 
             public const string VoidDelegateClassTemplate = "JCObjectReflectorVoidDelegateClass.template";
             public const string VoidDelegateInterfaceTemplate = "JCObjectReflectorVoidDelegateInterface.template";
@@ -150,6 +245,7 @@ namespace MASES.C2JReflector
             public const string PACKAGE_IMPORT_SECTION = "PACKAGE_IMPORT_SECTION";
 
             public const string PACKAGE_CLASS_NAME = "PACKAGE_CLASS_NAME";
+            public const string PACKAGE_CLASS_BASE_CLASS = "PACKAGE_CLASS_BASE_CLASS";
             public const string PACKAGE_CLASS_IMPLEMENTS_SECTION = "PACKAGE_CLASS_IMPLEMENTS_SECTION";
             public const string FULL_ASSEMBLY_CLASS_NAME = "FULL_ASSEMBLY_CLASS_NAME";
             public const string SHORT_ASSEMBLY_CLASS_NAME = "SHORT_ASSEMBLY_CLASS_NAME";
@@ -175,9 +271,8 @@ namespace MASES.C2JReflector
             public const string INPUT_PARAMETER = "{0} {1}, ";
             public const string INVOKE_PARAMETER_PRIMITIVE = ", {0}{1}";
             public const string INVOKE_PARAMETER_GENERIC = ", ({0} instanceof IJCOBridgeReflected) ? ((IJCOBridgeReflected){0}).getJCOInstance() : throw JCException(\"Cannot manage instance\")";
-            public const string INVOKE_PARAMETER_NONPRIMITIVE = ", {0}{1}.getJCOInstance()";
+            public const string INVOKE_PARAMETER_NONPRIMITIVE = ", {1} == null ? null : {0}{1}.getJCOInstance()";
             public const string INVOKE_PARAMETER_NONPRIMITIVE_ARRAY = ", {0}toObjectFromArray({1})";
-            public const string STATIC_KEYWORD = "static ";
         }
 
         public class CTor
@@ -188,10 +283,11 @@ namespace MASES.C2JReflector
 
         public class Methods
         {
-            public const string STATIC_KEYWORD = "STATIC_KEYWORD";
+            public const string METHOD_MODIFIER_KEYWORD = "METHOD_MODIFIER_KEYWORD";
             public const string METHOD_NAME = "METHOD_NAME";
             public const string METHOD_OBJECT = "METHOD_OBJECT";
             public const string METHOD_RETURN_TYPE = "METHOD_RETURN_TYPE";
+            public const string METHOD_IMPLEMENTATION_RETURN_TYPE = "METHOD_IMPLEMENTATION_RETURN_TYPE";
             public const string METHOD_RETURN_INNER_TYPE = "METHOD_RETURN_INNER_TYPE";
             public const string METHOD_PARAMETERS = "METHOD_PARAMETERS";
             public const string METHOD_INVOKE_PARAMETERS = "METHOD_INVOKE_PARAMETERS";
@@ -199,12 +295,13 @@ namespace MASES.C2JReflector
 
         public class Properties
         {
-            public const string STATIC_KEYWORD = "STATIC_KEYWORD";
+            public const string METHOD_MODIFIER_KEYWORD = "METHOD_MODIFIER_KEYWORD";
             public const string PROPERTY_NAME = "PROPERTY_NAME";
             public const string PROPERTY_OBJECT = "PROPERTY_OBJECT";
             public const string PROPERTY_INPUTTYPE = "PROPERTY_INPUTTYPE";
             public const string PROPERTY_INPUTNAME = "PROPERTY_INPUTNAME";
             public const string PROPERTY_OUTPUTTYPE = "PROPERTY_OUTPUTTYPE";
+            public const string PROPERTY_IMPLEMENTATION_OUTPUTTYPE = "PROPERTY_IMPLEMENTATION_OUTPUTTYPE";
             public const string PROPERTY_VALUE = "PROPERTY_VALUE";
             public const string PROPERTY_PARAMETERS = "PROPERTY_PARAMETERS";
             public const string PROPERTY_INVOKE_PARAMETERS = "PROPERTY_INVOKE_PARAMETERS";
@@ -212,7 +309,7 @@ namespace MASES.C2JReflector
 
         public class Events
         {
-            public const string STATIC_KEYWORD = "STATIC_KEYWORD";
+            public const string METHOD_MODIFIER_KEYWORD = "METHOD_MODIFIER_KEYWORD";
             public const string EVENT_NAME = "EVENT_NAME";
             public const string EVENT_OBJECT = "EVENT_OBJECT";
             public const string EVENT_HANDLER_TYPE = "EVENT_HANDLER_TYPE";
@@ -235,39 +332,48 @@ namespace MASES.C2JReflector
             public const string DELEGATE_INVOKE_PARAMETERS = "DELEGATE_INVOKE_PARAMETERS";
             public const string DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK = "DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK";
             public const string DELEGATE_PRIMITIVE_DEFAULT_VALUE = "DELEGATE_PRIMITIVE_DEFAULT_VALUE";
+            public const string DELEGATE_DYNAMIC_INVOKE_SECTION = "DELEGATE_DYNAMIC_INVOKE_SECTION";
 
             public const string INVOKE_PARAMETER = "{0}, ";
             public const string INPUT_INVOKE_PARAMETER = "{0} {1}, ";
-            public const string CONVERTER_BLOCK_PARAMETER_PRIMITIVE = "            {0} {1} = ({0})argsFromJCOBridge[{2}];";
+            public const string CONVERTER_BLOCK_PARAMETER_PRIMITIVE = "            {0} {1} = argsFromJCOBridge[{2}] == null ? null : ({0})argsFromJCOBridge[{2}];";
 
-            public const string CONVERTER_BLOCK_PARAMETER_NONPRIMITIVE = "            {0} {1} = new {0}(argsFromJCOBridge[{2}]);";
+            public const string CONVERTER_BLOCK_PARAMETER_NONPRIMITIVE = "            {0} {1} = argsFromJCOBridge[{2}] == null ? null : new {0}(argsFromJCOBridge[{2}]);";
 
-            public static string CONVERTER_BLOCK_PARAMETER_PRIMITIVE_ARRAY = "            ArrayList<Object> resultingArrayListCONVERTER_BLOCK_PARAM_INDEX = new ArrayList<Object>();" + Environment.NewLine +
-                                                                             "            JCObject resultingObjects = (JCObject)argsFromJCOBridge[CONVERTER_BLOCK_PARAM_INDEX];" + Environment.NewLine +
-                                                                             "            for (Object resultingObjectCONVERTER_BLOCK_PARAM_INDEX : resultingObjects) {" + Environment.NewLine +
-                                                                             "                resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.add(resultingObjectCONVERTER_BLOCK_PARAM_INDEX);" + Environment.NewLine +
-                                                                             "            }" + Environment.NewLine +
-                                                                             "            CONVERTER_BLOCK_PARAM_TYPE[] CONVERTER_BLOCK_PARAM_NAME = new CONVERTER_BLOCK_PARAM_TYPE[resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.size()];" + Environment.NewLine +
-                                                                             "			  for(int indexCONVERTER_BLOCK_PARAM_INDEX = 0; indexCONVERTER_BLOCK_PARAM_INDEX < resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.size(); indexCONVERTER_BLOCK_PARAM_INDEX++ ) {" + Environment.NewLine +
-                                                                             "	              CONVERTER_BLOCK_PARAM_NAME[indexCONVERTER_BLOCK_PARAM_INDEX] = (CONVERTER_BLOCK_PARAM_TYPE)resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.get(indexCONVERTER_BLOCK_PARAM_INDEX);" + Environment.NewLine +
+            public static string CONVERTER_BLOCK_PARAMETER_PRIMITIVE_ARRAY = "            CONVERTER_BLOCK_PARAM_TYPE[] CONVERTER_BLOCK_PARAM_NAME = null;" + Environment.NewLine +
+                                                                             "            if (argsFromJCOBridge[CONVERTER_BLOCK_PARAM_INDEX] != null) {" + Environment.NewLine +
+                                                                             "                ArrayList<Object> resultingArrayListCONVERTER_BLOCK_PARAM_INDEX = new ArrayList<Object>();" + Environment.NewLine +
+                                                                             "                JCObject resultingObjects = (JCObject)argsFromJCOBridge[CONVERTER_BLOCK_PARAM_INDEX];" + Environment.NewLine +
+                                                                             "                for (Object resultingObjectCONVERTER_BLOCK_PARAM_INDEX : resultingObjects) {" + Environment.NewLine +
+                                                                             "                    resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.add(resultingObjectCONVERTER_BLOCK_PARAM_INDEX);" + Environment.NewLine +
+                                                                             "                }" + Environment.NewLine +
+                                                                             "                CONVERTER_BLOCK_PARAM_NAME = new CONVERTER_BLOCK_PARAM_TYPE[resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.size()];" + Environment.NewLine +
+                                                                             "		    	  for(int indexCONVERTER_BLOCK_PARAM_INDEX = 0; indexCONVERTER_BLOCK_PARAM_INDEX < resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.size(); indexCONVERTER_BLOCK_PARAM_INDEX++ ) {" + Environment.NewLine +
+                                                                             "	                  CONVERTER_BLOCK_PARAM_NAME[indexCONVERTER_BLOCK_PARAM_INDEX] = (CONVERTER_BLOCK_PARAM_TYPE)resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.get(indexCONVERTER_BLOCK_PARAM_INDEX);" + Environment.NewLine +
+                                                                             "                }" + Environment.NewLine +
                                                                              "            }" + Environment.NewLine;
 
-            public static string CONVERTER_BLOCK_PARAMETER_NONPRIMITIVE_ARRAY = "            ArrayList<CONVERTER_BLOCK_PARAM_TYPE> resultingArrayListCONVERTER_BLOCK_PARAM_INDEX = new ArrayList<CONVERTER_BLOCK_PARAM_TYPE>();" + Environment.NewLine +
-                                                                                "            JCObject resultingObjects = (JCObject)argsFromJCOBridge[CONVERTER_BLOCK_PARAM_INDEX];" + Environment.NewLine +
-                                                                                "            for (Object resultingObjectCONVERTER_BLOCK_PARAM_INDEX : resultingObjects) {" + Environment.NewLine +
-                                                                                "                resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.add(new CONVERTER_BLOCK_PARAM_TYPE(resultingObjectCONVERTER_BLOCK_PARAM_INDEX));" + Environment.NewLine +
-                                                                                "            }" + Environment.NewLine +
-                                                                                "            CONVERTER_BLOCK_PARAM_TYPE[] CONVERTER_BLOCK_PARAM_NAME = new CONVERTER_BLOCK_PARAM_TYPE[resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.size()];" + Environment.NewLine +
-                                                                                "            CONVERTER_BLOCK_PARAM_NAME = resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.toArray(CONVERTER_BLOCK_PARAM_NAME);";
+            public static string CONVERTER_BLOCK_PARAMETER_NONPRIMITIVE_ARRAY = "            CONVERTER_BLOCK_PARAM_TYPE[] CONVERTER_BLOCK_PARAM_NAME = null;" + Environment.NewLine +
+                                                                                "            if (argsFromJCOBridge[CONVERTER_BLOCK_PARAM_INDEX] != null) {" + Environment.NewLine +
+                                                                                "                ArrayList<CONVERTER_BLOCK_PARAM_TYPE> resultingArrayListCONVERTER_BLOCK_PARAM_INDEX = new ArrayList<CONVERTER_BLOCK_PARAM_TYPE>();" + Environment.NewLine +
+                                                                                "                JCObject resultingObjects = (JCObject)argsFromJCOBridge[CONVERTER_BLOCK_PARAM_INDEX];" + Environment.NewLine +
+                                                                                "                for (Object resultingObjectCONVERTER_BLOCK_PARAM_INDEX : resultingObjects) {" + Environment.NewLine +
+                                                                                "                    resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.add(new CONVERTER_BLOCK_IMPLEMENTATION_PARAM_TYPE(resultingObjectCONVERTER_BLOCK_PARAM_INDEX));" + Environment.NewLine +
+                                                                                "                }" + Environment.NewLine +
+                                                                                "                CONVERTER_BLOCK_PARAM_NAME = new CONVERTER_BLOCK_PARAM_TYPE[resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.size()];" + Environment.NewLine +
+                                                                                "                CONVERTER_BLOCK_PARAM_NAME = resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.toArray(CONVERTER_BLOCK_PARAM_NAME);" + Environment.NewLine +
+                                                                                "            }" + Environment.NewLine;
 
             public const string CONVERTER_BLOCK_PARAM_TYPE = "CONVERTER_BLOCK_PARAM_TYPE";
+            public const string CONVERTER_BLOCK_IMPLEMENTATION_PARAM_TYPE = "CONVERTER_BLOCK_IMPLEMENTATION_PARAM_TYPE";
             public const string CONVERTER_BLOCK_PARAM_NAME = "CONVERTER_BLOCK_PARAM_NAME";
             public const string CONVERTER_BLOCK_PARAM_INDEX = "CONVERTER_BLOCK_PARAM_INDEX";
 
             public const string DELEGATE_RETURN_STATEMENT = "DELEGATE_RETURN_STATEMENT";
             public const string DELEGATE_RETURN_STATEMENTTYPE = "DELEGATE_RETURN_STATEMENTTYPE";
             public const string DELEGATE_RETURN_STATEMENT_OBJECT = "            return (retVal == null) ? null : retVal.getJCOInstance();";
-            public static string DELEGATE_RETURN_STATEMENT_OBJECT_ARRAY = "            ArrayList<Object> retValJCArrayList = new ArrayList<Object>();" + Environment.NewLine +
+            public static string DELEGATE_RETURN_STATEMENT_OBJECT_ARRAY = "            if (retVal == null) return retVal;" + Environment.NewLine +
+                                                                          "            ArrayList<Object> retValJCArrayList = new ArrayList<Object>();" + Environment.NewLine +
                                                                           "            for (DELEGATE_RETURN_STATEMENTTYPE retValJCObject : retVal) {" + Environment.NewLine +
                                                                           "                retValJCArrayList.add(retValJCObject.getJCOInstance());" + Environment.NewLine +
                                                                           "            }" + Environment.NewLine +
@@ -282,6 +388,7 @@ namespace MASES.C2JReflector
 
             public const string PACKAGE_CLASS_NAME = "PACKAGE_CLASS_NAME";
             public const string PACKAGE_INNER_CLASS_NAME = "PACKAGE_INNER_CLASS_NAME";
+            public const string PACKAGE_IMPLEMENTATION_INNER_CLASS_NAME = "PACKAGE_IMPLEMENTATION_INNER_CLASS_NAME";
             public const string FULL_ASSEMBLY_CLASS_NAME = "FULL_ASSEMBLY_CLASS_NAME";
             public const string SHORT_ASSEMBLY_CLASS_NAME = "SHORT_ASSEMBLY_CLASS_NAME";
             public const string FULLYQUALIFIED_CLASS_NAME = "FULLYQUALIFIED_CLASS_NAME";

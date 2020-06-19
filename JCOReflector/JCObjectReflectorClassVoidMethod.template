@@ -1,4 +1,6 @@
-    public STATIC_KEYWORDvoid METHOD_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
+    public METHOD_MODIFIER_KEYWORDvoid METHOD_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
+        if (METHOD_OBJECT == null)
+            throw new UnsupportedOperationException("METHOD_OBJECT is null.");
         try {
             METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
         } catch (JCNativeException jcne) {

@@ -1,8 +1,8 @@
     public METHOD_RETURN_TYPE GetEnumerator() throws Throwable {
-        return new METHOD_RETURN_TYPE(classInstance);
+        return new METHOD_IMPLEMENTATION_RETURN_TYPE(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
 	public java.util.Iterator<METHOD_RETURN_INNER_TYPE> iterator() {
-		return new METHOD_RETURN_TYPE(classInstance);
+		return new METHOD_IMPLEMENTATION_RETURN_TYPE(classInstance);
 	}

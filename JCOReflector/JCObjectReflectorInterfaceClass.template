@@ -33,37 +33,34 @@
 
 package PACKAGE_NAME;
 
-import java.util.Iterator;
-
 import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
+import java.util.ArrayList;
 
 // Import section
 PACKAGE_IMPORT_SECTION
 
 /**
- * The base .NET class managing FULLYQUALIFIED_CLASS_NAME, FULL_ASSEMBLY_CLASS_NAME. Extends {@link NetObject}. 
+ * The base .NET class managing FULLYQUALIFIED_CLASS_NAME, FULL_ASSEMBLY_CLASS_NAME. Extends {@link NetObject}.
  */
-public class PACKAGE_CLASS_NAME extends NetObject implements Iterator<PACKAGE_INNER_CLASS_NAME> {
+public class PACKAGE_CLASS_NAMEImplementation extends NetObject implements PACKAGE_CLASS_NAME {
     public static final String assemblyFullName = "FULL_ASSEMBLY_CLASS_NAME";
     public static final String assemblyShortName = "SHORT_ASSEMBLY_CLASS_NAME";
     public static final String className = "FULLYQUALIFIED_CLASS_NAME";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
-    static JCType classType = createType();
+    public static JCType classType = createType();
     static JCEnum enumInstance = null;
-    Iterator<JCObject> classInstance = null;
+    JCObject classInstance = null;
 
     static JCType createType() {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
-        } catch (JCException jce) {
-            if (JCOBridgeInstance.getDebug())
-                jce.printStackTrace();
+        } catch (JCException e) {
             return null;
         }
     }
 
-    protected final void addReference(String ref) throws Throwable {
+    void addReference(String ref) throws Throwable {
         try {
             bridge.AddReference(ref);
         } catch (JCNativeException jcne) {
@@ -71,8 +68,12 @@ public class PACKAGE_CLASS_NAME extends NetObject implements Iterator<PACKAGE_IN
         }
     }
 
-    public PACKAGE_CLASS_NAME(JCObject instance) {
-        classInstance = instance.iterator();
+    public PACKAGE_CLASS_NAMEImplementation(Object instance) throws Throwable {
+        super(instance);
+        if (instance instanceof JCObject) {
+            classInstance = (JCObject) instance;
+        } else
+            throw new Exception("Cannot manage object, it is not a JCObject");
     }
 
     public String getJCOAssemblyName() {
@@ -95,9 +96,20 @@ public class PACKAGE_CLASS_NAME extends NetObject implements Iterator<PACKAGE_IN
         return classType;
     }
 
-	public boolean hasNext() {
-		return classInstance.hasNext();
-	}
+    public static PACKAGE_CLASS_NAME ToPACKAGE_CLASS_NAME(IJCOBridgeReflected from) throws Throwable {
+        NetType.AssertCast(classType, from);
+        return new PACKAGE_CLASS_NAMEImplementation(from.getJCOInstance());
+    }
 
-PACKAGE_CLASS_NEXT_SECTION
+    // Methods section
+    
+METHODS_SECTION
+    
+    // Properties section
+    
+GETTER_SETTER_SECTION
+
+    // Instance Events section
+    
+INSTANCE_EVENTS_SECTION
 }

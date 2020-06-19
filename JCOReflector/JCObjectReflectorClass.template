@@ -43,9 +43,9 @@ PACKAGE_IMPORT_SECTION
 /**
  * The base .NET class managing FULLYQUALIFIED_CLASS_NAME, FULL_ASSEMBLY_CLASS_NAME. Extends {@link NetObject}.
  */
-public class PACKAGE_CLASS_NAME extends NetObject PACKAGE_CLASS_IMPLEMENTS_SECTION {
+public class PACKAGE_CLASS_NAME extends PACKAGE_CLASS_BASE_CLASS PACKAGE_CLASS_IMPLEMENTS_SECTION {
     public static final String assemblyFullName = "FULL_ASSEMBLY_CLASS_NAME";
-	public static final String assemblyShortName = "SHORT_ASSEMBLY_CLASS_NAME";
+    public static final String assemblyShortName = "SHORT_ASSEMBLY_CLASS_NAME";
     public static final String className = "FULLYQUALIFIED_CLASS_NAME";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     public static JCType classType = createType();
@@ -69,6 +69,7 @@ public class PACKAGE_CLASS_NAME extends NetObject PACKAGE_CLASS_IMPLEMENTS_SECTI
     }
 
     public PACKAGE_CLASS_NAME(Object instance) throws Throwable {
+        super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
@@ -91,27 +92,33 @@ public class PACKAGE_CLASS_NAME extends NetObject PACKAGE_CLASS_IMPLEMENTS_SECTI
         return classInstance;
     }
 
+    public void setJCOInstance(JCObject instance) {
+        classInstance = instance;
+        super.setJCOInstance(classInstance);
+    }
+
     public JCType getJCOType() {
         return classType;
     }
 
-    public static PACKAGE_CLASS_NAME castFrom(IJCOBridgeReflected from) throws Throwable {
+    public static PACKAGE_CLASS_NAME cast(IJCOBridgeReflected from) throws Throwable {
+        NetType.AssertCast(classType, from);
         return new PACKAGE_CLASS_NAME(from.getJCOInstance());
     }
 
     // Constructors section
     
-    CONSTRUCTORS_SECTION
+CONSTRUCTORS_SECTION
     
     // Methods section
     
-    METHODS_SECTION
+METHODS_SECTION
     
     // Properties section
     
-    GETTER_SETTER_SECTION
+GETTER_SETTER_SECTION
 
-	// Instance Events section
+    // Instance Events section
     
-    INSTANCE_EVENTS_SECTION
+INSTANCE_EVENTS_SECTION
 }

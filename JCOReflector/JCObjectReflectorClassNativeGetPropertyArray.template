@@ -1,4 +1,6 @@
-    public STATIC_KEYWORDPROPERTY_OUTPUTTYPE[] getPROPERTY_NAME(PROPERTY_PARAMETERS) throws Throwable {
+    public METHOD_MODIFIER_KEYWORDPROPERTY_OUTPUTTYPE[] getPROPERTY_NAME(PROPERTY_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
+        if (PROPERTY_OBJECT == null)
+            throw new UnsupportedOperationException("PROPERTY_OBJECT is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
             JCObject resultingObjects = (JCObject)PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);

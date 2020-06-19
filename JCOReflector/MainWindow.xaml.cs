@@ -195,6 +195,7 @@ namespace MASES.C2JReflector
                 args.OriginFolder = tbDestinationFolder.Text;
                 args.DestinationFolder = tbJarDestinationFolder.Text;
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
+                args.WithJARSource = cbWithSource.IsChecked.Value;
                 args.AssembliesToUse = createList();
 
                 commandPanel.IsEnabled = false;
@@ -232,6 +233,15 @@ namespace MASES.C2JReflector
                 if (args != null) tbReport.Text = args.Report;
                 else tbReport.Text = "Missing managed event args.";
             });
+        }
+
+        private void tbConsole_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!cbPinConsole.IsChecked.Value)
+            {
+                tbConsole.CaretIndex = tbConsole.Text.Length;
+                tbConsole.ScrollToEnd();
+            }
         }
     }
 }

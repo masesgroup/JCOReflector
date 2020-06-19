@@ -1,7 +1,9 @@
-    public STATIC_KEYWORDMETHOD_RETURN_TYPE METHOD_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
+    public METHOD_MODIFIER_KEYWORDMETHOD_RETURN_TYPE METHOD_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
+        if (METHOD_OBJECT == null)
+            throw new UnsupportedOperationException("METHOD_OBJECT is null.");
         try {
             JCObject objMETHOD_NAME = (JCObject)METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
-            return new METHOD_RETURN_TYPE(objMETHOD_NAME);
+            return new METHOD_IMPLEMENTATION_RETURN_TYPE(objMETHOD_NAME);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

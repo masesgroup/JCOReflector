@@ -37,6 +37,16 @@ namespace MASES.C2JReflector
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string RepositoryRoot
+        {
+            get { return (string)GetValue(RepositoryRootProperty); }
+            set { SetValue(RepositoryRootProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for RepositoryRoot.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty RepositoryRootProperty =
+            DependencyProperty.Register("RepositoryRoot", typeof(string), typeof(MainWindow), new PropertyMetadata(string.Empty));
+
         public AssemblyDataCollection AssemblyDataCollection
         {
             get { return (AssemblyDataCollection)GetValue(AssemblyDataCollectionProperty); }
@@ -68,16 +78,20 @@ namespace MASES.C2JReflector
 
             Title += " Version " + typeof(MainWindow).Assembly.GetName().Version.ToString();
 
+            var assemblyLoc = typeof(MainWindow).Assembly.Location;
+            assemblyLoc = Path.GetDirectoryName(assemblyLoc);
+            RepositoryRoot = Path.Combine(assemblyLoc, @"..\..\");
+
             cbTarget.ItemsSource = Enum.GetValues(typeof(JDKVersion));
             cbTarget.SelectedValue = JDKVersion.Version8;
 
             cbLogLevel.ItemsSource = Enum.GetValues(typeof(LogLevel));
             cbLogLevel.SelectedValue = LogLevel.Info;
 
-            tbDestinationFolder.Text = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\netreflected\src"));
-            tbJarDestinationFolder.Text = Environment.CurrentDirectory;
+            tbDestinationFolder.Text = Path.GetFullPath(Path.Combine(RepositoryRoot, @"netreflected\src"));
+            tbJarDestinationFolder.Text = assemblyLoc;
 #if DEBUG
-            tbJDKFolder.Text = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\jdk-14.0.1"));
+            tbJDKFolder.Text = Path.GetFullPath(Path.Combine(RepositoryRoot, "jdk-14.0.1"));
 #endif
             Reflector.AppendToConsoleHandler = appendToConsole;
             Reflector.EndOperationHandler = endOperation;

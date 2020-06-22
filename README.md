@@ -108,11 +108,11 @@ In the root folder execute:
 
 For .NET Core it is possible to execute:
 
-> dotnet run --framework netcoreapp3.1 JCOReflector\JCOReflectorCore.csproj
+> dotnet run --framework netcoreapp3.1 --project JCOReflector\JCOReflectorCore.csproj
 
 For .NET Framework it is possible to execute:
 
-> dotnet run --framework net461 JCOReflector\JCOReflectorCore.csproj
+> dotnet run --framework net461 --project JCOReflector\JCOReflectorCore.csproj
 
 ![JCOReflector](/images/jcoreflector.png?raw=true "JCOReflector screenshot")
 ![JCOReflector](/images/jcoreflector2.png?raw=true "JCOReflector screenshot")

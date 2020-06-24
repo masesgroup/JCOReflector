@@ -119,9 +119,14 @@ For .NET Framework it is possible to execute:
 
 ## Reflected Assemblies
 
-The folder [netreflected](/netreflected/src) contains all reflected classes generated for **.NET** **Framework** and **Core**. Below the list of analyzed and reflected assemblies:
+The folder [netreflected](/netreflected/src) contains all reflected classes generated for **.NET** **Framework** and **Core**. Below the coverage statistics and the list of analyzed and reflected assemblies:
 
-### Framework
+### Statistics
+![FrameworkStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=1238429091&format=image)
+
+![NetcoreStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=964222969&format=image)
+
+### Framework list of analyzed and reflected assemblies
 
 > * PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
@@ -196,7 +201,7 @@ The folder [netreflected](/netreflected/src) contains all reflected classes gene
 > * Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 
-### CoreCLR (reference is .NET Core 3.1)
+### CoreCLR list of analyzed and reflected assemblies (reference is .NET Core 3.1)
 
 > * PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Runtime, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a

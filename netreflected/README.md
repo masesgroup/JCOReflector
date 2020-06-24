@@ -8,6 +8,8 @@ There are two main folders:
 **JCOReflector** is the folder of common classes for both **Framework** and **Core**
 
 ## Framework
+![FrameworkStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=1238429091&format=image)
+
 
 Parsed assemblies are:
 * PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
@@ -103,6 +105,8 @@ Parsed assemblies are:
 >   * Total Events: Analyzed 30583 - Implemented = 26843
 
 ## CoreCLR (reference is .NET Core 3.1)
+
+![NetcoreStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=964222969&format=image)
 
 Parsed assemblies are:
 * PresentationFramework

@@ -172,57 +172,57 @@ namespace MASES.C2JReflector
                 //add header
                 sb.Append("parsedAssemblies;");
                 sb.Append("analyzedTypes;");
-                sb.Append("discardedTypes;"); 
-                sb.Append("discardedNonPublicTypes;"); 
-                sb.Append("discardedGenericTypes;"); 
-                sb.Append("discardedInternalTypes;"); 
+                sb.Append("discardedTypes;");
+                sb.Append("discardedNonPublicTypes;");
+                sb.Append("discardedGenericTypes;");
+                sb.Append("discardedInternalTypes;");
                 sb.Append("implementedEnum ;");
-                sb.Append("implementedEnumsFlags;"); 
-                sb.Append("analyzedEnumerators;"); 
-                sb.Append("implementedEnumerators;"); 
-                sb.Append("analyzedDelegates;"); 
-                sb.Append("implementedDelegates;"); 
-                sb.Append("implementedInterfaces;"); 
-                sb.Append("implementedClasses;"); 
-                sb.Append("implementedExceptions;"); 
+                sb.Append("implementedEnumsFlags;");
+                sb.Append("analyzedEnumerators;");
+                sb.Append("implementedEnumerators;");
+                sb.Append("analyzedDelegates;");
+                sb.Append("implementedDelegates;");
+                sb.Append("implementedInterfaces;");
+                sb.Append("implementedClasses;");
+                sb.Append("implementedExceptions;");
                 sb.Append("analyzedCtors;");
                 sb.Append("implementedCtors ;");
-                sb.Append("analyzedMethods;"); 
-                sb.Append("implementedMethods;"); 
-                sb.Append("analyzedProperties;"); 
-                sb.Append("implementedProperties;"); 
-                sb.Append("analyzedEvents;"); 
-                sb.Append("implementedEvents;"); 
-                
+                sb.Append("analyzedMethods;");
+                sb.Append("implementedMethods;");
+                sb.Append("analyzedProperties;");
+                sb.Append("implementedProperties;");
+                sb.Append("analyzedEvents;");
+                sb.Append("implementedEvents;");
+
                 sb.AppendLine();
                 //Add data
-                sb.AppendFormat("{0};", parsedAssemblies );
-                sb.AppendFormat("{0};", analyzedTypes );
-                sb.AppendFormat("{0};", discardedTypes );
-                sb.AppendFormat("{0};", discardedNonPublicTypes );
-                sb.AppendFormat("{0};", discardedGenericTypes );
-                sb.AppendFormat("{0};", discardedInternalTypes );
-                sb.AppendFormat("{0};", implementedEnums );
-                sb.AppendFormat("{0};", implementedEnumsFlags );
-                sb.AppendFormat("{0};", analyzedEnumerators );
-                sb.AppendFormat("{0};", implementedEnumerators );
-                sb.AppendFormat("{0};", analyzedDelegates );
-                sb.AppendFormat("{0};", implementedDelegates );
-                sb.AppendFormat("{0};", implementedInterfaces );
-                sb.AppendFormat("{0};", implementedClasses );
-                sb.AppendFormat("{0};", implementedExceptions );
-                sb.AppendFormat("{0};", analyzedCtors );
-                sb.AppendFormat("{0};", implementedCtors );
-                sb.AppendFormat("{0};", analyzedMethods );
-                sb.AppendFormat("{0};", implementedMethods );
-                sb.AppendFormat("{0};", analyzedProperties );
-                sb.AppendFormat("{0};", implementedProperties );
-                sb.AppendFormat("{0};", analyzedEvents );
-                sb.AppendFormat("{0};", implementedEvents );
- 
+                sb.AppendFormat("{0};", parsedAssemblies);
+                sb.AppendFormat("{0};", analyzedTypes);
+                sb.AppendFormat("{0};", discardedTypes);
+                sb.AppendFormat("{0};", discardedNonPublicTypes);
+                sb.AppendFormat("{0};", discardedGenericTypes);
+                sb.AppendFormat("{0};", discardedInternalTypes);
+                sb.AppendFormat("{0};", implementedEnums);
+                sb.AppendFormat("{0};", implementedEnumsFlags);
+                sb.AppendFormat("{0};", analyzedEnumerators);
+                sb.AppendFormat("{0};", implementedEnumerators);
+                sb.AppendFormat("{0};", analyzedDelegates);
+                sb.AppendFormat("{0};", implementedDelegates);
+                sb.AppendFormat("{0};", implementedInterfaces);
+                sb.AppendFormat("{0};", implementedClasses);
+                sb.AppendFormat("{0};", implementedExceptions);
+                sb.AppendFormat("{0};", analyzedCtors);
+                sb.AppendFormat("{0};", implementedCtors);
+                sb.AppendFormat("{0};", analyzedMethods);
+                sb.AppendFormat("{0};", implementedMethods);
+                sb.AppendFormat("{0};", analyzedProperties);
+                sb.AppendFormat("{0};", implementedProperties);
+                sb.AppendFormat("{0};", analyzedEvents);
+                sb.AppendFormat("{0};", implementedEvents);
+
                 res = sb.ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 res = string.Format("Error {0}", ex.Message);
                 AppendToConsole(LogLevel.Error, res);
@@ -243,7 +243,7 @@ namespace MASES.C2JReflector
                     sb.AppendLine(string.Format("> * {0}", item));
                 }
                 sb.AppendLine();
-                var implemented = implementedDelegates + implementedEnumerators + implementedInterfaces + implementedEnums + implementedClasses ;
+                var implemented = implementedDelegates + implementedEnumerators + implementedInterfaces + implementedEnums + implementedClasses;
                 sb.AppendFormat("> Total Types: Analyzed = {0} - Implemented = {1} - Discarded = {2} - Non Public = {3} - Generic = {4} - Internals = {5}", analyzedTypes, implemented, discardedTypes, discardedNonPublicTypes, discardedGenericTypes, discardedInternalTypes);
                 sb.AppendLine();
                 sb.AppendFormat("> * Total Enumerators: Analyzed = {0} - Implemented = {1}", analyzedEnumerators, implementedEnumerators);
@@ -267,7 +267,7 @@ namespace MASES.C2JReflector
 
                 res = sb.ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 res = string.Format("Error {0}", ex.Message);
                 AppendToConsole(LogLevel.Error, res);
@@ -320,12 +320,12 @@ namespace MASES.C2JReflector
             }
             catch (Exception ex)
             {
-                AppendToConsole(LogLevel.Error,"ExportAssembly report section error:{0}" ,ex.Message);
+                AppendToConsole(LogLevel.Error, "ExportAssembly report section error:{0}", ex.Message);
 
             }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr,statisticsCsv));
+                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, statisticsCsv));
             }
         }
 
@@ -786,6 +786,21 @@ namespace MASES.C2JReflector
             var ctorTypes = type.GetConstructors();
             if (ctorTypes.Length == 0) return string.Empty;
 
+            SortedDictionary<string, ConstructorInfo> sortedData = new SortedDictionary<string, ConstructorInfo>();
+            foreach (var item in ctorTypes)
+            {
+                var strMethod = item.ToString();
+                if (!sortedData.ContainsKey(strMethod))
+                {
+                    sortedData.Add(strMethod, item);
+                }
+            }
+
+            var ctorLst = new List<ConstructorInfo>();
+            ctorLst.AddRange(sortedData.Values);
+
+            ctorTypes = ctorLst.ToArray();
+
             var ctorClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorClassConstructorTemplate);
             ctorClassTemplate = ctorClassTemplate.Replace(Const.Class.PACKAGE_CLASS_NAME, type.Name);
 
@@ -999,6 +1014,21 @@ namespace MASES.C2JReflector
 
             if (methods.Length == 0) return string.Empty;
 
+            SortedDictionary<string, MethodInfo> sortedData = new SortedDictionary<string, MethodInfo>();
+            foreach (var item in methods)
+            {
+                var strMethod = item.ToString();
+                if (!sortedData.ContainsKey(strMethod))
+                {
+                    sortedData.Add(strMethod, item);
+                }
+            }
+
+            var methodLst = new List<MethodInfo>();
+            methodLst.AddRange(sortedData.Values);
+
+            methods = methodLst.ToArray();
+
             string templateInterfaceToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceMethodTemplate);
             string templateToUse = string.Empty;
 
@@ -1020,7 +1050,7 @@ namespace MASES.C2JReflector
             {
                 var methodName = item.Name;
 
-                if (!item.IsPublic 
+                if (!item.IsPublic
                     || item.IsSpecialName // remove properties
                     || methodsSignatureCreated.Contains(item.ToString()) // avoid duplicated methods from inheritance
                    ) continue;
@@ -1232,6 +1262,19 @@ namespace MASES.C2JReflector
             }
 
             if (properties.Count == 0) return string.Empty;
+
+            SortedDictionary<string, Tuple<bool, PropertyInfo>> sortedData = new SortedDictionary<string, Tuple<bool, PropertyInfo>>();
+            foreach (var item in properties)
+            {
+                var strMethod = item.Item2.ToString();
+                if (!sortedData.ContainsKey(strMethod))
+                {
+                    sortedData.Add(strMethod, item);
+                }
+            }
+
+            properties = new List<Tuple<bool, PropertyInfo>>();
+            properties.AddRange(sortedData.Values);
 
             string templateToUse = string.Empty;
 
@@ -1553,6 +1596,21 @@ namespace MASES.C2JReflector
             }
 
             if (events.Length == 0) return string.Empty;
+
+            SortedDictionary<string, EventInfo> sortedData = new SortedDictionary<string, EventInfo>();
+            foreach (var item in events)
+            {
+                var strMethod = item.ToString();
+                if (!sortedData.ContainsKey(strMethod))
+                {
+                    sortedData.Add(strMethod, item);
+                }
+            }
+
+            var eventLst = new List<EventInfo>();
+            eventLst.AddRange(sortedData.Values);
+
+            events = eventLst.ToArray();
 
             string templateInterfaceToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceEventTemplate);
             string templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassEventTemplate);

@@ -244,7 +244,17 @@ namespace MASES.C2JReflector
             this.Dispatcher.Invoke(() =>
             {
                 commandPanel.IsEnabled = true;
-                if (args != null) tbReport.Text = args.Report;
+                if (args != null)
+                {
+                    tbReport.Text = args.Report;
+                    string csvFileName = string.Empty;
+                    #if NET_CORE
+                    csvFileName = Path.GetFullPath(Path.Combine(RepositoryRoot, @"netreflected\statistics\NetcoreStatistics.csv"));
+                    #else
+                    csvFileName = Path.GetFullPath(Path.Combine(RepositoryRoot, @"netreflected\statistics\FrameworkStatistics.csv"));
+                    #endif
+                    File.WriteAllText(csvFileName,args.StatisticsCsv);
+                }
                 else tbReport.Text = "Missing managed event args.";
             });
         }

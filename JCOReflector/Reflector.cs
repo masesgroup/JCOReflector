@@ -58,7 +58,14 @@ namespace MASES.C2JReflector
             Report = report;
         }
 
+        public EndOperationEventArgs(string report, string statisticsCsv)
+        {
+            Report = report;
+            StatisticsCsv = statisticsCsv;
+        }
+
         public string Report { get; private set; }
+        public string StatisticsCsv { get; private set; }
     }
 
     public static class Reflector
@@ -154,6 +161,120 @@ namespace MASES.C2JReflector
             analyzedEvents = 0;
         }
 
+        static string GetStatisticsCsv()
+        {
+            // Modification in the order and quantity of data shall be done also in 
+            // the graph generator (google sheets)
+            string res = String.Empty;
+            try
+            {
+                StringBuilder sb = new StringBuilder();
+                //add header
+                sb.Append("parsedAssemblies;");
+                sb.Append("analyzedTypes;");
+                sb.Append("discardedTypes;"); 
+                sb.Append("discardedNonPublicTypes;"); 
+                sb.Append("discardedGenericTypes;"); 
+                sb.Append("discardedInternalTypes;"); 
+                sb.Append("implementedEnum ;");
+                sb.Append("implementedEnumsFlags;"); 
+                sb.Append("analyzedEnumerators;"); 
+                sb.Append("implementedEnumerators;"); 
+                sb.Append("analyzedDelegates;"); 
+                sb.Append("implementedDelegates;"); 
+                sb.Append("implementedInterfaces;"); 
+                sb.Append("implementedClasses;"); 
+                sb.Append("implementedExceptions;"); 
+                sb.Append("analyzedCtors;");
+                sb.Append("implementedCtors ;");
+                sb.Append("analyzedMethods;"); 
+                sb.Append("implementedMethods;"); 
+                sb.Append("analyzedProperties;"); 
+                sb.Append("implementedProperties;"); 
+                sb.Append("analyzedEvents;"); 
+                sb.Append("implementedEvents;"); 
+                
+                sb.AppendLine();
+                //Add data
+                sb.AppendFormat("{0};", parsedAssemblies );
+                sb.AppendFormat("{0};", analyzedTypes );
+                sb.AppendFormat("{0};", discardedTypes );
+                sb.AppendFormat("{0};", discardedNonPublicTypes );
+                sb.AppendFormat("{0};", discardedGenericTypes );
+                sb.AppendFormat("{0};", discardedInternalTypes );
+                sb.AppendFormat("{0};", implementedEnums );
+                sb.AppendFormat("{0};", implementedEnumsFlags );
+                sb.AppendFormat("{0};", analyzedEnumerators );
+                sb.AppendFormat("{0};", implementedEnumerators );
+                sb.AppendFormat("{0};", analyzedDelegates );
+                sb.AppendFormat("{0};", implementedDelegates );
+                sb.AppendFormat("{0};", implementedInterfaces );
+                sb.AppendFormat("{0};", implementedClasses );
+                sb.AppendFormat("{0};", implementedExceptions );
+                sb.AppendFormat("{0};", analyzedCtors );
+                sb.AppendFormat("{0};", implementedCtors );
+                sb.AppendFormat("{0};", analyzedMethods );
+                sb.AppendFormat("{0};", implementedMethods );
+                sb.AppendFormat("{0};", analyzedProperties );
+                sb.AppendFormat("{0};", implementedProperties );
+                sb.AppendFormat("{0};", analyzedEvents );
+                sb.AppendFormat("{0};", implementedEvents );
+ 
+                res = sb.ToString();
+            }
+            catch(Exception ex)
+            {
+                res = string.Format("Error {0}", ex.Message);
+                AppendToConsole(LogLevel.Error, res);
+            }
+            return res;
+        }
+
+        static string GetReport()
+        {
+            string res = string.Empty;
+            try
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine();
+                sb.AppendLine("> Analyzed Assemblies:");
+                foreach (var item in assemblyReferenced)
+                {
+                    sb.AppendLine(string.Format("> * {0}", item));
+                }
+                sb.AppendLine();
+                var implemented = implementedDelegates + implementedEnumerators + implementedInterfaces + implementedEnums + implementedClasses ;
+                sb.AppendFormat("> Total Types: Analyzed = {0} - Implemented = {1} - Discarded = {2} - Non Public = {3} - Generic = {4} - Internals = {5}", analyzedTypes, implemented, discardedTypes, discardedNonPublicTypes, discardedGenericTypes, discardedInternalTypes);
+                sb.AppendLine();
+                sb.AppendFormat("> * Total Enumerators: Analyzed = {0} - Implemented = {1}", analyzedEnumerators, implementedEnumerators);
+                sb.AppendLine();
+                sb.AppendFormat("> * Total Delegates: Analyzed = {0} - Implemented = {1}", analyzedDelegates, implementedDelegates);
+                sb.AppendLine();
+                sb.AppendFormat("> * Total Enums: Implemented = {0} - Flags = {1}", implementedEnums, implementedEnumsFlags);
+                sb.AppendLine();
+                sb.AppendFormat("> * Total Interfaces: Implemented = {0}", implementedInterfaces);
+                sb.AppendLine();
+                sb.AppendFormat("> * Total Classes: Implemented = {0} Exceptions = {1}", implementedClasses, implementedExceptions);
+                sb.AppendLine();
+                sb.AppendFormat(">   * Total Constructors: Analyzed {0} - Implemented = {1}", analyzedCtors, implementedCtors);
+                sb.AppendLine();
+                sb.AppendFormat(">   * Total Methods: Analyzed {0} - Implemented = {1}", analyzedMethods, implementedMethods);
+                sb.AppendLine();
+                sb.AppendFormat(">   * Total Properties: Analyzed {0} - Implemented = {1}", analyzedProperties, implementedProperties);
+                sb.AppendLine();
+                sb.AppendFormat(">   * Total Events: Analyzed {0} - Implemented = {1}", analyzedEvents, implementedEvents);
+                sb.AppendLine();
+
+                res = sb.ToString();
+            }
+            catch(Exception ex)
+            {
+                res = string.Format("Error {0}", ex.Message);
+                AppendToConsole(LogLevel.Error, res);
+            }
+            return res;
+        }
+
         public static async Task ExportAssembly(object o)
         {
             List<Type> typesToExport = new List<Type>();
@@ -178,6 +299,7 @@ namespace MASES.C2JReflector
             EnableWrite = !args.DryRun;
 
             string reportStr = string.Empty;
+            string statisticsCsv = string.Empty;
             try
             {
                 Assembly assembly = null;
@@ -193,47 +315,17 @@ namespace MASES.C2JReflector
                 }
 
                 await ExportAssemblyWithReferences(assemblyReferenced, new AssemblyName(assembly.FullName), RootDestinationFolder, SplitByAssembly, ForceRebuild);
-
-                StringBuilder sb = new StringBuilder();
-                sb.AppendLine();
-                sb.AppendLine("> Analyzed Assemblies:");
-                foreach (var item in assemblyReferenced)
-                {
-                    sb.AppendLine(string.Format("> * {0}", item));
-                }
-                sb.AppendLine();
-                var implemented = implementedEnumerators + implementedDelegates + implementedEnumsFlags + implementedClasses;
-                sb.AppendFormat("> Total Types: Analyzed = {0} - Implemented = {1} - Discarded = {2} - Non Public = {3} - Generic = {4} - Internals = {5}", analyzedTypes, implemented, discardedTypes, discardedNonPublicTypes, discardedGenericTypes, discardedInternalTypes);
-                sb.AppendLine();
-                sb.AppendFormat("> * Total Enumerators: Analyzed = {0} - Implemented = {1}", analyzedEnumerators, implementedEnumerators);
-                sb.AppendLine();
-                sb.AppendFormat("> * Total Delegates: Analyzed = {0} - Implemented = {1}", analyzedDelegates, implementedDelegates);
-                sb.AppendLine();
-                sb.AppendFormat("> * Total Enums: Implemented = {0} - Flags = {1}", implementedEnums, implementedEnumsFlags);
-                sb.AppendLine();
-                sb.AppendFormat("> * Total Interfaces: Implemented = {0}", implementedInterfaces);
-                sb.AppendLine();
-                sb.AppendFormat("> * Total Classes: Implemented = {0} Exceptions = {1}", implementedClasses, implementedExceptions);
-                sb.AppendLine();
-                sb.AppendFormat(">   * Total Constructors: Analyzed {0} - Implemented = {1}", analyzedCtors, implementedCtors);
-                sb.AppendLine();
-                sb.AppendFormat(">   * Total Methods: Analyzed {0} - Implemented = {1}", analyzedMethods, implementedMethods);
-                sb.AppendLine();
-                sb.AppendFormat(">   * Total Properties: Analyzed {0} - Implemented = {1}", analyzedProperties, implementedProperties);
-                sb.AppendLine();
-                sb.AppendFormat(">   * Total Events: Analyzed {0} - Implemented = {1}", analyzedEvents, implementedEvents);
-                sb.AppendLine();
-
-                reportStr = sb.ToString();
+                reportStr = GetReport();
+                statisticsCsv = GetStatisticsCsv();
             }
             catch (Exception ex)
             {
-                reportStr = string.Format("Error {0}", ex.Message);
-                AppendToConsole(LogLevel.Error, reportStr);
+                AppendToConsole(LogLevel.Error,"ExportAssembly report section error:{0}" ,ex.Message);
+
             }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr));
+                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr,statisticsCsv));
             }
         }
 

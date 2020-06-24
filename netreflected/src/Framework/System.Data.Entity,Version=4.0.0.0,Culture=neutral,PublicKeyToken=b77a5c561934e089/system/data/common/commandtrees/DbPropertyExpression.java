@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.common.commandtrees.DbExpressionVisitor;
-import system.data.metadata.edm.EdmMember;
 import system.data.common.commandtrees.DbExpression;
-import system.data.metadata.edm.TypeUsage;
 import system.data.common.commandtrees.DbExpressionKind;
+import system.data.metadata.edm.EdmMember;
+import system.data.metadata.edm.TypeUsage;
 
 
 /**
@@ -131,17 +131,6 @@ public class DbPropertyExpression extends NetObject  {
     
     // Properties section
     
-    public EdmMember getProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Property");
-            return new EdmMember(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DbExpression getInstance() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -153,23 +142,34 @@ public class DbPropertyExpression extends NetObject  {
         }
     }
 
-    public TypeUsage getResultType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ResultType");
-            return new TypeUsage(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DbExpressionKind getExpressionKind() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ExpressionKind");
             return new DbExpressionKind(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EdmMember getProperty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Property");
+            return new EdmMember(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeUsage getResultType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ResultType");
+            return new TypeUsage(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -129,6 +129,17 @@ public class DesignerActionListsChangedEventArgs extends NetObject  {
     
     // Properties section
     
+    public DesignerActionListCollection getActionLists() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ActionLists");
+            return new DesignerActionListCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DesignerActionListsChangedType getChangeType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -146,17 +157,6 @@ public class DesignerActionListsChangedEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("RelatedObject");
             return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DesignerActionListCollection getActionLists() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ActionLists");
-            return new DesignerActionListCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

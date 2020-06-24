@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.claims.ClaimsPrincipal;
-import system.identitymodel.protocols.wstrust.WSTrustMessage;
 import system.identitymodel.protocols.wstrust.RequestSecurityTokenResponse;
+import system.identitymodel.protocols.wstrust.WSTrustMessage;
 import system.identitymodel.SecurityTokenService;
+import system.security.claims.ClaimsPrincipal;
 
 
 /**
@@ -131,6 +131,69 @@ public class DispatchContext extends NetObject  {
     
     // Properties section
     
+    public RequestSecurityTokenResponse getResponseMessage() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ResponseMessage");
+            return new RequestSecurityTokenResponse(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setResponseMessage(RequestSecurityTokenResponse ResponseMessage) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ResponseMessage", ResponseMessage == null ? null : ResponseMessage.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WSTrustMessage getRequestMessage() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RequestMessage");
+            return new WSTrustMessage(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRequestMessage(WSTrustMessage RequestMessage) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RequestMessage", RequestMessage == null ? null : RequestMessage.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityTokenService getSecurityTokenService() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SecurityTokenService");
+            return new SecurityTokenService(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSecurityTokenService(SecurityTokenService SecurityTokenService) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SecurityTokenService", SecurityTokenService == null ? null : SecurityTokenService.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ClaimsPrincipal getPrincipal() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -172,27 +235,6 @@ public class DispatchContext extends NetObject  {
         }
     }
 
-    public WSTrustMessage getRequestMessage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RequestMessage");
-            return new WSTrustMessage(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRequestMessage(WSTrustMessage RequestMessage) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RequestMessage", RequestMessage == null ? null : RequestMessage.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getResponseAction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -208,48 +250,6 @@ public class DispatchContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResponseAction", ResponseAction);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public RequestSecurityTokenResponse getResponseMessage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ResponseMessage");
-            return new RequestSecurityTokenResponse(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setResponseMessage(RequestSecurityTokenResponse ResponseMessage) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ResponseMessage", ResponseMessage == null ? null : ResponseMessage.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityTokenService getSecurityTokenService() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenService");
-            return new SecurityTokenService(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSecurityTokenService(SecurityTokenService SecurityTokenService) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SecurityTokenService", SecurityTokenService == null ? null : SecurityTokenService.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

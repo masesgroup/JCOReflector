@@ -103,6 +103,16 @@ public class IConfigMapPathImplementation extends NetObject implements IConfigMa
 
     // Methods section
     
+    public java.lang.String GetAppPathForPath(java.lang.String siteID, java.lang.String path) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetAppPathForPath", siteID, path);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String GetMachineConfigFilename() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -128,16 +138,6 @@ public class IConfigMapPathImplementation extends NetObject implements IConfigMa
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("MapPath", siteID, path);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetAppPathForPath(java.lang.String siteID, java.lang.String path) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetAppPathForPath", siteID, path);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

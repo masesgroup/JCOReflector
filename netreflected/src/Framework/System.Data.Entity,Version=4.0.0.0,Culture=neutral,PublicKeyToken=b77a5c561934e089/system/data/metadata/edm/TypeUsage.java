@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.metadata.edm.TypeUsage;
-import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.PrimitiveType;
+import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.Documentation;
 
@@ -117,45 +117,11 @@ public class TypeUsage extends NetObject  {
     
     // Methods section
     
-    public static TypeUsage CreateDefaultTypeUsage(EdmType edmType) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean IsSubtypeOf(TypeUsage typeUsage) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateDefaultTypeUsage = (JCObject)classType.Invoke("CreateDefaultTypeUsage", edmType == null ? null : edmType.getJCOInstance());
-            return new TypeUsage(objCreateDefaultTypeUsage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TypeUsage CreateStringTypeUsage(PrimitiveType primitiveType, boolean isUnicode, boolean isFixedLength, int maxLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateStringTypeUsage = (JCObject)classType.Invoke("CreateStringTypeUsage", primitiveType == null ? null : primitiveType.getJCOInstance(), isUnicode, isFixedLength, maxLength);
-            return new TypeUsage(objCreateStringTypeUsage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TypeUsage CreateStringTypeUsage(PrimitiveType primitiveType, boolean isUnicode, boolean isFixedLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateStringTypeUsage = (JCObject)classType.Invoke("CreateStringTypeUsage", primitiveType == null ? null : primitiveType.getJCOInstance(), isUnicode, isFixedLength);
-            return new TypeUsage(objCreateStringTypeUsage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TypeUsage CreateBinaryTypeUsage(PrimitiveType primitiveType, boolean isFixedLength, int maxLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateBinaryTypeUsage = (JCObject)classType.Invoke("CreateBinaryTypeUsage", primitiveType == null ? null : primitiveType.getJCOInstance(), isFixedLength, maxLength);
-            return new TypeUsage(objCreateBinaryTypeUsage);
+            return (boolean)classInstance.Invoke("IsSubtypeOf", typeUsage == null ? null : typeUsage.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,12 +138,12 @@ public class TypeUsage extends NetObject  {
         }
     }
 
-    public static TypeUsage CreateDecimalTypeUsage(PrimitiveType primitiveType, byte precision, byte scale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static TypeUsage CreateBinaryTypeUsage(PrimitiveType primitiveType, boolean isFixedLength, int maxLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateDecimalTypeUsage = (JCObject)classType.Invoke("CreateDecimalTypeUsage", primitiveType == null ? null : primitiveType.getJCOInstance(), precision, scale);
-            return new TypeUsage(objCreateDecimalTypeUsage);
+            JCObject objCreateBinaryTypeUsage = (JCObject)classType.Invoke("CreateBinaryTypeUsage", primitiveType == null ? null : primitiveType.getJCOInstance(), isFixedLength, maxLength);
+            return new TypeUsage(objCreateBinaryTypeUsage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,11 +160,45 @@ public class TypeUsage extends NetObject  {
         }
     }
 
-    public boolean IsSubtypeOf(TypeUsage typeUsage) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TypeUsage CreateDecimalTypeUsage(PrimitiveType primitiveType, byte precision, byte scale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Invoke("IsSubtypeOf", typeUsage == null ? null : typeUsage.getJCOInstance());
+            JCObject objCreateDecimalTypeUsage = (JCObject)classType.Invoke("CreateDecimalTypeUsage", primitiveType == null ? null : primitiveType.getJCOInstance(), precision, scale);
+            return new TypeUsage(objCreateDecimalTypeUsage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TypeUsage CreateDefaultTypeUsage(EdmType edmType) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateDefaultTypeUsage = (JCObject)classType.Invoke("CreateDefaultTypeUsage", edmType == null ? null : edmType.getJCOInstance());
+            return new TypeUsage(objCreateDefaultTypeUsage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TypeUsage CreateStringTypeUsage(PrimitiveType primitiveType, boolean isUnicode, boolean isFixedLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateStringTypeUsage = (JCObject)classType.Invoke("CreateStringTypeUsage", primitiveType == null ? null : primitiveType.getJCOInstance(), isUnicode, isFixedLength);
+            return new TypeUsage(objCreateStringTypeUsage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TypeUsage CreateStringTypeUsage(PrimitiveType primitiveType, boolean isUnicode, boolean isFixedLength, int maxLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateStringTypeUsage = (JCObject)classType.Invoke("CreateStringTypeUsage", primitiveType == null ? null : primitiveType.getJCOInstance(), isUnicode, isFixedLength, maxLength);
+            return new TypeUsage(objCreateStringTypeUsage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,17 +214,6 @@ public class TypeUsage extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("BuiltInTypeKind");
             return new BuiltInTypeKind(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EdmType getEdmType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EdmType");
-            return new EdmType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,6 +235,17 @@ public class TypeUsage extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Documentation", Documentation == null ? null : Documentation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EdmType getEdmType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EdmType");
+            return new EdmType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

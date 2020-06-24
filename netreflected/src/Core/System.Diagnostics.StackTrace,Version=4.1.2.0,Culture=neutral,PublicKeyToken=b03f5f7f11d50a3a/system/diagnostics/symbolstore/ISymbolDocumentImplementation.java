@@ -123,16 +123,6 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
         }
     }
 
-    public int FindClosestLine(int line) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("FindClosestLine", line);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] GetSourceRange(int startLine, int startColumn, int endLine, int endColumn) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -152,15 +142,46 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
         }
     }
 
+    public int FindClosestLine(int line) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("FindClosestLine", line);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public java.lang.String getURL() throws Throwable {
+    public boolean getHasEmbeddedSource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("URL");
+            return (boolean)classInstance.Get("HasEmbeddedSource");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getSourceLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("SourceLength");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Guid getCheckSumAlgorithmId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CheckSumAlgorithmId");
+            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,32 +220,11 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
         }
     }
 
-    public Guid getCheckSumAlgorithmId() throws Throwable {
+    public java.lang.String getURL() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CheckSumAlgorithmId");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getHasEmbeddedSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("HasEmbeddedSource");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getSourceLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("SourceLength");
+            return (java.lang.String)classInstance.Get("URL");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

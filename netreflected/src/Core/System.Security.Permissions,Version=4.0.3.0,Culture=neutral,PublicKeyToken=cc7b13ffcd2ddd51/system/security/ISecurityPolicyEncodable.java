@@ -91,9 +91,9 @@ public interface ISecurityPolicyEncodable extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void FromXml(SecurityElement e, PolicyLevel level) throws Throwable;
-
     public SecurityElement ToXml(PolicyLevel level) throws Throwable;
+
+    public void FromXml(SecurityElement e, PolicyLevel level) throws Throwable;
 
 
     

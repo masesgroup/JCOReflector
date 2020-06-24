@@ -41,9 +41,9 @@ import java.util.ArrayList;
 import system.TimeSpan;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.reflection.MethodBase;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.reflection.MethodBase;
 
 /**
  * The base .NET class managing System.Text.RegularExpressions.RegexMatchTimeoutException, System.Text.RegularExpressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetException}.
@@ -174,43 +174,21 @@ public class RegexMatchTimeoutException extends NetException {
     
     // Properties section
     
-    public java.lang.String getInput() throws Throwable {
+    public int getHResult() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Input");
+            return (int)classInstance.Get("HResult");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getPattern() throws Throwable {
+    public void setHResult(int HResult) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Pattern");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TimeSpan getMatchTimeout() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MatchTimeout");
-            return new TimeSpan(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodBase getTargetSite() throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TargetSite");
-            return new MethodBase(val);
+            classInstance.Set("HResult", HResult);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,6 +216,17 @@ public class RegexMatchTimeoutException extends NetException {
         }
     }
 
+    public MethodBase getTargetSite() throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TargetSite");
+            return new MethodBase(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getHelpLink() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -253,6 +242,26 @@ public class RegexMatchTimeoutException extends NetException {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpLink", HelpLink);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getInput() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Input");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getPattern() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Pattern");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,21 +287,12 @@ public class RegexMatchTimeoutException extends NetException {
         }
     }
 
-    public int getHResult() throws Throwable {
+    public TimeSpan getMatchTimeout() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("HResult");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHResult(int HResult) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HResult", HResult);
+            JCObject val = (JCObject)classInstance.Get("MatchTimeout");
+            return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

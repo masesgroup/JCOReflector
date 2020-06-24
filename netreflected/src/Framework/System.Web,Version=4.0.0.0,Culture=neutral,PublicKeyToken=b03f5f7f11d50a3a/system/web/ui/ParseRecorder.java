@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.web.ui.TemplateParser;
 import system.web.ui.ControlBuilder;
-import system.text.regularexpressions.Match;
 import system.codedom.CodeCompileUnit;
 import system.codedom.CodeTypeDeclaration;
 import system.codedom.CodeMemberMethod;
+import system.text.regularexpressions.Match;
 
 
 /**
@@ -128,46 +128,6 @@ public class ParseRecorder extends NetObject  {
         }
     }
 
-    public void RecordBeginTag(ControlBuilder builder, Match tag) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RecordBeginTag", builder == null ? null : builder.getJCOInstance(), tag == null ? null : tag.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RecordEndTag(ControlBuilder builder, Match tag) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RecordEndTag", builder == null ? null : builder.getJCOInstance(), tag == null ? null : tag.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RecordEmptyTag(ControlBuilder builder, Match tag) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RecordEmptyTag", builder == null ? null : builder.getJCOInstance(), tag == null ? null : tag.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RecordCodeBlock(ControlBuilder builder, Match codeBlock) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RecordCodeBlock", builder == null ? null : builder.getJCOInstance(), codeBlock == null ? null : codeBlock.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void ParseComplete(ControlBuilder root) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -183,6 +143,46 @@ public class ParseRecorder extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessGeneratedCode", builder == null ? null : builder.getJCOInstance(), codeCompileUnit == null ? null : codeCompileUnit.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), derivedType == null ? null : derivedType.getJCOInstance(), buildMethod == null ? null : buildMethod.getJCOInstance(), dataBindingMethod == null ? null : dataBindingMethod.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RecordBeginTag(ControlBuilder builder, Match tag) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RecordBeginTag", builder == null ? null : builder.getJCOInstance(), tag == null ? null : tag.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RecordCodeBlock(ControlBuilder builder, Match codeBlock) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RecordCodeBlock", builder == null ? null : builder.getJCOInstance(), codeBlock == null ? null : codeBlock.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RecordEmptyTag(ControlBuilder builder, Match tag) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RecordEmptyTag", builder == null ? null : builder.getJCOInstance(), tag == null ? null : tag.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RecordEndTag(ControlBuilder builder, Match tag) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RecordEndTag", builder == null ? null : builder.getJCOInstance(), tag == null ? null : tag.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

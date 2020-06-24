@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.drawing.Graphics;
 import system.windows.forms.ToolStripSeparator;
-import system.windows.forms.ToolStripItem;
 import system.windows.forms.ToolStrip;
+import system.windows.forms.ToolStripItem;
 
 
 /**
@@ -152,23 +152,23 @@ public class ToolStripSeparatorRenderEventArgs extends NetObject  {
         }
     }
 
-    public ToolStripItem getItem() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Item");
-            return new ToolStripItem(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ToolStrip getToolStrip() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ToolStrip");
             return new ToolStrip(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ToolStripItem getItem() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Item");
+            return new ToolStripItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

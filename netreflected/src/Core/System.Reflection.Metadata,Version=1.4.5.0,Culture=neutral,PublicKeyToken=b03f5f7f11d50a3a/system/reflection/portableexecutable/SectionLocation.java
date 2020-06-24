@@ -127,21 +127,21 @@ public class SectionLocation extends NetObject  {
     
     // Properties section
     
-    public int getRelativeVirtualAddress() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("RelativeVirtualAddress");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getPointerToRawData() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("PointerToRawData");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getRelativeVirtualAddress() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("RelativeVirtualAddress");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

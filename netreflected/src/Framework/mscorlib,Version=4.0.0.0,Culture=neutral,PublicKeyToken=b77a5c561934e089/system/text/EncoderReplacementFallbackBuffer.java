@@ -124,16 +124,6 @@ public class EncoderReplacementFallbackBuffer extends NetObject  {
     
     // Methods section
     
-    public boolean Fallback(char charUnknown, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Fallback", charUnknown, index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Fallback(char charUnknownHigh, char charUnknownLow, int index) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -144,11 +134,11 @@ public class EncoderReplacementFallbackBuffer extends NetObject  {
         }
     }
 
-    public char GetNextChar() throws Throwable {
+    public boolean Fallback(char charUnknown, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (char)classInstance.Invoke("GetNextChar");
+            return (boolean)classInstance.Invoke("Fallback", charUnknown, index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,6 +149,16 @@ public class EncoderReplacementFallbackBuffer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("MovePrevious");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public char GetNextChar() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (char)classInstance.Invoke("GetNextChar");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

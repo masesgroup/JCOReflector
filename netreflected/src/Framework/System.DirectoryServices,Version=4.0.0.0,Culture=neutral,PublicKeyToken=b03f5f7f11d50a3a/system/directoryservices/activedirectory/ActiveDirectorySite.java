@@ -41,15 +41,15 @@ import java.util.ArrayList;
 import system.directoryservices.activedirectory.DirectoryContext;
 import system.directoryservices.activedirectory.ActiveDirectorySite;
 import system.directoryservices.DirectoryEntry;
-import system.directoryservices.activedirectory.DomainCollection;
+import system.directoryservices.activedirectory.ActiveDirectorySchedule;
+import system.directoryservices.activedirectory.ActiveDirectorySiteOptions;
 import system.directoryservices.activedirectory.ActiveDirectorySubnetCollection;
+import system.directoryservices.activedirectory.DirectoryServer;
+import system.directoryservices.activedirectory.DirectoryServerCollection;
+import system.directoryservices.activedirectory.DomainCollection;
 import system.directoryservices.activedirectory.ReadOnlyDirectoryServerCollection;
 import system.directoryservices.activedirectory.ReadOnlySiteCollection;
 import system.directoryservices.activedirectory.ReadOnlySiteLinkCollection;
-import system.directoryservices.activedirectory.DirectoryServer;
-import system.directoryservices.activedirectory.ActiveDirectorySiteOptions;
-import system.directoryservices.activedirectory.DirectoryServerCollection;
-import system.directoryservices.activedirectory.ActiveDirectorySchedule;
 
 
 /**
@@ -135,22 +135,23 @@ public class ActiveDirectorySite extends NetObject  {
     
     // Methods section
     
+    public static ActiveDirectorySite FindByName(DirectoryContext context, java.lang.String siteName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFindByName = (JCObject)classType.Invoke("FindByName", context == null ? null : context.getJCOInstance(), siteName);
+            return new ActiveDirectorySite(objFindByName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ActiveDirectorySite GetComputerSite() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.IndexOutOfRangeException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.net.sockets.SocketException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetComputerSite = (JCObject)classType.Invoke("GetComputerSite");
             return new ActiveDirectorySite(objGetComputerSite);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Delete() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.AccessViolationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Delete");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,22 +168,21 @@ public class ActiveDirectorySite extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
+    public void Delete() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.AccessViolationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Dispose");
+            classInstance.Invoke("Delete");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ActiveDirectorySite FindByName(DirectoryContext context, java.lang.String siteName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFindByName = (JCObject)classType.Invoke("FindByName", context == null ? null : context.getJCOInstance(), siteName);
-            return new ActiveDirectorySite(objFindByName);
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,11 +202,97 @@ public class ActiveDirectorySite extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable, system.ObjectDisposedException {
+    public ActiveDirectorySchedule getIntraSiteReplicationSchedule() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.InvalidTimeZoneException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            JCObject val = (JCObject)classInstance.Get("IntraSiteReplicationSchedule");
+            return new ActiveDirectorySchedule(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIntraSiteReplicationSchedule(ActiveDirectorySchedule IntraSiteReplicationSchedule) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IntraSiteReplicationSchedule", IntraSiteReplicationSchedule == null ? null : IntraSiteReplicationSchedule.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ActiveDirectorySiteOptions getOptions() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Options");
+            return new ActiveDirectorySiteOptions(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setOptions(ActiveDirectorySiteOptions Options) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Options", Options == null ? null : Options.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ActiveDirectorySubnetCollection getSubnets() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Subnets");
+            return new ActiveDirectorySubnetCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryServer getInterSiteTopologyGenerator() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("InterSiteTopologyGenerator");
+            return new DirectoryServer(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInterSiteTopologyGenerator(DirectoryServer InterSiteTopologyGenerator) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InterSiteTopologyGenerator", InterSiteTopologyGenerator == null ? null : InterSiteTopologyGenerator.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryServerCollection getPreferredRpcBridgeheadServers() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.NullReferenceException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PreferredRpcBridgeheadServers");
+            return new DirectoryServerCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryServerCollection getPreferredSmtpBridgeheadServers() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.NullReferenceException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PreferredSmtpBridgeheadServers");
+            return new DirectoryServerCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,12 +309,12 @@ public class ActiveDirectorySite extends NetObject  {
         }
     }
 
-    public ActiveDirectorySubnetCollection getSubnets() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException {
+    public ReadOnlyDirectoryServerCollection getBridgeheadServers() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Subnets");
-            return new ActiveDirectorySubnetCollection(val);
+            JCObject val = (JCObject)classInstance.Get("BridgeheadServers");
+            return new ReadOnlyDirectoryServerCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,48 +353,6 @@ public class ActiveDirectorySite extends NetObject  {
         }
     }
 
-    public DirectoryServer getInterSiteTopologyGenerator() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InterSiteTopologyGenerator");
-            return new DirectoryServer(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInterSiteTopologyGenerator(DirectoryServer InterSiteTopologyGenerator) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InterSiteTopologyGenerator", InterSiteTopologyGenerator == null ? null : InterSiteTopologyGenerator.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ActiveDirectorySiteOptions getOptions() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Options");
-            return new ActiveDirectorySiteOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOptions(ActiveDirectorySiteOptions Options) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Options", Options == null ? null : Options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getLocation() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.net.sockets.SocketException, system.AccessViolationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -329,55 +373,11 @@ public class ActiveDirectorySite extends NetObject  {
         }
     }
 
-    public ReadOnlyDirectoryServerCollection getBridgeheadServers() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException {
+    public java.lang.String getName() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BridgeheadServers");
-            return new ReadOnlyDirectoryServerCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryServerCollection getPreferredSmtpBridgeheadServers() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.NullReferenceException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PreferredSmtpBridgeheadServers");
-            return new DirectoryServerCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryServerCollection getPreferredRpcBridgeheadServers() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.NullReferenceException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PreferredRpcBridgeheadServers");
-            return new DirectoryServerCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ActiveDirectorySchedule getIntraSiteReplicationSchedule() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.InvalidTimeZoneException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("IntraSiteReplicationSchedule");
-            return new ActiveDirectorySchedule(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIntraSiteReplicationSchedule(ActiveDirectorySchedule IntraSiteReplicationSchedule) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IntraSiteReplicationSchedule", IntraSiteReplicationSchedule == null ? null : IntraSiteReplicationSchedule.getJCOInstance());
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

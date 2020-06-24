@@ -138,11 +138,11 @@ public class BamlLocalizableResourceKey extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getUid() throws Throwable {
+    public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Uid");
+            return (java.lang.String)classInstance.Get("AssemblyName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,11 +168,11 @@ public class BamlLocalizableResourceKey extends NetObject  {
         }
     }
 
-    public java.lang.String getAssemblyName() throws Throwable {
+    public java.lang.String getUid() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("AssemblyName");
+            return (java.lang.String)classInstance.Get("Uid");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

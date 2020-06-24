@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.linq.expressions.IndexExpression;
 import system.linq.expressions.Expression;
+import system.linq.expressions.IndexExpression;
 import system.linq.expressions.ExpressionType;
 import system.reflection.PropertyInfo;
 
@@ -153,23 +153,11 @@ public class IndexExpression extends NetObject  {
     
     // Properties section
     
-    public ExpressionType getNodeType() throws Throwable {
+    public boolean getCanReduce() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NodeType");
-            return new ExpressionType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType getType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new NetType(val);
+            return (boolean)classInstance.Get("CanReduce");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,6 +174,17 @@ public class IndexExpression extends NetObject  {
         }
     }
 
+    public ExpressionType getNodeType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NodeType");
+            return new ExpressionType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PropertyInfo getIndexer() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -197,11 +196,12 @@ public class IndexExpression extends NetObject  {
         }
     }
 
-    public boolean getCanReduce() throws Throwable {
+    public NetType getType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CanReduce");
+            JCObject val = (JCObject)classInstance.Get("Type");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -114,21 +114,11 @@ public class ManifestWriter extends NetObject  {
     
     // Methods section
     
-    public static void WriteManifest(Manifest manifest, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.RankException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.xml.XmlException, system.xml.xpath.XPathException {
+    public static void WriteManifest(Manifest manifest) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.RankException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.xml.XmlException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("WriteManifest", manifest == null ? null : manifest.getJCOInstance(), path);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void WriteManifest(Manifest manifest, java.lang.String path, java.lang.String targetframeWorkVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.RankException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.MissingMethodException, system.xml.XmlException, system.xml.xpath.XPathException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("WriteManifest", manifest == null ? null : manifest.getJCOInstance(), path, targetframeWorkVersion);
+            classType.Invoke("WriteManifest", manifest == null ? null : manifest.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,11 +134,21 @@ public class ManifestWriter extends NetObject  {
         }
     }
 
-    public static void WriteManifest(Manifest manifest) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.RankException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.xml.XmlException, system.xml.xpath.XPathException {
+    public static void WriteManifest(Manifest manifest, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.RankException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.xml.XmlException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("WriteManifest", manifest == null ? null : manifest.getJCOInstance());
+            classType.Invoke("WriteManifest", manifest == null ? null : manifest.getJCOInstance(), path);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteManifest(Manifest manifest, java.lang.String path, java.lang.String targetframeWorkVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.RankException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.MissingMethodException, system.xml.XmlException, system.xml.xpath.XPathException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteManifest", manifest == null ? null : manifest.getJCOInstance(), path, targetframeWorkVersion);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

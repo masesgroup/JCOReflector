@@ -37,15 +37,15 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.servicemodel.peerresolvers.RefreshResponseInfo;
+import system.servicemodel.peerresolvers.RefreshInfo;
 import system.servicemodel.peerresolvers.RegisterResponseInfo;
 import system.servicemodel.peerresolvers.RegisterInfo;
 import system.servicemodel.peerresolvers.UpdateInfo;
 import system.servicemodel.peerresolvers.ResolveResponseInfo;
 import system.servicemodel.peerresolvers.ResolveInfo;
-import system.servicemodel.peerresolvers.UnregisterInfo;
-import system.servicemodel.peerresolvers.RefreshResponseInfo;
-import system.servicemodel.peerresolvers.RefreshInfo;
 import system.servicemodel.peerresolvers.ServiceSettingsResponseInfo;
+import system.servicemodel.peerresolvers.UnregisterInfo;
 
 
 /**
@@ -98,17 +98,17 @@ public interface IPeerResolverContract extends IJCOBridgeReflected {
 
     // Methods section
     
+    public RefreshResponseInfo Refresh(RefreshInfo refreshInfo) throws Throwable;
+
     public RegisterResponseInfo Register(RegisterInfo registerInfo) throws Throwable;
 
     public RegisterResponseInfo Update(UpdateInfo updateInfo) throws Throwable;
 
     public ResolveResponseInfo Resolve(ResolveInfo resolveInfo) throws Throwable;
 
-    public void Unregister(UnregisterInfo unregisterInfo) throws Throwable;
-
-    public RefreshResponseInfo Refresh(RefreshInfo refreshInfo) throws Throwable;
-
     public ServiceSettingsResponseInfo GetServiceSettings() throws Throwable;
+
+    public void Unregister(UnregisterInfo unregisterInfo) throws Throwable;
 
 
     

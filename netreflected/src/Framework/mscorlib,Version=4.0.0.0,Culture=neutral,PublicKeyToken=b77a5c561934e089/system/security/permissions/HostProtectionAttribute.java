@@ -137,12 +137,11 @@ public class HostProtectionAttribute extends NetObject  {
     
     // Methods section
     
-    public IPermission CreatePermission() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
-            return new IPermissionImplementation(objCreatePermission);
+            return (boolean)classInstance.Invoke("IsDefaultAttribute");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,11 +157,12 @@ public class HostProtectionAttribute extends NetObject  {
         }
     }
 
-    public boolean IsDefaultAttribute() throws Throwable {
+    public IPermission CreatePermission() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            return new IPermissionImplementation(objCreatePermission);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,67 +172,6 @@ public class HostProtectionAttribute extends NetObject  {
     
     // Properties section
     
-    public HostProtectionResource getResources() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Resources");
-            return new HostProtectionResource(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setResources(HostProtectionResource Resources) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Resources", Resources == null ? null : Resources.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getSynchronization() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Synchronization");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSynchronization(boolean Synchronization) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Synchronization", Synchronization);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getSharedState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SharedState");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSharedState(boolean SharedState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SharedState", SharedState);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getExternalProcessMgmt() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -248,26 +187,6 @@ public class HostProtectionAttribute extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExternalProcessMgmt", ExternalProcessMgmt);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getSelfAffectingProcessMgmt() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SelfAffectingProcessMgmt");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSelfAffectingProcessMgmt(boolean SelfAffectingProcessMgmt) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SelfAffectingProcessMgmt", SelfAffectingProcessMgmt);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,21 +212,21 @@ public class HostProtectionAttribute extends NetObject  {
         }
     }
 
-    public boolean getSelfAffectingThreading() throws Throwable {
+    public boolean getMayLeakOnAbort() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("SelfAffectingThreading");
+            return (boolean)classInstance.Get("MayLeakOnAbort");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSelfAffectingThreading(boolean SelfAffectingThreading) throws Throwable {
+    public void setMayLeakOnAbort(boolean MayLeakOnAbort) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SelfAffectingThreading", SelfAffectingThreading);
+            classInstance.Set("MayLeakOnAbort", MayLeakOnAbort);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,6 +252,86 @@ public class HostProtectionAttribute extends NetObject  {
         }
     }
 
+    public boolean getSelfAffectingProcessMgmt() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("SelfAffectingProcessMgmt");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSelfAffectingProcessMgmt(boolean SelfAffectingProcessMgmt) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SelfAffectingProcessMgmt", SelfAffectingProcessMgmt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getSelfAffectingThreading() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("SelfAffectingThreading");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSelfAffectingThreading(boolean SelfAffectingThreading) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SelfAffectingThreading", SelfAffectingThreading);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getSharedState() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("SharedState");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSharedState(boolean SharedState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SharedState", SharedState);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getSynchronization() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("Synchronization");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSynchronization(boolean Synchronization) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Synchronization", Synchronization);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getUI() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -348,47 +347,6 @@ public class HostProtectionAttribute extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UI", UI);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getMayLeakOnAbort() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("MayLeakOnAbort");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMayLeakOnAbort(boolean MayLeakOnAbort) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MayLeakOnAbort", MayLeakOnAbort);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityAction getAction() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Action");
-            return new SecurityAction(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAction(SecurityAction Action) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Action", Action == null ? null : Action.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,6 +378,48 @@ public class HostProtectionAttribute extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("TypeId");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HostProtectionResource getResources() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Resources");
+            return new HostProtectionResource(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setResources(HostProtectionResource Resources) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Resources", Resources == null ? null : Resources.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityAction getAction() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Action");
+            return new SecurityAction(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAction(SecurityAction Action) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Action", Action == null ? null : Action.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.forms.MouseEventArgs;
-import system.windows.forms.MouseButtons;
 import system.drawing.Point;
+import system.windows.forms.MouseButtons;
 
 
 /**
@@ -130,6 +130,16 @@ public class DataGridViewCellMouseEventArgs extends NetObject  {
     
     // Properties section
     
+    public int getClicks() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Clicks");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int getColumnIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -140,32 +150,21 @@ public class DataGridViewCellMouseEventArgs extends NetObject  {
         }
     }
 
+    public int getDelta() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Delta");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("RowIndex");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MouseButtons getButton() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Button");
-            return new MouseButtons(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getClicks() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Clicks");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,22 +190,23 @@ public class DataGridViewCellMouseEventArgs extends NetObject  {
         }
     }
 
-    public int getDelta() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Delta");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Point getLocation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Location");
             return new Point(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MouseButtons getButton() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Button");
+            return new MouseButtons(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

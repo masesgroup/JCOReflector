@@ -128,11 +128,21 @@ public class SettingsPropertyValue extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable {
+    public boolean getDeserialized() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            return (boolean)classInstance.Get("Deserialized");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDeserialized(boolean Deserialized) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Deserialized", Deserialized);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,22 +168,22 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
+    public boolean getUsingDefaultValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("UsingDefaultValue");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SettingsProperty getProperty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Property");
             return new SettingsProperty(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getUsingDefaultValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("UsingDefaultValue");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,21 +231,11 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
-    public boolean getDeserialized() throws Throwable {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Deserialized");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDeserialized(boolean Deserialized) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Deserialized", Deserialized);
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

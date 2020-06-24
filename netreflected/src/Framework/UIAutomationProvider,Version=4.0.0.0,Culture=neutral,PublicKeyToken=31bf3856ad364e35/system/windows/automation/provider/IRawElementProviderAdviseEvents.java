@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.windows.automation.provider.ProviderOptions;
 import system.windows.automation.provider.IRawElementProviderSimple;
 import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
+import system.windows.automation.provider.ProviderOptions;
 
 
 /**
@@ -92,21 +92,21 @@ public interface IRawElementProviderAdviseEvents extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void AdviseEventAdded(int eventId, int[] properties) throws Throwable;
-
-    public void AdviseEventRemoved(int eventId, int[] properties) throws Throwable;
-
     public NetObject GetPatternProvider(int patternId) throws Throwable;
 
     public NetObject GetPropertyValue(int propertyId) throws Throwable;
+
+    public void AdviseEventAdded(int eventId, int[] properties) throws Throwable;
+
+    public void AdviseEventRemoved(int eventId, int[] properties) throws Throwable;
 
 
     
     // Properties section
     
-    public ProviderOptions getProviderOptions() throws Throwable;
-
     public IRawElementProviderSimple getHostRawElementProvider() throws Throwable;
+
+    public ProviderOptions getProviderOptions() throws Throwable;
 
 
 

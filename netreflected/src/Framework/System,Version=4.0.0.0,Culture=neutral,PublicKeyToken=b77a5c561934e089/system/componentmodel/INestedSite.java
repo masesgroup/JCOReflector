@@ -99,13 +99,13 @@ public interface INestedSite extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String getFullName() throws Throwable;
+    public boolean getDesignMode() throws Throwable;
 
     public IComponent getComponent() throws Throwable;
 
     public IContainer getContainer() throws Throwable;
 
-    public boolean getDesignMode() throws Throwable;
+    public java.lang.String getFullName() throws Throwable;
 
     public java.lang.String getName() throws Throwable;
 

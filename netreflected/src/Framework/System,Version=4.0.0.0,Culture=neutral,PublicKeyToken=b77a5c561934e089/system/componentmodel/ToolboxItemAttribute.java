@@ -167,12 +167,12 @@ public class ToolboxItemAttribute extends NetObject  {
     
     // Properties section
     
-    public NetType getToolboxItemType() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public NetObject getTypeId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolboxItemType");
-            return new NetType(val);
+            JCObject val = (JCObject)classInstance.Get("TypeId");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,12 +188,12 @@ public class ToolboxItemAttribute extends NetObject  {
         }
     }
 
-    public NetObject getTypeId() throws Throwable {
+    public NetType getToolboxItemType() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("ToolboxItemType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.description.ClientCredentials;
-import system.identitymodel.selectors.SecurityTokenProvider;
-import system.identitymodel.selectors.SecurityTokenRequirement;
 import system.identitymodel.selectors.SecurityTokenAuthenticator;
+import system.identitymodel.selectors.SecurityTokenRequirement;
+import system.identitymodel.selectors.SecurityTokenProvider;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.identitymodel.selectors.SecurityTokenVersion;
 

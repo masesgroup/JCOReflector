@@ -38,17 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.TypeCode;
+import system.SByte;
+import system.Single;
+import system.DateTime;
+import system.Decimal;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
-import system.SByte;
 import system.UInt16;
 import system.UInt32;
 import system.UInt64;
-import system.Single;
-import system.Decimal;
-import system.DateTime;
 import system.Base64FormattingOptions;
+import system.TypeCode;
 
 
 /**
@@ -123,17 +123,6 @@ public class Convert extends NetObject  {
     
     // Methods section
     
-    public static TypeCode GetTypeCode(NetObject value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetTypeCode = (JCObject)classType.Invoke("GetTypeCode", value == null ? null : value.getJCOInstance());
-            return new TypeCode(objGetTypeCode);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean IsDBNull(NetObject value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -144,45 +133,111 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static NetObject ChangeType(NetObject value, TypeCode typeCode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException {
+    public static boolean ToBoolean(boolean value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objChangeType = (JCObject)classType.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), typeCode == null ? null : typeCode.getJCOInstance());
-            return new NetObject(objChangeType);
+            return (boolean)classType.Invoke("ToBoolean", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject ChangeType(NetObject value, TypeCode typeCode, IFormatProvider provider) throws Throwable, system.InvalidCastException, system.ArgumentException {
+    public static boolean ToBoolean(byte value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objChangeType = (JCObject)classType.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), typeCode == null ? null : typeCode.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
-            return new NetObject(objChangeType);
+            return (boolean)classType.Invoke("ToBoolean", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject ChangeType(NetObject value, NetType conversionType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException {
+    public static boolean ToBoolean(char value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objChangeType = (JCObject)classType.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), conversionType == null ? null : conversionType.getJCOInstance());
-            return new NetObject(objChangeType);
+            return (boolean)classType.Invoke("ToBoolean", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject ChangeType(NetObject value, NetType conversionType, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.InvalidCastException {
+    public static boolean ToBoolean(double value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objChangeType = (JCObject)classType.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), conversionType == null ? null : conversionType.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
-            return new NetObject(objChangeType);
+            return (boolean)classType.Invoke("ToBoolean", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ToBoolean(short value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ToBoolean", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ToBoolean(int value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ToBoolean", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ToBoolean(long value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ToBoolean", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ToBoolean(SByte value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ToBoolean", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ToBoolean(Single value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ToBoolean", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ToBoolean(DateTime value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ToBoolean", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ToBoolean(Decimal value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ToBoolean", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,106 +263,6 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(boolean value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ToBoolean", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ToBoolean(SByte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ToBoolean", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ToBoolean(char value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ToBoolean", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ToBoolean(byte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ToBoolean", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ToBoolean(short value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ToBoolean", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ToBoolean(UInt16 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ToBoolean", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ToBoolean(int value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ToBoolean", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ToBoolean(UInt32 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ToBoolean", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ToBoolean(long value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ToBoolean", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ToBoolean(UInt64 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ToBoolean", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean ToBoolean(java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -328,7 +283,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(Single value) throws Throwable {
+    public static boolean ToBoolean(UInt16 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -338,17 +293,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(double value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ToBoolean", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ToBoolean(Decimal value) throws Throwable {
+    public static boolean ToBoolean(UInt32 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -358,409 +303,11 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(DateTime value) throws Throwable {
+    public static boolean ToBoolean(UInt64 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("ToBoolean", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(NetObject value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(NetObject value, IFormatProvider provider) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(boolean value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(char value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(SByte value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(byte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(short value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(UInt16 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(int value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(UInt32 value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(long value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(UInt64 value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(java.lang.String value) throws Throwable, system.ArgumentNullException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value, provider == null ? null : provider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(Single value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(double value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(Decimal value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static char ToChar(DateTime value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(NetObject value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(NetObject value, IFormatProvider provider) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(boolean value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(SByte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(char value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(byte value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(short value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(UInt16 value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(int value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(UInt32 value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(long value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(UInt64 value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(Single value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(double value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(Decimal value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value, provider == null ? null : provider.getJCOInstance());
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SByte ToSByte(DateTime value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
-            return new SByte(objToSByte);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static byte ToByte(NetObject value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (byte)classType.Invoke("ToByte", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static byte ToByte(NetObject value, IFormatProvider provider) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (byte)classType.Invoke("ToByte", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -796,11 +343,11 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(SByte value) throws Throwable, system.OverflowException {
+    public static byte ToByte(double value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (byte)classType.Invoke("ToByte", value == null ? null : value.getJCOInstance());
+            return (byte)classType.Invoke("ToByte", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -816,31 +363,11 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(UInt16 value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (byte)classType.Invoke("ToByte", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static byte ToByte(int value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (byte)classType.Invoke("ToByte", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static byte ToByte(UInt32 value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (byte)classType.Invoke("ToByte", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -856,7 +383,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(UInt64 value) throws Throwable, system.OverflowException {
+    public static byte ToByte(SByte value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -876,11 +403,11 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(double value) throws Throwable, system.OverflowException {
+    public static byte ToByte(DateTime value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (byte)classType.Invoke("ToByte", value);
+            return (byte)classType.Invoke("ToByte", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -896,11 +423,41 @@ public class Convert extends NetObject  {
         }
     }
 
+    public static byte ToByte(NetObject value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (byte)classType.Invoke("ToByte", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static byte ToByte(NetObject value, IFormatProvider provider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (byte)classType.Invoke("ToByte", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static byte ToByte(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (byte)classType.Invoke("ToByte", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static byte ToByte(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (byte)classType.Invoke("ToByte", value, fromBase);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -916,11 +473,539 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(DateTime value) throws Throwable {
+    public static byte ToByte(UInt16 value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (byte)classType.Invoke("ToByte", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static byte ToByte(UInt32 value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (byte)classType.Invoke("ToByte", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static byte ToByte(UInt64 value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (byte)classType.Invoke("ToByte", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static byte[] FromBase64CharArray(char[] inArray, int offset, int length) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("FromBase64CharArray", inArray, offset, length);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexFromBase64CharArray = 0; indexFromBase64CharArray < resultingArrayList.size(); indexFromBase64CharArray++ ) {
+				resultingArray[indexFromBase64CharArray] = (byte)resultingArrayList.get(indexFromBase64CharArray);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static byte[] FromBase64String(java.lang.String s) throws Throwable, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("FromBase64String", s);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexFromBase64String = 0; indexFromBase64String < resultingArrayList.size(); indexFromBase64String++ ) {
+				resultingArray[indexFromBase64String] = (byte)resultingArrayList.get(indexFromBase64String);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(boolean value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(byte value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(char value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(double value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(short value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(int value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(long value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(SByte value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(Single value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(DateTime value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(Decimal value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(NetObject value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(NetObject value, IFormatProvider provider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(java.lang.String value) throws Throwable, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value, provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(UInt16 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(UInt32 value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char ToChar(UInt64 value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("ToChar", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(boolean value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(byte value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(char value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(double value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(short value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(int value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(long value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(SByte value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(Single value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(DateTime value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(Decimal value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(NetObject value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(NetObject value, IFormatProvider provider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value, provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(UInt16 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(UInt32 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double ToDouble(UInt64 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static short ToInt16(boolean value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (short)classType.Invoke("ToInt16", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static short ToInt16(byte value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (short)classType.Invoke("ToInt16", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static short ToInt16(char value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (short)classType.Invoke("ToInt16", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static short ToInt16(double value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (short)classType.Invoke("ToInt16", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static short ToInt16(short value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (short)classType.Invoke("ToInt16", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static short ToInt16(int value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (short)classType.Invoke("ToInt16", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static short ToInt16(long value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (short)classType.Invoke("ToInt16", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static short ToInt16(SByte value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (short)classType.Invoke("ToInt16", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static short ToInt16(Single value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (short)classType.Invoke("ToInt16", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static short ToInt16(DateTime value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (short)classType.Invoke("ToInt16", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static short ToInt16(Decimal value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (short)classType.Invoke("ToInt16", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -946,141 +1031,21 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(boolean value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (short)classType.Invoke("ToInt16", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static short ToInt16(char value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (short)classType.Invoke("ToInt16", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static short ToInt16(SByte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (short)classType.Invoke("ToInt16", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static short ToInt16(byte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (short)classType.Invoke("ToInt16", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static short ToInt16(UInt16 value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (short)classType.Invoke("ToInt16", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static short ToInt16(int value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (short)classType.Invoke("ToInt16", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static short ToInt16(UInt32 value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (short)classType.Invoke("ToInt16", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static short ToInt16(short value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (short)classType.Invoke("ToInt16", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static short ToInt16(long value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (short)classType.Invoke("ToInt16", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static short ToInt16(UInt64 value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (short)classType.Invoke("ToInt16", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static short ToInt16(Single value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (short)classType.Invoke("ToInt16", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static short ToInt16(double value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (short)classType.Invoke("ToInt16", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static short ToInt16(Decimal value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (short)classType.Invoke("ToInt16", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static short ToInt16(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (short)classType.Invoke("ToInt16", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static short ToInt16(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (short)classType.Invoke("ToInt16", value, fromBase);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1096,7 +1061,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(DateTime value) throws Throwable {
+    public static short ToInt16(UInt16 value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -1106,225 +1071,57 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(NetObject value) throws Throwable {
+    public static short ToInt16(UInt32 value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
-            return new UInt16(objToUInt16);
+            return (short)classType.Invoke("ToInt16", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt16 ToUInt16(NetObject value, IFormatProvider provider) throws Throwable {
+    public static short ToInt16(UInt64 value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
-            return new UInt16(objToUInt16);
+            return (short)classType.Invoke("ToInt16", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt16 ToUInt16(boolean value) throws Throwable {
+    public static int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
-            return new UInt16(objToUInt16);
+            return (int)classType.Invoke("ToBase64CharArray", inArray, offsetIn, length, outArray, offsetOut);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt16 ToUInt16(char value) throws Throwable {
+    public static int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut, Base64FormattingOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(SByte value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(byte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(short value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(int value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(UInt16 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(UInt32 value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(long value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(UInt64 value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(Single value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(double value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(Decimal value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value, provider == null ? null : provider.getJCOInstance());
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt16 ToUInt16(DateTime value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
-            return new UInt16(objToUInt16);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int ToInt32(NetObject value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("ToInt32", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int ToInt32(NetObject value, IFormatProvider provider) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("ToInt32", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            return (int)classType.Invoke("ToBase64CharArray", inArray, offsetIn, length, outArray, offsetOut, options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
     public static int ToInt32(boolean value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("ToInt32", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int ToInt32(byte value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -1344,17 +1141,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(SByte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("ToInt32", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int ToInt32(byte value) throws Throwable {
+    public static int ToInt32(double value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -1369,26 +1156,6 @@ public class Convert extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (int)classType.Invoke("ToInt32", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int ToInt32(UInt16 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("ToInt32", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int ToInt32(UInt32 value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("ToInt32", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1414,7 +1181,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(UInt64 value) throws Throwable, system.OverflowException {
+    public static int ToInt32(SByte value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -1434,11 +1201,11 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(double value) throws Throwable, system.OverflowException {
+    public static int ToInt32(DateTime value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ToInt32", value);
+            return (int)classType.Invoke("ToInt32", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1454,11 +1221,41 @@ public class Convert extends NetObject  {
         }
     }
 
+    public static int ToInt32(NetObject value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("ToInt32", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int ToInt32(NetObject value, IFormatProvider provider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("ToInt32", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int ToInt32(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (int)classType.Invoke("ToInt32", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int ToInt32(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("ToInt32", value, fromBase);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1474,7 +1271,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(DateTime value) throws Throwable {
+    public static int ToInt32(UInt16 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -1484,199 +1281,131 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(NetObject value) throws Throwable {
+    public static int ToInt32(UInt32 value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
-            return new UInt32(objToUInt32);
+            return (int)classType.Invoke("ToInt32", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 ToUInt32(NetObject value, IFormatProvider provider) throws Throwable {
+    public static int ToInt32(UInt64 value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
-            return new UInt32(objToUInt32);
+            return (int)classType.Invoke("ToInt32", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 ToUInt32(boolean value) throws Throwable {
+    public static long ToInt64(boolean value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
-            return new UInt32(objToUInt32);
+            return (long)classType.Invoke("ToInt64", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 ToUInt32(char value) throws Throwable {
+    public static long ToInt64(byte value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
-            return new UInt32(objToUInt32);
+            return (long)classType.Invoke("ToInt64", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 ToUInt32(SByte value) throws Throwable, system.OverflowException {
+    public static long ToInt64(char value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
-            return new UInt32(objToUInt32);
+            return (long)classType.Invoke("ToInt64", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 ToUInt32(byte value) throws Throwable {
+    public static long ToInt64(double value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
-            return new UInt32(objToUInt32);
+            return (long)classType.Invoke("ToInt64", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 ToUInt32(short value) throws Throwable, system.OverflowException {
+    public static long ToInt64(short value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
-            return new UInt32(objToUInt32);
+            return (long)classType.Invoke("ToInt64", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 ToUInt32(UInt16 value) throws Throwable {
+    public static long ToInt64(int value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
-            return new UInt32(objToUInt32);
+            return (long)classType.Invoke("ToInt64", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 ToUInt32(int value) throws Throwable, system.OverflowException {
+    public static long ToInt64(long value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
-            return new UInt32(objToUInt32);
+            return (long)classType.Invoke("ToInt64", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 ToUInt32(UInt32 value) throws Throwable {
+    public static long ToInt64(SByte value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
-            return new UInt32(objToUInt32);
+            return (long)classType.Invoke("ToInt64", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 ToUInt32(long value) throws Throwable, system.OverflowException {
+    public static long ToInt64(Single value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
-            return new UInt32(objToUInt32);
+            return (long)classType.Invoke("ToInt64", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 ToUInt32(UInt64 value) throws Throwable, system.OverflowException {
+    public static long ToInt64(DateTime value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
-            return new UInt32(objToUInt32);
+            return (long)classType.Invoke("ToInt64", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 ToUInt32(Single value) throws Throwable, system.OverflowException {
+    public static long ToInt64(Decimal value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
-            return new UInt32(objToUInt32);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt32 ToUInt32(double value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
-            return new UInt32(objToUInt32);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt32 ToUInt32(Decimal value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
-            return new UInt32(objToUInt32);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt32 ToUInt32(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
-            return new UInt32(objToUInt32);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt32 ToUInt32(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value, provider == null ? null : provider.getJCOInstance());
-            return new UInt32(objToUInt32);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt32 ToUInt32(DateTime value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
-            return new UInt32(objToUInt32);
+            return (long)classType.Invoke("ToInt64", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1702,7 +1431,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(boolean value) throws Throwable {
+    public static long ToInt64(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -1712,41 +1441,21 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(char value) throws Throwable {
+    public static long ToInt64(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("ToInt64", value);
+            return (long)classType.Invoke("ToInt64", value, fromBase);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long ToInt64(SByte value) throws Throwable {
+    public static long ToInt64(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("ToInt64", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static long ToInt64(byte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (long)classType.Invoke("ToInt64", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static long ToInt64(short value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (long)classType.Invoke("ToInt64", value);
+            return (long)classType.Invoke("ToInt64", value, provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1757,16 +1466,6 @@ public class Convert extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (long)classType.Invoke("ToInt64", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static long ToInt64(int value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (long)classType.Invoke("ToInt64", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1792,301 +1491,220 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(long value) throws Throwable {
+    public static SByte ToSByte(boolean value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("ToInt64", value);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long ToInt64(Single value) throws Throwable {
+    public static SByte ToSByte(byte value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("ToInt64", value == null ? null : value.getJCOInstance());
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long ToInt64(double value) throws Throwable {
+    public static SByte ToSByte(char value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("ToInt64", value);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long ToInt64(Decimal value) throws Throwable, system.OverflowException {
+    public static SByte ToSByte(double value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("ToInt64", value == null ? null : value.getJCOInstance());
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long ToInt64(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
+    public static SByte ToSByte(short value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("ToInt64", value);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long ToInt64(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
+    public static SByte ToSByte(int value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("ToInt64", value, provider == null ? null : provider.getJCOInstance());
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long ToInt64(DateTime value) throws Throwable {
+    public static SByte ToSByte(long value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("ToInt64", value == null ? null : value.getJCOInstance());
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 ToUInt64(NetObject value) throws Throwable {
+    public static SByte ToSByte(SByte value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
-            return new UInt64(objToUInt64);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 ToUInt64(NetObject value, IFormatProvider provider) throws Throwable {
+    public static SByte ToSByte(Single value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
-            return new UInt64(objToUInt64);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 ToUInt64(boolean value) throws Throwable {
+    public static SByte ToSByte(DateTime value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
-            return new UInt64(objToUInt64);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 ToUInt64(char value) throws Throwable {
+    public static SByte ToSByte(Decimal value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
-            return new UInt64(objToUInt64);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 ToUInt64(SByte value) throws Throwable, system.OverflowException {
+    public static SByte ToSByte(NetObject value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
-            return new UInt64(objToUInt64);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 ToUInt64(byte value) throws Throwable {
+    public static SByte ToSByte(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
-            return new UInt64(objToUInt64);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 ToUInt64(short value) throws Throwable, system.OverflowException {
+    public static SByte ToSByte(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
-            return new UInt64(objToUInt64);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value);
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 ToUInt64(UInt16 value) throws Throwable {
+    public static SByte ToSByte(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
-            return new UInt64(objToUInt64);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value, fromBase);
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 ToUInt64(int value) throws Throwable, system.OverflowException {
+    public static SByte ToSByte(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
-            return new UInt64(objToUInt64);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value, provider == null ? null : provider.getJCOInstance());
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 ToUInt64(UInt32 value) throws Throwable {
+    public static SByte ToSByte(UInt16 value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
-            return new UInt64(objToUInt64);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 ToUInt64(long value) throws Throwable, system.OverflowException {
+    public static SByte ToSByte(UInt32 value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
-            return new UInt64(objToUInt64);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 ToUInt64(UInt64 value) throws Throwable {
+    public static SByte ToSByte(UInt64 value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
-            return new UInt64(objToUInt64);
+            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value == null ? null : value.getJCOInstance());
+            return new SByte(objToSByte);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 ToUInt64(Single value) throws Throwable {
+    public static Single ToSingle(boolean value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
-            return new UInt64(objToUInt64);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt64 ToUInt64(double value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
-            return new UInt64(objToUInt64);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt64 ToUInt64(Decimal value) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
-            return new UInt64(objToUInt64);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt64 ToUInt64(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
-            return new UInt64(objToUInt64);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt64 ToUInt64(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value, provider == null ? null : provider.getJCOInstance());
-            return new UInt64(objToUInt64);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt64 ToUInt64(DateTime value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
-            return new UInt64(objToUInt64);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single ToSingle(NetObject value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value == null ? null : value.getJCOInstance());
-            return new Single(objToSingle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single ToSingle(NetObject value, IFormatProvider provider) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
-            return new Single(objToSingle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single ToSingle(SByte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value == null ? null : value.getJCOInstance());
+            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value);
             return new Single(objToSingle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2115,7 +1733,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(short value) throws Throwable {
+    public static Single ToSingle(double value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -2126,11 +1744,11 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(UInt16 value) throws Throwable {
+    public static Single ToSingle(short value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value == null ? null : value.getJCOInstance());
+            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value);
             return new Single(objToSingle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2148,17 +1766,6 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(UInt32 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value == null ? null : value.getJCOInstance());
-            return new Single(objToSingle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Single ToSingle(long value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -2170,7 +1777,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(UInt64 value) throws Throwable {
+    public static Single ToSingle(SByte value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -2192,11 +1799,11 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(double value) throws Throwable {
+    public static Single ToSingle(DateTime value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value);
+            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value == null ? null : value.getJCOInstance());
             return new Single(objToSingle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2208,6 +1815,28 @@ public class Convert extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value == null ? null : value.getJCOInstance());
+            return new Single(objToSingle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single ToSingle(NetObject value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value == null ? null : value.getJCOInstance());
+            return new Single(objToSingle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single ToSingle(NetObject value, IFormatProvider provider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
             return new Single(objToSingle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2236,18 +1865,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(boolean value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value);
-            return new Single(objToSingle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single ToSingle(DateTime value) throws Throwable {
+    public static Single ToSingle(UInt16 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -2258,385 +1876,139 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(NetObject value) throws Throwable {
+    public static Single ToSingle(UInt32 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value == null ? null : value.getJCOInstance());
+            return new Single(objToSingle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static double ToDouble(NetObject value, IFormatProvider provider) throws Throwable {
+    public static Single ToSingle(UInt64 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", value == null ? null : value.getJCOInstance());
+            return new Single(objToSingle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static double ToDouble(SByte value) throws Throwable {
+    public static DateTime ToDateTime(boolean value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
+            return new DateTime(objToDateTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static double ToDouble(byte value) throws Throwable {
+    public static DateTime ToDateTime(byte value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("ToDouble", value);
+            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
+            return new DateTime(objToDateTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static double ToDouble(short value) throws Throwable {
+    public static DateTime ToDateTime(char value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("ToDouble", value);
+            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
+            return new DateTime(objToDateTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static double ToDouble(char value) throws Throwable {
+    public static DateTime ToDateTime(double value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("ToDouble", value);
+            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
+            return new DateTime(objToDateTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static double ToDouble(UInt16 value) throws Throwable {
+    public static DateTime ToDateTime(short value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
+            return new DateTime(objToDateTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static double ToDouble(int value) throws Throwable {
+    public static DateTime ToDateTime(int value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("ToDouble", value);
+            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
+            return new DateTime(objToDateTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static double ToDouble(UInt32 value) throws Throwable {
+    public static DateTime ToDateTime(long value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
+            return new DateTime(objToDateTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static double ToDouble(long value) throws Throwable {
+    public static DateTime ToDateTime(SByte value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("ToDouble", value);
+            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value == null ? null : value.getJCOInstance());
+            return new DateTime(objToDateTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static double ToDouble(UInt64 value) throws Throwable {
+    public static DateTime ToDateTime(Single value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static double ToDouble(Single value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static double ToDouble(double value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (double)classType.Invoke("ToDouble", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static double ToDouble(Decimal value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static double ToDouble(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (double)classType.Invoke("ToDouble", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static double ToDouble(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (double)classType.Invoke("ToDouble", value, provider == null ? null : provider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static double ToDouble(boolean value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (double)classType.Invoke("ToDouble", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static double ToDouble(DateTime value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(NetObject value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(NetObject value, IFormatProvider provider) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(SByte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(byte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(char value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(short value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(UInt16 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(int value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(UInt32 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(long value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(UInt64 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(Single value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(double value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value, provider == null ? null : provider.getJCOInstance());
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(Decimal value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(boolean value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
-            return new Decimal(objToDecimal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Decimal ToDecimal(DateTime value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
-            return new Decimal(objToDecimal);
+            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value == null ? null : value.getJCOInstance());
+            return new DateTime(objToDateTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
     public static DateTime ToDateTime(DateTime value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value == null ? null : value.getJCOInstance());
+            return new DateTime(objToDateTime);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DateTime ToDateTime(Decimal value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -2691,55 +2063,11 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(SByte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value == null ? null : value.getJCOInstance());
-            return new DateTime(objToDateTime);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DateTime ToDateTime(byte value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
-            return new DateTime(objToDateTime);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DateTime ToDateTime(short value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
-            return new DateTime(objToDateTime);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static DateTime ToDateTime(UInt16 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value == null ? null : value.getJCOInstance());
-            return new DateTime(objToDateTime);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DateTime ToDateTime(int value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
             return new DateTime(objToDateTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2757,17 +2085,6 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(long value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
-            return new DateTime(objToDateTime);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static DateTime ToDateTime(UInt64 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -2779,76 +2096,333 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(boolean value) throws Throwable {
+    public static Decimal ToDecimal(boolean value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
-            return new DateTime(objToDateTime);
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
+            return new Decimal(objToDecimal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DateTime ToDateTime(char value) throws Throwable {
+    public static Decimal ToDecimal(byte value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
-            return new DateTime(objToDateTime);
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
+            return new Decimal(objToDecimal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DateTime ToDateTime(Single value) throws Throwable {
+    public static Decimal ToDecimal(char value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value == null ? null : value.getJCOInstance());
-            return new DateTime(objToDateTime);
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
+            return new Decimal(objToDecimal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DateTime ToDateTime(double value) throws Throwable {
+    public static Decimal ToDecimal(double value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
-            return new DateTime(objToDateTime);
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
+            return new Decimal(objToDecimal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DateTime ToDateTime(Decimal value) throws Throwable {
+    public static Decimal ToDecimal(short value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value == null ? null : value.getJCOInstance());
-            return new DateTime(objToDateTime);
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
+            return new Decimal(objToDecimal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String ToString(NetObject value) throws Throwable {
+    public static Decimal ToDecimal(int value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
+            return new Decimal(objToDecimal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String ToString(NetObject value, IFormatProvider provider) throws Throwable {
+    public static Decimal ToDecimal(long value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
+            return new Decimal(objToDecimal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Decimal ToDecimal(SByte value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
+            return new Decimal(objToDecimal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Decimal ToDecimal(Single value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
+            return new Decimal(objToDecimal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Decimal ToDecimal(DateTime value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
+            return new Decimal(objToDecimal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Decimal ToDecimal(Decimal value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
+            return new Decimal(objToDecimal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Decimal ToDecimal(NetObject value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
+            return new Decimal(objToDecimal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Decimal ToDecimal(NetObject value, IFormatProvider provider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            return new Decimal(objToDecimal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Decimal ToDecimal(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
+            return new Decimal(objToDecimal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Decimal ToDecimal(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value, provider == null ? null : provider.getJCOInstance());
+            return new Decimal(objToDecimal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Decimal ToDecimal(UInt16 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
+            return new Decimal(objToDecimal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Decimal ToDecimal(UInt32 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
+            return new Decimal(objToDecimal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Decimal ToDecimal(UInt64 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value == null ? null : value.getJCOInstance());
+            return new Decimal(objToDecimal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject ChangeType(NetObject value, NetType conversionType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objChangeType = (JCObject)classType.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), conversionType == null ? null : conversionType.getJCOInstance());
+            return new NetObject(objChangeType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject ChangeType(NetObject value, NetType conversionType, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objChangeType = (JCObject)classType.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), conversionType == null ? null : conversionType.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            return new NetObject(objChangeType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject ChangeType(NetObject value, TypeCode typeCode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objChangeType = (JCObject)classType.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), typeCode == null ? null : typeCode.getJCOInstance());
+            return new NetObject(objChangeType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject ChangeType(NetObject value, TypeCode typeCode, IFormatProvider provider) throws Throwable, system.InvalidCastException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objChangeType = (JCObject)classType.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), typeCode == null ? null : typeCode.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            return new NetObject(objChangeType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToBase64String(byte[] inArray) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToBase64String", (Object)inArray);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToBase64String(byte[] inArray, int offset, int length) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToBase64String", inArray, offset, length);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToBase64String(byte[] inArray, int offset, int length, Base64FormattingOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToBase64String", inArray, offset, length, options == null ? null : options.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToBase64String(byte[] inArray, Base64FormattingOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToBase64String", inArray, options == null ? null : options.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(boolean value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(boolean value, IFormatProvider provider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value, provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(byte value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(byte value, int toBase) throws Throwable, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value, toBase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(byte value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value, provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2865,6 +2439,116 @@ public class Convert extends NetObject  {
     }
 
     public static java.lang.String ToString(char value, IFormatProvider provider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value, provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(double value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(double value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value, provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(short value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(short value, int toBase) throws Throwable, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value, toBase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(short value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value, provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(int value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(int value, int toBase) throws Throwable, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value, toBase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(int value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value, provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(long value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(long value, int toBase) throws Throwable, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value, toBase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(long value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -2894,146 +2578,6 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(byte value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(byte value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value, provider == null ? null : provider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(short value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(short value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value, provider == null ? null : provider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(UInt16 value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(UInt16 value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(int value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(int value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value, provider == null ? null : provider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(UInt32 value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(UInt32 value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(long value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(long value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value, provider == null ? null : provider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(UInt64 value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(UInt64 value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static java.lang.String ToString(Single value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -3045,46 +2589,6 @@ public class Convert extends NetObject  {
     }
 
     public static java.lang.String ToString(Single value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(double value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(double value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value, provider == null ? null : provider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(Decimal value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(Decimal value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -3114,6 +2618,46 @@ public class Convert extends NetObject  {
         }
     }
 
+    public static java.lang.String ToString(Decimal value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(Decimal value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(NetObject value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(NetObject value, IFormatProvider provider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String ToString(java.lang.String value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -3134,32 +2678,226 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.OverflowException {
+    public static java.lang.String ToString(UInt16 value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (byte)classType.Invoke("ToByte", value, fromBase);
+            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SByte ToSByte(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.OverflowException {
+    public static java.lang.String ToString(UInt16 value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToSByte = (JCObject)classType.Invoke("ToSByte", value, fromBase);
-            return new SByte(objToSByte);
+            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static short ToInt16(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.OverflowException {
+    public static java.lang.String ToString(UInt32 value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (short)classType.Invoke("ToInt16", value, fromBase);
+            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(UInt32 value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(UInt64 value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(UInt64 value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TypeCode GetTypeCode(NetObject value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetTypeCode = (JCObject)classType.Invoke("GetTypeCode", value == null ? null : value.getJCOInstance());
+            return new TypeCode(objGetTypeCode);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(boolean value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(byte value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(char value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(double value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(short value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(int value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(long value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(SByte value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(Single value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(DateTime value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(Decimal value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(NetObject value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(NetObject value, IFormatProvider provider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value);
+            return new UInt16(objToUInt16);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3176,11 +2914,199 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException {
+    public static UInt16 ToUInt16(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ToInt32", value, fromBase);
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value, provider == null ? null : provider.getJCOInstance());
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(UInt16 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(UInt32 value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 ToUInt16(UInt64 value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", value == null ? null : value.getJCOInstance());
+            return new UInt16(objToUInt16);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(boolean value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(byte value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(char value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(double value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(short value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(int value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(long value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(SByte value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(Single value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(DateTime value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(Decimal value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(NetObject value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(NetObject value, IFormatProvider provider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value);
+            return new UInt32(objToUInt32);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3197,11 +3123,199 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException {
+    public static UInt32 ToUInt32(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("ToInt64", value, fromBase);
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value, provider == null ? null : provider.getJCOInstance());
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(UInt16 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(UInt32 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ToUInt32(UInt64 value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", value == null ? null : value.getJCOInstance());
+            return new UInt32(objToUInt32);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(boolean value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
+            return new UInt64(objToUInt64);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(byte value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
+            return new UInt64(objToUInt64);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(char value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
+            return new UInt64(objToUInt64);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(double value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
+            return new UInt64(objToUInt64);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(short value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
+            return new UInt64(objToUInt64);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(int value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
+            return new UInt64(objToUInt64);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(long value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
+            return new UInt64(objToUInt64);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(SByte value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
+            return new UInt64(objToUInt64);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(Single value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
+            return new UInt64(objToUInt64);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(DateTime value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
+            return new UInt64(objToUInt64);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(Decimal value) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
+            return new UInt64(objToUInt64);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(NetObject value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
+            return new UInt64(objToUInt64);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(NetObject value, IFormatProvider provider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            return new UInt64(objToUInt64);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ToUInt64(java.lang.String value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value);
+            return new UInt64(objToUInt64);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3218,159 +3332,45 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(byte value, int toBase) throws Throwable, system.ArgumentException {
+    public static UInt64 ToUInt64(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("ToString", value, toBase);
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value, provider == null ? null : provider.getJCOInstance());
+            return new UInt64(objToUInt64);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String ToString(short value, int toBase) throws Throwable, system.ArgumentException {
+    public static UInt64 ToUInt64(UInt16 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("ToString", value, toBase);
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
+            return new UInt64(objToUInt64);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String ToString(int value, int toBase) throws Throwable, system.ArgumentException {
+    public static UInt64 ToUInt64(UInt32 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("ToString", value, toBase);
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
+            return new UInt64(objToUInt64);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String ToString(long value, int toBase) throws Throwable, system.ArgumentException {
+    public static UInt64 ToUInt64(UInt64 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("ToString", value, toBase);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToBase64String(byte[] inArray) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToBase64String", (Object)inArray);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToBase64String(byte[] inArray, Base64FormattingOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToBase64String", inArray, options == null ? null : options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToBase64String(byte[] inArray, int offset, int length) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToBase64String", inArray, offset, length);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToBase64String(byte[] inArray, int offset, int length, Base64FormattingOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToBase64String", inArray, offset, length, options == null ? null : options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("ToBase64CharArray", inArray, offsetIn, length, outArray, offsetOut);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut, Base64FormattingOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("ToBase64CharArray", inArray, offsetIn, length, outArray, offsetOut, options == null ? null : options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static byte[] FromBase64String(java.lang.String s) throws Throwable, system.ArgumentNullException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("FromBase64String", s);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexFromBase64String = 0; indexFromBase64String < resultingArrayList.size(); indexFromBase64String++ ) {
-				resultingArray[indexFromBase64String] = (byte)resultingArrayList.get(indexFromBase64String);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static byte[] FromBase64CharArray(char[] inArray, int offset, int length) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("FromBase64CharArray", inArray, offset, length);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexFromBase64CharArray = 0; indexFromBase64CharArray < resultingArrayList.size(); indexFromBase64CharArray++ ) {
-				resultingArray[indexFromBase64CharArray] = (byte)resultingArrayList.get(indexFromBase64CharArray);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(boolean value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(boolean value, IFormatProvider provider) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value, provider == null ? null : provider.getJCOInstance());
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", value == null ? null : value.getJCOInstance());
+            return new UInt64(objToUInt64);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

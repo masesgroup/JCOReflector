@@ -113,21 +113,21 @@ public class OperationCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(Operation operation) throws Throwable {
+    public boolean Contains(Operation operation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", operation == null ? null : operation.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", operation == null ? null : operation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, Operation operation) throws Throwable {
+    public int Add(Operation operation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, operation == null ? null : operation.getJCOInstance());
+            return (int)classInstance.Invoke("Add", operation == null ? null : operation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,21 +143,11 @@ public class OperationCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(Operation operation) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", operation == null ? null : operation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(Operation operation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", operation == null ? null : operation.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,11 +163,21 @@ public class OperationCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public void Insert(int index, Operation operation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, operation == null ? null : operation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(Operation operation) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", operation == null ? null : operation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

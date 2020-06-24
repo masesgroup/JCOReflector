@@ -41,8 +41,8 @@ import java.util.ArrayList;
 import system.io.packaging.Package;
 import system.io.packaging.PackageDigitalSignature;
 import system.security.cryptography.x509certificates.X509Certificate;
-import system.io.packaging.VerifyResult;
 import system.Uri;
+import system.io.packaging.VerifyResult;
 import system.security.cryptography.x509certificates.X509ChainStatusFlags;
 import system.io.packaging.CertificateEmbeddingOption;
 import system.io.packaging.InvalidSignatureEventHandler;
@@ -153,43 +153,23 @@ public class PackageDigitalSignatureManager extends NetObject  {
         }
     }
 
-    public VerifyResult VerifySignatures(boolean exitOnFailure) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.io.IOException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objVerifySignatures = (JCObject)classInstance.Invoke("VerifySignatures", exitOnFailure);
-            return new VerifyResult(objVerifySignatures);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveSignature(Uri signatureUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveSignature", signatureUri == null ? null : signatureUri.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveAllSignatures() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.io.IOException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveAllSignatures");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PackageDigitalSignature GetSignature(Uri signatureUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetSignature = (JCObject)classInstance.Invoke("GetSignature", signatureUri == null ? null : signatureUri.getJCOInstance());
             return new PackageDigitalSignature(objGetSignature);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public VerifyResult VerifySignatures(boolean exitOnFailure) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.io.IOException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objVerifySignatures = (JCObject)classInstance.Invoke("VerifySignatures", exitOnFailure);
+            return new VerifyResult(objVerifySignatures);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,6 +186,26 @@ public class PackageDigitalSignatureManager extends NetObject  {
         }
     }
 
+    public void RemoveAllSignatures() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.io.IOException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveAllSignatures");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveSignature(Uri signatureUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveSignature", signatureUri == null ? null : signatureUri.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -215,6 +215,37 @@ public class PackageDigitalSignatureManager extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsSigned");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CertificateEmbeddingOption getCertificateOption() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CertificateOption");
+            return new CertificateEmbeddingOption(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCertificateOption(CertificateEmbeddingOption CertificateOption) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CertificateOption", CertificateOption == null ? null : CertificateOption.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String getDefaultHashAlgorithm() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Get("DefaultHashAlgorithm");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,22 +271,11 @@ public class PackageDigitalSignatureManager extends NetObject  {
         }
     }
 
-    public CertificateEmbeddingOption getCertificateOption() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getSignatureOriginRelationshipType() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CertificateOption");
-            return new CertificateEmbeddingOption(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCertificateOption(CertificateEmbeddingOption CertificateOption) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CertificateOption", CertificateOption == null ? null : CertificateOption.getJCOInstance());
+            return (java.lang.String)classType.Get("SignatureOriginRelationshipType");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,26 +307,6 @@ public class PackageDigitalSignatureManager extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("SignatureOrigin");
             return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String getSignatureOriginRelationshipType() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Get("SignatureOriginRelationshipType");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String getDefaultHashAlgorithm() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Get("DefaultHashAlgorithm");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

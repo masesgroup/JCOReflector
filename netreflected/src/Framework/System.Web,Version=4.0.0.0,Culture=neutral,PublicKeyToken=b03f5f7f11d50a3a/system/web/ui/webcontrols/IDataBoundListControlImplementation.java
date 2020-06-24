@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.ui.webcontrols.DataKeyArray;
-import system.web.ui.webcontrols.DataKey;
 import system.web.ui.IDataSource;
 import system.web.ui.IDataSourceImplementation;
+import system.web.ui.webcontrols.DataKey;
+import system.web.ui.webcontrols.DataKeyArray;
 
 
 /**
@@ -111,23 +111,21 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
     
     // Properties section
     
-    public DataKeyArray getDataKeys() throws Throwable {
+    public boolean getEnablePersistedSelection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DataKeys");
-            return new DataKeyArray(val);
+            return (boolean)classInstance.Get("EnablePersistedSelection");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DataKey getSelectedDataKey() throws Throwable {
+    public void setEnablePersistedSelection(boolean EnablePersistedSelection) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedDataKey");
-            return new DataKey(val);
+            classInstance.Set("EnablePersistedSelection", EnablePersistedSelection);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,6 +146,67 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedIndex", SelectedIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject getDataSource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DataSource");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDataSource(NetObject DataSource) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DataSource", DataSource == null ? null : DataSource.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getDataMember() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("DataMember");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDataMember(java.lang.String DataMember) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DataMember", DataMember);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getDataSourceID() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("DataSourceID");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDataSourceID(java.lang.String DataSourceID) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DataSourceID", DataSourceID);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,78 +241,6 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
         }
     }
 
-    public boolean getEnablePersistedSelection() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("EnablePersistedSelection");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEnablePersistedSelection(boolean EnablePersistedSelection) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EnablePersistedSelection", EnablePersistedSelection);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDataSourceID() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DataSourceID");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDataSourceID(java.lang.String DataSourceID) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DataSourceID", DataSourceID);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDataSource getDataSourceObject() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DataSourceObject");
-            return new IDataSourceImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getDataSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DataSource");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDataSource(NetObject DataSource) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DataSource", DataSource == null ? null : DataSource.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String[] getDataKeyNames() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -283,21 +270,34 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
         }
     }
 
-    public java.lang.String getDataMember() throws Throwable {
+    public IDataSource getDataSourceObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("DataMember");
+            JCObject val = (JCObject)classInstance.Get("DataSourceObject");
+            return new IDataSourceImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDataMember(java.lang.String DataMember) throws Throwable {
+    public DataKey getSelectedDataKey() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("DataMember", DataMember);
+            JCObject val = (JCObject)classInstance.Get("SelectedDataKey");
+            return new DataKey(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataKeyArray getDataKeys() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DataKeys");
+            return new DataKeyArray(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

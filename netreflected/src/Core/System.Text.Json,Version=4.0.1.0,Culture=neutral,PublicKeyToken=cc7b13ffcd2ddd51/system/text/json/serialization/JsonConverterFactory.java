@@ -114,22 +114,22 @@ public class JsonConverterFactory extends NetObject  {
     
     // Methods section
     
+    public boolean CanConvert(NetType typeToConvert) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("CanConvert", typeToConvert == null ? null : typeToConvert.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public JsonConverter CreateConverter(NetType typeToConvert, JsonSerializerOptions options) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateConverter = (JCObject)classInstance.Invoke("CreateConverter", typeToConvert == null ? null : typeToConvert.getJCOInstance(), options == null ? null : options.getJCOInstance());
             return new JsonConverter(objCreateConverter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean CanConvert(NetType typeToConvert) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanConvert", typeToConvert == null ? null : typeToConvert.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

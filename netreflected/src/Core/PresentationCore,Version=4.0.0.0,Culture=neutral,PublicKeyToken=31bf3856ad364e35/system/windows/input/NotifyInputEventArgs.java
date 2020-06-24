@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.input.StagingAreaInputItem;
 import system.windows.input.InputManager;
+import system.windows.input.StagingAreaInputItem;
 
 
 /**
@@ -118,23 +118,23 @@ public class NotifyInputEventArgs extends NetObject  {
     
     // Properties section
     
-    public StagingAreaInputItem getStagingItem() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("StagingItem");
-            return new StagingAreaInputItem(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public InputManager getInputManager() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("InputManager");
             return new InputManager(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StagingAreaInputItem getStagingItem() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("StagingItem");
+            return new StagingAreaInputItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

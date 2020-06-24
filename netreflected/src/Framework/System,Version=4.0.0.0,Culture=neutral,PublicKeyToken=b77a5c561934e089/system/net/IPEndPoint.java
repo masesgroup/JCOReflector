@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.IPAddress;
-import system.net.SocketAddress;
 import system.net.EndPoint;
+import system.net.SocketAddress;
 import system.net.sockets.AddressFamily;
 
 
@@ -137,17 +137,6 @@ public class IPEndPoint extends NetObject  {
     
     // Methods section
     
-    public SocketAddress Serialize() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSerialize = (JCObject)classInstance.Invoke("Serialize");
-            return new SocketAddress(objSerialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EndPoint Create(SocketAddress socketAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -159,16 +148,36 @@ public class IPEndPoint extends NetObject  {
         }
     }
 
+    public SocketAddress Serialize() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSerialize = (JCObject)classInstance.Invoke("Serialize");
+            return new SocketAddress(objSerialize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public AddressFamily getAddressFamily() throws Throwable {
+    public int getPort() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AddressFamily");
-            return new AddressFamily(val);
+            return (int)classInstance.Get("Port");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPort(int Port) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Port", Port);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,21 +204,12 @@ public class IPEndPoint extends NetObject  {
         }
     }
 
-    public int getPort() throws Throwable {
+    public AddressFamily getAddressFamily() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Port");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPort(int Port) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Port", Port);
+            JCObject val = (JCObject)classInstance.Get("AddressFamily");
+            return new AddressFamily(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

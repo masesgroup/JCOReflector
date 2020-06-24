@@ -139,26 +139,6 @@ public class RouteValueExpressionEditorSheet extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getRouteValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("RouteValue");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRouteValue(java.lang.String RouteValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RouteValue", RouteValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsValid() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -175,6 +155,26 @@ public class RouteValueExpressionEditorSheet extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ServiceProvider");
             return new IServiceProviderImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getRouteValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("RouteValue");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRouteValue(java.lang.String RouteValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RouteValue", RouteValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

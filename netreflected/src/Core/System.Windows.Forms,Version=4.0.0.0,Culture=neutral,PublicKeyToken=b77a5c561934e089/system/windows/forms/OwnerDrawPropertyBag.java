@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.forms.OwnerDrawPropertyBag;
-import system.drawing.Font;
 import system.drawing.Color;
+import system.drawing.Font;
 
 
 /**
@@ -125,17 +125,6 @@ public class OwnerDrawPropertyBag extends NetObject  {
         }
     }
 
-    public static OwnerDrawPropertyBag Copy(OwnerDrawPropertyBag value) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCopy = (JCObject)classType.Invoke("Copy", value == null ? null : value.getJCOInstance());
-            return new OwnerDrawPropertyBag(objCopy);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -158,26 +147,37 @@ public class OwnerDrawPropertyBag extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public Font getFont() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static OwnerDrawPropertyBag Copy(OwnerDrawPropertyBag value) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Font");
-            return new Font(val);
+            JCObject objCopy = (JCObject)classType.Invoke("Copy", value == null ? null : value.getJCOInstance());
+            return new OwnerDrawPropertyBag(objCopy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setFont(Font Font) throws Throwable {
+
+    
+    // Properties section
+    
+    public Color getBackColor() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Font", Font == null ? null : Font.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("BackColor");
+            return new Color(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBackColor(Color BackColor) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("BackColor", BackColor == null ? null : BackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,22 +204,22 @@ public class OwnerDrawPropertyBag extends NetObject  {
         }
     }
 
-    public Color getBackColor() throws Throwable {
+    public Font getFont() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BackColor");
-            return new Color(val);
+            JCObject val = (JCObject)classInstance.Get("Font");
+            return new Font(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setBackColor(Color BackColor) throws Throwable {
+    public void setFont(Font Font) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("BackColor", BackColor == null ? null : BackColor.getJCOInstance());
+            classInstance.Set("Font", Font == null ? null : Font.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

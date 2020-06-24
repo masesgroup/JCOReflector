@@ -38,17 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.emit.AssemblyBuilder;
-import system.runtime.interopservices.ITypeLibImporterNotifySink;
-import system.runtime.interopservices.ITypeLibImporterNotifySinkImplementation;
-import system.reflection.StrongNameKeyPair;
+import system.Guid;
 import system.reflection.Assembly;
 import system.runtime.interopservices.TypeLibExporterFlags;
 import system.runtime.interopservices.ITypeLibExporterNotifySink;
 import system.runtime.interopservices.ITypeLibExporterNotifySinkImplementation;
+import system.reflection.emit.AssemblyBuilder;
+import system.runtime.interopservices.ITypeLibImporterNotifySink;
+import system.runtime.interopservices.ITypeLibImporterNotifySinkImplementation;
+import system.reflection.StrongNameKeyPair;
 import system.runtime.interopservices.TypeLibImporterFlags;
 import system.Version;
-import system.Guid;
 
 
 /**
@@ -134,23 +134,23 @@ public class TypeLibConverter extends NetObject  {
     
     // Methods section
     
-    public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, int flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, boolean unsafeInterfaces) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotImplementedException, system.FormatException, system.TypeLoadException, system.security.SecurityException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objConvertTypeLibToAssembly = (JCObject)classInstance.Invoke("ConvertTypeLibToAssembly", typeLib == null ? null : typeLib.getJCOInstance(), asmFileName, flags, notifySink == null ? null : notifySink.getJCOInstance(), publicKey, keyPair == null ? null : keyPair.getJCOInstance(), unsafeInterfaces);
-            return new AssemblyBuilder(objConvertTypeLibToAssembly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject ConvertAssemblyToTypeLib(Assembly assembly, java.lang.String strTypeLibName, TypeLibExporterFlags flags, ITypeLibExporterNotifySink notifySink) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objConvertAssemblyToTypeLib = (JCObject)classInstance.Invoke("ConvertAssemblyToTypeLib", assembly == null ? null : assembly.getJCOInstance(), strTypeLibName, flags == null ? null : flags.getJCOInstance(), notifySink == null ? null : notifySink.getJCOInstance());
             return new NetObject(objConvertAssemblyToTypeLib);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, int flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, boolean unsafeInterfaces) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotImplementedException, system.FormatException, system.TypeLoadException, system.security.SecurityException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objConvertTypeLibToAssembly = (JCObject)classInstance.Invoke("ConvertTypeLibToAssembly", typeLib == null ? null : typeLib.getJCOInstance(), asmFileName, flags, notifySink == null ? null : notifySink.getJCOInstance(), publicKey, keyPair == null ? null : keyPair.getJCOInstance(), unsafeInterfaces);
+            return new AssemblyBuilder(objConvertTypeLibToAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

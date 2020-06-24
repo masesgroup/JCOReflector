@@ -117,11 +117,31 @@ public class EdmSchemaError extends NetObject  {
     
     // Properties section
     
+    public int getColumn() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Column");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int getErrorCode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("ErrorCode");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getLine() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Line");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,21 +168,11 @@ public class EdmSchemaError extends NetObject  {
         }
     }
 
-    public int getLine() throws Throwable {
+    public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Line");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getColumn() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Column");
+            return (java.lang.String)classInstance.Get("Message");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,16 +203,6 @@ public class EdmSchemaError extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("StackTrace");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getMessage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Message");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -109,21 +109,21 @@ public class DataGridViewColumnDesignTimeVisibleAttribute extends NetObject  {
     // Constructors section
     
 
-    public DataGridViewColumnDesignTimeVisibleAttribute(boolean visible) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(visible));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataGridViewColumnDesignTimeVisibleAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataGridViewColumnDesignTimeVisibleAttribute(boolean visible) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(visible));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

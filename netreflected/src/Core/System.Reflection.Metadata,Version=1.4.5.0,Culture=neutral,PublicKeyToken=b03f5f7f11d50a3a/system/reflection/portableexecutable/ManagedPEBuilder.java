@@ -136,22 +136,22 @@ public class ManagedPEBuilder extends NetObject  {
     
     // Properties section
     
+    public boolean getIsDeterministic() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsDeterministic");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PEHeaderBuilder getHeader() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Header");
             return new PEHeaderBuilder(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsDeterministic() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsDeterministic");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

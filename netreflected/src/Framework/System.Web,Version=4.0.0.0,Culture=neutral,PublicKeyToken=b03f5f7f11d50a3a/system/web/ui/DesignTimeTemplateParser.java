@@ -40,11 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.web.ui.Control;
 import system.web.ui.DesignTimeParseData;
-import system.web.ui.ITemplate;
-import system.web.ui.ITemplateImplementation;
 import system.web.ui.ControlBuilder;
 import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
+import system.web.ui.ITemplate;
+import system.web.ui.ITemplateImplementation;
 
 
 /**
@@ -147,23 +147,23 @@ public class DesignTimeTemplateParser extends NetObject  {
         }
     }
 
-    public static ITemplate ParseTemplate(DesignTimeParseData data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.text.regularexpressions.RegexMatchTimeoutException, system.FormatException, system.OutOfMemoryException, system.web.HttpParseException, system.io.IOException, system.io.PathTooLongException, system.reflection.AmbiguousMatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objParseTemplate = (JCObject)classType.Invoke("ParseTemplate", data == null ? null : data.getJCOInstance());
-            return new ITemplateImplementation(objParseTemplate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static ControlBuilder ParseTheme(IDesignerHost host, java.lang.String theme, java.lang.String themePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.text.regularexpressions.RegexMatchTimeoutException, system.FormatException, system.OutOfMemoryException, system.web.HttpParseException, system.io.IOException, system.io.PathTooLongException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objParseTheme = (JCObject)classType.Invoke("ParseTheme", host == null ? null : host.getJCOInstance(), theme, themePath);
             return new ControlBuilder(objParseTheme);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ITemplate ParseTemplate(DesignTimeParseData data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.text.regularexpressions.RegexMatchTimeoutException, system.FormatException, system.OutOfMemoryException, system.web.HttpParseException, system.io.IOException, system.io.PathTooLongException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objParseTemplate = (JCObject)classType.Invoke("ParseTemplate", data == null ? null : data.getJCOInstance());
+            return new ITemplateImplementation(objParseTemplate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

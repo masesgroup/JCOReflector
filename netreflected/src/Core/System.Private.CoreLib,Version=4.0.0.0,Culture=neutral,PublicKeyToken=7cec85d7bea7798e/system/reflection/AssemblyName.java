@@ -41,14 +41,14 @@ import java.util.ArrayList;
 import system.reflection.AssemblyName;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.Version;
-import system.globalization.CultureInfo;
-import system.reflection.ProcessorArchitecture;
-import system.reflection.AssemblyContentType;
-import system.reflection.AssemblyNameFlags;
 import system.configuration.assemblies.AssemblyHashAlgorithm;
 import system.configuration.assemblies.AssemblyVersionCompatibility;
+import system.globalization.CultureInfo;
+import system.reflection.AssemblyContentType;
+import system.reflection.AssemblyNameFlags;
+import system.reflection.ProcessorArchitecture;
 import system.reflection.StrongNameKeyPair;
+import system.Version;
 
 
 /**
@@ -120,16 +120,6 @@ public class AssemblyName extends NetObject  {
     // Constructors section
     
 
-    public AssemblyName(java.lang.String assemblyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(assemblyName));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AssemblyName() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -140,27 +130,25 @@ public class AssemblyName extends NetObject  {
         }
     }
 
-
-    
-    // Methods section
-    
-    public NetObject Clone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public AssemblyName(java.lang.String assemblyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new NetObject(objClone);
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(assemblyName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static AssemblyName GetAssemblyName(java.lang.String assemblyFile) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+
+    
+    // Methods section
+    
+    public static boolean ReferenceMatchesDefinition(AssemblyName reference, AssemblyName definition) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetAssemblyName = (JCObject)classType.Invoke("GetAssemblyName", assemblyFile);
-            return new AssemblyName(objGetAssemblyName);
+            return (boolean)classType.Invoke("ReferenceMatchesDefinition", reference == null ? null : reference.getJCOInstance(), definition == null ? null : definition.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,16 +173,6 @@ public class AssemblyName extends NetObject  {
         }
     }
 
-    public void SetPublicKey(byte[] publicKey) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetPublicKey", (Object)publicKey);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] GetPublicKeyToken() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -214,11 +192,23 @@ public class AssemblyName extends NetObject  {
         }
     }
 
-    public void SetPublicKeyToken(byte[] publicKeyToken) throws Throwable {
+    public NetObject Clone() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetPublicKeyToken", (Object)publicKeyToken);
+            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            return new NetObject(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static AssemblyName GetAssemblyName(java.lang.String assemblyFile) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetAssemblyName = (JCObject)classType.Invoke("GetAssemblyName", assemblyFile);
+            return new AssemblyName(objGetAssemblyName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,11 +234,21 @@ public class AssemblyName extends NetObject  {
         }
     }
 
-    public static boolean ReferenceMatchesDefinition(AssemblyName reference, AssemblyName definition) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void SetPublicKey(byte[] publicKey) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Invoke("ReferenceMatchesDefinition", reference == null ? null : reference.getJCOInstance(), definition == null ? null : definition.getJCOInstance());
+            classInstance.Invoke("SetPublicKey", (Object)publicKey);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetPublicKeyToken(byte[] publicKeyToken) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetPublicKeyToken", (Object)publicKeyToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,42 +258,43 @@ public class AssemblyName extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable {
+    public AssemblyHashAlgorithm getHashAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            JCObject val = (JCObject)classInstance.Get("HashAlgorithm");
+            return new AssemblyHashAlgorithm(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setName(java.lang.String Name) throws Throwable {
+    public void setHashAlgorithm(AssemblyHashAlgorithm HashAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Name", Name);
+            classInstance.Set("HashAlgorithm", HashAlgorithm == null ? null : HashAlgorithm.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Version getVersion() throws Throwable {
+    public AssemblyVersionCompatibility getVersionCompatibility() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Version");
-            return new Version(val);
+            JCObject val = (JCObject)classInstance.Get("VersionCompatibility");
+            return new AssemblyVersionCompatibility(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setVersion(Version Version) throws Throwable {
+    public void setVersionCompatibility(AssemblyVersionCompatibility VersionCompatibility) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Version", Version == null ? null : Version.getJCOInstance());
+            classInstance.Set("VersionCompatibility", VersionCompatibility == null ? null : VersionCompatibility.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,77 +316,6 @@ public class AssemblyName extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CultureInfo", CultureInfo == null ? null : CultureInfo.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getCultureName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("CultureName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCultureName(java.lang.String CultureName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CultureName", CultureName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getCodeBase() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("CodeBase");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCodeBase(java.lang.String CodeBase) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CodeBase", CodeBase);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getEscapedCodeBase() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("EscapedCodeBase");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ProcessorArchitecture getProcessorArchitecture() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ProcessorArchitecture");
-            return new ProcessorArchitecture(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setProcessorArchitecture(ProcessorArchitecture ProcessorArchitecture) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ProcessorArchitecture", ProcessorArchitecture == null ? null : ProcessorArchitecture.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,43 +363,22 @@ public class AssemblyName extends NetObject  {
         }
     }
 
-    public AssemblyHashAlgorithm getHashAlgorithm() throws Throwable {
+    public ProcessorArchitecture getProcessorArchitecture() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("HashAlgorithm");
-            return new AssemblyHashAlgorithm(val);
+            JCObject val = (JCObject)classInstance.Get("ProcessorArchitecture");
+            return new ProcessorArchitecture(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHashAlgorithm(AssemblyHashAlgorithm HashAlgorithm) throws Throwable {
+    public void setProcessorArchitecture(ProcessorArchitecture ProcessorArchitecture) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("HashAlgorithm", HashAlgorithm == null ? null : HashAlgorithm.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AssemblyVersionCompatibility getVersionCompatibility() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("VersionCompatibility");
-            return new AssemblyVersionCompatibility(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setVersionCompatibility(AssemblyVersionCompatibility VersionCompatibility) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("VersionCompatibility", VersionCompatibility == null ? null : VersionCompatibility.getJCOInstance());
+            classInstance.Set("ProcessorArchitecture", ProcessorArchitecture == null ? null : ProcessorArchitecture.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,11 +405,102 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    public java.lang.String getCodeBase() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("CodeBase");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCodeBase(java.lang.String CodeBase) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CodeBase", CodeBase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getCultureName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("CultureName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCultureName(java.lang.String CultureName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CultureName", CultureName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getEscapedCodeBase() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("EscapedCodeBase");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getFullName() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.io.FileLoadException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.ArgumentException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("FullName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setName(java.lang.String Name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Name", Name);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Version getVersion() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Version");
+            return new Version(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setVersion(Version Version) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Version", Version == null ? null : Version.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

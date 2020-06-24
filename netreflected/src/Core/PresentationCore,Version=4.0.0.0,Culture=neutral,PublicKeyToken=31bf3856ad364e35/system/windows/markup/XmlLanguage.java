@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.markup.XmlLanguage;
 import system.globalization.CultureInfo;
+import system.windows.markup.XmlLanguage;
 
 
 /**
@@ -114,17 +114,6 @@ public class XmlLanguage extends NetObject  {
     
     // Methods section
     
-    public static XmlLanguage GetLanguage(java.lang.String ietfLanguageTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetLanguage = (JCObject)classType.Invoke("GetLanguage", ietfLanguageTag);
-            return new XmlLanguage(objGetLanguage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CultureInfo GetEquivalentCulture() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -142,6 +131,17 @@ public class XmlLanguage extends NetObject  {
         try {
             JCObject objGetSpecificCulture = (JCObject)classInstance.Invoke("GetSpecificCulture");
             return new CultureInfo(objGetSpecificCulture);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlLanguage GetLanguage(java.lang.String ietfLanguageTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetLanguage = (JCObject)classType.Invoke("GetLanguage", ietfLanguageTag);
+            return new XmlLanguage(objGetLanguage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

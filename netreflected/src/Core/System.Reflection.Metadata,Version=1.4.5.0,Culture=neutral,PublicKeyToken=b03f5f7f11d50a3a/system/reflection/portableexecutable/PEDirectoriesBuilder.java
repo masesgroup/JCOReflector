@@ -148,90 +148,6 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
-    public DirectoryEntry getExportTable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExportTable");
-            return new DirectoryEntry(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setExportTable(DirectoryEntry ExportTable) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ExportTable", ExportTable == null ? null : ExportTable.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryEntry getImportTable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ImportTable");
-            return new DirectoryEntry(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setImportTable(DirectoryEntry ImportTable) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ImportTable", ImportTable == null ? null : ImportTable.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryEntry getResourceTable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ResourceTable");
-            return new DirectoryEntry(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setResourceTable(DirectoryEntry ResourceTable) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ResourceTable", ResourceTable == null ? null : ResourceTable.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryEntry getExceptionTable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExceptionTable");
-            return new DirectoryEntry(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setExceptionTable(DirectoryEntry ExceptionTable) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ExceptionTable", ExceptionTable == null ? null : ExceptionTable.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DirectoryEntry getBaseRelocationTable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -248,111 +164,6 @@ public class PEDirectoriesBuilder extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseRelocationTable", BaseRelocationTable == null ? null : BaseRelocationTable.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryEntry getDebugTable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DebugTable");
-            return new DirectoryEntry(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDebugTable(DirectoryEntry DebugTable) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DebugTable", DebugTable == null ? null : DebugTable.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryEntry getCopyrightTable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CopyrightTable");
-            return new DirectoryEntry(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCopyrightTable(DirectoryEntry CopyrightTable) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CopyrightTable", CopyrightTable == null ? null : CopyrightTable.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryEntry getGlobalPointerTable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("GlobalPointerTable");
-            return new DirectoryEntry(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setGlobalPointerTable(DirectoryEntry GlobalPointerTable) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("GlobalPointerTable", GlobalPointerTable == null ? null : GlobalPointerTable.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryEntry getThreadLocalStorageTable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ThreadLocalStorageTable");
-            return new DirectoryEntry(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setThreadLocalStorageTable(DirectoryEntry ThreadLocalStorageTable) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ThreadLocalStorageTable", ThreadLocalStorageTable == null ? null : ThreadLocalStorageTable.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryEntry getLoadConfigTable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LoadConfigTable");
-            return new DirectoryEntry(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLoadConfigTable(DirectoryEntry LoadConfigTable) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("LoadConfigTable", LoadConfigTable == null ? null : LoadConfigTable.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,22 +190,64 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
-    public DirectoryEntry getImportAddressTable() throws Throwable {
+    public DirectoryEntry getCopyrightTable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ImportAddressTable");
+            JCObject val = (JCObject)classInstance.Get("CopyrightTable");
             return new DirectoryEntry(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setImportAddressTable(DirectoryEntry ImportAddressTable) throws Throwable {
+    public void setCopyrightTable(DirectoryEntry CopyrightTable) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ImportAddressTable", ImportAddressTable == null ? null : ImportAddressTable.getJCOInstance());
+            classInstance.Set("CopyrightTable", CopyrightTable == null ? null : CopyrightTable.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryEntry getCorHeaderTable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CorHeaderTable");
+            return new DirectoryEntry(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCorHeaderTable(DirectoryEntry CorHeaderTable) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CorHeaderTable", CorHeaderTable == null ? null : CorHeaderTable.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryEntry getDebugTable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DebugTable");
+            return new DirectoryEntry(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDebugTable(DirectoryEntry DebugTable) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DebugTable", DebugTable == null ? null : DebugTable.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,22 +274,169 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
-    public DirectoryEntry getCorHeaderTable() throws Throwable {
+    public DirectoryEntry getExceptionTable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CorHeaderTable");
+            JCObject val = (JCObject)classInstance.Get("ExceptionTable");
             return new DirectoryEntry(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCorHeaderTable(DirectoryEntry CorHeaderTable) throws Throwable {
+    public void setExceptionTable(DirectoryEntry ExceptionTable) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("CorHeaderTable", CorHeaderTable == null ? null : CorHeaderTable.getJCOInstance());
+            classInstance.Set("ExceptionTable", ExceptionTable == null ? null : ExceptionTable.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryEntry getExportTable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ExportTable");
+            return new DirectoryEntry(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setExportTable(DirectoryEntry ExportTable) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ExportTable", ExportTable == null ? null : ExportTable.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryEntry getGlobalPointerTable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("GlobalPointerTable");
+            return new DirectoryEntry(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setGlobalPointerTable(DirectoryEntry GlobalPointerTable) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("GlobalPointerTable", GlobalPointerTable == null ? null : GlobalPointerTable.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryEntry getImportAddressTable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ImportAddressTable");
+            return new DirectoryEntry(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setImportAddressTable(DirectoryEntry ImportAddressTable) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ImportAddressTable", ImportAddressTable == null ? null : ImportAddressTable.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryEntry getImportTable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ImportTable");
+            return new DirectoryEntry(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setImportTable(DirectoryEntry ImportTable) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ImportTable", ImportTable == null ? null : ImportTable.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryEntry getLoadConfigTable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("LoadConfigTable");
+            return new DirectoryEntry(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setLoadConfigTable(DirectoryEntry LoadConfigTable) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("LoadConfigTable", LoadConfigTable == null ? null : LoadConfigTable.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryEntry getResourceTable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ResourceTable");
+            return new DirectoryEntry(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setResourceTable(DirectoryEntry ResourceTable) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ResourceTable", ResourceTable == null ? null : ResourceTable.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryEntry getThreadLocalStorageTable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ThreadLocalStorageTable");
+            return new DirectoryEntry(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setThreadLocalStorageTable(DirectoryEntry ThreadLocalStorageTable) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ThreadLocalStorageTable", ThreadLocalStorageTable == null ? null : ThreadLocalStorageTable.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

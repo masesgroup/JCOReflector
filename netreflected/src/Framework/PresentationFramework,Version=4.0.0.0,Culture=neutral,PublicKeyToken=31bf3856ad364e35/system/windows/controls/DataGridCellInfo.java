@@ -139,6 +139,16 @@ public class DataGridCellInfo extends NetObject  {
     
     // Properties section
     
+    public boolean getIsValid() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsValid");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject getItem() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -156,16 +166,6 @@ public class DataGridCellInfo extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Column");
             return new DataGridColumn(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsValid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsValid");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

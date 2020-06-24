@@ -113,11 +113,11 @@ public class ActivityTraceId extends NetObject  {
     
     // Methods section
     
-    public java.lang.String ToHexString() throws Throwable {
+    public boolean Equals(ActivityTraceId traceId) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("ToHexString");
+            return (boolean)classInstance.Invoke("Equals", traceId == null ? null : traceId.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -134,11 +134,11 @@ public class ActivityTraceId extends NetObject  {
         }
     }
 
-    public boolean Equals(ActivityTraceId traceId) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public java.lang.String ToHexString() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", traceId == null ? null : traceId.getJCOInstance());
+            return (java.lang.String)classInstance.Invoke("ToHexString");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

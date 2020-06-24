@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.DataViewManager;
 import system.data.DataTable;
+import system.data.DataViewManager;
 import system.data.DataViewRowState;
 
 
@@ -139,17 +139,6 @@ public class DataViewSetting extends NetObject  {
         }
     }
 
-    public DataViewManager getDataViewManager() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DataViewManager");
-            return new DataViewManager(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataTable getTable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -161,21 +150,12 @@ public class DataViewSetting extends NetObject  {
         }
     }
 
-    public java.lang.String getRowFilter() throws Throwable {
+    public DataViewManager getDataViewManager() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("RowFilter");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRowFilter(java.lang.String RowFilter) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RowFilter", RowFilter);
+            JCObject val = (JCObject)classInstance.Get("DataViewManager");
+            return new DataViewManager(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,6 +177,26 @@ public class DataViewSetting extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowStateFilter", RowStateFilter == null ? null : RowStateFilter.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getRowFilter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("RowFilter");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRowFilter(java.lang.String RowFilter) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RowFilter", RowFilter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

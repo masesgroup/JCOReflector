@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.media.textformatting.TextRun;
 import system.windows.media.textformatting.TextCollapsingStyle;
+import system.windows.media.textformatting.TextRun;
 
 
 /**
@@ -128,23 +128,23 @@ public class TextCollapsingProperties extends NetObject  {
         }
     }
 
-    public TextRun getSymbol() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Symbol");
-            return new TextRun(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TextCollapsingStyle getStyle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Style");
             return new TextCollapsingStyle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TextRun getSymbol() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Symbol");
+            return new TextRun(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

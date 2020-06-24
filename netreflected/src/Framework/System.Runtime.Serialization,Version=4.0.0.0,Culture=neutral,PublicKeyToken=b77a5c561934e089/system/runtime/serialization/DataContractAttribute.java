@@ -123,16 +123,6 @@ public class DataContractAttribute extends NetObject  {
     
     // Methods section
     
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -143,10 +133,40 @@ public class DataContractAttribute extends NetObject  {
         }
     }
 
+    public boolean Match(NetObject obj) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public boolean getIsNameSetExplicitly() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsNameSetExplicitly");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsNamespaceSetExplicitly() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsNamespaceSetExplicitly");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getIsReference() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -177,31 +197,12 @@ public class DataContractAttribute extends NetObject  {
         }
     }
 
-    public java.lang.String getNamespace() throws Throwable {
+    public NetObject getTypeId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setNamespace(java.lang.String Namespace) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Namespace", Namespace);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsNamespaceSetExplicitly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsNamespaceSetExplicitly");
+            JCObject val = (JCObject)classInstance.Get("TypeId");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,22 +228,21 @@ public class DataContractAttribute extends NetObject  {
         }
     }
 
-    public boolean getIsNameSetExplicitly() throws Throwable {
+    public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsNameSetExplicitly");
+            return (java.lang.String)classInstance.Get("Namespace");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject getTypeId() throws Throwable {
+    public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
+            classInstance.Set("Namespace", Namespace);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

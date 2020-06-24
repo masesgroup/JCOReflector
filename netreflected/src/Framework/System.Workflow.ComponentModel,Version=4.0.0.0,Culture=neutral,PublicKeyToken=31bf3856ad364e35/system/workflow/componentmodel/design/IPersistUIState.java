@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.io.BinaryWriter;
 import system.io.BinaryReader;
+import system.io.BinaryWriter;
 
 
 /**
@@ -91,9 +91,9 @@ public interface IPersistUIState extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void SaveViewState(BinaryWriter writer) throws Throwable;
-
     public void LoadViewState(BinaryReader reader) throws Throwable;
+
+    public void SaveViewState(BinaryWriter writer) throws Throwable;
 
 
     

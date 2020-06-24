@@ -40,11 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.deployment.application.CompatibleFrameworks;
-import system.Uri;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.deployment.application.CompatibleFrameworks;
 import system.reflection.MethodBase;
+import system.Uri;
 
 /**
  * The base .NET class managing System.Deployment.Application.CompatibleFrameworkMissingException, System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetException}.
@@ -140,16 +140,6 @@ public class CompatibleFrameworkMissingException extends NetException {
     
     // Methods section
     
-    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.OverflowException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetException GetBaseException() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -161,27 +151,35 @@ public class CompatibleFrameworkMissingException extends NetException {
         }
     }
 
-
-    
-    // Properties section
-    
-    public CompatibleFrameworks getCompatibleFrameworks() throws Throwable {
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.OverflowException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CompatibleFrameworks");
-            return new CompatibleFrameworks(val);
+            classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Uri getSupportUrl() throws Throwable {
+
+    
+    // Properties section
+    
+    public int getHResult() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SupportUrl");
-            return new Uri(val);
+            return (int)classInstance.Get("HResult");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setHResult(int HResult) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("HResult", HResult);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,6 +191,17 @@ public class CompatibleFrameworkMissingException extends NetException {
         try {
             JCObject val = (JCObject)classInstance.Get("Data");
             return new IDictionaryImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CompatibleFrameworks getCompatibleFrameworks() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CompatibleFrameworks");
+            return new CompatibleFrameworks(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,21 +269,12 @@ public class CompatibleFrameworkMissingException extends NetException {
         }
     }
 
-    public int getHResult() throws Throwable {
+    public Uri getSupportUrl() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("HResult");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHResult(int HResult) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HResult", HResult);
+            JCObject val = (JCObject)classInstance.Get("SupportUrl");
+            return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

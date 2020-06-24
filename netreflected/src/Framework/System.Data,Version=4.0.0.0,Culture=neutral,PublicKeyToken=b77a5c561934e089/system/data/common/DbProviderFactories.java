@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.DataTable;
 import system.data.common.DbProviderFactory;
-import system.data.DataRow;
 import system.data.common.DbConnection;
+import system.data.DataRow;
+import system.data.DataTable;
 
 
 /**
@@ -116,22 +116,11 @@ public class DbProviderFactories extends NetObject  {
     
     // Methods section
     
-    public static DataTable GetFactoryClasses() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OverflowException, system.data.DataException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static DbProviderFactory GetFactory(DbConnection connection) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetFactoryClasses = (JCObject)classType.Invoke("GetFactoryClasses");
-            return new DataTable(objGetFactoryClasses);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbProviderFactory GetFactory(java.lang.String providerInvariantName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetFactory = (JCObject)classType.Invoke("GetFactory", providerInvariantName);
+            JCObject objGetFactory = (JCObject)classType.Invoke("GetFactory", connection == null ? null : connection.getJCOInstance());
             return new DbProviderFactory(objGetFactory);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -149,12 +138,23 @@ public class DbProviderFactories extends NetObject  {
         }
     }
 
-    public static DbProviderFactory GetFactory(DbConnection connection) throws Throwable, system.ArgumentNullException {
+    public static DbProviderFactory GetFactory(java.lang.String providerInvariantName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetFactory = (JCObject)classType.Invoke("GetFactory", connection == null ? null : connection.getJCOInstance());
+            JCObject objGetFactory = (JCObject)classType.Invoke("GetFactory", providerInvariantName);
             return new DbProviderFactory(objGetFactory);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DataTable GetFactoryClasses() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OverflowException, system.data.DataException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetFactoryClasses = (JCObject)classType.Invoke("GetFactoryClasses");
+            return new DataTable(objGetFactoryClasses);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

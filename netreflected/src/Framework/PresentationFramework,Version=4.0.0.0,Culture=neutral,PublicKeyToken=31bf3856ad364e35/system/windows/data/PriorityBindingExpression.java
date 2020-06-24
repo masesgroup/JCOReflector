@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.data.PriorityBinding;
-import system.windows.data.BindingExpressionBase;
-import system.windows.DependencyObject;
-import system.windows.DependencyProperty;
+import system.windows.controls.ValidationError;
 import system.windows.data.BindingBase;
+import system.windows.data.BindingExpressionBase;
 import system.windows.data.BindingGroup;
 import system.windows.data.BindingStatus;
-import system.windows.controls.ValidationError;
+import system.windows.data.PriorityBinding;
+import system.windows.DependencyObject;
+import system.windows.DependencyProperty;
 
 
 /**
@@ -120,11 +120,11 @@ public class PriorityBindingExpression extends NetObject  {
     
     // Methods section
     
-    public void UpdateTarget() throws Throwable {
+    public boolean ValidateWithoutUpdate() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("UpdateTarget");
+            return (boolean)classInstance.Invoke("ValidateWithoutUpdate");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -140,11 +140,11 @@ public class PriorityBindingExpression extends NetObject  {
         }
     }
 
-    public boolean ValidateWithoutUpdate() throws Throwable {
+    public void UpdateTarget() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("ValidateWithoutUpdate");
+            classInstance.Invoke("UpdateTarget");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,23 +154,11 @@ public class PriorityBindingExpression extends NetObject  {
     
     // Properties section
     
-    public PriorityBinding getParentPriorityBinding() throws Throwable {
+    public boolean getHasError() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentPriorityBinding");
-            return new PriorityBinding(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BindingExpressionBase getActiveBindingExpression() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ActiveBindingExpression");
-            return new BindingExpressionBase(val);
+            return (boolean)classInstance.Get("HasError");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,23 +174,22 @@ public class PriorityBindingExpression extends NetObject  {
         }
     }
 
-    public DependencyObject getTarget() throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
+    public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Target");
-            return new DependencyObject(val);
+            return (boolean)classInstance.Get("IsDirty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DependencyProperty getTargetProperty() throws Throwable {
+    public ValidationError getValidationError() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetProperty");
-            return new DependencyProperty(val);
+            JCObject val = (JCObject)classInstance.Get("ValidationError");
+            return new ValidationError(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,6 +201,17 @@ public class PriorityBindingExpression extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ParentBindingBase");
             return new BindingBase(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BindingExpressionBase getActiveBindingExpression() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ActiveBindingExpression");
+            return new BindingExpressionBase(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,32 +239,34 @@ public class PriorityBindingExpression extends NetObject  {
         }
     }
 
-    public ValidationError getValidationError() throws Throwable {
+    public PriorityBinding getParentPriorityBinding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidationError");
-            return new ValidationError(val);
+            JCObject val = (JCObject)classInstance.Get("ParentPriorityBinding");
+            return new PriorityBinding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getHasError() throws Throwable {
+    public DependencyObject getTarget() throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HasError");
+            JCObject val = (JCObject)classInstance.Get("Target");
+            return new DependencyObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsDirty() throws Throwable {
+    public DependencyProperty getTargetProperty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsDirty");
+            JCObject val = (JCObject)classInstance.Get("TargetProperty");
+            return new DependencyProperty(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

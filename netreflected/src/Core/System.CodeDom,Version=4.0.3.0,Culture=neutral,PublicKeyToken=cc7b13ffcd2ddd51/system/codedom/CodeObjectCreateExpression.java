@@ -162,6 +162,17 @@ public class CodeObjectCreateExpression extends NetObject  {
     
     // Properties section
     
+    public CodeExpressionCollection getParameters() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Parameters");
+            return new CodeExpressionCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CodeTypeReference getCreateType() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -178,17 +189,6 @@ public class CodeObjectCreateExpression extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateType", CreateType == null ? null : CreateType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeExpressionCollection getParameters() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parameters");
-            return new CodeExpressionCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

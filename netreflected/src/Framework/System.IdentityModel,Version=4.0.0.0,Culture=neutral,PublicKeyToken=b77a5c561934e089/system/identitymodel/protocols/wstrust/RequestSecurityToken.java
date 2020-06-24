@@ -38,17 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.identitymodel.protocols.wstrust.RequestClaimCollection;
-import system.identitymodel.tokens.SecurityTokenElement;
-import system.identitymodel.protocols.wstrust.Participants;
-import system.identitymodel.protocols.wstrust.EndpointReference;
 import system.identitymodel.protocols.wstrust.AdditionalContext;
-import system.identitymodel.protocols.wstrust.Renewing;
-import system.identitymodel.protocols.wstrust.RequestSecurityToken;
 import system.identitymodel.protocols.wstrust.BinaryExchange;
+import system.identitymodel.protocols.wstrust.EndpointReference;
 import system.identitymodel.protocols.wstrust.Entropy;
 import system.identitymodel.protocols.wstrust.Lifetime;
+import system.identitymodel.protocols.wstrust.Participants;
+import system.identitymodel.protocols.wstrust.Renewing;
+import system.identitymodel.protocols.wstrust.RequestClaimCollection;
+import system.identitymodel.protocols.wstrust.RequestSecurityToken;
 import system.identitymodel.protocols.wstrust.UseKey;
+import system.identitymodel.tokens.SecurityTokenElement;
 
 
 /**
@@ -158,116 +158,84 @@ public class RequestSecurityToken extends NetObject  {
     
     // Properties section
     
-    public RequestClaimCollection getClaims() throws Throwable {
+    public boolean getAllowPostdating() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Claims");
-            return new RequestClaimCollection(val);
+            return (boolean)classInstance.Get("AllowPostdating");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SecurityTokenElement getEncryption() throws Throwable {
+    public void setAllowPostdating(boolean AllowPostdating) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Encryption");
-            return new SecurityTokenElement(val);
+            classInstance.Set("AllowPostdating", AllowPostdating);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEncryption(SecurityTokenElement Encryption) throws Throwable {
+    public AdditionalContext getAdditionalContext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Encryption", Encryption == null ? null : Encryption.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("AdditionalContext");
+            return new AdditionalContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getComputedKeyAlgorithm() throws Throwable {
+    public void setAdditionalContext(AdditionalContext AdditionalContext) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ComputedKeyAlgorithm");
+            classInstance.Set("AdditionalContext", AdditionalContext == null ? null : AdditionalContext.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setComputedKeyAlgorithm(java.lang.String ComputedKeyAlgorithm) throws Throwable {
+    public BinaryExchange getBinaryExchange() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ComputedKeyAlgorithm", ComputedKeyAlgorithm);
+            JCObject val = (JCObject)classInstance.Get("BinaryExchange");
+            return new BinaryExchange(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SecurityTokenElement getDelegateTo() throws Throwable {
+    public void setBinaryExchange(BinaryExchange BinaryExchange) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DelegateTo");
-            return new SecurityTokenElement(val);
+            classInstance.Set("BinaryExchange", BinaryExchange == null ? null : BinaryExchange.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDelegateTo(SecurityTokenElement DelegateTo) throws Throwable {
+    public EndpointReference getAppliesTo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("DelegateTo", DelegateTo == null ? null : DelegateTo.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("AppliesTo");
+            return new EndpointReference(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SecurityTokenElement getOnBehalfOf() throws Throwable {
+    public void setAppliesTo(EndpointReference AppliesTo) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OnBehalfOf");
-            return new SecurityTokenElement(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOnBehalfOf(SecurityTokenElement OnBehalfOf) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("OnBehalfOf", OnBehalfOf == null ? null : OnBehalfOf.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Participants getParticipants() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Participants");
-            return new Participants(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setParticipants(Participants Participants) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Participants", Participants == null ? null : Participants.getJCOInstance());
+            classInstance.Set("AppliesTo", AppliesTo == null ? null : AppliesTo.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,22 +262,138 @@ public class RequestSecurityToken extends NetObject  {
         }
     }
 
-    public AdditionalContext getAdditionalContext() throws Throwable {
+    public Entropy getEntropy() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AdditionalContext");
-            return new AdditionalContext(val);
+            JCObject val = (JCObject)classInstance.Get("Entropy");
+            return new Entropy(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAdditionalContext(AdditionalContext AdditionalContext) throws Throwable {
+    public void setEntropy(Entropy Entropy) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("AdditionalContext", AdditionalContext == null ? null : AdditionalContext.getJCOInstance());
+            classInstance.Set("Entropy", Entropy == null ? null : Entropy.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Lifetime getLifetime() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Lifetime");
+            return new Lifetime(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setLifetime(Lifetime Lifetime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Lifetime", Lifetime == null ? null : Lifetime.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Participants getParticipants() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Participants");
+            return new Participants(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setParticipants(Participants Participants) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Participants", Participants == null ? null : Participants.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Renewing getRenewing() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Renewing");
+            return new Renewing(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRenewing(Renewing Renewing) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Renewing", Renewing == null ? null : Renewing.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RequestClaimCollection getClaims() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Claims");
+            return new RequestClaimCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RequestSecurityToken getSecondaryParameters() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SecondaryParameters");
+            return new RequestSecurityToken(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSecondaryParameters(RequestSecurityToken SecondaryParameters) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SecondaryParameters", SecondaryParameters == null ? null : SecondaryParameters.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UseKey getUseKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("UseKey");
+            return new UseKey(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setUseKey(UseKey UseKey) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("UseKey", UseKey == null ? null : UseKey.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,6 +441,69 @@ public class RequestSecurityToken extends NetObject  {
         }
     }
 
+    public SecurityTokenElement getDelegateTo() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DelegateTo");
+            return new SecurityTokenElement(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDelegateTo(SecurityTokenElement DelegateTo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DelegateTo", DelegateTo == null ? null : DelegateTo.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityTokenElement getEncryption() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Encryption");
+            return new SecurityTokenElement(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEncryption(SecurityTokenElement Encryption) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Encryption", Encryption == null ? null : Encryption.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityTokenElement getOnBehalfOf() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("OnBehalfOf");
+            return new SecurityTokenElement(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setOnBehalfOf(SecurityTokenElement OnBehalfOf) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("OnBehalfOf", OnBehalfOf == null ? null : OnBehalfOf.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityTokenElement getProofEncryption() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -373,27 +520,6 @@ public class RequestSecurityToken extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProofEncryption", ProofEncryption == null ? null : ProofEncryption.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Renewing getRenewing() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Renewing");
-            return new Renewing(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRenewing(Renewing Renewing) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Renewing", Renewing == null ? null : Renewing.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,27 +546,6 @@ public class RequestSecurityToken extends NetObject  {
         }
     }
 
-    public RequestSecurityToken getSecondaryParameters() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SecondaryParameters");
-            return new RequestSecurityToken(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSecondaryParameters(RequestSecurityToken SecondaryParameters) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SecondaryParameters", SecondaryParameters == null ? null : SecondaryParameters.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecurityTokenElement getValidateTarget() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -457,88 +562,6 @@ public class RequestSecurityToken extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateTarget", ValidateTarget == null ? null : ValidateTarget.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getAllowPostdating() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("AllowPostdating");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAllowPostdating(boolean AllowPostdating) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AllowPostdating", AllowPostdating);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EndpointReference getAppliesTo() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AppliesTo");
-            return new EndpointReference(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAppliesTo(EndpointReference AppliesTo) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AppliesTo", AppliesTo == null ? null : AppliesTo.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BinaryExchange getBinaryExchange() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BinaryExchange");
-            return new BinaryExchange(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBinaryExchange(BinaryExchange BinaryExchange) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BinaryExchange", BinaryExchange == null ? null : BinaryExchange.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getReplyTo() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ReplyTo");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setReplyTo(java.lang.String ReplyTo) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ReplyTo", ReplyTo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -584,6 +607,26 @@ public class RequestSecurityToken extends NetObject  {
         }
     }
 
+    public java.lang.String getComputedKeyAlgorithm() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ComputedKeyAlgorithm");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setComputedKeyAlgorithm(java.lang.String ComputedKeyAlgorithm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ComputedKeyAlgorithm", ComputedKeyAlgorithm);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getContext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -624,27 +667,6 @@ public class RequestSecurityToken extends NetObject  {
         }
     }
 
-    public Entropy getEntropy() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Entropy");
-            return new Entropy(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEntropy(Entropy Entropy) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Entropy", Entropy == null ? null : Entropy.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getEncryptWith() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -660,26 +682,6 @@ public class RequestSecurityToken extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncryptWith", EncryptWith);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getSignWith() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("SignWith");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSignWith(java.lang.String SignWith) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SignWith", SignWith);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -725,22 +727,21 @@ public class RequestSecurityToken extends NetObject  {
         }
     }
 
-    public Lifetime getLifetime() throws Throwable {
+    public java.lang.String getReplyTo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Lifetime");
-            return new Lifetime(val);
+            return (java.lang.String)classInstance.Get("ReplyTo");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setLifetime(Lifetime Lifetime) throws Throwable {
+    public void setReplyTo(java.lang.String ReplyTo) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Lifetime", Lifetime == null ? null : Lifetime.getJCOInstance());
+            classInstance.Set("ReplyTo", ReplyTo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -786,6 +787,26 @@ public class RequestSecurityToken extends NetObject  {
         }
     }
 
+    public java.lang.String getSignWith() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("SignWith");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSignWith(java.lang.String SignWith) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SignWith", SignWith);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getTokenType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -801,27 +822,6 @@ public class RequestSecurityToken extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenType", TokenType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UseKey getUseKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UseKey");
-            return new UseKey(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setUseKey(UseKey UseKey) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("UseKey", UseKey == null ? null : UseKey.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.DateTimeOffset;
-import system.runtime.caching.CacheItemPriority;
 import system.runtime.caching.CacheEntryRemovedCallback;
-import system.TimeSpan;
 import system.runtime.caching.CacheEntryUpdateCallback;
+import system.runtime.caching.CacheItemPriority;
+import system.TimeSpan;
 
 
 /**
@@ -153,6 +153,46 @@ public class CacheItemPolicy extends NetObject  {
         }
     }
 
+    public CacheEntryRemovedCallback getRemovedCallback() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (CacheEntryRemovedCallback)classInstance.Get("RemovedCallback");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRemovedCallback(CacheEntryRemovedCallback RemovedCallback) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RemovedCallback", RemovedCallback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CacheEntryUpdateCallback getUpdateCallback() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (CacheEntryUpdateCallback)classInstance.Get("UpdateCallback");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setUpdateCallback(CacheEntryUpdateCallback UpdateCallback) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("UpdateCallback", UpdateCallback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CacheItemPriority getPriority() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -174,26 +214,6 @@ public class CacheItemPolicy extends NetObject  {
         }
     }
 
-    public CacheEntryRemovedCallback getRemovedCallback() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (CacheEntryRemovedCallback)classInstance.Get("RemovedCallback");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRemovedCallback(CacheEntryRemovedCallback RemovedCallback) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RemovedCallback", RemovedCallback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TimeSpan getSlidingExpiration() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -210,26 +230,6 @@ public class CacheItemPolicy extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SlidingExpiration", SlidingExpiration == null ? null : SlidingExpiration.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CacheEntryUpdateCallback getUpdateCallback() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (CacheEntryUpdateCallback)classInstance.Get("UpdateCallback");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setUpdateCallback(CacheEntryUpdateCallback UpdateCallback) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("UpdateCallback", UpdateCallback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

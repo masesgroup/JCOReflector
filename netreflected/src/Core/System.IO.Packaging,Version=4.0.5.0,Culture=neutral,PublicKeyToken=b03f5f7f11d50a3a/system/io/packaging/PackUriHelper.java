@@ -113,60 +113,6 @@ public class PackUriHelper extends NetObject  {
     
     // Methods section
     
-    public static Uri CreatePartUri(Uri partUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreatePartUri = (JCObject)classType.Invoke("CreatePartUri", partUri == null ? null : partUri.getJCOInstance());
-            return new Uri(objCreatePartUri);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Uri ResolvePartUri(Uri sourcePartUri, Uri targetUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.FormatException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objResolvePartUri = (JCObject)classType.Invoke("ResolvePartUri", sourcePartUri == null ? null : sourcePartUri.getJCOInstance(), targetUri == null ? null : targetUri.getJCOInstance());
-            return new Uri(objResolvePartUri);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Uri GetRelativeUri(Uri sourcePartUri, Uri targetPartUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.FormatException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetRelativeUri = (JCObject)classType.Invoke("GetRelativeUri", sourcePartUri == null ? null : sourcePartUri.getJCOInstance(), targetPartUri == null ? null : targetPartUri.getJCOInstance());
-            return new Uri(objGetRelativeUri);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Uri GetNormalizedPartUri(Uri partUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.FormatException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetNormalizedPartUri = (JCObject)classType.Invoke("GetNormalizedPartUri", partUri == null ? null : partUri.getJCOInstance());
-            return new Uri(objGetNormalizedPartUri);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int ComparePartUri(Uri firstPartUri, Uri secondPartUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.UriFormatException, system.FormatException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("ComparePartUri", firstPartUri == null ? null : firstPartUri.getJCOInstance(), secondPartUri == null ? null : secondPartUri.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean IsRelationshipPartUri(Uri partUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -177,23 +123,21 @@ public class PackUriHelper extends NetObject  {
         }
     }
 
-    public static Uri GetRelationshipPartUri(Uri partUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.FormatException, system.OutOfMemoryException {
+    public static int ComparePackUri(Uri firstPackUri, Uri secondPackUri) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.UriFormatException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetRelationshipPartUri = (JCObject)classType.Invoke("GetRelationshipPartUri", partUri == null ? null : partUri.getJCOInstance());
-            return new Uri(objGetRelationshipPartUri);
+            return (int)classType.Invoke("ComparePackUri", firstPackUri == null ? null : firstPackUri.getJCOInstance(), secondPackUri == null ? null : secondPackUri.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Uri GetSourcePartUriFromRelationshipPartUri(Uri relationshipPartUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.FormatException, system.OutOfMemoryException {
+    public static int ComparePartUri(Uri firstPartUri, Uri secondPartUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.UriFormatException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetSourcePartUriFromRelationshipPartUri = (JCObject)classType.Invoke("GetSourcePartUriFromRelationshipPartUri", relationshipPartUri == null ? null : relationshipPartUri.getJCOInstance());
-            return new Uri(objGetSourcePartUriFromRelationshipPartUri);
+            return (int)classType.Invoke("ComparePartUri", firstPartUri == null ? null : firstPartUri.getJCOInstance(), secondPartUri == null ? null : secondPartUri.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,6 +176,28 @@ public class PackUriHelper extends NetObject  {
         }
     }
 
+    public static Uri CreatePartUri(Uri partUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreatePartUri = (JCObject)classType.Invoke("CreatePartUri", partUri == null ? null : partUri.getJCOInstance());
+            return new Uri(objCreatePartUri);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Uri GetNormalizedPartUri(Uri partUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetNormalizedPartUri = (JCObject)classType.Invoke("GetNormalizedPartUri", partUri == null ? null : partUri.getJCOInstance());
+            return new Uri(objGetNormalizedPartUri);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Uri GetPackageUri(Uri packUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.UriFormatException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -254,11 +220,45 @@ public class PackUriHelper extends NetObject  {
         }
     }
 
-    public static int ComparePackUri(Uri firstPackUri, Uri secondPackUri) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.UriFormatException, system.FormatException {
+    public static Uri GetRelationshipPartUri(Uri partUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ComparePackUri", firstPackUri == null ? null : firstPackUri.getJCOInstance(), secondPackUri == null ? null : secondPackUri.getJCOInstance());
+            JCObject objGetRelationshipPartUri = (JCObject)classType.Invoke("GetRelationshipPartUri", partUri == null ? null : partUri.getJCOInstance());
+            return new Uri(objGetRelationshipPartUri);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Uri GetRelativeUri(Uri sourcePartUri, Uri targetPartUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetRelativeUri = (JCObject)classType.Invoke("GetRelativeUri", sourcePartUri == null ? null : sourcePartUri.getJCOInstance(), targetPartUri == null ? null : targetPartUri.getJCOInstance());
+            return new Uri(objGetRelativeUri);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Uri GetSourcePartUriFromRelationshipPartUri(Uri relationshipPartUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetSourcePartUriFromRelationshipPartUri = (JCObject)classType.Invoke("GetSourcePartUriFromRelationshipPartUri", relationshipPartUri == null ? null : relationshipPartUri.getJCOInstance());
+            return new Uri(objGetSourcePartUriFromRelationshipPartUri);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Uri ResolvePartUri(Uri sourcePartUri, Uri targetUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objResolvePartUri = (JCObject)classType.Invoke("ResolvePartUri", sourcePartUri == null ? null : sourcePartUri.getJCOInstance(), targetUri == null ? null : targetUri.getJCOInstance());
+            return new Uri(objResolvePartUri);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

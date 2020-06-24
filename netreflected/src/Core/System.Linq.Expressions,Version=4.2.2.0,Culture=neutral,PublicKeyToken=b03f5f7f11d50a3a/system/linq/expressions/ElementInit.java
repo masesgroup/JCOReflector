@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.linq.expressions.Expression;
 import system.linq.expressions.ElementInit;
+import system.linq.expressions.Expression;
 import system.reflection.MethodInfo;
 
 
@@ -130,22 +130,22 @@ public class ElementInit extends NetObject  {
     
     // Properties section
     
+    public int getArgumentCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("ArgumentCount");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MethodInfo getAddMethod() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("AddMethod");
             return new MethodInfo(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getArgumentCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("ArgumentCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

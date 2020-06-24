@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.peertopeer.collaboration.PeerNearMe;
 import system.net.peertopeer.collaboration.PeerContact;
+import system.net.peertopeer.collaboration.PeerNearMe;
 
 
 /**
@@ -118,28 +118,6 @@ public class SubscribeCompletedEventArgs extends NetObject  {
     
     // Properties section
     
-    public PeerNearMe getPeerNearMe() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PeerNearMe");
-            return new PeerNearMe(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PeerContact getPeerContact() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PeerContact");
-            return new PeerContact(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCancelled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -156,6 +134,28 @@ public class SubscribeCompletedEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Error");
             return new NetException(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PeerContact getPeerContact() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PeerContact");
+            return new PeerContact(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PeerNearMe getPeerNearMe() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PeerNearMe");
+            return new PeerNearMe(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

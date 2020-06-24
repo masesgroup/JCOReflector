@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.workflow.componentmodel.compiler.ITypeProvider;
-import system.workflow.componentmodel.compiler.ITypeProviderImplementation;
-import system.reflection.Assembly;
-import system.reflection.AssemblyName;
 import system.componentmodel.design.ITypeResolutionService;
 import system.componentmodel.design.ITypeResolutionServiceImplementation;
+import system.reflection.Assembly;
+import system.reflection.AssemblyName;
+import system.workflow.componentmodel.compiler.ITypeProvider;
+import system.workflow.componentmodel.compiler.ITypeProviderImplementation;
 
 
 /**
@@ -109,12 +109,12 @@ public class ITypeProviderCreatorImplementation extends NetObject implements ITy
 
     // Methods section
     
-    public ITypeProvider GetTypeProvider(NetObject obj) throws Throwable {
+    public ITypeResolutionService GetTypeResolutionService(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetTypeProvider = (JCObject)classInstance.Invoke("GetTypeProvider", obj == null ? null : obj.getJCOInstance());
-            return new ITypeProviderImplementation(objGetTypeProvider);
+            JCObject objGetTypeResolutionService = (JCObject)classInstance.Invoke("GetTypeResolutionService", obj == null ? null : obj.getJCOInstance());
+            return new ITypeResolutionServiceImplementation(objGetTypeResolutionService);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -142,12 +142,12 @@ public class ITypeProviderCreatorImplementation extends NetObject implements ITy
         }
     }
 
-    public ITypeResolutionService GetTypeResolutionService(NetObject obj) throws Throwable {
+    public ITypeProvider GetTypeProvider(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetTypeResolutionService = (JCObject)classInstance.Invoke("GetTypeResolutionService", obj == null ? null : obj.getJCOInstance());
-            return new ITypeResolutionServiceImplementation(objGetTypeResolutionService);
+            JCObject objGetTypeProvider = (JCObject)classInstance.Invoke("GetTypeProvider", obj == null ? null : obj.getJCOInstance());
+            return new ITypeProviderImplementation(objGetTypeProvider);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

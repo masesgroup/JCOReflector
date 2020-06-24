@@ -92,21 +92,21 @@ public interface ITableProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IRawElementProviderSimple[] GetRowHeaders() throws Throwable;
+    public IRawElementProviderSimple GetItem(int row, int column) throws Throwable;
 
     public IRawElementProviderSimple[] GetColumnHeaders() throws Throwable;
 
-    public IRawElementProviderSimple GetItem(int row, int column) throws Throwable;
+    public IRawElementProviderSimple[] GetRowHeaders() throws Throwable;
 
 
     
     // Properties section
     
-    public RowOrColumnMajor getRowOrColumnMajor() throws Throwable;
+    public int getColumnCount() throws Throwable;
 
     public int getRowCount() throws Throwable;
 
-    public int getColumnCount() throws Throwable;
+    public RowOrColumnMajor getRowOrColumnMajor() throws Throwable;
 
 
 

@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.ConstantHandle;
 import system.reflection.metadata.BlobHandle;
+import system.reflection.metadata.ConstantHandle;
 import system.reflection.metadata.CustomAttributeHandleCollection;
-import system.reflection.ParameterAttributes;
 import system.reflection.metadata.StringHandle;
+import system.reflection.ParameterAttributes;
 
 
 /**
@@ -117,23 +117,23 @@ public class Parameter extends NetObject  {
     
     // Methods section
     
-    public ConstantHandle GetDefaultValue() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDefaultValue = (JCObject)classInstance.Invoke("GetDefaultValue");
-            return new ConstantHandle(objGetDefaultValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public BlobHandle GetMarshallingDescriptor() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetMarshallingDescriptor = (JCObject)classInstance.Invoke("GetMarshallingDescriptor");
             return new BlobHandle(objGetMarshallingDescriptor);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ConstantHandle GetDefaultValue() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDefaultValue = (JCObject)classInstance.Invoke("GetDefaultValue");
+            return new ConstantHandle(objGetDefaultValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,17 +154,6 @@ public class Parameter extends NetObject  {
     
     // Properties section
     
-    public ParameterAttributes getAttributes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new ParameterAttributes(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getSequenceNumber() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -181,6 +170,17 @@ public class Parameter extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Name");
             return new StringHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ParameterAttributes getAttributes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Attributes");
+            return new ParameterAttributes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

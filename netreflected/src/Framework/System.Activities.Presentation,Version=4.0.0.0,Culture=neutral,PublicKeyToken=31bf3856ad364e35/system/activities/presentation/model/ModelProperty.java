@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.presentation.model.ModelItem;
-import system.componentmodel.AttributeCollection;
 import system.activities.presentation.model.ModelItemCollection;
-import system.componentmodel.TypeConverter;
 import system.activities.presentation.model.ModelItemDictionary;
+import system.componentmodel.AttributeCollection;
+import system.componentmodel.TypeConverter;
 
 
 /**
@@ -117,16 +117,6 @@ public class ModelProperty extends NetObject  {
     
     // Methods section
     
-    public void ClearValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ClearValue");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ModelItem SetValue(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -138,92 +128,25 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    public void ClearValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ClearValue");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public AttributeCollection getAttributes() throws Throwable {
+    public boolean getIsAttached() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new AttributeCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelItemCollection getCollection() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Collection");
-            return new ModelItemCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getComputedValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ComputedValue");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setComputedValue(NetObject ComputedValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ComputedValue", ComputedValue == null ? null : ComputedValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeConverter getConverter() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Converter");
-            return new TypeConverter(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType getAttachedOwnerType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AttachedOwnerType");
-            return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getDefaultValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DefaultValue");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelItemDictionary getDictionary() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Dictionary");
-            return new ModelItemDictionary(val);
+            return (boolean)classInstance.Get("IsAttached");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,11 +202,12 @@ public class ModelProperty extends NetObject  {
         }
     }
 
-    public boolean getIsAttached() throws Throwable {
+    public ModelItem getParent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsAttached");
+            JCObject val = (JCObject)classInstance.Get("Parent");
+            return new ModelItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,6 +224,82 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    public ModelItemCollection getCollection() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Collection");
+            return new ModelItemCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModelItemDictionary getDictionary() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Dictionary");
+            return new ModelItemDictionary(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AttributeCollection getAttributes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Attributes");
+            return new AttributeCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeConverter getConverter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Converter");
+            return new TypeConverter(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject getComputedValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ComputedValue");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setComputedValue(NetObject ComputedValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ComputedValue", ComputedValue == null ? null : ComputedValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject getDefaultValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DefaultValue");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -310,12 +310,12 @@ public class ModelProperty extends NetObject  {
         }
     }
 
-    public ModelItem getParent() throws Throwable {
+    public NetType getAttachedOwnerType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new ModelItem(val);
+            JCObject val = (JCObject)classInstance.Get("AttachedOwnerType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

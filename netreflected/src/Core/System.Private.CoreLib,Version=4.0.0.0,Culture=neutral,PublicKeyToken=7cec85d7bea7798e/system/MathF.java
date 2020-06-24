@@ -114,6 +114,37 @@ public class MathF extends NetObject  {
     
     // Methods section
     
+    public static int ILogB(Single x) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("ILogB", x == null ? null : x.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int Sign(Single x) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArithmeticException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("Sign", x == null ? null : x.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single Abs(Single x) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAbs = (JCObject)classType.Invoke("Abs", x == null ? null : x.getJCOInstance());
+            return new Single(objAbs);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Single Acos(Single x) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -191,6 +222,28 @@ public class MathF extends NetObject  {
         }
     }
 
+    public static Single BitDecrement(Single x) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objBitDecrement = (JCObject)classType.Invoke("BitDecrement", x == null ? null : x.getJCOInstance());
+            return new Single(objBitDecrement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single BitIncrement(Single x) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objBitIncrement = (JCObject)classType.Invoke("BitIncrement", x == null ? null : x.getJCOInstance());
+            return new Single(objBitIncrement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Single Cbrt(Single x) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -208,6 +261,17 @@ public class MathF extends NetObject  {
         try {
             JCObject objCeiling = (JCObject)classType.Invoke("Ceiling", x == null ? null : x.getJCOInstance());
             return new Single(objCeiling);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single CopySign(Single x, Single y) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCopySign = (JCObject)classType.Invoke("CopySign", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new Single(objCopySign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,11 +332,12 @@ public class MathF extends NetObject  {
         }
     }
 
-    public static int ILogB(Single x) throws Throwable {
+    public static Single IEEERemainder(Single x, Single y) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArithmeticException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ILogB", x == null ? null : x.getJCOInstance());
+            JCObject objIEEERemainder = (JCObject)classType.Invoke("IEEERemainder", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new Single(objIEEERemainder);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,12 +354,12 @@ public class MathF extends NetObject  {
         }
     }
 
-    public static Single Log2(Single x) throws Throwable {
+    public static Single Log(Single x, Single y) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLog2 = (JCObject)classType.Invoke("Log2", x == null ? null : x.getJCOInstance());
-            return new Single(objLog2);
+            JCObject objLog = (JCObject)classType.Invoke("Log", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new Single(objLog);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,12 +376,111 @@ public class MathF extends NetObject  {
         }
     }
 
+    public static Single Log2(Single x) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLog2 = (JCObject)classType.Invoke("Log2", x == null ? null : x.getJCOInstance());
+            return new Single(objLog2);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single Max(Single x, Single y) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMax = (JCObject)classType.Invoke("Max", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new Single(objMax);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single MaxMagnitude(Single x, Single y) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMaxMagnitude = (JCObject)classType.Invoke("MaxMagnitude", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new Single(objMaxMagnitude);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single Min(Single x, Single y) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMin = (JCObject)classType.Invoke("Min", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new Single(objMin);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single MinMagnitude(Single x, Single y) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMinMagnitude = (JCObject)classType.Invoke("MinMagnitude", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new Single(objMinMagnitude);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Single Pow(Single x, Single y) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objPow = (JCObject)classType.Invoke("Pow", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
             return new Single(objPow);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single Round(Single x) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance());
+            return new Single(objRound);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single Round(Single x, int digits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArithmeticException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance(), digits);
+            return new Single(objRound);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single Round(Single x, int digits, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArithmeticException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance(), digits, mode == null ? null : mode.getJCOInstance());
+            return new Single(objRound);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single Round(Single x, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArithmeticException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            return new Single(objRound);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,170 +547,6 @@ public class MathF extends NetObject  {
         try {
             JCObject objTanh = (JCObject)classType.Invoke("Tanh", x == null ? null : x.getJCOInstance());
             return new Single(objTanh);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single Abs(Single x) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAbs = (JCObject)classType.Invoke("Abs", x == null ? null : x.getJCOInstance());
-            return new Single(objAbs);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single BitDecrement(Single x) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objBitDecrement = (JCObject)classType.Invoke("BitDecrement", x == null ? null : x.getJCOInstance());
-            return new Single(objBitDecrement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single BitIncrement(Single x) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objBitIncrement = (JCObject)classType.Invoke("BitIncrement", x == null ? null : x.getJCOInstance());
-            return new Single(objBitIncrement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single CopySign(Single x, Single y) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCopySign = (JCObject)classType.Invoke("CopySign", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new Single(objCopySign);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single IEEERemainder(Single x, Single y) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArithmeticException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objIEEERemainder = (JCObject)classType.Invoke("IEEERemainder", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new Single(objIEEERemainder);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single Log(Single x, Single y) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLog = (JCObject)classType.Invoke("Log", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new Single(objLog);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single Max(Single x, Single y) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMax = (JCObject)classType.Invoke("Max", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new Single(objMax);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single MaxMagnitude(Single x, Single y) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMaxMagnitude = (JCObject)classType.Invoke("MaxMagnitude", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new Single(objMaxMagnitude);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single Min(Single x, Single y) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMin = (JCObject)classType.Invoke("Min", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new Single(objMin);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single MinMagnitude(Single x, Single y) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMinMagnitude = (JCObject)classType.Invoke("MinMagnitude", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new Single(objMinMagnitude);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single Round(Single x) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance());
-            return new Single(objRound);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single Round(Single x, int digits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArithmeticException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance(), digits);
-            return new Single(objRound);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single Round(Single x, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArithmeticException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
-            return new Single(objRound);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single Round(Single x, int digits, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArithmeticException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance(), digits, mode == null ? null : mode.getJCOInstance());
-            return new Single(objRound);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int Sign(Single x) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArithmeticException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("Sign", x == null ? null : x.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.UriTemplate;
 import system.Uri;
 import system.collections.specialized.NameValueCollection;
-import system.UriTemplate;
 import system.UriTemplateMatch;
 
 
@@ -137,22 +137,22 @@ public class UriTemplate extends NetObject  {
     
     // Methods section
     
+    public boolean IsEquivalentTo(UriTemplate other) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsEquivalentTo", other == null ? null : other.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Uri BindByName(Uri baseAddress, NameValueCollection parameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UriFormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objBindByName = (JCObject)classInstance.Invoke("BindByName", baseAddress == null ? null : baseAddress.getJCOInstance(), parameters == null ? null : parameters.getJCOInstance());
             return new Uri(objBindByName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsEquivalentTo(UriTemplate other) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsEquivalentTo", other == null ? null : other.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

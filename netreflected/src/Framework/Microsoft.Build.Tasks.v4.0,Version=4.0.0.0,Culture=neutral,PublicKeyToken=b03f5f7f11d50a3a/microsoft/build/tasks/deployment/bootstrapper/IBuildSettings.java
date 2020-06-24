@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import microsoft.build.tasks.deployment.bootstrapper.ProductBuilderCollection;
 import microsoft.build.tasks.deployment.bootstrapper.ComponentsLocation;
+import microsoft.build.tasks.deployment.bootstrapper.ProductBuilderCollection;
 
 
 /**
@@ -95,13 +95,39 @@ public interface IBuildSettings extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String getApplicationName() throws Throwable;
+    public boolean getApplicationRequiresElevation() throws Throwable;
 
-    public void setApplicationName(java.lang.String ApplicationName) throws Throwable;
+    public void setApplicationRequiresElevation(boolean ApplicationRequiresElevation) throws Throwable;
+
+    public boolean getCopyComponents() throws Throwable;
+
+    public void setCopyComponents(boolean CopyComponents) throws Throwable;
+
+    public boolean getValidate() throws Throwable;
+
+    public void setValidate(boolean Validate) throws Throwable;
+
+    public int getFallbackLCID() throws Throwable;
+
+    public void setFallbackLCID(int FallbackLCID) throws Throwable;
+
+    public int getLCID() throws Throwable;
+
+    public void setLCID(int LCID) throws Throwable;
+
+    public ComponentsLocation getComponentsLocation() throws Throwable;
+
+    public void setComponentsLocation(ComponentsLocation ComponentsLocation) throws Throwable;
+
+    public ProductBuilderCollection getProductBuilders() throws Throwable;
 
     public java.lang.String getApplicationFile() throws Throwable;
 
     public void setApplicationFile(java.lang.String ApplicationFile) throws Throwable;
+
+    public java.lang.String getApplicationName() throws Throwable;
+
+    public void setApplicationName(java.lang.String ApplicationName) throws Throwable;
 
     public java.lang.String getApplicationUrl() throws Throwable;
 
@@ -111,39 +137,13 @@ public interface IBuildSettings extends IJCOBridgeReflected {
 
     public void setComponentsUrl(java.lang.String ComponentsUrl) throws Throwable;
 
-    public boolean getCopyComponents() throws Throwable;
-
-    public void setCopyComponents(boolean CopyComponents) throws Throwable;
-
-    public int getLCID() throws Throwable;
-
-    public void setLCID(int LCID) throws Throwable;
-
-    public int getFallbackLCID() throws Throwable;
-
-    public void setFallbackLCID(int FallbackLCID) throws Throwable;
-
     public java.lang.String getOutputPath() throws Throwable;
 
     public void setOutputPath(java.lang.String OutputPath) throws Throwable;
 
-    public ProductBuilderCollection getProductBuilders() throws Throwable;
-
-    public boolean getValidate() throws Throwable;
-
-    public void setValidate(boolean Validate) throws Throwable;
-
-    public ComponentsLocation getComponentsLocation() throws Throwable;
-
-    public void setComponentsLocation(ComponentsLocation ComponentsLocation) throws Throwable;
-
     public java.lang.String getSupportUrl() throws Throwable;
 
     public void setSupportUrl(java.lang.String SupportUrl) throws Throwable;
-
-    public boolean getApplicationRequiresElevation() throws Throwable;
-
-    public void setApplicationRequiresElevation(boolean ApplicationRequiresElevation) throws Throwable;
 
 
 

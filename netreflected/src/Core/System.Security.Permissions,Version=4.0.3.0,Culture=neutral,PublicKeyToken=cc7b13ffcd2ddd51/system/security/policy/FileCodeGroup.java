@@ -42,8 +42,8 @@ import system.security.policy.IMembershipCondition;
 import system.security.policy.IMembershipConditionImplementation;
 import system.security.permissions.FileIOPermissionAccess;
 import system.security.policy.CodeGroup;
-import system.security.policy.PolicyStatement;
 import system.security.policy.Evidence;
+import system.security.policy.PolicyStatement;
 import system.security.SecurityElement;
 import system.security.policy.PolicyLevel;
 import system.collections.IList;
@@ -133,12 +133,33 @@ public class FileCodeGroup extends NetObject  {
     
     // Methods section
     
+    public boolean Equals(CodeGroup cg, boolean compareChildren) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Equals", cg == null ? null : cg.getJCOInstance(), compareChildren);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CodeGroup Copy() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
             return new CodeGroup(objCopy);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeGroup ResolveMatchingCodeGroups(Evidence evidence) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveMatchingCodeGroups = (JCObject)classInstance.Invoke("ResolveMatchingCodeGroups", evidence == null ? null : evidence.getJCOInstance());
+            return new CodeGroup(objResolveMatchingCodeGroups);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,12 +176,23 @@ public class FileCodeGroup extends NetObject  {
         }
     }
 
-    public CodeGroup ResolveMatchingCodeGroups(Evidence evidence) throws Throwable {
+    public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveMatchingCodeGroups = (JCObject)classInstance.Invoke("ResolveMatchingCodeGroups", evidence == null ? null : evidence.getJCOInstance());
-            return new CodeGroup(objResolveMatchingCodeGroups);
+            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
+            return new SecurityElement(objToXml);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityElement ToXml(PolicyLevel level) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml", level == null ? null : level.getJCOInstance());
+            return new SecurityElement(objToXml);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,16 +228,6 @@ public class FileCodeGroup extends NetObject  {
         }
     }
 
-    public boolean Equals(CodeGroup cg, boolean compareChildren) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Equals", cg == null ? null : cg.getJCOInstance(), compareChildren);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void RemoveChild(CodeGroup group) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -216,62 +238,10 @@ public class FileCodeGroup extends NetObject  {
         }
     }
 
-    public SecurityElement ToXml() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
-            return new SecurityElement(objToXml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityElement ToXml(PolicyLevel level) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml", level == null ? null : level.getJCOInstance());
-            return new SecurityElement(objToXml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public java.lang.String getAttributeString() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("AttributeString");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getMergeLogic() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("MergeLogic");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getPermissionSetName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("PermissionSetName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IList getChildren() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -288,26 +258,6 @@ public class FileCodeGroup extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Children", Children == null ? null : Children.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDescription(java.lang.String Description) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,6 +284,67 @@ public class FileCodeGroup extends NetObject  {
         }
     }
 
+    public PolicyStatement getPolicyStatement() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PolicyStatement");
+            return new PolicyStatement(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPolicyStatement(PolicyStatement PolicyStatement) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PolicyStatement", PolicyStatement == null ? null : PolicyStatement.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getAttributeString() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("AttributeString");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getDescription() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Description");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDescription(java.lang.String Description) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Description", Description);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getMergeLogic() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("MergeLogic");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -354,22 +365,11 @@ public class FileCodeGroup extends NetObject  {
         }
     }
 
-    public PolicyStatement getPolicyStatement() throws Throwable {
+    public java.lang.String getPermissionSetName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PolicyStatement");
-            return new PolicyStatement(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPolicyStatement(PolicyStatement PolicyStatement) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PolicyStatement", PolicyStatement == null ? null : PolicyStatement.getJCOInstance());
+            return (java.lang.String)classInstance.Get("PermissionSetName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

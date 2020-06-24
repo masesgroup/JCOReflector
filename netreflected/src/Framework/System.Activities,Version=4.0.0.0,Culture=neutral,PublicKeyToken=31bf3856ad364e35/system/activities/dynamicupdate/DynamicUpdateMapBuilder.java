@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.dynamicupdate.DynamicUpdateMap;
-import system.activities.LocationReferenceEnvironment;
 import system.activities.Activity;
+import system.activities.LocationReferenceEnvironment;
 
 
 /**
@@ -161,22 +161,22 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
-    public LocationReferenceEnvironment getUpdatedEnvironment() throws Throwable {
+    public Activity getOriginalWorkflowDefinition() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdatedEnvironment");
-            return new LocationReferenceEnvironment(val);
+            JCObject val = (JCObject)classInstance.Get("OriginalWorkflowDefinition");
+            return new Activity(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUpdatedEnvironment(LocationReferenceEnvironment UpdatedEnvironment) throws Throwable {
+    public void setOriginalWorkflowDefinition(Activity OriginalWorkflowDefinition) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("UpdatedEnvironment", UpdatedEnvironment == null ? null : UpdatedEnvironment.getJCOInstance());
+            classInstance.Set("OriginalWorkflowDefinition", OriginalWorkflowDefinition == null ? null : OriginalWorkflowDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,22 +224,22 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
-    public Activity getOriginalWorkflowDefinition() throws Throwable {
+    public LocationReferenceEnvironment getUpdatedEnvironment() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OriginalWorkflowDefinition");
-            return new Activity(val);
+            JCObject val = (JCObject)classInstance.Get("UpdatedEnvironment");
+            return new LocationReferenceEnvironment(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setOriginalWorkflowDefinition(Activity OriginalWorkflowDefinition) throws Throwable {
+    public void setUpdatedEnvironment(LocationReferenceEnvironment UpdatedEnvironment) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("OriginalWorkflowDefinition", OriginalWorkflowDefinition == null ? null : OriginalWorkflowDefinition.getJCOInstance());
+            classInstance.Set("UpdatedEnvironment", UpdatedEnvironment == null ? null : UpdatedEnvironment.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

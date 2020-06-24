@@ -127,22 +127,22 @@ public class XmlSerializerFactory extends NetObject  {
     
     // Methods section
     
-    public XmlSerializer CreateSerializer(NetType type, XmlAttributeOverrides overrides, NetType[] extraTypes, XmlRootAttribute root, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException {
+    public XmlSerializer CreateSerializer(NetType type) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateSerializer = (JCObject)classInstance.Invoke("CreateSerializer", type == null ? null : type.getJCOInstance(), overrides == null ? null : overrides.getJCOInstance(), toObjectFromArray(extraTypes), root == null ? null : root.getJCOInstance(), defaultNamespace);
+            JCObject objCreateSerializer = (JCObject)classInstance.Invoke("CreateSerializer", type == null ? null : type.getJCOInstance());
             return new XmlSerializer(objCreateSerializer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlSerializer CreateSerializer(NetType type, XmlRootAttribute root) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException {
+    public XmlSerializer CreateSerializer(NetType type, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.RankException, system.diagnostics.tracing.EventSourceException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateSerializer = (JCObject)classInstance.Invoke("CreateSerializer", type == null ? null : type.getJCOInstance(), root == null ? null : root.getJCOInstance());
+            JCObject objCreateSerializer = (JCObject)classInstance.Invoke("CreateSerializer", type == null ? null : type.getJCOInstance(), defaultNamespace);
             return new XmlSerializer(objCreateSerializer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -171,33 +171,11 @@ public class XmlSerializerFactory extends NetObject  {
         }
     }
 
-    public XmlSerializer CreateSerializer(XmlTypeMapping xmlTypeMapping) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public XmlSerializer CreateSerializer(NetType type, XmlAttributeOverrides overrides, NetType[] extraTypes, XmlRootAttribute root, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateSerializer = (JCObject)classInstance.Invoke("CreateSerializer", xmlTypeMapping == null ? null : xmlTypeMapping.getJCOInstance());
-            return new XmlSerializer(objCreateSerializer);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSerializer CreateSerializer(NetType type) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateSerializer = (JCObject)classInstance.Invoke("CreateSerializer", type == null ? null : type.getJCOInstance());
-            return new XmlSerializer(objCreateSerializer);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSerializer CreateSerializer(NetType type, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.RankException, system.diagnostics.tracing.EventSourceException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateSerializer = (JCObject)classInstance.Invoke("CreateSerializer", type == null ? null : type.getJCOInstance(), defaultNamespace);
+            JCObject objCreateSerializer = (JCObject)classInstance.Invoke("CreateSerializer", type == null ? null : type.getJCOInstance(), overrides == null ? null : overrides.getJCOInstance(), toObjectFromArray(extraTypes), root == null ? null : root.getJCOInstance(), defaultNamespace);
             return new XmlSerializer(objCreateSerializer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -209,6 +187,28 @@ public class XmlSerializerFactory extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateSerializer = (JCObject)classInstance.Invoke("CreateSerializer", type == null ? null : type.getJCOInstance(), overrides == null ? null : overrides.getJCOInstance(), toObjectFromArray(extraTypes), root == null ? null : root.getJCOInstance(), defaultNamespace, location);
+            return new XmlSerializer(objCreateSerializer);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSerializer CreateSerializer(NetType type, XmlRootAttribute root) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateSerializer = (JCObject)classInstance.Invoke("CreateSerializer", type == null ? null : type.getJCOInstance(), root == null ? null : root.getJCOInstance());
+            return new XmlSerializer(objCreateSerializer);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSerializer CreateSerializer(XmlTypeMapping xmlTypeMapping) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateSerializer = (JCObject)classInstance.Invoke("CreateSerializer", xmlTypeMapping == null ? null : xmlTypeMapping.getJCOInstance());
             return new XmlSerializer(objCreateSerializer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

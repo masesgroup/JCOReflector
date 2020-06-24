@@ -114,22 +114,22 @@ public class JsonEncodedText extends NetObject  {
     
     // Methods section
     
+    public boolean Equals(JsonEncodedText other) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static JsonEncodedText Encode(java.lang.String value, JavaScriptEncoder encoder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objEncode = (JCObject)classType.Invoke("Encode", value, encoder == null ? null : encoder.getJCOInstance());
             return new JsonEncodedText(objEncode);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Equals(JsonEncodedText other) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

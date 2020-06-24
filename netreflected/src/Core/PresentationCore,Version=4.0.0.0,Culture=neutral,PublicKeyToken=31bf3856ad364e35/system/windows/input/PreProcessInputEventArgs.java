@@ -115,11 +115,23 @@ public class PreProcessInputEventArgs extends NetObject  {
     
     // Methods section
     
-    public void Cancel() throws Throwable {
+    public StagingAreaInputItem PeekInput() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Cancel");
+            JCObject objPeekInput = (JCObject)classInstance.Invoke("PeekInput");
+            return new StagingAreaInputItem(objPeekInput);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StagingAreaInputItem PopInput() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objPopInput = (JCObject)classInstance.Invoke("PopInput");
+            return new StagingAreaInputItem(objPopInput);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,23 +159,11 @@ public class PreProcessInputEventArgs extends NetObject  {
         }
     }
 
-    public StagingAreaInputItem PopInput() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public void Cancel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objPopInput = (JCObject)classInstance.Invoke("PopInput");
-            return new StagingAreaInputItem(objPopInput);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StagingAreaInputItem PeekInput() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objPeekInput = (JCObject)classInstance.Invoke("PeekInput");
-            return new StagingAreaInputItem(objPeekInput);
+            classInstance.Invoke("Cancel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,23 +183,23 @@ public class PreProcessInputEventArgs extends NetObject  {
         }
     }
 
-    public StagingAreaInputItem getStagingItem() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("StagingItem");
-            return new StagingAreaInputItem(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public InputManager getInputManager() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("InputManager");
             return new InputManager(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StagingAreaInputItem getStagingItem() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("StagingItem");
+            return new StagingAreaInputItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -103,12 +103,12 @@ public class ISerializationSurrogateProviderImplementation extends NetObject imp
 
     // Methods section
     
-    public NetType GetSurrogateType(NetType type) throws Throwable {
+    public NetObject GetDeserializedObject(NetObject obj, NetType targetType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetSurrogateType = (JCObject)classInstance.Invoke("GetSurrogateType", type == null ? null : type.getJCOInstance());
-            return new NetType(objGetSurrogateType);
+            JCObject objGetDeserializedObject = (JCObject)classInstance.Invoke("GetDeserializedObject", obj == null ? null : obj.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
+            return new NetObject(objGetDeserializedObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -125,12 +125,12 @@ public class ISerializationSurrogateProviderImplementation extends NetObject imp
         }
     }
 
-    public NetObject GetDeserializedObject(NetObject obj, NetType targetType) throws Throwable {
+    public NetType GetSurrogateType(NetType type) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetDeserializedObject = (JCObject)classInstance.Invoke("GetDeserializedObject", obj == null ? null : obj.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
-            return new NetObject(objGetDeserializedObject);
+            JCObject objGetSurrogateType = (JCObject)classInstance.Invoke("GetSurrogateType", type == null ? null : type.getJCOInstance());
+            return new NetType(objGetSurrogateType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

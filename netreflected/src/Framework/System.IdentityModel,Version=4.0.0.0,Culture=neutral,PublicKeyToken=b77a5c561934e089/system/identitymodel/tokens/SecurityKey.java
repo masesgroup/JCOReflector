@@ -112,6 +112,36 @@ public class SecurityKey extends NetObject  {
     
     // Methods section
     
+    public boolean IsAsymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsAsymmetricAlgorithm", algorithm);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsSupportedAlgorithm(java.lang.String algorithm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsSupportedAlgorithm", algorithm);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsSymmetricAlgorithm", algorithm);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte[] DecryptKey(java.lang.String algorithm, byte[] keyData) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,36 +175,6 @@ public class SecurityKey extends NetObject  {
 				resultingArray[indexEncryptKey] = (byte)resultingArrayList.get(indexEncryptKey);
             }
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsAsymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsAsymmetricAlgorithm", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsSupportedAlgorithm(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsSupportedAlgorithm", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsSymmetricAlgorithm", algorithm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -113,26 +113,6 @@ public class XmlParserContext extends NetObject  {
     // Constructors section
     
 
-    public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String xmlLang, XmlSpace xmlSpace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(nt == null ? null : nt.getJCOInstance(), nsMgr == null ? null : nsMgr.getJCOInstance(), xmlLang, xmlSpace == null ? null : xmlSpace.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String xmlLang, XmlSpace xmlSpace, Encoding enc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(nt == null ? null : nt.getJCOInstance(), nsMgr == null ? null : nsMgr.getJCOInstance(), xmlLang, xmlSpace == null ? null : xmlSpace.getJCOInstance(), enc == null ? null : enc.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String docTypeName, java.lang.String pubId, java.lang.String sysId, java.lang.String internalSubset, java.lang.String baseURI, java.lang.String xmlLang, XmlSpace xmlSpace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         try {
             // add reference to assemblyName.dll file
@@ -153,6 +133,26 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String xmlLang, XmlSpace xmlSpace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(nt == null ? null : nt.getJCOInstance(), nsMgr == null ? null : nsMgr.getJCOInstance(), xmlLang, xmlSpace == null ? null : xmlSpace.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String xmlLang, XmlSpace xmlSpace, Encoding enc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(nt == null ? null : nt.getJCOInstance(), nsMgr == null ? null : nsMgr.getJCOInstance(), xmlLang, xmlSpace == null ? null : xmlSpace.getJCOInstance(), enc == null ? null : enc.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -161,43 +161,21 @@ public class XmlParserContext extends NetObject  {
     
     // Properties section
     
-    public XmlNameTable getNameTable() throws Throwable {
+    public java.lang.String getBaseURI() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NameTable");
-            return new XmlNameTable(val);
+            return (java.lang.String)classInstance.Get("BaseURI");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setNameTable(XmlNameTable NameTable) throws Throwable {
+    public void setBaseURI(java.lang.String BaseURI) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("NameTable", NameTable == null ? null : NameTable.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlNamespaceManager getNamespaceManager() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NamespaceManager");
-            return new XmlNamespaceManager(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setNamespaceManager(XmlNamespaceManager NamespaceManager) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("NamespaceManager", NamespaceManager == null ? null : NamespaceManager.getJCOInstance());
+            classInstance.Set("BaseURI", BaseURI);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,6 +196,26 @@ public class XmlParserContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DocTypeName", DocTypeName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getInternalSubset() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("InternalSubset");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInternalSubset(java.lang.String InternalSubset) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InternalSubset", InternalSubset);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,46 +261,6 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
-    public java.lang.String getBaseURI() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("BaseURI");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBaseURI(java.lang.String BaseURI) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BaseURI", BaseURI);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getInternalSubset() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("InternalSubset");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInternalSubset(java.lang.String InternalSubset) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InternalSubset", InternalSubset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getXmlLang() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -318,27 +276,6 @@ public class XmlParserContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlLang", XmlLang);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSpace getXmlSpace() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("XmlSpace");
-            return new XmlSpace(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setXmlSpace(XmlSpace XmlSpace) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("XmlSpace", XmlSpace == null ? null : XmlSpace.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,6 +297,69 @@ public class XmlParserContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encoding", Encoding == null ? null : Encoding.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlNamespaceManager getNamespaceManager() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NamespaceManager");
+            return new XmlNamespaceManager(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setNamespaceManager(XmlNamespaceManager NamespaceManager) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("NamespaceManager", NamespaceManager == null ? null : NamespaceManager.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlNameTable getNameTable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NameTable");
+            return new XmlNameTable(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setNameTable(XmlNameTable NameTable) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("NameTable", NameTable == null ? null : NameTable.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSpace getXmlSpace() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("XmlSpace");
+            return new XmlSpace(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setXmlSpace(XmlSpace XmlSpace) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("XmlSpace", XmlSpace == null ? null : XmlSpace.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

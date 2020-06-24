@@ -97,18 +97,6 @@ public interface IProgressPage extends IJCOBridgeReflected {
     
     // Properties section
     
-    public Uri getDeploymentPath() throws Throwable;
-
-    public void setDeploymentPath(Uri DeploymentPath) throws Throwable;
-
-    public DispatcherOperationCallback getStopCallback() throws Throwable;
-
-    public void setStopCallback(DispatcherOperationCallback StopCallback) throws Throwable;
-
-    public DispatcherOperationCallback getRefreshCallback() throws Throwable;
-
-    public void setRefreshCallback(DispatcherOperationCallback RefreshCallback) throws Throwable;
-
     public java.lang.String getApplicationName() throws Throwable;
 
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable;
@@ -116,6 +104,18 @@ public interface IProgressPage extends IJCOBridgeReflected {
     public java.lang.String getPublisherName() throws Throwable;
 
     public void setPublisherName(java.lang.String PublisherName) throws Throwable;
+
+    public Uri getDeploymentPath() throws Throwable;
+
+    public void setDeploymentPath(Uri DeploymentPath) throws Throwable;
+
+    public DispatcherOperationCallback getRefreshCallback() throws Throwable;
+
+    public void setRefreshCallback(DispatcherOperationCallback RefreshCallback) throws Throwable;
+
+    public DispatcherOperationCallback getStopCallback() throws Throwable;
+
+    public void setStopCallback(DispatcherOperationCallback StopCallback) throws Throwable;
 
 
 

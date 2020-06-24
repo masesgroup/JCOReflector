@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.enterpriseservices.ImpersonationLevelOption;
 import system.enterpriseservices.AuthenticationOption;
+import system.enterpriseservices.ImpersonationLevelOption;
 
 
 /**
@@ -118,21 +118,22 @@ public class SecurityIdentity extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getAccountName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("AccountName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getAuthenticationService() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("AuthenticationService");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AuthenticationOption getAuthenticationLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AuthenticationLevel");
+            return new AuthenticationOption(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,12 +150,11 @@ public class SecurityIdentity extends NetObject  {
         }
     }
 
-    public AuthenticationOption getAuthenticationLevel() throws Throwable {
+    public java.lang.String getAccountName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticationLevel");
-            return new AuthenticationOption(val);
+            return (java.lang.String)classInstance.Get("AccountName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

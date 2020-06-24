@@ -127,12 +127,11 @@ public class SecurityPermissionAttribute extends NetObject  {
     
     // Methods section
     
-    public IPermission CreatePermission() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
-            return new IPermissionImplementation(objCreatePermission);
+            return (boolean)classInstance.Invoke("IsDefaultAttribute");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,11 +147,12 @@ public class SecurityPermissionAttribute extends NetObject  {
         }
     }
 
-    public boolean IsDefaultAttribute() throws Throwable {
+    public IPermission CreatePermission() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            return new IPermissionImplementation(objCreatePermission);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,27 +162,6 @@ public class SecurityPermissionAttribute extends NetObject  {
     
     // Properties section
     
-    public SecurityPermissionFlag getFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Flags");
-            return new SecurityPermissionFlag(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setFlags(SecurityPermissionFlag Flags) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Flags", Flags == null ? null : Flags.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getAssertion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -203,81 +182,61 @@ public class SecurityPermissionAttribute extends NetObject  {
         }
     }
 
-    public boolean getUnmanagedCode() throws Throwable {
+    public boolean getBindingRedirects() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("UnmanagedCode");
+            return (boolean)classInstance.Get("BindingRedirects");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUnmanagedCode(boolean UnmanagedCode) throws Throwable {
+    public void setBindingRedirects(boolean BindingRedirects) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("UnmanagedCode", UnmanagedCode);
+            classInstance.Set("BindingRedirects", BindingRedirects);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getSkipVerification() throws Throwable {
+    public boolean getControlAppDomain() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("SkipVerification");
+            return (boolean)classInstance.Get("ControlAppDomain");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSkipVerification(boolean SkipVerification) throws Throwable {
+    public void setControlAppDomain(boolean ControlAppDomain) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SkipVerification", SkipVerification);
+            classInstance.Set("ControlAppDomain", ControlAppDomain);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getExecution() throws Throwable {
+    public boolean getControlDomainPolicy() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Execution");
+            return (boolean)classInstance.Get("ControlDomainPolicy");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setExecution(boolean Execution) throws Throwable {
+    public void setControlDomainPolicy(boolean ControlDomainPolicy) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Execution", Execution);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getControlThread() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ControlThread");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setControlThread(boolean ControlThread) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ControlThread", ControlThread);
+            classInstance.Set("ControlDomainPolicy", ControlDomainPolicy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,46 +282,6 @@ public class SecurityPermissionAttribute extends NetObject  {
         }
     }
 
-    public boolean getSerializationFormatter() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SerializationFormatter");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSerializationFormatter(boolean SerializationFormatter) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SerializationFormatter", SerializationFormatter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getControlDomainPolicy() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ControlDomainPolicy");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setControlDomainPolicy(boolean ControlDomainPolicy) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ControlDomainPolicy", ControlDomainPolicy);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getControlPrincipal() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -383,41 +302,41 @@ public class SecurityPermissionAttribute extends NetObject  {
         }
     }
 
-    public boolean getControlAppDomain() throws Throwable {
+    public boolean getControlThread() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("ControlAppDomain");
+            return (boolean)classInstance.Get("ControlThread");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setControlAppDomain(boolean ControlAppDomain) throws Throwable {
+    public void setControlThread(boolean ControlThread) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ControlAppDomain", ControlAppDomain);
+            classInstance.Set("ControlThread", ControlThread);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getRemotingConfiguration() throws Throwable {
+    public boolean getExecution() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("RemotingConfiguration");
+            return (boolean)classInstance.Get("Execution");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRemotingConfiguration(boolean RemotingConfiguration) throws Throwable {
+    public void setExecution(boolean Execution) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("RemotingConfiguration", RemotingConfiguration);
+            classInstance.Set("Execution", Execution);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,42 +362,81 @@ public class SecurityPermissionAttribute extends NetObject  {
         }
     }
 
-    public boolean getBindingRedirects() throws Throwable {
+    public boolean getRemotingConfiguration() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("BindingRedirects");
+            return (boolean)classInstance.Get("RemotingConfiguration");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setBindingRedirects(boolean BindingRedirects) throws Throwable {
+    public void setRemotingConfiguration(boolean RemotingConfiguration) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("BindingRedirects", BindingRedirects);
+            classInstance.Set("RemotingConfiguration", RemotingConfiguration);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SecurityAction getAction() throws Throwable {
+    public boolean getSerializationFormatter() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Action");
-            return new SecurityAction(val);
+            return (boolean)classInstance.Get("SerializationFormatter");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAction(SecurityAction Action) throws Throwable {
+    public void setSerializationFormatter(boolean SerializationFormatter) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Action", Action == null ? null : Action.getJCOInstance());
+            classInstance.Set("SerializationFormatter", SerializationFormatter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getSkipVerification() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("SkipVerification");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSkipVerification(boolean SkipVerification) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SkipVerification", SkipVerification);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getUnmanagedCode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("UnmanagedCode");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setUnmanagedCode(boolean UnmanagedCode) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("UnmanagedCode", UnmanagedCode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,6 +468,48 @@ public class SecurityPermissionAttribute extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("TypeId");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityAction getAction() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Action");
+            return new SecurityAction(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAction(SecurityAction Action) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Action", Action == null ? null : Action.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityPermissionFlag getFlags() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Flags");
+            return new SecurityPermissionFlag(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setFlags(SecurityPermissionFlag Flags) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Flags", Flags == null ? null : Flags.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

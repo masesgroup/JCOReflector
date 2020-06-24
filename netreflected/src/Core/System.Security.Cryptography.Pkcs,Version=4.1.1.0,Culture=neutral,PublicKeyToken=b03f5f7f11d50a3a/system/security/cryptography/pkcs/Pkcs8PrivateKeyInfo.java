@@ -117,17 +117,6 @@ public class Pkcs8PrivateKeyInfo extends NetObject  {
     
     // Methods section
     
-    public static Pkcs8PrivateKeyInfo Create(AsymmetricAlgorithm privateKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotImplementedException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", privateKey == null ? null : privateKey.getJCOInstance());
-            return new Pkcs8PrivateKeyInfo(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] Encode() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OverflowException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -147,27 +136,38 @@ public class Pkcs8PrivateKeyInfo extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public Oid getAlgorithmId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Pkcs8PrivateKeyInfo Create(AsymmetricAlgorithm privateKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotImplementedException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AlgorithmId");
-            return new Oid(val);
+            JCObject objCreate = (JCObject)classType.Invoke("Create", privateKey == null ? null : privateKey.getJCOInstance());
+            return new Pkcs8PrivateKeyInfo(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public CryptographicAttributeObjectCollection getAttributes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Attributes");
             return new CryptographicAttributeObjectCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Oid getAlgorithmId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AlgorithmId");
+            return new Oid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -110,27 +110,6 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
 
     // Methods section
     
-    public NetObject Deserialize(Stream serializationStream, HeaderHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", serializationStream == null ? null : serializationStream.getJCOInstance(), handler);
-            return new NetObject(objDeserialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Serialize(Stream serializationStream, NetObject graph, Header[] headers) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Serialize", serializationStream == null ? null : serializationStream.getJCOInstance(), graph == null ? null : graph.getJCOInstance(), toObjectFromArray(headers));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject Deserialize(Stream serializationStream) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -142,11 +121,32 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
         }
     }
 
+    public NetObject Deserialize(Stream serializationStream, HeaderHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", serializationStream == null ? null : serializationStream.getJCOInstance(), handler);
+            return new NetObject(objDeserialize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Serialize(Stream serializationStream, NetObject graph) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", serializationStream == null ? null : serializationStream.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Serialize(Stream serializationStream, NetObject graph, Header[] headers) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Serialize", serializationStream == null ? null : serializationStream.getJCOInstance(), graph == null ? null : graph.getJCOInstance(), toObjectFromArray(headers));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

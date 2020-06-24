@@ -163,33 +163,21 @@ public class ConditionalExpression extends NetObject  {
     
     // Properties section
     
-    public ExpressionType getNodeType() throws Throwable {
+    public boolean getCanReduce() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NodeType");
-            return new ExpressionType(val);
+            return (boolean)classInstance.Get("CanReduce");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType getType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
+    public Expression getIfFalse() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Expression getTest() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Test");
+            JCObject val = (JCObject)classInstance.Get("IfFalse");
             return new Expression(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,22 +195,34 @@ public class ConditionalExpression extends NetObject  {
         }
     }
 
-    public Expression getIfFalse() throws Throwable {
+    public Expression getTest() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("IfFalse");
+            JCObject val = (JCObject)classInstance.Get("Test");
             return new Expression(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getCanReduce() throws Throwable {
+    public ExpressionType getNodeType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CanReduce");
+            JCObject val = (JCObject)classInstance.Get("NodeType");
+            return new ExpressionType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType getType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Type");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

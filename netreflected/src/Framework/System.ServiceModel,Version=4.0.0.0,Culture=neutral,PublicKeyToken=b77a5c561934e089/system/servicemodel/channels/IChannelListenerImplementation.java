@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.TimeSpan;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.TimeSpan;
 import system.AsyncCallback;
-import system.Uri;
 import system.servicemodel.CommunicationState;
+import system.Uri;
 import system.EventHandler;
 
 
@@ -110,27 +110,6 @@ public class IChannelListenerImplementation extends NetObject implements IChanne
 
     // Methods section
     
-    public boolean WaitForChannel(TimeSpan timeout) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("WaitForChannel", timeout == null ? null : timeout.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IAsyncResult BeginWaitForChannel(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBeginWaitForChannel = (JCObject)classInstance.Invoke("BeginWaitForChannel", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginWaitForChannel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean EndWaitForChannel(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -141,11 +120,11 @@ public class IChannelListenerImplementation extends NetObject implements IChanne
         }
     }
 
-    public void Abort() throws Throwable {
+    public boolean WaitForChannel(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Abort");
+            return (boolean)classInstance.Invoke("WaitForChannel", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,36 +152,6 @@ public class IChannelListenerImplementation extends NetObject implements IChanne
         }
     }
 
-    public void EndClose(IAsyncResult result) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("EndClose", result == null ? null : result.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Open() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Open");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Open(TimeSpan timeout) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Open", timeout == null ? null : timeout.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -225,11 +174,22 @@ public class IChannelListenerImplementation extends NetObject implements IChanne
         }
     }
 
-    public void EndOpen(IAsyncResult result) throws Throwable {
+    public IAsyncResult BeginWaitForChannel(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("EndOpen", result == null ? null : result.getJCOInstance());
+            JCObject objBeginWaitForChannel = (JCObject)classInstance.Invoke("BeginWaitForChannel", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginWaitForChannel);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Abort() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,27 +215,67 @@ public class IChannelListenerImplementation extends NetObject implements IChanne
         }
     }
 
-
-    
-    // Properties section
-    
-    public Uri getUri() throws Throwable {
+    public void EndClose(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
-            return new Uri(val);
+            classInstance.Invoke("EndClose", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public void EndOpen(IAsyncResult result) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndOpen", result == null ? null : result.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Open() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Open");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Open(TimeSpan timeout) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Open", timeout == null ? null : timeout.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+
+    
+    // Properties section
+    
     public CommunicationState getState() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("State");
             return new CommunicationState(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Uri getUri() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Uri");
+            return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -132,16 +132,6 @@ public class SnapLine extends NetObject  {
         }
     }
 
-    public SnapLine(SnapLineType type, int offset, SnapLinePriority priority) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), offset, priority == null ? null : priority.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SnapLine(SnapLineType type, int offset, java.lang.String filter, SnapLinePriority priority) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -152,20 +142,20 @@ public class SnapLine extends NetObject  {
         }
     }
 
-
-    
-    // Methods section
-    
-    public void AdjustOffset(int adjustment) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public SnapLine(SnapLineType type, int offset, SnapLinePriority priority) throws Throwable {
         try {
-            classInstance.Invoke("AdjustOffset", adjustment);
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), offset, priority == null ? null : priority.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Methods section
+    
     public static boolean ShouldSnap(SnapLine line1, SnapLine line2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -176,20 +166,20 @@ public class SnapLine extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public java.lang.String getFilter() throws Throwable {
+    public void AdjustOffset(int adjustment) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Filter");
+            classInstance.Invoke("AdjustOffset", adjustment);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public boolean getIsHorizontal() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -225,6 +215,16 @@ public class SnapLine extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Offset", Offset);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getFilter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Filter");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.threading.CompressedStack;
-import system.threading.ContextCallback;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
+import system.threading.ContextCallback;
 
 
 /**
@@ -127,11 +127,12 @@ public class CompressedStack extends NetObject  {
         }
     }
 
-    public static void Run(CompressedStack compressedStack, ContextCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public CompressedStack CreateCopy() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Invoke("Run", compressedStack == null ? null : compressedStack.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objCreateCopy = (JCObject)classInstance.Invoke("CreateCopy");
+            return new CompressedStack(objCreateCopy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,22 +149,21 @@ public class CompressedStack extends NetObject  {
         }
     }
 
-    public CompressedStack CreateCopy() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateCopy = (JCObject)classInstance.Invoke("CreateCopy");
-            return new CompressedStack(objCreateCopy);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException, system.ArgumentException, system.NullReferenceException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Run(CompressedStack compressedStack, ContextCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Run", compressedStack == null ? null : compressedStack.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

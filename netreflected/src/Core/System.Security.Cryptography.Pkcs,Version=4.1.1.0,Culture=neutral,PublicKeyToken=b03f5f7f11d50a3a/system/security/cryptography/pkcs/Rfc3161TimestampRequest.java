@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.cryptography.x509certificates.X509ExtensionCollection;
-import system.security.cryptography.pkcs.Rfc3161TimestampToken;
 import system.security.cryptography.pkcs.Rfc3161TimestampRequest;
 import system.security.cryptography.pkcs.SignerInfo;
 import system.security.cryptography.HashAlgorithmName;
 import system.security.cryptography.Oid;
+import system.security.cryptography.pkcs.Rfc3161TimestampToken;
+import system.security.cryptography.x509certificates.X509ExtensionCollection;
 
 
 /**
@@ -118,17 +118,6 @@ public class Rfc3161TimestampRequest extends NetObject  {
     
     // Methods section
     
-    public X509ExtensionCollection GetExtensions() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetExtensions = (JCObject)classInstance.Invoke("GetExtensions");
-            return new X509ExtensionCollection(objGetExtensions);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] Encode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,10 +137,41 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
 
+    public X509ExtensionCollection GetExtensions() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetExtensions = (JCObject)classInstance.Invoke("GetExtensions");
+            return new X509ExtensionCollection(objGetExtensions);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public boolean getHasExtensions() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("HasExtensions");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getRequestSignerCertificate() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("RequestSignerCertificate");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int getVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -179,26 +199,6 @@ public class Rfc3161TimestampRequest extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("RequestedPolicyId");
             return new Oid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getRequestSignerCertificate() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("RequestSignerCertificate");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getHasExtensions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("HasExtensions");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -135,11 +135,11 @@ public class OperationCanceledException extends NetException {
     // Constructors section
     
 
-    public OperationCanceledException(CancellationToken token) throws Throwable {
+    public OperationCanceledException(java.lang.String message, NetException innerException, CancellationToken token) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(token == null ? null : token.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(message, innerException == null ? null : innerException.getJCOInstance(), token == null ? null : token.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,11 +155,11 @@ public class OperationCanceledException extends NetException {
         }
     }
 
-    public OperationCanceledException(java.lang.String message, NetException innerException, CancellationToken token) throws Throwable {
+    public OperationCanceledException(CancellationToken token) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(message, innerException == null ? null : innerException.getJCOInstance(), token == null ? null : token.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(token == null ? null : token.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,22 +194,21 @@ public class OperationCanceledException extends NetException {
     
     // Properties section
     
-    public CancellationToken getCancellationToken() throws Throwable {
+    public int getHResult() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CancellationToken");
-            return new CancellationToken(val);
+            return (int)classInstance.Get("HResult");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCancellationToken(CancellationToken CancellationToken) throws Throwable {
+    public void setHResult(int HResult) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("CancellationToken", CancellationToken == null ? null : CancellationToken.getJCOInstance());
+            classInstance.Set("HResult", HResult);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,21 +287,22 @@ public class OperationCanceledException extends NetException {
         }
     }
 
-    public int getHResult() throws Throwable {
+    public CancellationToken getCancellationToken() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("HResult");
+            JCObject val = (JCObject)classInstance.Get("CancellationToken");
+            return new CancellationToken(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHResult(int HResult) throws Throwable {
+    public void setCancellationToken(CancellationToken CancellationToken) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("HResult", HResult);
+            classInstance.Set("CancellationToken", CancellationToken == null ? null : CancellationToken.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -128,12 +128,11 @@ public class Clock extends NetObject  {
     
     // Properties section
     
-    public DateTime getLocalTime() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException {
+    public int getTickCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalTime");
-            return new DateTime(val);
+            return (int)classInstance.Get("TickCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -150,11 +149,12 @@ public class Clock extends NetObject  {
         }
     }
 
-    public int getTickCount() throws Throwable {
+    public DateTime getLocalTime() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("TickCount");
+            JCObject val = (JCObject)classInstance.Get("LocalTime");
+            return new DateTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.directoryservices.activedirectory.DomainCollisionOptions;
 import system.directoryservices.activedirectory.ForestTrustCollisionType;
 import system.directoryservices.activedirectory.TopLevelNameCollisionOptions;
-import system.directoryservices.activedirectory.DomainCollisionOptions;
 
 
 /**
@@ -119,6 +119,17 @@ public class ForestTrustRelationshipCollision extends NetObject  {
     
     // Properties section
     
+    public DomainCollisionOptions getDomainCollisionOption() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DomainCollisionOption");
+            return new DomainCollisionOptions(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ForestTrustCollisionType getCollisionType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,17 +147,6 @@ public class ForestTrustRelationshipCollision extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("TopLevelNameCollisionOption");
             return new TopLevelNameCollisionOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DomainCollisionOptions getDomainCollisionOption() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DomainCollisionOption");
-            return new DomainCollisionOptions(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

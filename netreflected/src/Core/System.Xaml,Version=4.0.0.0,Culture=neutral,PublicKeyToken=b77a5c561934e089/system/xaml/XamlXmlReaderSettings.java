@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.xaml.XamlXmlReaderSettings;
-import system.Uri;
 import system.reflection.Assembly;
+import system.Uri;
 
 
 /**
@@ -112,21 +112,21 @@ public class XamlXmlReaderSettings extends NetObject  {
     // Constructors section
     
 
-    public XamlXmlReaderSettings(XamlXmlReaderSettings settings) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(settings == null ? null : settings.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XamlXmlReaderSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XamlXmlReaderSettings(XamlXmlReaderSettings settings) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(settings == null ? null : settings.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -140,61 +140,21 @@ public class XamlXmlReaderSettings extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getXmlLang() throws Throwable {
+    public boolean getAllowProtectedMembersOnRoot() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("XmlLang");
+            return (boolean)classInstance.Get("AllowProtectedMembersOnRoot");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setXmlLang(java.lang.String XmlLang) throws Throwable {
+    public void setAllowProtectedMembersOnRoot(boolean AllowProtectedMembersOnRoot) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("XmlLang", XmlLang);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getXmlSpacePreserve() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("XmlSpacePreserve");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setXmlSpacePreserve(boolean XmlSpacePreserve) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("XmlSpacePreserve", XmlSpacePreserve);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getSkipXmlCompatibilityProcessing() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SkipXmlCompatibilityProcessing");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSkipXmlCompatibilityProcessing(boolean SkipXmlCompatibilityProcessing) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SkipXmlCompatibilityProcessing", SkipXmlCompatibilityProcessing);
+            classInstance.Set("AllowProtectedMembersOnRoot", AllowProtectedMembersOnRoot);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,21 +180,21 @@ public class XamlXmlReaderSettings extends NetObject  {
         }
     }
 
-    public boolean getAllowProtectedMembersOnRoot() throws Throwable {
+    public boolean getIgnoreUidsOnPropertyElements() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("AllowProtectedMembersOnRoot");
+            return (boolean)classInstance.Get("IgnoreUidsOnPropertyElements");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAllowProtectedMembersOnRoot(boolean AllowProtectedMembersOnRoot) throws Throwable {
+    public void setIgnoreUidsOnPropertyElements(boolean IgnoreUidsOnPropertyElements) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("AllowProtectedMembersOnRoot", AllowProtectedMembersOnRoot);
+            classInstance.Set("IgnoreUidsOnPropertyElements", IgnoreUidsOnPropertyElements);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,22 +220,61 @@ public class XamlXmlReaderSettings extends NetObject  {
         }
     }
 
-    public Uri getBaseUri() throws Throwable {
+    public boolean getSkipXmlCompatibilityProcessing() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseUri");
-            return new Uri(val);
+            return (boolean)classInstance.Get("SkipXmlCompatibilityProcessing");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setBaseUri(Uri BaseUri) throws Throwable {
+    public void setSkipXmlCompatibilityProcessing(boolean SkipXmlCompatibilityProcessing) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
+            classInstance.Set("SkipXmlCompatibilityProcessing", SkipXmlCompatibilityProcessing);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getValuesMustBeString() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("ValuesMustBeString");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setValuesMustBeString(boolean ValuesMustBeString) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ValuesMustBeString", ValuesMustBeString);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getXmlSpacePreserve() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("XmlSpacePreserve");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setXmlSpacePreserve(boolean XmlSpacePreserve) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("XmlSpacePreserve", XmlSpacePreserve);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,41 +301,42 @@ public class XamlXmlReaderSettings extends NetObject  {
         }
     }
 
-    public boolean getIgnoreUidsOnPropertyElements() throws Throwable {
+    public java.lang.String getXmlLang() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IgnoreUidsOnPropertyElements");
+            return (java.lang.String)classInstance.Get("XmlLang");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIgnoreUidsOnPropertyElements(boolean IgnoreUidsOnPropertyElements) throws Throwable {
+    public void setXmlLang(java.lang.String XmlLang) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IgnoreUidsOnPropertyElements", IgnoreUidsOnPropertyElements);
+            classInstance.Set("XmlLang", XmlLang);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getValuesMustBeString() throws Throwable {
+    public Uri getBaseUri() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("ValuesMustBeString");
+            JCObject val = (JCObject)classInstance.Get("BaseUri");
+            return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setValuesMustBeString(boolean ValuesMustBeString) throws Throwable {
+    public void setBaseUri(Uri BaseUri) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ValuesMustBeString", ValuesMustBeString);
+            classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -117,6 +117,17 @@ public class DirectoryRequest extends NetObject  {
     
     // Properties section
     
+    public DirectoryControlCollection getControls() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Controls");
+            return new DirectoryControlCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getRequestId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -132,17 +143,6 @@ public class DirectoryRequest extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestId", RequestId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryControlCollection getControls() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Controls");
-            return new DirectoryControlCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

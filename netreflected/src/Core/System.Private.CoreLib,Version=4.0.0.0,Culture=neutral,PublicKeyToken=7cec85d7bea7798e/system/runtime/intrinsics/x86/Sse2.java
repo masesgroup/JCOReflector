@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.UInt32;
 import system.UInt16;
+import system.UInt32;
 
 
 /**

@@ -129,6 +129,17 @@ public class ActivitySurrogateSelector extends NetObject  {
     
     // Methods section
     
+    public ISurrogateSelector GetNextSelector() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetNextSelector = (JCObject)classInstance.Invoke("GetNextSelector");
+            return new ISurrogateSelectorImplementation(objGetNextSelector);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddSurrogate(NetType type, StreamingContext context, ISerializationSurrogate surrogate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -144,17 +155,6 @@ public class ActivitySurrogateSelector extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ChainSelector", selector == null ? null : selector.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ISurrogateSelector GetNextSelector() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetNextSelector = (JCObject)classInstance.Invoke("GetNextSelector");
-            return new ISurrogateSelectorImplementation(objGetNextSelector);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

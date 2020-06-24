@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.DirectoryInfo;
-import system.io.FileInfo;
-import system.io.SearchOption;
 import system.io.EnumerationOptions;
+import system.io.SearchOption;
+import system.io.FileInfo;
 import system.io.FileSystemInfo;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
@@ -143,11 +143,69 @@ public class DirectoryInfo extends NetObject  {
         }
     }
 
-    public void Create() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public DirectoryInfo[] GetDirectories() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Create");
+            ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new DirectoryInfo(resultingObject));
+            }
+            DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryInfo[] GetDirectories(java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories", searchPattern);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new DirectoryInfo(resultingObject));
+            }
+            DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryInfo[] GetDirectories(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories", searchPattern, enumerationOptions == null ? null : enumerationOptions.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new DirectoryInfo(resultingObject));
+            }
+            DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryInfo[] GetDirectories(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new DirectoryInfo(resultingObject));
+            }
+            DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,12 +245,12 @@ public class DirectoryInfo extends NetObject  {
         }
     }
 
-    public FileInfo[] GetFiles(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public FileInfo[] GetFiles(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<FileInfo> resultingArrayList = new ArrayList<FileInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", searchPattern, enumerationOptions == null ? null : enumerationOptions.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileInfo(resultingObject));
             }
@@ -204,12 +262,12 @@ public class DirectoryInfo extends NetObject  {
         }
     }
 
-    public FileInfo[] GetFiles(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public FileInfo[] GetFiles(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<FileInfo> resultingArrayList = new ArrayList<FileInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", searchPattern, enumerationOptions == null ? null : enumerationOptions.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileInfo(resultingObject));
             }
@@ -255,23 +313,6 @@ public class DirectoryInfo extends NetObject  {
         }
     }
 
-    public FileSystemInfo[] GetFileSystemInfos(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<FileSystemInfo> resultingArrayList = new ArrayList<FileSystemInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new FileSystemInfo(resultingObject));
-            }
-            FileSystemInfo[] resultingArray = new FileSystemInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FileSystemInfo[] GetFileSystemInfos(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -289,16 +330,16 @@ public class DirectoryInfo extends NetObject  {
         }
     }
 
-    public DirectoryInfo[] GetDirectories() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public FileSystemInfo[] GetFileSystemInfos(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories");
+            ArrayList<FileSystemInfo> resultingArrayList = new ArrayList<FileSystemInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new DirectoryInfo(resultingObject));
+			    resultingArrayList.add(new FileSystemInfo(resultingObject));
             }
-            DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
+            FileSystemInfo[] resultingArray = new FileSystemInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -306,62 +347,33 @@ public class DirectoryInfo extends NetObject  {
         }
     }
 
-    public DirectoryInfo[] GetDirectories(java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories", searchPattern);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new DirectoryInfo(resultingObject));
-            }
-            DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
+            return new NetObject(objGetLifetimeService);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DirectoryInfo[] GetDirectories(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new DirectoryInfo(resultingObject));
-            }
-            DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
+            return new NetObject(objInitializeLifetimeService);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DirectoryInfo[] GetDirectories(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public void Create() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories", searchPattern, enumerationOptions == null ? null : enumerationOptions.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new DirectoryInfo(resultingObject));
-            }
-            DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void MoveTo(java.lang.String destDirName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.OutOfMemoryException, system.io.DirectoryNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("MoveTo", destDirName);
+            classInstance.Invoke("Create");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,6 +409,16 @@ public class DirectoryInfo extends NetObject  {
         }
     }
 
+    public void MoveTo(java.lang.String destDirName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.OutOfMemoryException, system.io.DirectoryNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("MoveTo", destDirName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Refresh() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -407,84 +429,10 @@ public class DirectoryInfo extends NetObject  {
         }
     }
 
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public DirectoryInfo getParent() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new DirectoryInfo(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryInfo getRoot() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArrayTypeMismatchException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Root");
-            return new DirectoryInfo(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getFullName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("FullName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getExtension() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Extension");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getExists() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -621,6 +569,28 @@ public class DirectoryInfo extends NetObject  {
         }
     }
 
+    public DirectoryInfo getParent() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Parent");
+            return new DirectoryInfo(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryInfo getRoot() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArrayTypeMismatchException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Root");
+            return new DirectoryInfo(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public FileAttributes getAttributes() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -637,6 +607,36 @@ public class DirectoryInfo extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Attributes", Attributes == null ? null : Attributes.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getExtension() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Extension");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getFullName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("FullName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

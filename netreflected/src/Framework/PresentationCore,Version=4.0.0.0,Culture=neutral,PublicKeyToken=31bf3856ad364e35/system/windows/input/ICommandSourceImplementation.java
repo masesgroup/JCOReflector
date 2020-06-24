@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.input.ICommand;
-import system.windows.input.ICommandImplementation;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
+import system.windows.input.ICommand;
+import system.windows.input.ICommandImplementation;
 
 
 /**
@@ -111,17 +111,6 @@ public class ICommandSourceImplementation extends NetObject implements ICommandS
     
     // Properties section
     
-    public ICommand getCommand() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Command");
-            return new ICommandImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject getCommandParameter() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -139,6 +128,17 @@ public class ICommandSourceImplementation extends NetObject implements ICommandS
         try {
             JCObject val = (JCObject)classInstance.Get("CommandTarget");
             return new IInputElementImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICommand getCommand() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Command");
+            return new ICommandImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

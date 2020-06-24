@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.UInt32;
 import system.reflection.AssemblyNameFlags;
+import system.UInt32;
 
 
 /**
@@ -111,16 +111,6 @@ public class AssemblyFlagsAttribute extends NetObject  {
     // Constructors section
     
 
-    public AssemblyFlagsAttribute(UInt32 flags) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(flags == null ? null : flags.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AssemblyFlagsAttribute(int assemblyFlags) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -141,20 +131,20 @@ public class AssemblyFlagsAttribute extends NetObject  {
         }
     }
 
-
-    
-    // Methods section
-    
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public AssemblyFlagsAttribute(UInt32 flags) throws Throwable {
         try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(flags == null ? null : flags.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Methods section
+    
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -165,21 +155,20 @@ public class AssemblyFlagsAttribute extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public UInt32 getFlags() throws Throwable {
+    public boolean Match(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Flags");
-            return new UInt32(val);
+            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public int getAssemblyFlags() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -196,6 +185,17 @@ public class AssemblyFlagsAttribute extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("TypeId");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UInt32 getFlags() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Flags");
+            return new UInt32(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

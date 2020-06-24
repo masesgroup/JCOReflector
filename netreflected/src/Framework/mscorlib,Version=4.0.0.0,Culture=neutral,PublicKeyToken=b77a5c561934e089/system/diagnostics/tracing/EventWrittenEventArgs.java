@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Guid;
-import system.diagnostics.tracing.EventSource;
-import system.diagnostics.tracing.EventKeywords;
-import system.diagnostics.tracing.EventOpcode;
-import system.diagnostics.tracing.EventTask;
-import system.diagnostics.tracing.EventTags;
 import system.diagnostics.tracing.EventChannel;
+import system.diagnostics.tracing.EventKeywords;
 import system.diagnostics.tracing.EventLevel;
+import system.diagnostics.tracing.EventOpcode;
+import system.diagnostics.tracing.EventSource;
+import system.diagnostics.tracing.EventTags;
+import system.diagnostics.tracing.EventTask;
+import system.Guid;
 
 
 /**
@@ -124,21 +124,11 @@ public class EventWrittenEventArgs extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getEventName() throws Throwable {
+    public byte getVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("EventName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEventName(java.lang.String EventName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EventName", EventName);
+            return (byte)classInstance.Get("Version");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,6 +149,83 @@ public class EventWrittenEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EventId", EventId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventChannel getChannel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Channel");
+            return new EventChannel(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventKeywords getKeywords() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Keywords");
+            return new EventKeywords(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventLevel getLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Level");
+            return new EventLevel(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventOpcode getOpcode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Opcode");
+            return new EventOpcode(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventSource getEventSource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EventSource");
+            return new EventSource(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventTags getTags() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Tags");
+            return new EventTags(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventTask getTask() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Task");
+            return new EventTask(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,56 +273,21 @@ public class EventWrittenEventArgs extends NetObject  {
         }
     }
 
-    public EventSource getEventSource() throws Throwable {
+    public java.lang.String getEventName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EventSource");
-            return new EventSource(val);
+            return (java.lang.String)classInstance.Get("EventName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public EventKeywords getKeywords() throws Throwable {
+    public void setEventName(java.lang.String EventName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Keywords");
-            return new EventKeywords(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EventOpcode getOpcode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Opcode");
-            return new EventOpcode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EventTask getTask() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Task");
-            return new EventTask(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EventTags getTags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Tags");
-            return new EventTags(val);
+            classInstance.Set("EventName", EventName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,38 +308,6 @@ public class EventWrittenEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Message", Message);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EventChannel getChannel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Channel");
-            return new EventChannel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte getVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (byte)classInstance.Get("Version");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EventLevel getLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Level");
-            return new EventLevel(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

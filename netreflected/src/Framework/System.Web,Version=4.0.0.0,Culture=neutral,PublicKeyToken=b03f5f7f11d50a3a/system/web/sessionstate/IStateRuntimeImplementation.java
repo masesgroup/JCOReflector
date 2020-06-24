@@ -103,16 +103,6 @@ public class IStateRuntimeImplementation extends NetObject implements IStateRunt
 
     // Methods section
     
-    public void StopProcessing() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("StopProcessing");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section

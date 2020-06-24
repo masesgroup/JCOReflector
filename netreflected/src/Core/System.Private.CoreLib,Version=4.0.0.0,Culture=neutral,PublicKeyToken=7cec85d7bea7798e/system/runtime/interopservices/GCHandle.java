@@ -114,11 +114,12 @@ public class GCHandle extends NetObject  {
     
     // Methods section
     
-    public void Free() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static GCHandle Alloc(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("Free");
+            JCObject objAlloc = (JCObject)classType.Invoke("Alloc", value == null ? null : value.getJCOInstance());
+            return new GCHandle(objAlloc);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -135,21 +136,20 @@ public class GCHandle extends NetObject  {
         }
     }
 
-    public static GCHandle Alloc(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+
+    
+    // Properties section
+    
+    public boolean getIsAllocated() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAlloc = (JCObject)classType.Invoke("Alloc", value == null ? null : value.getJCOInstance());
-            return new GCHandle(objAlloc);
+            return (boolean)classInstance.Get("IsAllocated");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-
-    
-    // Properties section
-    
     public NetObject getTarget() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,16 +166,6 @@ public class GCHandle extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target == null ? null : Target.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsAllocated() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsAllocated");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

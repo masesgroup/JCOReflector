@@ -38,19 +38,19 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.AssemblyName;
-import system.security.PermissionSet;
 import system.reflection.MethodInfo;
-import system.security.permissions.SecurityAction;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
+import system.reflection.AssemblyName;
+import system.security.PermissionSet;
+import system.security.permissions.SecurityAction;
 import system.security.policy.Evidence;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.security.SecurityZone;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.reflection.MethodBase;
+import system.security.SecurityZone;
 
 /**
  * The base .NET class managing System.Security.SecurityException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetException}.
@@ -142,6 +142,26 @@ public class SecurityException extends NetException {
     // Constructors section
     
 
+    public SecurityException(java.lang.String message, NetObject deny, NetObject permitOnly, MethodInfo method, NetObject demanded, IPermission permThatFailed) throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.security.XmlSyntaxException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, deny == null ? null : deny.getJCOInstance(), permitOnly == null ? null : permitOnly.getJCOInstance(), method == null ? null : method.getJCOInstance(), demanded == null ? null : demanded.getJCOInstance(), permThatFailed == null ? null : permThatFailed.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityException(java.lang.String message, AssemblyName assemblyName, PermissionSet grant, PermissionSet refused, MethodInfo method, SecurityAction action, NetObject demanded, IPermission permThatFailed, Evidence evidence) throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.security.XmlSyntaxException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, assemblyName == null ? null : assemblyName.getJCOInstance(), grant == null ? null : grant.getJCOInstance(), refused == null ? null : refused.getJCOInstance(), method == null ? null : method.getJCOInstance(), action == null ? null : action.getJCOInstance(), demanded == null ? null : demanded.getJCOInstance(), permThatFailed == null ? null : permThatFailed.getJCOInstance(), evidence == null ? null : evidence.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityException(java.lang.String message, NetType type) throws Throwable, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
@@ -162,40 +182,10 @@ public class SecurityException extends NetException {
         }
     }
 
-    public SecurityException(java.lang.String message, AssemblyName assemblyName, PermissionSet grant, PermissionSet refused, MethodInfo method, SecurityAction action, NetObject demanded, IPermission permThatFailed, Evidence evidence) throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.security.XmlSyntaxException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(message, assemblyName == null ? null : assemblyName.getJCOInstance(), grant == null ? null : grant.getJCOInstance(), refused == null ? null : refused.getJCOInstance(), method == null ? null : method.getJCOInstance(), action == null ? null : action.getJCOInstance(), demanded == null ? null : demanded.getJCOInstance(), permThatFailed == null ? null : permThatFailed.getJCOInstance(), evidence == null ? null : evidence.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityException(java.lang.String message, NetObject deny, NetObject permitOnly, MethodInfo method, NetObject demanded, IPermission permThatFailed) throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.security.XmlSyntaxException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(message, deny == null ? null : deny.getJCOInstance(), permitOnly == null ? null : permitOnly.getJCOInstance(), method == null ? null : method.getJCOInstance(), demanded == null ? null : demanded.getJCOInstance(), permThatFailed == null ? null : permThatFailed.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Methods section
     
-    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetException GetBaseException() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -207,88 +197,57 @@ public class SecurityException extends NetException {
         }
     }
 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public SecurityAction getAction() throws Throwable {
+    public int getHResult() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Action");
-            return new SecurityAction(val);
+            return (int)classInstance.Get("HResult");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAction(SecurityAction Action) throws Throwable {
+    public void setHResult(int HResult) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Action", Action == null ? null : Action.getJCOInstance());
+            classInstance.Set("HResult", HResult);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType getPermissionType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.InvalidOperationException {
+    public IDictionary getData() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PermissionType");
-            return new NetType(val);
+            JCObject val = (JCObject)classInstance.Get("Data");
+            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setPermissionType(NetType PermissionType) throws Throwable {
+    public NetException getInnerException() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("PermissionType", PermissionType == null ? null : PermissionType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IPermission getFirstPermissionThatFailed() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("FirstPermissionThatFailed");
-            return new IPermissionImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setFirstPermissionThatFailed(IPermission FirstPermissionThatFailed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("FirstPermissionThatFailed", FirstPermissionThatFailed == null ? null : FirstPermissionThatFailed.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getPermissionState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("PermissionState");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPermissionState(java.lang.String PermissionState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PermissionState", PermissionState);
+            JCObject val = (JCObject)classInstance.Get("InnerException");
+            return new NetException(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,46 +269,6 @@ public class SecurityException extends NetException {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Demanded", Demanded == null ? null : Demanded.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getGrantedSet() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("GrantedSet");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setGrantedSet(java.lang.String GrantedSet) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("GrantedSet", GrantedSet);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getRefusedSet() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("RefusedSet");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRefusedSet(java.lang.String RefusedSet) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RefusedSet", RefusedSet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,6 +337,17 @@ public class SecurityException extends NetException {
         }
     }
 
+    public MethodBase getTargetSite() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.InvalidOperationException, system.OverflowException, system.NotSupportedException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TargetSite");
+            return new MethodBase(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MethodInfo getMethod() throws Throwable, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -434,6 +364,48 @@ public class SecurityException extends NetException {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Method", Method == null ? null : Method.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IPermission getFirstPermissionThatFailed() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("FirstPermissionThatFailed");
+            return new IPermissionImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setFirstPermissionThatFailed(IPermission FirstPermissionThatFailed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("FirstPermissionThatFailed", FirstPermissionThatFailed == null ? null : FirstPermissionThatFailed.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityAction getAction() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Action");
+            return new SecurityAction(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAction(SecurityAction Action) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Action", Action == null ? null : Action.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,54 +432,21 @@ public class SecurityException extends NetException {
         }
     }
 
-    public java.lang.String getUrl() throws Throwable {
+    public java.lang.String getGrantedSet() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Url");
+            return (java.lang.String)classInstance.Get("GrantedSet");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUrl(java.lang.String Url) throws Throwable {
+    public void setGrantedSet(java.lang.String GrantedSet) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Url", Url);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary getData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Data");
-            return new IDictionaryImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetException getInnerException() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InnerException");
-            return new NetException(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodBase getTargetSite() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.InvalidOperationException, system.OverflowException, system.NotSupportedException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TargetSite");
-            return new MethodBase(val);
+            classInstance.Set("GrantedSet", GrantedSet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -533,6 +472,46 @@ public class SecurityException extends NetException {
         }
     }
 
+    public java.lang.String getPermissionState() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("PermissionState");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPermissionState(java.lang.String PermissionState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PermissionState", PermissionState);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getRefusedSet() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("RefusedSet");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRefusedSet(java.lang.String RefusedSet) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RefusedSet", RefusedSet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -553,21 +532,42 @@ public class SecurityException extends NetException {
         }
     }
 
-    public int getHResult() throws Throwable {
+    public java.lang.String getUrl() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("HResult");
+            return (java.lang.String)classInstance.Get("Url");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHResult(int HResult) throws Throwable {
+    public void setUrl(java.lang.String Url) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("HResult", HResult);
+            classInstance.Set("Url", Url);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType getPermissionType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PermissionType");
+            return new NetType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPermissionType(NetType PermissionType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PermissionType", PermissionType == null ? null : PermissionType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

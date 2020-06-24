@@ -113,37 +113,6 @@ public class FeatureSupport extends NetObject  {
     
     // Methods section
     
-    public static boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsPresent", featureClassName, featureConstName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName, Version minimumVersion) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.MissingMethodException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsPresent", featureClassName, featureConstName, minimumVersion == null ? null : minimumVersion.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Version GetVersionPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.MissingMethodException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetVersionPresent = (JCObject)classType.Invoke("GetVersionPresent", featureClassName, featureConstName);
-            return new Version(objGetVersionPresent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsPresent(NetObject feature) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,11 +133,42 @@ public class FeatureSupport extends NetObject  {
         }
     }
 
+    public static boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsPresent", featureClassName, featureConstName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName, Version minimumVersion) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.MissingMethodException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsPresent", featureClassName, featureConstName, minimumVersion == null ? null : minimumVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Version GetVersionPresent(NetObject feature) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetVersionPresent = (JCObject)classInstance.Invoke("GetVersionPresent", feature == null ? null : feature.getJCOInstance());
+            return new Version(objGetVersionPresent);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Version GetVersionPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.MissingMethodException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetVersionPresent = (JCObject)classType.Invoke("GetVersionPresent", featureClassName, featureConstName);
             return new Version(objGetVersionPresent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

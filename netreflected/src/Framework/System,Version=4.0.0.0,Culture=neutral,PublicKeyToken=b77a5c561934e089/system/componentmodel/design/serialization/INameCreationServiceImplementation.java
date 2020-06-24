@@ -105,21 +105,21 @@ public class INameCreationServiceImplementation extends NetObject implements INa
 
     // Methods section
     
-    public java.lang.String CreateName(IContainer container, NetType dataType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("CreateName", container == null ? null : container.getJCOInstance(), dataType == null ? null : dataType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsValidName(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsValidName", name);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String CreateName(IContainer container, NetType dataType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("CreateName", container == null ? null : container.getJCOInstance(), dataType == null ? null : dataType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

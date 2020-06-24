@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.forms.ControlBindingsCollection;
-import system.windows.forms.BindingContext;
 import system.componentmodel.ISite;
 import system.componentmodel.ISiteImplementation;
+import system.windows.forms.BindingContext;
+import system.windows.forms.ControlBindingsCollection;
 import system.EventHandler;
 
 
@@ -122,12 +122,22 @@ public class IBindableComponentImplementation extends NetObject implements IBind
     
     // Properties section
     
-    public ControlBindingsCollection getDataBindings() throws Throwable {
+    public ISite getSite() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DataBindings");
-            return new ControlBindingsCollection(val);
+            JCObject val = (JCObject)classInstance.Get("Site");
+            return new ISiteImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSite(ISite Site) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,22 +164,12 @@ public class IBindableComponentImplementation extends NetObject implements IBind
         }
     }
 
-    public ISite getSite() throws Throwable {
+    public ControlBindingsCollection getDataBindings() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Site");
-            return new ISiteImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSite(ISite Site) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("DataBindings");
+            return new ControlBindingsCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.PropertyDescriptorCollection;
-import system.Attribute;
 import system.componentmodel.AttributeCollection;
-import system.componentmodel.TypeConverter;
 import system.componentmodel.EventDescriptor;
-import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.EventDescriptorCollection;
+import system.Attribute;
+import system.componentmodel.PropertyDescriptor;
+import system.componentmodel.PropertyDescriptorCollection;
+import system.componentmodel.TypeConverter;
 import system.componentmodel.PropertyChangedEventHandler;
 
 
@@ -120,38 +120,6 @@ public class WorkflowDataContext extends NetObject  {
     
     // Methods section
     
-    public void Dispose() throws Throwable, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyDescriptorCollection GetProperties() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties");
-            return new PropertyDescriptorCollection(objGetProperties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyDescriptorCollection GetProperties(Attribute[] attributes) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", (Object)toObjectFromArray(attributes));
-            return new PropertyDescriptorCollection(objGetProperties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AttributeCollection GetAttributes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -163,65 +131,12 @@ public class WorkflowDataContext extends NetObject  {
         }
     }
 
-    public java.lang.String GetClassName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetClassName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetComponentName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetComponentName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeConverter GetConverter() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetConverter = (JCObject)classInstance.Invoke("GetConverter");
-            return new TypeConverter(objGetConverter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EventDescriptor GetDefaultEvent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetDefaultEvent = (JCObject)classInstance.Invoke("GetDefaultEvent");
             return new EventDescriptor(objGetDefaultEvent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyDescriptor GetDefaultProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDefaultProperty = (JCObject)classInstance.Invoke("GetDefaultProperty");
-            return new PropertyDescriptor(objGetDefaultProperty);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetEditor(NetType editorBaseType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEditor = (JCObject)classInstance.Invoke("GetEditor", editorBaseType == null ? null : editorBaseType.getJCOInstance());
-            return new NetObject(objGetEditor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,12 +164,97 @@ public class WorkflowDataContext extends NetObject  {
         }
     }
 
+    public PropertyDescriptor GetDefaultProperty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDefaultProperty = (JCObject)classInstance.Invoke("GetDefaultProperty");
+            return new PropertyDescriptor(objGetDefaultProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyDescriptorCollection GetProperties() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties");
+            return new PropertyDescriptorCollection(objGetProperties);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyDescriptorCollection GetProperties(Attribute[] attributes) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", (Object)toObjectFromArray(attributes));
+            return new PropertyDescriptorCollection(objGetProperties);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeConverter GetConverter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetConverter = (JCObject)classInstance.Invoke("GetConverter");
+            return new TypeConverter(objGetConverter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetEditor(NetType editorBaseType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetEditor = (JCObject)classInstance.Invoke("GetEditor", editorBaseType == null ? null : editorBaseType.getJCOInstance());
+            return new NetObject(objGetEditor);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetPropertyOwner(PropertyDescriptor pd) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetPropertyOwner = (JCObject)classInstance.Invoke("GetPropertyOwner", pd == null ? null : pd.getJCOInstance());
             return new NetObject(objGetPropertyOwner);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetClassName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetClassName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetComponentName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetComponentName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

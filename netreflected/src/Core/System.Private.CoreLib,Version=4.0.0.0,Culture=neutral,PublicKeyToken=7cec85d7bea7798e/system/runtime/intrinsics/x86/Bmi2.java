@@ -113,17 +113,6 @@ public class Bmi2 extends NetObject  {
     
     // Methods section
     
-    public static UInt32 ZeroHighBits(UInt32 value, UInt32 index) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objZeroHighBits = (JCObject)classType.Invoke("ZeroHighBits", value == null ? null : value.getJCOInstance(), index == null ? null : index.getJCOInstance());
-            return new UInt32(objZeroHighBits);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static UInt32 MultiplyNoFlags(UInt32 left, UInt32 right) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -152,6 +141,17 @@ public class Bmi2 extends NetObject  {
         try {
             JCObject objParallelBitExtract = (JCObject)classType.Invoke("ParallelBitExtract", value == null ? null : value.getJCOInstance(), mask == null ? null : mask.getJCOInstance());
             return new UInt32(objParallelBitExtract);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ZeroHighBits(UInt32 value, UInt32 index) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objZeroHighBits = (JCObject)classType.Invoke("ZeroHighBits", value == null ? null : value.getJCOInstance(), index == null ? null : index.getJCOInstance());
+            return new UInt32(objZeroHighBits);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

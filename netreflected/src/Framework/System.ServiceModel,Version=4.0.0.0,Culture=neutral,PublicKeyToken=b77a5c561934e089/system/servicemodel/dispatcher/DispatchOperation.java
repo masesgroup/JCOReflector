@@ -41,9 +41,9 @@ import java.util.ArrayList;
 import system.servicemodel.dispatcher.DispatchRuntime;
 import system.servicemodel.dispatcher.IDispatchMessageFormatter;
 import system.servicemodel.dispatcher.IDispatchMessageFormatterImplementation;
-import system.servicemodel.ImpersonationOption;
 import system.servicemodel.dispatcher.IOperationInvoker;
 import system.servicemodel.dispatcher.IOperationInvokerImplementation;
+import system.servicemodel.ImpersonationOption;
 
 
 /**
@@ -143,26 +143,6 @@ public class DispatchOperation extends NetObject  {
     
     // Properties section
     
-    public boolean getIsOneWay() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsOneWay");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getAction() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Action");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getAutoDisposeParameters() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -183,64 +163,51 @@ public class DispatchOperation extends NetObject  {
         }
     }
 
-    public IDispatchMessageFormatter getFormatter() throws Throwable {
+    public boolean getDeserializeRequest() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Formatter");
-            return new IDispatchMessageFormatterImplementation(val);
+            return (boolean)classInstance.Get("DeserializeRequest");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setFormatter(IDispatchMessageFormatter Formatter) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public void setDeserializeRequest(boolean DeserializeRequest) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Formatter", Formatter == null ? null : Formatter.getJCOInstance());
+            classInstance.Set("DeserializeRequest", DeserializeRequest);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ImpersonationOption getImpersonation() throws Throwable {
+    public boolean getIsInsideTransactedReceiveScope() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Impersonation");
-            return new ImpersonationOption(val);
+            return (boolean)classInstance.Get("IsInsideTransactedReceiveScope");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setImpersonation(ImpersonationOption Impersonation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public void setIsInsideTransactedReceiveScope(boolean IsInsideTransactedReceiveScope) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Impersonation", Impersonation == null ? null : Impersonation.getJCOInstance());
+            classInstance.Set("IsInsideTransactedReceiveScope", IsInsideTransactedReceiveScope);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IOperationInvoker getInvoker() throws Throwable {
+    public boolean getIsOneWay() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Invoker");
-            return new IOperationInvokerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInvoker(IOperationInvoker Invoker) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Invoker", Invoker == null ? null : Invoker.getJCOInstance());
+            return (boolean)classInstance.Get("IsOneWay");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,27 +228,6 @@ public class DispatchOperation extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsTerminating", IsTerminating);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DispatchRuntime getParent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new DispatchRuntime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,36 +268,6 @@ public class DispatchOperation extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReleaseInstanceBeforeCall", ReleaseInstanceBeforeCall);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getReplyAction() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ReplyAction");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getDeserializeRequest() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("DeserializeRequest");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDeserializeRequest(boolean DeserializeRequest) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DeserializeRequest", DeserializeRequest);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,21 +333,105 @@ public class DispatchOperation extends NetObject  {
         }
     }
 
-    public boolean getIsInsideTransactedReceiveScope() throws Throwable {
+    public DispatchRuntime getParent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsInsideTransactedReceiveScope");
+            JCObject val = (JCObject)classInstance.Get("Parent");
+            return new DispatchRuntime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIsInsideTransactedReceiveScope(boolean IsInsideTransactedReceiveScope) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public IDispatchMessageFormatter getFormatter() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IsInsideTransactedReceiveScope", IsInsideTransactedReceiveScope);
+            JCObject val = (JCObject)classInstance.Get("Formatter");
+            return new IDispatchMessageFormatterImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setFormatter(IDispatchMessageFormatter Formatter) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Formatter", Formatter == null ? null : Formatter.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IOperationInvoker getInvoker() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Invoker");
+            return new IOperationInvokerImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInvoker(IOperationInvoker Invoker) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Invoker", Invoker == null ? null : Invoker.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImpersonationOption getImpersonation() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Impersonation");
+            return new ImpersonationOption(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setImpersonation(ImpersonationOption Impersonation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Impersonation", Impersonation == null ? null : Impersonation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getAction() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Action");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getReplyAction() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ReplyAction");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

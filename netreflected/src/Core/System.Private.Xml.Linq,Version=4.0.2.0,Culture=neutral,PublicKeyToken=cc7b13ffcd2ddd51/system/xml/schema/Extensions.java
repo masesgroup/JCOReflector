@@ -40,12 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.xml.schema.IXmlSchemaInfo;
 import system.xml.schema.IXmlSchemaInfoImplementation;
-import system.xml.linq.XElement;
 import system.xml.linq.XAttribute;
-import system.xml.linq.XDocument;
+import system.xml.linq.XElement;
+import system.xml.schema.XmlSchemaObject;
 import system.xml.schema.XmlSchemaSet;
 import system.xml.schema.ValidationEventHandler;
-import system.xml.schema.XmlSchemaObject;
+import system.xml.linq.XDocument;
 
 
 /**
@@ -120,6 +120,17 @@ public class Extensions extends NetObject  {
     
     // Methods section
     
+    public static IXmlSchemaInfo GetSchemaInfo(XAttribute source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetSchemaInfo = (JCObject)classType.Invoke("GetSchemaInfo", source == null ? null : source.getJCOInstance());
+            return new IXmlSchemaInfoImplementation(objGetSchemaInfo);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static IXmlSchemaInfo GetSchemaInfo(XElement source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -131,12 +142,21 @@ public class Extensions extends NetObject  {
         }
     }
 
-    public static IXmlSchemaInfo GetSchemaInfo(XAttribute source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static void Validate(XAttribute source, XmlSchemaObject partialValidationType, XmlSchemaSet schemas, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.RankException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetSchemaInfo = (JCObject)classType.Invoke("GetSchemaInfo", source == null ? null : source.getJCOInstance());
-            return new IXmlSchemaInfoImplementation(objGetSchemaInfo);
+            classType.Invoke("Validate", source == null ? null : source.getJCOInstance(), partialValidationType == null ? null : partialValidationType.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), validationEventHandler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Validate(XAttribute source, XmlSchemaObject partialValidationType, XmlSchemaSet schemas, ValidationEventHandler validationEventHandler, boolean addSchemaInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.RankException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Validate", source == null ? null : source.getJCOInstance(), partialValidationType == null ? null : partialValidationType.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), validationEventHandler, addSchemaInfo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,26 +193,6 @@ public class Extensions extends NetObject  {
     }
 
     public static void Validate(XElement source, XmlSchemaObject partialValidationType, XmlSchemaSet schemas, ValidationEventHandler validationEventHandler, boolean addSchemaInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.RankException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Validate", source == null ? null : source.getJCOInstance(), partialValidationType == null ? null : partialValidationType.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), validationEventHandler, addSchemaInfo);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Validate(XAttribute source, XmlSchemaObject partialValidationType, XmlSchemaSet schemas, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.RankException, system.FormatException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Validate", source == null ? null : source.getJCOInstance(), partialValidationType == null ? null : partialValidationType.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), validationEventHandler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Validate(XAttribute source, XmlSchemaObject partialValidationType, XmlSchemaSet schemas, ValidationEventHandler validationEventHandler, boolean addSchemaInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.RankException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

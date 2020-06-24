@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.SByte;
+import system.Single;
 import system.UInt16;
 import system.UInt32;
 import system.UInt64;
-import system.Single;
 
 
 /**

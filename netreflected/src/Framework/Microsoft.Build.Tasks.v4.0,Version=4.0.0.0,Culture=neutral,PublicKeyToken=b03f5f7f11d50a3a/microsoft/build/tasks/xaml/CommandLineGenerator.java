@@ -148,26 +148,6 @@ public class CommandLineGenerator extends NetObject  {
         }
     }
 
-    public java.lang.String getCommandLineTemplate() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("CommandLineTemplate");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCommandLineTemplate(java.lang.String CommandLineTemplate) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CommandLineTemplate", CommandLineTemplate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getAlwaysAppend() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -183,6 +163,26 @@ public class CommandLineGenerator extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlwaysAppend", AlwaysAppend);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getCommandLineTemplate() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("CommandLineTemplate");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCommandLineTemplate(java.lang.String CommandLineTemplate) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CommandLineTemplate", CommandLineTemplate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

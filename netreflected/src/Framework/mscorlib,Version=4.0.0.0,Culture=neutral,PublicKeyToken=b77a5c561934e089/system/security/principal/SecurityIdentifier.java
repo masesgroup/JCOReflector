@@ -112,16 +112,6 @@ public class SecurityIdentifier extends NetObject  {
     // Constructors section
     
 
-    public SecurityIdentifier(java.lang.String sddlForm) throws Throwable, system.ArgumentNullException, system.AccessViolationException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.SystemException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(sddlForm));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecurityIdentifier(byte[] binaryForm, int offset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -142,36 +132,25 @@ public class SecurityIdentifier extends NetObject  {
         }
     }
 
-
-    
-    // Methods section
-    
-    public IdentityReference Translate(NetType targetType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.SystemException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.security.principal.IdentityNotMappedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public SecurityIdentifier(java.lang.String sddlForm) throws Throwable, system.ArgumentNullException, system.AccessViolationException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.SystemException {
         try {
-            JCObject objTranslate = (JCObject)classInstance.Invoke("Translate", targetType == null ? null : targetType.getJCOInstance());
-            return new IdentityReference(objTranslate);
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(sddlForm));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Methods section
+    
     public boolean Equals(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Equals", sid == null ? null : sid.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsValidTargetType(NetType targetType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsValidTargetType", targetType == null ? null : targetType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,11 +166,21 @@ public class SecurityIdentifier extends NetObject  {
         }
     }
 
-    public int CompareTo(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException {
+    public boolean IsEqualDomainSid(SecurityIdentifier sid) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("CompareTo", sid == null ? null : sid.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsEqualDomainSid", sid == null ? null : sid.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsValidTargetType(NetType targetType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsValidTargetType", targetType == null ? null : targetType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,21 +196,32 @@ public class SecurityIdentifier extends NetObject  {
         }
     }
 
-    public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentException {
+    public int CompareTo(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetBinaryForm", binaryForm, offset);
+            return (int)classInstance.Invoke("CompareTo", sid == null ? null : sid.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean IsEqualDomainSid(SecurityIdentifier sid) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException {
+    public IdentityReference Translate(NetType targetType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.SystemException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.security.principal.IdentityNotMappedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsEqualDomainSid", sid == null ? null : sid.getJCOInstance());
+            JCObject objTranslate = (JCObject)classInstance.Invoke("Translate", targetType == null ? null : targetType.getJCOInstance());
+            return new IdentityReference(objTranslate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetBinaryForm", binaryForm, offset);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

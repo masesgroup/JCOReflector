@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.PropertyDescriptorCollection;
+import system.componentmodel.PropertyDescriptor;
 
 
 /**
@@ -114,38 +114,6 @@ public class ListBindingHelper extends NetObject  {
     
     // Methods section
     
-    public static NetObject GetList(NetObject list) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetList = (JCObject)classType.Invoke("GetList", list == null ? null : list.getJCOInstance());
-            return new NetObject(objGetList);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject GetList(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetList = (JCObject)classType.Invoke("GetList", dataSource == null ? null : dataSource.getJCOInstance(), dataMember);
-            return new NetObject(objGetList);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetListName(NetObject list, PropertyDescriptor[] listAccessors) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetListName", list == null ? null : list.getJCOInstance(), toObjectFromArray(listAccessors));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static PropertyDescriptorCollection GetListItemProperties(NetObject list) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -174,6 +142,38 @@ public class ListBindingHelper extends NetObject  {
         try {
             JCObject objGetListItemProperties = (JCObject)classType.Invoke("GetListItemProperties", dataSource == null ? null : dataSource.getJCOInstance(), dataMember, toObjectFromArray(listAccessors));
             return new PropertyDescriptorCollection(objGetListItemProperties);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject GetList(NetObject list) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetList = (JCObject)classType.Invoke("GetList", list == null ? null : list.getJCOInstance());
+            return new NetObject(objGetList);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject GetList(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetList = (JCObject)classType.Invoke("GetList", dataSource == null ? null : dataSource.getJCOInstance(), dataMember);
+            return new NetObject(objGetList);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetListName(NetObject list, PropertyDescriptor[] listAccessors) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetListName", list == null ? null : list.getJCOInstance(), toObjectFromArray(listAccessors));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

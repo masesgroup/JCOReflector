@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.xaml.XamlObjectWriterSettings;
 import system.xaml.XamlObjectWriter;
+import system.xaml.XamlObjectWriterSettings;
 
 
 /**
@@ -91,9 +91,9 @@ public interface IXamlObjectWriterFactory extends IJCOBridgeReflected {
 
     // Methods section
     
-    public XamlObjectWriterSettings GetParentSettings() throws Throwable;
-
     public XamlObjectWriter GetXamlObjectWriter(XamlObjectWriterSettings settings) throws Throwable;
+
+    public XamlObjectWriterSettings GetParentSettings() throws Throwable;
 
 
     

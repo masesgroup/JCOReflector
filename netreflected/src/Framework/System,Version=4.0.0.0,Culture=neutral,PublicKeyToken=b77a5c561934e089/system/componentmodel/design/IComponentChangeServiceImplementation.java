@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.MemberDescriptor;
-import system.componentmodel.design.ComponentEventHandler;
 import system.componentmodel.design.ComponentChangedEventHandler;
 import system.componentmodel.design.ComponentChangingEventHandler;
+import system.componentmodel.design.ComponentEventHandler;
 import system.componentmodel.design.ComponentRenameEventHandler;
 
 
@@ -137,46 +137,6 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
     // Instance Events section
     
 
-    public void addComponentAdded(ComponentEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("ComponentAdded", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeComponentAdded(ComponentEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("ComponentAdded", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addComponentAdding(ComponentEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("ComponentAdding", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeComponentAdding(ComponentEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("ComponentAdding", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void addComponentChanged(ComponentChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -212,6 +172,46 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ComponentChanging", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addComponentAdded(ComponentEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ComponentAdded", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeComponentAdded(ComponentEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ComponentAdded", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addComponentAdding(ComponentEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ComponentAdding", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeComponentAdding(ComponentEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ComponentAdding", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

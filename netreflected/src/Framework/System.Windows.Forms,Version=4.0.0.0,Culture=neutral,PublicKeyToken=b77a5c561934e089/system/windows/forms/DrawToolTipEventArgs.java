@@ -141,6 +141,16 @@ public class DrawToolTipEventArgs extends NetObject  {
         }
     }
 
+    public void DrawBorder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DrawBorder");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void DrawText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -161,48 +171,27 @@ public class DrawToolTipEventArgs extends NetObject  {
         }
     }
 
-    public void DrawBorder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.NullReferenceException {
+
+    
+    // Properties section
+    
+    public Font getFont() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DrawBorder");
+            JCObject val = (JCObject)classInstance.Get("Font");
+            return new Font(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-
-    
-    // Properties section
-    
     public Graphics getGraphics() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Graphics");
             return new Graphics(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IWin32Window getAssociatedWindow() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedWindow");
-            return new IWin32WindowImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Control getAssociatedControl() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedControl");
-            return new Control(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,12 +218,23 @@ public class DrawToolTipEventArgs extends NetObject  {
         }
     }
 
-    public Font getFont() throws Throwable {
+    public Control getAssociatedControl() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Font");
-            return new Font(val);
+            JCObject val = (JCObject)classInstance.Get("AssociatedControl");
+            return new Control(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IWin32Window getAssociatedWindow() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AssociatedWindow");
+            return new IWin32WindowImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

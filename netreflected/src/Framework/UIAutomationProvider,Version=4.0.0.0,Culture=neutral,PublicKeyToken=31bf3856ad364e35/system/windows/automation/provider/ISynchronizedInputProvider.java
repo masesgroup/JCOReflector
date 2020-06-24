@@ -90,9 +90,9 @@ public interface ISynchronizedInputProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void StartListening(SynchronizedInputType inputType) throws Throwable;
-
     public void Cancel() throws Throwable;
+
+    public void StartListening(SynchronizedInputType inputType) throws Throwable;
 
 
     

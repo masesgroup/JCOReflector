@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.activities.NativeActivityContext;
 import system.Guid;
-import system.activities.BookmarkScope;
 import system.activities.ActivityInstance;
+import system.activities.BookmarkScope;
 import system.activities.BookmarkScopeHandle;
 
 
@@ -128,16 +128,6 @@ public class BookmarkScopeHandle extends NetObject  {
     
     // Methods section
     
-    public void Initialize(NativeActivityContext context, Guid scope) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", context == null ? null : context.getJCOInstance(), scope == null ? null : scope.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void CreateBookmarkScope(NativeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -158,21 +148,20 @@ public class BookmarkScopeHandle extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public BookmarkScope getBookmarkScope() throws Throwable {
+    public void Initialize(NativeActivityContext context, Guid scope) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BookmarkScope");
-            return new BookmarkScope(val);
+            classInstance.Invoke("Initialize", context == null ? null : context.getJCOInstance(), scope == null ? null : scope.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public ActivityInstance getOwner() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -184,11 +173,12 @@ public class BookmarkScopeHandle extends NetObject  {
         }
     }
 
-    public java.lang.String getExecutionPropertyName() throws Throwable {
+    public BookmarkScope getBookmarkScope() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ExecutionPropertyName");
+            JCObject val = (JCObject)classInstance.Get("BookmarkScope");
+            return new BookmarkScope(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,6 +190,16 @@ public class BookmarkScopeHandle extends NetObject  {
         try {
             JCObject val = (JCObject)classType.Get("Default");
             return new BookmarkScopeHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getExecutionPropertyName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ExecutionPropertyName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

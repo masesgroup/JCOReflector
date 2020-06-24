@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xaml.XamlObjectWriterSettings;
 import system.xaml.XamlObjectWriter;
+import system.xaml.XamlObjectWriterSettings;
 
 
 /**
@@ -105,23 +105,23 @@ public class IXamlObjectWriterFactoryImplementation extends NetObject implements
 
     // Methods section
     
-    public XamlObjectWriterSettings GetParentSettings() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetParentSettings = (JCObject)classInstance.Invoke("GetParentSettings");
-            return new XamlObjectWriterSettings(objGetParentSettings);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XamlObjectWriter GetXamlObjectWriter(XamlObjectWriterSettings settings) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetXamlObjectWriter = (JCObject)classInstance.Invoke("GetXamlObjectWriter", settings == null ? null : settings.getJCOInstance());
             return new XamlObjectWriter(objGetXamlObjectWriter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XamlObjectWriterSettings GetParentSettings() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetParentSettings = (JCObject)classInstance.Invoke("GetParentSettings");
+            return new XamlObjectWriterSettings(objGetParentSettings);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

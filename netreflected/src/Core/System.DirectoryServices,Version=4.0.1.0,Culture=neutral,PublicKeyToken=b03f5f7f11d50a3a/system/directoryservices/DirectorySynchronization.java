@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.directoryservices.DirectorySynchronizationOptions;
 import system.directoryservices.DirectorySynchronization;
+import system.directoryservices.DirectorySynchronizationOptions;
 
 
 /**
@@ -121,11 +121,11 @@ public class DirectorySynchronization extends NetObject  {
         }
     }
 
-    public DirectorySynchronization(DirectorySynchronizationOptions option) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
+    public DirectorySynchronization(byte[] cookie) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(option == null ? null : option.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject((Object)cookie));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -141,11 +141,11 @@ public class DirectorySynchronization extends NetObject  {
         }
     }
 
-    public DirectorySynchronization(byte[] cookie) throws Throwable {
+    public DirectorySynchronization(DirectorySynchronizationOptions option) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)cookie));
+            setJCOInstance((JCObject)classType.NewObject(option == null ? null : option.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,16 +165,6 @@ public class DirectorySynchronization extends NetObject  {
     
     // Methods section
     
-    public void ResetDirectorySynchronizationCookie(byte[] cookie) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ResetDirectorySynchronizationCookie", (Object)cookie);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] GetDirectorySynchronizationCookie() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -194,6 +184,17 @@ public class DirectorySynchronization extends NetObject  {
         }
     }
 
+    public DirectorySynchronization Copy() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            return new DirectorySynchronization(objCopy);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ResetDirectorySynchronizationCookie() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -204,12 +205,11 @@ public class DirectorySynchronization extends NetObject  {
         }
     }
 
-    public DirectorySynchronization Copy() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public void ResetDirectorySynchronizationCookie(byte[] cookie) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
-            return new DirectorySynchronization(objCopy);
+            classInstance.Invoke("ResetDirectorySynchronizationCookie", (Object)cookie);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

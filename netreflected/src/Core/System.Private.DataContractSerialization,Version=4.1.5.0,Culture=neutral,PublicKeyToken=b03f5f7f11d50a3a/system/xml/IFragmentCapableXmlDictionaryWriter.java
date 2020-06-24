@@ -90,9 +90,9 @@ public interface IFragmentCapableXmlDictionaryWriter extends IJCOBridgeReflected
 
     // Methods section
     
-    public void StartFragment(Stream stream, boolean generateSelfContainedTextFragment) throws Throwable;
-
     public void EndFragment() throws Throwable;
+
+    public void StartFragment(Stream stream, boolean generateSelfContainedTextFragment) throws Throwable;
 
     public void WriteFragment(byte[] buffer, int offset, int count) throws Throwable;
 

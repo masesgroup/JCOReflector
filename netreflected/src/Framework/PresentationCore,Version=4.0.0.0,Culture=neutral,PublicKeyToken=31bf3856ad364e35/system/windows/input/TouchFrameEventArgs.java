@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.input.TouchPointCollection;
+import system.windows.input.TouchPoint;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
-import system.windows.input.TouchPoint;
+import system.windows.input.TouchPointCollection;
 
 
 /**
@@ -116,23 +116,23 @@ public class TouchFrameEventArgs extends NetObject  {
     
     // Methods section
     
-    public TouchPointCollection GetTouchPoints(IInputElement relativeTo) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetTouchPoints = (JCObject)classInstance.Invoke("GetTouchPoints", relativeTo == null ? null : relativeTo.getJCOInstance());
-            return new TouchPointCollection(objGetTouchPoints);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TouchPoint GetPrimaryTouchPoint(IInputElement relativeTo) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetPrimaryTouchPoint = (JCObject)classInstance.Invoke("GetPrimaryTouchPoint", relativeTo == null ? null : relativeTo.getJCOInstance());
             return new TouchPoint(objGetPrimaryTouchPoint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TouchPointCollection GetTouchPoints(IInputElement relativeTo) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetTouchPoints = (JCObject)classInstance.Invoke("GetTouchPoints", relativeTo == null ? null : relativeTo.getJCOInstance());
+            return new TouchPointCollection(objGetTouchPoints);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

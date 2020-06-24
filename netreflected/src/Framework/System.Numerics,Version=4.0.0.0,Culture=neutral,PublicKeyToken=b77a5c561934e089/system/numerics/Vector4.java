@@ -41,11 +41,11 @@ import java.util.ArrayList;
 import system.Single;
 import system.numerics.Vector2;
 import system.numerics.Vector3;
-import system.IFormatProvider;
-import system.IFormatProviderImplementation;
 import system.numerics.Vector4;
 import system.numerics.Matrix4x4;
 import system.numerics.Quaternion;
+import system.IFormatProvider;
+import system.IFormatProviderImplementation;
 
 
 /**
@@ -161,43 +161,11 @@ public class Vector4 extends NetObject  {
     
     // Methods section
     
-    public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public boolean Equals(Vector4 other) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ToString", format, formatProvider == null ? null : formatProvider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Single Length() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objLength = (JCObject)classInstance.Invoke("Length");
-            return new Single(objLength);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Single LengthSquared() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objLengthSquared = (JCObject)classInstance.Invoke("LengthSquared");
-            return new Single(objLengthSquared);
+            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,100 +193,45 @@ public class Vector4 extends NetObject  {
         }
     }
 
-    public static Vector4 Normalize(Vector4 vector) throws Throwable {
+    public static Single Dot(Vector4 vector1, Vector4 vector2) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNormalize = (JCObject)classType.Invoke("Normalize", vector == null ? null : vector.getJCOInstance());
-            return new Vector4(objNormalize);
+            JCObject objDot = (JCObject)classType.Invoke("Dot", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            return new Single(objDot);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Vector4 Clamp(Vector4 value1, Vector4 min, Vector4 max) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Single Length() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objClamp = (JCObject)classType.Invoke("Clamp", value1 == null ? null : value1.getJCOInstance(), min == null ? null : min.getJCOInstance(), max == null ? null : max.getJCOInstance());
-            return new Vector4(objClamp);
+            JCObject objLength = (JCObject)classInstance.Invoke("Length");
+            return new Single(objLength);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Vector4 Lerp(Vector4 value1, Vector4 value2, Single amount) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Single LengthSquared() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLerp = (JCObject)classType.Invoke("Lerp", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance(), amount == null ? null : amount.getJCOInstance());
-            return new Vector4(objLerp);
+            JCObject objLengthSquared = (JCObject)classInstance.Invoke("LengthSquared");
+            return new Single(objLengthSquared);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Vector4 Transform(Vector2 position, Matrix4x4 matrix) throws Throwable {
+    public static Vector4 Abs(Vector4 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objTransform = (JCObject)classType.Invoke("Transform", position == null ? null : position.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
-            return new Vector4(objTransform);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Vector4 Transform(Vector3 position, Matrix4x4 matrix) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objTransform = (JCObject)classType.Invoke("Transform", position == null ? null : position.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
-            return new Vector4(objTransform);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Vector4 Transform(Vector4 vector, Matrix4x4 matrix) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objTransform = (JCObject)classType.Invoke("Transform", vector == null ? null : vector.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
-            return new Vector4(objTransform);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Vector4 Transform(Vector2 value, Quaternion rotation) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objTransform = (JCObject)classType.Invoke("Transform", value == null ? null : value.getJCOInstance(), rotation == null ? null : rotation.getJCOInstance());
-            return new Vector4(objTransform);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Vector4 Transform(Vector3 value, Quaternion rotation) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objTransform = (JCObject)classType.Invoke("Transform", value == null ? null : value.getJCOInstance(), rotation == null ? null : rotation.getJCOInstance());
-            return new Vector4(objTransform);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Vector4 Transform(Vector4 value, Quaternion rotation) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objTransform = (JCObject)classType.Invoke("Transform", value == null ? null : value.getJCOInstance(), rotation == null ? null : rotation.getJCOInstance());
-            return new Vector4(objTransform);
+            JCObject objAbs = (JCObject)classType.Invoke("Abs", value == null ? null : value.getJCOInstance());
+            return new Vector4(objAbs);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,18 +248,73 @@ public class Vector4 extends NetObject  {
         }
     }
 
-    public static Vector4 Subtract(Vector4 left, Vector4 right) throws Throwable {
+    public static Vector4 Clamp(Vector4 value1, Vector4 min, Vector4 max) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
-            return new Vector4(objSubtract);
+            JCObject objClamp = (JCObject)classType.Invoke("Clamp", value1 == null ? null : value1.getJCOInstance(), min == null ? null : min.getJCOInstance(), max == null ? null : max.getJCOInstance());
+            return new Vector4(objClamp);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Vector4 Multiply(Vector4 left, Vector4 right) throws Throwable {
+    public static Vector4 Divide(Vector4 left, Single divisor) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDivide = (JCObject)classType.Invoke("Divide", left == null ? null : left.getJCOInstance(), divisor == null ? null : divisor.getJCOInstance());
+            return new Vector4(objDivide);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector4 Divide(Vector4 left, Vector4 right) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDivide = (JCObject)classType.Invoke("Divide", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return new Vector4(objDivide);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector4 Lerp(Vector4 value1, Vector4 value2, Single amount) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLerp = (JCObject)classType.Invoke("Lerp", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance(), amount == null ? null : amount.getJCOInstance());
+            return new Vector4(objLerp);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector4 Max(Vector4 value1, Vector4 value2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMax = (JCObject)classType.Invoke("Max", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            return new Vector4(objMax);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector4 Min(Vector4 value1, Vector4 value2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMin = (JCObject)classType.Invoke("Min", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            return new Vector4(objMin);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector4 Multiply(Single left, Vector4 right) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -368,34 +336,12 @@ public class Vector4 extends NetObject  {
         }
     }
 
-    public static Vector4 Multiply(Single left, Vector4 right) throws Throwable {
+    public static Vector4 Multiply(Vector4 left, Vector4 right) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objMultiply = (JCObject)classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new Vector4(objMultiply);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Vector4 Divide(Vector4 left, Vector4 right) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDivide = (JCObject)classType.Invoke("Divide", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
-            return new Vector4(objDivide);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Vector4 Divide(Vector4 left, Single divisor) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDivide = (JCObject)classType.Invoke("Divide", left == null ? null : left.getJCOInstance(), divisor == null ? null : divisor.getJCOInstance());
-            return new Vector4(objDivide);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,55 +358,12 @@ public class Vector4 extends NetObject  {
         }
     }
 
-    public boolean Equals(Vector4 other) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single Dot(Vector4 vector1, Vector4 vector2) throws Throwable {
+    public static Vector4 Normalize(Vector4 vector) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objDot = (JCObject)classType.Invoke("Dot", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
-            return new Single(objDot);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Vector4 Min(Vector4 value1, Vector4 value2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMin = (JCObject)classType.Invoke("Min", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
-            return new Vector4(objMin);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Vector4 Max(Vector4 value1, Vector4 value2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMax = (JCObject)classType.Invoke("Max", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
-            return new Vector4(objMax);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Vector4 Abs(Vector4 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAbs = (JCObject)classType.Invoke("Abs", value == null ? null : value.getJCOInstance());
-            return new Vector4(objAbs);
+            JCObject objNormalize = (JCObject)classType.Invoke("Normalize", vector == null ? null : vector.getJCOInstance());
+            return new Vector4(objNormalize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,6 +375,103 @@ public class Vector4 extends NetObject  {
         try {
             JCObject objSquareRoot = (JCObject)classType.Invoke("SquareRoot", value == null ? null : value.getJCOInstance());
             return new Vector4(objSquareRoot);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector4 Subtract(Vector4 left, Vector4 right) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return new Vector4(objSubtract);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector4 Transform(Vector2 position, Matrix4x4 matrix) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objTransform = (JCObject)classType.Invoke("Transform", position == null ? null : position.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            return new Vector4(objTransform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector4 Transform(Vector2 value, Quaternion rotation) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objTransform = (JCObject)classType.Invoke("Transform", value == null ? null : value.getJCOInstance(), rotation == null ? null : rotation.getJCOInstance());
+            return new Vector4(objTransform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector4 Transform(Vector3 position, Matrix4x4 matrix) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objTransform = (JCObject)classType.Invoke("Transform", position == null ? null : position.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            return new Vector4(objTransform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector4 Transform(Vector3 value, Quaternion rotation) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objTransform = (JCObject)classType.Invoke("Transform", value == null ? null : value.getJCOInstance(), rotation == null ? null : rotation.getJCOInstance());
+            return new Vector4(objTransform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector4 Transform(Vector4 vector, Matrix4x4 matrix) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objTransform = (JCObject)classType.Invoke("Transform", vector == null ? null : vector.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            return new Vector4(objTransform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector4 Transform(Vector4 value, Quaternion rotation) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objTransform = (JCObject)classType.Invoke("Transform", value == null ? null : value.getJCOInstance(), rotation == null ? null : rotation.getJCOInstance());
+            return new Vector4(objTransform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ToString", format);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ToString", format, formatProvider == null ? null : formatProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,22 +501,22 @@ public class Vector4 extends NetObject  {
     
     // Properties section
     
-    public static Vector4 getZero() throws Throwable {
+    public static Vector4 getOne() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Zero");
+            JCObject val = (JCObject)classType.Get("One");
             return new Vector4(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Vector4 getOne() throws Throwable {
+    public static Vector4 getUnitW() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("One");
+            JCObject val = (JCObject)classType.Get("UnitW");
             return new Vector4(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -556,11 +556,11 @@ public class Vector4 extends NetObject  {
         }
     }
 
-    public static Vector4 getUnitW() throws Throwable {
+    public static Vector4 getZero() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UnitW");
+            JCObject val = (JCObject)classType.Get("Zero");
             return new Vector4(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

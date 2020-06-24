@@ -106,21 +106,32 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
 
     // Methods section
     
-    public void AddContext(SecurityContextSecurityToken token) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddContext", token == null ? null : token.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean TryAddContext(SecurityContextSecurityToken token) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("TryAddContext", token == null ? null : token.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityContextSecurityToken GetContext(UniqueId contextId, UniqueId generation) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetContext = (JCObject)classInstance.Invoke("GetContext", contextId == null ? null : contextId.getJCOInstance(), generation == null ? null : generation.getJCOInstance());
+            return new SecurityContextSecurityToken(objGetContext);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddContext(SecurityContextSecurityToken token) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddContext", token == null ? null : token.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -136,16 +147,6 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
         }
     }
 
-    public void RemoveContext(UniqueId contextId, UniqueId generation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveContext", contextId == null ? null : contextId.getJCOInstance(), generation == null ? null : generation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void RemoveAllContexts(UniqueId contextId) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -156,12 +157,11 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
         }
     }
 
-    public SecurityContextSecurityToken GetContext(UniqueId contextId, UniqueId generation) throws Throwable {
+    public void RemoveContext(UniqueId contextId, UniqueId generation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetContext = (JCObject)classInstance.Invoke("GetContext", contextId == null ? null : contextId.getJCOInstance(), generation == null ? null : generation.getJCOInstance());
-            return new SecurityContextSecurityToken(objGetContext);
+            classInstance.Invoke("RemoveContext", contextId == null ? null : contextId.getJCOInstance(), generation == null ? null : generation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

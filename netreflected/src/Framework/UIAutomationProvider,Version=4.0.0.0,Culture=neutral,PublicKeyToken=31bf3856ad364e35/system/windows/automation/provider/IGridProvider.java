@@ -97,9 +97,9 @@ public interface IGridProvider extends IJCOBridgeReflected {
     
     // Properties section
     
-    public int getRowCount() throws Throwable;
-
     public int getColumnCount() throws Throwable;
+
+    public int getRowCount() throws Throwable;
 
 
 

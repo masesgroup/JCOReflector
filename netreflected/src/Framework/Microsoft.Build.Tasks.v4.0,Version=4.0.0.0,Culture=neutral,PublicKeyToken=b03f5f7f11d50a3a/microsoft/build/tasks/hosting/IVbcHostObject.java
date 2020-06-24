@@ -91,11 +91,11 @@ public interface IVbcHostObject extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void BeginInitialization() throws Throwable;
-
-    public void EndInitialization() throws Throwable;
+    public boolean Compile() throws Throwable;
 
     public boolean IsDesignTime() throws Throwable;
+
+    public boolean IsUpToDate() throws Throwable;
 
     public boolean SetAdditionalLibPaths(java.lang.String[] additionalLibPaths) throws Throwable;
 
@@ -114,6 +114,8 @@ public interface IVbcHostObject extends IJCOBridgeReflected {
     public boolean SetDisabledWarnings(java.lang.String disabledWarnings) throws Throwable;
 
     public boolean SetDocumentationFile(java.lang.String documentationFile) throws Throwable;
+
+    public boolean SetErrorReport(java.lang.String errorReport) throws Throwable;
 
     public boolean SetFileAlignment(int fileAlignment) throws Throwable;
 
@@ -147,6 +149,8 @@ public interface IVbcHostObject extends IJCOBridgeReflected {
 
     public boolean SetOutputAssembly(java.lang.String outputAssembly) throws Throwable;
 
+    public boolean SetPlatform(java.lang.String platform) throws Throwable;
+
     public boolean SetReferences(ITaskItem[] references) throws Throwable;
 
     public boolean SetRemoveIntegerChecks(boolean removeIntegerChecks) throws Throwable;
@@ -175,13 +179,9 @@ public interface IVbcHostObject extends IJCOBridgeReflected {
 
     public boolean SetWin32Resource(java.lang.String win32Resource) throws Throwable;
 
-    public boolean IsUpToDate() throws Throwable;
+    public void BeginInitialization() throws Throwable;
 
-    public boolean Compile() throws Throwable;
-
-    public boolean SetErrorReport(java.lang.String errorReport) throws Throwable;
-
-    public boolean SetPlatform(java.lang.String platform) throws Throwable;
+    public void EndInitialization() throws Throwable;
 
 
     

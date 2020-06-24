@@ -137,31 +137,11 @@ public class CharacterMetrics extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getMetrics() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
+    public double getBaseline() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Metrics");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMetrics(java.lang.String Metrics) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Metrics", Metrics);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getBlackBoxWidth() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("BlackBoxWidth");
+            return (double)classInstance.Get("Baseline");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,11 +157,21 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
-    public double getBaseline() throws Throwable {
+    public double getBlackBoxWidth() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("Baseline");
+            return (double)classInstance.Get("BlackBoxWidth");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getBottomSideBearing() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("BottomSideBearing");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,11 +207,21 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
-    public double getBottomSideBearing() throws Throwable {
+    public java.lang.String getMetrics() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("BottomSideBearing");
+            return (java.lang.String)classInstance.Get("Metrics");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMetrics(java.lang.String Metrics) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Metrics", Metrics);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

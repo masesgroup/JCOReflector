@@ -113,11 +113,11 @@ public class AsyncFlowControl extends NetObject  {
     
     // Methods section
     
-    public void Undo() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public boolean Equals(AsyncFlowControl obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Undo");
+            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -133,11 +133,11 @@ public class AsyncFlowControl extends NetObject  {
         }
     }
 
-    public boolean Equals(AsyncFlowControl obj) throws Throwable {
+    public void Undo() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            classInstance.Invoke("Undo");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

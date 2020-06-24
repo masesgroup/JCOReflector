@@ -89,9 +89,9 @@ public interface UCOMIEnumString extends IJCOBridgeReflected {
 
     // Methods section
     
-    public int Skip(int celt) throws Throwable;
-
     public int Reset() throws Throwable;
+
+    public int Skip(int celt) throws Throwable;
 
 
     

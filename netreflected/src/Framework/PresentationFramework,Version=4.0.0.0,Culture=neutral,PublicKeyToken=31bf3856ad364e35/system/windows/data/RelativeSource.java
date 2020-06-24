@@ -147,21 +147,21 @@ public class RelativeSource extends NetObject  {
     
     // Methods section
     
-    public boolean ShouldSerializeAncestorType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ShouldSerializeAncestorType");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean ShouldSerializeAncestorLevel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("ShouldSerializeAncestorLevel");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean ShouldSerializeAncestorType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ShouldSerializeAncestorType");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,22 +182,21 @@ public class RelativeSource extends NetObject  {
     
     // Properties section
     
-    public RelativeSourceMode getMode() throws Throwable {
+    public int getAncestorLevel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
-            return new RelativeSourceMode(val);
+            return (int)classInstance.Get("AncestorLevel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMode(RelativeSourceMode Mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void setAncestorLevel(int AncestorLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
+            classInstance.Set("AncestorLevel", AncestorLevel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,31 +223,22 @@ public class RelativeSource extends NetObject  {
         }
     }
 
-    public int getAncestorLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("AncestorLevel");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAncestorLevel(int AncestorLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AncestorLevel", AncestorLevel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static RelativeSource getPreviousData() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject val = (JCObject)classType.Get("PreviousData");
+            return new RelativeSource(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static RelativeSource getSelf() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Self");
             return new RelativeSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -266,12 +256,22 @@ public class RelativeSource extends NetObject  {
         }
     }
 
-    public static RelativeSource getSelf() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RelativeSourceMode getMode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Self");
-            return new RelativeSource(val);
+            JCObject val = (JCObject)classInstance.Get("Mode");
+            return new RelativeSourceMode(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMode(RelativeSourceMode Mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

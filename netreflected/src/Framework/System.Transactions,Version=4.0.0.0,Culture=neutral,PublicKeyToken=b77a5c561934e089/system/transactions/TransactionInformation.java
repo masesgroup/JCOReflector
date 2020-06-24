@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Guid;
 import system.DateTime;
+import system.Guid;
 import system.transactions.TransactionStatus;
 
 
@@ -119,11 +119,12 @@ public class TransactionInformation extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getLocalIdentifier() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException {
+    public DateTime getCreationTime() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("LocalIdentifier");
+            JCObject val = (JCObject)classInstance.Get("CreationTime");
+            return new DateTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -140,12 +141,11 @@ public class TransactionInformation extends NetObject  {
         }
     }
 
-    public DateTime getCreationTime() throws Throwable, system.ArgumentOutOfRangeException {
+    public java.lang.String getLocalIdentifier() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CreationTime");
-            return new DateTime(val);
+            return (java.lang.String)classInstance.Get("LocalIdentifier");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

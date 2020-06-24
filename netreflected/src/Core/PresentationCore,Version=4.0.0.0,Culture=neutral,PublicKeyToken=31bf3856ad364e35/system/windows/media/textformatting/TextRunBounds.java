@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.Rect;
 import system.windows.media.textformatting.TextRun;
+import system.windows.Rect;
 
 
 /**
@@ -118,16 +118,6 @@ public class TextRunBounds extends NetObject  {
     
     // Properties section
     
-    public int getTextSourceCharacterIndex() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("TextSourceCharacterIndex");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getLength() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -138,12 +128,11 @@ public class TextRunBounds extends NetObject  {
         }
     }
 
-    public Rect getRectangle() throws Throwable {
+    public int getTextSourceCharacterIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Rectangle");
-            return new Rect(val);
+            return (int)classInstance.Get("TextSourceCharacterIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,6 +144,17 @@ public class TextRunBounds extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("TextRun");
             return new TextRun(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Rect getRectangle() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Rectangle");
+            return new Rect(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

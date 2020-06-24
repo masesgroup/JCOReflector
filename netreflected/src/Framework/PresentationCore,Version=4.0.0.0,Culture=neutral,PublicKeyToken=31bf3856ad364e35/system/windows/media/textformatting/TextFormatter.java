@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.media.textformatting.MinMaxParagraphWidth;
+import system.windows.media.textformatting.TextSource;
+import system.windows.media.textformatting.TextParagraphProperties;
+import system.windows.media.textformatting.TextRunCache;
 import system.windows.media.textformatting.TextFormatter;
 import system.windows.media.TextFormattingMode;
 import system.windows.media.textformatting.TextLine;
-import system.windows.media.textformatting.TextSource;
-import system.windows.media.textformatting.TextParagraphProperties;
 import system.windows.media.textformatting.TextLineBreak;
-import system.windows.media.textformatting.TextRunCache;
-import system.windows.media.textformatting.MinMaxParagraphWidth;
 
 
 /**
@@ -120,12 +120,23 @@ public class TextFormatter extends NetObject  {
     
     // Methods section
     
-    public static TextFormatter Create(TextFormattingMode textFormattingMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public MinMaxParagraphWidth FormatMinMaxParagraphWidth(TextSource textSource, int firstCharIndex, TextParagraphProperties paragraphProperties) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", textFormattingMode == null ? null : textFormattingMode.getJCOInstance());
-            return new TextFormatter(objCreate);
+            JCObject objFormatMinMaxParagraphWidth = (JCObject)classInstance.Invoke("FormatMinMaxParagraphWidth", textSource == null ? null : textSource.getJCOInstance(), firstCharIndex, paragraphProperties == null ? null : paragraphProperties.getJCOInstance());
+            return new MinMaxParagraphWidth(objFormatMinMaxParagraphWidth);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MinMaxParagraphWidth FormatMinMaxParagraphWidth(TextSource textSource, int firstCharIndex, TextParagraphProperties paragraphProperties, TextRunCache textRunCache) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objFormatMinMaxParagraphWidth = (JCObject)classInstance.Invoke("FormatMinMaxParagraphWidth", textSource == null ? null : textSource.getJCOInstance(), firstCharIndex, paragraphProperties == null ? null : paragraphProperties.getJCOInstance(), textRunCache == null ? null : textRunCache.getJCOInstance());
+            return new MinMaxParagraphWidth(objFormatMinMaxParagraphWidth);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -142,11 +153,12 @@ public class TextFormatter extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TextFormatter Create(TextFormattingMode textFormattingMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("Dispose");
+            JCObject objCreate = (JCObject)classType.Invoke("Create", textFormattingMode == null ? null : textFormattingMode.getJCOInstance());
+            return new TextFormatter(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,23 +186,11 @@ public class TextFormatter extends NetObject  {
         }
     }
 
-    public MinMaxParagraphWidth FormatMinMaxParagraphWidth(TextSource textSource, int firstCharIndex, TextParagraphProperties paragraphProperties) throws Throwable {
+    public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFormatMinMaxParagraphWidth = (JCObject)classInstance.Invoke("FormatMinMaxParagraphWidth", textSource == null ? null : textSource.getJCOInstance(), firstCharIndex, paragraphProperties == null ? null : paragraphProperties.getJCOInstance());
-            return new MinMaxParagraphWidth(objFormatMinMaxParagraphWidth);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MinMaxParagraphWidth FormatMinMaxParagraphWidth(TextSource textSource, int firstCharIndex, TextParagraphProperties paragraphProperties, TextRunCache textRunCache) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objFormatMinMaxParagraphWidth = (JCObject)classInstance.Invoke("FormatMinMaxParagraphWidth", textSource == null ? null : textSource.getJCOInstance(), firstCharIndex, paragraphProperties == null ? null : paragraphProperties.getJCOInstance(), textRunCache == null ? null : textRunCache.getJCOInstance());
-            return new MinMaxParagraphWidth(objFormatMinMaxParagraphWidth);
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -118,22 +118,22 @@ public class DbUpdateCommandTree extends NetObject  {
     
     // Properties section
     
-    public DbExpression getReturning() throws Throwable {
+    public DbExpression getPredicate() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Returning");
+            JCObject val = (JCObject)classInstance.Get("Predicate");
             return new DbExpression(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DbExpression getPredicate() throws Throwable {
+    public DbExpression getReturning() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Predicate");
+            JCObject val = (JCObject)classInstance.Get("Returning");
             return new DbExpression(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

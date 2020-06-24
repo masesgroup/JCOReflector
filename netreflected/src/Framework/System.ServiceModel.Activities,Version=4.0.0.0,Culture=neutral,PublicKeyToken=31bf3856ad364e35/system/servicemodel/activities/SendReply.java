@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.activities.SendReply;
 import system.servicemodel.description.OperationDescription;
-import system.servicemodel.activities.SendContent;
 import system.servicemodel.activities.Receive;
+import system.servicemodel.activities.SendContent;
 
 
 /**
@@ -141,22 +141,21 @@ public class SendReply extends NetObject  {
     
     // Properties section
     
-    public SendContent getContent() throws Throwable {
+    public boolean getPersistBeforeSend() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Content");
-            return new SendContent(val);
+            return (boolean)classInstance.Get("PersistBeforeSend");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setContent(SendContent Content) throws Throwable {
+    public void setPersistBeforeSend(boolean PersistBeforeSend) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Content", Content == null ? null : Content.getJCOInstance());
+            classInstance.Set("PersistBeforeSend", PersistBeforeSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,6 +182,27 @@ public class SendReply extends NetObject  {
         }
     }
 
+    public SendContent getContent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Content");
+            return new SendContent(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setContent(SendContent Content) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Content", Content == null ? null : Content.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -198,26 +218,6 @@ public class SendReply extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Action", Action);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getPersistBeforeSend() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("PersistBeforeSend");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPersistBeforeSend(boolean PersistBeforeSend) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PersistBeforeSend", PersistBeforeSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

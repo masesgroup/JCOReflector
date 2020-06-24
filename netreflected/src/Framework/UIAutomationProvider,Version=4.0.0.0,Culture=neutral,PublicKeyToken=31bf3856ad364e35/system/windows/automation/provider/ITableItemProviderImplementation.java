@@ -105,23 +105,6 @@ public class ITableItemProviderImplementation extends NetObject implements ITabl
 
     // Methods section
     
-    public IRawElementProviderSimple[] GetRowHeaderItems() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<IRawElementProviderSimple> resultingArrayList = new ArrayList<IRawElementProviderSimple>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRowHeaderItems");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new IRawElementProviderSimpleImplementation(resultingObject));
-            }
-            IRawElementProviderSimple[] resultingArray = new IRawElementProviderSimple[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IRawElementProviderSimple[] GetColumnHeaderItems() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -139,20 +122,27 @@ public class ITableItemProviderImplementation extends NetObject implements ITabl
         }
     }
 
-
-    
-    // Properties section
-    
-    public int getRow() throws Throwable {
+    public IRawElementProviderSimple[] GetRowHeaderItems() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Row");
+            ArrayList<IRawElementProviderSimple> resultingArrayList = new ArrayList<IRawElementProviderSimple>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRowHeaderItems");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new IRawElementProviderSimpleImplementation(resultingObject));
+            }
+            IRawElementProviderSimple[] resultingArray = new IRawElementProviderSimple[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public int getColumn() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -163,21 +153,31 @@ public class ITableItemProviderImplementation extends NetObject implements ITabl
         }
     }
 
-    public int getRowSpan() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("RowSpan");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getColumnSpan() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("ColumnSpan");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getRow() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Row");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getRowSpan() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("RowSpan");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

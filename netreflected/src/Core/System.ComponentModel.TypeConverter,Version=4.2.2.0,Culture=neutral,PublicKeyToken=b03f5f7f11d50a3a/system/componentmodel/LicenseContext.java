@@ -125,22 +125,22 @@ public class LicenseContext extends NetObject  {
     
     // Methods section
     
-    public java.lang.String GetSavedLicenseKey(NetType type, Assembly resourceAssembly) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetSavedLicenseKey", type == null ? null : type.getJCOInstance(), resourceAssembly == null ? null : resourceAssembly.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetService(NetType type) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetService = (JCObject)classInstance.Invoke("GetService", type == null ? null : type.getJCOInstance());
             return new NetObject(objGetService);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetSavedLicenseKey(NetType type, Assembly resourceAssembly) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetSavedLicenseKey", type == null ? null : type.getJCOInstance(), resourceAssembly == null ? null : resourceAssembly.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

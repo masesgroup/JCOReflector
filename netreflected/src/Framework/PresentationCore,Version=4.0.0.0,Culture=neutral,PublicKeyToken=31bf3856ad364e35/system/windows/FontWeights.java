@@ -117,11 +117,55 @@ public class FontWeights extends NetObject  {
     
     // Properties section
     
-    public static FontWeight getThin() throws Throwable {
+    public static FontWeight getBlack() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Thin");
+            JCObject val = (JCObject)classType.Get("Black");
+            return new FontWeight(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static FontWeight getBold() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Bold");
+            return new FontWeight(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static FontWeight getDemiBold() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("DemiBold");
+            return new FontWeight(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static FontWeight getExtraBlack() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("ExtraBlack");
+            return new FontWeight(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static FontWeight getExtraBold() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("ExtraBold");
             return new FontWeight(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -139,11 +183,11 @@ public class FontWeights extends NetObject  {
         }
     }
 
-    public static FontWeight getUltraLight() throws Throwable {
+    public static FontWeight getHeavy() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UltraLight");
+            JCObject val = (JCObject)classType.Get("Heavy");
             return new FontWeight(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -155,6 +199,17 @@ public class FontWeights extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject val = (JCObject)classType.Get("Light");
+            return new FontWeight(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static FontWeight getMedium() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Medium");
             return new FontWeight(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -183,28 +238,6 @@ public class FontWeights extends NetObject  {
         }
     }
 
-    public static FontWeight getMedium() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Medium");
-            return new FontWeight(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static FontWeight getDemiBold() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("DemiBold");
-            return new FontWeight(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static FontWeight getSemiBold() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -216,22 +249,22 @@ public class FontWeights extends NetObject  {
         }
     }
 
-    public static FontWeight getBold() throws Throwable {
+    public static FontWeight getThin() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Bold");
+            JCObject val = (JCObject)classType.Get("Thin");
             return new FontWeight(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontWeight getExtraBold() throws Throwable {
+    public static FontWeight getUltraBlack() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ExtraBold");
+            JCObject val = (JCObject)classType.Get("UltraBlack");
             return new FontWeight(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,44 +282,11 @@ public class FontWeights extends NetObject  {
         }
     }
 
-    public static FontWeight getBlack() throws Throwable {
+    public static FontWeight getUltraLight() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Black");
-            return new FontWeight(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static FontWeight getHeavy() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Heavy");
-            return new FontWeight(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static FontWeight getExtraBlack() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("ExtraBlack");
-            return new FontWeight(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static FontWeight getUltraBlack() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("UltraBlack");
+            JCObject val = (JCObject)classType.Get("UltraLight");
             return new FontWeight(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

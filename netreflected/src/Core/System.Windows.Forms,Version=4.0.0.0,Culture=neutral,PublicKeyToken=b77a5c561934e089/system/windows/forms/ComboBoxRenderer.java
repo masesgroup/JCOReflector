@@ -117,21 +117,21 @@ public class ComboBoxRenderer extends NetObject  {
     
     // Methods section
     
-    public static void DrawTextBox(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException {
+    public static void DrawDropDownButton(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("DrawTextBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), state == null ? null : state.getJCOInstance());
+            classType.Invoke("DrawDropDownButton", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, Rectangle textBounds, TextFormatFlags flags, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("DrawTextBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), comboBoxText, font == null ? null : font.getJCOInstance(), state == null ? null : state.getJCOInstance());
+            classType.Invoke("DrawTextBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), comboBoxText, font == null ? null : font.getJCOInstance(), textBounds == null ? null : textBounds.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,21 +157,21 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, Rectangle textBounds, TextFormatFlags flags, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("DrawTextBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), comboBoxText, font == null ? null : font.getJCOInstance(), textBounds == null ? null : textBounds.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), state == null ? null : state.getJCOInstance());
+            classType.Invoke("DrawTextBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), comboBoxText, font == null ? null : font.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void DrawDropDownButton(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
+    public static void DrawTextBox(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("DrawDropDownButton", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), state == null ? null : state.getJCOInstance());
+            classType.Invoke("DrawTextBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

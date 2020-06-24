@@ -106,22 +106,22 @@ public class IWebProxyImplementation extends NetObject implements IWebProxy {
 
     // Methods section
     
+    public boolean IsBypassed(Uri host) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsBypassed", host == null ? null : host.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Uri GetProxy(Uri destination) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetProxy = (JCObject)classInstance.Invoke("GetProxy", destination == null ? null : destination.getJCOInstance());
             return new Uri(objGetProxy);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsBypassed(Uri host) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsBypassed", host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

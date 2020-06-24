@@ -93,15 +93,15 @@ public interface IValueSerializerContext extends IJCOBridgeReflected {
 
     // Methods section
     
-    public ValueSerializer GetValueSerializerFor(NetType type) throws Throwable;
+    public boolean OnComponentChanging() throws Throwable;
+
+    public NetObject GetService(NetType serviceType) throws Throwable;
 
     public ValueSerializer GetValueSerializerFor(PropertyDescriptor descriptor) throws Throwable;
 
-    public boolean OnComponentChanging() throws Throwable;
+    public ValueSerializer GetValueSerializerFor(NetType type) throws Throwable;
 
     public void OnComponentChanged() throws Throwable;
-
-    public NetObject GetService(NetType serviceType) throws Throwable;
 
 
     
@@ -109,9 +109,9 @@ public interface IValueSerializerContext extends IJCOBridgeReflected {
     
     public IContainer getContainer() throws Throwable;
 
-    public NetObject getInstance() throws Throwable;
-
     public PropertyDescriptor getPropertyDescriptor() throws Throwable;
+
+    public NetObject getInstance() throws Throwable;
 
 
 

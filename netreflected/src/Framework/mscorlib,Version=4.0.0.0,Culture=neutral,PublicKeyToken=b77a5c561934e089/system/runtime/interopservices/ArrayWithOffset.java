@@ -124,12 +124,11 @@ public class ArrayWithOffset extends NetObject  {
     
     // Methods section
     
-    public NetObject GetArray() throws Throwable {
+    public boolean Equals(ArrayWithOffset obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetArray = (JCObject)classInstance.Invoke("GetArray");
-            return new NetObject(objGetArray);
+            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,11 +144,12 @@ public class ArrayWithOffset extends NetObject  {
         }
     }
 
-    public boolean Equals(ArrayWithOffset obj) throws Throwable {
+    public NetObject GetArray() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetArray = (JCObject)classInstance.Invoke("GetArray");
+            return new NetObject(objGetArray);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

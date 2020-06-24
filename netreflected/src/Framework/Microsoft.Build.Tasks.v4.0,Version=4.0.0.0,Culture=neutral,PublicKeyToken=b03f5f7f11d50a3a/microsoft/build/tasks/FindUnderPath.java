@@ -38,9 +38,6 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import microsoft.build.framework.ITaskItem;
-import microsoft.build.framework.ITaskItemImplementation;
-import microsoft.build.utilities.TaskLoggingHelper;
 import microsoft.build.framework.IBuildEngine;
 import microsoft.build.framework.IBuildEngineImplementation;
 import microsoft.build.framework.IBuildEngine2;
@@ -51,6 +48,9 @@ import microsoft.build.framework.IBuildEngine4;
 import microsoft.build.framework.IBuildEngine4Implementation;
 import microsoft.build.framework.ITaskHost;
 import microsoft.build.framework.ITaskHostImplementation;
+import microsoft.build.framework.ITaskItem;
+import microsoft.build.framework.ITaskItemImplementation;
+import microsoft.build.utilities.TaskLoggingHelper;
 
 
 /**
@@ -150,54 +150,6 @@ public class FindUnderPath extends NetObject  {
     
     // Properties section
     
-    public ITaskItem getPath() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Path");
-            return new ITaskItemImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPath(ITaskItem Path) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Path", Path == null ? null : Path.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITaskItem[] getFiles() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Files");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
-            }
-            ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setFiles(ITaskItem[] Files) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Files", toObjectFromArray(Files));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getUpdateToAbsolutePaths() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -213,71 +165,6 @@ public class FindUnderPath extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateToAbsolutePaths", UpdateToAbsolutePaths);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITaskItem[] getInPath() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("InPath");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
-            }
-            ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInPath(ITaskItem[] InPath) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InPath", toObjectFromArray(InPath));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITaskItem[] getOutOfPath() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("OutOfPath");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
-            }
-            ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOutOfPath(ITaskItem[] OutOfPath) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("OutOfPath", toObjectFromArray(OutOfPath));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TaskLoggingHelper getLog() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Log");
-            return new TaskLoggingHelper(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,6 +240,119 @@ public class FindUnderPath extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HostObject", HostObject == null ? null : HostObject.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ITaskItem getPath() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Path");
+            return new ITaskItemImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPath(ITaskItem Path) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Path", Path == null ? null : Path.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ITaskItem[] getFiles() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("Files");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
+            }
+            ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setFiles(ITaskItem[] Files) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Files", toObjectFromArray(Files));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ITaskItem[] getInPath() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("InPath");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
+            }
+            ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInPath(ITaskItem[] InPath) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InPath", toObjectFromArray(InPath));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ITaskItem[] getOutOfPath() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("OutOfPath");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
+            }
+            ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setOutOfPath(ITaskItem[] OutOfPath) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("OutOfPath", toObjectFromArray(OutOfPath));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TaskLoggingHelper getLog() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Log");
+            return new TaskLoggingHelper(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

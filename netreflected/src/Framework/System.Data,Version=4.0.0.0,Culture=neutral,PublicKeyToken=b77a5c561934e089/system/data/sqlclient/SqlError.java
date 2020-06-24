@@ -116,21 +116,11 @@ public class SqlError extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getSource() throws Throwable {
+    public byte get_Class() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Source");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getNumber() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Number");
+            return (byte)classInstance.Get("_Class");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -146,21 +136,21 @@ public class SqlError extends NetObject  {
         }
     }
 
-    public byte get_Class() throws Throwable {
+    public int getLineNumber() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (byte)classInstance.Get("_Class");
+            return (int)classInstance.Get("LineNumber");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getServer() throws Throwable {
+    public int getNumber() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Server");
+            return (int)classInstance.Get("Number");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,11 +176,21 @@ public class SqlError extends NetObject  {
         }
     }
 
-    public int getLineNumber() throws Throwable {
+    public java.lang.String getServer() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("LineNumber");
+            return (java.lang.String)classInstance.Get("Server");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getSource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Source");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import microsoft.build.framework.BuildErrorEventArgs;
-import microsoft.build.framework.BuildWarningEventArgs;
-import microsoft.build.framework.BuildMessageEventArgs;
-import microsoft.build.framework.CustomBuildEventArgs;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import microsoft.build.framework.CustomBuildEventArgs;
+import microsoft.build.framework.BuildErrorEventArgs;
+import microsoft.build.framework.BuildMessageEventArgs;
+import microsoft.build.framework.BuildWarningEventArgs;
 
 
 /**
@@ -109,31 +109,11 @@ public class IBuildEngineImplementation extends NetObject implements IBuildEngin
 
     // Methods section
     
-    public void LogErrorEvent(BuildErrorEventArgs e) throws Throwable {
+    public boolean BuildProjectFile(java.lang.String projectFileName, java.lang.String[] targetNames, IDictionary globalProperties, IDictionary targetOutputs) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("LogErrorEvent", e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogWarningEvent(BuildWarningEventArgs e) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogWarningEvent", e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogMessageEvent(BuildMessageEventArgs e) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogMessageEvent", e == null ? null : e.getJCOInstance());
+            return (boolean)classInstance.Invoke("BuildProjectFile", projectFileName, targetNames, globalProperties == null ? null : globalProperties.getJCOInstance(), targetOutputs == null ? null : targetOutputs.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,11 +129,31 @@ public class IBuildEngineImplementation extends NetObject implements IBuildEngin
         }
     }
 
-    public boolean BuildProjectFile(java.lang.String projectFileName, java.lang.String[] targetNames, IDictionary globalProperties, IDictionary targetOutputs) throws Throwable {
+    public void LogErrorEvent(BuildErrorEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("BuildProjectFile", projectFileName, targetNames, globalProperties == null ? null : globalProperties.getJCOInstance(), targetOutputs == null ? null : targetOutputs.getJCOInstance());
+            classInstance.Invoke("LogErrorEvent", e == null ? null : e.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void LogMessageEvent(BuildMessageEventArgs e) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("LogMessageEvent", e == null ? null : e.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void LogWarningEvent(BuildWarningEventArgs e) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("LogWarningEvent", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,21 +173,21 @@ public class IBuildEngineImplementation extends NetObject implements IBuildEngin
         }
     }
 
-    public int getLineNumberOfTaskNode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("LineNumberOfTaskNode");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getColumnNumberOfTaskNode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("ColumnNumberOfTaskNode");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getLineNumberOfTaskNode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("LineNumberOfTaskNode");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

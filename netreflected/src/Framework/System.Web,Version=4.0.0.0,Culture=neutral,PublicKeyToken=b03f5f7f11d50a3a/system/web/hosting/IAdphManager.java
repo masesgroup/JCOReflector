@@ -93,9 +93,9 @@ public interface IAdphManager extends IJCOBridgeReflected {
     
     public void StartAppDomainProtocolListenerChannel(java.lang.String appId, java.lang.String protocolId, IListenerChannelCallback listenerChannelCallback) throws Throwable;
 
-    public void StopAppDomainProtocolListenerChannel(java.lang.String appId, java.lang.String protocolId, int listenerChannelId, boolean immediate) throws Throwable;
-
     public void StopAppDomainProtocol(java.lang.String appId, java.lang.String protocolId, boolean immediate) throws Throwable;
+
+    public void StopAppDomainProtocolListenerChannel(java.lang.String appId, java.lang.String protocolId, int listenerChannelId, boolean immediate) throws Throwable;
 
 
     

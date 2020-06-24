@@ -135,30 +135,21 @@ public class XmlSchemaObjectCollection extends NetObject implements Iterable<Xml
     
     // Methods section
     
-    public XmlSchemaObjectEnumerator GetEnumerator() throws Throwable {
-        return new XmlSchemaObjectEnumerator(classInstance);
+    public boolean Contains(XmlSchemaObject item) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Contains", item == null ? null : item.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
-
-	@SuppressWarnings("unchecked")
-	public java.util.Iterator<XmlSchemaObject> iterator() {
-		return new XmlSchemaObjectEnumerator(classInstance);
-	}
 
     public int Add(XmlSchemaObject item) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("Add", item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Insert(int index, XmlSchemaObject item) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Insert", index, item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,21 +165,20 @@ public class XmlSchemaObjectCollection extends NetObject implements Iterable<Xml
         }
     }
 
-    public boolean Contains(XmlSchemaObject item) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Contains", item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
+    public XmlSchemaObjectEnumerator GetEnumerator() throws Throwable {
+        return new XmlSchemaObjectEnumerator(classInstance);
     }
 
-    public void Remove(XmlSchemaObject item) throws Throwable {
+	@SuppressWarnings("unchecked")
+	public java.util.Iterator<XmlSchemaObject> iterator() {
+		return new XmlSchemaObjectEnumerator(classInstance);
+	}
+
+    public void Clear() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Remove", item == null ? null : item.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,11 +194,21 @@ public class XmlSchemaObjectCollection extends NetObject implements Iterable<Xml
         }
     }
 
-    public void Clear() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public void Insert(int index, XmlSchemaObject item) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, item == null ? null : item.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(XmlSchemaObject item) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

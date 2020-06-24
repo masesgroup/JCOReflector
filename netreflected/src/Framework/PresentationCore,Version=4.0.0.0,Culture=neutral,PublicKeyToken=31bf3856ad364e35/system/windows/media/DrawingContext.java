@@ -38,21 +38,21 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.media.FormattedText;
-import system.windows.Point;
-import system.windows.media.Pen;
-import system.windows.media.animation.AnimationClock;
-import system.windows.media.Brush;
-import system.windows.Rect;
-import system.windows.media.Geometry;
-import system.windows.media.ImageSource;
-import system.windows.media.GlyphRun;
 import system.windows.media.Drawing;
+import system.windows.media.Brush;
+import system.windows.media.Pen;
+import system.windows.Point;
+import system.windows.media.animation.AnimationClock;
+import system.windows.media.Geometry;
+import system.windows.media.GlyphRun;
+import system.windows.media.ImageSource;
+import system.windows.Rect;
+import system.windows.media.FormattedText;
 import system.windows.media.MediaPlayer;
-import system.windows.media.Transform;
-import system.windows.media.GuidelineSet;
 import system.windows.media.effects.BitmapEffect;
 import system.windows.media.effects.BitmapEffectInput;
+import system.windows.media.GuidelineSet;
+import system.windows.media.Transform;
 import system.windows.threading.Dispatcher;
 
 
@@ -128,11 +128,11 @@ public class DrawingContext extends NetObject  {
     
     // Methods section
     
-    public void DrawText(FormattedText formattedText, Point origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.io.IOException {
+    public boolean CheckAccess() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DrawText", formattedText == null ? null : formattedText.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
+            return (boolean)classInstance.Invoke("CheckAccess");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,11 +148,71 @@ public class DrawingContext extends NetObject  {
         }
     }
 
-    public void DrawLine(Pen pen, Point point0, Point point1) throws Throwable {
+    public void DrawDrawing(Drawing drawing) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DrawLine", pen == null ? null : pen.getJCOInstance(), point0 == null ? null : point0.getJCOInstance(), point1 == null ? null : point1.getJCOInstance());
+            classInstance.Invoke("DrawDrawing", drawing == null ? null : drawing.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DrawEllipse(Brush brush, Pen pen, Point center, double radiusX, double radiusY) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DrawEllipse", brush == null ? null : brush.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), center == null ? null : center.getJCOInstance(), radiusX, radiusY);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DrawEllipse(Brush brush, Pen pen, Point center, AnimationClock centerAnimations, double radiusX, AnimationClock radiusXAnimations, double radiusY, AnimationClock radiusYAnimations) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DrawEllipse", brush == null ? null : brush.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), center == null ? null : center.getJCOInstance(), centerAnimations == null ? null : centerAnimations.getJCOInstance(), radiusX, radiusXAnimations == null ? null : radiusXAnimations.getJCOInstance(), radiusY, radiusYAnimations == null ? null : radiusYAnimations.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DrawGeometry(Brush brush, Pen pen, Geometry geometry) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DrawGeometry", brush == null ? null : brush.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), geometry == null ? null : geometry.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DrawGlyphRun(Brush foregroundBrush, GlyphRun glyphRun) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DrawGlyphRun", foregroundBrush == null ? null : foregroundBrush.getJCOInstance(), glyphRun == null ? null : glyphRun.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DrawImage(ImageSource imageSource, Rect rectangle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DrawImage", imageSource == null ? null : imageSource.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DrawImage(ImageSource imageSource, Rect rectangle, AnimationClock rectangleAnimations) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DrawImage", imageSource == null ? null : imageSource.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), rectangleAnimations == null ? null : rectangleAnimations.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,6 +223,16 @@ public class DrawingContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawLine", pen == null ? null : pen.getJCOInstance(), point0 == null ? null : point0.getJCOInstance(), point0Animations == null ? null : point0Animations.getJCOInstance(), point1 == null ? null : point1.getJCOInstance(), point1Animations == null ? null : point1Animations.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DrawLine(Pen pen, Point point0, Point point1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DrawLine", pen == null ? null : pen.getJCOInstance(), point0 == null ? null : point0.getJCOInstance(), point1 == null ? null : point1.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,71 +278,11 @@ public class DrawingContext extends NetObject  {
         }
     }
 
-    public void DrawEllipse(Brush brush, Pen pen, Point center, double radiusX, double radiusY) throws Throwable {
+    public void DrawText(FormattedText formattedText, Point origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DrawEllipse", brush == null ? null : brush.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), center == null ? null : center.getJCOInstance(), radiusX, radiusY);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DrawEllipse(Brush brush, Pen pen, Point center, AnimationClock centerAnimations, double radiusX, AnimationClock radiusXAnimations, double radiusY, AnimationClock radiusYAnimations) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DrawEllipse", brush == null ? null : brush.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), center == null ? null : center.getJCOInstance(), centerAnimations == null ? null : centerAnimations.getJCOInstance(), radiusX, radiusXAnimations == null ? null : radiusXAnimations.getJCOInstance(), radiusY, radiusYAnimations == null ? null : radiusYAnimations.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DrawGeometry(Brush brush, Pen pen, Geometry geometry) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DrawGeometry", brush == null ? null : brush.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), geometry == null ? null : geometry.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DrawImage(ImageSource imageSource, Rect rectangle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DrawImage", imageSource == null ? null : imageSource.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DrawImage(ImageSource imageSource, Rect rectangle, AnimationClock rectangleAnimations) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DrawImage", imageSource == null ? null : imageSource.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), rectangleAnimations == null ? null : rectangleAnimations.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DrawGlyphRun(Brush foregroundBrush, GlyphRun glyphRun) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DrawGlyphRun", foregroundBrush == null ? null : foregroundBrush.getJCOInstance(), glyphRun == null ? null : glyphRun.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DrawDrawing(Drawing drawing) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DrawDrawing", drawing == null ? null : drawing.getJCOInstance());
+            classInstance.Invoke("DrawText", formattedText == null ? null : formattedText.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,6 +308,16 @@ public class DrawingContext extends NetObject  {
         }
     }
 
+    public void Pop() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Pop");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void PushClip(Geometry clipGeometry) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -308,11 +328,21 @@ public class DrawingContext extends NetObject  {
         }
     }
 
-    public void PushOpacityMask(Brush opacityMask) throws Throwable {
+    public void PushEffect(BitmapEffect effect, BitmapEffectInput effectInput) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("PushOpacityMask", opacityMask == null ? null : opacityMask.getJCOInstance());
+            classInstance.Invoke("PushEffect", effect == null ? null : effect.getJCOInstance(), effectInput == null ? null : effectInput.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PushGuidelineSet(GuidelineSet guidelines) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PushGuidelineSet", guidelines == null ? null : guidelines.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,51 +368,21 @@ public class DrawingContext extends NetObject  {
         }
     }
 
+    public void PushOpacityMask(Brush opacityMask) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PushOpacityMask", opacityMask == null ? null : opacityMask.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void PushTransform(Transform transform) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushTransform", transform == null ? null : transform.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PushGuidelineSet(GuidelineSet guidelines) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PushGuidelineSet", guidelines == null ? null : guidelines.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PushEffect(BitmapEffect effect, BitmapEffectInput effectInput) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PushEffect", effect == null ? null : effect.getJCOInstance(), effectInput == null ? null : effectInput.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Pop() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Pop");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean CheckAccess() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CheckAccess");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -216,6 +216,16 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    public long getResetsSent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Get("ResetsSent");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public long getSegmentsReceived() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -241,16 +251,6 @@ public class TcpStatistics extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (long)classInstance.Get("SegmentsSent");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public long getResetsSent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("ResetsSent");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

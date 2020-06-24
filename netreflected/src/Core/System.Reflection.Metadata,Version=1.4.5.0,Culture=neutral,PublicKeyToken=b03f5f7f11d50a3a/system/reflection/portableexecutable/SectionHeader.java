@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.UInt16;
 import system.reflection.portableexecutable.SectionCharacteristics;
+import system.UInt16;
 
 
 /**
@@ -118,41 +118,11 @@ public class SectionHeader extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable {
+    public int getPointerToLineNumbers() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getVirtualSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("VirtualSize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getVirtualAddress() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("VirtualAddress");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getSizeOfRawData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("SizeOfRawData");
+            return (int)classInstance.Get("PointerToLineNumbers");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,22 +148,52 @@ public class SectionHeader extends NetObject  {
         }
     }
 
-    public int getPointerToLineNumbers() throws Throwable {
+    public int getSizeOfRawData() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("PointerToLineNumbers");
+            return (int)classInstance.Get("SizeOfRawData");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public UInt16 getNumberOfRelocations() throws Throwable {
+    public int getVirtualAddress() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NumberOfRelocations");
-            return new UInt16(val);
+            return (int)classInstance.Get("VirtualAddress");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getVirtualSize() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("VirtualSize");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SectionCharacteristics getSectionCharacteristics() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SectionCharacteristics");
+            return new SectionCharacteristics(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,12 +210,12 @@ public class SectionHeader extends NetObject  {
         }
     }
 
-    public SectionCharacteristics getSectionCharacteristics() throws Throwable {
+    public UInt16 getNumberOfRelocations() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SectionCharacteristics");
-            return new SectionCharacteristics(val);
+            JCObject val = (JCObject)classInstance.Get("NumberOfRelocations");
+            return new UInt16(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -123,21 +123,21 @@ public class InternalRM extends NetObject  {
     
     // Methods section
     
-    public static void InfoSoap(NetObject... messages) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("InfoSoap", (Object)toObjectFromArray(messages));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean SoapCheckEnabled() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("SoapCheckEnabled");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void InfoSoap(NetObject... messages) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("InfoSoap", (Object)toObjectFromArray(messages));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -90,15 +90,15 @@ public interface IContainItemStorage extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void StoreItemValue(NetObject item, DependencyProperty dp, NetObject value) throws Throwable;
-
     public NetObject ReadItemValue(NetObject item, DependencyProperty dp) throws Throwable;
+
+    public void Clear() throws Throwable;
 
     public void ClearItemValue(NetObject item, DependencyProperty dp) throws Throwable;
 
     public void ClearValue(DependencyProperty dp) throws Throwable;
 
-    public void Clear() throws Throwable;
+    public void StoreItemValue(NetObject item, DependencyProperty dp, NetObject value) throws Throwable;
 
 
     

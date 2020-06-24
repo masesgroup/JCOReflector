@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.XmlDictionaryString;
 import system.servicemodel.security.TrustVersion;
+import system.xml.XmlDictionaryString;
 
 
 /**
@@ -118,33 +118,22 @@ public class TrustVersion extends NetObject  {
     
     // Properties section
     
-    public XmlDictionaryString getNamespace() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Namespace");
-            return new XmlDictionaryString(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlDictionaryString getPrefix() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Prefix");
-            return new XmlDictionaryString(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static TrustVersion getDefault() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject val = (JCObject)classType.Get("Default");
+            return new TrustVersion(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TrustVersion getWSTrust13() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("WSTrust13");
             return new TrustVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -162,12 +151,23 @@ public class TrustVersion extends NetObject  {
         }
     }
 
-    public static TrustVersion getWSTrust13() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public XmlDictionaryString getNamespace() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSTrust13");
-            return new TrustVersion(val);
+            JCObject val = (JCObject)classInstance.Get("Namespace");
+            return new XmlDictionaryString(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlDictionaryString getPrefix() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Prefix");
+            return new XmlDictionaryString(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

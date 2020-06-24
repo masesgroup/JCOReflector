@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.EndpointAddressAugust2004;
 import system.servicemodel.EndpointAddress;
+import system.servicemodel.EndpointAddressAugust2004;
 import system.xml.XmlQualifiedName;
 import system.xml.schema.XmlSchemaSet;
 
@@ -116,23 +116,23 @@ public class EndpointAddressAugust2004 extends NetObject  {
     
     // Methods section
     
-    public static EndpointAddressAugust2004 FromEndpointAddress(EndpointAddress address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFromEndpointAddress = (JCObject)classType.Invoke("FromEndpointAddress", address == null ? null : address.getJCOInstance());
-            return new EndpointAddressAugust2004(objFromEndpointAddress);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EndpointAddress ToEndpointAddress() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objToEndpointAddress = (JCObject)classInstance.Invoke("ToEndpointAddress");
             return new EndpointAddress(objToEndpointAddress);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static EndpointAddressAugust2004 FromEndpointAddress(EndpointAddress address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromEndpointAddress = (JCObject)classType.Invoke("FromEndpointAddress", address == null ? null : address.getJCOInstance());
+            return new EndpointAddressAugust2004(objFromEndpointAddress);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -89,15 +89,15 @@ public interface IAppDomainInfo extends IJCOBridgeReflected {
 
     // Methods section
     
-    public java.lang.String GetId() throws Throwable;
-
-    public java.lang.String GetVirtualPath() throws Throwable;
-
-    public java.lang.String GetPhysicalPath() throws Throwable;
+    public boolean IsIdle() throws Throwable;
 
     public int GetSiteId() throws Throwable;
 
-    public boolean IsIdle() throws Throwable;
+    public java.lang.String GetId() throws Throwable;
+
+    public java.lang.String GetPhysicalPath() throws Throwable;
+
+    public java.lang.String GetVirtualPath() throws Throwable;
 
 
     

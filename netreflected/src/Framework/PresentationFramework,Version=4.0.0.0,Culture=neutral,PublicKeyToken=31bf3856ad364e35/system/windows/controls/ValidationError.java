@@ -110,21 +110,21 @@ public class ValidationError extends NetObject  {
     // Constructors section
     
 
-    public ValidationError(ValidationRule ruleInError, NetObject bindingInError, NetObject errorContent, NetException exception) throws Throwable, system.ArgumentNullException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(ruleInError == null ? null : ruleInError.getJCOInstance(), bindingInError == null ? null : bindingInError.getJCOInstance(), errorContent == null ? null : errorContent.getJCOInstance(), exception == null ? null : exception.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ValidationError(ValidationRule ruleInError, NetObject bindingInError) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(ruleInError == null ? null : ruleInError.getJCOInstance(), bindingInError == null ? null : bindingInError.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValidationError(ValidationRule ruleInError, NetObject bindingInError, NetObject errorContent, NetException exception) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(ruleInError == null ? null : ruleInError.getJCOInstance(), bindingInError == null ? null : bindingInError.getJCOInstance(), errorContent == null ? null : errorContent.getJCOInstance(), exception == null ? null : exception.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -138,48 +138,6 @@ public class ValidationError extends NetObject  {
     
     // Properties section
     
-    public ValidationRule getRuleInError() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RuleInError");
-            return new ValidationRule(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRuleInError(ValidationRule RuleInError) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RuleInError", RuleInError == null ? null : RuleInError.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getErrorContent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ErrorContent");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setErrorContent(NetObject ErrorContent) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ErrorContent", ErrorContent == null ? null : ErrorContent.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetException getException() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -207,6 +165,48 @@ public class ValidationError extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("BindingInError");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject getErrorContent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ErrorContent");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setErrorContent(NetObject ErrorContent) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ErrorContent", ErrorContent == null ? null : ErrorContent.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValidationRule getRuleInError() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RuleInError");
+            return new ValidationRule(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRuleInError(ValidationRule RuleInError) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RuleInError", RuleInError == null ? null : RuleInError.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

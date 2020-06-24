@@ -39,14 +39,14 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.XmlReader;
-import system.xml.xpath.XPathNavigator;
-import system.xml.xsl.XsltArgumentList;
-import system.xml.XmlResolver;
 import system.xml.xpath.IXPathNavigable;
 import system.xml.xpath.IXPathNavigableImplementation;
+import system.xml.xsl.XsltArgumentList;
+import system.xml.XmlResolver;
+import system.xml.xpath.XPathNavigator;
 import system.security.policy.Evidence;
-import system.io.TextWriter;
 import system.io.Stream;
+import system.io.TextWriter;
 import system.xml.XmlWriter;
 
 
@@ -133,11 +133,34 @@ public class XslTransform extends NetObject  {
     
     // Methods section
     
-    public void Load(java.lang.String url) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.UriFormatException, system.io.PathTooLongException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.xsl.XsltCompileException, system.RankException, system.xml.xsl.XsltException, system.MissingMethodException, system.security.XmlSyntaxException {
+    public XmlReader Transform(IXPathNavigable input, XsltArgumentList args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.xml.XmlException, system.NotImplementedException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Load", url);
+            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance());
+            return new XmlReader(objTransform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlReader Transform(IXPathNavigable input, XsltArgumentList args, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.xpath.XPathException, system.NotSupportedException, system.MissingMethodException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance());
+            return new XmlReader(objTransform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlReader Transform(XPathNavigator input, XsltArgumentList args) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.xml.XmlException, system.NotImplementedException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance());
+            return new XmlReader(objTransform);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,12 +177,31 @@ public class XslTransform extends NetObject  {
         }
     }
 
-    public XmlReader Transform(IXPathNavigable input, XsltArgumentList args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.xml.XmlException, system.NotImplementedException, system.ObjectDisposedException {
+    public void Load(java.lang.String url) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.UriFormatException, system.io.PathTooLongException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.xsl.XsltCompileException, system.RankException, system.xml.xsl.XsltException, system.MissingMethodException, system.security.XmlSyntaxException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance());
-            return new XmlReader(objTransform);
+            classInstance.Invoke("Load", url);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Load(java.lang.String url, XmlResolver resolver) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.UriFormatException, system.io.PathTooLongException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.xml.XmlException, system.xml.xsl.XsltCompileException, system.RankException, system.xml.xsl.XsltException, system.MissingMethodException, system.security.XmlSyntaxException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Load", url, resolver == null ? null : resolver.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Load(XmlReader stylesheet) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.FormatException, system.xml.xsl.XsltCompileException, system.RankException, system.xml.xsl.XsltException, system.security.SecurityException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,17 +217,27 @@ public class XslTransform extends NetObject  {
         }
     }
 
-    public void Load(IXPathNavigable stylesheet, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.xml.xsl.XsltCompileException, system.RankException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.xml.xsl.XsltException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.MissingMethodException {
+    public void Load(XmlReader stylesheet, XmlResolver resolver, Evidence evidence) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.xml.xsl.XsltCompileException, system.RankException, system.xml.xsl.XsltException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance());
+            classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance(), evidence == null ? null : evidence.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Load(XPathNavigator stylesheet, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.xml.xsl.XsltCompileException, system.RankException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.xml.xsl.XsltException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.XmlSyntaxException, system.NullReferenceException {
+    public void Load(IXPathNavigable stylesheet) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.FormatException, system.xml.xsl.XsltCompileException, system.RankException, system.xml.xsl.XsltException, system.security.SecurityException, system.NotImplementedException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Load(IXPathNavigable stylesheet, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.xml.xsl.XsltCompileException, system.RankException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.xml.xsl.XsltException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -205,11 +257,21 @@ public class XslTransform extends NetObject  {
         }
     }
 
-    public void Load(XmlReader stylesheet, XmlResolver resolver, Evidence evidence) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.xml.xsl.XsltCompileException, system.RankException, system.xml.xsl.XsltException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.NullReferenceException {
+    public void Load(XPathNavigator stylesheet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.FormatException, system.xml.xsl.XsltCompileException, system.RankException, system.xml.xsl.XsltException, system.security.SecurityException, system.NotImplementedException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance(), evidence == null ? null : evidence.getJCOInstance());
+            classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Load(XPathNavigator stylesheet, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.xml.xsl.XsltCompileException, system.RankException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.xml.xsl.XsltException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.XmlSyntaxException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,42 +287,11 @@ public class XslTransform extends NetObject  {
         }
     }
 
-    public XmlReader Transform(IXPathNavigable input, XsltArgumentList args, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.xpath.XPathException, system.NotSupportedException, system.MissingMethodException, system.xml.XmlException {
+    public void Transform(java.lang.String inputfile, java.lang.String outputfile) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance());
-            return new XmlReader(objTransform);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Transform(IXPathNavigable input, XsltArgumentList args, TextWriter output, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.xpath.XPathException, system.NotSupportedException, system.MissingMethodException, system.xml.XmlException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), output == null ? null : output.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Transform(IXPathNavigable input, XsltArgumentList args, Stream output, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.xpath.XPathException, system.NotSupportedException, system.MissingMethodException, system.xml.XmlException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), output == null ? null : output.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Transform(IXPathNavigable input, XsltArgumentList args, XmlWriter output, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.xpath.XPathException, system.NotSupportedException, system.MissingMethodException, system.xml.XmlException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), output == null ? null : output.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance());
+            classInstance.Invoke("Transform", inputfile, outputfile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,68 +307,7 @@ public class XslTransform extends NetObject  {
         }
     }
 
-    public void Load(XmlReader stylesheet) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.FormatException, system.xml.xsl.XsltCompileException, system.RankException, system.xml.xsl.XsltException, system.security.SecurityException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Load(IXPathNavigable stylesheet) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.FormatException, system.xml.xsl.XsltCompileException, system.RankException, system.xml.xsl.XsltException, system.security.SecurityException, system.NotImplementedException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Load(XPathNavigator stylesheet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.FormatException, system.xml.xsl.XsltCompileException, system.RankException, system.xml.xsl.XsltException, system.security.SecurityException, system.NotImplementedException, system.MissingMethodException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Load", stylesheet == null ? null : stylesheet.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Load(java.lang.String url, XmlResolver resolver) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.UriFormatException, system.io.PathTooLongException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.xml.XmlException, system.xml.xsl.XsltCompileException, system.RankException, system.xml.xsl.XsltException, system.MissingMethodException, system.security.XmlSyntaxException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Load", url, resolver == null ? null : resolver.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlReader Transform(XPathNavigator input, XsltArgumentList args) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.xml.XmlException, system.NotImplementedException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance());
-            return new XmlReader(objTransform);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Transform(XPathNavigator input, XsltArgumentList args, XmlWriter output, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.NotSupportedException, system.xml.XmlException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), output == null ? null : output.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Transform(XPathNavigator input, XsltArgumentList args, XmlWriter output) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.xml.XmlException {
+    public void Transform(IXPathNavigable input, XsltArgumentList args, Stream output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.xml.XmlException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -347,7 +317,47 @@ public class XslTransform extends NetObject  {
         }
     }
 
-    public void Transform(XPathNavigator input, XsltArgumentList args, Stream output, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.NotSupportedException, system.xml.XmlException, system.FormatException {
+    public void Transform(IXPathNavigable input, XsltArgumentList args, Stream output, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.xpath.XPathException, system.NotSupportedException, system.MissingMethodException, system.xml.XmlException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), output == null ? null : output.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Transform(IXPathNavigable input, XsltArgumentList args, TextWriter output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.xml.XmlException, system.NotImplementedException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), output == null ? null : output.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Transform(IXPathNavigable input, XsltArgumentList args, TextWriter output, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.xpath.XPathException, system.NotSupportedException, system.MissingMethodException, system.xml.XmlException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), output == null ? null : output.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Transform(IXPathNavigable input, XsltArgumentList args, XmlWriter output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), output == null ? null : output.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Transform(IXPathNavigable input, XsltArgumentList args, XmlWriter output, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.xpath.XPathException, system.NotSupportedException, system.MissingMethodException, system.xml.XmlException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -367,7 +377,7 @@ public class XslTransform extends NetObject  {
         }
     }
 
-    public void Transform(XPathNavigator input, XsltArgumentList args, TextWriter output, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.NotSupportedException, system.xml.XmlException {
+    public void Transform(XPathNavigator input, XsltArgumentList args, Stream output, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.NotSupportedException, system.xml.XmlException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -387,7 +397,17 @@ public class XslTransform extends NetObject  {
         }
     }
 
-    public void Transform(IXPathNavigable input, XsltArgumentList args, TextWriter output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.xml.XmlException, system.NotImplementedException, system.ObjectDisposedException {
+    public void Transform(XPathNavigator input, XsltArgumentList args, TextWriter output, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.NotSupportedException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), output == null ? null : output.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Transform(XPathNavigator input, XsltArgumentList args, XmlWriter output) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -397,31 +417,11 @@ public class XslTransform extends NetObject  {
         }
     }
 
-    public void Transform(IXPathNavigable input, XsltArgumentList args, Stream output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.xml.XmlException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public void Transform(XPathNavigator input, XsltArgumentList args, XmlWriter output, XmlResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), output == null ? null : output.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Transform(IXPathNavigable input, XsltArgumentList args, XmlWriter output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.xml.XmlException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), output == null ? null : output.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Transform(java.lang.String inputfile, java.lang.String outputfile) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Transform", inputfile, outputfile);
+            classInstance.Invoke("Transform", input == null ? null : input.getJCOInstance(), args == null ? null : args.getJCOInstance(), output == null ? null : output.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

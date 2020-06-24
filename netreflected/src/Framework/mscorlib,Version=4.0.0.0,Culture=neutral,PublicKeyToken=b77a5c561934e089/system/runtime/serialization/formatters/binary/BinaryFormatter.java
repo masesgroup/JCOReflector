@@ -46,8 +46,8 @@ import system.runtime.remoting.messaging.HeaderHandler;
 import system.runtime.remoting.messaging.IMethodCallMessage;
 import system.runtime.remoting.messaging.IMethodCallMessageImplementation;
 import system.runtime.remoting.messaging.Header;
-import system.runtime.serialization.formatters.FormatterTypeStyle;
 import system.runtime.serialization.formatters.FormatterAssemblyStyle;
+import system.runtime.serialization.formatters.FormatterTypeStyle;
 import system.runtime.serialization.formatters.TypeFilterLevel;
 import system.runtime.serialization.SerializationBinder;
 
@@ -145,16 +145,6 @@ public class BinaryFormatter extends NetObject  {
     
     // Methods section
     
-    public void Serialize(Stream serializationStream, NetObject graph) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NotImplementedException, system.security.SecurityException, system.reflection.TargetException, system.NullReferenceException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Serialize", serializationStream == null ? null : serializationStream.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject Deserialize(Stream serializationStream) throws Throwable, system.ArgumentNullException, system.FormatException, system.runtime.serialization.SerializationException, system.ArgumentException, system.io.EndOfStreamException, system.ObjectDisposedException, system.runtime.remoting.RemotingException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -210,6 +200,16 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    public void Serialize(Stream serializationStream, NetObject graph) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NotImplementedException, system.security.SecurityException, system.reflection.TargetException, system.NullReferenceException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Serialize", serializationStream == null ? null : serializationStream.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Serialize(Stream serializationStream, NetObject graph, Header[] headers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.NotImplementedException, system.security.SecurityException, system.reflection.TargetException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -224,27 +224,6 @@ public class BinaryFormatter extends NetObject  {
     
     // Properties section
     
-    public FormatterTypeStyle getTypeFormat() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeFormat");
-            return new FormatterTypeStyle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTypeFormat(FormatterTypeStyle TypeFormat) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TypeFormat", TypeFormat == null ? null : TypeFormat.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FormatterAssemblyStyle getAssemblyFormat() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -261,6 +240,27 @@ public class BinaryFormatter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyFormat", AssemblyFormat == null ? null : AssemblyFormat.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FormatterTypeStyle getTypeFormat() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TypeFormat");
+            return new FormatterTypeStyle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTypeFormat(FormatterTypeStyle TypeFormat) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TypeFormat", TypeFormat == null ? null : TypeFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

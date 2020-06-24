@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.reflection.metadata.BlobHandle;
 import system.reflection.metadata.DocumentNameBlobHandle;
 import system.reflection.metadata.GuidHandle;
-import system.reflection.metadata.BlobHandle;
 
 
 /**
@@ -119,23 +119,23 @@ public class Document extends NetObject  {
     
     // Properties section
     
+    public BlobHandle getHash() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Hash");
+            return new BlobHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DocumentNameBlobHandle getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Name");
             return new DocumentNameBlobHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public GuidHandle getLanguage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Language");
-            return new GuidHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,12 +152,12 @@ public class Document extends NetObject  {
         }
     }
 
-    public BlobHandle getHash() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public GuidHandle getLanguage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Hash");
-            return new BlobHandle(val);
+            JCObject val = (JCObject)classInstance.Get("Language");
+            return new GuidHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

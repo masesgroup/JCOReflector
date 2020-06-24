@@ -110,16 +110,6 @@ public class IDispatchImplAttribute extends NetObject  {
     // Constructors section
     
 
-    public IDispatchImplAttribute(IDispatchImplType implType) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(implType == null ? null : implType.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IDispatchImplAttribute(short implType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -130,20 +120,20 @@ public class IDispatchImplAttribute extends NetObject  {
         }
     }
 
-
-    
-    // Methods section
-    
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public IDispatchImplAttribute(IDispatchImplType implType) throws Throwable {
         try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(implType == null ? null : implType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Methods section
+    
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,27 +144,37 @@ public class IDispatchImplAttribute extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public IDispatchImplType getValue() throws Throwable {
+    public boolean Match(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
-            return new IDispatchImplType(val);
+            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public NetObject getTypeId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("TypeId");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDispatchImplType getValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Value");
+            return new IDispatchImplType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

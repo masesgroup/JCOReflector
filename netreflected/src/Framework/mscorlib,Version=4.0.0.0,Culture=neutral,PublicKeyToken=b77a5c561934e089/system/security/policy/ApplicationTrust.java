@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.ApplicationIdentity;
 import system.security.PermissionSet;
-import system.security.SecurityElement;
 import system.security.policy.EvidenceBase;
+import system.security.SecurityElement;
 import system.security.policy.PolicyStatement;
 
 
@@ -114,16 +114,6 @@ public class ApplicationTrust extends NetObject  {
     // Constructors section
     
 
-    public ApplicationTrust(ApplicationIdentity applicationIdentity) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(applicationIdentity == null ? null : applicationIdentity.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ApplicationTrust() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -134,10 +124,31 @@ public class ApplicationTrust extends NetObject  {
         }
     }
 
+    public ApplicationTrust(ApplicationIdentity applicationIdentity) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(applicationIdentity == null ? null : applicationIdentity.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
     
+    public EvidenceBase Clone() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            return new EvidenceBase(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityElement ToXml() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException, system.NullReferenceException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -159,63 +170,10 @@ public class ApplicationTrust extends NetObject  {
         }
     }
 
-    public EvidenceBase Clone() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new EvidenceBase(objClone);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public ApplicationIdentity getApplicationIdentity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationIdentity");
-            return new ApplicationIdentity(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setApplicationIdentity(ApplicationIdentity ApplicationIdentity) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ApplicationIdentity", ApplicationIdentity == null ? null : ApplicationIdentity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PolicyStatement getDefaultGrantSet() throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DefaultGrantSet");
-            return new PolicyStatement(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDefaultGrantSet(PolicyStatement DefaultGrantSet) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.security.SecurityException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DefaultGrantSet", DefaultGrantSet == null ? null : DefaultGrantSet.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsApplicationTrustedToRun() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -256,6 +214,27 @@ public class ApplicationTrust extends NetObject  {
         }
     }
 
+    public ApplicationIdentity getApplicationIdentity() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ApplicationIdentity");
+            return new ApplicationIdentity(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setApplicationIdentity(ApplicationIdentity ApplicationIdentity) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ApplicationIdentity", ApplicationIdentity == null ? null : ApplicationIdentity.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject getExtraInfo() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.security.SecurityException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -272,6 +251,27 @@ public class ApplicationTrust extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExtraInfo", ExtraInfo == null ? null : ExtraInfo.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PolicyStatement getDefaultGrantSet() throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DefaultGrantSet");
+            return new PolicyStatement(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDefaultGrantSet(PolicyStatement DefaultGrantSet) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.security.SecurityException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DefaultGrantSet", DefaultGrantSet == null ? null : DefaultGrantSet.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

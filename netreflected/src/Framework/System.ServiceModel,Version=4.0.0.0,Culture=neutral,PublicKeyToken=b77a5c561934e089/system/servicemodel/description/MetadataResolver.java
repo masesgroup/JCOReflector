@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.description.ServiceEndpointCollection;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.servicemodel.EndpointAddress;
+import system.AsyncCallback;
 import system.Uri;
 import system.servicemodel.description.MetadataExchangeClientMode;
-import system.AsyncCallback;
+import system.servicemodel.description.ServiceEndpointCollection;
 
 
 /**
@@ -119,28 +119,6 @@ public class MetadataResolver extends NetObject  {
     
     // Methods section
     
-    public static ServiceEndpointCollection Resolve(NetType contract, EndpointAddress address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.collections.generic.KeyNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objResolve = (JCObject)classType.Invoke("Resolve", contract == null ? null : contract.getJCOInstance(), address == null ? null : address.getJCOInstance());
-            return new ServiceEndpointCollection(objResolve);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static ServiceEndpointCollection Resolve(NetType contract, Uri address, MetadataExchangeClientMode mode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.collections.generic.KeyNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objResolve = (JCObject)classType.Invoke("Resolve", contract == null ? null : contract.getJCOInstance(), address == null ? null : address.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
-            return new ServiceEndpointCollection(objResolve);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static IAsyncResult BeginResolve(NetType contract, EndpointAddress address, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -169,6 +147,28 @@ public class MetadataResolver extends NetObject  {
         try {
             JCObject objEndResolve = (JCObject)classType.Invoke("EndResolve", result == null ? null : result.getJCOInstance());
             return new ServiceEndpointCollection(objEndResolve);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ServiceEndpointCollection Resolve(NetType contract, EndpointAddress address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objResolve = (JCObject)classType.Invoke("Resolve", contract == null ? null : contract.getJCOInstance(), address == null ? null : address.getJCOInstance());
+            return new ServiceEndpointCollection(objResolve);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ServiceEndpointCollection Resolve(NetType contract, Uri address, MetadataExchangeClientMode mode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objResolve = (JCObject)classType.Invoke("Resolve", contract == null ? null : contract.getJCOInstance(), address == null ? null : address.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            return new ServiceEndpointCollection(objResolve);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

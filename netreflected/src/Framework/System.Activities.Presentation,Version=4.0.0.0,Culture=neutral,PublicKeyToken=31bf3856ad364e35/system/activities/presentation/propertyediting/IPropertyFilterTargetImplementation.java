@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.presentation.propertyediting.PropertyFilter;
 import system.activities.presentation.propertyediting.PropertyFilterPredicate;
+import system.activities.presentation.propertyediting.PropertyFilter;
 
 
 /**
@@ -105,21 +105,21 @@ public class IPropertyFilterTargetImplementation extends NetObject implements IP
 
     // Methods section
     
-    public void ApplyFilter(PropertyFilter filter) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ApplyFilter", filter == null ? null : filter.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean MatchesPredicate(PropertyFilterPredicate predicate) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("MatchesPredicate", predicate == null ? null : predicate.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ApplyFilter(PropertyFilter filter) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ApplyFilter", filter == null ? null : filter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

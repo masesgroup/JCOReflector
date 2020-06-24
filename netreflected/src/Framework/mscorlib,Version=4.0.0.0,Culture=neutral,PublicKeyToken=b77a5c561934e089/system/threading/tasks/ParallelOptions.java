@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.threading.tasks.TaskScheduler;
 import system.threading.CancellationToken;
+import system.threading.tasks.TaskScheduler;
 
 
 /**
@@ -129,27 +129,6 @@ public class ParallelOptions extends NetObject  {
     
     // Properties section
     
-    public TaskScheduler getTaskScheduler() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TaskScheduler");
-            return new TaskScheduler(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTaskScheduler(TaskScheduler TaskScheduler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TaskScheduler", TaskScheduler == null ? null : TaskScheduler.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getMaxDegreeOfParallelism() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -186,6 +165,27 @@ public class ParallelOptions extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancellationToken", CancellationToken == null ? null : CancellationToken.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TaskScheduler getTaskScheduler() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TaskScheduler");
+            return new TaskScheduler(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTaskScheduler(TaskScheduler TaskScheduler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TaskScheduler", TaskScheduler == null ? null : TaskScheduler.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

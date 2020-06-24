@@ -112,26 +112,6 @@ public class Contract extends NetObject  {
     
     // Methods section
     
-    public static void Assume(boolean condition) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.diagnostics.contracts.ContractException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Assume", condition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Assume(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.diagnostics.contracts.ContractException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Assume", condition, userMessage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void Assert(boolean condition) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.diagnostics.contracts.ContractException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -152,21 +132,31 @@ public class Contract extends NetObject  {
         }
     }
 
-    public static void Requires(boolean condition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.contracts.ContractException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static void Assume(boolean condition) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.diagnostics.contracts.ContractException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Requires", condition);
+            classType.Invoke("Assume", condition);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void Requires(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.contracts.ContractException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static void Assume(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.diagnostics.contracts.ContractException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Requires", condition, userMessage);
+            classType.Invoke("Assume", condition, userMessage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void EndContractBlock() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("EndContractBlock");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,6 +197,26 @@ public class Contract extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Invariant", condition, userMessage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Requires(boolean condition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.contracts.ContractException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Requires", condition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Requires(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.contracts.ContractException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Requires", condition, userMessage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

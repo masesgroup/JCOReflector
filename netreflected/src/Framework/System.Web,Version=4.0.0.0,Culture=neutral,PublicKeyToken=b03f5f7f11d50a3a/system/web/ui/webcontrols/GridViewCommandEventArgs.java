@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.ui.webcontrols.GridViewRow;
 import system.web.ui.webcontrols.CommandEventArgs;
+import system.web.ui.webcontrols.GridViewRow;
 
 
 /**
@@ -111,21 +111,21 @@ public class GridViewCommandEventArgs extends NetObject  {
     // Constructors section
     
 
-    public GridViewCommandEventArgs(GridViewRow row, NetObject commandSource, CommandEventArgs originalArgs) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(row == null ? null : row.getJCOInstance(), commandSource == null ? null : commandSource.getJCOInstance(), originalArgs == null ? null : originalArgs.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public GridViewCommandEventArgs(NetObject commandSource, CommandEventArgs originalArgs) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(commandSource == null ? null : commandSource.getJCOInstance(), originalArgs == null ? null : originalArgs.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public GridViewCommandEventArgs(GridViewRow row, NetObject commandSource, CommandEventArgs originalArgs) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(row == null ? null : row.getJCOInstance(), commandSource == null ? null : commandSource.getJCOInstance(), originalArgs == null ? null : originalArgs.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -139,17 +139,6 @@ public class GridViewCommandEventArgs extends NetObject  {
     
     // Properties section
     
-    public NetObject getCommandSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CommandSource");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -170,22 +159,33 @@ public class GridViewCommandEventArgs extends NetObject  {
         }
     }
 
-    public java.lang.String getCommandName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("CommandName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject getCommandArgument() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("CommandArgument");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject getCommandSource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CommandSource");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getCommandName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("CommandName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

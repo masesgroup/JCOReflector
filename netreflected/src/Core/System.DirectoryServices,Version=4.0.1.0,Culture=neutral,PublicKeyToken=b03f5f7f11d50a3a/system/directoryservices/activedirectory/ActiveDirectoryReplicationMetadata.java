@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.directoryservices.activedirectory.AttributeMetadata;
 import system.Array;
-import system.directoryservices.activedirectory.ReadOnlyStringCollection;
+import system.directoryservices.activedirectory.AttributeMetadata;
 import system.directoryservices.activedirectory.AttributeMetadataCollection;
+import system.directoryservices.activedirectory.ReadOnlyStringCollection;
 
 
 /**
@@ -126,11 +126,11 @@ public class ActiveDirectoryReplicationMetadata extends NetObject  {
         }
     }
 
-    public void CopyTo(AttributeMetadata[] array, int index) throws Throwable {
+    public void Clear() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -146,11 +146,11 @@ public class ActiveDirectoryReplicationMetadata extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public void CopyTo(AttributeMetadata[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,12 +160,11 @@ public class ActiveDirectoryReplicationMetadata extends NetObject  {
     
     // Properties section
     
-    public ReadOnlyStringCollection getAttributeNames() throws Throwable {
+    public int getCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AttributeNames");
-            return new ReadOnlyStringCollection(val);
+            return (int)classInstance.Get("Count");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,11 +181,12 @@ public class ActiveDirectoryReplicationMetadata extends NetObject  {
         }
     }
 
-    public int getCount() throws Throwable {
+    public ReadOnlyStringCollection getAttributeNames() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Count");
+            JCObject val = (JCObject)classInstance.Get("AttributeNames");
+            return new ReadOnlyStringCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

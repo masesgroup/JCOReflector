@@ -42,8 +42,8 @@ import system.transactions.Enlistment;
 import system.Guid;
 import system.transactions.IEnlistmentNotification;
 import system.transactions.IEnlistmentNotificationImplementation;
-import system.transactions.HostCurrentTransactionCallback;
 import system.TimeSpan;
+import system.transactions.HostCurrentTransactionCallback;
 
 
 /**
@@ -143,26 +143,6 @@ public class TransactionManager extends NetObject  {
     
     // Properties section
     
-    public static HostCurrentTransactionCallback getHostCurrentCallback() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (HostCurrentTransactionCallback)classType.Get("HostCurrentCallback");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void setHostCurrentCallback(HostCurrentTransactionCallback HostCurrentCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Set("HostCurrentCallback", HostCurrentCallback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static TimeSpan getDefaultTimeout() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -180,6 +160,26 @@ public class TransactionManager extends NetObject  {
         try {
             JCObject val = (JCObject)classType.Get("MaximumTimeout");
             return new TimeSpan(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static HostCurrentTransactionCallback getHostCurrentCallback() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (HostCurrentTransactionCallback)classType.Get("HostCurrentCallback");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void setHostCurrentCallback(HostCurrentTransactionCallback HostCurrentCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Set("HostCurrentCallback", HostCurrentCallback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

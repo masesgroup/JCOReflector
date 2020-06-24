@@ -113,11 +113,11 @@ public class UCOMIBindCtxImplementation extends NetObject implements UCOMIBindCt
         }
     }
 
-    public void RevokeObjectBound(NetObject punk) throws Throwable {
+    public void RegisterObjectParam(java.lang.String pszKey, NetObject punk) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RevokeObjectBound", punk == null ? null : punk.getJCOInstance());
+            classInstance.Invoke("RegisterObjectParam", pszKey, punk == null ? null : punk.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -133,11 +133,11 @@ public class UCOMIBindCtxImplementation extends NetObject implements UCOMIBindCt
         }
     }
 
-    public void RegisterObjectParam(java.lang.String pszKey, NetObject punk) throws Throwable {
+    public void RevokeObjectBound(NetObject punk) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RegisterObjectParam", pszKey, punk == null ? null : punk.getJCOInstance());
+            classInstance.Invoke("RevokeObjectBound", punk == null ? null : punk.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

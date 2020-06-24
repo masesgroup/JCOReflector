@@ -38,19 +38,19 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.io.Stream;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
 import system.runtime.remoting.channels.ITransportHeaders;
 import system.runtime.remoting.channels.ITransportHeadersImplementation;
-import system.io.Stream;
 import system.runtime.remoting.channels.IClientChannelSinkStack;
 import system.runtime.remoting.channels.IClientChannelSinkStackImplementation;
 import system.runtime.remoting.channels.IClientResponseChannelSinkStack;
 import system.runtime.remoting.channels.IClientResponseChannelSinkStackImplementation;
-import system.runtime.remoting.channels.IClientChannelSink;
-import system.runtime.remoting.channels.IClientChannelSinkImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.runtime.remoting.channels.IClientChannelSink;
+import system.runtime.remoting.channels.IClientChannelSinkImplementation;
 
 
 /**
@@ -116,6 +116,17 @@ public class IClientChannelSinkImplementation extends NetObject implements IClie
 
     // Methods section
     
+    public Stream GetRequestStream(IMessage msg, ITransportHeaders headers) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetRequestStream = (JCObject)classInstance.Invoke("GetRequestStream", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance());
+            return new Stream(objGetRequestStream);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AsyncProcessRequest(IClientChannelSinkStack sinkStack, IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,38 +147,27 @@ public class IClientChannelSinkImplementation extends NetObject implements IClie
         }
     }
 
-    public Stream GetRequestStream(IMessage msg, ITransportHeaders headers) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRequestStream = (JCObject)classInstance.Invoke("GetRequestStream", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance());
-            return new Stream(objGetRequestStream);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public IClientChannelSink getNextChannelSink() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NextChannelSink");
-            return new IClientChannelSinkImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IDictionary getProperties() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Properties");
             return new IDictionaryImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IClientChannelSink getNextChannelSink() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NextChannelSink");
+            return new IClientChannelSinkImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

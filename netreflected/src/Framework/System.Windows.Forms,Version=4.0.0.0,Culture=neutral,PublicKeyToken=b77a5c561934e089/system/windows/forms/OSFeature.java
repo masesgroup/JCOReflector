@@ -115,27 +115,6 @@ public class OSFeature extends NetObject  {
     
     // Methods section
     
-    public Version GetVersionPresent(NetObject feature) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetVersionPresent = (JCObject)classInstance.Invoke("GetVersionPresent", feature == null ? null : feature.getJCOInstance());
-            return new Version(objGetVersionPresent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsPresent(SystemParameter enumVal) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsPresent", enumVal == null ? null : enumVal.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsPresent(NetObject feature) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -151,6 +130,27 @@ public class OSFeature extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsPresent", feature == null ? null : feature.getJCOInstance(), minimumVersion == null ? null : minimumVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean IsPresent(SystemParameter enumVal) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsPresent", enumVal == null ? null : enumVal.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Version GetVersionPresent(NetObject feature) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetVersionPresent = (JCObject)classInstance.Invoke("GetVersionPresent", feature == null ? null : feature.getJCOInstance());
+            return new Version(objGetVersionPresent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

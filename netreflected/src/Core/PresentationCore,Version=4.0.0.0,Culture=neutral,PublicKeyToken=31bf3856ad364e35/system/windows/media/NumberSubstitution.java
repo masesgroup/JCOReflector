@@ -137,11 +137,12 @@ public class NumberSubstitution extends NetObject  {
     
     // Methods section
     
-    public static void SetCultureSource(DependencyObject target, NumberCultureSource value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static CultureInfo GetCultureOverride(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetCultureSource", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objGetCultureOverride = (JCObject)classType.Invoke("GetCultureOverride", target == null ? null : target.getJCOInstance());
+            return new CultureInfo(objGetCultureOverride);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,6 +159,17 @@ public class NumberSubstitution extends NetObject  {
         }
     }
 
+    public static NumberSubstitutionMethod GetSubstitution(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetSubstitution = (JCObject)classType.Invoke("GetSubstitution", target == null ? null : target.getJCOInstance());
+            return new NumberSubstitutionMethod(objGetSubstitution);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void SetCultureOverride(DependencyObject target, CultureInfo value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -168,12 +180,11 @@ public class NumberSubstitution extends NetObject  {
         }
     }
 
-    public static CultureInfo GetCultureOverride(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static void SetCultureSource(DependencyObject target, NumberCultureSource value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetCultureOverride = (JCObject)classType.Invoke("GetCultureOverride", target == null ? null : target.getJCOInstance());
-            return new CultureInfo(objGetCultureOverride);
+            classType.Invoke("SetCultureSource", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,42 +200,10 @@ public class NumberSubstitution extends NetObject  {
         }
     }
 
-    public static NumberSubstitutionMethod GetSubstitution(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetSubstitution = (JCObject)classType.Invoke("GetSubstitution", target == null ? null : target.getJCOInstance());
-            return new NumberSubstitutionMethod(objGetSubstitution);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public NumberCultureSource getCultureSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CultureSource");
-            return new NumberCultureSource(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCultureSource(NumberCultureSource CultureSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CultureSource", CultureSource == null ? null : CultureSource.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CultureInfo getCultureOverride() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -241,6 +220,27 @@ public class NumberSubstitution extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CultureOverride", CultureOverride == null ? null : CultureOverride.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NumberCultureSource getCultureSource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CultureSource");
+            return new NumberCultureSource(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCultureSource(NumberCultureSource CultureSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CultureSource", CultureSource == null ? null : CultureSource.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

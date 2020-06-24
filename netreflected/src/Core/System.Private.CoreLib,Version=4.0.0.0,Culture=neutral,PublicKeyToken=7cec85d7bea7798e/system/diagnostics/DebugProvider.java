@@ -133,21 +133,11 @@ public class DebugProvider extends NetObject  {
         }
     }
 
-    public void Write(java.lang.String message) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void FailCore(java.lang.String stackTrace, java.lang.String message, java.lang.String detailMessage, java.lang.String errorSource) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("Write", message);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteLine(java.lang.String message) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteLine", message);
+            classType.Invoke("FailCore", stackTrace, message, detailMessage, errorSource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,11 +163,11 @@ public class DebugProvider extends NetObject  {
         }
     }
 
-    public static void FailCore(java.lang.String stackTrace, java.lang.String message, java.lang.String detailMessage, java.lang.String errorSource) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void Write(java.lang.String message) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Invoke("FailCore", stackTrace, message, detailMessage, errorSource);
+            classInstance.Invoke("Write", message);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,6 +178,16 @@ public class DebugProvider extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteCore", message);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteLine(java.lang.String message) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteLine", message);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

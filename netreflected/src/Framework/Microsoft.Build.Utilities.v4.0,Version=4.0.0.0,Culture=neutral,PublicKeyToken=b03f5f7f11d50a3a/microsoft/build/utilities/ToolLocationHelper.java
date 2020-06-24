@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Version;
+import system.runtime.versioning.FrameworkName;
 import microsoft.build.utilities.TargetDotNetFrameworkVersion;
 import microsoft.build.utilities.VisualStudioVersion;
 import microsoft.build.utilities.DotNetFrameworkArchitecture;
-import system.runtime.versioning.FrameworkName;
+import system.Version;
 
 
 /**
@@ -117,51 +117,32 @@ public class ToolLocationHelper extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static FrameworkName HighestVersionOfTargetFrameworkIdentifier(java.lang.String targetFrameworkRootDirectory, java.lang.String frameworkIdentifier) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetPlatformExtensionSDKLocation", sdkMoniker, targetPlatformIdentifier, targetPlatformVersion == null ? null : targetPlatformVersion.getJCOInstance());
+            JCObject objHighestVersionOfTargetFrameworkIdentifier = (JCObject)classType.Invoke("HighestVersionOfTargetFrameworkIdentifier", targetFrameworkRootDirectory, frameworkIdentifier);
+            return new FrameworkName(objHighestVersionOfTargetFrameworkIdentifier);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+    public static java.lang.String GetDisplayNameForTargetFrameworkDirectory(java.lang.String targetFrameworkDirectory, FrameworkName frameworkName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetPlatformExtensionSDKLocation", sdkMoniker, targetPlatformIdentifier, targetPlatformVersion);
+            return (java.lang.String)classType.Invoke("GetDisplayNameForTargetFrameworkDirectory", targetFrameworkDirectory, frameworkName == null ? null : frameworkName.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static java.lang.String GetDotNetFrameworkRootRegistryKey(TargetDotNetFrameworkVersion version) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetPlatformSDKLocation", targetPlatformIdentifier, targetPlatformVersion == null ? null : targetPlatformVersion.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetPlatformSDKLocation", targetPlatformIdentifier, targetPlatformVersion);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetDotNetFrameworkSdkRootRegistryKey(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetDotNetFrameworkSdkRootRegistryKey", version == null ? null : version.getJCOInstance());
+            return (java.lang.String)classType.Invoke("GetDotNetFrameworkRootRegistryKey", version == null ? null : version.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,6 +158,46 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    public static java.lang.String GetDotNetFrameworkSdkInstallKeyValue(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetDotNetFrameworkSdkInstallKeyValue", version == null ? null : version.getJCOInstance(), visualStudioVersion == null ? null : visualStudioVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetDotNetFrameworkSdkRootRegistryKey(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetDotNetFrameworkSdkRootRegistryKey", version == null ? null : version.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetDotNetFrameworkSdkRootRegistryKey(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetDotNetFrameworkSdkRootRegistryKey", version == null ? null : version.getJCOInstance(), visualStudioVersion == null ? null : visualStudioVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetDotNetFrameworkVersionFolderPrefix(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetDotNetFrameworkVersionFolderPrefix", version == null ? null : version.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String GetPathToDotNetFramework(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -187,81 +208,11 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToDotNetFrameworkSdk(TargetDotNetFrameworkVersion version) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
+    public static java.lang.String GetPathToDotNetFramework(TargetDotNetFrameworkVersion version, DotNetFrameworkArchitecture architecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetPathToDotNetFrameworkSdk", version == null ? null : version.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void ClearSDKStaticCache() throws Throwable, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("ClearSDKStaticCache");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version) throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetPathToDotNetFrameworkSdkFile", fileName, version == null ? null : version.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetPathToDotNetFrameworkSdkFile", fileName, version == null ? null : version.getJCOInstance(), visualStudioVersion == null ? null : visualStudioVersion.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetPathToDotNetFrameworkSdkFile", fileName, version == null ? null : version.getJCOInstance(), architecture == null ? null : architecture.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetPathToDotNetFrameworkSdkFile", fileName, version == null ? null : version.getJCOInstance(), visualStudioVersion == null ? null : visualStudioVersion.getJCOInstance(), architecture == null ? null : architecture.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetPathToWindowsSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetPathToWindowsSdkFile", fileName, version == null ? null : version.getJCOInstance(), visualStudioVersion == null ? null : visualStudioVersion.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetPathToWindowsSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetPathToWindowsSdkFile", fileName, version == null ? null : version.getJCOInstance(), visualStudioVersion == null ? null : visualStudioVersion.getJCOInstance(), architecture == null ? null : architecture.getJCOInstance());
+            return (java.lang.String)classType.Invoke("GetPathToDotNetFramework", version == null ? null : version.getJCOInstance(), architecture == null ? null : architecture.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,111 +238,21 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToSystemFile(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static java.lang.String GetPathToDotNetFrameworkReferenceAssemblies(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetPathToSystemFile", fileName);
+            return (java.lang.String)classType.Invoke("GetPathToDotNetFrameworkReferenceAssemblies", version == null ? null : version.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String GetProgramFilesReferenceAssemblyRoot() throws Throwable {
+    public static java.lang.String GetPathToDotNetFrameworkSdk(TargetDotNetFrameworkVersion version) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetProgramFilesReferenceAssemblyRoot");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, Version targetPlatformVersion, java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetPlatformExtensionSDKLocation", sdkMoniker, targetPlatformIdentifier, targetPlatformVersion == null ? null : targetPlatformVersion.getJCOInstance(), diskRoots, registryRoot);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion, java.lang.String diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetPlatformExtensionSDKLocation", sdkMoniker, targetPlatformIdentifier, targetPlatformVersion, diskRoots, registryRoot);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, Version targetPlatformVersion, java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetPlatformSDKLocation", targetPlatformIdentifier, targetPlatformVersion == null ? null : targetPlatformVersion.getJCOInstance(), diskRoots, registryRoot);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion, java.lang.String diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetPlatformSDKLocation", targetPlatformIdentifier, targetPlatformVersion, diskRoots, registryRoot);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetDotNetFrameworkVersionFolderPrefix(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetDotNetFrameworkVersionFolderPrefix", version == null ? null : version.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetDotNetFrameworkRootRegistryKey(TargetDotNetFrameworkVersion version) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetDotNetFrameworkRootRegistryKey", version == null ? null : version.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetDotNetFrameworkSdkRootRegistryKey(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetDotNetFrameworkSdkRootRegistryKey", version == null ? null : version.getJCOInstance(), visualStudioVersion == null ? null : visualStudioVersion.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetDotNetFrameworkSdkInstallKeyValue(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetDotNetFrameworkSdkInstallKeyValue", version == null ? null : version.getJCOInstance(), visualStudioVersion == null ? null : visualStudioVersion.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetPathToDotNetFramework(TargetDotNetFrameworkVersion version, DotNetFrameworkArchitecture architecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetPathToDotNetFramework", version == null ? null : version.getJCOInstance(), architecture == null ? null : architecture.getJCOInstance());
+            return (java.lang.String)classType.Invoke("GetPathToDotNetFrameworkSdk", version == null ? null : version.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,11 +268,41 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToDotNetFrameworkReferenceAssemblies(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException, system.resources.MissingManifestResourceException {
+    public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version) throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetPathToDotNetFrameworkReferenceAssemblies", version == null ? null : version.getJCOInstance());
+            return (java.lang.String)classType.Invoke("GetPathToDotNetFrameworkSdkFile", fileName, version == null ? null : version.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPathToDotNetFrameworkSdkFile", fileName, version == null ? null : version.getJCOInstance(), architecture == null ? null : architecture.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPathToDotNetFrameworkSdkFile", fileName, version == null ? null : version.getJCOInstance(), visualStudioVersion == null ? null : visualStudioVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPathToDotNetFrameworkSdkFile", fileName, version == null ? null : version.getJCOInstance(), visualStudioVersion == null ? null : visualStudioVersion.getJCOInstance(), architecture == null ? null : architecture.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,11 +328,11 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetDisplayNameForTargetFrameworkDirectory(java.lang.String targetFrameworkDirectory, FrameworkName frameworkName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException {
+    public static java.lang.String GetPathToSystemFile(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetDisplayNameForTargetFrameworkDirectory", targetFrameworkDirectory, frameworkName == null ? null : frameworkName.getJCOInstance());
+            return (java.lang.String)classType.Invoke("GetPathToSystemFile", fileName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,12 +348,121 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static FrameworkName HighestVersionOfTargetFrameworkIdentifier(java.lang.String targetFrameworkRootDirectory, java.lang.String frameworkIdentifier) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.OverflowException {
+    public static java.lang.String GetPathToWindowsSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objHighestVersionOfTargetFrameworkIdentifier = (JCObject)classType.Invoke("HighestVersionOfTargetFrameworkIdentifier", targetFrameworkRootDirectory, frameworkIdentifier);
-            return new FrameworkName(objHighestVersionOfTargetFrameworkIdentifier);
+            return (java.lang.String)classType.Invoke("GetPathToWindowsSdkFile", fileName, version == null ? null : version.getJCOInstance(), visualStudioVersion == null ? null : visualStudioVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetPathToWindowsSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPathToWindowsSdkFile", fileName, version == null ? null : version.getJCOInstance(), visualStudioVersion == null ? null : visualStudioVersion.getJCOInstance(), architecture == null ? null : architecture.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPlatformExtensionSDKLocation", sdkMoniker, targetPlatformIdentifier, targetPlatformVersion);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion, java.lang.String diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPlatformExtensionSDKLocation", sdkMoniker, targetPlatformIdentifier, targetPlatformVersion, diskRoots, registryRoot);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPlatformExtensionSDKLocation", sdkMoniker, targetPlatformIdentifier, targetPlatformVersion == null ? null : targetPlatformVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, Version targetPlatformVersion, java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPlatformExtensionSDKLocation", sdkMoniker, targetPlatformIdentifier, targetPlatformVersion == null ? null : targetPlatformVersion.getJCOInstance(), diskRoots, registryRoot);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPlatformSDKLocation", targetPlatformIdentifier, targetPlatformVersion);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion, java.lang.String diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPlatformSDKLocation", targetPlatformIdentifier, targetPlatformVersion, diskRoots, registryRoot);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPlatformSDKLocation", targetPlatformIdentifier, targetPlatformVersion == null ? null : targetPlatformVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, Version targetPlatformVersion, java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPlatformSDKLocation", targetPlatformIdentifier, targetPlatformVersion == null ? null : targetPlatformVersion.getJCOInstance(), diskRoots, registryRoot);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetProgramFilesReferenceAssemblyRoot() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetProgramFilesReferenceAssemblyRoot");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ClearSDKStaticCache() throws Throwable, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ClearSDKStaticCache");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

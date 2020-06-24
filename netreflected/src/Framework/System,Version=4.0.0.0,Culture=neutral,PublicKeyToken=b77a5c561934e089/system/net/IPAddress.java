@@ -111,11 +111,11 @@ public class IPAddress extends NetObject  {
     // Constructors section
     
 
-    public IPAddress(long newAddress) throws Throwable, system.ArgumentOutOfRangeException {
+    public IPAddress(byte[] address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(newAddress));
+            setJCOInstance((JCObject)classType.NewObject((Object)address));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -131,11 +131,11 @@ public class IPAddress extends NetObject  {
         }
     }
 
-    public IPAddress(byte[] address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public IPAddress(long newAddress) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)address));
+            setJCOInstance((JCObject)classType.NewObject(newAddress));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,32 +145,30 @@ public class IPAddress extends NetObject  {
     
     // Methods section
     
-    public static IPAddress Parse(java.lang.String ipString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.InvalidOperationException, system.OutOfMemoryException {
+    public static boolean IsLoopback(IPAddress address) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", ipString);
-            return new IPAddress(objParse);
+            return (boolean)classType.Invoke("IsLoopback", address == null ? null : address.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long HostToNetworkOrder(long host) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public byte[] GetAddressBytes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classType.Invoke("HostToNetworkOrder", host);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int HostToNetworkOrder(int host) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("HostToNetworkOrder", host);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAddressBytes");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexGetAddressBytes = 0; indexGetAddressBytes < resultingArrayList.size(); indexGetAddressBytes++ ) {
+				resultingArray[indexGetAddressBytes] = (byte)resultingArrayList.get(indexGetAddressBytes);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,11 +184,21 @@ public class IPAddress extends NetObject  {
         }
     }
 
-    public static long NetworkToHostOrder(long network) throws Throwable {
+    public static short NetworkToHostOrder(short network) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("NetworkToHostOrder", network);
+            return (short)classType.Invoke("NetworkToHostOrder", network);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int HostToNetworkOrder(int host) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("HostToNetworkOrder", host);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,21 +214,21 @@ public class IPAddress extends NetObject  {
         }
     }
 
-    public static short NetworkToHostOrder(short network) throws Throwable {
+    public static long HostToNetworkOrder(long host) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (short)classType.Invoke("NetworkToHostOrder", network);
+            return (long)classType.Invoke("HostToNetworkOrder", host);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean IsLoopback(IPAddress address) throws Throwable, system.ArgumentNullException {
+    public static long NetworkToHostOrder(long network) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsLoopback", address == null ? null : address.getJCOInstance());
+            return (long)classType.Invoke("NetworkToHostOrder", network);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,20 +256,12 @@ public class IPAddress extends NetObject  {
         }
     }
 
-    public byte[] GetAddressBytes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IPAddress Parse(java.lang.String ipString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.InvalidOperationException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAddressBytes");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexGetAddressBytes = 0; indexGetAddressBytes < resultingArrayList.size(); indexGetAddressBytes++ ) {
-				resultingArray[indexGetAddressBytes] = (byte)resultingArrayList.get(indexGetAddressBytes);
-            }
-            return resultingArray;
+            JCObject objParse = (JCObject)classType.Invoke("Parse", ipString);
+            return new IPAddress(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,62 +271,11 @@ public class IPAddress extends NetObject  {
     
     // Properties section
     
-    public long getAddress() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+    public boolean getIsIPv4MappedToIPv6() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Get("Address");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAddress(long Address) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Address", Address);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AddressFamily getAddressFamily() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AddressFamily");
-            return new AddressFamily(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public long getScopeId() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("ScopeId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setScopeId(long ScopeId) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ScopeId", ScopeId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsIPv6Multicast() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsIPv6Multicast");
+            return (boolean)classInstance.Get("IsIPv4MappedToIPv6");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,6 +286,16 @@ public class IPAddress extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsIPv6LinkLocal");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsIPv6Multicast() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsIPv6Multicast");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,11 +321,52 @@ public class IPAddress extends NetObject  {
         }
     }
 
-    public boolean getIsIPv4MappedToIPv6() throws Throwable {
+    public long getAddress() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsIPv4MappedToIPv6");
+            return (long)classInstance.Get("Address");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAddress(long Address) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Address", Address);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long getScopeId() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Get("ScopeId");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setScopeId(long ScopeId) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ScopeId", ScopeId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AddressFamily getAddressFamily() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AddressFamily");
+            return new AddressFamily(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

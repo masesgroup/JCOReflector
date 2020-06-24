@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.web.services.description.ServiceDescriptionFormatExtensionCollection;
 import system.xml.serialization.XmlSchemas;
-import system.xml.XmlElement;
-import system.xml.XmlAttribute;
 import system.xml.serialization.XmlSerializerNamespaces;
+import system.xml.XmlAttribute;
+import system.xml.XmlElement;
 
 
 /**
@@ -132,6 +132,26 @@ public class Types extends NetObject  {
     
     // Properties section
     
+    public java.lang.String getDocumentation() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Documentation");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDocumentation(java.lang.String Documentation) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Documentation", Documentation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ServiceDescriptionFormatExtensionCollection getExtensions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,42 +174,22 @@ public class Types extends NetObject  {
         }
     }
 
-    public java.lang.String getDocumentation() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException {
+    public XmlSerializerNamespaces getNamespaces() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Documentation");
+            JCObject val = (JCObject)classInstance.Get("Namespaces");
+            return new XmlSerializerNamespaces(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDocumentation(java.lang.String Documentation) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException {
+    public void setNamespaces(XmlSerializerNamespaces Namespaces) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Documentation", Documentation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlElement getDocumentationElement() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DocumentationElement");
-            return new XmlElement(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDocumentationElement(XmlElement DocumentationElement) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DocumentationElement", DocumentationElement == null ? null : DocumentationElement.getJCOInstance());
+            classInstance.Set("Namespaces", Namespaces == null ? null : Namespaces.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,22 +222,22 @@ public class Types extends NetObject  {
         }
     }
 
-    public XmlSerializerNamespaces getNamespaces() throws Throwable {
+    public XmlElement getDocumentationElement() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Namespaces");
-            return new XmlSerializerNamespaces(val);
+            JCObject val = (JCObject)classInstance.Get("DocumentationElement");
+            return new XmlElement(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setNamespaces(XmlSerializerNamespaces Namespaces) throws Throwable {
+    public void setDocumentationElement(XmlElement DocumentationElement) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Namespaces", Namespaces == null ? null : Namespaces.getJCOInstance());
+            classInstance.Set("DocumentationElement", DocumentationElement == null ? null : DocumentationElement.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

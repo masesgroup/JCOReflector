@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.xps.packaging.SpotLocation;
 import system.globalization.CultureInfo;
+import system.windows.xps.packaging.SpotLocation;
 
 
 /**
@@ -129,82 +129,21 @@ public class XpsSignatureDefinition extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getRequestedSigner() throws Throwable {
+    public boolean getHasBeenModified() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("RequestedSigner");
+            return (boolean)classInstance.Get("HasBeenModified");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRequestedSigner(java.lang.String RequestedSigner) throws Throwable {
+    public void setHasBeenModified(boolean HasBeenModified) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("RequestedSigner", RequestedSigner);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SpotLocation getSpotLocation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SpotLocation");
-            return new SpotLocation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSpotLocation(SpotLocation SpotLocation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SpotLocation", SpotLocation == null ? null : SpotLocation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getIntent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Intent");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIntent(java.lang.String Intent) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Intent", Intent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getSigningLocale() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("SigningLocale");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSigningLocale(java.lang.String SigningLocale) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SigningLocale", SigningLocale);
+            classInstance.Set("HasBeenModified", HasBeenModified);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,21 +170,82 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
-    public boolean getHasBeenModified() throws Throwable {
+    public java.lang.String getIntent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HasBeenModified");
+            return (java.lang.String)classInstance.Get("Intent");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHasBeenModified(boolean HasBeenModified) throws Throwable {
+    public void setIntent(java.lang.String Intent) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("HasBeenModified", HasBeenModified);
+            classInstance.Set("Intent", Intent);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getRequestedSigner() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("RequestedSigner");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRequestedSigner(java.lang.String RequestedSigner) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RequestedSigner", RequestedSigner);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getSigningLocale() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("SigningLocale");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSigningLocale(java.lang.String SigningLocale) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SigningLocale", SigningLocale);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SpotLocation getSpotLocation() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SpotLocation");
+            return new SpotLocation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSpotLocation(SpotLocation SpotLocation) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SpotLocation", SpotLocation == null ? null : SpotLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

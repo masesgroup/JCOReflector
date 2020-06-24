@@ -123,31 +123,11 @@ public class Debugger extends NetObject  {
     
     // Methods section
     
-    public static void NotifyOfCrossThreadDependency() throws Throwable, system.InvalidOperationException, system.threading.ThreadAbortException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("NotifyOfCrossThreadDependency");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean IsLogging() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("IsLogging");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Break() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Break");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,11 +143,31 @@ public class Debugger extends NetObject  {
         }
     }
 
+    public static void Break() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Break");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void Log(int level, java.lang.String category, java.lang.String message) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Log", level, category, message);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void NotifyOfCrossThreadDependency() throws Throwable, system.InvalidOperationException, system.threading.ThreadAbortException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("NotifyOfCrossThreadDependency");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

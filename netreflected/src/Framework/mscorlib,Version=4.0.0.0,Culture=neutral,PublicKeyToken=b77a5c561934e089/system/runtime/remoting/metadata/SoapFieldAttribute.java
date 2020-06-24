@@ -123,6 +123,16 @@ public class SoapFieldAttribute extends NetObject  {
     
     // Methods section
     
+    public boolean IsDefaultAttribute() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean IsInteropXmlElement() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -143,75 +153,25 @@ public class SoapFieldAttribute extends NetObject  {
         }
     }
 
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public java.lang.String getXmlElementName() throws Throwable {
+    public boolean getEmbedded() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("XmlElementName");
+            return (boolean)classInstance.Get("Embedded");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setXmlElementName(java.lang.String XmlElementName) throws Throwable {
+    public void setEmbedded(boolean Embedded) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("XmlElementName", XmlElementName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getOrder() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Order");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOrder(int Order) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Order", Order);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getXmlNamespace() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("XmlNamespace");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setXmlNamespace(java.lang.String XmlNamespace) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("XmlNamespace", XmlNamespace);
+            classInstance.Set("Embedded", Embedded);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,21 +197,21 @@ public class SoapFieldAttribute extends NetObject  {
         }
     }
 
-    public boolean getEmbedded() throws Throwable {
+    public int getOrder() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Embedded");
+            return (int)classInstance.Get("Order");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEmbedded(boolean Embedded) throws Throwable {
+    public void setOrder(int Order) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Embedded", Embedded);
+            classInstance.Set("Order", Order);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,6 +223,46 @@ public class SoapFieldAttribute extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("TypeId");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getXmlElementName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("XmlElementName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setXmlElementName(java.lang.String XmlElementName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("XmlElementName", XmlElementName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getXmlNamespace() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("XmlNamespace");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setXmlNamespace(java.lang.String XmlNamespace) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("XmlNamespace", XmlNamespace);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

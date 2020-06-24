@@ -92,23 +92,23 @@ public interface ITableMappingCollection extends IJCOBridgeReflected {
 
     // Methods section
     
-    public ITableMapping Add(java.lang.String sourceTableName, java.lang.String dataSetTableName) throws Throwable;
+    public boolean Contains(NetObject value) throws Throwable;
 
     public boolean Contains(java.lang.String sourceTableName) throws Throwable;
 
-    public ITableMapping GetByDataSetTable(java.lang.String dataSetTableName) throws Throwable;
+    public int Add(NetObject value) throws Throwable;
+
+    public int IndexOf(NetObject value) throws Throwable;
 
     public int IndexOf(java.lang.String sourceTableName) throws Throwable;
 
-    public void RemoveAt(java.lang.String sourceTableName) throws Throwable;
+    public ITableMapping Add(java.lang.String sourceTableName, java.lang.String dataSetTableName) throws Throwable;
+
+    public ITableMapping GetByDataSetTable(java.lang.String dataSetTableName) throws Throwable;
 
     public void Clear() throws Throwable;
 
-    public int Add(NetObject value) throws Throwable;
-
-    public boolean Contains(NetObject value) throws Throwable;
-
-    public int IndexOf(NetObject value) throws Throwable;
+    public void CopyTo(Array array, int index) throws Throwable;
 
     public void Insert(int index, NetObject value) throws Throwable;
 
@@ -116,21 +116,21 @@ public interface ITableMappingCollection extends IJCOBridgeReflected {
 
     public void RemoveAt(int index) throws Throwable;
 
-    public void CopyTo(Array array, int index) throws Throwable;
+    public void RemoveAt(java.lang.String sourceTableName) throws Throwable;
 
 
     
     // Properties section
     
+    public boolean getIsFixedSize() throws Throwable;
+
     public boolean getIsReadOnly() throws Throwable;
 
-    public boolean getIsFixedSize() throws Throwable;
+    public boolean getIsSynchronized() throws Throwable;
 
     public int getCount() throws Throwable;
 
     public NetObject getSyncRoot() throws Throwable;
-
-    public boolean getIsSynchronized() throws Throwable;
 
 
 

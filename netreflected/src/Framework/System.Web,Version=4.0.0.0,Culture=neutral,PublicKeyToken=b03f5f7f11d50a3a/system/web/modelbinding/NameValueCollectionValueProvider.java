@@ -112,21 +112,21 @@ public class NameValueCollectionValueProvider extends NetObject  {
     // Constructors section
     
 
-    public NameValueCollectionValueProvider(NameValueCollection collection, CultureInfo culture) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(collection == null ? null : collection.getJCOInstance(), culture == null ? null : culture.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NameValueCollectionValueProvider(NameValueCollection collection, NameValueCollection unvalidatedCollection, CultureInfo culture) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(collection == null ? null : collection.getJCOInstance(), unvalidatedCollection == null ? null : unvalidatedCollection.getJCOInstance(), culture == null ? null : culture.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NameValueCollectionValueProvider(NameValueCollection collection, CultureInfo culture) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(collection == null ? null : collection.getJCOInstance(), culture == null ? null : culture.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

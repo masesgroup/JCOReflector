@@ -105,6 +105,16 @@ public class IDebuggerObjectImplementation extends NetObject implements IDebugge
 
     // Methods section
     
+    public boolean HasEnumerableMember(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("HasEnumerableMember", name);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean IsCOMObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -120,16 +130,6 @@ public class IDebuggerObjectImplementation extends NetObject implements IDebugge
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsEqual", o == null ? null : o.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean HasEnumerableMember(java.lang.String name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("HasEnumerableMember", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

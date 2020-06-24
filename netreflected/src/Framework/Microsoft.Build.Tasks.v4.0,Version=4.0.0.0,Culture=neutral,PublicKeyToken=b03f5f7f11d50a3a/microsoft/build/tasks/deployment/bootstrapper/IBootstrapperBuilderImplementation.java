@@ -121,6 +121,17 @@ public class IBootstrapperBuilderImplementation extends NetObject implements IBo
     
     // Properties section
     
+    public ProductCollection getProducts() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Products");
+            return new ProductCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,17 +147,6 @@ public class IBootstrapperBuilderImplementation extends NetObject implements IBo
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Path", Path);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ProductCollection getProducts() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Products");
-            return new ProductCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

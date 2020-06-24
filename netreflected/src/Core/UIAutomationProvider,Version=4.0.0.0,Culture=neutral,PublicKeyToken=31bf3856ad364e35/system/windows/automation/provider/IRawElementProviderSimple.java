@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.windows.automation.provider.ProviderOptions;
 import system.windows.automation.provider.IRawElementProviderSimple;
 import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
+import system.windows.automation.provider.ProviderOptions;
 
 
 /**
@@ -100,9 +100,9 @@ public interface IRawElementProviderSimple extends IJCOBridgeReflected {
     
     // Properties section
     
-    public ProviderOptions getProviderOptions() throws Throwable;
-
     public IRawElementProviderSimple getHostRawElementProvider() throws Throwable;
+
+    public ProviderOptions getProviderOptions() throws Throwable;
 
 
 

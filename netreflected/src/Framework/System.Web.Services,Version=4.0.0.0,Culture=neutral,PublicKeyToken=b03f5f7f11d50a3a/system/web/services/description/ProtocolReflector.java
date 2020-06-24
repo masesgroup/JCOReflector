@@ -39,19 +39,19 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.services.description.ServiceDescription;
-import system.web.services.description.Service;
-import system.web.services.description.ServiceDescriptionCollection;
-import system.xml.serialization.XmlSchemas;
-import system.xml.serialization.XmlSchemaExporter;
-import system.xml.serialization.XmlReflectionImporter;
-import system.web.services.protocols.LogicalMethodInfo;
-import system.web.services.description.PortType;
-import system.web.services.description.Port;
-import system.web.services.description.Operation;
-import system.web.services.description.OperationBinding;
-import system.web.services.WebMethodAttribute;
 import system.web.services.description.Message;
 import system.web.services.description.MessageCollection;
+import system.web.services.description.Operation;
+import system.web.services.description.OperationBinding;
+import system.web.services.description.Port;
+import system.web.services.description.PortType;
+import system.web.services.description.Service;
+import system.web.services.description.ServiceDescriptionCollection;
+import system.web.services.protocols.LogicalMethodInfo;
+import system.web.services.WebMethodAttribute;
+import system.xml.serialization.XmlReflectionImporter;
+import system.xml.serialization.XmlSchemaExporter;
+import system.xml.serialization.XmlSchemas;
 
 
 /**
@@ -141,77 +141,21 @@ public class ProtocolReflector extends NetObject  {
     
     // Properties section
     
-    public Service getService() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Service");
-            return new Service(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ServiceDescription getServiceDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ServiceDescription");
-            return new ServiceDescription(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ServiceDescriptionCollection getServiceDescriptions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ServiceDescriptions");
-            return new ServiceDescriptionCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSchemas getSchemas() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Schemas");
-            return new XmlSchemas(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSchemaExporter getSchemaExporter() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SchemaExporter");
-            return new XmlSchemaExporter(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlReflectionImporter getReflectionImporter() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ReflectionImporter");
-            return new XmlReflectionImporter(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getDefaultNamespace() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("DefaultNamespace");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getProtocolName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ProtocolName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,95 +182,12 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
-    public LogicalMethodInfo getMethod() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Method");
-            return new LogicalMethodInfo(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public system.web.services.description.Binding getBinding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Binding");
             return new system.web.services.description.Binding(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PortType getPortType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PortType");
-            return new PortType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Port getPort() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Port");
-            return new Port(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Operation getOperation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Operation");
-            return new Operation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OperationBinding getOperationBinding() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("OperationBinding");
-            return new OperationBinding(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WebMethodAttribute getMethodAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MethodAttribute");
-            return new WebMethodAttribute(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LogicalMethodInfo[] getMethods() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<LogicalMethodInfo> resultingArrayList = new ArrayList<LogicalMethodInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Methods");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new LogicalMethodInfo(resultingObject));
-            }
-            LogicalMethodInfo[] resultingArray = new LogicalMethodInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,11 +226,150 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
-    public java.lang.String getProtocolName() throws Throwable {
+    public Operation getOperation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ProtocolName");
+            JCObject val = (JCObject)classInstance.Get("Operation");
+            return new Operation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public OperationBinding getOperationBinding() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("OperationBinding");
+            return new OperationBinding(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Port getPort() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Port");
+            return new Port(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PortType getPortType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PortType");
+            return new PortType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Service getService() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Service");
+            return new Service(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ServiceDescription getServiceDescription() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ServiceDescription");
+            return new ServiceDescription(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ServiceDescriptionCollection getServiceDescriptions() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ServiceDescriptions");
+            return new ServiceDescriptionCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LogicalMethodInfo getMethod() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Method");
+            return new LogicalMethodInfo(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LogicalMethodInfo[] getMethods() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<LogicalMethodInfo> resultingArrayList = new ArrayList<LogicalMethodInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("Methods");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new LogicalMethodInfo(resultingObject));
+            }
+            LogicalMethodInfo[] resultingArray = new LogicalMethodInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WebMethodAttribute getMethodAttribute() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MethodAttribute");
+            return new WebMethodAttribute(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlReflectionImporter getReflectionImporter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ReflectionImporter");
+            return new XmlReflectionImporter(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSchemaExporter getSchemaExporter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SchemaExporter");
+            return new XmlSchemaExporter(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSchemas getSchemas() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Schemas");
+            return new XmlSchemas(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

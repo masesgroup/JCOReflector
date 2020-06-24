@@ -139,31 +139,11 @@ public class SoapHeaderHandling extends NetObject  {
         }
     }
 
-    public static void WriteHeaders(XmlWriter writer, XmlSerializer serializer, SoapHeaderCollection headers, SoapHeaderMapping[] mappings, SoapHeaderDirection direction, boolean isEncoded, java.lang.String defaultNS, boolean serviceDefaultIsEncoded, java.lang.String envelopeNS) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.NotImplementedException, system.MissingMethodException, system.xml.XmlException, system.RankException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.security.SecurityException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ApplicationException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.TypeLoadException, system.collections.generic.KeyNotFoundException {
+    public static void EnsureHeadersUnderstood(SoapHeaderCollection headers) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.web.services.protocols.SoapHeaderException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("WriteHeaders", writer == null ? null : writer.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance(), headers == null ? null : headers.getJCOInstance(), toObjectFromArray(mappings), direction == null ? null : direction.getJCOInstance(), isEncoded, defaultNS, serviceDefaultIsEncoded, envelopeNS);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void WriteUnknownHeaders(XmlWriter writer, SoapHeaderCollection headers, java.lang.String envelopeNS) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.RankException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("WriteUnknownHeaders", writer == null ? null : writer.getJCOInstance(), headers == null ? null : headers.getJCOInstance(), envelopeNS);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void SetHeaderMembers(SoapHeaderCollection headers, NetObject target, SoapHeaderMapping[] mappings, SoapHeaderDirection direction, boolean client) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.web.services.protocols.SoapHeaderException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SetHeaderMembers", headers == null ? null : headers.getJCOInstance(), target == null ? null : target.getJCOInstance(), toObjectFromArray(mappings), direction == null ? null : direction.getJCOInstance(), client);
+            classType.Invoke("EnsureHeadersUnderstood", headers == null ? null : headers.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,11 +159,31 @@ public class SoapHeaderHandling extends NetObject  {
         }
     }
 
-    public static void EnsureHeadersUnderstood(SoapHeaderCollection headers) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.web.services.protocols.SoapHeaderException {
+    public static void SetHeaderMembers(SoapHeaderCollection headers, NetObject target, SoapHeaderMapping[] mappings, SoapHeaderDirection direction, boolean client) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.web.services.protocols.SoapHeaderException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("EnsureHeadersUnderstood", headers == null ? null : headers.getJCOInstance());
+            classType.Invoke("SetHeaderMembers", headers == null ? null : headers.getJCOInstance(), target == null ? null : target.getJCOInstance(), toObjectFromArray(mappings), direction == null ? null : direction.getJCOInstance(), client);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteHeaders(XmlWriter writer, XmlSerializer serializer, SoapHeaderCollection headers, SoapHeaderMapping[] mappings, SoapHeaderDirection direction, boolean isEncoded, java.lang.String defaultNS, boolean serviceDefaultIsEncoded, java.lang.String envelopeNS) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.NotImplementedException, system.MissingMethodException, system.xml.XmlException, system.RankException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.security.SecurityException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ApplicationException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.TypeLoadException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteHeaders", writer == null ? null : writer.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance(), headers == null ? null : headers.getJCOInstance(), toObjectFromArray(mappings), direction == null ? null : direction.getJCOInstance(), isEncoded, defaultNS, serviceDefaultIsEncoded, envelopeNS);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteUnknownHeaders(XmlWriter writer, SoapHeaderCollection headers, java.lang.String envelopeNS) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.RankException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteUnknownHeaders", writer == null ? null : writer.getJCOInstance(), headers == null ? null : headers.getJCOInstance(), envelopeNS);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

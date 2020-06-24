@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.ImportDefinitionCollection;
-import system.reflection.metadata.ImportScopeHandle;
 import system.reflection.metadata.BlobHandle;
+import system.reflection.metadata.ImportScopeHandle;
 
 
 /**
@@ -130,23 +130,23 @@ public class ImportScope extends NetObject  {
     
     // Properties section
     
-    public ImportScopeHandle getParent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new ImportScopeHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public BlobHandle getImportsBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ImportsBlob");
             return new BlobHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImportScopeHandle getParent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Parent");
+            return new ImportScopeHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

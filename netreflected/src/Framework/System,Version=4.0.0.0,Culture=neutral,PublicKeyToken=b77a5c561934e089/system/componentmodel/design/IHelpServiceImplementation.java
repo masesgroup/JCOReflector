@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.design.HelpKeywordType;
 import system.componentmodel.design.IHelpService;
 import system.componentmodel.design.IHelpServiceImplementation;
 import system.componentmodel.design.HelpContextType;
+import system.componentmodel.design.HelpKeywordType;
 
 
 /**
@@ -107,6 +107,17 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
 
     // Methods section
     
+    public IHelpService CreateLocalContext(HelpContextType contextType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateLocalContext = (JCObject)classInstance.Invoke("CreateLocalContext", contextType == null ? null : contextType.getJCOInstance());
+            return new IHelpServiceImplementation(objCreateLocalContext);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddContextAttribute(java.lang.String name, java.lang.String value, HelpKeywordType keywordType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -122,17 +133,6 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearContextAttributes");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IHelpService CreateLocalContext(HelpContextType contextType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateLocalContext = (JCObject)classInstance.Invoke("CreateLocalContext", contextType == null ? null : contextType.getJCOInstance());
-            return new IHelpServiceImplementation(objCreateLocalContext);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

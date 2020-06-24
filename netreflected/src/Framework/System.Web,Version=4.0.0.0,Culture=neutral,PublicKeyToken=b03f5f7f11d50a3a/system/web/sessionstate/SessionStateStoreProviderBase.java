@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.sessionstate.SessionStateItemExpireCallback;
-import system.web.HttpContext;
 import system.web.sessionstate.SessionStateStoreData;
+import system.web.HttpContext;
 import system.collections.specialized.NameValueCollection;
 
 
@@ -116,71 +116,11 @@ public class SessionStateStoreProviderBase extends NetObject  {
     
     // Methods section
     
-    public void Dispose() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean SetItemExpireCallback(SessionStateItemExpireCallback expireCallback) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("SetItemExpireCallback", expireCallback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void InitializeRequest(HttpContext context) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("InitializeRequest", context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ReleaseItemExclusive(HttpContext context, java.lang.String id, NetObject lockId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReleaseItemExclusive", context == null ? null : context.getJCOInstance(), id, lockId == null ? null : lockId.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetAndReleaseItemExclusive(HttpContext context, java.lang.String id, SessionStateStoreData item, NetObject lockId, boolean newItem) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetAndReleaseItemExclusive", context == null ? null : context.getJCOInstance(), id, item == null ? null : item.getJCOInstance(), lockId == null ? null : lockId.getJCOInstance(), newItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveItem(HttpContext context, java.lang.String id, NetObject lockId, SessionStateStoreData item) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveItem", context == null ? null : context.getJCOInstance(), id, lockId == null ? null : lockId.getJCOInstance(), item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ResetItemTimeout(HttpContext context, java.lang.String id) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ResetItemTimeout", context == null ? null : context.getJCOInstance(), id);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,6 +147,16 @@ public class SessionStateStoreProviderBase extends NetObject  {
         }
     }
 
+    public void Dispose() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void EndRequest(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -227,25 +177,75 @@ public class SessionStateStoreProviderBase extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public java.lang.String getName() throws Throwable {
+    public void InitializeRequest(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            classInstance.Invoke("InitializeRequest", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public void ReleaseItemExclusive(HttpContext context, java.lang.String id, NetObject lockId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReleaseItemExclusive", context == null ? null : context.getJCOInstance(), id, lockId == null ? null : lockId.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveItem(HttpContext context, java.lang.String id, NetObject lockId, SessionStateStoreData item) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveItem", context == null ? null : context.getJCOInstance(), id, lockId == null ? null : lockId.getJCOInstance(), item == null ? null : item.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ResetItemTimeout(HttpContext context, java.lang.String id) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ResetItemTimeout", context == null ? null : context.getJCOInstance(), id);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetAndReleaseItemExclusive(HttpContext context, java.lang.String id, SessionStateStoreData item, NetObject lockId, boolean newItem) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetAndReleaseItemExclusive", context == null ? null : context.getJCOInstance(), id, item == null ? null : item.getJCOInstance(), lockId == null ? null : lockId.getJCOInstance(), newItem);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+
+    
+    // Properties section
+    
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Description");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

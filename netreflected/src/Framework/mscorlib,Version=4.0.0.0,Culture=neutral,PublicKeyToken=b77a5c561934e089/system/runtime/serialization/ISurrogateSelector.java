@@ -37,11 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.runtime.serialization.ISurrogateSelector;
-import system.runtime.serialization.ISurrogateSelectorImplementation;
 import system.runtime.serialization.ISerializationSurrogate;
 import system.runtime.serialization.ISerializationSurrogateImplementation;
 import system.runtime.serialization.StreamingContext;
+import system.runtime.serialization.ISurrogateSelector;
+import system.runtime.serialization.ISurrogateSelectorImplementation;
 
 
 /**
@@ -94,9 +94,9 @@ public interface ISurrogateSelector extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void ChainSelector(ISurrogateSelector selector) throws Throwable;
-
     public ISurrogateSelector GetNextSelector() throws Throwable;
+
+    public void ChainSelector(ISurrogateSelector selector) throws Throwable;
 
 
     

@@ -128,22 +128,22 @@ public class XmlXapResolver extends NetObject  {
     
     // Methods section
     
+    public boolean SupportsType(Uri absoluteUri, NetType type) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SupportsType", absoluteUri == null ? null : absoluteUri.getJCOInstance(), type == null ? null : type.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetEntity(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetEntity = (JCObject)classInstance.Invoke("GetEntity", absoluteUri == null ? null : absoluteUri.getJCOInstance(), role, ofObjectToReturn == null ? null : ofObjectToReturn.getJCOInstance());
             return new NetObject(objGetEntity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void RegisterApplicationResourceStreamResolver(IApplicationResourceStreamResolver appStreamResolver) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("RegisterApplicationResourceStreamResolver", appStreamResolver == null ? null : appStreamResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,11 +160,11 @@ public class XmlXapResolver extends NetObject  {
         }
     }
 
-    public boolean SupportsType(Uri absoluteUri, NetType type) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void RegisterApplicationResourceStreamResolver(IApplicationResourceStreamResolver appStreamResolver) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Invoke("SupportsType", absoluteUri == null ? null : absoluteUri.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            classType.Invoke("RegisterApplicationResourceStreamResolver", appStreamResolver == null ? null : appStreamResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

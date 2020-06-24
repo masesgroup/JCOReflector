@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.PeerResolver;
 import system.servicemodel.channels.BindingElement;
+import system.servicemodel.PeerResolver;
 import system.servicemodel.peerresolvers.PeerReferralPolicy;
 
 
@@ -115,23 +115,23 @@ public class PeerResolverBindingElement extends NetObject  {
     
     // Methods section
     
-    public PeerResolver CreatePeerResolver() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreatePeerResolver = (JCObject)classInstance.Invoke("CreatePeerResolver");
-            return new PeerResolver(objCreatePeerResolver);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public BindingElement Clone() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objClone = (JCObject)classInstance.Invoke("Clone");
             return new BindingElement(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PeerResolver CreatePeerResolver() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreatePeerResolver = (JCObject)classInstance.Invoke("CreatePeerResolver");
+            return new PeerResolver(objCreatePeerResolver);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

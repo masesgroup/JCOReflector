@@ -129,23 +129,23 @@ public class ActivityChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public Activity getActivity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Activity");
-            return new Activity(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MemberDescriptor getMember() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Member");
             return new MemberDescriptor(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject getNewValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NewValue");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,12 +162,12 @@ public class ActivityChangedEventArgs extends NetObject  {
         }
     }
 
-    public NetObject getNewValue() throws Throwable {
+    public Activity getActivity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NewValue");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("Activity");
+            return new Activity(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -135,12 +135,11 @@ public class JSFunctionAttribute extends NetObject  {
     
     // Methods section
     
-    public JSFunctionAttributeEnum GetAttributeValue() throws Throwable {
+    public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetAttributeValue = (JCObject)classInstance.Invoke("GetAttributeValue");
-            return new JSFunctionAttributeEnum(objGetAttributeValue);
+            return (boolean)classInstance.Invoke("IsDefaultAttribute");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,11 +155,12 @@ public class JSFunctionAttribute extends NetObject  {
         }
     }
 
-    public boolean IsDefaultAttribute() throws Throwable {
+    public JSFunctionAttributeEnum GetAttributeValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            JCObject objGetAttributeValue = (JCObject)classInstance.Invoke("GetAttributeValue");
+            return new JSFunctionAttributeEnum(objGetAttributeValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

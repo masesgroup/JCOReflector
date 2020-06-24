@@ -113,21 +113,21 @@ public class OperationFaultCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(OperationFault operationFaultMessage) throws Throwable {
+    public boolean Contains(OperationFault operationFaultMessage) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", operationFaultMessage == null ? null : operationFaultMessage.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", operationFaultMessage == null ? null : operationFaultMessage.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, OperationFault operationFaultMessage) throws Throwable {
+    public int Add(OperationFault operationFaultMessage) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, operationFaultMessage == null ? null : operationFaultMessage.getJCOInstance());
+            return (int)classInstance.Invoke("Add", operationFaultMessage == null ? null : operationFaultMessage.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,21 +143,11 @@ public class OperationFaultCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(OperationFault operationFaultMessage) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", operationFaultMessage == null ? null : operationFaultMessage.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(OperationFault operationFaultMessage) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", operationFaultMessage == null ? null : operationFaultMessage.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,11 +163,21 @@ public class OperationFaultCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public void Insert(int index, OperationFault operationFaultMessage) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, operationFaultMessage == null ? null : operationFaultMessage.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(OperationFault operationFaultMessage) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", operationFaultMessage == null ? null : operationFaultMessage.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

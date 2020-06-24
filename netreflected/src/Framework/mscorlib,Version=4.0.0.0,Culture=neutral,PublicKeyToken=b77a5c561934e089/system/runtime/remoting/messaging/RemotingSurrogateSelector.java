@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.serialization.ISurrogateSelector;
-import system.runtime.serialization.ISurrogateSelectorImplementation;
 import system.runtime.serialization.ISerializationSurrogate;
 import system.runtime.serialization.ISerializationSurrogateImplementation;
 import system.runtime.serialization.StreamingContext;
+import system.runtime.serialization.ISurrogateSelector;
+import system.runtime.serialization.ISurrogateSelectorImplementation;
 import system.runtime.remoting.messaging.MessageSurrogateFilter;
 
 
@@ -129,22 +129,23 @@ public class RemotingSurrogateSelector extends NetObject  {
     
     // Methods section
     
-    public void SetRootObject(NetObject obj) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetRootObject", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetRootObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetRootObject = (JCObject)classInstance.Invoke("GetRootObject");
             return new NetObject(objGetRootObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ISurrogateSelector GetNextSelector() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetNextSelector = (JCObject)classInstance.Invoke("GetNextSelector");
+            return new ISurrogateSelectorImplementation(objGetNextSelector);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,12 +161,11 @@ public class RemotingSurrogateSelector extends NetObject  {
         }
     }
 
-    public ISurrogateSelector GetNextSelector() throws Throwable {
+    public void SetRootObject(NetObject obj) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetNextSelector = (JCObject)classInstance.Invoke("GetNextSelector");
-            return new ISurrogateSelectorImplementation(objGetNextSelector);
+            classInstance.Invoke("SetRootObject", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

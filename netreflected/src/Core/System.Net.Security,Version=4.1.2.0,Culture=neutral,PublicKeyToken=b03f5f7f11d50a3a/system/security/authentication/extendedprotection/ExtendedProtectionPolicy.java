@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.authentication.extendedprotection.PolicyEnforcement;
+import system.security.authentication.extendedprotection.ChannelBinding;
 import system.security.authentication.extendedprotection.ProtectionScenario;
-import system.security.authentication.extendedprotection.ServiceNameCollection;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
-import system.security.authentication.extendedprotection.ChannelBinding;
+import system.security.authentication.extendedprotection.ServiceNameCollection;
 
 
 /**
@@ -115,21 +115,11 @@ public class ExtendedProtectionPolicy extends NetObject  {
     // Constructors section
     
 
-    public ExtendedProtectionPolicy(PolicyEnforcement policyEnforcement, ProtectionScenario protectionScenario, ServiceNameCollection customServiceNames) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+    public ExtendedProtectionPolicy(PolicyEnforcement policyEnforcement) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(policyEnforcement == null ? null : policyEnforcement.getJCOInstance(), protectionScenario == null ? null : protectionScenario.getJCOInstance(), customServiceNames == null ? null : customServiceNames.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ExtendedProtectionPolicy(PolicyEnforcement policyEnforcement, ProtectionScenario protectionScenario, ICollection customServiceNames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.UriFormatException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(policyEnforcement == null ? null : policyEnforcement.getJCOInstance(), protectionScenario == null ? null : protectionScenario.getJCOInstance(), customServiceNames == null ? null : customServiceNames.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(policyEnforcement == null ? null : policyEnforcement.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,11 +135,21 @@ public class ExtendedProtectionPolicy extends NetObject  {
         }
     }
 
-    public ExtendedProtectionPolicy(PolicyEnforcement policyEnforcement) throws Throwable {
+    public ExtendedProtectionPolicy(PolicyEnforcement policyEnforcement, ProtectionScenario protectionScenario, ICollection customServiceNames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.UriFormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(policyEnforcement == null ? null : policyEnforcement.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(policyEnforcement == null ? null : policyEnforcement.getJCOInstance(), protectionScenario == null ? null : protectionScenario.getJCOInstance(), customServiceNames == null ? null : customServiceNames.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ExtendedProtectionPolicy(PolicyEnforcement policyEnforcement, ProtectionScenario protectionScenario, ServiceNameCollection customServiceNames) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(policyEnforcement == null ? null : policyEnforcement.getJCOInstance(), protectionScenario == null ? null : protectionScenario.getJCOInstance(), customServiceNames == null ? null : customServiceNames.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,12 +163,22 @@ public class ExtendedProtectionPolicy extends NetObject  {
     
     // Properties section
     
-    public ServiceNameCollection getCustomServiceNames() throws Throwable {
+    public static boolean getOSSupportsExtendedProtection() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Get("OSSupportsExtendedProtection");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ChannelBinding getCustomChannelBinding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomServiceNames");
-            return new ServiceNameCollection(val);
+            JCObject val = (JCObject)classInstance.Get("CustomChannelBinding");
+            return new ChannelBinding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,22 +206,12 @@ public class ExtendedProtectionPolicy extends NetObject  {
         }
     }
 
-    public ChannelBinding getCustomChannelBinding() throws Throwable {
+    public ServiceNameCollection getCustomServiceNames() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomChannelBinding");
-            return new ChannelBinding(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean getOSSupportsExtendedProtection() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Get("OSSupportsExtendedProtection");
+            JCObject val = (JCObject)classInstance.Get("CustomServiceNames");
+            return new ServiceNameCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -112,11 +112,11 @@ public class EncoderFallbackBuffer extends NetObject  {
     
     // Methods section
     
-    public void Reset() throws Throwable {
+    public boolean Fallback(char charUnknownHigh, char charUnknownLow, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Reset");
+            return (boolean)classInstance.Invoke("Fallback", charUnknownHigh, charUnknownLow, index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -132,11 +132,11 @@ public class EncoderFallbackBuffer extends NetObject  {
         }
     }
 
-    public boolean Fallback(char charUnknownHigh, char charUnknownLow, int index) throws Throwable {
+    public boolean MovePrevious() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Fallback", charUnknownHigh, charUnknownLow, index);
+            return (boolean)classInstance.Invoke("MovePrevious");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,11 +152,11 @@ public class EncoderFallbackBuffer extends NetObject  {
         }
     }
 
-    public boolean MovePrevious() throws Throwable {
+    public void Reset() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("MovePrevious");
+            classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

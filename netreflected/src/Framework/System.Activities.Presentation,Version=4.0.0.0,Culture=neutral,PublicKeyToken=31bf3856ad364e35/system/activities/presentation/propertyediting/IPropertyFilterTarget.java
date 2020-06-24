@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.activities.presentation.propertyediting.PropertyFilter;
 import system.activities.presentation.propertyediting.PropertyFilterPredicate;
+import system.activities.presentation.propertyediting.PropertyFilter;
 
 
 /**
@@ -91,9 +91,9 @@ public interface IPropertyFilterTarget extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void ApplyFilter(PropertyFilter filter) throws Throwable;
-
     public boolean MatchesPredicate(PropertyFilterPredicate predicate) throws Throwable;
+
+    public void ApplyFilter(PropertyFilter filter) throws Throwable;
 
 
     

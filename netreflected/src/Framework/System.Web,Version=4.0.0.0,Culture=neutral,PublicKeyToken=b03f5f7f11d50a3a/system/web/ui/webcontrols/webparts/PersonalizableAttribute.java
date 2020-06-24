@@ -156,17 +156,6 @@ public class PersonalizableAttribute extends NetObject  {
     
     // Methods section
     
-    public static ICollection GetPersonalizableProperties(NetType type) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetPersonalizableProperties = (JCObject)classType.Invoke("GetPersonalizableProperties", type == null ? null : type.getJCOInstance());
-            return new ICollectionImplementation(objGetPersonalizableProperties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -182,6 +171,17 @@ public class PersonalizableAttribute extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ICollection GetPersonalizableProperties(NetType type) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetPersonalizableProperties = (JCObject)classType.Invoke("GetPersonalizableProperties", type == null ? null : type.getJCOInstance());
+            return new ICollectionImplementation(objGetPersonalizableProperties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,23 +211,23 @@ public class PersonalizableAttribute extends NetObject  {
         }
     }
 
-    public PersonalizationScope getScope() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Scope");
-            return new PersonalizationScope(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject getTypeId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("TypeId");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PersonalizationScope getScope() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Scope");
+            return new PersonalizationScope(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

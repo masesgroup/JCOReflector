@@ -128,12 +128,34 @@ public class Cache extends NetObject  {
     
     // Methods section
     
+    public NetObject Add(java.lang.String key, NetObject value, CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException, system.resources.MissingManifestResourceException, system.web.HttpException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.NotImplementedException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAdd = (JCObject)classInstance.Invoke("Add", key, value == null ? null : value.getJCOInstance(), dependencies == null ? null : dependencies.getJCOInstance(), absoluteExpiration == null ? null : absoluteExpiration.getJCOInstance(), slidingExpiration == null ? null : slidingExpiration.getJCOInstance(), priority == null ? null : priority.getJCOInstance(), onRemoveCallback);
+            return new NetObject(objAdd);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject Get(java.lang.String key) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.NotImplementedException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGet = (JCObject)classInstance.Invoke("Get", key);
             return new NetObject(objGet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject Remove(java.lang.String key) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.NotImplementedException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objRemove = (JCObject)classInstance.Invoke("Remove", key);
+            return new NetObject(objRemove);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,28 +191,6 @@ public class Cache extends NetObject  {
         }
     }
 
-    public NetObject Add(java.lang.String key, NetObject value, CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException, system.resources.MissingManifestResourceException, system.web.HttpException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.NotImplementedException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", key, value == null ? null : value.getJCOInstance(), dependencies == null ? null : dependencies.getJCOInstance(), absoluteExpiration == null ? null : absoluteExpiration.getJCOInstance(), slidingExpiration == null ? null : slidingExpiration.getJCOInstance(), priority == null ? null : priority.getJCOInstance(), onRemoveCallback);
-            return new NetObject(objAdd);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject Remove(java.lang.String key) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.NotImplementedException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRemove = (JCObject)classInstance.Invoke("Remove", key);
-            return new NetObject(objRemove);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Insert(java.lang.String key, NetObject value, CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, CacheItemRemovedCallback onRemoveCallback) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException, system.resources.MissingManifestResourceException, system.web.HttpException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.NotImplementedException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -215,21 +215,21 @@ public class Cache extends NetObject  {
         }
     }
 
-    public long getEffectivePrivateBytesLimit() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("EffectivePrivateBytesLimit");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public long getEffectivePercentagePhysicalMemoryLimit() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (long)classInstance.Get("EffectivePercentagePhysicalMemoryLimit");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long getEffectivePrivateBytesLimit() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Get("EffectivePrivateBytesLimit");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

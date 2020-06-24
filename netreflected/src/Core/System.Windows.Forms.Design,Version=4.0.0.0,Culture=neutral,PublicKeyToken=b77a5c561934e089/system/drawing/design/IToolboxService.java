@@ -37,13 +37,13 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.drawing.design.ToolboxItemCreatorCallback;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
 import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
 import system.drawing.design.ToolboxItem;
 import system.drawing.design.ToolboxItemCollection;
-import system.collections.ICollection;
-import system.collections.ICollectionImplementation;
+import system.drawing.design.ToolboxItemCreatorCallback;
 import system.drawing.design.CategoryNameCollection;
 
 
@@ -97,17 +97,15 @@ public interface IToolboxService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format) throws Throwable;
+    public boolean IsSupported(NetObject serializedObject, ICollection filterAttributes) throws Throwable;
 
-    public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format, IDesignerHost host) throws Throwable;
+    public boolean IsSupported(NetObject serializedObject, IDesignerHost host) throws Throwable;
 
-    public void AddLinkedToolboxItem(ToolboxItem toolboxItem, IDesignerHost host) throws Throwable;
+    public boolean IsToolboxItem(NetObject serializedObject) throws Throwable;
 
-    public void AddLinkedToolboxItem(ToolboxItem toolboxItem, java.lang.String category, IDesignerHost host) throws Throwable;
+    public boolean IsToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable;
 
-    public void AddToolboxItem(ToolboxItem toolboxItem) throws Throwable;
-
-    public void AddToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable;
+    public boolean SetCursor() throws Throwable;
 
     public ToolboxItem DeserializeToolboxItem(NetObject serializedObject) throws Throwable;
 
@@ -125,13 +123,19 @@ public interface IToolboxService extends IJCOBridgeReflected {
 
     public ToolboxItemCollection GetToolboxItems(java.lang.String category, IDesignerHost host) throws Throwable;
 
-    public boolean IsSupported(NetObject serializedObject, IDesignerHost host) throws Throwable;
+    public NetObject SerializeToolboxItem(ToolboxItem toolboxItem) throws Throwable;
 
-    public boolean IsSupported(NetObject serializedObject, ICollection filterAttributes) throws Throwable;
+    public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format) throws Throwable;
 
-    public boolean IsToolboxItem(NetObject serializedObject) throws Throwable;
+    public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format, IDesignerHost host) throws Throwable;
 
-    public boolean IsToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable;
+    public void AddLinkedToolboxItem(ToolboxItem toolboxItem, IDesignerHost host) throws Throwable;
+
+    public void AddLinkedToolboxItem(ToolboxItem toolboxItem, java.lang.String category, IDesignerHost host) throws Throwable;
+
+    public void AddToolboxItem(ToolboxItem toolboxItem) throws Throwable;
+
+    public void AddToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable;
 
     public void Refresh() throws Throwable;
 
@@ -144,10 +148,6 @@ public interface IToolboxService extends IJCOBridgeReflected {
     public void RemoveToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable;
 
     public void SelectedToolboxItemUsed() throws Throwable;
-
-    public NetObject SerializeToolboxItem(ToolboxItem toolboxItem) throws Throwable;
-
-    public boolean SetCursor() throws Throwable;
 
     public void SetSelectedToolboxItem(ToolboxItem toolboxItem) throws Throwable;
 

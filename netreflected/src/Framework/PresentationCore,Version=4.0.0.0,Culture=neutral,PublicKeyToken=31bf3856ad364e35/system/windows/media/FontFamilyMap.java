@@ -128,21 +128,21 @@ public class FontFamilyMap extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getUnicode() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
+    public double getScale() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Unicode");
+            return (double)classInstance.Get("Scale");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUnicode(java.lang.String Unicode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+    public void setScale(double Scale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Unicode", Unicode);
+            classInstance.Set("Scale", Scale);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,21 +168,21 @@ public class FontFamilyMap extends NetObject  {
         }
     }
 
-    public double getScale() throws Throwable {
+    public java.lang.String getUnicode() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("Scale");
+            return (java.lang.String)classInstance.Get("Unicode");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setScale(double Scale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void setUnicode(java.lang.String Unicode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Scale", Scale);
+            classInstance.Set("Unicode", Unicode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

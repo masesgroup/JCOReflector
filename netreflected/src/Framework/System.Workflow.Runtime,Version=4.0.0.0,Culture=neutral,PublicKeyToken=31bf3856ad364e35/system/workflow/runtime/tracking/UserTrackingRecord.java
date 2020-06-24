@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.Guid;
 import system.DateTime;
-import system.workflow.runtime.tracking.TrackingAnnotationCollection;
 import system.EventArgs;
+import system.workflow.runtime.tracking.TrackingAnnotationCollection;
 
 
 /**
@@ -141,21 +141,63 @@ public class UserTrackingRecord extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getQualifiedName() throws Throwable {
+    public int getEventOrder() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("QualifiedName");
+            return (int)classInstance.Get("EventOrder");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setQualifiedName(java.lang.String QualifiedName) throws Throwable {
+    public void setEventOrder(int EventOrder) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("QualifiedName", QualifiedName);
+            classInstance.Set("EventOrder", EventOrder);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DateTime getEventDateTime() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EventDateTime");
+            return new DateTime(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEventDateTime(DateTime EventDateTime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("EventDateTime", EventDateTime == null ? null : EventDateTime.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventArgs getEventArgs() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EventArgs");
+            return new EventArgs(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEventArgs(EventArgs EventArgs) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("EventArgs", EventArgs == null ? null : EventArgs.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,22 +245,42 @@ public class UserTrackingRecord extends NetObject  {
         }
     }
 
-    public NetType getActivityType() throws Throwable {
+    public NetObject getUserData() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivityType");
-            return new NetType(val);
+            JCObject val = (JCObject)classInstance.Get("UserData");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setActivityType(NetType ActivityType) throws Throwable {
+    public void setUserData(NetObject UserData) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ActivityType", ActivityType == null ? null : ActivityType.getJCOInstance());
+            classInstance.Set("UserData", UserData == null ? null : UserData.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getQualifiedName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("QualifiedName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setQualifiedName(java.lang.String QualifiedName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("QualifiedName", QualifiedName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,63 +306,22 @@ public class UserTrackingRecord extends NetObject  {
         }
     }
 
-    public NetObject getUserData() throws Throwable {
+    public NetType getActivityType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("ActivityType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUserData(NetObject UserData) throws Throwable {
+    public void setActivityType(NetType ActivityType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("UserData", UserData == null ? null : UserData.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getEventDateTime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EventDateTime");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEventDateTime(DateTime EventDateTime) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EventDateTime", EventDateTime == null ? null : EventDateTime.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getEventOrder() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("EventOrder");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEventOrder(int EventOrder) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EventOrder", EventOrder);
+            classInstance.Set("ActivityType", ActivityType == null ? null : ActivityType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,27 +333,6 @@ public class UserTrackingRecord extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Annotations");
             return new TrackingAnnotationCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EventArgs getEventArgs() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EventArgs");
-            return new EventArgs(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEventArgs(EventArgs EventArgs) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EventArgs", EventArgs == null ? null : EventArgs.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

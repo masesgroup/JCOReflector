@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.Activity;
-import system.activities.LocationReferenceEnvironment;
 import system.Version;
+import system.activities.LocationReferenceEnvironment;
 
 
 /**
@@ -115,21 +115,11 @@ public class WorkflowInspectionServices extends NetObject  {
     
     // Methods section
     
-    public static void CacheMetadata(Activity rootActivity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
+    public static boolean CanInduceIdle(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("CacheMetadata", rootActivity == null ? null : rootActivity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void CacheMetadata(Activity rootActivity, LocationReferenceEnvironment hostEnvironment) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("CacheMetadata", rootActivity == null ? null : rootActivity.getJCOInstance(), hostEnvironment == null ? null : hostEnvironment.getJCOInstance());
+            return (boolean)classType.Invoke("CanInduceIdle", activity == null ? null : activity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,11 +147,21 @@ public class WorkflowInspectionServices extends NetObject  {
         }
     }
 
-    public static boolean CanInduceIdle(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public static void CacheMetadata(Activity rootActivity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("CanInduceIdle", activity == null ? null : activity.getJCOInstance());
+            classType.Invoke("CacheMetadata", rootActivity == null ? null : rootActivity.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void CacheMetadata(Activity rootActivity, LocationReferenceEnvironment hostEnvironment) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("CacheMetadata", rootActivity == null ? null : rootActivity.getJCOInstance(), hostEnvironment == null ? null : hostEnvironment.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

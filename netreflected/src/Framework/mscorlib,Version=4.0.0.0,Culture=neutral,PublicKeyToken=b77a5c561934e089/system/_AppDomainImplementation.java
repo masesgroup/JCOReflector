@@ -38,24 +38,24 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.UInt32;
-import system.reflection.emit.AssemblyBuilder;
-import system.reflection.AssemblyName;
-import system.reflection.emit.AssemblyBuilderAccess;
 import system.security.policy.Evidence;
+import system.reflection.Assembly;
+import system.reflection.AssemblyName;
+import system.reflection.emit.AssemblyBuilder;
+import system.reflection.emit.AssemblyBuilderAccess;
 import system.security.PermissionSet;
 import system.runtime.remoting.ObjectHandle;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.globalization.CultureInfo;
-import system.reflection.Assembly;
+import system.CrossAppDomainDelegate;
+import system.UInt32;
 import system.security.policy.PolicyLevel;
+import system.security.principal.PrincipalPolicy;
 import system.security.principal.IPrincipal;
 import system.security.principal.IPrincipalImplementation;
-import system.security.principal.PrincipalPolicy;
-import system.CrossAppDomainDelegate;
-import system.EventHandler;
 import system.AssemblyLoadEventHandler;
+import system.EventHandler;
 import system.ResolveEventHandler;
 import system.UnhandledExceptionEventHandler;
 
@@ -123,12 +123,42 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
 
     // Methods section
     
-    public NetObject InitializeLifetimeService() throws Throwable {
+    public int ExecuteAssembly(java.lang.String assemblyFile) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
+            return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ExecuteAssembly(java.lang.String assemblyFile, Evidence assemblySecurity) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile, assemblySecurity == null ? null : assemblySecurity.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ExecuteAssembly(java.lang.String assemblyFile, Evidence assemblySecurity, java.lang.String[] args) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile, assemblySecurity == null ? null : assemblySecurity.getJCOInstance(), args);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetData(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", name);
+            return new NetObject(objGetData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,33 +175,116 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    public NetObject InitializeLifetimeService() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
+            return new NetObject(objInitializeLifetimeService);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly Load(byte[] rawAssembly) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (Object)rawAssembly);
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", rawAssembly, rawSymbolStore);
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore, Evidence securityEvidence) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", rawAssembly, rawSymbolStore, securityEvidence == null ? null : securityEvidence.getJCOInstance());
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly Load(AssemblyName assemblyRef) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", assemblyRef == null ? null : assemblyRef.getJCOInstance());
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly Load(AssemblyName assemblyRef, Evidence assemblySecurity) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", assemblyRef == null ? null : assemblyRef.getJCOInstance(), assemblySecurity == null ? null : assemblySecurity.getJCOInstance());
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly Load(java.lang.String assemblyString) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", assemblyString);
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly Load(java.lang.String assemblyString, Evidence assemblySecurity) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", assemblyString, assemblySecurity == null ? null : assemblySecurity.getJCOInstance());
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly[] GetAssemblies() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Assembly> resultingArrayList = new ArrayList<Assembly>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAssemblies");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new Assembly(resultingObject));
+            }
+            Assembly[] resultingArray = new Assembly[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objDefineDynamicAssembly = (JCObject)classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance());
-            return new AssemblyBuilder(objDefineDynamicAssembly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineDynamicAssembly = (JCObject)classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), dir);
-            return new AssemblyBuilder(objDefineDynamicAssembly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, Evidence evidence) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineDynamicAssembly = (JCObject)classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), evidence == null ? null : evidence.getJCOInstance());
             return new AssemblyBuilder(objDefineDynamicAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -189,11 +302,33 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence) throws Throwable {
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineDynamicAssembly = (JCObject)classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), dir, evidence == null ? null : evidence.getJCOInstance());
+            JCObject objDefineDynamicAssembly = (JCObject)classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), evidence == null ? null : evidence.getJCOInstance());
+            return new AssemblyBuilder(objDefineDynamicAssembly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineDynamicAssembly = (JCObject)classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), evidence == null ? null : evidence.getJCOInstance(), requiredPermissions == null ? null : requiredPermissions.getJCOInstance(), optionalPermissions == null ? null : optionalPermissions.getJCOInstance(), refusedPermissions == null ? null : refusedPermissions.getJCOInstance());
+            return new AssemblyBuilder(objDefineDynamicAssembly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineDynamicAssembly = (JCObject)classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), dir);
             return new AssemblyBuilder(objDefineDynamicAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -211,11 +346,11 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable {
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineDynamicAssembly = (JCObject)classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), evidence == null ? null : evidence.getJCOInstance(), requiredPermissions == null ? null : requiredPermissions.getJCOInstance(), optionalPermissions == null ? null : optionalPermissions.getJCOInstance(), refusedPermissions == null ? null : refusedPermissions.getJCOInstance());
+            JCObject objDefineDynamicAssembly = (JCObject)classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), dir, evidence == null ? null : evidence.getJCOInstance());
             return new AssemblyBuilder(objDefineDynamicAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -255,12 +390,12 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName) throws Throwable {
+    public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes, Evidence securityAttributes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateInstanceFrom = (JCObject)classInstance.Invoke("CreateInstanceFrom", assemblyFile, typeName);
-            return new ObjectHandle(objCreateInstanceFrom);
+            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", assemblyName, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes), securityAttributes == null ? null : securityAttributes.getJCOInstance());
+            return new ObjectHandle(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,23 +412,12 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable {
+    public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateInstanceFrom = (JCObject)classInstance.Invoke("CreateInstanceFrom", assemblyFile, typeName, toObjectFromArray(activationAttributes));
+            JCObject objCreateInstanceFrom = (JCObject)classInstance.Invoke("CreateInstanceFrom", assemblyFile, typeName);
             return new ObjectHandle(objCreateInstanceFrom);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes, Evidence securityAttributes) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", assemblyName, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes), securityAttributes == null ? null : securityAttributes.getJCOInstance());
-            return new ObjectHandle(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,125 +434,12 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public Assembly Load(AssemblyName assemblyRef) throws Throwable {
+    public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", assemblyRef == null ? null : assemblyRef.getJCOInstance());
-            return new Assembly(objLoad);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Assembly Load(java.lang.String assemblyString) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", assemblyString);
-            return new Assembly(objLoad);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Assembly Load(byte[] rawAssembly) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (Object)rawAssembly);
-            return new Assembly(objLoad);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", rawAssembly, rawSymbolStore);
-            return new Assembly(objLoad);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore, Evidence securityEvidence) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", rawAssembly, rawSymbolStore, securityEvidence == null ? null : securityEvidence.getJCOInstance());
-            return new Assembly(objLoad);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Assembly Load(AssemblyName assemblyRef, Evidence assemblySecurity) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", assemblyRef == null ? null : assemblyRef.getJCOInstance(), assemblySecurity == null ? null : assemblySecurity.getJCOInstance());
-            return new Assembly(objLoad);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Assembly Load(java.lang.String assemblyString, Evidence assemblySecurity) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", assemblyString, assemblySecurity == null ? null : assemblySecurity.getJCOInstance());
-            return new Assembly(objLoad);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int ExecuteAssembly(java.lang.String assemblyFile, Evidence assemblySecurity) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile, assemblySecurity == null ? null : assemblySecurity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int ExecuteAssembly(java.lang.String assemblyFile) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int ExecuteAssembly(java.lang.String assemblyFile, Evidence assemblySecurity, java.lang.String[] args) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile, assemblySecurity == null ? null : assemblySecurity.getJCOInstance(), args);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Assembly[] GetAssemblies() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Assembly> resultingArrayList = new ArrayList<Assembly>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAssemblies");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new Assembly(resultingObject));
-            }
-            Assembly[] resultingArray = new Assembly[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            JCObject objCreateInstanceFrom = (JCObject)classInstance.Invoke("CreateInstanceFrom", assemblyFile, typeName, toObjectFromArray(activationAttributes));
+            return new ObjectHandle(objCreateInstanceFrom);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,21 +465,31 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public void SetShadowCopyPath(java.lang.String s) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetShadowCopyPath", s);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void ClearShadowCopyPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearShadowCopyPath");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DoCallBack(CrossAppDomainDelegate theDelegate) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DoCallBack", theDelegate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetAppDomainPolicy(PolicyLevel domainPolicy) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetAppDomainPolicy", domainPolicy == null ? null : domainPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,22 +515,21 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public NetObject GetData(java.lang.String name) throws Throwable {
+    public void SetPrincipalPolicy(PrincipalPolicy policy) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", name);
-            return new NetObject(objGetData);
+            classInstance.Invoke("SetPrincipalPolicy", policy == null ? null : policy.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void SetAppDomainPolicy(PolicyLevel domainPolicy) throws Throwable {
+    public void SetShadowCopyPath(java.lang.String s) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetAppDomainPolicy", domainPolicy == null ? null : domainPolicy.getJCOInstance());
+            classInstance.Invoke("SetShadowCopyPath", s);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,46 +545,26 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public void SetPrincipalPolicy(PrincipalPolicy policy) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetPrincipalPolicy", policy == null ? null : policy.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DoCallBack(CrossAppDomainDelegate theDelegate) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DoCallBack", theDelegate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
+    public boolean getShadowCopyFiles() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("ShadowCopyFiles");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Evidence getEvidence() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Evidence");
             return new Evidence(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getFriendlyName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("FriendlyName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,26 +580,6 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public java.lang.String getRelativeSearchPath() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("RelativeSearchPath");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getShadowCopyFiles() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ShadowCopyFiles");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getDynamicDirectory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -610,30 +590,30 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    public java.lang.String getFriendlyName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("FriendlyName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getRelativeSearchPath() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("RelativeSearchPath");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section
     
-
-    public void addDomainUnload(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("DomainUnload", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeDomainUnload(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("DomainUnload", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
     public void addAssemblyLoad(AssemblyLoadEventHandler handler) throws Throwable {
         if (classInstance == null)
@@ -650,6 +630,26 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AssemblyLoad", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addDomainUnload(EventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("DomainUnload", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeDomainUnload(EventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("DomainUnload", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -675,21 +675,21 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public void addTypeResolve(ResolveEventHandler handler) throws Throwable {
+    public void addAssemblyResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("TypeResolve", handler);
+            classInstance.RegisterEventListener("AssemblyResolve", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeTypeResolve(ResolveEventHandler handler) throws Throwable {
+    public void removeAssemblyResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("TypeResolve", handler);
+            classInstance.UnregisterEventListener("AssemblyResolve", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -715,21 +715,21 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public void addAssemblyResolve(ResolveEventHandler handler) throws Throwable {
+    public void addTypeResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("AssemblyResolve", handler);
+            classInstance.RegisterEventListener("TypeResolve", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeAssemblyResolve(ResolveEventHandler handler) throws Throwable {
+    public void removeTypeResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("AssemblyResolve", handler);
+            classInstance.UnregisterEventListener("TypeResolve", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

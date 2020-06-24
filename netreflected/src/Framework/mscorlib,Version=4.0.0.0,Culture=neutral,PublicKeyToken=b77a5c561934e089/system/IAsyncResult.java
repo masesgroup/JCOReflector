@@ -94,13 +94,13 @@ public interface IAsyncResult extends IJCOBridgeReflected {
     
     // Properties section
     
-    public boolean getIsCompleted() throws Throwable;
+    public boolean getCompletedSynchronously() throws Throwable;
 
-    public WaitHandle getAsyncWaitHandle() throws Throwable;
+    public boolean getIsCompleted() throws Throwable;
 
     public NetObject getAsyncState() throws Throwable;
 
-    public boolean getCompletedSynchronously() throws Throwable;
+    public WaitHandle getAsyncWaitHandle() throws Throwable;
 
 
 

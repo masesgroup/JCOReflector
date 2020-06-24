@@ -129,23 +129,23 @@ public class DataGridViewRowStateChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public DataGridViewRow getRow() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Row");
-            return new DataGridViewRow(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataGridViewElementStates getStateChanged() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("StateChanged");
             return new DataGridViewElementStates(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataGridViewRow getRow() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Row");
+            return new DataGridViewRow(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

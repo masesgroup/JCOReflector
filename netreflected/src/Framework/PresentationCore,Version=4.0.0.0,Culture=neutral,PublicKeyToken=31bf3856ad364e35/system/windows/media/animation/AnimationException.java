@@ -40,13 +40,13 @@ import java.util.ArrayList;
 // Import section
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.windows.media.animation.AnimationClock;
-import system.windows.DependencyProperty;
-import system.windows.media.animation.IAnimatable;
-import system.windows.media.animation.IAnimatableImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.reflection.MethodBase;
+import system.windows.DependencyProperty;
+import system.windows.media.animation.AnimationClock;
+import system.windows.media.animation.IAnimatable;
+import system.windows.media.animation.IAnimatableImplementation;
 
 /**
  * The base .NET class managing System.Windows.Media.Animation.AnimationException, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetException}.
@@ -166,34 +166,21 @@ public class AnimationException extends NetException {
     
     // Properties section
     
-    public AnimationClock getClock() throws Throwable {
+    public int getHResult() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Clock");
-            return new AnimationClock(val);
+            return (int)classInstance.Get("HResult");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DependencyProperty getProperty() throws Throwable {
+    public void setHResult(int HResult) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Property");
-            return new DependencyProperty(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IAnimatable getTarget() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Target");
-            return new IAnimatableImplementation(val);
+            classInstance.Set("HResult", HResult);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,21 +259,34 @@ public class AnimationException extends NetException {
         }
     }
 
-    public int getHResult() throws Throwable {
+    public DependencyProperty getProperty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("HResult");
+            JCObject val = (JCObject)classInstance.Get("Property");
+            return new DependencyProperty(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHResult(int HResult) throws Throwable {
+    public AnimationClock getClock() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("HResult", HResult);
+            JCObject val = (JCObject)classInstance.Get("Clock");
+            return new AnimationClock(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAnimatable getTarget() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Target");
+            return new IAnimatableImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

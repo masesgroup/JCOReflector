@@ -112,36 +112,6 @@ public class BuildMessageEventArgs extends NetObject  {
     // Constructors section
     
 
-    public BuildMessageEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, MessageImportance importance) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(message, helpKeyword, senderName, importance == null ? null : importance.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BuildMessageEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, MessageImportance importance, DateTime eventTimestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(message, helpKeyword, senderName, importance == null ? null : importance.getJCOInstance(), eventTimestamp == null ? null : eventTimestamp.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BuildMessageEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, MessageImportance importance, DateTime eventTimestamp, NetObject... messageArgs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(message, helpKeyword, senderName, importance == null ? null : importance.getJCOInstance(), eventTimestamp == null ? null : eventTimestamp.getJCOInstance(), toObjectFromArray(messageArgs)));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public BuildMessageEventArgs(java.lang.String subcategory, java.lang.String code, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, MessageImportance importance) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +142,36 @@ public class BuildMessageEventArgs extends NetObject  {
         }
     }
 
+    public BuildMessageEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, MessageImportance importance) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, helpKeyword, senderName, importance == null ? null : importance.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BuildMessageEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, MessageImportance importance, DateTime eventTimestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, helpKeyword, senderName, importance == null ? null : importance.getJCOInstance(), eventTimestamp == null ? null : eventTimestamp.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BuildMessageEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, MessageImportance importance, DateTime eventTimestamp, NetObject... messageArgs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, helpKeyword, senderName, importance == null ? null : importance.getJCOInstance(), eventTimestamp == null ? null : eventTimestamp.getJCOInstance(), toObjectFromArray(messageArgs)));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -180,6 +180,77 @@ public class BuildMessageEventArgs extends NetObject  {
     
     // Properties section
     
+    public int getColumnNumber() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("ColumnNumber");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getEndColumnNumber() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("EndColumnNumber");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getEndLineNumber() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("EndLineNumber");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getLineNumber() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("LineNumber");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getThreadId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("ThreadId");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BuildEventContext getBuildEventContext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("BuildEventContext");
+            return new BuildEventContext(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBuildEventContext(BuildEventContext BuildEventContext) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("BuildEventContext", BuildEventContext == null ? null : BuildEventContext.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MessageImportance getImportance() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -191,11 +262,12 @@ public class BuildMessageEventArgs extends NetObject  {
         }
     }
 
-    public java.lang.String getSubcategory() throws Throwable {
+    public DateTime getTimestamp() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Subcategory");
+            JCObject val = (JCObject)classInstance.Get("Timestamp");
+            return new DateTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,41 +293,21 @@ public class BuildMessageEventArgs extends NetObject  {
         }
     }
 
-    public int getLineNumber() throws Throwable {
+    public java.lang.String getHelpKeyword() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("LineNumber");
+            return (java.lang.String)classInstance.Get("HelpKeyword");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getColumnNumber() throws Throwable {
+    public java.lang.String getMessage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("ColumnNumber");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getEndLineNumber() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("EndLineNumber");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getEndColumnNumber() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("EndColumnNumber");
+            return (java.lang.String)classInstance.Get("Message");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,47 +333,6 @@ public class BuildMessageEventArgs extends NetObject  {
         }
     }
 
-    public java.lang.String getMessage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Message");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getTimestamp() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Timestamp");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getThreadId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("ThreadId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getHelpKeyword() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("HelpKeyword");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getSenderName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -332,22 +343,11 @@ public class BuildMessageEventArgs extends NetObject  {
         }
     }
 
-    public BuildEventContext getBuildEventContext() throws Throwable {
+    public java.lang.String getSubcategory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BuildEventContext");
-            return new BuildEventContext(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBuildEventContext(BuildEventContext BuildEventContext) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BuildEventContext", BuildEventContext == null ? null : BuildEventContext.getJCOInstance());
+            return (java.lang.String)classInstance.Get("Subcategory");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

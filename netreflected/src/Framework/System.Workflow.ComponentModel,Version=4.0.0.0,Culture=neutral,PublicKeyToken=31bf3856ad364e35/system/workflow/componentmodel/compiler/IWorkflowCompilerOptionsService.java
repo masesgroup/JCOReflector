@@ -93,11 +93,11 @@ public interface IWorkflowCompilerOptionsService extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String getRootNamespace() throws Throwable;
+    public boolean getCheckTypes() throws Throwable;
 
     public java.lang.String getLanguage() throws Throwable;
 
-    public boolean getCheckTypes() throws Throwable;
+    public java.lang.String getRootNamespace() throws Throwable;
 
 
 

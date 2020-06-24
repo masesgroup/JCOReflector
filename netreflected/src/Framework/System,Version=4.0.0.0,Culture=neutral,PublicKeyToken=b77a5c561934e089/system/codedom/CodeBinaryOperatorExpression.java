@@ -141,22 +141,22 @@ public class CodeBinaryOperatorExpression extends NetObject  {
     
     // Properties section
     
-    public CodeExpression getRight() throws Throwable {
+    public CodeBinaryOperatorType getOperator() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Right");
-            return new CodeExpression(val);
+            JCObject val = (JCObject)classInstance.Get("Operator");
+            return new CodeBinaryOperatorType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRight(CodeExpression Right) throws Throwable {
+    public void setOperator(CodeBinaryOperatorType Operator) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Right", Right == null ? null : Right.getJCOInstance());
+            classInstance.Set("Operator", Operator == null ? null : Operator.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,22 +183,22 @@ public class CodeBinaryOperatorExpression extends NetObject  {
         }
     }
 
-    public CodeBinaryOperatorType getOperator() throws Throwable {
+    public CodeExpression getRight() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Operator");
-            return new CodeBinaryOperatorType(val);
+            JCObject val = (JCObject)classInstance.Get("Right");
+            return new CodeExpression(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setOperator(CodeBinaryOperatorType Operator) throws Throwable {
+    public void setRight(CodeExpression Right) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Operator", Operator == null ? null : Operator.getJCOInstance());
+            classInstance.Set("Right", Right == null ? null : Right.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

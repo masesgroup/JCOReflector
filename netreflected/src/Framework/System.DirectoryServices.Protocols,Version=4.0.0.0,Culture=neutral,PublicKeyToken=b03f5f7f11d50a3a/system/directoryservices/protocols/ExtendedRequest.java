@@ -148,26 +148,6 @@ public class ExtendedRequest extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getRequestName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("RequestName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRequestName(java.lang.String RequestName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RequestName", RequestName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] getRequestValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -197,6 +177,17 @@ public class ExtendedRequest extends NetObject  {
         }
     }
 
+    public DirectoryControlCollection getControls() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Controls");
+            return new DirectoryControlCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getRequestId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -217,12 +208,21 @@ public class ExtendedRequest extends NetObject  {
         }
     }
 
-    public DirectoryControlCollection getControls() throws Throwable {
+    public java.lang.String getRequestName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Controls");
-            return new DirectoryControlCollection(val);
+            return (java.lang.String)classInstance.Get("RequestName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRequestName(java.lang.String RequestName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RequestName", RequestName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

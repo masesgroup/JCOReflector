@@ -37,10 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.componentmodel.design.HelpKeywordType;
 import system.componentmodel.design.IHelpService;
 import system.componentmodel.design.IHelpServiceImplementation;
 import system.componentmodel.design.HelpContextType;
+import system.componentmodel.design.HelpKeywordType;
 
 
 /**
@@ -93,11 +93,11 @@ public interface IHelpService extends IJCOBridgeReflected {
 
     // Methods section
     
+    public IHelpService CreateLocalContext(HelpContextType contextType) throws Throwable;
+
     public void AddContextAttribute(java.lang.String name, java.lang.String value, HelpKeywordType keywordType) throws Throwable;
 
     public void ClearContextAttributes() throws Throwable;
-
-    public IHelpService CreateLocalContext(HelpContextType contextType) throws Throwable;
 
     public void RemoveContextAttribute(java.lang.String name, java.lang.String value) throws Throwable;
 

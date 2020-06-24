@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.cache.HttpRequestCacheLevel;
+import system.DateTime;
 import system.net.cache.HttpCacheAgeControl;
 import system.TimeSpan;
-import system.DateTime;
+import system.net.cache.HttpRequestCacheLevel;
 
 
 /**
@@ -123,11 +123,11 @@ public class HttpRequestCachePolicy extends NetObject  {
         }
     }
 
-    public HttpRequestCachePolicy(HttpRequestCacheLevel level) throws Throwable, system.ArgumentOutOfRangeException {
+    public HttpRequestCachePolicy(DateTime cacheSyncDate) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(level == null ? null : level.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(cacheSyncDate == null ? null : cacheSyncDate.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,21 +153,21 @@ public class HttpRequestCachePolicy extends NetObject  {
         }
     }
 
-    public HttpRequestCachePolicy(DateTime cacheSyncDate) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(cacheSyncDate == null ? null : cacheSyncDate.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public HttpRequestCachePolicy(HttpCacheAgeControl cacheAgeControl, TimeSpan maxAge, TimeSpan freshOrStale, DateTime cacheSyncDate) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(cacheAgeControl == null ? null : cacheAgeControl.getJCOInstance(), maxAge == null ? null : maxAge.getJCOInstance(), freshOrStale == null ? null : freshOrStale.getJCOInstance(), cacheSyncDate == null ? null : cacheSyncDate.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HttpRequestCachePolicy(HttpRequestCacheLevel level) throws Throwable, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(level == null ? null : level.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,23 +181,23 @@ public class HttpRequestCachePolicy extends NetObject  {
     
     // Properties section
     
-    public HttpRequestCacheLevel getLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Level");
-            return new HttpRequestCacheLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DateTime getCacheSyncDate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("CacheSyncDate");
             return new DateTime(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HttpRequestCacheLevel getLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Level");
+            return new HttpRequestCacheLevel(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,22 +214,22 @@ public class HttpRequestCachePolicy extends NetObject  {
         }
     }
 
-    public TimeSpan getMinFresh() throws Throwable {
+    public TimeSpan getMaxStale() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MinFresh");
+            JCObject val = (JCObject)classInstance.Get("MaxStale");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TimeSpan getMaxStale() throws Throwable {
+    public TimeSpan getMinFresh() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MaxStale");
+            JCObject val = (JCObject)classInstance.Get("MinFresh");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

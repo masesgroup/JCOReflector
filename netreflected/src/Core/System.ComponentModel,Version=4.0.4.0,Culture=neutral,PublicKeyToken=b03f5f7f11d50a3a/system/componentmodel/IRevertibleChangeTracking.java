@@ -89,9 +89,9 @@ public interface IRevertibleChangeTracking extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void RejectChanges() throws Throwable;
-
     public void AcceptChanges() throws Throwable;
+
+    public void RejectChanges() throws Throwable;
 
 
     

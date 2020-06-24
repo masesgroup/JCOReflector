@@ -98,9 +98,9 @@ public interface IXsltContextFunction extends IJCOBridgeReflected {
     
     // Properties section
     
-    public int getMinargs() throws Throwable;
-
     public int getMaxargs() throws Throwable;
+
+    public int getMinargs() throws Throwable;
 
     public XPathResultType getReturnType() throws Throwable;
 

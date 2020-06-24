@@ -38,15 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.codedom.CodeTypeDeclaration;
+import system.codedom.compiler.GeneratorSupport;
+import system.codedom.CodeTypeReference;
+import system.codedom.CodeCompileUnit;
 import system.io.TextWriter;
 import system.codedom.compiler.CodeGeneratorOptions;
 import system.codedom.CodeExpression;
-import system.codedom.CodeStatement;
-import system.codedom.CodeTypeReference;
-import system.codedom.compiler.GeneratorSupport;
 import system.codedom.CodeNamespace;
-import system.codedom.CodeCompileUnit;
+import system.codedom.CodeStatement;
+import system.codedom.CodeTypeDeclaration;
 
 
 /**
@@ -112,41 +112,21 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
 
     // Methods section
     
-    public void GenerateCodeFromType(CodeTypeDeclaration e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GenerateCodeFromType", e == null ? null : e.getJCOInstance(), w == null ? null : w.getJCOInstance(), o == null ? null : o.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void GenerateCodeFromExpression(CodeExpression e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GenerateCodeFromExpression", e == null ? null : e.getJCOInstance(), w == null ? null : w.getJCOInstance(), o == null ? null : o.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void GenerateCodeFromStatement(CodeStatement e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GenerateCodeFromStatement", e == null ? null : e.getJCOInstance(), w == null ? null : w.getJCOInstance(), o == null ? null : o.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsValidIdentifier(java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsValidIdentifier", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Supports(GeneratorSupport supports) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Supports", supports == null ? null : supports.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,11 +162,21 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
         }
     }
 
-    public boolean Supports(GeneratorSupport supports) throws Throwable {
+    public void GenerateCodeFromCompileUnit(CodeCompileUnit e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Supports", supports == null ? null : supports.getJCOInstance());
+            classInstance.Invoke("GenerateCodeFromCompileUnit", e == null ? null : e.getJCOInstance(), w == null ? null : w.getJCOInstance(), o == null ? null : o.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GenerateCodeFromExpression(CodeExpression e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GenerateCodeFromExpression", e == null ? null : e.getJCOInstance(), w == null ? null : w.getJCOInstance(), o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,11 +192,21 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
         }
     }
 
-    public void GenerateCodeFromCompileUnit(CodeCompileUnit e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
+    public void GenerateCodeFromStatement(CodeStatement e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GenerateCodeFromCompileUnit", e == null ? null : e.getJCOInstance(), w == null ? null : w.getJCOInstance(), o == null ? null : o.getJCOInstance());
+            classInstance.Invoke("GenerateCodeFromStatement", e == null ? null : e.getJCOInstance(), w == null ? null : w.getJCOInstance(), o == null ? null : o.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GenerateCodeFromType(CodeTypeDeclaration e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GenerateCodeFromType", e == null ? null : e.getJCOInstance(), w == null ? null : w.getJCOInstance(), o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

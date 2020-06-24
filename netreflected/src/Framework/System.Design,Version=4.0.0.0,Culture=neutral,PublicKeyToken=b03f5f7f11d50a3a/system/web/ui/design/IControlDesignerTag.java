@@ -93,6 +93,8 @@ public interface IControlDesignerTag extends IJCOBridgeReflected {
 
     public java.lang.String GetContent() throws Throwable;
 
+    public java.lang.String GetOuterContent() throws Throwable;
+
     public void RemoveAttribute(java.lang.String name) throws Throwable;
 
     public void SetAttribute(java.lang.String name, java.lang.String value) throws Throwable;
@@ -100,8 +102,6 @@ public interface IControlDesignerTag extends IJCOBridgeReflected {
     public void SetContent(java.lang.String content) throws Throwable;
 
     public void SetDirty(boolean dirty) throws Throwable;
-
-    public java.lang.String GetOuterContent() throws Throwable;
 
 
     

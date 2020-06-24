@@ -123,11 +123,11 @@ public class CodeIdentifier extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String MakeValid(java.lang.String identifier) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
+    public static java.lang.String MakeCamel(java.lang.String identifier) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("MakeValid", identifier);
+            return (java.lang.String)classType.Invoke("MakeCamel", identifier);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,11 +143,11 @@ public class CodeIdentifier extends NetObject  {
         }
     }
 
-    public static java.lang.String MakeCamel(java.lang.String identifier) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public static java.lang.String MakeValid(java.lang.String identifier) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("MakeCamel", identifier);
+            return (java.lang.String)classType.Invoke("MakeValid", identifier);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

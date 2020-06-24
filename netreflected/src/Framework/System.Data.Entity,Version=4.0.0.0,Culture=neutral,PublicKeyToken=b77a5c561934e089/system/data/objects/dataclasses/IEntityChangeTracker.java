@@ -90,13 +90,13 @@ public interface IEntityChangeTracker extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void EntityMemberChanging(java.lang.String entityMemberName) throws Throwable;
-
-    public void EntityMemberChanged(java.lang.String entityMemberName) throws Throwable;
+    public void EntityComplexMemberChanged(java.lang.String entityMemberName, NetObject complexObject, java.lang.String complexObjectMemberName) throws Throwable;
 
     public void EntityComplexMemberChanging(java.lang.String entityMemberName, NetObject complexObject, java.lang.String complexObjectMemberName) throws Throwable;
 
-    public void EntityComplexMemberChanged(java.lang.String entityMemberName, NetObject complexObject, java.lang.String complexObjectMemberName) throws Throwable;
+    public void EntityMemberChanged(java.lang.String entityMemberName) throws Throwable;
+
+    public void EntityMemberChanging(java.lang.String entityMemberName) throws Throwable;
 
 
     

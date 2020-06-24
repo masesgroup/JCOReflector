@@ -129,12 +129,21 @@ public class SizeChangedInfo extends NetObject  {
     
     // Properties section
     
-    public Size getPreviousSize() throws Throwable {
+    public boolean getHeightChanged() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousSize");
-            return new Size(val);
+            return (boolean)classInstance.Get("HeightChanged");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getWidthChanged() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("WidthChanged");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,21 +160,12 @@ public class SizeChangedInfo extends NetObject  {
         }
     }
 
-    public boolean getWidthChanged() throws Throwable {
+    public Size getPreviousSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("WidthChanged");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getHeightChanged() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("HeightChanged");
+            JCObject val = (JCObject)classInstance.Get("PreviousSize");
+            return new Size(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

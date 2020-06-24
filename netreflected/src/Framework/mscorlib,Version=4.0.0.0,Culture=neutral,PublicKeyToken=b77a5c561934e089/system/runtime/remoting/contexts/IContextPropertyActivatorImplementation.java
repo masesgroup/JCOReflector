@@ -107,6 +107,26 @@ public class IContextPropertyActivatorImplementation extends NetObject implement
 
     // Methods section
     
+    public boolean DeliverClientContextToServerContext(IConstructionCallMessage msg) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("DeliverClientContextToServerContext", msg == null ? null : msg.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean DeliverServerContextToClientContext(IConstructionReturnMessage msg) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("DeliverServerContextToClientContext", msg == null ? null : msg.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean IsOKToActivate(IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -127,31 +147,11 @@ public class IContextPropertyActivatorImplementation extends NetObject implement
         }
     }
 
-    public boolean DeliverClientContextToServerContext(IConstructionCallMessage msg) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("DeliverClientContextToServerContext", msg == null ? null : msg.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void CollectFromServerContext(IConstructionReturnMessage msg) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CollectFromServerContext", msg == null ? null : msg.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean DeliverServerContextToClientContext(IConstructionReturnMessage msg) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("DeliverServerContextToClientContext", msg == null ? null : msg.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.channels.BindingElement;
-import system.TimeSpan;
 import system.servicemodel.ReliableMessagingVersion;
+import system.TimeSpan;
 
 
 /**
@@ -151,27 +151,6 @@ public class ReliableSessionBindingElement extends NetObject  {
     
     // Properties section
     
-    public TimeSpan getAcknowledgementInterval() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AcknowledgementInterval");
-            return new TimeSpan(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAcknowledgementInterval(TimeSpan AcknowledgementInterval) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AcknowledgementInterval", AcknowledgementInterval == null ? null : AcknowledgementInterval.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getFlowControlEnabled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -192,22 +171,21 @@ public class ReliableSessionBindingElement extends NetObject  {
         }
     }
 
-    public TimeSpan getInactivityTimeout() throws Throwable {
+    public boolean getOrdered() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("InactivityTimeout");
-            return new TimeSpan(val);
+            return (boolean)classInstance.Get("Ordered");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setInactivityTimeout(TimeSpan InactivityTimeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public void setOrdered(boolean Ordered) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("InactivityTimeout", InactivityTimeout == null ? null : InactivityTimeout.getJCOInstance());
+            classInstance.Set("Ordered", Ordered);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,26 +251,6 @@ public class ReliableSessionBindingElement extends NetObject  {
         }
     }
 
-    public boolean getOrdered() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Ordered");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOrdered(boolean Ordered) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Ordered", Ordered);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ReliableMessagingVersion getReliableMessagingVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -309,6 +267,48 @@ public class ReliableSessionBindingElement extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReliableMessagingVersion", ReliableMessagingVersion == null ? null : ReliableMessagingVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TimeSpan getAcknowledgementInterval() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AcknowledgementInterval");
+            return new TimeSpan(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAcknowledgementInterval(TimeSpan AcknowledgementInterval) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AcknowledgementInterval", AcknowledgementInterval == null ? null : AcknowledgementInterval.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TimeSpan getInactivityTimeout() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("InactivityTimeout");
+            return new TimeSpan(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInactivityTimeout(TimeSpan InactivityTimeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InactivityTimeout", InactivityTimeout == null ? null : InactivityTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

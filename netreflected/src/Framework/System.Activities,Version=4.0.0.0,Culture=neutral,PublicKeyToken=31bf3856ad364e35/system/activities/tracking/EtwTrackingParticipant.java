@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Guid;
 import system.activities.tracking.TrackingProfile;
+import system.Guid;
 
 
 /**
@@ -129,6 +129,27 @@ public class EtwTrackingParticipant extends NetObject  {
     
     // Properties section
     
+    public TrackingProfile getTrackingProfile() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TrackingProfile");
+            return new TrackingProfile(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTrackingProfile(TrackingProfile TrackingProfile) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TrackingProfile", TrackingProfile == null ? null : TrackingProfile.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getEtwProviderId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -165,27 +186,6 @@ public class EtwTrackingParticipant extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationReference", ApplicationReference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TrackingProfile getTrackingProfile() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TrackingProfile");
-            return new TrackingProfile(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTrackingProfile(TrackingProfile TrackingProfile) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TrackingProfile", TrackingProfile == null ? null : TrackingProfile.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

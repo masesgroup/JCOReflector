@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.serialization.StreamingContext;
-import system.reflection.ParameterAttributes;
 import system.reflection.MemberInfo;
+import system.reflection.ParameterAttributes;
 
 
 /**
@@ -115,35 +115,22 @@ public class ParameterInfo extends NetObject  {
     
     // Methods section
     
-    public NetType[] GetRequiredCustomModifiers() throws Throwable {
+    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRequiredCustomModifiers");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetType(resultingObject));
-            }
-            NetType[] resultingArray = new NetType[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            return (boolean)classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType[] GetOptionalCustomModifiers() throws Throwable {
+    public NetObject GetRealObject(StreamingContext context) throws Throwable, system.runtime.serialization.SerializationException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetOptionalCustomModifiers");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetType(resultingObject));
-            }
-            NetType[] resultingArray = new NetType[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            JCObject objGetRealObject = (JCObject)classInstance.Invoke("GetRealObject", context == null ? null : context.getJCOInstance());
+            return new NetObject(objGetRealObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,22 +170,35 @@ public class ParameterInfo extends NetObject  {
         }
     }
 
-    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable, system.ArgumentNullException {
+    public NetType[] GetOptionalCustomModifiers() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetOptionalCustomModifiers");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new NetType(resultingObject));
+            }
+            NetType[] resultingArray = new NetType[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject GetRealObject(StreamingContext context) throws Throwable, system.runtime.serialization.SerializationException, system.NotImplementedException {
+    public NetType[] GetRequiredCustomModifiers() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetRealObject = (JCObject)classInstance.Invoke("GetRealObject", context == null ? null : context.getJCOInstance());
-            return new NetObject(objGetRealObject);
+            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRequiredCustomModifiers");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new NetType(resultingObject));
+            }
+            NetType[] resultingArray = new NetType[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,32 +208,81 @@ public class ParameterInfo extends NetObject  {
     
     // Properties section
     
-    public NetType getParameterType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ParameterType");
-            return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getHasDefaultValue() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("HasDefaultValue");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsIn() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsIn");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsLcid() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsLcid");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsOptional() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsOptional");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsOut() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsOut");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsRetval() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsRetval");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getMetadataToken() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("MetadataToken");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getPosition() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Position");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,11 +310,12 @@ public class ParameterInfo extends NetObject  {
         }
     }
 
-    public int getPosition() throws Throwable {
+    public MemberInfo getMember() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Position");
+            JCObject val = (JCObject)classInstance.Get("Member");
+            return new MemberInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,72 +332,22 @@ public class ParameterInfo extends NetObject  {
         }
     }
 
-    public MemberInfo getMember() throws Throwable {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Member");
-            return new MemberInfo(val);
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsIn() throws Throwable {
+    public NetType getParameterType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsIn");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsOut() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsOut");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsLcid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsLcid");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsRetval() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsRetval");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsOptional() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsOptional");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getMetadataToken() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MetadataToken");
+            JCObject val = (JCObject)classInstance.Get("ParameterType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

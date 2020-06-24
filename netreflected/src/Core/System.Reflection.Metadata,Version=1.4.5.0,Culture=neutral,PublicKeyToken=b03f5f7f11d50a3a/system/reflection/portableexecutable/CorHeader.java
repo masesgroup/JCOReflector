@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.UInt16;
-import system.reflection.portableexecutable.DirectoryEntry;
 import system.reflection.portableexecutable.CorFlags;
+import system.reflection.portableexecutable.DirectoryEntry;
+import system.UInt16;
 
 
 /**
@@ -119,34 +119,11 @@ public class CorHeader extends NetObject  {
     
     // Properties section
     
-    public UInt16 getMajorRuntimeVersion() throws Throwable {
+    public int getEntryPointTokenOrRelativeVirtualAddress() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MajorRuntimeVersion");
-            return new UInt16(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UInt16 getMinorRuntimeVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MinorRuntimeVersion");
-            return new UInt16(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryEntry getMetadataDirectory() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MetadataDirectory");
-            return new DirectoryEntry(val);
+            return (int)classInstance.Get("EntryPointTokenOrRelativeVirtualAddress");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,11 +140,45 @@ public class CorHeader extends NetObject  {
         }
     }
 
-    public int getEntryPointTokenOrRelativeVirtualAddress() throws Throwable {
+    public DirectoryEntry getCodeManagerTableDirectory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("EntryPointTokenOrRelativeVirtualAddress");
+            JCObject val = (JCObject)classInstance.Get("CodeManagerTableDirectory");
+            return new DirectoryEntry(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryEntry getExportAddressTableJumpsDirectory() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ExportAddressTableJumpsDirectory");
+            return new DirectoryEntry(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryEntry getManagedNativeHeaderDirectory() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ManagedNativeHeaderDirectory");
+            return new DirectoryEntry(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryEntry getMetadataDirectory() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MetadataDirectory");
+            return new DirectoryEntry(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,17 +206,6 @@ public class CorHeader extends NetObject  {
         }
     }
 
-    public DirectoryEntry getCodeManagerTableDirectory() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CodeManagerTableDirectory");
-            return new DirectoryEntry(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DirectoryEntry getVtableFixupsDirectory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -217,23 +217,23 @@ public class CorHeader extends NetObject  {
         }
     }
 
-    public DirectoryEntry getExportAddressTableJumpsDirectory() throws Throwable {
+    public UInt16 getMajorRuntimeVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ExportAddressTableJumpsDirectory");
-            return new DirectoryEntry(val);
+            JCObject val = (JCObject)classInstance.Get("MajorRuntimeVersion");
+            return new UInt16(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DirectoryEntry getManagedNativeHeaderDirectory() throws Throwable {
+    public UInt16 getMinorRuntimeVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ManagedNativeHeaderDirectory");
-            return new DirectoryEntry(val);
+            JCObject val = (JCObject)classInstance.Get("MinorRuntimeVersion");
+            return new UInt16(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

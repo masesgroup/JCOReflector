@@ -124,11 +124,11 @@ public class Guid extends NetObject  {
         }
     }
 
-    public Guid(UInt32 a, UInt16 b, UInt16 c, byte d, byte e, byte f, byte g, byte h, byte i, byte j, byte k) throws Throwable {
+    public Guid(int a, short b, short c, byte d, byte e, byte f, byte g, byte h, byte i, byte j, byte k) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(a == null ? null : a.getJCOInstance(), b == null ? null : b.getJCOInstance(), c == null ? null : c.getJCOInstance(), d, e, f, g, h, i, j, k));
+            setJCOInstance((JCObject)classType.NewObject(a, b, c, d, e, f, g, h, i, j, k));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,16 +144,6 @@ public class Guid extends NetObject  {
         }
     }
 
-    public Guid(int a, short b, short c, byte d, byte e, byte f, byte g, byte h, byte i, byte j, byte k) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(a, b, c, d, e, f, g, h, i, j, k));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Guid(java.lang.String g) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -164,27 +154,25 @@ public class Guid extends NetObject  {
         }
     }
 
-
-    
-    // Methods section
-    
-    public static Guid Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Guid(UInt32 a, UInt16 b, UInt16 c, byte d, byte e, byte f, byte g, byte h, byte i, byte j, byte k) throws Throwable {
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", input);
-            return new Guid(objParse);
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(a == null ? null : a.getJCOInstance(), b == null ? null : b.getJCOInstance(), c == null ? null : c.getJCOInstance(), d, e, f, g, h, i, j, k));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Guid ParseExact(java.lang.String input, java.lang.String format) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+
+    
+    // Methods section
+    
+    public boolean Equals(Guid g) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", input, format);
-            return new Guid(objParseExact);
+            return (boolean)classInstance.Invoke("Equals", g == null ? null : g.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,11 +197,11 @@ public class Guid extends NetObject  {
         }
     }
 
-    public boolean Equals(Guid g) throws Throwable {
+    public int CompareTo(Guid value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", g == null ? null : g.getJCOInstance());
+            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,22 +217,34 @@ public class Guid extends NetObject  {
         }
     }
 
-    public int CompareTo(Guid value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Guid NewGuid() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objNewGuid = (JCObject)classType.Invoke("NewGuid");
             return new Guid(objNewGuid);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Guid Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objParse = (JCObject)classType.Invoke("Parse", input);
+            return new Guid(objParse);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Guid ParseExact(java.lang.String input, java.lang.String format) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", input, format);
+            return new Guid(objParseExact);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

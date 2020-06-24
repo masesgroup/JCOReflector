@@ -129,12 +129,21 @@ public class VirtualPathData extends NetObject  {
     
     // Properties section
     
-    public RouteValueDictionary getDataTokens() throws Throwable {
+    public java.lang.String getVirtualPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DataTokens");
-            return new RouteValueDictionary(val);
+            return (java.lang.String)classInstance.Get("VirtualPath");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setVirtualPath(java.lang.String VirtualPath) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("VirtualPath", VirtualPath);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,21 +170,12 @@ public class VirtualPathData extends NetObject  {
         }
     }
 
-    public java.lang.String getVirtualPath() throws Throwable {
+    public RouteValueDictionary getDataTokens() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("VirtualPath");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setVirtualPath(java.lang.String VirtualPath) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("VirtualPath", VirtualPath);
+            JCObject val = (JCObject)classInstance.Get("DataTokens");
+            return new RouteValueDictionary(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.TypedReference;
-import system.reflection.FieldInfo;
 import system.RuntimeTypeHandle;
+import system.reflection.FieldInfo;
 
 
 /**
@@ -115,23 +115,23 @@ public class TypedReference extends NetObject  {
     
     // Methods section
     
-    public static TypedReference MakeTypedReference(NetObject target, FieldInfo[] flds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMakeTypedReference = (JCObject)classType.Invoke("MakeTypedReference", target == null ? null : target.getJCOInstance(), toObjectFromArray(flds));
-            return new TypedReference(objMakeTypedReference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static NetObject ToObject(TypedReference value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objToObject = (JCObject)classType.Invoke("ToObject", value == null ? null : value.getJCOInstance());
             return new NetObject(objToObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static RuntimeTypeHandle TargetTypeToken(TypedReference value) throws Throwable, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objTargetTypeToken = (JCObject)classType.Invoke("TargetTypeToken", value == null ? null : value.getJCOInstance());
+            return new RuntimeTypeHandle(objTargetTypeToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,12 +148,12 @@ public class TypedReference extends NetObject  {
         }
     }
 
-    public static RuntimeTypeHandle TargetTypeToken(TypedReference value) throws Throwable, system.NotSupportedException {
+    public static TypedReference MakeTypedReference(NetObject target, FieldInfo[] flds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMemberException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objTargetTypeToken = (JCObject)classType.Invoke("TargetTypeToken", value == null ? null : value.getJCOInstance());
-            return new RuntimeTypeHandle(objTargetTypeToken);
+            JCObject objMakeTypedReference = (JCObject)classType.Invoke("MakeTypedReference", target == null ? null : target.getJCOInstance(), toObjectFromArray(flds));
+            return new TypedReference(objMakeTypedReference);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

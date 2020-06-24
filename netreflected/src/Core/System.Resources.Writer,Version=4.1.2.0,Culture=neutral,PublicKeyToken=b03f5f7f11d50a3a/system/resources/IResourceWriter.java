@@ -89,17 +89,17 @@ public interface IResourceWriter extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void AddResource(java.lang.String name, java.lang.String value) throws Throwable;
+    public void AddResource(java.lang.String name, byte[] value) throws Throwable;
 
     public void AddResource(java.lang.String name, NetObject value) throws Throwable;
 
-    public void AddResource(java.lang.String name, byte[] value) throws Throwable;
+    public void AddResource(java.lang.String name, java.lang.String value) throws Throwable;
 
     public void Close() throws Throwable;
 
-    public void Generate() throws Throwable;
-
     public void Dispose() throws Throwable;
+
+    public void Generate() throws Throwable;
 
 
     

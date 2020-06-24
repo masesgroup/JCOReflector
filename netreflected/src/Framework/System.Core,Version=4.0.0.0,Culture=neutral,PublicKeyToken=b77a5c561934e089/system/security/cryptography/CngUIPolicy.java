@@ -168,6 +168,17 @@ public class CngUIPolicy extends NetObject  {
     
     // Properties section
     
+    public CngUIProtectionLevels getProtectionLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ProtectionLevel");
+            return new CngUIProtectionLevels(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getCreationTitle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -193,17 +204,6 @@ public class CngUIPolicy extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("FriendlyName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CngUIProtectionLevels getProtectionLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ProtectionLevel");
-            return new CngUIProtectionLevels(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.media.EdgeMode;
 import system.windows.DependencyObject;
 import system.windows.media.BitmapScalingMode;
-import system.windows.media.ClearTypeHint;
 import system.windows.media.CachingHint;
+import system.windows.media.ClearTypeHint;
+import system.windows.media.EdgeMode;
 import system.windows.interop.RenderMode;
 
 
@@ -118,12 +118,21 @@ public class RenderOptions extends NetObject  {
     
     // Methods section
     
-    public static EdgeMode GetEdgeMode(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static double GetCacheInvalidationThresholdMaximum(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetEdgeMode = (JCObject)classType.Invoke("GetEdgeMode", target == null ? null : target.getJCOInstance());
-            return new EdgeMode(objGetEdgeMode);
+            return (double)classType.Invoke("GetCacheInvalidationThresholdMaximum", target == null ? null : target.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double GetCacheInvalidationThresholdMinimum(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("GetCacheInvalidationThresholdMinimum", target == null ? null : target.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -140,6 +149,17 @@ public class RenderOptions extends NetObject  {
         }
     }
 
+    public static CachingHint GetCachingHint(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetCachingHint = (JCObject)classType.Invoke("GetCachingHint", target == null ? null : target.getJCOInstance());
+            return new CachingHint(objGetCachingHint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ClearTypeHint GetClearTypeHint(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -151,11 +171,12 @@ public class RenderOptions extends NetObject  {
         }
     }
 
-    public static void SetEdgeMode(DependencyObject target, EdgeMode edgeMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static EdgeMode GetEdgeMode(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetEdgeMode", target == null ? null : target.getJCOInstance(), edgeMode == null ? null : edgeMode.getJCOInstance());
+            JCObject objGetEdgeMode = (JCObject)classType.Invoke("GetEdgeMode", target == null ? null : target.getJCOInstance());
+            return new EdgeMode(objGetEdgeMode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,42 +192,11 @@ public class RenderOptions extends NetObject  {
         }
     }
 
-    public static void SetClearTypeHint(DependencyObject target, ClearTypeHint clearTypeHint) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static void SetCacheInvalidationThresholdMaximum(DependencyObject target, double cacheInvalidationThresholdMaximum) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetClearTypeHint", target == null ? null : target.getJCOInstance(), clearTypeHint == null ? null : clearTypeHint.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static CachingHint GetCachingHint(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetCachingHint = (JCObject)classType.Invoke("GetCachingHint", target == null ? null : target.getJCOInstance());
-            return new CachingHint(objGetCachingHint);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void SetCachingHint(DependencyObject target, CachingHint cachingHint) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SetCachingHint", target == null ? null : target.getJCOInstance(), cachingHint == null ? null : cachingHint.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static double GetCacheInvalidationThresholdMinimum(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (double)classType.Invoke("GetCacheInvalidationThresholdMinimum", target == null ? null : target.getJCOInstance());
+            classType.Invoke("SetCacheInvalidationThresholdMaximum", target == null ? null : target.getJCOInstance(), cacheInvalidationThresholdMaximum);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,21 +212,31 @@ public class RenderOptions extends NetObject  {
         }
     }
 
-    public static double GetCacheInvalidationThresholdMaximum(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static void SetCachingHint(DependencyObject target, CachingHint cachingHint) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("GetCacheInvalidationThresholdMaximum", target == null ? null : target.getJCOInstance());
+            classType.Invoke("SetCachingHint", target == null ? null : target.getJCOInstance(), cachingHint == null ? null : cachingHint.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void SetCacheInvalidationThresholdMaximum(DependencyObject target, double cacheInvalidationThresholdMaximum) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static void SetClearTypeHint(DependencyObject target, ClearTypeHint clearTypeHint) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetCacheInvalidationThresholdMaximum", target == null ? null : target.getJCOInstance(), cacheInvalidationThresholdMaximum);
+            classType.Invoke("SetClearTypeHint", target == null ? null : target.getJCOInstance(), clearTypeHint == null ? null : clearTypeHint.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetEdgeMode(DependencyObject target, EdgeMode edgeMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetEdgeMode", target == null ? null : target.getJCOInstance(), edgeMode == null ? null : edgeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -127,7 +127,28 @@ public class PointF extends NetObject  {
     
     // Methods section
     
+    public boolean Equals(PointF other) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static PointF Add(PointF pt, Size sz) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAdd = (JCObject)classType.Invoke("Add", pt == null ? null : pt.getJCOInstance(), sz == null ? null : sz.getJCOInstance());
+            return new PointF(objAdd);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PointF Add(PointF pt, SizeF sz) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -149,33 +170,12 @@ public class PointF extends NetObject  {
         }
     }
 
-    public static PointF Add(PointF pt, SizeF sz) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", pt == null ? null : pt.getJCOInstance(), sz == null ? null : sz.getJCOInstance());
-            return new PointF(objAdd);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static PointF Subtract(PointF pt, SizeF sz) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objSubtract = (JCObject)classType.Invoke("Subtract", pt == null ? null : pt.getJCOInstance(), sz == null ? null : sz.getJCOInstance());
             return new PointF(objSubtract);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Equals(PointF other) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

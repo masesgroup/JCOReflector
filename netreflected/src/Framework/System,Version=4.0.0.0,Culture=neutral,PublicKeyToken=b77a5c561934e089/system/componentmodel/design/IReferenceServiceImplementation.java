@@ -127,16 +127,6 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
         }
     }
 
-    public java.lang.String GetName(NetObject reference) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetName", reference == null ? null : reference.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject[] GetReferences() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,6 +156,16 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetName(NetObject reference) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetName", reference == null ? null : reference.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

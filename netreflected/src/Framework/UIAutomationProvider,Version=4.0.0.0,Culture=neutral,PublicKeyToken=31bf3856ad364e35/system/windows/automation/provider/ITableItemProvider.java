@@ -91,21 +91,21 @@ public interface ITableItemProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IRawElementProviderSimple[] GetRowHeaderItems() throws Throwable;
-
     public IRawElementProviderSimple[] GetColumnHeaderItems() throws Throwable;
+
+    public IRawElementProviderSimple[] GetRowHeaderItems() throws Throwable;
 
 
     
     // Properties section
     
-    public int getRow() throws Throwable;
-
     public int getColumn() throws Throwable;
 
-    public int getRowSpan() throws Throwable;
-
     public int getColumnSpan() throws Throwable;
+
+    public int getRow() throws Throwable;
+
+    public int getRowSpan() throws Throwable;
 
     public IRawElementProviderSimple getContainingGrid() throws Throwable;
 

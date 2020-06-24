@@ -128,11 +128,11 @@ public class InstanceData extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getInstanceName() throws Throwable {
+    public long getRawValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("InstanceName");
+            return (long)classInstance.Get("RawValue");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,11 +149,11 @@ public class InstanceData extends NetObject  {
         }
     }
 
-    public long getRawValue() throws Throwable {
+    public java.lang.String getInstanceName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Get("RawValue");
+            return (java.lang.String)classInstance.Get("InstanceName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

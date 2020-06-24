@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.remoting.messaging.MethodCall;
 import system.runtime.remoting.metadata.SoapAttribute;
+import system.runtime.remoting.messaging.MethodCall;
 
 
 /**
@@ -125,36 +125,6 @@ public class InternalRemotingServices extends NetObject  {
     
     // Methods section
     
-    public static void RemotingTrace(NetObject... messages) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("RemotingTrace", (Object)toObjectFromArray(messages));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void RemotingAssert(boolean condition, java.lang.String message) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("RemotingAssert", condition, message);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void SetServerIdentity(MethodCall m, NetObject srvID) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SetServerIdentity", m == null ? null : m.getJCOInstance(), srvID == null ? null : srvID.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static SoapAttribute GetCachedSoapAttribute(NetObject reflectionObject) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -171,6 +141,36 @@ public class InternalRemotingServices extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DebugOutChnl", s);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RemotingAssert(boolean condition, java.lang.String message) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RemotingAssert", condition, message);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RemotingTrace(NetObject... messages) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RemotingTrace", (Object)toObjectFromArray(messages));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetServerIdentity(MethodCall m, NetObject srvID) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetServerIdentity", m == null ? null : m.getJCOInstance(), srvID == null ? null : srvID.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

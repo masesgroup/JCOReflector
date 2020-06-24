@@ -118,23 +118,32 @@ public class ItemsChangedEventArgs extends NetObject  {
     
     // Properties section
     
+    public int getItemCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("ItemCount");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getItemUICount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("ItemUICount");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NotifyCollectionChangedAction getAction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Action");
             return new NotifyCollectionChangedAction(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public GeneratorPosition getPosition() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Position");
-            return new GeneratorPosition(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,21 +160,12 @@ public class ItemsChangedEventArgs extends NetObject  {
         }
     }
 
-    public int getItemCount() throws Throwable {
+    public GeneratorPosition getPosition() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("ItemCount");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getItemUICount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("ItemUICount");
+            JCObject val = (JCObject)classInstance.Get("Position");
+            return new GeneratorPosition(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

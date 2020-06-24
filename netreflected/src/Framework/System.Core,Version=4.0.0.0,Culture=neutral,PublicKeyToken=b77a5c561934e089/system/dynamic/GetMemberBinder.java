@@ -114,23 +114,45 @@ public class GetMemberBinder extends NetObject  {
     
     // Methods section
     
-    public DynamicMetaObject FallbackGetMember(DynamicMetaObject target) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objFallbackGetMember = (JCObject)classInstance.Invoke("FallbackGetMember", target == null ? null : target.getJCOInstance());
-            return new DynamicMetaObject(objFallbackGetMember);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DynamicMetaObject Bind(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objBind = (JCObject)classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
             return new DynamicMetaObject(objBind);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DynamicMetaObject Defer(DynamicMetaObject target, DynamicMetaObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefer = (JCObject)classInstance.Invoke("Defer", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            return new DynamicMetaObject(objDefer);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DynamicMetaObject Defer(DynamicMetaObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefer = (JCObject)classInstance.Invoke("Defer", (Object)toObjectFromArray(args));
+            return new DynamicMetaObject(objDefer);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DynamicMetaObject FallbackGetMember(DynamicMetaObject target) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objFallbackGetMember = (JCObject)classInstance.Invoke("FallbackGetMember", target == null ? null : target.getJCOInstance());
+            return new DynamicMetaObject(objFallbackGetMember);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,38 +180,15 @@ public class GetMemberBinder extends NetObject  {
         }
     }
 
-    public DynamicMetaObject Defer(DynamicMetaObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefer = (JCObject)classInstance.Invoke("Defer", (Object)toObjectFromArray(args));
-            return new DynamicMetaObject(objDefer);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DynamicMetaObject Defer(DynamicMetaObject target, DynamicMetaObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefer = (JCObject)classInstance.Invoke("Defer", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
-            return new DynamicMetaObject(objDefer);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public NetType getReturnType() throws Throwable {
+    public boolean getIgnoreCase() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnType");
-            return new NetType(val);
+            return (boolean)classInstance.Get("IgnoreCase");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,11 +204,12 @@ public class GetMemberBinder extends NetObject  {
         }
     }
 
-    public boolean getIgnoreCase() throws Throwable {
+    public NetType getReturnType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IgnoreCase");
+            JCObject val = (JCObject)classInstance.Get("ReturnType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

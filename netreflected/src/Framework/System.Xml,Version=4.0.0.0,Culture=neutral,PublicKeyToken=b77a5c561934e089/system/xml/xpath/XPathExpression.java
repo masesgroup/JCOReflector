@@ -122,6 +122,17 @@ public class XPathExpression extends NetObject  {
     
     // Methods section
     
+    public XPathExpression Clone() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            return new XPathExpression(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static XPathExpression Compile(java.lang.String xpath) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.xml.xpath.XPathException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -164,12 +175,11 @@ public class XPathExpression extends NetObject  {
         }
     }
 
-    public XPathExpression Clone() throws Throwable {
+    public void SetContext(IXmlNamespaceResolver nsResolver) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new XPathExpression(objClone);
+            classInstance.Invoke("SetContext", nsResolver == null ? null : nsResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,16 +190,6 @@ public class XPathExpression extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetContext", nsManager == null ? null : nsManager.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetContext(IXmlNamespaceResolver nsResolver) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetContext", nsResolver == null ? null : nsResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

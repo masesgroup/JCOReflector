@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.specialized.NameValueCollection;
 import system.DateTime;
 import system.web.SameSiteMode;
-import system.collections.specialized.NameValueCollection;
 
 
 /**
@@ -140,41 +140,31 @@ public class HttpCookie extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable {
+    public boolean getHasKeys() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            return (boolean)classInstance.Get("HasKeys");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setName(java.lang.String Name) throws Throwable {
+    public boolean getHttpOnly() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Name", Name);
+            return (boolean)classInstance.Get("HttpOnly");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getPath() throws Throwable {
+    public void setHttpOnly(boolean HttpOnly) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Path");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPath(java.lang.String Path) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Path", Path);
+            classInstance.Set("HttpOnly", HttpOnly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,21 +210,33 @@ public class HttpCookie extends NetObject  {
         }
     }
 
-    public boolean getHttpOnly() throws Throwable {
+    public NameValueCollection getValues() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.threading.ThreadAbortException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HttpOnly");
+            JCObject val = (JCObject)classInstance.Get("Values");
+            return new NameValueCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHttpOnly(boolean HttpOnly) throws Throwable {
+    public DateTime getExpires() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("HttpOnly", HttpOnly);
+            JCObject val = (JCObject)classInstance.Get("Expires");
+            return new DateTime(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setExpires(DateTime Expires) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Expires", Expires == null ? null : Expires.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,22 +262,41 @@ public class HttpCookie extends NetObject  {
         }
     }
 
-    public DateTime getExpires() throws Throwable {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Expires");
-            return new DateTime(val);
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setExpires(DateTime Expires) throws Throwable {
+    public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Expires", Expires == null ? null : Expires.getJCOInstance());
+            classInstance.Set("Name", Name);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getPath() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Path");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPath(java.lang.String Path) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Path", Path);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,27 +338,6 @@ public class HttpCookie extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SameSite", SameSite == null ? null : SameSite.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getHasKeys() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("HasKeys");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NameValueCollection getValues() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.threading.ThreadAbortException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Values");
-            return new NameValueCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

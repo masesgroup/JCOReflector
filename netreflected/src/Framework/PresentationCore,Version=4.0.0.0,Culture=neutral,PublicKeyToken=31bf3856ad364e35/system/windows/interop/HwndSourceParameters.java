@@ -135,6 +135,16 @@ public class HwndSourceParameters extends NetObject  {
     
     // Methods section
     
+    public boolean Equals(HwndSourceParameters obj) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SetPosition(int x, int y) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -155,55 +165,135 @@ public class HwndSourceParameters extends NetObject  {
         }
     }
 
-    public boolean Equals(HwndSourceParameters obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public int getWindowClassStyle() throws Throwable {
+    public boolean getAcquireHwndFocusInMenuMode() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("WindowClassStyle");
+            return (boolean)classInstance.Get("AcquireHwndFocusInMenuMode");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setWindowClassStyle(int WindowClassStyle) throws Throwable {
+    public void setAcquireHwndFocusInMenuMode(boolean AcquireHwndFocusInMenuMode) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("WindowClassStyle", WindowClassStyle);
+            classInstance.Set("AcquireHwndFocusInMenuMode", AcquireHwndFocusInMenuMode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getWindowStyle() throws Throwable {
+    public boolean getAdjustSizingForNonClientArea() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("WindowStyle");
+            return (boolean)classInstance.Get("AdjustSizingForNonClientArea");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setWindowStyle(int WindowStyle) throws Throwable {
+    public void setAdjustSizingForNonClientArea(boolean AdjustSizingForNonClientArea) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("WindowStyle", WindowStyle);
+            classInstance.Set("AdjustSizingForNonClientArea", AdjustSizingForNonClientArea);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getHasAssignedSize() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("HasAssignedSize");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getTreatAncestorsAsNonClientArea() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("TreatAncestorsAsNonClientArea");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTreatAncestorsAsNonClientArea(boolean TreatAncestorsAsNonClientArea) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TreatAncestorsAsNonClientArea", TreatAncestorsAsNonClientArea);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getTreatAsInputRoot() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("TreatAsInputRoot");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTreatAsInputRoot(boolean TreatAsInputRoot) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TreatAsInputRoot", TreatAsInputRoot);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getUsesPerPixelOpacity() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("UsesPerPixelOpacity");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setUsesPerPixelOpacity(boolean UsesPerPixelOpacity) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("UsesPerPixelOpacity", UsesPerPixelOpacity);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getUsesPerPixelTransparency() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("UsesPerPixelTransparency");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setUsesPerPixelTransparency(boolean UsesPerPixelTransparency) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("UsesPerPixelTransparency", UsesPerPixelTransparency);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,6 +314,26 @@ public class HwndSourceParameters extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExtendedWindowStyle", ExtendedWindowStyle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getHeight() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Height");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setHeight(int Height) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Height", Height);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,31 +399,41 @@ public class HwndSourceParameters extends NetObject  {
         }
     }
 
-    public int getHeight() throws Throwable {
+    public int getWindowClassStyle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Height");
+            return (int)classInstance.Get("WindowClassStyle");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHeight(int Height) throws Throwable {
+    public void setWindowClassStyle(int WindowClassStyle) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Height", Height);
+            classInstance.Set("WindowClassStyle", WindowClassStyle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getHasAssignedSize() throws Throwable {
+    public int getWindowStyle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HasAssignedSize");
+            return (int)classInstance.Get("WindowStyle");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setWindowStyle(int WindowStyle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("WindowStyle", WindowStyle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,86 +459,6 @@ public class HwndSourceParameters extends NetObject  {
         }
     }
 
-    public boolean getAdjustSizingForNonClientArea() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("AdjustSizingForNonClientArea");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAdjustSizingForNonClientArea(boolean AdjustSizingForNonClientArea) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AdjustSizingForNonClientArea", AdjustSizingForNonClientArea);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getTreatAncestorsAsNonClientArea() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("TreatAncestorsAsNonClientArea");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTreatAncestorsAsNonClientArea(boolean TreatAncestorsAsNonClientArea) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TreatAncestorsAsNonClientArea", TreatAncestorsAsNonClientArea);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getUsesPerPixelOpacity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("UsesPerPixelOpacity");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setUsesPerPixelOpacity(boolean UsesPerPixelOpacity) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("UsesPerPixelOpacity", UsesPerPixelOpacity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getUsesPerPixelTransparency() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("UsesPerPixelTransparency");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setUsesPerPixelTransparency(boolean UsesPerPixelTransparency) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("UsesPerPixelTransparency", UsesPerPixelTransparency);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public RestoreFocusMode getRestoreFocusMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -435,46 +475,6 @@ public class HwndSourceParameters extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RestoreFocusMode", RestoreFocusMode == null ? null : RestoreFocusMode.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getAcquireHwndFocusInMenuMode() throws Throwable, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("AcquireHwndFocusInMenuMode");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAcquireHwndFocusInMenuMode(boolean AcquireHwndFocusInMenuMode) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AcquireHwndFocusInMenuMode", AcquireHwndFocusInMenuMode);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getTreatAsInputRoot() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("TreatAsInputRoot");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTreatAsInputRoot(boolean TreatAsInputRoot) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TreatAsInputRoot", TreatAsInputRoot);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

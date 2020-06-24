@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.syndication.SyndicationContent;
 import system.servicemodel.syndication.TextSyndicationContent;
 import system.servicemodel.syndication.UrlSyndicationContent;
 import system.Uri;
 import system.servicemodel.syndication.XmlSyndicationContent;
-import system.xml.XmlReader;
 import system.runtime.serialization.XmlObjectSerializer;
 import system.xml.serialization.XmlSerializer;
-import system.servicemodel.syndication.SyndicationContent;
+import system.xml.XmlReader;
 import system.xml.XmlWriter;
 
 
@@ -121,6 +121,17 @@ public class SyndicationContent extends NetObject  {
     
     // Methods section
     
+    public SyndicationContent Clone() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            return new SyndicationContent(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static TextSyndicationContent CreateHtmlContent(java.lang.String content) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -143,17 +154,6 @@ public class SyndicationContent extends NetObject  {
         }
     }
 
-    public static UrlSyndicationContent CreateUrlContent(Uri url, java.lang.String mediaType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateUrlContent = (JCObject)classType.Invoke("CreateUrlContent", url == null ? null : url.getJCOInstance(), mediaType);
-            return new UrlSyndicationContent(objCreateUrlContent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static TextSyndicationContent CreateXhtmlContent(java.lang.String content) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -165,12 +165,12 @@ public class SyndicationContent extends NetObject  {
         }
     }
 
-    public static XmlSyndicationContent CreateXmlContent(XmlReader xmlReader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
+    public static UrlSyndicationContent CreateUrlContent(Uri url, java.lang.String mediaType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateXmlContent = (JCObject)classType.Invoke("CreateXmlContent", xmlReader == null ? null : xmlReader.getJCOInstance());
-            return new XmlSyndicationContent(objCreateXmlContent);
+            JCObject objCreateUrlContent = (JCObject)classType.Invoke("CreateUrlContent", url == null ? null : url.getJCOInstance(), mediaType);
+            return new UrlSyndicationContent(objCreateUrlContent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,12 +209,12 @@ public class SyndicationContent extends NetObject  {
         }
     }
 
-    public SyndicationContent Clone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static XmlSyndicationContent CreateXmlContent(XmlReader xmlReader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new SyndicationContent(objClone);
+            JCObject objCreateXmlContent = (JCObject)classType.Invoke("CreateXmlContent", xmlReader == null ? null : xmlReader.getJCOInstance());
+            return new XmlSyndicationContent(objCreateXmlContent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

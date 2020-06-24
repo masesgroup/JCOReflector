@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.servicemodel.channels.Message;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.servicemodel.channels.Message;
 import system.AsyncCallback;
 
 
@@ -93,29 +93,29 @@ public interface IWSTrustContract extends IJCOBridgeReflected {
 
     // Methods section
     
-    public Message Cancel(Message message) throws Throwable;
-
     public IAsyncResult BeginCancel(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable;
-
-    public Message EndCancel(IAsyncResult asyncResult) throws Throwable;
-
-    public Message Issue(Message message) throws Throwable;
 
     public IAsyncResult BeginIssue(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable;
 
-    public Message EndIssue(IAsyncResult asyncResult) throws Throwable;
-
-    public Message Renew(Message message) throws Throwable;
-
     public IAsyncResult BeginRenew(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable;
-
-    public Message EndRenew(IAsyncResult asyncResult) throws Throwable;
-
-    public Message Validate(Message message) throws Throwable;
 
     public IAsyncResult BeginValidate(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable;
 
+    public Message Cancel(Message message) throws Throwable;
+
+    public Message EndCancel(IAsyncResult asyncResult) throws Throwable;
+
+    public Message EndIssue(IAsyncResult asyncResult) throws Throwable;
+
+    public Message EndRenew(IAsyncResult asyncResult) throws Throwable;
+
     public Message EndValidate(IAsyncResult asyncResult) throws Throwable;
+
+    public Message Issue(Message message) throws Throwable;
+
+    public Message Renew(Message message) throws Throwable;
+
+    public Message Validate(Message message) throws Throwable;
 
 
     

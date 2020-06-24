@@ -38,20 +38,20 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.collections.IList;
-import system.collections.IListImplementation;
-import system.xml.xsl.runtime.XmlNavigatorFilter;
-import system.xml.xpath.XPathNodeType;
-import system.xml.XmlQualifiedName;
 import system.xml.xpath.XPathNavigator;
 import system.xml.xpath.XPathItem;
 import system.xml.schema.XmlTypeCode;
+import system.collections.IList;
+import system.collections.IListImplementation;
+import system.xml.XmlQualifiedName;
 import system.xml.xsl.runtime.XmlCollation;
+import system.xml.xsl.runtime.XmlNavigatorFilter;
+import system.xml.xpath.XPathNodeType;
 import system.xml.xsl.runtime.XmlILIndex;
-import system.xml.xsl.runtime.XmlQueryContext;
-import system.xml.xsl.runtime.XsltLibrary;
 import system.xml.XmlNameTable;
+import system.xml.xsl.runtime.XmlQueryContext;
 import system.xml.xsl.runtime.XmlQueryOutput;
+import system.xml.xsl.runtime.XsltLibrary;
 
 
 /**
@@ -126,68 +126,6 @@ public class XmlQueryRuntime extends NetObject  {
     
     // Methods section
     
-    public java.lang.String[] DebugGetGlobalNames() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DebugGetGlobalNames");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexDebugGetGlobalNames = 0; indexDebugGetGlobalNames < resultingArrayList.size(); indexDebugGetGlobalNames++ ) {
-				resultingArray[indexDebugGetGlobalNames] = (java.lang.String)resultingArrayList.get(indexDebugGetGlobalNames);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IList DebugGetGlobalValue(java.lang.String name) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDebugGetGlobalValue = (JCObject)classInstance.Invoke("DebugGetGlobalValue", name);
-            return new IListImplementation(objDebugGetGlobalValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DebugSetGlobalValue(java.lang.String name, NetObject value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DebugSetGlobalValue", name, value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject DebugGetXsltValue(IList seq) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDebugGetXsltValue = (JCObject)classInstance.Invoke("DebugGetXsltValue", seq == null ? null : seq.getJCOInstance());
-            return new NetObject(objDebugGetXsltValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetEarlyBoundObject(int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEarlyBoundObject = (JCObject)classInstance.Invoke("GetEarlyBoundObject", index);
-            return new NetObject(objGetEarlyBoundObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean EarlyBoundFunctionExists(java.lang.String name, java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -208,76 +146,11 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
-    public NetObject GetGlobalValue(int index) throws Throwable {
+    public boolean IsQNameEqual(XPathNavigator navigator, int indexLocalName, int indexNamespaceUri) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetGlobalValue = (JCObject)classInstance.Invoke("GetGlobalValue", index);
-            return new NetObject(objGetGlobalValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetGlobalValue(int index, NetObject value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetGlobalValue", index, value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetAtomizedName(int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetAtomizedName", index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlNavigatorFilter GetNameFilter(int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetNameFilter = (JCObject)classInstance.Invoke("GetNameFilter", index);
-            return new XmlNavigatorFilter(objGetNameFilter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlNavigatorFilter GetTypeFilter(XPathNodeType nodeType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetTypeFilter = (JCObject)classInstance.Invoke("GetTypeFilter", nodeType == null ? null : nodeType.getJCOInstance());
-            return new XmlNavigatorFilter(objGetTypeFilter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlQualifiedName ParseTagName(java.lang.String tagName, int indexPrefixMappings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.NotSupportedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objParseTagName = (JCObject)classInstance.Invoke("ParseTagName", tagName, indexPrefixMappings);
-            return new XmlQualifiedName(objParseTagName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlQualifiedName ParseTagName(java.lang.String tagName, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objParseTagName = (JCObject)classInstance.Invoke("ParseTagName", tagName, ns);
-            return new XmlQualifiedName(objParseTagName);
+            return (boolean)classInstance.Invoke("IsQNameEqual", navigator == null ? null : navigator.getJCOInstance(), indexLocalName, indexNamespaceUri);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,11 +166,52 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
-    public boolean IsQNameEqual(XPathNavigator navigator, int indexLocalName, int indexNamespaceUri) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public boolean MatchesXmlType(XPathItem item, int indexType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsQNameEqual", navigator == null ? null : navigator.getJCOInstance(), indexLocalName, indexNamespaceUri);
+            return (boolean)classInstance.Invoke("MatchesXmlType", item == null ? null : item.getJCOInstance(), indexType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean MatchesXmlType(XPathItem item, XmlTypeCode code) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("MatchesXmlType", item == null ? null : item.getJCOInstance(), code == null ? null : code.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ComparePosition(XPathNavigator navigatorThis, XPathNavigator navigatorThat) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ComparePosition", navigatorThis == null ? null : navigatorThis.getJCOInstance(), navigatorThat == null ? null : navigatorThat.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int OnCurrentNodeChanged(XPathNavigator currentNode) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("OnCurrentNodeChanged", currentNode == null ? null : currentNode.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList DebugGetGlobalValue(java.lang.String name) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDebugGetGlobalValue = (JCObject)classInstance.Invoke("DebugGetGlobalValue", name);
+            return new IListImplementation(objDebugGetGlobalValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,53 +239,34 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
-    public boolean MatchesXmlType(XPathItem item, int indexType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public NetObject DebugGetXsltValue(IList seq) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("MatchesXmlType", item == null ? null : item.getJCOInstance(), indexType);
+            JCObject objDebugGetXsltValue = (JCObject)classInstance.Invoke("DebugGetXsltValue", seq == null ? null : seq.getJCOInstance());
+            return new NetObject(objDebugGetXsltValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean MatchesXmlType(XPathItem item, XmlTypeCode code) throws Throwable {
+    public NetObject GetEarlyBoundObject(int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("MatchesXmlType", item == null ? null : item.getJCOInstance(), code == null ? null : code.getJCOInstance());
+            JCObject objGetEarlyBoundObject = (JCObject)classInstance.Invoke("GetEarlyBoundObject", index);
+            return new NetObject(objGetEarlyBoundObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlCollation GetCollation(int index) throws Throwable {
+    public NetObject GetGlobalValue(int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetCollation = (JCObject)classInstance.Invoke("GetCollation", index);
-            return new XmlCollation(objGetCollation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlCollation CreateCollation(java.lang.String collation) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.UriFormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateCollation = (JCObject)classInstance.Invoke("CreateCollation", collation);
-            return new XmlCollation(objCreateCollation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int ComparePosition(XPathNavigator navigatorThis, XPathNavigator navigatorThat) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("ComparePosition", navigatorThis == null ? null : navigatorThis.getJCOInstance(), navigatorThat == null ? null : navigatorThat.getJCOInstance());
+            JCObject objGetGlobalValue = (JCObject)classInstance.Invoke("GetGlobalValue", index);
+            return new NetObject(objGetGlobalValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,11 +282,52 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
-    public void AddNewIndex(XPathNavigator context, int indexId, XmlILIndex index) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public java.lang.String GetAtomizedName(int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddNewIndex", context == null ? null : context.getJCOInstance(), indexId, index == null ? null : index.getJCOInstance());
+            return (java.lang.String)classInstance.Invoke("GetAtomizedName", index);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String[] DebugGetGlobalNames() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("DebugGetGlobalNames");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexDebugGetGlobalNames = 0; indexDebugGetGlobalNames < resultingArrayList.size(); indexDebugGetGlobalNames++ ) {
+				resultingArray[indexDebugGetGlobalNames] = (java.lang.String)resultingArrayList.get(indexDebugGetGlobalNames);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlQualifiedName ParseTagName(java.lang.String tagName, int indexPrefixMappings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objParseTagName = (JCObject)classInstance.Invoke("ParseTagName", tagName, indexPrefixMappings);
+            return new XmlQualifiedName(objParseTagName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlQualifiedName ParseTagName(java.lang.String tagName, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objParseTagName = (JCObject)classInstance.Invoke("ParseTagName", tagName, ns);
+            return new XmlQualifiedName(objParseTagName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,11 +344,85 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    public XmlCollation CreateCollation(java.lang.String collation) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.UriFormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateCollation = (JCObject)classInstance.Invoke("CreateCollation", collation);
+            return new XmlCollation(objCreateCollation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlCollation GetCollation(int index) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetCollation = (JCObject)classInstance.Invoke("GetCollation", index);
+            return new XmlCollation(objGetCollation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlNavigatorFilter GetNameFilter(int index) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetNameFilter = (JCObject)classInstance.Invoke("GetNameFilter", index);
+            return new XmlNavigatorFilter(objGetNameFilter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlNavigatorFilter GetTypeFilter(XPathNodeType nodeType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetTypeFilter = (JCObject)classInstance.Invoke("GetTypeFilter", nodeType == null ? null : nodeType.getJCOInstance());
+            return new XmlNavigatorFilter(objGetTypeFilter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddNewIndex(XPathNavigator context, int indexId, XmlILIndex index) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddNewIndex", context == null ? null : context.getJCOInstance(), indexId, index == null ? null : index.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DebugSetGlobalValue(java.lang.String name, NetObject value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DebugSetGlobalValue", name, value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SendMessage(java.lang.String message) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendMessage", message);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetGlobalValue(int index, NetObject value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetGlobalValue", index, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,42 +438,10 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
-    public static int OnCurrentNodeChanged(XPathNavigator currentNode) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("OnCurrentNodeChanged", currentNode == null ? null : currentNode.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public XmlQueryContext getExternalContext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExternalContext");
-            return new XmlQueryContext(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XsltLibrary getXsltFunctions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("XsltFunctions");
-            return new XsltLibrary(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlNameTable getNameTable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -475,12 +453,34 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    public XmlQueryContext getExternalContext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ExternalContext");
+            return new XmlQueryContext(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XmlQueryOutput getOutput() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Output");
             return new XmlQueryOutput(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XsltLibrary getXsltFunctions() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("XsltFunctions");
+            return new XsltLibrary(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

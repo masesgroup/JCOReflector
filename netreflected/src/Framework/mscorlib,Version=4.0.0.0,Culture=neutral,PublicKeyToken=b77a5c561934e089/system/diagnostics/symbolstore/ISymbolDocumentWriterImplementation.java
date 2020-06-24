@@ -104,21 +104,21 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
 
     // Methods section
     
-    public void SetSource(byte[] source) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetSource", (Object)source);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void SetCheckSum(Guid algorithmId, byte[] checkSum) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCheckSum", algorithmId == null ? null : algorithmId.getJCOInstance(), checkSum);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetSource(byte[] source) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetSource", (Object)source);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

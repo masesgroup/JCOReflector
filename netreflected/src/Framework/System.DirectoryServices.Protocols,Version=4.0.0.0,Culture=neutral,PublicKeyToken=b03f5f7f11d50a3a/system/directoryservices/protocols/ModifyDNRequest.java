@@ -138,6 +138,37 @@ public class ModifyDNRequest extends NetObject  {
     
     // Properties section
     
+    public boolean getDeleteOldRdn() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("DeleteOldRdn");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDeleteOldRdn(boolean DeleteOldRdn) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DeleteOldRdn", DeleteOldRdn);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryControlCollection getControls() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Controls");
+            return new DirectoryControlCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getDistinguishedName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -153,26 +184,6 @@ public class ModifyDNRequest extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DistinguishedName", DistinguishedName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getNewParentDistinguishedName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("NewParentDistinguishedName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setNewParentDistinguishedName(java.lang.String NewParentDistinguishedName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("NewParentDistinguishedName", NewParentDistinguishedName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,21 +209,21 @@ public class ModifyDNRequest extends NetObject  {
         }
     }
 
-    public boolean getDeleteOldRdn() throws Throwable {
+    public java.lang.String getNewParentDistinguishedName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("DeleteOldRdn");
+            return (java.lang.String)classInstance.Get("NewParentDistinguishedName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDeleteOldRdn(boolean DeleteOldRdn) throws Throwable {
+    public void setNewParentDistinguishedName(java.lang.String NewParentDistinguishedName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("DeleteOldRdn", DeleteOldRdn);
+            classInstance.Set("NewParentDistinguishedName", NewParentDistinguishedName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,17 +244,6 @@ public class ModifyDNRequest extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestId", RequestId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryControlCollection getControls() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Controls");
-            return new DirectoryControlCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

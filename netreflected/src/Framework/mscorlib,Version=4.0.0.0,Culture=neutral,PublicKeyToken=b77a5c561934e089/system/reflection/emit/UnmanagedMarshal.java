@@ -115,12 +115,12 @@ public class UnmanagedMarshal extends NetObject  {
     
     // Methods section
     
-    public static UnmanagedMarshal DefineUnmanagedMarshal(UnmanagedType unmanagedType) throws Throwable, system.ArgumentException {
+    public static UnmanagedMarshal DefineByValArray(int elemCount) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objDefineUnmanagedMarshal = (JCObject)classType.Invoke("DefineUnmanagedMarshal", unmanagedType == null ? null : unmanagedType.getJCOInstance());
-            return new UnmanagedMarshal(objDefineUnmanagedMarshal);
+            JCObject objDefineByValArray = (JCObject)classType.Invoke("DefineByValArray", elemCount);
+            return new UnmanagedMarshal(objDefineByValArray);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -137,28 +137,6 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
-    public static UnmanagedMarshal DefineSafeArray(UnmanagedType elemType) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDefineSafeArray = (JCObject)classType.Invoke("DefineSafeArray", elemType == null ? null : elemType.getJCOInstance());
-            return new UnmanagedMarshal(objDefineSafeArray);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UnmanagedMarshal DefineByValArray(int elemCount) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDefineByValArray = (JCObject)classType.Invoke("DefineByValArray", elemCount);
-            return new UnmanagedMarshal(objDefineByValArray);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static UnmanagedMarshal DefineLPArray(UnmanagedType elemType) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -170,16 +148,37 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
+    public static UnmanagedMarshal DefineSafeArray(UnmanagedType elemType) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDefineSafeArray = (JCObject)classType.Invoke("DefineSafeArray", elemType == null ? null : elemType.getJCOInstance());
+            return new UnmanagedMarshal(objDefineSafeArray);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UnmanagedMarshal DefineUnmanagedMarshal(UnmanagedType unmanagedType) throws Throwable, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDefineUnmanagedMarshal = (JCObject)classType.Invoke("DefineUnmanagedMarshal", unmanagedType == null ? null : unmanagedType.getJCOInstance());
+            return new UnmanagedMarshal(objDefineUnmanagedMarshal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public UnmanagedType getGetUnmanagedType() throws Throwable {
+    public int getElementCount() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("GetUnmanagedType");
-            return new UnmanagedType(val);
+            return (int)classInstance.Get("ElementCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,21 +195,22 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
-    public int getElementCount() throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("ElementCount");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public UnmanagedType getBaseType() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("BaseType");
+            return new UnmanagedType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UnmanagedType getGetUnmanagedType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("GetUnmanagedType");
             return new UnmanagedType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

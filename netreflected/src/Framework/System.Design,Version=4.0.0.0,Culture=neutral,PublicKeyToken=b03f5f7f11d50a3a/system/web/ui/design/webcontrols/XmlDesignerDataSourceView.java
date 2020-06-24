@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.design.webcontrols.XmlDataSourceDesigner;
-import system.web.ui.design.IDataSourceViewSchema;
-import system.web.ui.design.IDataSourceViewSchemaImplementation;
 import system.web.ui.design.IDataSourceDesigner;
 import system.web.ui.design.IDataSourceDesignerImplementation;
+import system.web.ui.design.IDataSourceViewSchema;
+import system.web.ui.design.IDataSourceViewSchemaImplementation;
 
 
 /**
@@ -132,17 +132,6 @@ public class XmlDesignerDataSourceView extends NetObject  {
     
     // Properties section
     
-    public IDataSourceViewSchema getSchema() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.configuration.provider.ProviderException, system.ObjectDisposedException, system.xml.XmlException, system.web.HttpRequestValidationException, system.NullReferenceException, system.xml.xsl.XsltCompileException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.IndexOutOfRangeException, system.NotImplementedException, system.OverflowException, system.RankException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Schema");
-            return new IDataSourceViewSchemaImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCanDelete() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -203,6 +192,16 @@ public class XmlDesignerDataSourceView extends NetObject  {
         }
     }
 
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IDataSourceDesigner getDataSourceDesigner() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -214,11 +213,12 @@ public class XmlDesignerDataSourceView extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
+    public IDataSourceViewSchema getSchema() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.configuration.provider.ProviderException, system.ObjectDisposedException, system.xml.XmlException, system.web.HttpRequestValidationException, system.NullReferenceException, system.xml.xsl.XsltCompileException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.IndexOutOfRangeException, system.NotImplementedException, system.OverflowException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            JCObject val = (JCObject)classInstance.Get("Schema");
+            return new IDataSourceViewSchemaImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

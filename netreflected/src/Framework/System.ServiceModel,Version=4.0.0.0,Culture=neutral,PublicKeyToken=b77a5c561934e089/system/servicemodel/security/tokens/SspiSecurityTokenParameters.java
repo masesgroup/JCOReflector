@@ -171,6 +171,26 @@ public class SspiSecurityTokenParameters extends NetObject  {
         }
     }
 
+    public boolean getRequireDerivedKeys() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("RequireDerivedKeys");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRequireDerivedKeys(boolean RequireDerivedKeys) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RequireDerivedKeys", RequireDerivedKeys);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityTokenInclusionMode getInclusionMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -208,26 +228,6 @@ public class SspiSecurityTokenParameters extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferenceStyle", ReferenceStyle == null ? null : ReferenceStyle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getRequireDerivedKeys() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("RequireDerivedKeys");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRequireDerivedKeys(boolean RequireDerivedKeys) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RequireDerivedKeys", RequireDerivedKeys);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

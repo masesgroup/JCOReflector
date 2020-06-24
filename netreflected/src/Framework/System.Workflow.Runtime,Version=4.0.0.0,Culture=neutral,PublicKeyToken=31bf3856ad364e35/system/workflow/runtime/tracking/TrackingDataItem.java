@@ -128,12 +128,22 @@ public class TrackingDataItem extends NetObject  {
     
     // Properties section
     
-    public TrackingAnnotationCollection getAnnotations() throws Throwable {
+    public NetObject getData() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Annotations");
-            return new TrackingAnnotationCollection(val);
+            JCObject val = (JCObject)classInstance.Get("Data");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setData(NetObject Data) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Data", Data == null ? null : Data.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,22 +169,12 @@ public class TrackingDataItem extends NetObject  {
         }
     }
 
-    public NetObject getData() throws Throwable {
+    public TrackingAnnotationCollection getAnnotations() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Data");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setData(NetObject Data) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Data", Data == null ? null : Data.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("Annotations");
+            return new TrackingAnnotationCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

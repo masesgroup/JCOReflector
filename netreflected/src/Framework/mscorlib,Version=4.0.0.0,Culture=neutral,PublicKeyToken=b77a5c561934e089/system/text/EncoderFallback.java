@@ -139,22 +139,22 @@ public class EncoderFallback extends NetObject  {
         }
     }
 
-    public static EncoderFallback getReplacementFallback() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
+    public static EncoderFallback getExceptionFallback() throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ReplacementFallback");
+            JCObject val = (JCObject)classType.Get("ExceptionFallback");
             return new EncoderFallback(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static EncoderFallback getExceptionFallback() throws Throwable, system.ArgumentException {
+    public static EncoderFallback getReplacementFallback() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ExceptionFallback");
+            JCObject val = (JCObject)classType.Get("ReplacementFallback");
             return new EncoderFallback(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

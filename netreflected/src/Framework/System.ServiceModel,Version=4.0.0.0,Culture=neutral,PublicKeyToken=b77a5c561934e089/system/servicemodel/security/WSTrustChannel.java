@@ -47,12 +47,12 @@ import system.identitymodel.protocols.wstrust.WSTrustRequestSerializer;
 import system.identitymodel.protocols.wstrust.WSTrustResponseSerializer;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
-import system.TimeSpan;
-import system.AsyncCallback;
-import system.identitymodel.tokens.SecurityToken;
 import system.identitymodel.protocols.wstrust.RequestSecurityToken;
+import system.AsyncCallback;
 import system.servicemodel.channels.Message;
+import system.TimeSpan;
 import system.identitymodel.protocols.wstrust.RequestSecurityTokenResponse;
+import system.identitymodel.tokens.SecurityToken;
 import system.servicemodel.channels.IChannel;
 import system.servicemodel.channels.IChannelImplementation;
 import system.servicemodel.CommunicationState;
@@ -142,137 +142,12 @@ public class WSTrustChannel extends NetObject  {
     
     // Methods section
     
-    public void Abort() throws Throwable {
+    public IAsyncResult BeginCancel(RequestSecurityToken rst, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Abort");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBeginClose = (JCObject)classInstance.Invoke("BeginClose", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginClose);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBeginClose = (JCObject)classInstance.Invoke("BeginClose", callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginClose);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBeginOpen = (JCObject)classInstance.Invoke("BeginOpen", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginOpen);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBeginOpen = (JCObject)classInstance.Invoke("BeginOpen", callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginOpen);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Close(TimeSpan timeout) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Close", timeout == null ? null : timeout.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Close() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Close");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void EndClose(IAsyncResult result) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("EndClose", result == null ? null : result.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void EndOpen(IAsyncResult result) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("EndOpen", result == null ? null : result.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Open(TimeSpan timeout) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Open", timeout == null ? null : timeout.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Open() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Open");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityToken Issue(RequestSecurityToken rst) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.MissingMethodException, system.security.cryptography.CryptographicException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objIssue = (JCObject)classInstance.Invoke("Issue", rst == null ? null : rst.getJCOInstance());
-            return new SecurityToken(objIssue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Message Cancel(Message message) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCancel = (JCObject)classInstance.Invoke("Cancel", message == null ? null : message.getJCOInstance());
-            return new Message(objCancel);
+            JCObject objBeginCancel = (JCObject)classInstance.Invoke("BeginCancel", rst == null ? null : rst.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginCancel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,23 +164,34 @@ public class WSTrustChannel extends NetObject  {
         }
     }
 
-    public Message EndCancel(IAsyncResult asyncResult) throws Throwable {
+    public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objEndCancel = (JCObject)classInstance.Invoke("EndCancel", asyncResult == null ? null : asyncResult.getJCOInstance());
-            return new Message(objEndCancel);
+            JCObject objBeginClose = (JCObject)classInstance.Invoke("BeginClose", callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginClose);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Message Issue(Message message) throws Throwable {
+    public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objIssue = (JCObject)classInstance.Invoke("Issue", message == null ? null : message.getJCOInstance());
-            return new Message(objIssue);
+            JCObject objBeginClose = (JCObject)classInstance.Invoke("BeginClose", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginClose);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginIssue(RequestSecurityToken rst, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginIssue = (JCObject)classInstance.Invoke("BeginIssue", rst == null ? null : rst.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginIssue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,23 +208,34 @@ public class WSTrustChannel extends NetObject  {
         }
     }
 
-    public Message EndIssue(IAsyncResult asyncResult) throws Throwable {
+    public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objEndIssue = (JCObject)classInstance.Invoke("EndIssue", asyncResult == null ? null : asyncResult.getJCOInstance());
-            return new Message(objEndIssue);
+            JCObject objBeginOpen = (JCObject)classInstance.Invoke("BeginOpen", callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginOpen);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Message Renew(Message message) throws Throwable {
+    public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objRenew = (JCObject)classInstance.Invoke("Renew", message == null ? null : message.getJCOInstance());
-            return new Message(objRenew);
+            JCObject objBeginOpen = (JCObject)classInstance.Invoke("BeginOpen", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginOpen);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginRenew(RequestSecurityToken rst, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginRenew = (JCObject)classInstance.Invoke("BeginRenew", rst == null ? null : rst.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginRenew);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,23 +252,12 @@ public class WSTrustChannel extends NetObject  {
         }
     }
 
-    public Message EndRenew(IAsyncResult asyncResult) throws Throwable {
+    public IAsyncResult BeginValidate(RequestSecurityToken rst, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objEndRenew = (JCObject)classInstance.Invoke("EndRenew", asyncResult == null ? null : asyncResult.getJCOInstance());
-            return new Message(objEndRenew);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Message Validate(Message message) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", message == null ? null : message.getJCOInstance());
-            return new Message(objValidate);
+            JCObject objBeginValidate = (JCObject)classInstance.Invoke("BeginValidate", rst == null ? null : rst.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginValidate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,28 +269,6 @@ public class WSTrustChannel extends NetObject  {
         try {
             JCObject objBeginValidate = (JCObject)classInstance.Invoke("BeginValidate", message == null ? null : message.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
             return new IAsyncResultImplementation(objBeginValidate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Message EndValidate(IAsyncResult asyncResult) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEndValidate = (JCObject)classInstance.Invoke("EndValidate", asyncResult == null ? null : asyncResult.getJCOInstance());
-            return new Message(objEndValidate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityToken GetTokenFromResponse(RequestSecurityToken request, RequestSecurityTokenResponse response) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.InvalidTimeZoneException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetTokenFromResponse = (JCObject)classInstance.Invoke("GetTokenFromResponse", request == null ? null : request.getJCOInstance(), response == null ? null : response.getJCOInstance());
-            return new SecurityToken(objGetTokenFromResponse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,45 +307,171 @@ public class WSTrustChannel extends NetObject  {
         }
     }
 
-    public IAsyncResult BeginCancel(RequestSecurityToken rst, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
+    public SecurityToken GetTokenFromResponse(RequestSecurityToken request, RequestSecurityTokenResponse response) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.InvalidTimeZoneException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginCancel = (JCObject)classInstance.Invoke("BeginCancel", rst == null ? null : rst.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginCancel);
+            JCObject objGetTokenFromResponse = (JCObject)classInstance.Invoke("GetTokenFromResponse", request == null ? null : request.getJCOInstance(), response == null ? null : response.getJCOInstance());
+            return new SecurityToken(objGetTokenFromResponse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IAsyncResult BeginIssue(RequestSecurityToken rst, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
+    public SecurityToken Issue(RequestSecurityToken rst) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.MissingMethodException, system.security.cryptography.CryptographicException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginIssue = (JCObject)classInstance.Invoke("BeginIssue", rst == null ? null : rst.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginIssue);
+            JCObject objIssue = (JCObject)classInstance.Invoke("Issue", rst == null ? null : rst.getJCOInstance());
+            return new SecurityToken(objIssue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IAsyncResult BeginRenew(RequestSecurityToken rst, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
+    public Message Cancel(Message message) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginRenew = (JCObject)classInstance.Invoke("BeginRenew", rst == null ? null : rst.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginRenew);
+            JCObject objCancel = (JCObject)classInstance.Invoke("Cancel", message == null ? null : message.getJCOInstance());
+            return new Message(objCancel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IAsyncResult BeginValidate(RequestSecurityToken rst, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
+    public Message EndCancel(IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginValidate = (JCObject)classInstance.Invoke("BeginValidate", rst == null ? null : rst.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginValidate);
+            JCObject objEndCancel = (JCObject)classInstance.Invoke("EndCancel", asyncResult == null ? null : asyncResult.getJCOInstance());
+            return new Message(objEndCancel);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message EndIssue(IAsyncResult asyncResult) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEndIssue = (JCObject)classInstance.Invoke("EndIssue", asyncResult == null ? null : asyncResult.getJCOInstance());
+            return new Message(objEndIssue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message EndRenew(IAsyncResult asyncResult) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEndRenew = (JCObject)classInstance.Invoke("EndRenew", asyncResult == null ? null : asyncResult.getJCOInstance());
+            return new Message(objEndRenew);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message EndValidate(IAsyncResult asyncResult) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEndValidate = (JCObject)classInstance.Invoke("EndValidate", asyncResult == null ? null : asyncResult.getJCOInstance());
+            return new Message(objEndValidate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message Issue(Message message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objIssue = (JCObject)classInstance.Invoke("Issue", message == null ? null : message.getJCOInstance());
+            return new Message(objIssue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message Renew(Message message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objRenew = (JCObject)classInstance.Invoke("Renew", message == null ? null : message.getJCOInstance());
+            return new Message(objRenew);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message Validate(Message message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", message == null ? null : message.getJCOInstance());
+            return new Message(objValidate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Abort() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Abort");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Close() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Close");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Close(TimeSpan timeout) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Close", timeout == null ? null : timeout.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndClose(IAsyncResult result) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndClose", result == null ? null : result.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndOpen(IAsyncResult result) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndOpen", result == null ? null : result.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Open(TimeSpan timeout) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Open", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,6 +481,69 @@ public class WSTrustChannel extends NetObject  {
     
     // Properties section
     
+    public WSTrustRequestSerializer getWSTrustRequestSerializer() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("WSTrustRequestSerializer");
+            return new WSTrustRequestSerializer(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setWSTrustRequestSerializer(WSTrustRequestSerializer WSTrustRequestSerializer) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("WSTrustRequestSerializer", WSTrustRequestSerializer == null ? null : WSTrustRequestSerializer.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WSTrustResponseSerializer getWSTrustResponseSerializer() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("WSTrustResponseSerializer");
+            return new WSTrustResponseSerializer(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setWSTrustResponseSerializer(WSTrustResponseSerializer WSTrustResponseSerializer) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("WSTrustResponseSerializer", WSTrustResponseSerializer == null ? null : WSTrustResponseSerializer.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WSTrustSerializationContext getWSTrustSerializationContext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("WSTrustSerializationContext");
+            return new WSTrustSerializationContext(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setWSTrustSerializationContext(WSTrustSerializationContext WSTrustSerializationContext) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("WSTrustSerializationContext", WSTrustSerializationContext == null ? null : WSTrustSerializationContext.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IChannel getChannel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -512,22 +565,12 @@ public class WSTrustChannel extends NetObject  {
         }
     }
 
-    public WSTrustChannelFactory getChannelFactory() throws Throwable {
+    public CommunicationState getState() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ChannelFactory");
-            return new WSTrustChannelFactory(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setChannelFactory(WSTrustChannelFactory ChannelFactory) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ChannelFactory", ChannelFactory == null ? null : ChannelFactory.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("State");
+            return new CommunicationState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -575,75 +618,22 @@ public class WSTrustChannel extends NetObject  {
         }
     }
 
-    public WSTrustSerializationContext getWSTrustSerializationContext() throws Throwable {
+    public WSTrustChannelFactory getChannelFactory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WSTrustSerializationContext");
-            return new WSTrustSerializationContext(val);
+            JCObject val = (JCObject)classInstance.Get("ChannelFactory");
+            return new WSTrustChannelFactory(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setWSTrustSerializationContext(WSTrustSerializationContext WSTrustSerializationContext) throws Throwable {
+    public void setChannelFactory(WSTrustChannelFactory ChannelFactory) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("WSTrustSerializationContext", WSTrustSerializationContext == null ? null : WSTrustSerializationContext.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WSTrustRequestSerializer getWSTrustRequestSerializer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("WSTrustRequestSerializer");
-            return new WSTrustRequestSerializer(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setWSTrustRequestSerializer(WSTrustRequestSerializer WSTrustRequestSerializer) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("WSTrustRequestSerializer", WSTrustRequestSerializer == null ? null : WSTrustRequestSerializer.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WSTrustResponseSerializer getWSTrustResponseSerializer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("WSTrustResponseSerializer");
-            return new WSTrustResponseSerializer(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setWSTrustResponseSerializer(WSTrustResponseSerializer WSTrustResponseSerializer) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("WSTrustResponseSerializer", WSTrustResponseSerializer == null ? null : WSTrustResponseSerializer.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CommunicationState getState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("State");
-            return new CommunicationState(val);
+            classInstance.Set("ChannelFactory", ChannelFactory == null ? null : ChannelFactory.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -114,22 +114,22 @@ public class DesignerAutoFormat extends NetObject  {
     
     // Methods section
     
-    public void Apply(Control control) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Apply", control == null ? null : control.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Control GetPreviewControl(Control runtimeControl) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpParseException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetPreviewControl = (JCObject)classInstance.Invoke("GetPreviewControl", runtimeControl == null ? null : runtimeControl.getJCOInstance());
             return new Control(objGetPreviewControl);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Apply(Control control) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Apply", control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

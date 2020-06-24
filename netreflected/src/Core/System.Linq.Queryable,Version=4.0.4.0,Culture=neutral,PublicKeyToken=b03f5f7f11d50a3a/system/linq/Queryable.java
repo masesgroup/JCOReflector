@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Decimal;
 import system.Single;
+import system.Decimal;
 import system.linq.IQueryable;
 import system.linq.IQueryableImplementation;
 

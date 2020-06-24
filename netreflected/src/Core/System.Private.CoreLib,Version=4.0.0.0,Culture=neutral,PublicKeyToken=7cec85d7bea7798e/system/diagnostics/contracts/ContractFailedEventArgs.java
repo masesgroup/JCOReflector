@@ -148,21 +148,21 @@ public class ContractFailedEventArgs extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getMessage() throws Throwable {
+    public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            return (boolean)classInstance.Get("Handled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getCondition() throws Throwable {
+    public boolean getUnwind() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Condition");
+            return (boolean)classInstance.Get("Unwind");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,21 +190,21 @@ public class ContractFailedEventArgs extends NetObject  {
         }
     }
 
-    public boolean getHandled() throws Throwable {
+    public java.lang.String getCondition() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Handled");
+            return (java.lang.String)classInstance.Get("Condition");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getUnwind() throws Throwable {
+    public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Unwind");
+            return (java.lang.String)classInstance.Get("Message");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

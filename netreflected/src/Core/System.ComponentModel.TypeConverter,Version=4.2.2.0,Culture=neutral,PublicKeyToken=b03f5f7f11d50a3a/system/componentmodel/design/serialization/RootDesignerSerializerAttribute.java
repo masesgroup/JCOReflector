@@ -109,11 +109,11 @@ public class RootDesignerSerializerAttribute extends NetObject  {
     // Constructors section
     
 
-    public RootDesignerSerializerAttribute(NetType serializerType, NetType baseSerializerType, boolean reloadable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public RootDesignerSerializerAttribute(java.lang.String serializerTypeName, java.lang.String baseSerializerTypeName, boolean reloadable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(serializerType == null ? null : serializerType.getJCOInstance(), baseSerializerType == null ? null : baseSerializerType.getJCOInstance(), reloadable));
+            setJCOInstance((JCObject)classType.NewObject(serializerTypeName, baseSerializerTypeName, reloadable));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -129,11 +129,11 @@ public class RootDesignerSerializerAttribute extends NetObject  {
         }
     }
 
-    public RootDesignerSerializerAttribute(java.lang.String serializerTypeName, java.lang.String baseSerializerTypeName, boolean reloadable) throws Throwable {
+    public RootDesignerSerializerAttribute(NetType serializerType, NetType baseSerializerType, boolean reloadable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(serializerTypeName, baseSerializerTypeName, reloadable));
+            setJCOInstance((JCObject)classType.NewObject(serializerType == null ? null : serializerType.getJCOInstance(), baseSerializerType == null ? null : baseSerializerType.getJCOInstance(), reloadable));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,21 +143,21 @@ public class RootDesignerSerializerAttribute extends NetObject  {
     
     // Methods section
     
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsDefaultAttribute");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Match(NetObject obj) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,11 +177,12 @@ public class RootDesignerSerializerAttribute extends NetObject  {
         }
     }
 
-    public java.lang.String getSerializerTypeName() throws Throwable {
+    public NetObject getTypeId() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("SerializerTypeName");
+            JCObject val = (JCObject)classInstance.Get("TypeId");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,12 +198,11 @@ public class RootDesignerSerializerAttribute extends NetObject  {
         }
     }
 
-    public NetObject getTypeId() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public java.lang.String getSerializerTypeName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
+            return (java.lang.String)classInstance.Get("SerializerTypeName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

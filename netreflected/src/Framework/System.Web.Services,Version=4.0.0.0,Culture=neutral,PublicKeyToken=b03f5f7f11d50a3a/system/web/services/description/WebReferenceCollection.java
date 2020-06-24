@@ -124,21 +124,21 @@ public class WebReferenceCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(WebReference webReference) throws Throwable {
+    public boolean Contains(WebReference webReference) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", webReference == null ? null : webReference.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", webReference == null ? null : webReference.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, WebReference webReference) throws Throwable {
+    public int Add(WebReference webReference) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, webReference == null ? null : webReference.getJCOInstance());
+            return (int)classInstance.Invoke("Add", webReference == null ? null : webReference.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,21 +154,11 @@ public class WebReferenceCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(WebReference webReference) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", webReference == null ? null : webReference.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(WebReference webReference) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", webReference == null ? null : webReference.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,11 +174,21 @@ public class WebReferenceCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public void Insert(int index, WebReference webReference) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, webReference == null ? null : webReference.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(WebReference webReference) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", webReference == null ? null : webReference.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

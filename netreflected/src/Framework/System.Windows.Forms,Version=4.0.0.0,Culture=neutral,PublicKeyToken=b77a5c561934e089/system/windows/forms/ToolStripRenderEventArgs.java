@@ -141,17 +141,6 @@ public class ToolStripRenderEventArgs extends NetObject  {
     
     // Properties section
     
-    public Rectangle getAffectedBounds() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AffectedBounds");
-            return new Rectangle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Color getBackColor() throws Throwable, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -174,12 +163,12 @@ public class ToolStripRenderEventArgs extends NetObject  {
         }
     }
 
-    public ToolStrip getToolStrip() throws Throwable {
+    public Rectangle getAffectedBounds() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolStrip");
-            return new ToolStrip(val);
+            JCObject val = (JCObject)classInstance.Get("AffectedBounds");
+            return new Rectangle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,6 +180,17 @@ public class ToolStripRenderEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ConnectedArea");
             return new Rectangle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ToolStrip getToolStrip() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ToolStrip");
+            return new ToolStrip(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

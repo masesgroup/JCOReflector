@@ -126,23 +126,23 @@ public class DesignerActionList extends NetObject  {
     
     // Methods section
     
-    public NetObject GetService(NetType serviceType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
-            return new NetObject(objGetService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DesignerActionItemCollection GetSortedActionItems() throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetSortedActionItems = (JCObject)classInstance.Invoke("GetSortedActionItems");
             return new DesignerActionItemCollection(objGetSortedActionItems);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetService(NetType serviceType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            return new NetObject(objGetService);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

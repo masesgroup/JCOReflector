@@ -103,6 +103,17 @@ public class INameScopeImplementation extends NetObject implements INameScope {
 
     // Methods section
     
+    public NetObject FindName(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objFindName = (JCObject)classInstance.Invoke("FindName", name);
+            return new NetObject(objFindName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void RegisterName(java.lang.String name, NetObject scopedElement) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -118,17 +129,6 @@ public class INameScopeImplementation extends NetObject implements INameScope {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnregisterName", name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject FindName(java.lang.String name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objFindName = (JCObject)classInstance.Invoke("FindName", name);
-            return new NetObject(objFindName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

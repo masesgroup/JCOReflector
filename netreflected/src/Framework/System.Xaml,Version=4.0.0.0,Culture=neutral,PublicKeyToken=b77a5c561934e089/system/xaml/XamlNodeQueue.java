@@ -129,17 +129,6 @@ public class XamlNodeQueue extends NetObject  {
     
     // Properties section
     
-    public XamlWriter getWriter() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Writer");
-            return new XamlWriter(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -155,6 +144,17 @@ public class XamlNodeQueue extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("Count");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XamlWriter getWriter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Writer");
+            return new XamlWriter(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

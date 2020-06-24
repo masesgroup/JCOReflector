@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.DependencyObject;
-import system.windows.RoutedEventHandler;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
+import system.windows.RoutedEventHandler;
 
 
 /**
@@ -126,21 +126,33 @@ public class FocusManager extends NetObject  {
         }
     }
 
-    public static void AddGotFocusHandler(DependencyObject element, RoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
+    public static DependencyObject GetFocusScope(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("AddGotFocusHandler", element == null ? null : element.getJCOInstance(), handler);
+            JCObject objGetFocusScope = (JCObject)classType.Invoke("GetFocusScope", element == null ? null : element.getJCOInstance());
+            return new DependencyObject(objGetFocusScope);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void RemoveGotFocusHandler(DependencyObject element, RoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
+    public static IInputElement GetFocusedElement(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RemoveGotFocusHandler", element == null ? null : element.getJCOInstance(), handler);
+            JCObject objGetFocusedElement = (JCObject)classType.Invoke("GetFocusedElement", element == null ? null : element.getJCOInstance());
+            return new IInputElementImplementation(objGetFocusedElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void AddGotFocusHandler(DependencyObject element, RoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddGotFocusHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,22 +168,21 @@ public class FocusManager extends NetObject  {
         }
     }
 
-    public static void RemoveLostFocusHandler(DependencyObject element, RoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
+    public static void RemoveGotFocusHandler(DependencyObject element, RoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RemoveLostFocusHandler", element == null ? null : element.getJCOInstance(), handler);
+            classType.Invoke("RemoveGotFocusHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static IInputElement GetFocusedElement(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
+    public static void RemoveLostFocusHandler(DependencyObject element, RoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetFocusedElement = (JCObject)classType.Invoke("GetFocusedElement", element == null ? null : element.getJCOInstance());
-            return new IInputElementImplementation(objGetFocusedElement);
+            classType.Invoke("RemoveLostFocusHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,17 +203,6 @@ public class FocusManager extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsFocusScope", element == null ? null : element.getJCOInstance(), value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DependencyObject GetFocusScope(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetFocusScope = (JCObject)classType.Invoke("GetFocusScope", element == null ? null : element.getJCOInstance());
-            return new DependencyObject(objGetFocusScope);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

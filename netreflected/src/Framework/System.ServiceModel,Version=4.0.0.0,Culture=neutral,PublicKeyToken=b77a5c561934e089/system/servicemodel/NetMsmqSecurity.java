@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.NetMsmqSecurityMode;
-import system.servicemodel.MsmqTransportSecurity;
 import system.servicemodel.MessageSecurityOverMsmq;
+import system.servicemodel.MsmqTransportSecurity;
+import system.servicemodel.NetMsmqSecurityMode;
 
 
 /**
@@ -130,22 +130,22 @@ public class NetMsmqSecurity extends NetObject  {
     
     // Properties section
     
-    public NetMsmqSecurityMode getMode() throws Throwable {
+    public MessageSecurityOverMsmq getMessage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
-            return new NetMsmqSecurityMode(val);
+            JCObject val = (JCObject)classInstance.Get("Message");
+            return new MessageSecurityOverMsmq(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMode(NetMsmqSecurityMode Mode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public void setMessage(MessageSecurityOverMsmq Message) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
+            classInstance.Set("Message", Message == null ? null : Message.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,22 +172,22 @@ public class NetMsmqSecurity extends NetObject  {
         }
     }
 
-    public MessageSecurityOverMsmq getMessage() throws Throwable {
+    public NetMsmqSecurityMode getMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Message");
-            return new MessageSecurityOverMsmq(val);
+            JCObject val = (JCObject)classInstance.Get("Mode");
+            return new NetMsmqSecurityMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMessage(MessageSecurityOverMsmq Message) throws Throwable {
+    public void setMode(NetMsmqSecurityMode Mode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Message", Message == null ? null : Message.getJCOInstance());
+            classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

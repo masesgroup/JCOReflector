@@ -37,15 +37,15 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.codedom.CodeTypeDeclaration;
+import system.codedom.compiler.GeneratorSupport;
+import system.codedom.CodeTypeReference;
+import system.codedom.CodeCompileUnit;
 import system.io.TextWriter;
 import system.codedom.compiler.CodeGeneratorOptions;
 import system.codedom.CodeExpression;
-import system.codedom.CodeStatement;
-import system.codedom.CodeTypeReference;
-import system.codedom.compiler.GeneratorSupport;
 import system.codedom.CodeNamespace;
-import system.codedom.CodeCompileUnit;
+import system.codedom.CodeStatement;
+import system.codedom.CodeTypeDeclaration;
 
 
 /**
@@ -98,13 +98,9 @@ public interface ICodeGenerator extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void GenerateCodeFromType(CodeTypeDeclaration e, TextWriter w, CodeGeneratorOptions o) throws Throwable;
-
-    public void GenerateCodeFromExpression(CodeExpression e, TextWriter w, CodeGeneratorOptions o) throws Throwable;
-
-    public void GenerateCodeFromStatement(CodeStatement e, TextWriter w, CodeGeneratorOptions o) throws Throwable;
-
     public boolean IsValidIdentifier(java.lang.String value) throws Throwable;
+
+    public boolean Supports(GeneratorSupport supports) throws Throwable;
 
     public java.lang.String CreateEscapedIdentifier(java.lang.String value) throws Throwable;
 
@@ -112,11 +108,15 @@ public interface ICodeGenerator extends IJCOBridgeReflected {
 
     public java.lang.String GetTypeOutput(CodeTypeReference type) throws Throwable;
 
-    public boolean Supports(GeneratorSupport supports) throws Throwable;
+    public void GenerateCodeFromCompileUnit(CodeCompileUnit e, TextWriter w, CodeGeneratorOptions o) throws Throwable;
+
+    public void GenerateCodeFromExpression(CodeExpression e, TextWriter w, CodeGeneratorOptions o) throws Throwable;
 
     public void GenerateCodeFromNamespace(CodeNamespace e, TextWriter w, CodeGeneratorOptions o) throws Throwable;
 
-    public void GenerateCodeFromCompileUnit(CodeCompileUnit e, TextWriter w, CodeGeneratorOptions o) throws Throwable;
+    public void GenerateCodeFromStatement(CodeStatement e, TextWriter w, CodeGeneratorOptions o) throws Throwable;
+
+    public void GenerateCodeFromType(CodeTypeDeclaration e, TextWriter w, CodeGeneratorOptions o) throws Throwable;
 
     public void ValidateIdentifier(java.lang.String value) throws Throwable;
 

@@ -37,11 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.windows.input.TraversalRequest;
 import system.windows.interop.IKeyboardInputSite;
 import system.windows.interop.IKeyboardInputSiteImplementation;
 import system.windows.interop.IKeyboardInputSink;
 import system.windows.interop.IKeyboardInputSinkImplementation;
-import system.windows.input.TraversalRequest;
 
 
 /**
@@ -94,11 +94,11 @@ public interface IKeyboardInputSink extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IKeyboardInputSite RegisterKeyboardInputSink(IKeyboardInputSink sink) throws Throwable;
+    public boolean HasFocusWithin() throws Throwable;
 
     public boolean TabInto(TraversalRequest request) throws Throwable;
 
-    public boolean HasFocusWithin() throws Throwable;
+    public IKeyboardInputSite RegisterKeyboardInputSink(IKeyboardInputSink sink) throws Throwable;
 
 
     

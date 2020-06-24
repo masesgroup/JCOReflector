@@ -38,15 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.policy.StrongName;
-import system.security.policy.StrongNameMembershipCondition;
 import system.security.NamedPermissionSet;
 import system.security.PermissionSet;
-import system.security.policy.PolicyLevel;
-import system.security.SecurityElement;
-import system.security.policy.PolicyStatement;
-import system.security.policy.Evidence;
 import system.security.policy.CodeGroup;
+import system.security.policy.Evidence;
+import system.security.policy.PolicyLevel;
+import system.security.policy.PolicyStatement;
+import system.security.SecurityElement;
+import system.security.policy.StrongName;
+import system.security.policy.StrongNameMembershipCondition;
 import system.collections.IList;
 import system.collections.IListImplementation;
 import system.security.PolicyLevelType;
@@ -124,6 +124,94 @@ public class PolicyLevel extends NetObject  {
     
     // Methods section
     
+    public NamedPermissionSet ChangeNamedPermissionSet(java.lang.String name, PermissionSet pSet) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objChangeNamedPermissionSet = (JCObject)classInstance.Invoke("ChangeNamedPermissionSet", name, pSet == null ? null : pSet.getJCOInstance());
+            return new NamedPermissionSet(objChangeNamedPermissionSet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NamedPermissionSet GetNamedPermissionSet(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetNamedPermissionSet = (JCObject)classInstance.Invoke("GetNamedPermissionSet", name);
+            return new NamedPermissionSet(objGetNamedPermissionSet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NamedPermissionSet RemoveNamedPermissionSet(NamedPermissionSet permSet) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objRemoveNamedPermissionSet = (JCObject)classInstance.Invoke("RemoveNamedPermissionSet", permSet == null ? null : permSet.getJCOInstance());
+            return new NamedPermissionSet(objRemoveNamedPermissionSet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NamedPermissionSet RemoveNamedPermissionSet(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objRemoveNamedPermissionSet = (JCObject)classInstance.Invoke("RemoveNamedPermissionSet", name);
+            return new NamedPermissionSet(objRemoveNamedPermissionSet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeGroup ResolveMatchingCodeGroups(Evidence evidence) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveMatchingCodeGroups = (JCObject)classInstance.Invoke("ResolveMatchingCodeGroups", evidence == null ? null : evidence.getJCOInstance());
+            return new CodeGroup(objResolveMatchingCodeGroups);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PolicyLevel CreateAppDomainLevel() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateAppDomainLevel = (JCObject)classType.Invoke("CreateAppDomainLevel");
+            return new PolicyLevel(objCreateAppDomainLevel);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PolicyStatement Resolve(Evidence evidence) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolve = (JCObject)classInstance.Invoke("Resolve", evidence == null ? null : evidence.getJCOInstance());
+            return new PolicyStatement(objResolve);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityElement ToXml() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
+            return new SecurityElement(objToXml);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddFullTrustAssembly(StrongName sn) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,44 +242,11 @@ public class PolicyLevel extends NetObject  {
         }
     }
 
-    public NamedPermissionSet ChangeNamedPermissionSet(java.lang.String name, PermissionSet pSet) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objChangeNamedPermissionSet = (JCObject)classInstance.Invoke("ChangeNamedPermissionSet", name, pSet == null ? null : pSet.getJCOInstance());
-            return new NamedPermissionSet(objChangeNamedPermissionSet);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static PolicyLevel CreateAppDomainLevel() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateAppDomainLevel = (JCObject)classType.Invoke("CreateAppDomainLevel");
-            return new PolicyLevel(objCreateAppDomainLevel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void FromXml(SecurityElement e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NamedPermissionSet GetNamedPermissionSet(java.lang.String name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetNamedPermissionSet = (JCObject)classInstance.Invoke("GetNamedPermissionSet", name);
-            return new NamedPermissionSet(objGetNamedPermissionSet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,66 +282,11 @@ public class PolicyLevel extends NetObject  {
         }
     }
 
-    public NamedPermissionSet RemoveNamedPermissionSet(NamedPermissionSet permSet) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRemoveNamedPermissionSet = (JCObject)classInstance.Invoke("RemoveNamedPermissionSet", permSet == null ? null : permSet.getJCOInstance());
-            return new NamedPermissionSet(objRemoveNamedPermissionSet);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NamedPermissionSet RemoveNamedPermissionSet(java.lang.String name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRemoveNamedPermissionSet = (JCObject)classInstance.Invoke("RemoveNamedPermissionSet", name);
-            return new NamedPermissionSet(objRemoveNamedPermissionSet);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PolicyStatement Resolve(Evidence evidence) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolve = (JCObject)classInstance.Invoke("Resolve", evidence == null ? null : evidence.getJCOInstance());
-            return new PolicyStatement(objResolve);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeGroup ResolveMatchingCodeGroups(Evidence evidence) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveMatchingCodeGroups = (JCObject)classInstance.Invoke("ResolveMatchingCodeGroups", evidence == null ? null : evidence.getJCOInstance());
-            return new CodeGroup(objResolveMatchingCodeGroups);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityElement ToXml() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
-            return new SecurityElement(objToXml);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,16 +302,6 @@ public class PolicyLevel extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("FullTrustAssemblies");
             return new IListImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getLabel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Label");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,22 +339,32 @@ public class PolicyLevel extends NetObject  {
         }
     }
 
-    public java.lang.String getStoreLocation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("StoreLocation");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PolicyLevelType getType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Type");
             return new PolicyLevelType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getLabel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Label");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getStoreLocation() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("StoreLocation");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

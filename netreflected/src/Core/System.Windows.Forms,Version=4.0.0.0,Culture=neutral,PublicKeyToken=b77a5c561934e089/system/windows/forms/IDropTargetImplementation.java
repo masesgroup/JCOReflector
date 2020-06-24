@@ -105,6 +105,16 @@ public class IDropTargetImplementation extends NetObject implements IDropTarget 
 
     // Methods section
     
+    public void OnDragDrop(DragEventArgs e) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("OnDragDrop", e == null ? null : e.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void OnDragEnter(DragEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -120,16 +130,6 @@ public class IDropTargetImplementation extends NetObject implements IDropTarget 
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDragLeave", e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void OnDragDrop(DragEventArgs e) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("OnDragDrop", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

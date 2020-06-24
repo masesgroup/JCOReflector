@@ -40,15 +40,15 @@ import java.util.ArrayList;
 // Import section
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
-import system.TimeSpan;
 import system.AsyncCallback;
-import system.servicemodel.InstanceContext;
+import system.TimeSpan;
 import system.servicemodel.channels.IInputSession;
 import system.servicemodel.channels.IInputSessionImplementation;
-import system.servicemodel.EndpointAddress;
 import system.servicemodel.channels.IOutputSession;
 import system.servicemodel.channels.IOutputSessionImplementation;
 import system.servicemodel.CommunicationState;
+import system.servicemodel.EndpointAddress;
+import system.servicemodel.InstanceContext;
 import system.EventHandler;
 
 
@@ -115,47 +115,6 @@ public class IDuplexContextChannelImplementation extends NetObject implements ID
 
     // Methods section
     
-    public IAsyncResult BeginCloseOutputSession(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBeginCloseOutputSession = (JCObject)classInstance.Invoke("BeginCloseOutputSession", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginCloseOutputSession);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void EndCloseOutputSession(IAsyncResult result) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("EndCloseOutputSession", result == null ? null : result.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CloseOutputSession(TimeSpan timeout) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CloseOutputSession", timeout == null ? null : timeout.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Abort() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Abort");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -178,31 +137,12 @@ public class IDuplexContextChannelImplementation extends NetObject implements ID
         }
     }
 
-    public void EndClose(IAsyncResult result) throws Throwable {
+    public IAsyncResult BeginCloseOutputSession(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("EndClose", result == null ? null : result.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Open() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Open");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Open(TimeSpan timeout) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Open", timeout == null ? null : timeout.getJCOInstance());
+            JCObject objBeginCloseOutputSession = (JCObject)classInstance.Invoke("BeginCloseOutputSession", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginCloseOutputSession);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,11 +170,11 @@ public class IDuplexContextChannelImplementation extends NetObject implements ID
         }
     }
 
-    public void EndOpen(IAsyncResult result) throws Throwable {
+    public void Abort() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("EndOpen", result == null ? null : result.getJCOInstance());
+            classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +200,90 @@ public class IDuplexContextChannelImplementation extends NetObject implements ID
         }
     }
 
+    public void CloseOutputSession(TimeSpan timeout) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CloseOutputSession", timeout == null ? null : timeout.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndClose(IAsyncResult result) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndClose", result == null ? null : result.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndCloseOutputSession(IAsyncResult result) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndCloseOutputSession", result == null ? null : result.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndOpen(IAsyncResult result) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndOpen", result == null ? null : result.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Open() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Open");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Open(TimeSpan timeout) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Open", timeout == null ? null : timeout.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public boolean getAllowOutputBatching() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("AllowOutputBatching");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAllowOutputBatching(boolean AllowOutputBatching) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AllowOutputBatching", AllowOutputBatching);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getAutomaticInputSessionShutdown() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -279,6 +299,61 @@ public class IDuplexContextChannelImplementation extends NetObject implements ID
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutomaticInputSessionShutdown", AutomaticInputSessionShutdown);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IInputSession getInputSession() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("InputSession");
+            return new IInputSessionImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IOutputSession getOutputSession() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("OutputSession");
+            return new IOutputSessionImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CommunicationState getState() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("State");
+            return new CommunicationState(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EndpointAddress getLocalAddress() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("LocalAddress");
+            return new EndpointAddress(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EndpointAddress getRemoteAddress() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RemoteAddress");
+            return new EndpointAddress(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,43 +380,11 @@ public class IDuplexContextChannelImplementation extends NetObject implements ID
         }
     }
 
-    public boolean getAllowOutputBatching() throws Throwable {
+    public java.lang.String getSessionId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("AllowOutputBatching");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAllowOutputBatching(boolean AllowOutputBatching) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AllowOutputBatching", AllowOutputBatching);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IInputSession getInputSession() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InputSession");
-            return new IInputSessionImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EndpointAddress getLocalAddress() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LocalAddress");
-            return new EndpointAddress(val);
+            return (java.lang.String)classInstance.Get("SessionId");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,49 +406,6 @@ public class IDuplexContextChannelImplementation extends NetObject implements ID
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OperationTimeout", OperationTimeout == null ? null : OperationTimeout.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IOutputSession getOutputSession() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("OutputSession");
-            return new IOutputSessionImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EndpointAddress getRemoteAddress() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RemoteAddress");
-            return new EndpointAddress(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getSessionId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("SessionId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CommunicationState getState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("State");
-            return new CommunicationState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Guid;
-import system.Uri;
 import system.io.Stream;
+import system.Uri;
+import system.Guid;
 
 
 /**
@@ -115,11 +115,12 @@ public class XpsFont extends NetObject  {
     
     // Methods section
     
-    public static void ObfuscateFontData(byte[] fontData, Guid guid) throws Throwable, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Stream GetStream() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Invoke("ObfuscateFontData", fontData, guid == null ? null : guid.getJCOInstance());
+            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream");
+            return new Stream(objGetStream);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -136,22 +137,21 @@ public class XpsFont extends NetObject  {
         }
     }
 
-    public Stream GetStream() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream");
-            return new Stream(objGetStream);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Commit() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ObfuscateFontData(byte[] fontData, Guid guid) throws Throwable, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ObfuscateFontData", fontData, guid == null ? null : guid.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

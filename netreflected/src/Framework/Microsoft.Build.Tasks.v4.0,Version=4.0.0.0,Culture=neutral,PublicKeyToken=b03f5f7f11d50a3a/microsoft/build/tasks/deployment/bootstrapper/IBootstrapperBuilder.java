@@ -98,11 +98,11 @@ public interface IBootstrapperBuilder extends IJCOBridgeReflected {
     
     // Properties section
     
+    public ProductCollection getProducts() throws Throwable;
+
     public java.lang.String getPath() throws Throwable;
 
     public void setPath(java.lang.String Path) throws Throwable;
-
-    public ProductCollection getProducts() throws Throwable;
 
 
 

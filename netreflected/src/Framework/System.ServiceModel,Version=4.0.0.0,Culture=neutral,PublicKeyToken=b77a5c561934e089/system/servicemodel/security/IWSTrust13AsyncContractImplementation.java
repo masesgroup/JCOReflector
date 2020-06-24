@@ -118,12 +118,12 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
-    public Message EndTrust13Cancel(IAsyncResult ar) throws Throwable {
+    public IAsyncResult BeginTrust13CancelResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objEndTrust13Cancel = (JCObject)classInstance.Invoke("EndTrust13Cancel", ar == null ? null : ar.getJCOInstance());
-            return new Message(objEndTrust13Cancel);
+            JCObject objBeginTrust13CancelResponse = (JCObject)classInstance.Invoke("BeginTrust13CancelResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginTrust13CancelResponse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -140,12 +140,12 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
-    public Message EndTrust13Issue(IAsyncResult ar) throws Throwable {
+    public IAsyncResult BeginTrust13IssueResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objEndTrust13Issue = (JCObject)classInstance.Invoke("EndTrust13Issue", ar == null ? null : ar.getJCOInstance());
-            return new Message(objEndTrust13Issue);
+            JCObject objBeginTrust13IssueResponse = (JCObject)classInstance.Invoke("BeginTrust13IssueResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginTrust13IssueResponse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,12 +162,12 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
-    public Message EndTrust13Renew(IAsyncResult ar) throws Throwable {
+    public IAsyncResult BeginTrust13RenewResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objEndTrust13Renew = (JCObject)classInstance.Invoke("EndTrust13Renew", ar == null ? null : ar.getJCOInstance());
-            return new Message(objEndTrust13Renew);
+            JCObject objBeginTrust13RenewResponse = (JCObject)classInstance.Invoke("BeginTrust13RenewResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginTrust13RenewResponse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,23 +184,23 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
-    public Message EndTrust13Validate(IAsyncResult ar) throws Throwable {
+    public IAsyncResult BeginTrust13ValidateResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objEndTrust13Validate = (JCObject)classInstance.Invoke("EndTrust13Validate", ar == null ? null : ar.getJCOInstance());
-            return new Message(objEndTrust13Validate);
+            JCObject objBeginTrust13ValidateResponse = (JCObject)classInstance.Invoke("BeginTrust13ValidateResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginTrust13ValidateResponse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IAsyncResult BeginTrust13CancelResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
+    public Message EndTrust13Cancel(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginTrust13CancelResponse = (JCObject)classInstance.Invoke("BeginTrust13CancelResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginTrust13CancelResponse);
+            JCObject objEndTrust13Cancel = (JCObject)classInstance.Invoke("EndTrust13Cancel", ar == null ? null : ar.getJCOInstance());
+            return new Message(objEndTrust13Cancel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,12 +217,12 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
-    public IAsyncResult BeginTrust13IssueResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
+    public Message EndTrust13Issue(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginTrust13IssueResponse = (JCObject)classInstance.Invoke("BeginTrust13IssueResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginTrust13IssueResponse);
+            JCObject objEndTrust13Issue = (JCObject)classInstance.Invoke("EndTrust13Issue", ar == null ? null : ar.getJCOInstance());
+            return new Message(objEndTrust13Issue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,12 +239,12 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
-    public IAsyncResult BeginTrust13RenewResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
+    public Message EndTrust13Renew(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginTrust13RenewResponse = (JCObject)classInstance.Invoke("BeginTrust13RenewResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginTrust13RenewResponse);
+            JCObject objEndTrust13Renew = (JCObject)classInstance.Invoke("EndTrust13Renew", ar == null ? null : ar.getJCOInstance());
+            return new Message(objEndTrust13Renew);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,12 +261,12 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
-    public IAsyncResult BeginTrust13ValidateResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
+    public Message EndTrust13Validate(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginTrust13ValidateResponse = (JCObject)classInstance.Invoke("BeginTrust13ValidateResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginTrust13ValidateResponse);
+            JCObject objEndTrust13Validate = (JCObject)classInstance.Invoke("EndTrust13Validate", ar == null ? null : ar.getJCOInstance());
+            return new Message(objEndTrust13Validate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

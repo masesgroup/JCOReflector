@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
-import system.componentmodel.design.DesignerVerbCollection;
 import system.componentmodel.design.DesignerActionListCollection;
+import system.componentmodel.design.DesignerVerbCollection;
 
 
 /**
@@ -142,23 +142,23 @@ public class DesignerCommandSet extends NetObject  {
     
     // Properties section
     
-    public DesignerVerbCollection getVerbs() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Verbs");
-            return new DesignerVerbCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DesignerActionListCollection getActionLists() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ActionLists");
             return new DesignerActionListCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DesignerVerbCollection getVerbs() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Verbs");
+            return new DesignerVerbCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

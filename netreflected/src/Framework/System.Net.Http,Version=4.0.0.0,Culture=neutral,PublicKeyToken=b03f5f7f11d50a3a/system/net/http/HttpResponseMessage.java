@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.net.HttpStatusCode;
 import system.net.http.HttpResponseMessage;
-import system.Version;
-import system.net.http.HttpContent;
 import system.net.http.headers.HttpResponseHeaders;
+import system.net.http.HttpContent;
 import system.net.http.HttpRequestMessage;
+import system.Version;
 
 
 /**
@@ -139,16 +139,6 @@ public class HttpResponseMessage extends NetObject  {
     
     // Methods section
     
-    public void Dispose() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public HttpResponseMessage EnsureSuccessStatusCode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MulticastNotSupportedException, system.net.http.HttpRequestException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -160,26 +150,36 @@ public class HttpResponseMessage extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public Version getVersion() throws Throwable {
+    public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Version");
-            return new Version(val);
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setVersion(Version Version) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException {
+
+    
+    // Properties section
+    
+    public boolean getIsSuccessStatusCode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Version", Version == null ? null : Version.getJCOInstance());
+            return (boolean)classInstance.Get("IsSuccessStatusCode");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HttpResponseHeaders getHeaders() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Headers");
+            return new HttpResponseHeaders(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,6 +201,27 @@ public class HttpResponseMessage extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Content", Content == null ? null : Content.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HttpRequestMessage getRequestMessage() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RequestMessage");
+            return new HttpRequestMessage(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRequestMessage(HttpRequestMessage RequestMessage) throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RequestMessage", RequestMessage == null ? null : RequestMessage.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,43 +268,22 @@ public class HttpResponseMessage extends NetObject  {
         }
     }
 
-    public HttpResponseHeaders getHeaders() throws Throwable {
+    public Version getVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Headers");
-            return new HttpResponseHeaders(val);
+            JCObject val = (JCObject)classInstance.Get("Version");
+            return new Version(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public HttpRequestMessage getRequestMessage() throws Throwable {
+    public void setVersion(Version Version) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestMessage");
-            return new HttpRequestMessage(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRequestMessage(HttpRequestMessage RequestMessage) throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RequestMessage", RequestMessage == null ? null : RequestMessage.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsSuccessStatusCode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsSuccessStatusCode");
+            classInstance.Set("Version", Version == null ? null : Version.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

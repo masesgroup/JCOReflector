@@ -38,17 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.cryptography.pkcs.Pkcs12SafeBag;
 import system.security.cryptography.pkcs.Pkcs12CertBag;
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.pkcs.Pkcs12KeyBag;
 import system.security.cryptography.AsymmetricAlgorithm;
 import system.security.cryptography.pkcs.Pkcs12SafeContentsBag;
 import system.security.cryptography.pkcs.Pkcs12SafeContents;
-import system.security.cryptography.pkcs.Pkcs12ShroudedKeyBag;
-import system.security.cryptography.PbeParameters;
 import system.security.cryptography.pkcs.Pkcs12SecretBag;
 import system.security.cryptography.Oid;
+import system.security.cryptography.pkcs.Pkcs12ShroudedKeyBag;
+import system.security.cryptography.PbeParameters;
+import system.security.cryptography.pkcs.Pkcs12SafeBag;
 import system.security.cryptography.pkcs.Pkcs12ConfidentialityMode;
 
 
@@ -135,16 +135,6 @@ public class Pkcs12SafeContents extends NetObject  {
     
     // Methods section
     
-    public void AddSafeBag(Pkcs12SafeBag safeBag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddSafeBag", safeBag == null ? null : safeBag.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Pkcs12CertBag AddCertificate(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -200,6 +190,16 @@ public class Pkcs12SafeContents extends NetObject  {
         }
     }
 
+    public void AddSafeBag(Pkcs12SafeBag safeBag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddSafeBag", safeBag == null ? null : safeBag.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Decrypt(byte[] passwordBytes) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -224,6 +224,16 @@ public class Pkcs12SafeContents extends NetObject  {
     
     // Properties section
     
+    public boolean getIsReadOnly() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsReadOnly");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Pkcs12ConfidentialityMode getConfidentialityMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -240,16 +250,6 @@ public class Pkcs12SafeContents extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfidentialityMode", ConfidentialityMode == null ? null : ConfidentialityMode.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsReadOnly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsReadOnly");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

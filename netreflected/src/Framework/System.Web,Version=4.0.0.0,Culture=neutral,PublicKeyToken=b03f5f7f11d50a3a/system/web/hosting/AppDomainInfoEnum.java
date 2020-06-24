@@ -114,6 +114,16 @@ public class AppDomainInfoEnum extends NetObject  {
     
     // Methods section
     
+    public boolean MoveNext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("MoveNext");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int Count() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -130,16 +140,6 @@ public class AppDomainInfoEnum extends NetObject  {
         try {
             JCObject objGetData = (JCObject)classInstance.Invoke("GetData");
             return new IAppDomainInfoImplementation(objGetData);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean MoveNext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("MoveNext");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

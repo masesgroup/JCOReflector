@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.XmlDictionaryReader;
-import system.io.Stream;
-import system.xml.XmlDictionaryReaderQuotas;
 import system.text.Encoding;
+import system.xml.XmlDictionaryReaderQuotas;
 import system.xml.OnXmlDictionaryReaderClose;
+import system.io.Stream;
 import system.xml.XmlDictionaryWriter;
 
 
@@ -118,11 +118,22 @@ public class JsonReaderWriterFactory extends NetObject  {
     
     // Methods section
     
-    public static XmlDictionaryReader CreateJsonReader(Stream stream, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public static XmlDictionaryReader CreateJsonReader(byte[] buffer, int offset, int count, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", stream == null ? null : stream.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", buffer, offset, count, encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), onClose);
+            return new XmlDictionaryReader(objCreateJsonReader);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlDictionaryReader CreateJsonReader(byte[] buffer, int offset, int count, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", buffer, offset, count, quotas == null ? null : quotas.getJCOInstance());
             return new XmlDictionaryReader(objCreateJsonReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -151,22 +162,11 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryReader CreateJsonReader(byte[] buffer, int offset, int count, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static XmlDictionaryReader CreateJsonReader(Stream stream, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", buffer, offset, count, quotas == null ? null : quotas.getJCOInstance());
-            return new XmlDictionaryReader(objCreateJsonReader);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static XmlDictionaryReader CreateJsonReader(byte[] buffer, int offset, int count, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", buffer, offset, count, encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), onClose);
+            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", stream == null ? null : stream.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
             return new XmlDictionaryReader(objCreateJsonReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

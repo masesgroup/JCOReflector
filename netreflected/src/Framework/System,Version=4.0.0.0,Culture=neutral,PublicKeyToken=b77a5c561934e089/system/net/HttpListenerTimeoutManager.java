@@ -117,22 +117,21 @@ public class HttpListenerTimeoutManager extends NetObject  {
     
     // Properties section
     
-    public TimeSpan getEntityBody() throws Throwable, system.ArgumentOutOfRangeException {
+    public long getMinSendBytesPerSecond() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EntityBody");
-            return new TimeSpan(val);
+            return (long)classInstance.Get("MinSendBytesPerSecond");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEntityBody(TimeSpan EntityBody) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
+    public void setMinSendBytesPerSecond(long MinSendBytesPerSecond) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("EntityBody", EntityBody == null ? null : EntityBody.getJCOInstance());
+            classInstance.Set("MinSendBytesPerSecond", MinSendBytesPerSecond);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,43 +158,22 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
 
-    public TimeSpan getRequestQueue() throws Throwable, system.ArgumentOutOfRangeException {
+    public TimeSpan getEntityBody() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestQueue");
+            JCObject val = (JCObject)classInstance.Get("EntityBody");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRequestQueue(TimeSpan RequestQueue) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
+    public void setEntityBody(TimeSpan EntityBody) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("RequestQueue", RequestQueue == null ? null : RequestQueue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TimeSpan getIdleConnection() throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("IdleConnection");
-            return new TimeSpan(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIdleConnection(TimeSpan IdleConnection) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IdleConnection", IdleConnection == null ? null : IdleConnection.getJCOInstance());
+            classInstance.Set("EntityBody", EntityBody == null ? null : EntityBody.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,21 +200,43 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
 
-    public long getMinSendBytesPerSecond() throws Throwable {
+    public TimeSpan getIdleConnection() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Get("MinSendBytesPerSecond");
+            JCObject val = (JCObject)classInstance.Get("IdleConnection");
+            return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMinSendBytesPerSecond(long MinSendBytesPerSecond) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
+    public void setIdleConnection(TimeSpan IdleConnection) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("MinSendBytesPerSecond", MinSendBytesPerSecond);
+            classInstance.Set("IdleConnection", IdleConnection == null ? null : IdleConnection.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TimeSpan getRequestQueue() throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RequestQueue");
+            return new TimeSpan(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRequestQueue(TimeSpan RequestQueue) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RequestQueue", RequestQueue == null ? null : RequestQueue.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.net.WebRequest;
 import system.Uri;
 import system.windows.navigation.CustomContentState;
 import system.windows.navigation.NavigationMode;
-import system.net.WebRequest;
 
 
 /**
@@ -120,12 +120,42 @@ public class NavigatingCancelEventArgs extends NetObject  {
     
     // Properties section
     
-    public Uri getUri() throws Throwable {
+    public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
-            return new Uri(val);
+            return (boolean)classInstance.Get("Cancel");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCancel(boolean Cancel) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Cancel", Cancel);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsNavigationInitiator() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsNavigationInitiator");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WebRequest getWebRequest() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("WebRequest");
+            return new WebRequest(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -142,12 +172,34 @@ public class NavigatingCancelEventArgs extends NetObject  {
         }
     }
 
-    public CustomContentState getTargetContentState() throws Throwable {
+    public NetObject getExtraData() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetContentState");
-            return new CustomContentState(val);
+            JCObject val = (JCObject)classInstance.Get("ExtraData");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject getNavigator() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Navigator");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Uri getUri() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Uri");
+            return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,12 +226,12 @@ public class NavigatingCancelEventArgs extends NetObject  {
         }
     }
 
-    public NetObject getExtraData() throws Throwable {
+    public CustomContentState getTargetContentState() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtraData");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("TargetContentState");
+            return new CustomContentState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,58 +243,6 @@ public class NavigatingCancelEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("NavigationMode");
             return new NavigationMode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WebRequest getWebRequest() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("WebRequest");
-            return new WebRequest(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsNavigationInitiator() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsNavigationInitiator");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getNavigator() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Navigator");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCancel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancel");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCancel(boolean Cancel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Cancel", Cancel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

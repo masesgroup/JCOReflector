@@ -127,11 +127,11 @@ public class TraceContextRecord extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getCategory() throws Throwable {
+    public boolean getIsWarning() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Category");
+            return (boolean)classInstance.Get("IsWarning");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,21 +148,21 @@ public class TraceContextRecord extends NetObject  {
         }
     }
 
-    public java.lang.String getMessage() throws Throwable {
+    public java.lang.String getCategory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            return (java.lang.String)classInstance.Get("Category");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsWarning() throws Throwable {
+    public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsWarning");
+            return (java.lang.String)classInstance.Get("Message");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -98,17 +98,17 @@ public interface IScrollProvider extends IJCOBridgeReflected {
     
     // Properties section
     
-    public double getHorizontalScrollPercent() throws Throwable;
-
-    public double getVerticalScrollPercent() throws Throwable;
-
-    public double getHorizontalViewSize() throws Throwable;
-
-    public double getVerticalViewSize() throws Throwable;
-
     public boolean getHorizontallyScrollable() throws Throwable;
 
     public boolean getVerticallyScrollable() throws Throwable;
+
+    public double getHorizontalScrollPercent() throws Throwable;
+
+    public double getHorizontalViewSize() throws Throwable;
+
+    public double getVerticalScrollPercent() throws Throwable;
+
+    public double getVerticalViewSize() throws Throwable;
 
 
 

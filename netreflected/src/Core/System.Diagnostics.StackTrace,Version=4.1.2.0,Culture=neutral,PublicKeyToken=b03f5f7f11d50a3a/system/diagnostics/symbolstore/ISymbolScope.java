@@ -37,12 +37,12 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.diagnostics.symbolstore.ISymbolNamespace;
+import system.diagnostics.symbolstore.ISymbolNamespaceImplementation;
 import system.diagnostics.symbolstore.ISymbolScope;
 import system.diagnostics.symbolstore.ISymbolScopeImplementation;
 import system.diagnostics.symbolstore.ISymbolVariable;
 import system.diagnostics.symbolstore.ISymbolVariableImplementation;
-import system.diagnostics.symbolstore.ISymbolNamespace;
-import system.diagnostics.symbolstore.ISymbolNamespaceImplementation;
 import system.diagnostics.symbolstore.ISymbolMethod;
 import system.diagnostics.symbolstore.ISymbolMethodImplementation;
 
@@ -97,23 +97,23 @@ public interface ISymbolScope extends IJCOBridgeReflected {
 
     // Methods section
     
+    public ISymbolNamespace[] GetNamespaces() throws Throwable;
+
     public ISymbolScope[] GetChildren() throws Throwable;
 
     public ISymbolVariable[] GetLocals() throws Throwable;
-
-    public ISymbolNamespace[] GetNamespaces() throws Throwable;
 
 
     
     // Properties section
     
-    public ISymbolMethod getMethod() throws Throwable;
-
-    public ISymbolScope getParent() throws Throwable;
+    public int getEndOffset() throws Throwable;
 
     public int getStartOffset() throws Throwable;
 
-    public int getEndOffset() throws Throwable;
+    public ISymbolMethod getMethod() throws Throwable;
+
+    public ISymbolScope getParent() throws Throwable;
 
 
 

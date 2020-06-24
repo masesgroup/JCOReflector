@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.cryptography.OidCollection;
-import system.security.cryptography.x509certificates.X509RevocationMode;
-import system.security.cryptography.x509certificates.X509RevocationFlag;
-import system.security.cryptography.x509certificates.X509VerificationFlags;
 import system.DateTime;
-import system.TimeSpan;
+import system.security.cryptography.OidCollection;
 import system.security.cryptography.x509certificates.X509Certificate2Collection;
+import system.security.cryptography.x509certificates.X509RevocationFlag;
+import system.security.cryptography.x509certificates.X509RevocationMode;
+import system.security.cryptography.x509certificates.X509VerificationFlags;
+import system.TimeSpan;
 
 
 /**
@@ -144,6 +144,27 @@ public class X509ChainPolicy extends NetObject  {
     
     // Properties section
     
+    public DateTime getVerificationTime() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("VerificationTime");
+            return new DateTime(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setVerificationTime(DateTime VerificationTime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("VerificationTime", VerificationTime == null ? null : VerificationTime.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public OidCollection getApplicationPolicy() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,22 +187,12 @@ public class X509ChainPolicy extends NetObject  {
         }
     }
 
-    public X509RevocationMode getRevocationMode() throws Throwable {
+    public X509Certificate2Collection getExtraStore() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RevocationMode");
-            return new X509RevocationMode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRevocationMode(X509RevocationMode RevocationMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RevocationMode", RevocationMode == null ? null : RevocationMode.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("ExtraStore");
+            return new X509Certificate2Collection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,6 +219,27 @@ public class X509ChainPolicy extends NetObject  {
         }
     }
 
+    public X509RevocationMode getRevocationMode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RevocationMode");
+            return new X509RevocationMode(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRevocationMode(X509RevocationMode RevocationMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RevocationMode", RevocationMode == null ? null : RevocationMode.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public X509VerificationFlags getVerificationFlags() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -229,27 +261,6 @@ public class X509ChainPolicy extends NetObject  {
         }
     }
 
-    public DateTime getVerificationTime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("VerificationTime");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setVerificationTime(DateTime VerificationTime) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("VerificationTime", VerificationTime == null ? null : VerificationTime.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TimeSpan getUrlRetrievalTimeout() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -266,17 +277,6 @@ public class X509ChainPolicy extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UrlRetrievalTimeout", UrlRetrievalTimeout == null ? null : UrlRetrievalTimeout.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public X509Certificate2Collection getExtraStore() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExtraStore");
-            return new X509Certificate2Collection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

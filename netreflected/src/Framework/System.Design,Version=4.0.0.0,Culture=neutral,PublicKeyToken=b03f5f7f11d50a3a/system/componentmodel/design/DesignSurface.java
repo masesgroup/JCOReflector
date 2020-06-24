@@ -40,17 +40,17 @@ import java.util.ArrayList;
 // Import section
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
-import system.componentmodel.design.serialization.DesignerLoader;
 import system.componentmodel.INestedContainer;
 import system.componentmodel.INestedContainerImplementation;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
-import system.componentmodel.IContainer;
-import system.componentmodel.IContainerImplementation;
+import system.componentmodel.design.serialization.DesignerLoader;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
-import system.EventHandler;
+import system.componentmodel.IContainer;
+import system.componentmodel.IContainerImplementation;
 import system.componentmodel.design.LoadedEventHandler;
+import system.EventHandler;
 
 
 /**
@@ -142,16 +142,6 @@ public class DesignSurface extends NetObject  {
         }
     }
 
-    public DesignSurface(NetType rootComponentType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(rootComponentType == null ? null : rootComponentType.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DesignSurface(IServiceProvider parentProvider, NetType rootComponentType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -162,30 +152,20 @@ public class DesignSurface extends NetObject  {
         }
     }
 
+    public DesignSurface(NetType rootComponentType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(rootComponentType == null ? null : rootComponentType.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
     
-    public void BeginLoad(DesignerLoader loader) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("BeginLoad", loader == null ? null : loader.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void BeginLoad(NetType rootComponentType) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("BeginLoad", rootComponentType == null ? null : rootComponentType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public INestedContainer CreateNestedContainer(IComponent owningComponent) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -203,6 +183,37 @@ public class DesignSurface extends NetObject  {
         try {
             JCObject objCreateNestedContainer = (JCObject)classInstance.Invoke("CreateNestedContainer", owningComponent == null ? null : owningComponent.getJCOInstance(), containerName);
             return new INestedContainerImplementation(objCreateNestedContainer);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetService(NetType serviceType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            return new NetObject(objGetService);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void BeginLoad(DesignerLoader loader) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BeginLoad", loader == null ? null : loader.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void BeginLoad(NetType rootComponentType) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BeginLoad", rootComponentType == null ? null : rootComponentType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,27 +239,25 @@ public class DesignSurface extends NetObject  {
         }
     }
 
-    public NetObject GetService(NetType serviceType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+
+    
+    // Properties section
+    
+    public boolean getDtelLoading() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
-            return new NetObject(objGetService);
+            return (boolean)classInstance.Get("DtelLoading");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-
-    
-    // Properties section
-    
-    public IContainer getComponentContainer() throws Throwable, system.ObjectDisposedException {
+    public void setDtelLoading(boolean DtelLoading) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ComponentContainer");
-            return new IContainerImplementation(val);
+            classInstance.Set("DtelLoading", DtelLoading);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,21 +284,12 @@ public class DesignSurface extends NetObject  {
         }
     }
 
-    public boolean getDtelLoading() throws Throwable {
+    public IContainer getComponentContainer() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("DtelLoading");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDtelLoading(boolean DtelLoading) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DtelLoading", DtelLoading);
+            JCObject val = (JCObject)classInstance.Get("ComponentContainer");
+            return new IContainerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,6 +310,26 @@ public class DesignSurface extends NetObject  {
 
     // Instance Events section
     
+
+    public void addLoaded(LoadedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Loaded", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeLoaded(LoadedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Loaded", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
     public void addDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
@@ -346,26 +366,6 @@ public class DesignSurface extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Flushed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addLoaded(LoadedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Loaded", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeLoaded(LoadedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Loaded", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

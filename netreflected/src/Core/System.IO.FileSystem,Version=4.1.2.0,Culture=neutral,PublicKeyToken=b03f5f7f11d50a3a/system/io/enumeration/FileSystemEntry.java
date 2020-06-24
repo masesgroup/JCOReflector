@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.FileSystemInfo;
-import system.io.FileAttributes;
 import system.DateTimeOffset;
+import system.io.FileAttributes;
 
 
 /**
@@ -115,16 +115,6 @@ public class FileSystemEntry extends NetObject  {
     
     // Methods section
     
-    public java.lang.String ToSpecifiedFullPath() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ToSpecifiedFullPath");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FileSystemInfo ToFileSystemInfo() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -146,16 +136,35 @@ public class FileSystemEntry extends NetObject  {
         }
     }
 
+    public java.lang.String ToSpecifiedFullPath() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ToSpecifiedFullPath");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public FileAttributes getAttributes() throws Throwable {
+    public boolean getIsDirectory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new FileAttributes(val);
+            return (boolean)classInstance.Get("IsDirectory");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsHidden() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsHidden");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,21 +213,12 @@ public class FileSystemEntry extends NetObject  {
         }
     }
 
-    public boolean getIsDirectory() throws Throwable {
+    public FileAttributes getAttributes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsDirectory");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsHidden() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsHidden");
+            JCObject val = (JCObject)classInstance.Get("Attributes");
+            return new FileAttributes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

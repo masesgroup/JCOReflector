@@ -105,21 +105,11 @@ public class ICscHostObject3Implementation extends NetObject implements ICscHost
 
     // Methods section
     
-    public boolean SetApplicationConfiguration(java.lang.String applicationConfiguration) throws Throwable {
+    public boolean Compile() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetApplicationConfiguration", applicationConfiguration);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SetWin32Manifest", win32Manifest);
+            return (boolean)classInstance.Invoke("Compile");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -135,21 +125,11 @@ public class ICscHostObject3Implementation extends NetObject implements ICscHost
         }
     }
 
-    public boolean Compile() throws Throwable {
+    public boolean IsUpToDate() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Compile");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void BeginInitialization() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("BeginInitialization");
+            return (boolean)classInstance.Invoke("IsUpToDate");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,6 +160,16 @@ public class ICscHostObject3Implementation extends NetObject implements ICscHost
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("SetAllowUnsafeBlocks", allowUnsafeBlocks);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean SetApplicationConfiguration(java.lang.String applicationConfiguration) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetApplicationConfiguration", applicationConfiguration);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,21 +395,21 @@ public class ICscHostObject3Implementation extends NetObject implements ICscHost
         }
     }
 
-    public boolean SetPlatform(java.lang.String platform) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SetPlatform", platform);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean SetPdbFile(java.lang.String pdbFile) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("SetPdbFile", pdbFile);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean SetPlatform(java.lang.String platform) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetPlatform", platform);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,6 +515,16 @@ public class ICscHostObject3Implementation extends NetObject implements ICscHost
         }
     }
 
+    public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetWin32Manifest", win32Manifest);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean SetWin32Resource(java.lang.String win32Resource) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -535,11 +535,11 @@ public class ICscHostObject3Implementation extends NetObject implements ICscHost
         }
     }
 
-    public boolean IsUpToDate() throws Throwable {
+    public void BeginInitialization() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsUpToDate");
+            classInstance.Invoke("BeginInitialization");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

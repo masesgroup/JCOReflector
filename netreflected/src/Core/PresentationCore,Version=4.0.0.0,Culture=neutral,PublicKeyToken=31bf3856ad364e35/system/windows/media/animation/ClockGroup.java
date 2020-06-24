@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.media.animation.TimelineGroup;
+import system.windows.Duration;
+import system.windows.media.animation.Clock;
 import system.windows.media.animation.ClockCollection;
 import system.windows.media.animation.ClockController;
 import system.windows.media.animation.ClockState;
-import system.windows.Duration;
-import system.windows.media.animation.Clock;
+import system.windows.media.animation.Timeline;
 import system.windows.threading.Dispatcher;
 import system.EventHandler;
 
@@ -144,12 +144,43 @@ public class ClockGroup extends NetObject  {
     
     // Properties section
     
-    public TimelineGroup getTimeline() throws Throwable {
+    public boolean getHasControllableRoot() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Timeline");
-            return new TimelineGroup(val);
+            return (boolean)classInstance.Get("HasControllableRoot");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsPaused() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsPaused");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Duration getNaturalDuration() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NaturalDuration");
+            return new Duration(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Clock getParent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Parent");
+            return new Clock(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,43 +219,12 @@ public class ClockGroup extends NetObject  {
         }
     }
 
-    public boolean getHasControllableRoot() throws Throwable {
+    public Timeline getTimeline() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HasControllableRoot");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsPaused() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsPaused");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Duration getNaturalDuration() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NaturalDuration");
-            return new Duration(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Clock getParent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new Clock(val);
+            JCObject val = (JCObject)classInstance.Get("Timeline");
+            return new Timeline(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

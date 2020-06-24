@@ -138,6 +138,16 @@ public class AspNetHostingPermission extends NetObject  {
     
     // Methods section
     
+    public boolean IsSubsetOf(IPermission target) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsSubsetOf", target == null ? null : target.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean IsUnrestricted() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -159,17 +169,6 @@ public class AspNetHostingPermission extends NetObject  {
         }
     }
 
-    public IPermission Union(IPermission target) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objUnion = (JCObject)classInstance.Invoke("Union", target == null ? null : target.getJCOInstance());
-            return new IPermissionImplementation(objUnion);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IPermission Intersect(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -181,21 +180,12 @@ public class AspNetHostingPermission extends NetObject  {
         }
     }
 
-    public boolean IsSubsetOf(IPermission target) throws Throwable {
+    public IPermission Union(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsSubsetOf", target == null ? null : target.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void FromXml(SecurityElement securityElement) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("FromXml", securityElement == null ? null : securityElement.getJCOInstance());
+            JCObject objUnion = (JCObject)classInstance.Invoke("Union", target == null ? null : target.getJCOInstance());
+            return new IPermissionImplementation(objUnion);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,6 +227,16 @@ public class AspNetHostingPermission extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Deny");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void FromXml(SecurityElement securityElement) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("FromXml", securityElement == null ? null : securityElement.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

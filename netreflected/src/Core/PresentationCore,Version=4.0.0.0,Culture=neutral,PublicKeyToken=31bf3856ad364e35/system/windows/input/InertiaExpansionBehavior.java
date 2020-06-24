@@ -128,27 +128,6 @@ public class InertiaExpansionBehavior extends NetObject  {
     
     // Properties section
     
-    public Vector getInitialVelocity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InitialVelocity");
-            return new Vector(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInitialVelocity(Vector InitialVelocity) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InitialVelocity", InitialVelocity == null ? null : InitialVelocity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public double getDesiredDeceleration() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,6 +143,26 @@ public class InertiaExpansionBehavior extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesiredDeceleration", DesiredDeceleration);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getInitialRadius() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("InitialRadius");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInitialRadius(double InitialRadius) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InitialRadius", InitialRadius);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,21 +189,22 @@ public class InertiaExpansionBehavior extends NetObject  {
         }
     }
 
-    public double getInitialRadius() throws Throwable {
+    public Vector getInitialVelocity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("InitialRadius");
+            JCObject val = (JCObject)classInstance.Get("InitialVelocity");
+            return new Vector(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setInitialRadius(double InitialRadius) throws Throwable {
+    public void setInitialVelocity(Vector InitialVelocity) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("InitialRadius", InitialRadius);
+            classInstance.Set("InitialVelocity", InitialVelocity == null ? null : InitialVelocity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

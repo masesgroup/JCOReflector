@@ -97,11 +97,11 @@ public interface IChannelReceiverHook extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String getChannelScheme() throws Throwable;
-
     public boolean getWantsToListen() throws Throwable;
 
     public IServerChannelSink getChannelSinkChain() throws Throwable;
+
+    public java.lang.String getChannelScheme() throws Throwable;
 
 
 

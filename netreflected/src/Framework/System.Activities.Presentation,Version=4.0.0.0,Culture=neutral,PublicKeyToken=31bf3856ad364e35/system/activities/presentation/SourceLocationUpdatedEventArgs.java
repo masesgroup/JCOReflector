@@ -129,27 +129,6 @@ public class SourceLocationUpdatedEventArgs extends NetObject  {
     
     // Properties section
     
-    public Guid getObjectReference() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ObjectReference");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setObjectReference(Guid ObjectReference) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ObjectReference", ObjectReference == null ? null : ObjectReference.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SourceLocation getUpdatedSourceLocation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,6 +145,27 @@ public class SourceLocationUpdatedEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdatedSourceLocation", UpdatedSourceLocation == null ? null : UpdatedSourceLocation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Guid getObjectReference() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ObjectReference");
+            return new Guid(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setObjectReference(Guid ObjectReference) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ObjectReference", ObjectReference == null ? null : ObjectReference.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

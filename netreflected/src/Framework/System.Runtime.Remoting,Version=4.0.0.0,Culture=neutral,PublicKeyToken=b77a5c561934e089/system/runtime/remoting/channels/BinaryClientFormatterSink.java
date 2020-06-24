@@ -40,15 +40,15 @@ import java.util.ArrayList;
 // Import section
 import system.runtime.remoting.channels.IClientChannelSink;
 import system.runtime.remoting.channels.IClientChannelSinkImplementation;
+import system.io.Stream;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
+import system.runtime.remoting.channels.ITransportHeaders;
+import system.runtime.remoting.channels.ITransportHeadersImplementation;
 import system.runtime.remoting.messaging.IMessageCtrl;
 import system.runtime.remoting.messaging.IMessageCtrlImplementation;
 import system.runtime.remoting.messaging.IMessageSink;
 import system.runtime.remoting.messaging.IMessageSinkImplementation;
-import system.runtime.remoting.channels.ITransportHeaders;
-import system.runtime.remoting.channels.ITransportHeadersImplementation;
-import system.io.Stream;
 import system.runtime.remoting.channels.IClientChannelSinkStack;
 import system.runtime.remoting.channels.IClientChannelSinkStackImplementation;
 import system.runtime.remoting.channels.IClientResponseChannelSinkStack;
@@ -140,6 +140,17 @@ public class BinaryClientFormatterSink extends NetObject  {
     
     // Methods section
     
+    public Stream GetRequestStream(IMessage msg, ITransportHeaders headers) throws Throwable, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetRequestStream = (JCObject)classInstance.Invoke("GetRequestStream", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance());
+            return new Stream(objGetRequestStream);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IMessage SyncProcessMessage(IMessage msg) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -182,27 +193,16 @@ public class BinaryClientFormatterSink extends NetObject  {
         }
     }
 
-    public Stream GetRequestStream(IMessage msg, ITransportHeaders headers) throws Throwable, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRequestStream = (JCObject)classInstance.Invoke("GetRequestStream", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance());
-            return new Stream(objGetRequestStream);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public IMessageSink getNextSink() throws Throwable, system.NotSupportedException {
+    public IDictionary getProperties() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NextSink");
-            return new IMessageSinkImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("Properties");
+            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,12 +219,12 @@ public class BinaryClientFormatterSink extends NetObject  {
         }
     }
 
-    public IDictionary getProperties() throws Throwable {
+    public IMessageSink getNextSink() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
-            return new IDictionaryImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("NextSink");
+            return new IMessageSinkImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

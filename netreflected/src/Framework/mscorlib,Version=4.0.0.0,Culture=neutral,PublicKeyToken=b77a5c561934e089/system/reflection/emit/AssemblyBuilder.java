@@ -38,32 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.emit.ModuleBuilder;
-import system.reflection.emit.CustomAttributeBuilder;
-import system.reflection.emit.AssemblyBuilder;
+import system.io.FileStream;
+import system.io.Stream;
+import system.reflection.BindingFlags;
+import system.reflection.Binder;
+import system.globalization.CultureInfo;
+import system.reflection.Assembly;
+import system.Version;
 import system.reflection.AssemblyName;
+import system.reflection.emit.AssemblyBuilder;
 import system.reflection.emit.AssemblyBuilderAccess;
+import system.reflection.emit.ModuleBuilder;
+import system.reflection.ManifestResourceInfo;
+import system.reflection.Module;
 import system.resources.IResourceWriter;
 import system.resources.IResourceWriterImplementation;
 import system.reflection.ResourceAttributes;
-import system.io.FileStream;
-import system.io.Stream;
-import system.reflection.ManifestResourceInfo;
-import system.reflection.Module;
-import system.reflection.Assembly;
-import system.globalization.CultureInfo;
-import system.Version;
-import system.reflection.MethodInfo;
-import system.reflection.emit.PEFileKinds;
-import system.reflection.ConstructorInfo;
-import system.reflection.PortableExecutableKinds;
-import system.reflection.ImageFileMachine;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.reflection.BindingFlags;
-import system.reflection.Binder;
-import system.security.policy.Evidence;
+import system.reflection.PortableExecutableKinds;
+import system.reflection.ImageFileMachine;
+import system.reflection.ConstructorInfo;
+import system.reflection.emit.CustomAttributeBuilder;
+import system.reflection.MethodInfo;
+import system.reflection.emit.PEFileKinds;
 import system.security.PermissionSet;
+import system.security.policy.Evidence;
 import system.security.SecurityRuleSet;
 import system.reflection.ModuleResolveEventHandler;
 
@@ -140,108 +140,111 @@ public class AssemblyBuilder extends NetObject  {
     
     // Methods section
     
-    public ModuleBuilder DefineDynamicModule(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineDynamicModule = (JCObject)classInstance.Invoke("DefineDynamicModule", name);
-            return new ModuleBuilder(objDefineDynamicModule);
+            return (boolean)classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void SetCustomAttribute(CustomAttributeBuilder customBuilder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
+    public FileStream GetFile(java.lang.String name) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetCustomAttribute", customBuilder == null ? null : customBuilder.getJCOInstance());
+            JCObject objGetFile = (JCObject)classInstance.Invoke("GetFile", name);
+            return new FileStream(objGetFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FileStream[] GetFiles() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineDynamicAssembly = (JCObject)classType.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance());
-            return new AssemblyBuilder(objDefineDynamicAssembly);
+            ArrayList<FileStream> resultingArrayList = new ArrayList<FileStream>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new FileStream(resultingObject));
+            }
+            FileStream[] resultingArray = new FileStream[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ModuleBuilder DefineDynamicModule(java.lang.String name, boolean emitSymbolInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public FileStream[] GetFiles(boolean getResourceModules) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineDynamicModule = (JCObject)classInstance.Invoke("DefineDynamicModule", name, emitSymbolInfo);
-            return new ModuleBuilder(objDefineDynamicModule);
+            ArrayList<FileStream> resultingArrayList = new ArrayList<FileStream>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", getResourceModules);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new FileStream(resultingObject));
+            }
+            FileStream[] resultingArray = new FileStream[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ModuleBuilder DefineDynamicModule(java.lang.String name, java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.security.SecurityException {
+    public Stream GetManifestResourceStream(java.lang.String name) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineDynamicModule = (JCObject)classInstance.Invoke("DefineDynamicModule", name, fileName);
-            return new ModuleBuilder(objDefineDynamicModule);
+            JCObject objGetManifestResourceStream = (JCObject)classInstance.Invoke("GetManifestResourceStream", name);
+            return new Stream(objGetManifestResourceStream);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ModuleBuilder DefineDynamicModule(java.lang.String name, java.lang.String fileName, boolean emitSymbolInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.security.SecurityException {
+    public Stream GetManifestResourceStream(NetType type, java.lang.String name) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineDynamicModule = (JCObject)classInstance.Invoke("DefineDynamicModule", name, fileName, emitSymbolInfo);
-            return new ModuleBuilder(objDefineDynamicModule);
+            JCObject objGetManifestResourceStream = (JCObject)classInstance.Invoke("GetManifestResourceStream", type == null ? null : type.getJCOInstance(), name);
+            return new Stream(objGetManifestResourceStream);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IResourceWriter DefineResource(java.lang.String name, java.lang.String description, java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException {
+    public NetObject CreateInstance(java.lang.String typeName) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineResource = (JCObject)classInstance.Invoke("DefineResource", name, description, fileName);
-            return new IResourceWriterImplementation(objDefineResource);
+            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", typeName);
+            return new NetObject(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IResourceWriter DefineResource(java.lang.String name, java.lang.String description, java.lang.String fileName, ResourceAttributes attribute) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException {
+    public NetObject CreateInstance(java.lang.String typeName, boolean ignoreCase) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineResource = (JCObject)classInstance.Invoke("DefineResource", name, description, fileName, attribute == null ? null : attribute.getJCOInstance());
-            return new IResourceWriterImplementation(objDefineResource);
+            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", typeName, ignoreCase);
+            return new NetObject(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void AddResourceFile(java.lang.String name, java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public NetObject CreateInstance(java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddResourceFile", name, fileName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddResourceFile(java.lang.String name, java.lang.String fileName, ResourceAttributes attribute) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddResourceFile", name, fileName, attribute == null ? null : attribute.getJCOInstance());
+            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            return new NetObject(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,108 +284,34 @@ public class AssemblyBuilder extends NetObject  {
         }
     }
 
-    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable, system.NotImplementedException {
+    public Assembly GetSatelliteAssembly(CultureInfo culture) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject objGetSatelliteAssembly = (JCObject)classInstance.Invoke("GetSatelliteAssembly", culture == null ? null : culture.getJCOInstance());
+            return new Assembly(objGetSatelliteAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String[] GetManifestResourceNames() throws Throwable, system.NotImplementedException {
+    public Assembly GetSatelliteAssembly(CultureInfo culture, Version version) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetManifestResourceNames");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetManifestResourceNames = 0; indexGetManifestResourceNames < resultingArrayList.size(); indexGetManifestResourceNames++ ) {
-				resultingArray[indexGetManifestResourceNames] = (java.lang.String)resultingArrayList.get(indexGetManifestResourceNames);
-            }
-            return resultingArray;
+            JCObject objGetSatelliteAssembly = (JCObject)classInstance.Invoke("GetSatelliteAssembly", culture == null ? null : culture.getJCOInstance(), version == null ? null : version.getJCOInstance());
+            return new Assembly(objGetSatelliteAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public FileStream GetFile(java.lang.String name) throws Throwable, system.NotImplementedException {
+    public AssemblyName GetName() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetFile = (JCObject)classInstance.Invoke("GetFile", name);
-            return new FileStream(objGetFile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FileStream[] GetFiles(boolean getResourceModules) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<FileStream> resultingArrayList = new ArrayList<FileStream>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", getResourceModules);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new FileStream(resultingObject));
-            }
-            FileStream[] resultingArray = new FileStream[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Stream GetManifestResourceStream(NetType type, java.lang.String name) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetManifestResourceStream = (JCObject)classInstance.Invoke("GetManifestResourceStream", type == null ? null : type.getJCOInstance(), name);
-            return new Stream(objGetManifestResourceStream);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Stream GetManifestResourceStream(java.lang.String name) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetManifestResourceStream = (JCObject)classInstance.Invoke("GetManifestResourceStream", name);
-            return new Stream(objGetManifestResourceStream);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManifestResourceInfo GetManifestResourceInfo(java.lang.String resourceName) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetManifestResourceInfo = (JCObject)classInstance.Invoke("GetManifestResourceInfo", resourceName);
-            return new ManifestResourceInfo(objGetManifestResourceInfo);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType[] GetExportedTypes() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetExportedTypes");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetType(resultingObject));
-            }
-            NetType[] resultingArray = new NetType[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            JCObject objGetName = (JCObject)classInstance.Invoke("GetName");
+            return new AssemblyName(objGetName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,28 +323,6 @@ public class AssemblyBuilder extends NetObject  {
         try {
             JCObject objGetName = (JCObject)classInstance.Invoke("GetName", copiedName);
             return new AssemblyName(objGetName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType GetType(java.lang.String name, boolean throwOnError, boolean ignoreCase) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name, throwOnError, ignoreCase);
-            return new NetType(objGetType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Module GetModule(java.lang.String name) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetModule = (JCObject)classInstance.Invoke("GetModule", name);
-            return new Module(objGetModule);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,12 +345,122 @@ public class AssemblyBuilder extends NetObject  {
         }
     }
 
-    public Module[] GetModules(boolean getResourceModules) throws Throwable, system.NotImplementedException {
+    public static AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDefineDynamicAssembly = (JCObject)classType.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance());
+            return new AssemblyBuilder(objDefineDynamicAssembly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModuleBuilder DefineDynamicModule(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineDynamicModule = (JCObject)classInstance.Invoke("DefineDynamicModule", name);
+            return new ModuleBuilder(objDefineDynamicModule);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModuleBuilder DefineDynamicModule(java.lang.String name, boolean emitSymbolInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineDynamicModule = (JCObject)classInstance.Invoke("DefineDynamicModule", name, emitSymbolInfo);
+            return new ModuleBuilder(objDefineDynamicModule);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModuleBuilder DefineDynamicModule(java.lang.String name, java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineDynamicModule = (JCObject)classInstance.Invoke("DefineDynamicModule", name, fileName);
+            return new ModuleBuilder(objDefineDynamicModule);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModuleBuilder DefineDynamicModule(java.lang.String name, java.lang.String fileName, boolean emitSymbolInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineDynamicModule = (JCObject)classInstance.Invoke("DefineDynamicModule", name, fileName, emitSymbolInfo);
+            return new ModuleBuilder(objDefineDynamicModule);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModuleBuilder GetDynamicModule(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDynamicModule = (JCObject)classInstance.Invoke("GetDynamicModule", name);
+            return new ModuleBuilder(objGetDynamicModule);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ManifestResourceInfo GetManifestResourceInfo(java.lang.String resourceName) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetManifestResourceInfo = (JCObject)classInstance.Invoke("GetManifestResourceInfo", resourceName);
+            return new ManifestResourceInfo(objGetManifestResourceInfo);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Module GetModule(java.lang.String name) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetModule = (JCObject)classInstance.Invoke("GetModule", name);
+            return new Module(objGetModule);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Module LoadModule(java.lang.String moduleName, byte[] rawModule) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoadModule = (JCObject)classInstance.Invoke("LoadModule", moduleName, rawModule);
+            return new Module(objLoadModule);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Module LoadModule(java.lang.String moduleName, byte[] rawModule, byte[] rawSymbolStore) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoadModule = (JCObject)classInstance.Invoke("LoadModule", moduleName, rawModule, rawSymbolStore);
+            return new Module(objLoadModule);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Module[] GetLoadedModules() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Module> resultingArrayList = new ArrayList<Module>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetModules", getResourceModules);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetLoadedModules");
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Module(resultingObject));
             }
@@ -472,135 +489,76 @@ public class AssemblyBuilder extends NetObject  {
         }
     }
 
-    public Assembly GetSatelliteAssembly(CultureInfo culture) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.io.FileNotFoundException {
+    public Module[] GetModules() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetSatelliteAssembly = (JCObject)classInstance.Invoke("GetSatelliteAssembly", culture == null ? null : culture.getJCOInstance());
-            return new Assembly(objGetSatelliteAssembly);
+            ArrayList<Module> resultingArrayList = new ArrayList<Module>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetModules");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new Module(resultingObject));
+            }
+            Module[] resultingArray = new Module[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Assembly GetSatelliteAssembly(CultureInfo culture, Version version) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.io.FileNotFoundException {
+    public Module[] GetModules(boolean getResourceModules) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetSatelliteAssembly = (JCObject)classInstance.Invoke("GetSatelliteAssembly", culture == null ? null : culture.getJCOInstance(), version == null ? null : version.getJCOInstance());
-            return new Assembly(objGetSatelliteAssembly);
+            ArrayList<Module> resultingArrayList = new ArrayList<Module>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetModules", getResourceModules);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new Module(resultingObject));
+            }
+            Module[] resultingArray = new Module[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void DefineVersionInfoResource(java.lang.String product, java.lang.String productVersion, java.lang.String company, java.lang.String copyright, java.lang.String trademark) throws Throwable, system.ArgumentException {
+    public IResourceWriter DefineResource(java.lang.String name, java.lang.String description, java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DefineVersionInfoResource", product, productVersion, company, copyright, trademark);
+            JCObject objDefineResource = (JCObject)classInstance.Invoke("DefineResource", name, description, fileName);
+            return new IResourceWriterImplementation(objDefineResource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void DefineVersionInfoResource() throws Throwable, system.ArgumentException {
+    public IResourceWriter DefineResource(java.lang.String name, java.lang.String description, java.lang.String fileName, ResourceAttributes attribute) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DefineVersionInfoResource");
+            JCObject objDefineResource = (JCObject)classInstance.Invoke("DefineResource", name, description, fileName, attribute == null ? null : attribute.getJCOInstance());
+            return new IResourceWriterImplementation(objDefineResource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void DefineUnmanagedResource(byte[] resource) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public java.lang.String[] GetManifestResourceNames() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DefineUnmanagedResource", (Object)resource);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DefineUnmanagedResource(java.lang.String resourceFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DefineUnmanagedResource", resourceFileName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModuleBuilder GetDynamicModule(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDynamicModule = (JCObject)classInstance.Invoke("GetDynamicModule", name);
-            return new ModuleBuilder(objGetDynamicModule);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetEntryPoint(MethodInfo entryMethod) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetEntryPoint", entryMethod == null ? null : entryMethod.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetEntryPoint(MethodInfo entryMethod, PEFileKinds fileKind) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetEntryPoint", entryMethod == null ? null : entryMethod.getJCOInstance(), fileKind == null ? null : fileKind.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.MissingMethodException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetCustomAttribute", con == null ? null : con.getJCOInstance(), binaryAttribute);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Save(java.lang.String assemblyFileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotImplementedException, system.security.SecurityException, system.RankException, system.InvalidCastException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Save", assemblyFileName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Save(java.lang.String assemblyFileName, PortableExecutableKinds portableExecutableKind, ImageFileMachine imageFileMachine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotImplementedException, system.security.SecurityException, system.RankException, system.InvalidCastException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Save", assemblyFileName, portableExecutableKind == null ? null : portableExecutableKind.getJCOInstance(), imageFileMachine == null ? null : imageFileMachine.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AssemblyName GetName() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetName = (JCObject)classInstance.Invoke("GetName");
-            return new AssemblyName(objGetName);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetManifestResourceNames");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetManifestResourceNames = 0; indexGetManifestResourceNames < resultingArrayList.size(); indexGetManifestResourceNames++ ) {
+				resultingArray[indexGetManifestResourceNames] = (java.lang.String)resultingArrayList.get(indexGetManifestResourceNames);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -628,6 +586,34 @@ public class AssemblyBuilder extends NetObject  {
         }
     }
 
+    public NetType GetType(java.lang.String name, boolean throwOnError, boolean ignoreCase) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name, throwOnError, ignoreCase);
+            return new NetType(objGetType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType[] GetExportedTypes() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetExportedTypes");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new NetType(resultingObject));
+            }
+            NetType[] resultingArray = new NetType[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetType[] GetTypes() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -645,6 +631,66 @@ public class AssemblyBuilder extends NetObject  {
         }
     }
 
+    public void AddResourceFile(java.lang.String name, java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddResourceFile", name, fileName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddResourceFile(java.lang.String name, java.lang.String fileName, ResourceAttributes attribute) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddResourceFile", name, fileName, attribute == null ? null : attribute.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DefineUnmanagedResource(byte[] resource) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DefineUnmanagedResource", (Object)resource);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DefineUnmanagedResource(java.lang.String resourceFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DefineUnmanagedResource", resourceFileName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DefineVersionInfoResource() throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DefineVersionInfoResource");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DefineVersionInfoResource(java.lang.String product, java.lang.String productVersion, java.lang.String company, java.lang.String copyright, java.lang.String trademark) throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DefineVersionInfoResource", product, productVersion, company, copyright, trademark);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -655,107 +701,61 @@ public class AssemblyBuilder extends NetObject  {
         }
     }
 
-    public Module LoadModule(java.lang.String moduleName, byte[] rawModule) throws Throwable, system.NotImplementedException {
+    public void Save(java.lang.String assemblyFileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotImplementedException, system.security.SecurityException, system.RankException, system.InvalidCastException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLoadModule = (JCObject)classInstance.Invoke("LoadModule", moduleName, rawModule);
-            return new Module(objLoadModule);
+            classInstance.Invoke("Save", assemblyFileName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Module LoadModule(java.lang.String moduleName, byte[] rawModule, byte[] rawSymbolStore) throws Throwable, system.NotImplementedException {
+    public void Save(java.lang.String assemblyFileName, PortableExecutableKinds portableExecutableKind, ImageFileMachine imageFileMachine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotImplementedException, system.security.SecurityException, system.RankException, system.InvalidCastException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLoadModule = (JCObject)classInstance.Invoke("LoadModule", moduleName, rawModule, rawSymbolStore);
-            return new Module(objLoadModule);
+            classInstance.Invoke("Save", assemblyFileName, portableExecutableKind == null ? null : portableExecutableKind.getJCOInstance(), imageFileMachine == null ? null : imageFileMachine.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject CreateInstance(java.lang.String typeName) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
+    public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", typeName);
-            return new NetObject(objCreateInstance);
+            classInstance.Invoke("SetCustomAttribute", con == null ? null : con.getJCOInstance(), binaryAttribute);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject CreateInstance(java.lang.String typeName, boolean ignoreCase) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
+    public void SetCustomAttribute(CustomAttributeBuilder customBuilder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", typeName, ignoreCase);
-            return new NetObject(objCreateInstance);
+            classInstance.Invoke("SetCustomAttribute", customBuilder == null ? null : customBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject CreateInstance(java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException {
+    public void SetEntryPoint(MethodInfo entryMethod) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
-            return new NetObject(objCreateInstance);
+            classInstance.Invoke("SetEntryPoint", entryMethod == null ? null : entryMethod.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Module[] GetLoadedModules() throws Throwable, system.NotImplementedException {
+    public void SetEntryPoint(MethodInfo entryMethod, PEFileKinds fileKind) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Module> resultingArrayList = new ArrayList<Module>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetLoadedModules");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new Module(resultingObject));
-            }
-            Module[] resultingArray = new Module[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Module[] GetModules() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Module> resultingArrayList = new ArrayList<Module>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetModules");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new Module(resultingObject));
-            }
-            Module[] resultingArray = new Module[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FileStream[] GetFiles() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<FileStream> resultingArrayList = new ArrayList<FileStream>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new FileStream(resultingObject));
-            }
-            FileStream[] resultingArray = new FileStream[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            classInstance.Invoke("SetEntryPoint", entryMethod == null ? null : entryMethod.getJCOInstance(), fileKind == null ? null : fileKind.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -765,31 +765,51 @@ public class AssemblyBuilder extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getLocation() throws Throwable, system.NotImplementedException {
+    public boolean getGlobalAssemblyCache() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Location");
+            return (boolean)classInstance.Get("GlobalAssemblyCache");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getImageRuntimeVersion() throws Throwable, system.NotImplementedException {
+    public boolean getIsDynamic() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ImageRuntimeVersion");
+            return (boolean)classInstance.Get("IsDynamic");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getCodeBase() throws Throwable, system.NotImplementedException {
+    public boolean getIsFullyTrusted() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("CodeBase");
+            return (boolean)classInstance.Get("IsFullyTrusted");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getReflectionOnly() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("ReflectionOnly");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long getHostContext() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Get("HostContext");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -806,22 +826,12 @@ public class AssemblyBuilder extends NetObject  {
         }
     }
 
-    public java.lang.String getFullName() throws Throwable, system.NotImplementedException {
+    public Module getManifestModule() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("FullName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Evidence getEvidence() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Evidence");
-            return new Evidence(val);
+            JCObject val = (JCObject)classInstance.Get("ManifestModule");
+            return new Module(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -838,6 +848,17 @@ public class AssemblyBuilder extends NetObject  {
         }
     }
 
+    public Evidence getEvidence() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Evidence");
+            return new Evidence(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityRuleSet getSecurityRuleSet() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -849,52 +870,11 @@ public class AssemblyBuilder extends NetObject  {
         }
     }
 
-    public Module getManifestModule() throws Throwable {
+    public java.lang.String getCodeBase() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ManifestModule");
-            return new Module(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getReflectionOnly() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ReflectionOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getGlobalAssemblyCache() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("GlobalAssemblyCache");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public long getHostContext() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("HostContext");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsDynamic() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsDynamic");
+            return (java.lang.String)classInstance.Get("CodeBase");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -910,11 +890,31 @@ public class AssemblyBuilder extends NetObject  {
         }
     }
 
-    public boolean getIsFullyTrusted() throws Throwable, system.NotImplementedException {
+    public java.lang.String getFullName() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsFullyTrusted");
+            return (java.lang.String)classInstance.Get("FullName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getImageRuntimeVersion() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ImageRuntimeVersion");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getLocation() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Location");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

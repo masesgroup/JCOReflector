@@ -142,23 +142,23 @@ public class ValidationContext extends NetObject  {
     
     // Properties section
     
+    public IServiceContainer getServiceContainer() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ServiceContainer");
+            return new IServiceContainerImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject getObjectInstance() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ObjectInstance");
             return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType getObjectType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ObjectType");
-            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,12 +204,12 @@ public class ValidationContext extends NetObject  {
         }
     }
 
-    public IServiceContainer getServiceContainer() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public NetType getObjectType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceContainer");
-            return new IServiceContainerImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("ObjectType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

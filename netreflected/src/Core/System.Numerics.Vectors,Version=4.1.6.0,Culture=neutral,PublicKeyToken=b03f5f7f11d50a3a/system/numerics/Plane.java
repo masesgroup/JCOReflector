@@ -149,6 +149,49 @@ public class Plane extends NetObject  {
     
     // Methods section
     
+    public boolean Equals(Plane other) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single Dot(Plane plane, Vector4 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDot = (JCObject)classType.Invoke("Dot", plane == null ? null : plane.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return new Single(objDot);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single DotCoordinate(Plane plane, Vector3 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDotCoordinate = (JCObject)classType.Invoke("DotCoordinate", plane == null ? null : plane.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return new Single(objDotCoordinate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single DotNormal(Plane plane, Vector3 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDotNormal = (JCObject)classType.Invoke("DotNormal", plane == null ? null : plane.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return new Single(objDotNormal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Plane CreateFromVertices(Vector3 point1, Vector3 point2, Vector3 point3) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -188,49 +231,6 @@ public class Plane extends NetObject  {
         try {
             JCObject objTransform = (JCObject)classType.Invoke("Transform", plane == null ? null : plane.getJCOInstance(), rotation == null ? null : rotation.getJCOInstance());
             return new Plane(objTransform);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single Dot(Plane plane, Vector4 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDot = (JCObject)classType.Invoke("Dot", plane == null ? null : plane.getJCOInstance(), value == null ? null : value.getJCOInstance());
-            return new Single(objDot);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single DotCoordinate(Plane plane, Vector3 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDotCoordinate = (JCObject)classType.Invoke("DotCoordinate", plane == null ? null : plane.getJCOInstance(), value == null ? null : value.getJCOInstance());
-            return new Single(objDotCoordinate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single DotNormal(Plane plane, Vector3 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDotNormal = (JCObject)classType.Invoke("DotNormal", plane == null ? null : plane.getJCOInstance(), value == null ? null : value.getJCOInstance());
-            return new Single(objDotNormal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Equals(Plane other) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

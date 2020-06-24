@@ -128,6 +128,26 @@ public class RecycleLimitInfo extends NetObject  {
     
     // Properties section
     
+    public boolean getRequestGC() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("RequestGC");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRequestGC(boolean RequestGC) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RequestGC", RequestGC);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public long getCurrentPrivateBytes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,26 +174,6 @@ public class RecycleLimitInfo extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("TrimFrequency");
             return new RecycleLimitNotificationFrequency(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getRequestGC() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("RequestGC");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRequestGC(boolean RequestGC) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RequestGC", RequestGC);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

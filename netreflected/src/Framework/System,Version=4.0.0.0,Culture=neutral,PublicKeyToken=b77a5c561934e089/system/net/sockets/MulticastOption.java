@@ -110,11 +110,11 @@ public class MulticastOption extends NetObject  {
     // Constructors section
     
 
-    public MulticastOption(IPAddress group, IPAddress mcint) throws Throwable, system.ArgumentNullException {
+    public MulticastOption(IPAddress group) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(group == null ? null : group.getJCOInstance(), mcint == null ? null : mcint.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(group == null ? null : group.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -130,11 +130,11 @@ public class MulticastOption extends NetObject  {
         }
     }
 
-    public MulticastOption(IPAddress group) throws Throwable, system.ArgumentNullException {
+    public MulticastOption(IPAddress group, IPAddress mcint) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(group == null ? null : group.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(group == null ? null : group.getJCOInstance(), mcint == null ? null : mcint.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,6 +148,26 @@ public class MulticastOption extends NetObject  {
     
     // Properties section
     
+    public int getInterfaceIndex() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("InterfaceIndex");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInterfaceIndex(int InterfaceIndex) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InterfaceIndex", InterfaceIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IPAddress getGroup() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -185,26 +205,6 @@ public class MulticastOption extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocalAddress", LocalAddress == null ? null : LocalAddress.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getInterfaceIndex() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("InterfaceIndex");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInterfaceIndex(int InterfaceIndex) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InterfaceIndex", InterfaceIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

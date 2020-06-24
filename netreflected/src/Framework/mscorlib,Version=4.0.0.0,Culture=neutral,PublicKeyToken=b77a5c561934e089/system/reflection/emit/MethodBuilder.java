@@ -38,30 +38,30 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.emit.ParameterBuilder;
-import system.reflection.ParameterAttributes;
-import system.reflection.emit.ILGenerator;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.globalization.CultureInfo;
+import system.reflection.emit.GenericTypeParameterBuilder;
+import system.reflection.emit.ILGenerator;
+import system.reflection.emit.MethodToken;
+import system.reflection.emit.ParameterBuilder;
+import system.reflection.ParameterAttributes;
+import system.reflection.MethodBody;
 import system.reflection.MethodImplAttributes;
 import system.reflection.MethodInfo;
+import system.reflection.Module;
 import system.reflection.ParameterInfo;
-import system.reflection.emit.GenericTypeParameterBuilder;
-import system.reflection.emit.MethodToken;
-import system.reflection.emit.UnmanagedMarshal;
 import system.security.permissions.SecurityAction;
 import system.security.PermissionSet;
-import system.reflection.Module;
 import system.reflection.ConstructorInfo;
 import system.reflection.emit.CustomAttributeBuilder;
-import system.reflection.MethodBody;
+import system.reflection.emit.UnmanagedMarshal;
+import system.reflection.CallingConventions;
 import system.reflection.ICustomAttributeProvider;
 import system.reflection.ICustomAttributeProviderImplementation;
-import system.reflection.MethodAttributes;
-import system.reflection.CallingConventions;
-import system.RuntimeMethodHandle;
 import system.reflection.MemberTypes;
+import system.reflection.MethodAttributes;
+import system.RuntimeMethodHandle;
 
 
 /**
@@ -136,23 +136,22 @@ public class MethodBuilder extends NetObject  {
     
     // Methods section
     
-    public ParameterBuilder DefineParameter(int position, ParameterAttributes attributes, java.lang.String strParamName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException {
+    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineParameter = (JCObject)classInstance.Invoke("DefineParameter", position, attributes == null ? null : attributes.getJCOInstance(), strParamName);
-            return new ParameterBuilder(objDefineParameter);
+            return (boolean)classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ILGenerator GetILGenerator() throws Throwable, system.InvalidOperationException, system.ArgumentException {
+    public NetObject Invoke(NetObject obj, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetILGenerator = (JCObject)classInstance.Invoke("GetILGenerator");
-            return new ILGenerator(objGetILGenerator);
+            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", obj == null ? null : obj.getJCOInstance(), toObjectFromArray(parameters));
+            return new NetObject(objInvoke);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,45 +163,6 @@ public class MethodBuilder extends NetObject  {
         try {
             JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", obj == null ? null : obj.getJCOInstance(), invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(parameters), culture == null ? null : culture.getJCOInstance());
             return new NetObject(objInvoke);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodImplAttributes GetMethodImplementationFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMethodImplementationFlags = (JCObject)classInstance.Invoke("GetMethodImplementationFlags");
-            return new MethodImplAttributes(objGetMethodImplementationFlags);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo GetBaseDefinition() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetBaseDefinition = (JCObject)classInstance.Invoke("GetBaseDefinition");
-            return new MethodInfo(objGetBaseDefinition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ParameterInfo[] GetParameters() throws Throwable, system.NotSupportedException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<ParameterInfo> resultingArrayList = new ArrayList<ParameterInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParameters");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new ParameterInfo(resultingObject));
-            }
-            ParameterInfo[] resultingArray = new ParameterInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,55 +202,6 @@ public class MethodBuilder extends NetObject  {
         }
     }
 
-    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo GetGenericMethodDefinition() throws Throwable, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetGenericMethodDefinition = (JCObject)classInstance.Invoke("GetGenericMethodDefinition");
-            return new MethodInfo(objGetGenericMethodDefinition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType[] GetGenericArguments() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetGenericArguments");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetType(resultingObject));
-            }
-            NetType[] resultingArray = new NetType[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo MakeGenericMethod(NetType... typeArguments) throws Throwable, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objMakeGenericMethod = (JCObject)classInstance.Invoke("MakeGenericMethod", (Object)toObjectFromArray(typeArguments));
-            return new MethodInfo(objMakeGenericMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public GenericTypeParameterBuilder[] DefineGenericParameters(java.lang.String... names) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -308,6 +219,28 @@ public class MethodBuilder extends NetObject  {
         }
     }
 
+    public ILGenerator GetILGenerator() throws Throwable, system.InvalidOperationException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetILGenerator = (JCObject)classInstance.Invoke("GetILGenerator");
+            return new ILGenerator(objGetILGenerator);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ILGenerator GetILGenerator(int size) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetILGenerator = (JCObject)classInstance.Invoke("GetILGenerator", size);
+            return new ILGenerator(objGetILGenerator);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MethodToken GetToken() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -319,41 +252,112 @@ public class MethodBuilder extends NetObject  {
         }
     }
 
-    public void SetParameters(NetType... parameterTypes) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+    public ParameterBuilder DefineParameter(int position, ParameterAttributes attributes, java.lang.String strParamName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetParameters", (Object)toObjectFromArray(parameterTypes));
+            JCObject objDefineParameter = (JCObject)classInstance.Invoke("DefineParameter", position, attributes == null ? null : attributes.getJCOInstance(), strParamName);
+            return new ParameterBuilder(objDefineParameter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void SetReturnType(NetType returnType) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+    public MethodBody GetMethodBody() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetReturnType", returnType == null ? null : returnType.getJCOInstance());
+            JCObject objGetMethodBody = (JCObject)classInstance.Invoke("GetMethodBody");
+            return new MethodBody(objGetMethodBody);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void SetMarshal(UnmanagedMarshal unmanagedMarshal) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException {
+    public MethodImplAttributes GetMethodImplementationFlags() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetMarshal", unmanagedMarshal == null ? null : unmanagedMarshal.getJCOInstance());
+            JCObject objGetMethodImplementationFlags = (JCObject)classInstance.Invoke("GetMethodImplementationFlags");
+            return new MethodImplAttributes(objGetMethodImplementationFlags);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void SetSymCustomAttribute(java.lang.String name, byte[] data) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public MethodInfo GetBaseDefinition() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetSymCustomAttribute", name, data);
+            JCObject objGetBaseDefinition = (JCObject)classInstance.Invoke("GetBaseDefinition");
+            return new MethodInfo(objGetBaseDefinition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo GetGenericMethodDefinition() throws Throwable, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetGenericMethodDefinition = (JCObject)classInstance.Invoke("GetGenericMethodDefinition");
+            return new MethodInfo(objGetGenericMethodDefinition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo MakeGenericMethod(NetType... typeArguments) throws Throwable, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objMakeGenericMethod = (JCObject)classInstance.Invoke("MakeGenericMethod", (Object)toObjectFromArray(typeArguments));
+            return new MethodInfo(objMakeGenericMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Module GetModule() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetModule = (JCObject)classInstance.Invoke("GetModule");
+            return new Module(objGetModule);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ParameterInfo[] GetParameters() throws Throwable, system.NotSupportedException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<ParameterInfo> resultingArrayList = new ArrayList<ParameterInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParameters");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new ParameterInfo(resultingObject));
+            }
+            ParameterInfo[] resultingArray = new ParameterInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType[] GetGenericArguments() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetGenericArguments");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new NetType(resultingObject));
+            }
+            NetType[] resultingArray = new NetType[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,38 +383,6 @@ public class MethodBuilder extends NetObject  {
         }
     }
 
-    public void SetImplementationFlags(MethodImplAttributes attributes) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetImplementationFlags", attributes == null ? null : attributes.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ILGenerator GetILGenerator(int size) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetILGenerator = (JCObject)classInstance.Invoke("GetILGenerator", size);
-            return new ILGenerator(objGetILGenerator);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Module GetModule() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetModule = (JCObject)classInstance.Invoke("GetModule");
-            return new Module(objGetModule);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -431,23 +403,51 @@ public class MethodBuilder extends NetObject  {
         }
     }
 
-    public NetObject Invoke(NetObject obj, NetObject[] parameters) throws Throwable {
+    public void SetImplementationFlags(MethodImplAttributes attributes) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", obj == null ? null : obj.getJCOInstance(), toObjectFromArray(parameters));
-            return new NetObject(objInvoke);
+            classInstance.Invoke("SetImplementationFlags", attributes == null ? null : attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MethodBody GetMethodBody() throws Throwable, system.InvalidOperationException {
+    public void SetMarshal(UnmanagedMarshal unmanagedMarshal) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetMethodBody = (JCObject)classInstance.Invoke("GetMethodBody");
-            return new MethodBody(objGetMethodBody);
+            classInstance.Invoke("SetMarshal", unmanagedMarshal == null ? null : unmanagedMarshal.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetParameters(NetType... parameterTypes) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetParameters", (Object)toObjectFromArray(parameterTypes));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetReturnType(NetType returnType) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetReturnType", returnType == null ? null : returnType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetSymCustomAttribute(java.lang.String name, byte[] data) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetSymCustomAttribute", name, data);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,88 +457,151 @@ public class MethodBuilder extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable {
+    public boolean getContainsGenericParameters() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            return (boolean)classInstance.Get("ContainsGenericParameters");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Module getModule() throws Throwable {
+    public boolean getInitLocals() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Module");
-            return new Module(val);
+            return (boolean)classInstance.Get("InitLocals");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType getDeclaringType() throws Throwable {
+    public void setInitLocals(boolean InitLocals) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DeclaringType");
-            return new NetType(val);
+            classInstance.Set("InitLocals", InitLocals);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ICustomAttributeProvider getReturnTypeCustomAttributes() throws Throwable {
+    public boolean getIsAbstract() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnTypeCustomAttributes");
-            return new ICustomAttributeProviderImplementation(val);
+            return (boolean)classInstance.Get("IsAbstract");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType getReflectedType() throws Throwable {
+    public boolean getIsAssembly() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ReflectedType");
-            return new NetType(val);
+            return (boolean)classInstance.Get("IsAssembly");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MethodAttributes getAttributes() throws Throwable {
+    public boolean getIsConstructor() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new MethodAttributes(val);
+            return (boolean)classInstance.Get("IsConstructor");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CallingConventions getCallingConvention() throws Throwable {
+    public boolean getIsFamily() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CallingConvention");
-            return new CallingConventions(val);
+            return (boolean)classInstance.Get("IsFamily");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RuntimeMethodHandle getMethodHandle() throws Throwable, system.NotSupportedException {
+    public boolean getIsFamilyAndAssembly() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodHandle");
-            return new RuntimeMethodHandle(val);
+            return (boolean)classInstance.Get("IsFamilyAndAssembly");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsFamilyOrAssembly() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsFamilyOrAssembly");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsFinal() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsFinal");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsGenericMethod() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsGenericMethod");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsGenericMethodDefinition() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsGenericMethodDefinition");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsHideBySig() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsHideBySig");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsPrivate() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsPrivate");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsPublic() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsPublic");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -574,83 +637,63 @@ public class MethodBuilder extends NetObject  {
         }
     }
 
-    public NetType getReturnType() throws Throwable {
+    public boolean getIsSpecialName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnType");
-            return new NetType(val);
+            return (boolean)classInstance.Get("IsSpecialName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ParameterInfo getReturnParameter() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException {
+    public boolean getIsStatic() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnParameter");
-            return new ParameterInfo(val);
+            return (boolean)classInstance.Get("IsStatic");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsGenericMethodDefinition() throws Throwable {
+    public boolean getIsVirtual() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsGenericMethodDefinition");
+            return (boolean)classInstance.Get("IsVirtual");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getContainsGenericParameters() throws Throwable, system.NotSupportedException {
+    public int getMetadataToken() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("ContainsGenericParameters");
+            return (int)classInstance.Get("MetadataToken");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsGenericMethod() throws Throwable {
+    public CallingConventions getCallingConvention() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsGenericMethod");
+            JCObject val = (JCObject)classInstance.Get("CallingConvention");
+            return new CallingConventions(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getInitLocals() throws Throwable, system.InvalidOperationException {
+    public ICustomAttributeProvider getReturnTypeCustomAttributes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("InitLocals");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInitLocals(boolean InitLocals) throws Throwable, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InitLocals", InitLocals);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getSignature() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Signature");
+            JCObject val = (JCObject)classInstance.Get("ReturnTypeCustomAttributes");
+            return new ICustomAttributeProviderImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -667,6 +710,17 @@ public class MethodBuilder extends NetObject  {
         }
     }
 
+    public MethodAttributes getAttributes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Attributes");
+            return new MethodAttributes(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MethodImplAttributes getMethodImplementationFlags() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -678,141 +732,87 @@ public class MethodBuilder extends NetObject  {
         }
     }
 
-    public boolean getIsPublic() throws Throwable {
+    public Module getModule() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsPublic");
+            JCObject val = (JCObject)classInstance.Get("Module");
+            return new Module(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsPrivate() throws Throwable {
+    public ParameterInfo getReturnParameter() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsPrivate");
+            JCObject val = (JCObject)classInstance.Get("ReturnParameter");
+            return new ParameterInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsFamily() throws Throwable {
+    public RuntimeMethodHandle getMethodHandle() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsFamily");
+            JCObject val = (JCObject)classInstance.Get("MethodHandle");
+            return new RuntimeMethodHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsAssembly() throws Throwable {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsAssembly");
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsFamilyAndAssembly() throws Throwable {
+    public java.lang.String getSignature() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsFamilyAndAssembly");
+            return (java.lang.String)classInstance.Get("Signature");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsFamilyOrAssembly() throws Throwable {
+    public NetType getDeclaringType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsFamilyOrAssembly");
+            JCObject val = (JCObject)classInstance.Get("DeclaringType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsStatic() throws Throwable {
+    public NetType getReflectedType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsStatic");
+            JCObject val = (JCObject)classInstance.Get("ReflectedType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsFinal() throws Throwable {
+    public NetType getReturnType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsFinal");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsVirtual() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsVirtual");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsHideBySig() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsHideBySig");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsAbstract() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsAbstract");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsSpecialName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsSpecialName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsConstructor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsConstructor");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getMetadataToken() throws Throwable, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MetadataToken");
+            JCObject val = (JCObject)classInstance.Get("ReturnType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

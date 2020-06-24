@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.runtime.interopservices.ImporterEventKind;
 import system.reflection.Assembly;
+import system.runtime.interopservices.ImporterEventKind;
 
 
 /**
@@ -91,9 +91,9 @@ public interface ITypeLibImporterNotifySink extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void ReportEvent(ImporterEventKind eventKind, int eventCode, java.lang.String eventMsg) throws Throwable;
-
     public Assembly ResolveRef(NetObject typeLib) throws Throwable;
+
+    public void ReportEvent(ImporterEventKind eventKind, int eventCode, java.lang.String eventMsg) throws Throwable;
 
 
     

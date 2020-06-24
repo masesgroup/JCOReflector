@@ -92,17 +92,17 @@ public interface IWSTrust13SyncContract extends IJCOBridgeReflected {
     
     public Message ProcessTrust13Cancel(Message message) throws Throwable;
 
-    public Message ProcessTrust13Issue(Message message) throws Throwable;
-
-    public Message ProcessTrust13Renew(Message message) throws Throwable;
-
-    public Message ProcessTrust13Validate(Message message) throws Throwable;
-
     public Message ProcessTrust13CancelResponse(Message message) throws Throwable;
+
+    public Message ProcessTrust13Issue(Message message) throws Throwable;
 
     public Message ProcessTrust13IssueResponse(Message message) throws Throwable;
 
+    public Message ProcessTrust13Renew(Message message) throws Throwable;
+
     public Message ProcessTrust13RenewResponse(Message message) throws Throwable;
+
+    public Message ProcessTrust13Validate(Message message) throws Throwable;
 
     public Message ProcessTrust13ValidateResponse(Message message) throws Throwable;
 

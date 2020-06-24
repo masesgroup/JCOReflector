@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.Assembly;
-import system.security.policy.Hash;
 import system.security.cryptography.HashAlgorithm;
+import system.security.policy.EvidenceBase;
+import system.security.policy.Hash;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.security.policy.EvidenceBase;
 
 
 /**
@@ -129,6 +129,36 @@ public class Hash extends NetObject  {
     
     // Methods section
     
+    public byte[] GenerateHash(HashAlgorithm hashAlg) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateHash", hashAlg == null ? null : hashAlg.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexGenerateHash = 0; indexGenerateHash < resultingArrayList.size(); indexGenerateHash++ ) {
+				resultingArray[indexGenerateHash] = (byte)resultingArrayList.get(indexGenerateHash);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EvidenceBase Clone() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            return new EvidenceBase(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Hash CreateMD5(byte[] md5) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -162,41 +192,11 @@ public class Hash extends NetObject  {
         }
     }
 
-    public byte[] GenerateHash(HashAlgorithm hashAlg) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateHash", hashAlg == null ? null : hashAlg.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexGenerateHash = 0; indexGenerateHash < resultingArrayList.size(); indexGenerateHash++ ) {
-				resultingArray[indexGenerateHash] = (byte)resultingArrayList.get(indexGenerateHash);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EvidenceBase Clone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new EvidenceBase(objClone);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

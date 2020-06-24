@@ -100,9 +100,9 @@ public interface IMembershipCondition extends IJCOBridgeReflected {
 
     public SecurityElement ToXml() throws Throwable;
 
-    public void FromXml(SecurityElement e) throws Throwable;
-
     public SecurityElement ToXml(PolicyLevel level) throws Throwable;
+
+    public void FromXml(SecurityElement e) throws Throwable;
 
     public void FromXml(SecurityElement e, PolicyLevel level) throws Throwable;
 

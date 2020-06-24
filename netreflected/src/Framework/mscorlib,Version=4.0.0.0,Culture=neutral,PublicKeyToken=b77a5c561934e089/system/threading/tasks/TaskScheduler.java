@@ -128,16 +128,6 @@ public class TaskScheduler extends NetObject  {
     
     // Properties section
     
-    public int getMaximumConcurrencyLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MaximumConcurrencyLevel");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,12 +138,11 @@ public class TaskScheduler extends NetObject  {
         }
     }
 
-    public static TaskScheduler getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getMaximumConcurrencyLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
-            return new TaskScheduler(val);
+            return (int)classInstance.Get("MaximumConcurrencyLevel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,6 +153,17 @@ public class TaskScheduler extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject val = (JCObject)classType.Get("Current");
+            return new TaskScheduler(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TaskScheduler getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Default");
             return new TaskScheduler(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -40,12 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.data.objects.OriginalValueRecord;
 import system.data.EntityState;
-import system.data.objects.ObjectStateManager;
-import system.data.metadata.edm.EntitySetBase;
-import system.data.EntityKey;
 import system.data.common.DbDataRecord;
+import system.data.EntityKey;
+import system.data.metadata.edm.EntitySetBase;
 import system.data.objects.CurrentValueRecord;
 import system.data.objects.dataclasses.RelationshipManager;
+import system.data.objects.ObjectStateManager;
 
 
 /**
@@ -120,6 +120,16 @@ public class ObjectStateEntry extends NetObject  {
     
     // Methods section
     
+    public boolean IsPropertyChanged(java.lang.String propertyName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsPropertyChanged", propertyName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public OriginalValueRecord GetUpdatableOriginalValues() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,56 +146,6 @@ public class ObjectStateEntry extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AcceptChanges");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Delete() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Delete");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetModifiedProperty(java.lang.String propertyName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetModifiedProperty", propertyName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RejectPropertyChanges(java.lang.String propertyName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RejectPropertyChanges", propertyName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsPropertyChanged(java.lang.String propertyName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsPropertyChanged", propertyName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ChangeState(EntityState state) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ChangeState", state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,59 +171,76 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    public void ChangeState(EntityState state) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ChangeState", state == null ? null : state.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Delete() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Delete");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RejectPropertyChanges(java.lang.String propertyName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RejectPropertyChanges", propertyName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetModified() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetModified");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetModifiedProperty(java.lang.String propertyName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetModifiedProperty", propertyName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public ObjectStateManager getObjectStateManager() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public boolean getIsRelationship() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectStateManager");
-            return new ObjectStateManager(val);
+            return (boolean)classInstance.Get("IsRelationship");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public EntitySetBase getEntitySet() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public DbDataRecord getOriginalValues() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EntitySet");
-            return new EntitySetBase(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EntityState getState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("State");
-            return new EntityState(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setState(EntityState State) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("State", State == null ? null : State.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getEntity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Entity");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("OriginalValues");
+            return new DbDataRecord(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,22 +267,33 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
-    public boolean getIsRelationship() throws Throwable {
+    public EntityState getState() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsRelationship");
+            JCObject val = (JCObject)classInstance.Get("State");
+            return new EntityState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DbDataRecord getOriginalValues() throws Throwable {
+    public void setState(EntityState State) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OriginalValues");
-            return new DbDataRecord(val);
+            classInstance.Set("State", State == null ? null : State.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EntitySetBase getEntitySet() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EntitySet");
+            return new EntitySetBase(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,6 +316,28 @@ public class ObjectStateEntry extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("RelationshipManager");
             return new RelationshipManager(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObjectStateManager getObjectStateManager() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ObjectStateManager");
+            return new ObjectStateManager(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject getEntity() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Entity");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

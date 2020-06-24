@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.threading.tasks.Task;
 import system.threading.tasks.sources.IValueTaskSource;
 import system.threading.tasks.sources.IValueTaskSourceImplementation;
-import system.runtime.compilerservices.ConfiguredValueTaskAwaitable;
+import system.threading.tasks.Task;
 import system.threading.tasks.ValueTask;
+import system.runtime.compilerservices.ConfiguredValueTaskAwaitable;
 import system.runtime.compilerservices.ValueTaskAwaiter;
 
 
@@ -115,16 +115,6 @@ public class ValueTask extends NetObject  {
     // Constructors section
     
 
-    public ValueTask(Task task) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(task == null ? null : task.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ValueTask(IValueTaskSource source, short token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -135,10 +125,30 @@ public class ValueTask extends NetObject  {
         }
     }
 
+    public ValueTask(Task task) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(task == null ? null : task.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
     
+    public boolean Equals(ValueTask other) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ConfiguredValueTaskAwaitable ConfigureAwait(boolean continueOnCapturedContext) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -150,11 +160,12 @@ public class ValueTask extends NetObject  {
         }
     }
 
-    public boolean Equals(ValueTask other) throws Throwable {
+    public ValueTaskAwaiter GetAwaiter() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            JCObject objGetAwaiter = (JCObject)classInstance.Invoke("GetAwaiter");
+            return new ValueTaskAwaiter(objGetAwaiter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,21 +193,20 @@ public class ValueTask extends NetObject  {
         }
     }
 
-    public ValueTaskAwaiter GetAwaiter() throws Throwable {
+
+    
+    // Properties section
+    
+    public boolean getIsCanceled() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetAwaiter = (JCObject)classInstance.Invoke("GetAwaiter");
-            return new ValueTaskAwaiter(objGetAwaiter);
+            return (boolean)classInstance.Get("IsCanceled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-
-    
-    // Properties section
-    
     public boolean getIsCompleted() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -222,16 +232,6 @@ public class ValueTask extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsFaulted");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsCanceled() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsCanceled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

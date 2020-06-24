@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.windows.automation.peers.AutomationControlType;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.peers.AutomationControlType;
 import system.windows.automation.peers.ItemAutomationPeer;
 import system.collections.specialized.NotifyCollectionChangedEventArgs;
 
@@ -93,9 +93,9 @@ public interface IViewAutomationPeer extends IJCOBridgeReflected {
 
     // Methods section
     
-    public AutomationControlType GetAutomationControlType() throws Throwable;
-
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable;
+
+    public AutomationControlType GetAutomationControlType() throws Throwable;
 
     public ItemAutomationPeer CreateItemAutomationPeer(NetObject item) throws Throwable;
 

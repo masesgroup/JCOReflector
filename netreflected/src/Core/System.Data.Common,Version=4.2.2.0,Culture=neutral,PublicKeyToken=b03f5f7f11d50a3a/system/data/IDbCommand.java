@@ -37,18 +37,18 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.data.IDbDataParameter;
-import system.data.IDbDataParameterImplementation;
 import system.data.IDataReader;
 import system.data.IDataReaderImplementation;
 import system.data.CommandBehavior;
+import system.data.IDbDataParameter;
+import system.data.IDbDataParameterImplementation;
+import system.data.CommandType;
+import system.data.IDataParameterCollection;
+import system.data.IDataParameterCollectionImplementation;
 import system.data.IDbConnection;
 import system.data.IDbConnectionImplementation;
 import system.data.IDbTransaction;
 import system.data.IDbTransactionImplementation;
-import system.data.CommandType;
-import system.data.IDataParameterCollection;
-import system.data.IDataParameterCollectionImplementation;
 import system.data.UpdateRowSource;
 
 
@@ -102,38 +102,26 @@ public interface IDbCommand extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Prepare() throws Throwable;
-
-    public void Cancel() throws Throwable;
-
-    public IDbDataParameter CreateParameter() throws Throwable;
-
     public int ExecuteNonQuery() throws Throwable;
 
     public IDataReader ExecuteReader() throws Throwable;
 
     public IDataReader ExecuteReader(CommandBehavior behavior) throws Throwable;
 
+    public IDbDataParameter CreateParameter() throws Throwable;
+
     public NetObject ExecuteScalar() throws Throwable;
 
+    public void Cancel() throws Throwable;
+
     public void Dispose() throws Throwable;
+
+    public void Prepare() throws Throwable;
 
 
     
     // Properties section
     
-    public IDbConnection getConnection() throws Throwable;
-
-    public void setConnection(IDbConnection Connection) throws Throwable;
-
-    public IDbTransaction getTransaction() throws Throwable;
-
-    public void setTransaction(IDbTransaction Transaction) throws Throwable;
-
-    public java.lang.String getCommandText() throws Throwable;
-
-    public void setCommandText(java.lang.String CommandText) throws Throwable;
-
     public int getCommandTimeout() throws Throwable;
 
     public void setCommandTimeout(int CommandTimeout) throws Throwable;
@@ -144,9 +132,21 @@ public interface IDbCommand extends IJCOBridgeReflected {
 
     public IDataParameterCollection getParameters() throws Throwable;
 
+    public IDbConnection getConnection() throws Throwable;
+
+    public void setConnection(IDbConnection Connection) throws Throwable;
+
+    public IDbTransaction getTransaction() throws Throwable;
+
+    public void setTransaction(IDbTransaction Transaction) throws Throwable;
+
     public UpdateRowSource getUpdatedRowSource() throws Throwable;
 
     public void setUpdatedRowSource(UpdateRowSource UpdatedRowSource) throws Throwable;
+
+    public java.lang.String getCommandText() throws Throwable;
+
+    public void setCommandText(java.lang.String CommandText) throws Throwable;
 
 
 

@@ -112,21 +112,21 @@ public class CharType extends NetObject  {
     
     // Methods section
     
-    public static char FromString(java.lang.String Value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (char)classType.Invoke("FromString", Value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static char FromObject(NetObject Value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (char)classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char FromString(java.lang.String Value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (char)classType.Invoke("FromString", Value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

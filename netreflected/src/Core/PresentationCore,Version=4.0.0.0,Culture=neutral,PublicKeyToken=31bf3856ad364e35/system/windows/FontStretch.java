@@ -113,22 +113,11 @@ public class FontStretch extends NetObject  {
     
     // Methods section
     
-    public static FontStretch FromOpenTypeStretch(int stretchValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFromOpenTypeStretch = (JCObject)classType.Invoke("FromOpenTypeStretch", stretchValue);
-            return new FontStretch(objFromOpenTypeStretch);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int ToOpenTypeStretch() throws Throwable {
+    public boolean Equals(FontStretch obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ToOpenTypeStretch");
+            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,11 +133,22 @@ public class FontStretch extends NetObject  {
         }
     }
 
-    public boolean Equals(FontStretch obj) throws Throwable {
+    public int ToOpenTypeStretch() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            return (int)classInstance.Invoke("ToOpenTypeStretch");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static FontStretch FromOpenTypeStretch(int stretchValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromOpenTypeStretch = (JCObject)classType.Invoke("FromOpenTypeStretch", stretchValue);
+            return new FontStretch(objFromOpenTypeStretch);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

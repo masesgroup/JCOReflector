@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.DependencyObject;
-import system.windows.DependencyProperty;
+import system.windows.controls.ValidationError;
 import system.windows.data.BindingBase;
 import system.windows.data.BindingGroup;
 import system.windows.data.BindingStatus;
-import system.windows.controls.ValidationError;
+import system.windows.DependencyObject;
+import system.windows.DependencyProperty;
 
 
 /**
@@ -118,6 +118,16 @@ public class BindingExpression extends NetObject  {
     
     // Methods section
     
+    public boolean ValidateWithoutUpdate() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ValidateWithoutUpdate");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void UpdateSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -138,26 +148,35 @@ public class BindingExpression extends NetObject  {
         }
     }
 
-    public boolean ValidateWithoutUpdate() throws Throwable {
+
+    
+    // Properties section
+    
+    public boolean getHasError() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("ValidateWithoutUpdate");
+            return (boolean)classInstance.Get("HasError");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-
-    
-    // Properties section
-    
-    public system.windows.data.Binding getParentBinding() throws Throwable {
+    public boolean getHasValidationError() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentBinding");
-            return new system.windows.data.Binding(val);
+            return (boolean)classInstance.Get("HasValidationError");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsDirty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsDirty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,23 +214,23 @@ public class BindingExpression extends NetObject  {
         }
     }
 
-    public DependencyObject getTarget() throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
+    public ValidationError getValidationError() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Target");
-            return new DependencyObject(val);
+            JCObject val = (JCObject)classInstance.Get("ValidationError");
+            return new ValidationError(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DependencyProperty getTargetProperty() throws Throwable {
+    public system.windows.data.Binding getParentBinding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetProperty");
-            return new DependencyProperty(val);
+            JCObject val = (JCObject)classInstance.Get("ParentBinding");
+            return new system.windows.data.Binding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,42 +269,23 @@ public class BindingExpression extends NetObject  {
         }
     }
 
-    public ValidationError getValidationError() throws Throwable {
+    public DependencyObject getTarget() throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidationError");
-            return new ValidationError(val);
+            JCObject val = (JCObject)classInstance.Get("Target");
+            return new DependencyObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getHasError() throws Throwable {
+    public DependencyProperty getTargetProperty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HasError");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getHasValidationError() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("HasValidationError");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsDirty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsDirty");
+            JCObject val = (JCObject)classInstance.Get("TargetProperty");
+            return new DependencyProperty(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

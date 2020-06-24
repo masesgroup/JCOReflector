@@ -38,20 +38,20 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.remoting.proxies.RealProxy;
+import system.MarshalByRefObject;
 import system.runtime.remoting.messaging.IMethodMessage;
 import system.runtime.remoting.messaging.IMethodMessageImplementation;
-import system.MarshalByRefObject;
+import system.reflection.MethodBase;
 import system.runtime.remoting.ObjRef;
-import system.runtime.serialization.SerializationInfo;
-import system.runtime.serialization.StreamingContext;
 import system.runtime.remoting.messaging.IMessageSink;
 import system.runtime.remoting.messaging.IMessageSinkImplementation;
-import system.reflection.MethodBase;
 import system.runtime.remoting.messaging.IMethodReturnMessage;
 import system.runtime.remoting.messaging.IMethodReturnMessageImplementation;
 import system.runtime.remoting.messaging.IMethodCallMessage;
 import system.runtime.remoting.messaging.IMethodCallMessageImplementation;
+import system.runtime.remoting.proxies.RealProxy;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 
 
 /**
@@ -126,32 +126,21 @@ public class RemotingServices extends NetObject  {
     
     // Methods section
     
-    public static boolean IsTransparentProxy(NetObject proxy) throws Throwable {
+    public static boolean Disconnect(MarshalByRefObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsTransparentProxy", proxy == null ? null : proxy.getJCOInstance());
+            return (boolean)classType.Invoke("Disconnect", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RealProxy GetRealProxy(NetObject proxy) throws Throwable {
+    public static boolean IsMethodOverloaded(IMethodMessage msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetRealProxy = (JCObject)classType.Invoke("GetRealProxy", proxy == null ? null : proxy.getJCOInstance());
-            return new RealProxy(objGetRealProxy);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsObjectOutOfContext(NetObject tp) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsObjectOutOfContext", tp == null ? null : tp.getJCOInstance());
+            return (boolean)classType.Invoke("IsMethodOverloaded", msg == null ? null : msg.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,31 +156,130 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static java.lang.String GetSessionIdForMethodMessage(IMethodMessage msg) throws Throwable {
+    public static boolean IsObjectOutOfContext(NetObject tp) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetSessionIdForMethodMessage", msg == null ? null : msg.getJCOInstance());
+            return (boolean)classType.Invoke("IsObjectOutOfContext", tp == null ? null : tp.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String GetObjectUri(MarshalByRefObject obj) throws Throwable {
+    public static boolean IsOneWay(MethodBase method) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetObjectUri", obj == null ? null : obj.getJCOInstance());
+            return (boolean)classType.Invoke("IsOneWay", method == null ? null : method.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void SetObjectUriForMarshal(MarshalByRefObject obj, java.lang.String uri) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static boolean IsTransparentProxy(NetObject proxy) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetObjectUriForMarshal", obj == null ? null : obj.getJCOInstance(), uri);
+            return (boolean)classType.Invoke("IsTransparentProxy", proxy == null ? null : proxy.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject Connect(NetType classToProxy, java.lang.String url) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotSupportedException, system.ApplicationException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objConnect = (JCObject)classType.Invoke("Connect", classToProxy == null ? null : classToProxy.getJCOInstance(), url);
+            return new NetObject(objConnect);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject Connect(NetType classToProxy, java.lang.String url, NetObject data) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotSupportedException, system.ApplicationException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objConnect = (JCObject)classType.Invoke("Connect", classToProxy == null ? null : classToProxy.getJCOInstance(), url, data == null ? null : data.getJCOInstance());
+            return new NetObject(objConnect);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject GetLifetimeService(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetLifetimeService = (JCObject)classType.Invoke("GetLifetimeService", obj == null ? null : obj.getJCOInstance());
+            return new NetObject(objGetLifetimeService);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject Unmarshal(ObjRef objectRef) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidCastException, system.NotImplementedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objUnmarshal = (JCObject)classType.Invoke("Unmarshal", objectRef == null ? null : objectRef.getJCOInstance());
+            return new NetObject(objUnmarshal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject Unmarshal(ObjRef objectRef, boolean fRefine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidCastException, system.NotImplementedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objUnmarshal = (JCObject)classType.Invoke("Unmarshal", objectRef == null ? null : objectRef.getJCOInstance(), fRefine);
+            return new NetObject(objUnmarshal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MethodBase GetMethodBaseFromMethodMessage(IMethodMessage msg) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetMethodBaseFromMethodMessage = (JCObject)classType.Invoke("GetMethodBaseFromMethodMessage", msg == null ? null : msg.getJCOInstance());
+            return new MethodBase(objGetMethodBaseFromMethodMessage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IMessageSink GetEnvoyChainForProxy(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetEnvoyChainForProxy = (JCObject)classType.Invoke("GetEnvoyChainForProxy", obj == null ? null : obj.getJCOInstance());
+            return new IMessageSinkImplementation(objGetEnvoyChainForProxy);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IMethodReturnMessage ExecuteMessage(MarshalByRefObject target, IMethodCallMessage reqMsg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.security.SecurityException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objExecuteMessage = (JCObject)classType.Invoke("ExecuteMessage", target == null ? null : target.getJCOInstance(), reqMsg == null ? null : reqMsg.getJCOInstance());
+            return new IMethodReturnMessageImplementation(objExecuteMessage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ObjRef GetObjRefForProxy(MarshalByRefObject obj) throws Throwable, system.runtime.remoting.RemotingException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetObjRefForProxy = (JCObject)classType.Invoke("GetObjRefForProxy", obj == null ? null : obj.getJCOInstance());
+            return new ObjRef(objGetObjRefForProxy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,118 +318,32 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static void GetObjectData(NetObject obj, SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.NullReferenceException {
+    public static RealProxy GetRealProxy(NetObject proxy) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("GetObjectData", obj == null ? null : obj.getJCOInstance(), info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objGetRealProxy = (JCObject)classType.Invoke("GetRealProxy", proxy == null ? null : proxy.getJCOInstance());
+            return new RealProxy(objGetRealProxy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject Unmarshal(ObjRef objectRef) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidCastException, system.NotImplementedException {
+    public static java.lang.String GetObjectUri(MarshalByRefObject obj) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objUnmarshal = (JCObject)classType.Invoke("Unmarshal", objectRef == null ? null : objectRef.getJCOInstance());
-            return new NetObject(objUnmarshal);
+            return (java.lang.String)classType.Invoke("GetObjectUri", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject Unmarshal(ObjRef objectRef, boolean fRefine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidCastException, system.NotImplementedException {
+    public static java.lang.String GetSessionIdForMethodMessage(IMethodMessage msg) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objUnmarshal = (JCObject)classType.Invoke("Unmarshal", objectRef == null ? null : objectRef.getJCOInstance(), fRefine);
-            return new NetObject(objUnmarshal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject Connect(NetType classToProxy, java.lang.String url) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotSupportedException, system.ApplicationException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objConnect = (JCObject)classType.Invoke("Connect", classToProxy == null ? null : classToProxy.getJCOInstance(), url);
-            return new NetObject(objConnect);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject Connect(NetType classToProxy, java.lang.String url, NetObject data) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotSupportedException, system.ApplicationException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objConnect = (JCObject)classType.Invoke("Connect", classToProxy == null ? null : classToProxy.getJCOInstance(), url, data == null ? null : data.getJCOInstance());
-            return new NetObject(objConnect);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean Disconnect(MarshalByRefObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("Disconnect", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static IMessageSink GetEnvoyChainForProxy(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetEnvoyChainForProxy = (JCObject)classType.Invoke("GetEnvoyChainForProxy", obj == null ? null : obj.getJCOInstance());
-            return new IMessageSinkImplementation(objGetEnvoyChainForProxy);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static ObjRef GetObjRefForProxy(MarshalByRefObject obj) throws Throwable, system.runtime.remoting.RemotingException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetObjRefForProxy = (JCObject)classType.Invoke("GetObjRefForProxy", obj == null ? null : obj.getJCOInstance());
-            return new ObjRef(objGetObjRefForProxy);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MethodBase GetMethodBaseFromMethodMessage(IMethodMessage msg) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.reflection.AmbiguousMatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetMethodBaseFromMethodMessage = (JCObject)classType.Invoke("GetMethodBaseFromMethodMessage", msg == null ? null : msg.getJCOInstance());
-            return new MethodBase(objGetMethodBaseFromMethodMessage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsMethodOverloaded(IMethodMessage msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsMethodOverloaded", msg == null ? null : msg.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsOneWay(MethodBase method) throws Throwable, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsOneWay", method == null ? null : method.getJCOInstance());
+            return (java.lang.String)classType.Invoke("GetSessionIdForMethodMessage", msg == null ? null : msg.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,12 +360,11 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static IMethodReturnMessage ExecuteMessage(MarshalByRefObject target, IMethodCallMessage reqMsg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.security.SecurityException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static void GetObjectData(NetObject obj, SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objExecuteMessage = (JCObject)classType.Invoke("ExecuteMessage", target == null ? null : target.getJCOInstance(), reqMsg == null ? null : reqMsg.getJCOInstance());
-            return new IMethodReturnMessageImplementation(objExecuteMessage);
+            classType.Invoke("GetObjectData", obj == null ? null : obj.getJCOInstance(), info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,12 +380,11 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static NetObject GetLifetimeService(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static void SetObjectUriForMarshal(MarshalByRefObject obj, java.lang.String uri) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetLifetimeService = (JCObject)classType.Invoke("GetLifetimeService", obj == null ? null : obj.getJCOInstance());
-            return new NetObject(objGetLifetimeService);
+            classType.Invoke("SetObjectUriForMarshal", obj == null ? null : obj.getJCOInstance(), uri);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

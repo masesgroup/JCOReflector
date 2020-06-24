@@ -100,9 +100,9 @@ public interface IRawElementProviderHwndOverride extends IJCOBridgeReflected {
     
     // Properties section
     
-    public ProviderOptions getProviderOptions() throws Throwable;
-
     public IRawElementProviderSimple getHostRawElementProvider() throws Throwable;
+
+    public ProviderOptions getProviderOptions() throws Throwable;
 
 
 

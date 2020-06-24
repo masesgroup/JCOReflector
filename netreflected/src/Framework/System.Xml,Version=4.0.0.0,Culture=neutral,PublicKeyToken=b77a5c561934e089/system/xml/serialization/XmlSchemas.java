@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.collections.IList;
-import system.collections.IListImplementation;
 import system.xml.schema.XmlSchema;
 import system.Uri;
-import system.xml.serialization.XmlSchemas;
+import system.collections.IList;
+import system.collections.IListImplementation;
 import system.xml.XmlQualifiedName;
+import system.xml.serialization.XmlSchemas;
 import system.xml.schema.ValidationEventHandler;
 
 
@@ -130,12 +130,31 @@ public class XmlSchemas extends NetObject  {
     
     // Methods section
     
-    public IList GetSchemas(java.lang.String ns) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.InvalidOperationException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException {
+    public boolean Contains(java.lang.String targetNamespace) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.InvalidOperationException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetSchemas = (JCObject)classInstance.Invoke("GetSchemas", ns);
-            return new IListImplementation(objGetSchemas);
+            return (boolean)classInstance.Invoke("Contains", targetNamespace);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Contains(XmlSchema schema) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Contains", schema == null ? null : schema.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean IsDataSet(XmlSchema schema) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsDataSet", schema == null ? null : schema.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,6 +180,38 @@ public class XmlSchemas extends NetObject  {
         }
     }
 
+    public int IndexOf(XmlSchema schema) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("IndexOf", schema == null ? null : schema.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList GetSchemas(java.lang.String ns) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.InvalidOperationException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetSchemas = (JCObject)classInstance.Invoke("GetSchemas", ns);
+            return new IListImplementation(objGetSchemas);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject Find(XmlQualifiedName name, NetType type) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.RankException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objFind = (JCObject)classInstance.Invoke("Find", name == null ? null : name.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            return new NetObject(objFind);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Add(XmlSchemas schemas) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -181,82 +232,11 @@ public class XmlSchemas extends NetObject  {
         }
     }
 
-    public void Insert(int index, XmlSchema schema) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, schema == null ? null : schema.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int IndexOf(XmlSchema schema) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("IndexOf", schema == null ? null : schema.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Contains(XmlSchema schema) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Contains", schema == null ? null : schema.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Contains(java.lang.String targetNamespace) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.InvalidOperationException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Contains", targetNamespace);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(XmlSchema schema) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", schema == null ? null : schema.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(XmlSchema[] array, int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject Find(XmlQualifiedName name, NetType type) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.RankException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", name == null ? null : name.getJCOInstance(), type == null ? null : type.getJCOInstance());
-            return new NetObject(objFind);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsDataSet(XmlSchema schema) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsDataSet", schema == null ? null : schema.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,11 +252,31 @@ public class XmlSchemas extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public void CopyTo(XmlSchema[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Insert(int index, XmlSchema schema) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Insert", index, schema == null ? null : schema.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(XmlSchema schema) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", schema == null ? null : schema.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

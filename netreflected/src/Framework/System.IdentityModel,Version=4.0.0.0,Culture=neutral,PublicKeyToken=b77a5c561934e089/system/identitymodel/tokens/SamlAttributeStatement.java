@@ -39,15 +39,15 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.tokens.SamlSubject;
+import system.identitymodel.policy.IAuthorizationPolicy;
+import system.identitymodel.policy.IAuthorizationPolicyImplementation;
+import system.identitymodel.claims.ClaimSet;
+import system.identitymodel.selectors.SamlSecurityTokenAuthenticator;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.identitymodel.selectors.SecurityTokenResolver;
 import system.xml.XmlDictionaryWriter;
-import system.identitymodel.policy.IAuthorizationPolicy;
-import system.identitymodel.policy.IAuthorizationPolicyImplementation;
-import system.identitymodel.claims.ClaimSet;
-import system.identitymodel.selectors.SamlSecurityTokenAuthenticator;
 
 
 /**
@@ -133,6 +133,17 @@ public class SamlAttributeStatement extends NetObject  {
     
     // Methods section
     
+    public IAuthorizationPolicy CreatePolicy(ClaimSet issuer, SamlSecurityTokenAuthenticator samlAuthenticator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreatePolicy = (JCObject)classInstance.Invoke("CreatePolicy", issuer == null ? null : issuer.getJCOInstance(), samlAuthenticator == null ? null : samlAuthenticator.getJCOInstance());
+            return new IAuthorizationPolicyImplementation(objCreatePolicy);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void MakeReadOnly() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -158,17 +169,6 @@ public class SamlAttributeStatement extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance(), samlSerializer == null ? null : samlSerializer.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IAuthorizationPolicy CreatePolicy(ClaimSet issuer, SamlSecurityTokenAuthenticator samlAuthenticator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreatePolicy = (JCObject)classInstance.Invoke("CreatePolicy", issuer == null ? null : issuer.getJCOInstance(), samlAuthenticator == null ? null : samlAuthenticator.getJCOInstance());
-            return new IAuthorizationPolicyImplementation(objCreatePolicy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

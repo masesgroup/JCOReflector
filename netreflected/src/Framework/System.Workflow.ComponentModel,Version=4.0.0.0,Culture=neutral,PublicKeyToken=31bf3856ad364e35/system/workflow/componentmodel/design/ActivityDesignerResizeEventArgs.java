@@ -129,23 +129,23 @@ public class ActivityDesignerResizeEventArgs extends NetObject  {
     
     // Properties section
     
-    public DesignerEdges getSizingEdge() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SizingEdge");
-            return new DesignerEdges(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Bounds");
             return new Rectangle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DesignerEdges getSizingEdge() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SizingEdge");
+            return new DesignerEdges(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

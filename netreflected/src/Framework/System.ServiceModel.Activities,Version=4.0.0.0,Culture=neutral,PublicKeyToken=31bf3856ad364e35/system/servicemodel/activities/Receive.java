@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.activities.Receive;
 import system.servicemodel.description.OperationDescription;
-import system.servicemodel.MessageQuerySet;
 import system.servicemodel.activities.ReceiveContent;
 import system.servicemodel.activities.SerializerOption;
+import system.servicemodel.MessageQuerySet;
 import system.xml.linq.XName;
 
 
@@ -139,6 +139,16 @@ public class Receive extends NetObject  {
         }
     }
 
+    public boolean ShouldSerializeDisplayName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ShouldSerializeDisplayName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Receive FromOperationDescription(OperationDescription operation) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.OverflowException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -150,36 +160,25 @@ public class Receive extends NetObject  {
         }
     }
 
-    public boolean ShouldSerializeDisplayName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ShouldSerializeDisplayName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public MessageQuerySet getCorrelatesOn() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public boolean getCanCreateInstance() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CorrelatesOn");
-            return new MessageQuerySet(val);
+            return (boolean)classInstance.Get("CanCreateInstance");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCorrelatesOn(MessageQuerySet CorrelatesOn) throws Throwable {
+    public void setCanCreateInstance(boolean CanCreateInstance) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("CorrelatesOn", CorrelatesOn == null ? null : CorrelatesOn.getJCOInstance());
+            classInstance.Set("CanCreateInstance", CanCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,66 +205,6 @@ public class Receive extends NetObject  {
         }
     }
 
-    public java.lang.String getAction() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Action");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAction(java.lang.String Action) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Action", Action);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanCreateInstance() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanCreateInstance");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCanCreateInstance(boolean CanCreateInstance) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CanCreateInstance", CanCreateInstance);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getOperationName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("OperationName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOperationName(java.lang.String OperationName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("OperationName", OperationName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SerializerOption getSerializerOption() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -287,22 +226,42 @@ public class Receive extends NetObject  {
         }
     }
 
-    public XName getServiceContractName() throws Throwable {
+    public MessageQuerySet getCorrelatesOn() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceContractName");
-            return new XName(val);
+            JCObject val = (JCObject)classInstance.Get("CorrelatesOn");
+            return new MessageQuerySet(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setServiceContractName(XName ServiceContractName) throws Throwable {
+    public void setCorrelatesOn(MessageQuerySet CorrelatesOn) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ServiceContractName", ServiceContractName == null ? null : ServiceContractName.getJCOInstance());
+            classInstance.Set("CorrelatesOn", CorrelatesOn == null ? null : CorrelatesOn.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getAction() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Action");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAction(java.lang.String Action) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Action", Action);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,6 +292,47 @@ public class Receive extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Id");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getOperationName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("OperationName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setOperationName(java.lang.String OperationName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("OperationName", OperationName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XName getServiceContractName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ServiceContractName");
+            return new XName(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setServiceContractName(XName ServiceContractName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ServiceContractName", ServiceContractName == null ? null : ServiceContractName.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

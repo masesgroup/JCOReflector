@@ -40,16 +40,16 @@ import java.util.ArrayList;
 // Import section
 import system.xml.XmlDocument;
 import system.security.policy.Evidence;
-import system.xml.XmlElement;
 import system.security.cryptography.xml.EncryptedData;
 import system.security.cryptography.SymmetricAlgorithm;
 import system.security.cryptography.xml.EncryptedKey;
-import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.RSA;
-import system.xml.XmlResolver;
-import system.security.cryptography.PaddingMode;
+import system.xml.XmlElement;
+import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.CipherMode;
+import system.security.cryptography.PaddingMode;
 import system.text.Encoding;
+import system.xml.XmlResolver;
 
 
 /**
@@ -155,42 +155,20 @@ public class EncryptedXml extends NetObject  {
     
     // Methods section
     
-    public XmlElement GetIdElement(XmlDocument document, java.lang.String idValue) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetIdElement = (JCObject)classInstance.Invoke("GetIdElement", document == null ? null : document.getJCOInstance(), idValue);
-            return new XmlElement(objGetIdElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] GetDecryptionIV(EncryptedData encryptedData, java.lang.String symmetricAlgorithmUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.xpath.XPathException {
+    public byte[] DecryptData(EncryptedData encryptedData, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDecryptionIV", encryptedData == null ? null : encryptedData.getJCOInstance(), symmetricAlgorithmUri);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptData", encryptedData == null ? null : encryptedData.getJCOInstance(), symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexGetDecryptionIV = 0; indexGetDecryptionIV < resultingArrayList.size(); indexGetDecryptionIV++ ) {
-				resultingArray[indexGetDecryptionIV] = (byte)resultingArrayList.get(indexGetDecryptionIV);
+            for(int indexDecryptData = 0; indexDecryptData < resultingArrayList.size(); indexDecryptData++ ) {
+				resultingArray[indexDecryptData] = (byte)resultingArrayList.get(indexDecryptData);
             }
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SymmetricAlgorithm GetDecryptionKey(EncryptedData encryptedData, java.lang.String symmetricAlgorithmUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.TypeLoadException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDecryptionKey = (JCObject)classInstance.Invoke("GetDecryptionKey", encryptedData == null ? null : encryptedData.getJCOInstance(), symmetricAlgorithmUri);
-            return new SymmetricAlgorithm(objGetDecryptionKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,53 +193,39 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public void AddKeyNameMapping(java.lang.String keyName, NetObject keyObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static byte[] DecryptKey(byte[] keyData, RSA rsa, boolean useOAEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("AddKeyNameMapping", keyName, keyObject == null ? null : keyObject.getJCOInstance());
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("DecryptKey", keyData, rsa == null ? null : rsa.getJCOInstance(), useOAEP);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexDecryptKey = 0; indexDecryptKey < resultingArrayList.size(); indexDecryptKey++ ) {
+				resultingArray[indexDecryptKey] = (byte)resultingArrayList.get(indexDecryptKey);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void ClearKeyNameMappings() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static byte[] DecryptKey(byte[] keyData, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.RankException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("ClearKeyNameMappings");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EncryptedData Encrypt(XmlElement inputElement, X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEncrypt = (JCObject)classInstance.Invoke("Encrypt", inputElement == null ? null : inputElement.getJCOInstance(), certificate == null ? null : certificate.getJCOInstance());
-            return new EncryptedData(objEncrypt);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EncryptedData Encrypt(XmlElement inputElement, java.lang.String keyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.RankException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEncrypt = (JCObject)classInstance.Invoke("Encrypt", inputElement == null ? null : inputElement.getJCOInstance(), keyName);
-            return new EncryptedData(objEncrypt);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DecryptDocument() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.TypeLoadException, system.xml.XmlException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DecryptDocument");
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("DecryptKey", keyData, symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexDecryptKey = 0; indexDecryptKey < resultingArrayList.size(); indexDecryptKey++ ) {
+				resultingArray[indexDecryptKey] = (byte)resultingArrayList.get(indexDecryptKey);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,40 +269,20 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public byte[] DecryptData(EncryptedData encryptedData, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.xpath.XPathException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static byte[] EncryptKey(byte[] keyData, RSA rsa, boolean useOAEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptData", encryptedData == null ? null : encryptedData.getJCOInstance(), symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classType.Invoke("EncryptKey", keyData, rsa == null ? null : rsa.getJCOInstance(), useOAEP);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexDecryptData = 0; indexDecryptData < resultingArrayList.size(); indexDecryptData++ ) {
-				resultingArray[indexDecryptData] = (byte)resultingArrayList.get(indexDecryptData);
+            for(int indexEncryptKey = 0; indexEncryptKey < resultingArrayList.size(); indexEncryptKey++ ) {
+				resultingArray[indexEncryptKey] = (byte)resultingArrayList.get(indexEncryptKey);
             }
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ReplaceData(XmlElement inputElement, byte[] decryptedData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReplaceData", inputElement == null ? null : inputElement.getJCOInstance(), decryptedData);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void ReplaceElement(XmlElement inputElement, EncryptedData encryptedData, boolean content) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("ReplaceElement", inputElement == null ? null : inputElement.getJCOInstance(), encryptedData == null ? null : encryptedData.getJCOInstance(), content);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,18 +307,18 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public static byte[] EncryptKey(byte[] keyData, RSA rsa, boolean useOAEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public byte[] GetDecryptionIV(EncryptedData encryptedData, java.lang.String symmetricAlgorithmUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.xpath.XPathException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("EncryptKey", keyData, rsa == null ? null : rsa.getJCOInstance(), useOAEP);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDecryptionIV", encryptedData == null ? null : encryptedData.getJCOInstance(), symmetricAlgorithmUri);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexEncryptKey = 0; indexEncryptKey < resultingArrayList.size(); indexEncryptKey++ ) {
-				resultingArray[indexEncryptKey] = (byte)resultingArrayList.get(indexEncryptKey);
+            for(int indexGetDecryptionIV = 0; indexGetDecryptionIV < resultingArrayList.size(); indexGetDecryptionIV++ ) {
+				resultingArray[indexGetDecryptionIV] = (byte)resultingArrayList.get(indexGetDecryptionIV);
             }
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -382,39 +326,95 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public static byte[] DecryptKey(byte[] keyData, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.RankException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SymmetricAlgorithm GetDecryptionKey(EncryptedData encryptedData, java.lang.String symmetricAlgorithmUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.TypeLoadException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("DecryptKey", keyData, symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexDecryptKey = 0; indexDecryptKey < resultingArrayList.size(); indexDecryptKey++ ) {
-				resultingArray[indexDecryptKey] = (byte)resultingArrayList.get(indexDecryptKey);
-            }
-            return resultingArray;
+            JCObject objGetDecryptionKey = (JCObject)classInstance.Invoke("GetDecryptionKey", encryptedData == null ? null : encryptedData.getJCOInstance(), symmetricAlgorithmUri);
+            return new SymmetricAlgorithm(objGetDecryptionKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static byte[] DecryptKey(byte[] keyData, RSA rsa, boolean useOAEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public EncryptedData Encrypt(XmlElement inputElement, X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEncrypt = (JCObject)classInstance.Invoke("Encrypt", inputElement == null ? null : inputElement.getJCOInstance(), certificate == null ? null : certificate.getJCOInstance());
+            return new EncryptedData(objEncrypt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EncryptedData Encrypt(XmlElement inputElement, java.lang.String keyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.RankException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEncrypt = (JCObject)classInstance.Invoke("Encrypt", inputElement == null ? null : inputElement.getJCOInstance(), keyName);
+            return new EncryptedData(objEncrypt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlElement GetIdElement(XmlDocument document, java.lang.String idValue) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetIdElement = (JCObject)classInstance.Invoke("GetIdElement", document == null ? null : document.getJCOInstance(), idValue);
+            return new XmlElement(objGetIdElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddKeyNameMapping(java.lang.String keyName, NetObject keyObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddKeyNameMapping", keyName, keyObject == null ? null : keyObject.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ClearKeyNameMappings() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ClearKeyNameMappings");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DecryptDocument() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.TypeLoadException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DecryptDocument");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReplaceData(XmlElement inputElement, byte[] decryptedData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReplaceData", inputElement == null ? null : inputElement.getJCOInstance(), decryptedData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ReplaceElement(XmlElement inputElement, EncryptedData encryptedData, boolean content) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("DecryptKey", keyData, rsa == null ? null : rsa.getJCOInstance(), useOAEP);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexDecryptKey = 0; indexDecryptKey < resultingArrayList.size(); indexDecryptKey++ ) {
-				resultingArray[indexDecryptKey] = (byte)resultingArrayList.get(indexDecryptKey);
-            }
-            return resultingArray;
+            classType.Invoke("ReplaceElement", inputElement == null ? null : inputElement.getJCOInstance(), encryptedData == null ? null : encryptedData.getJCOInstance(), content);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,43 +444,22 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public Evidence getDocumentEvidence() throws Throwable {
+    public CipherMode getMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DocumentEvidence");
-            return new Evidence(val);
+            JCObject val = (JCObject)classInstance.Get("Mode");
+            return new CipherMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDocumentEvidence(Evidence DocumentEvidence) throws Throwable {
+    public void setMode(CipherMode Mode) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("DocumentEvidence", DocumentEvidence == null ? null : DocumentEvidence.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlResolver getResolver() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Resolver");
-            return new XmlResolver(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setResolver(XmlResolver Resolver) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Resolver", Resolver == null ? null : Resolver.getJCOInstance());
+            classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,22 +486,42 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public CipherMode getMode() throws Throwable {
+    public Evidence getDocumentEvidence() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
-            return new CipherMode(val);
+            JCObject val = (JCObject)classInstance.Get("DocumentEvidence");
+            return new Evidence(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMode(CipherMode Mode) throws Throwable {
+    public void setDocumentEvidence(Evidence DocumentEvidence) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
+            classInstance.Set("DocumentEvidence", DocumentEvidence == null ? null : DocumentEvidence.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getRecipient() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Recipient");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRecipient(java.lang.String Recipient) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Recipient", Recipient);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,21 +548,22 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public java.lang.String getRecipient() throws Throwable {
+    public XmlResolver getResolver() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Recipient");
+            JCObject val = (JCObject)classInstance.Get("Resolver");
+            return new XmlResolver(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRecipient(java.lang.String Recipient) throws Throwable {
+    public void setResolver(XmlResolver Resolver) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Recipient", Recipient);
+            classInstance.Set("Resolver", Resolver == null ? null : Resolver.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

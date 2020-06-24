@@ -129,11 +129,12 @@ public class SqlAuthenticationParameters extends NetObject  {
         }
     }
 
-    public java.lang.String getResource() throws Throwable {
+    public Guid getConnectionId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Resource");
+            JCObject val = (JCObject)classInstance.Get("ConnectionId");
+            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,11 +150,11 @@ public class SqlAuthenticationParameters extends NetObject  {
         }
     }
 
-    public java.lang.String getUserId() throws Throwable {
+    public java.lang.String getDatabaseName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("UserId");
+            return (java.lang.String)classInstance.Get("DatabaseName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,12 +170,11 @@ public class SqlAuthenticationParameters extends NetObject  {
         }
     }
 
-    public Guid getConnectionId() throws Throwable {
+    public java.lang.String getResource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectionId");
-            return new Guid(val);
+            return (java.lang.String)classInstance.Get("Resource");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,11 +190,11 @@ public class SqlAuthenticationParameters extends NetObject  {
         }
     }
 
-    public java.lang.String getDatabaseName() throws Throwable {
+    public java.lang.String getUserId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("DatabaseName");
+            return (java.lang.String)classInstance.Get("UserId");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

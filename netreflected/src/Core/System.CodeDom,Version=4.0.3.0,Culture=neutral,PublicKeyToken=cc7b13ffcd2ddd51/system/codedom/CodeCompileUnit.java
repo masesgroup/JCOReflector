@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.codedom.CodeNamespaceCollection;
-import system.collections.specialized.StringCollection;
 import system.codedom.CodeAttributeDeclarationCollection;
 import system.codedom.CodeDirectiveCollection;
+import system.codedom.CodeNamespaceCollection;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.collections.specialized.StringCollection;
 
 
 /**
@@ -133,45 +133,12 @@ public class CodeCompileUnit extends NetObject  {
     
     // Properties section
     
-    public CodeNamespaceCollection getNamespaces() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Namespaces");
-            return new CodeNamespaceCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StringCollection getReferencedAssemblies() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ReferencedAssemblies");
-            return new StringCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CodeAttributeDeclarationCollection getAssemblyCustomAttributes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("AssemblyCustomAttributes");
             return new CodeAttributeDeclarationCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeDirectiveCollection getStartDirectives() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("StartDirectives");
-            return new CodeDirectiveCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,12 +155,45 @@ public class CodeCompileUnit extends NetObject  {
         }
     }
 
+    public CodeDirectiveCollection getStartDirectives() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("StartDirectives");
+            return new CodeDirectiveCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeNamespaceCollection getNamespaces() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Namespaces");
+            return new CodeNamespaceCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IDictionary getUserData() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("UserData");
             return new IDictionaryImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StringCollection getReferencedAssemblies() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ReferencedAssemblies");
+            return new StringCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

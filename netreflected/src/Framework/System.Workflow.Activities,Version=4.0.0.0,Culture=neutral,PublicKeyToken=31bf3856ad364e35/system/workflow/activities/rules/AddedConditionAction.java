@@ -110,21 +110,21 @@ public class AddedConditionAction extends NetObject  {
     // Constructors section
     
 
-    public AddedConditionAction(RuleCondition addedConditionDefinition) throws Throwable, system.ArgumentNullException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(addedConditionDefinition == null ? null : addedConditionDefinition.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AddedConditionAction() throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AddedConditionAction(RuleCondition addedConditionDefinition) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(addedConditionDefinition == null ? null : addedConditionDefinition.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

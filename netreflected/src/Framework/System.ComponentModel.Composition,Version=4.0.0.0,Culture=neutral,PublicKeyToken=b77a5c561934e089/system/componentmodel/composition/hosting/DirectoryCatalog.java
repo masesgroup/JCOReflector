@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.ReflectionContext;
 import system.componentmodel.composition.primitives.ICompositionElement;
 import system.componentmodel.composition.primitives.ICompositionElementImplementation;
+import system.reflection.ReflectionContext;
 
 
 /**
@@ -122,21 +122,21 @@ public class DirectoryCatalog extends NetObject  {
         }
     }
 
-    public DirectoryCatalog(java.lang.String path, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MemberAccessException, system.io.PathTooLongException, system.NotSupportedException, system.threading.ThreadAbortException, system.threading.LockRecursionException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(path, reflectionContext == null ? null : reflectionContext.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DirectoryCatalog(java.lang.String path, ICompositionElement definitionOrigin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MemberAccessException, system.io.PathTooLongException, system.NotSupportedException, system.threading.ThreadAbortException, system.threading.LockRecursionException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(path, definitionOrigin == null ? null : definitionOrigin.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryCatalog(java.lang.String path, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MemberAccessException, system.io.PathTooLongException, system.NotSupportedException, system.threading.ThreadAbortException, system.threading.LockRecursionException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(path, reflectionContext == null ? null : reflectionContext.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

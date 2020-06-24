@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.drawing.Graphics;
 import system.drawing.Rectangle;
-import system.windows.forms.visualstyles.TextBoxState;
 import system.drawing.Font;
 import system.windows.forms.TextFormatFlags;
+import system.windows.forms.visualstyles.TextBoxState;
 
 
 /**
@@ -117,21 +117,11 @@ public class TextBoxRenderer extends NetObject  {
     
     // Methods section
     
-    public static void DrawTextBox(Graphics g, Rectangle bounds, TextBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
+    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String textBoxText, Font font, Rectangle textBounds, TextFormatFlags flags, TextBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("DrawTextBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), state == null ? null : state.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String textBoxText, Font font, TextBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("DrawTextBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), textBoxText, font == null ? null : font.getJCOInstance(), state == null ? null : state.getJCOInstance());
+            classType.Invoke("DrawTextBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), textBoxText, font == null ? null : font.getJCOInstance(), textBounds == null ? null : textBounds.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,11 +147,21 @@ public class TextBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String textBoxText, Font font, Rectangle textBounds, TextFormatFlags flags, TextBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException, system.NotSupportedException {
+    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String textBoxText, Font font, TextBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("DrawTextBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), textBoxText, font == null ? null : font.getJCOInstance(), textBounds == null ? null : textBounds.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), state == null ? null : state.getJCOInstance());
+            classType.Invoke("DrawTextBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), textBoxText, font == null ? null : font.getJCOInstance(), state == null ? null : state.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void DrawTextBox(Graphics g, Rectangle bounds, TextBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("DrawTextBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

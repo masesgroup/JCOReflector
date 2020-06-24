@@ -128,23 +128,21 @@ public class MimePart extends NetObject  {
     
     // Properties section
     
-    public ServiceDescriptionFormatExtensionCollection getExtensions() throws Throwable {
+    public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Extensions");
-            return new ServiceDescriptionFormatExtensionCollection(val);
+            return (boolean)classInstance.Get("Handled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject getParent() throws Throwable {
+    public void setHandled(boolean Handled) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new NetObject(val);
+            classInstance.Set("Handled", Handled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,21 +168,23 @@ public class MimePart extends NetObject  {
         }
     }
 
-    public boolean getHandled() throws Throwable {
+    public NetObject getParent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Handled");
+            JCObject val = (JCObject)classInstance.Get("Parent");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHandled(boolean Handled) throws Throwable {
+    public ServiceDescriptionFormatExtensionCollection getExtensions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Handled", Handled);
+            JCObject val = (JCObject)classInstance.Get("Extensions");
+            return new ServiceDescriptionFormatExtensionCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

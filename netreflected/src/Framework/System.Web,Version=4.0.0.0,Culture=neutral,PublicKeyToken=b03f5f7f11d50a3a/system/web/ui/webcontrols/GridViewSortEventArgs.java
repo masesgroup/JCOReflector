@@ -128,22 +128,21 @@ public class GridViewSortEventArgs extends NetObject  {
     
     // Properties section
     
-    public SortDirection getSortDirection() throws Throwable {
+    public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SortDirection");
-            return new SortDirection(val);
+            return (boolean)classInstance.Get("Cancel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSortDirection(SortDirection SortDirection) throws Throwable {
+    public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SortDirection", SortDirection == null ? null : SortDirection.getJCOInstance());
+            classInstance.Set("Cancel", Cancel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,21 +168,22 @@ public class GridViewSortEventArgs extends NetObject  {
         }
     }
 
-    public boolean getCancel() throws Throwable {
+    public SortDirection getSortDirection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Cancel");
+            JCObject val = (JCObject)classInstance.Get("SortDirection");
+            return new SortDirection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCancel(boolean Cancel) throws Throwable {
+    public void setSortDirection(SortDirection SortDirection) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Cancel", Cancel);
+            classInstance.Set("SortDirection", SortDirection == null ? null : SortDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

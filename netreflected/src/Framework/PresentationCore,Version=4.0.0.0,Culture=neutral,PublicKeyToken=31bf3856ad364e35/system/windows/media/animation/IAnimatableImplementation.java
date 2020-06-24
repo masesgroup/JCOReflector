@@ -107,6 +107,17 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
 
     // Methods section
     
+    public NetObject GetAnimationBaseValue(DependencyProperty dp) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetAnimationBaseValue = (JCObject)classInstance.Invoke("GetAnimationBaseValue", dp == null ? null : dp.getJCOInstance());
+            return new NetObject(objGetAnimationBaseValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ApplyAnimationClock(DependencyProperty dp, AnimationClock clock) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -142,17 +153,6 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginAnimation", dp == null ? null : dp.getJCOInstance(), animation == null ? null : animation.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetAnimationBaseValue(DependencyProperty dp) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetAnimationBaseValue = (JCObject)classInstance.Invoke("GetAnimationBaseValue", dp == null ? null : dp.getJCOInstance());
-            return new NetObject(objGetAnimationBaseValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

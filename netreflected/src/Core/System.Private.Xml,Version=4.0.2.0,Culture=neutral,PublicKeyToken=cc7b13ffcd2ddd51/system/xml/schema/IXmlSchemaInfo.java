@@ -37,11 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.xml.schema.XmlSchemaValidity;
+import system.xml.schema.XmlSchemaAttribute;
+import system.xml.schema.XmlSchemaElement;
 import system.xml.schema.XmlSchemaSimpleType;
 import system.xml.schema.XmlSchemaType;
-import system.xml.schema.XmlSchemaElement;
-import system.xml.schema.XmlSchemaAttribute;
+import system.xml.schema.XmlSchemaValidity;
 
 
 /**
@@ -98,19 +98,19 @@ public interface IXmlSchemaInfo extends IJCOBridgeReflected {
     
     // Properties section
     
-    public XmlSchemaValidity getValidity() throws Throwable;
-
     public boolean getIsDefault() throws Throwable;
 
     public boolean getIsNil() throws Throwable;
+
+    public XmlSchemaAttribute getSchemaAttribute() throws Throwable;
+
+    public XmlSchemaElement getSchemaElement() throws Throwable;
 
     public XmlSchemaSimpleType getMemberType() throws Throwable;
 
     public XmlSchemaType getSchemaType() throws Throwable;
 
-    public XmlSchemaElement getSchemaElement() throws Throwable;
-
-    public XmlSchemaAttribute getSchemaAttribute() throws Throwable;
+    public XmlSchemaValidity getValidity() throws Throwable;
 
 
 

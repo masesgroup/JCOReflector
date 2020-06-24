@@ -127,21 +127,21 @@ public class UnboundedChannelOptions extends NetObject  {
     
     // Properties section
     
-    public boolean getSingleWriter() throws Throwable {
+    public boolean getAllowSynchronousContinuations() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("SingleWriter");
+            return (boolean)classInstance.Get("AllowSynchronousContinuations");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSingleWriter(boolean SingleWriter) throws Throwable {
+    public void setAllowSynchronousContinuations(boolean AllowSynchronousContinuations) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SingleWriter", SingleWriter);
+            classInstance.Set("AllowSynchronousContinuations", AllowSynchronousContinuations);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,21 +167,21 @@ public class UnboundedChannelOptions extends NetObject  {
         }
     }
 
-    public boolean getAllowSynchronousContinuations() throws Throwable {
+    public boolean getSingleWriter() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("AllowSynchronousContinuations");
+            return (boolean)classInstance.Get("SingleWriter");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAllowSynchronousContinuations(boolean AllowSynchronousContinuations) throws Throwable {
+    public void setSingleWriter(boolean SingleWriter) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("AllowSynchronousContinuations", AllowSynchronousContinuations);
+            classInstance.Set("SingleWriter", SingleWriter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

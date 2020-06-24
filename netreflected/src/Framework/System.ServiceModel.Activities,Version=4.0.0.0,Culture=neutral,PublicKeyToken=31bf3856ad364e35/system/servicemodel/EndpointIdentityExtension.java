@@ -151,21 +151,22 @@ public class EndpointIdentityExtension extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getClaimType() throws Throwable {
+    public NetObject getClaimResource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ClaimType");
+            JCObject val = (JCObject)classInstance.Get("ClaimResource");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setClaimType(java.lang.String ClaimType) throws Throwable {
+    public void setClaimResource(NetObject ClaimResource) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ClaimType", ClaimType);
+            classInstance.Set("ClaimResource", ClaimResource == null ? null : ClaimResource.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,22 +192,21 @@ public class EndpointIdentityExtension extends NetObject  {
         }
     }
 
-    public NetObject getClaimResource() throws Throwable {
+    public java.lang.String getClaimType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ClaimResource");
-            return new NetObject(val);
+            return (java.lang.String)classInstance.Get("ClaimType");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setClaimResource(NetObject ClaimResource) throws Throwable {
+    public void setClaimType(java.lang.String ClaimType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ClaimResource", ClaimResource == null ? null : ClaimResource.getJCOInstance());
+            classInstance.Set("ClaimType", ClaimType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

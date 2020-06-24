@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.remoting.channels.IServerChannelSink;
-import system.runtime.remoting.channels.IServerChannelSinkImplementation;
+import system.io.Stream;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
 import system.runtime.remoting.channels.ITransportHeaders;
 import system.runtime.remoting.channels.ITransportHeadersImplementation;
-import system.io.Stream;
+import system.runtime.remoting.channels.IServerChannelSink;
+import system.runtime.remoting.channels.IServerChannelSinkImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 
@@ -132,11 +132,12 @@ public class ServerChannelSinkStack extends NetObject  {
     
     // Methods section
     
-    public void Push(IServerChannelSink sink, NetObject state) throws Throwable {
+    public Stream GetResponseStream(IMessage msg, ITransportHeaders headers) throws Throwable, system.runtime.remoting.RemotingException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Push", sink == null ? null : sink.getJCOInstance(), state == null ? null : state.getJCOInstance());
+            JCObject objGetResponseStream = (JCObject)classInstance.Invoke("GetResponseStream", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance());
+            return new Stream(objGetResponseStream);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,6 +149,36 @@ public class ServerChannelSinkStack extends NetObject  {
         try {
             JCObject objPop = (JCObject)classInstance.Invoke("Pop", sink == null ? null : sink.getJCOInstance());
             return new NetObject(objPop);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AsyncProcessResponse(IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable, system.runtime.remoting.RemotingException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AsyncProcessResponse", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Push(IServerChannelSink sink, NetObject state) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Push", sink == null ? null : sink.getJCOInstance(), state == null ? null : state.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ServerCallback(IAsyncResult ar) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidCastException, system.security.SecurityException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ServerCallback", ar == null ? null : ar.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,37 +199,6 @@ public class ServerChannelSinkStack extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StoreAndDispatch", sink == null ? null : sink.getJCOInstance(), state == null ? null : state.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AsyncProcessResponse(IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable, system.runtime.remoting.RemotingException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AsyncProcessResponse", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Stream GetResponseStream(IMessage msg, ITransportHeaders headers) throws Throwable, system.runtime.remoting.RemotingException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetResponseStream = (JCObject)classInstance.Invoke("GetResponseStream", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance());
-            return new Stream(objGetResponseStream);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ServerCallback(IAsyncResult ar) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidCastException, system.security.SecurityException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ServerCallback", ar == null ? null : ar.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

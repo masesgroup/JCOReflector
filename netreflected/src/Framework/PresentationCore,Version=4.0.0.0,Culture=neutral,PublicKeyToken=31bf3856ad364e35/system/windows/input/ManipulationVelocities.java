@@ -128,27 +128,6 @@ public class ManipulationVelocities extends NetObject  {
     
     // Properties section
     
-    public Vector getLinearVelocity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LinearVelocity");
-            return new Vector(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLinearVelocity(Vector LinearVelocity) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("LinearVelocity", LinearVelocity == null ? null : LinearVelocity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public double getAngularVelocity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -185,6 +164,27 @@ public class ManipulationVelocities extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpansionVelocity", ExpansionVelocity == null ? null : ExpansionVelocity.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Vector getLinearVelocity() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("LinearVelocity");
+            return new Vector(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setLinearVelocity(Vector LinearVelocity) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("LinearVelocity", LinearVelocity == null ? null : LinearVelocity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

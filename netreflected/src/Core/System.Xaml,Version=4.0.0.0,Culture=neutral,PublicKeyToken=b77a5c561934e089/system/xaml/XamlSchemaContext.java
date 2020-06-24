@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.xaml.XamlSchemaContextSettings;
-import system.xaml.XamlType;
 import system.xaml.XamlDirective;
+import system.xaml.XamlType;
 import system.xaml.schema.XamlTypeName;
 
 
@@ -137,12 +137,11 @@ public class XamlSchemaContext extends NetObject  {
     
     // Methods section
     
-    public XamlType GetXamlType(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public java.lang.String GetPreferredPrefix(java.lang.String xmlns) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetXamlType = (JCObject)classInstance.Invoke("GetXamlType", type == null ? null : type.getJCOInstance());
-            return new XamlType(objGetXamlType);
+            return (java.lang.String)classInstance.Invoke("GetPreferredPrefix", xmlns);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,6 +158,17 @@ public class XamlSchemaContext extends NetObject  {
         }
     }
 
+    public XamlType GetXamlType(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetXamlType = (JCObject)classInstance.Invoke("GetXamlType", type == null ? null : type.getJCOInstance());
+            return new XamlType(objGetXamlType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XamlType GetXamlType(XamlTypeName xamlTypeName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException, system.xaml.XamlSchemaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -170,35 +180,25 @@ public class XamlSchemaContext extends NetObject  {
         }
     }
 
-    public java.lang.String GetPreferredPrefix(java.lang.String xmlns) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetPreferredPrefix", xmlns);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getSupportMarkupExtensionsWithDuplicateArity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SupportMarkupExtensionsWithDuplicateArity");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getFullyQualifyAssemblyNamesInClrNamespaces() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("FullyQualifyAssemblyNamesInClrNamespaces");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getSupportMarkupExtensionsWithDuplicateArity() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("SupportMarkupExtensionsWithDuplicateArity");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

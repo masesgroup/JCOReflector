@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.cryptography.pkcs.SubjectIdentifier;
-import system.security.cryptography.pkcs.AlgorithmIdentifier;
-import system.security.cryptography.pkcs.SubjectIdentifierOrKey;
 import system.DateTime;
 import system.security.cryptography.CryptographicAttributeObject;
+import system.security.cryptography.pkcs.AlgorithmIdentifier;
 import system.security.cryptography.pkcs.RecipientInfoType;
+import system.security.cryptography.pkcs.SubjectIdentifier;
+import system.security.cryptography.pkcs.SubjectIdentifierOrKey;
 
 
 /**
@@ -122,38 +122,6 @@ public class KeyAgreeRecipientInfo extends NetObject  {
     
     // Properties section
     
-    public int getVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Version");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SubjectIdentifier getRecipientIdentifier() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RecipientIdentifier");
-            return new SubjectIdentifier(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AlgorithmIdentifier getKeyEncryptionAlgorithm() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("KeyEncryptionAlgorithm");
-            return new AlgorithmIdentifier(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] getEncryptedKey() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -173,12 +141,11 @@ public class KeyAgreeRecipientInfo extends NetObject  {
         }
     }
 
-    public SubjectIdentifierOrKey getOriginatorIdentifierOrKey() throws Throwable {
+    public int getVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OriginatorIdentifierOrKey");
-            return new SubjectIdentifierOrKey(val);
+            return (int)classInstance.Get("Version");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,12 +173,45 @@ public class KeyAgreeRecipientInfo extends NetObject  {
         }
     }
 
+    public AlgorithmIdentifier getKeyEncryptionAlgorithm() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("KeyEncryptionAlgorithm");
+            return new AlgorithmIdentifier(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public RecipientInfoType getType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Type");
             return new RecipientInfoType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SubjectIdentifier getRecipientIdentifier() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RecipientIdentifier");
+            return new SubjectIdentifier(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SubjectIdentifierOrKey getOriginatorIdentifierOrKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("OriginatorIdentifierOrKey");
+            return new SubjectIdentifierOrKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

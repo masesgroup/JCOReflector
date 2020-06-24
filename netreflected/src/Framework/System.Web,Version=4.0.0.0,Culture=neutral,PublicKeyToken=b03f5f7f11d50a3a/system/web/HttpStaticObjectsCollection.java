@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Array;
-import system.io.BinaryWriter;
 import system.web.HttpStaticObjectsCollection;
 import system.io.BinaryReader;
+import system.Array;
+import system.io.BinaryWriter;
 
 
 /**
@@ -138,6 +138,17 @@ public class HttpStaticObjectsCollection extends NetObject  {
         }
     }
 
+    public static HttpStaticObjectsCollection Deserialize(BinaryReader reader) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.TypeLoadException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDeserialize = (JCObject)classType.Invoke("Deserialize", reader == null ? null : reader.getJCOInstance());
+            return new HttpStaticObjectsCollection(objDeserialize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -158,21 +169,30 @@ public class HttpStaticObjectsCollection extends NetObject  {
         }
     }
 
-    public static HttpStaticObjectsCollection Deserialize(BinaryReader reader) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.TypeLoadException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+
+    
+    // Properties section
+    
+    public boolean getIsReadOnly() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDeserialize = (JCObject)classType.Invoke("Deserialize", reader == null ? null : reader.getJCOInstance());
-            return new HttpStaticObjectsCollection(objDeserialize);
+            return (boolean)classInstance.Get("IsReadOnly");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public boolean getIsSynchronized() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsSynchronized");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
-    
-    // Properties section
-    
     public boolean getNeverAccessed() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -199,26 +219,6 @@ public class HttpStaticObjectsCollection extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("SyncRoot");
             return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsReadOnly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsReadOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsSynchronized() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsSynchronized");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

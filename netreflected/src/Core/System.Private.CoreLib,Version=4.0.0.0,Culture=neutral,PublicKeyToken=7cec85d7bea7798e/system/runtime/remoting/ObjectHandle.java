@@ -123,17 +123,6 @@ public class ObjectHandle extends NetObject  {
     
     // Methods section
     
-    public NetObject Unwrap() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objUnwrap = (JCObject)classInstance.Invoke("Unwrap");
-            return new NetObject(objUnwrap);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -151,6 +140,17 @@ public class ObjectHandle extends NetObject  {
         try {
             JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
             return new NetObject(objInitializeLifetimeService);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject Unwrap() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objUnwrap = (JCObject)classInstance.Invoke("Unwrap");
+            return new NetObject(objUnwrap);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

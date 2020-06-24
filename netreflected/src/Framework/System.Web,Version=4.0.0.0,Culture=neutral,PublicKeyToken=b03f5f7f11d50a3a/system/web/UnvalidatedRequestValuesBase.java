@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.specialized.NameValueCollection;
+import system.Uri;
 import system.web.HttpCookieCollection;
 import system.web.HttpFileCollectionBase;
-import system.Uri;
 
 
 /**
@@ -131,17 +131,6 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
         }
     }
 
-    public NameValueCollection getQueryString() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("QueryString");
-            return new NameValueCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NameValueCollection getHeaders() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -153,33 +142,12 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
         }
     }
 
-    public HttpCookieCollection getCookies() throws Throwable, system.NotImplementedException {
+    public NameValueCollection getQueryString() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Cookies");
-            return new HttpCookieCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HttpFileCollectionBase getFiles() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Files");
-            return new HttpFileCollectionBase(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getRawUrl() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("RawUrl");
+            JCObject val = (JCObject)classInstance.Get("QueryString");
+            return new NameValueCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,12 +173,44 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
         }
     }
 
+    public java.lang.String getRawUrl() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("RawUrl");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Uri getUrl() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Url");
             return new Uri(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HttpCookieCollection getCookies() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Cookies");
+            return new HttpCookieCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HttpFileCollectionBase getFiles() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Files");
+            return new HttpFileCollectionBase(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

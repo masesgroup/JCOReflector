@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.XmlDictionaryWriter;
 import system.servicemodel.channels.MessageVersion;
 import system.servicemodel.channels.MessageHeader;
 import system.runtime.serialization.XmlObjectSerializer;
+import system.xml.XmlDictionaryWriter;
 import system.xml.XmlWriter;
 
 
@@ -117,21 +117,11 @@ public class MessageHeader extends NetObject  {
     
     // Methods section
     
-    public void WriteStartHeader(XmlDictionaryWriter writer, MessageVersion messageVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public boolean IsMessageVersionSupported(MessageVersion messageVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteStartHeader", writer == null ? null : writer.getJCOInstance(), messageVersion == null ? null : messageVersion.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteHeaderContents(XmlDictionaryWriter writer, MessageVersion messageVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteHeaderContents", writer == null ? null : writer.getJCOInstance(), messageVersion == null ? null : messageVersion.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsMessageVersionSupported", messageVersion == null ? null : messageVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,21 +204,12 @@ public class MessageHeader extends NetObject  {
         }
     }
 
-    public boolean IsMessageVersionSupported(MessageVersion messageVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer, boolean mustUnderstand, java.lang.String actor, boolean relay) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UriFormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Invoke("IsMessageVersionSupported", messageVersion == null ? null : messageVersion.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteHeader(XmlWriter writer, MessageVersion messageVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteHeader", writer == null ? null : writer.getJCOInstance(), messageVersion == null ? null : messageVersion.getJCOInstance());
+            JCObject objCreateHeader = (JCObject)classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance(), mustUnderstand, actor, relay);
+            return new MessageHeader(objCreateHeader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,12 +225,31 @@ public class MessageHeader extends NetObject  {
         }
     }
 
-    public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer, boolean mustUnderstand, java.lang.String actor, boolean relay) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UriFormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void WriteHeader(XmlWriter writer, MessageVersion messageVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateHeader = (JCObject)classType.Invoke("CreateHeader", name, ns, value == null ? null : value.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance(), mustUnderstand, actor, relay);
-            return new MessageHeader(objCreateHeader);
+            classInstance.Invoke("WriteHeader", writer == null ? null : writer.getJCOInstance(), messageVersion == null ? null : messageVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteHeaderContents(XmlDictionaryWriter writer, MessageVersion messageVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteHeaderContents", writer == null ? null : writer.getJCOInstance(), messageVersion == null ? null : messageVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteStartHeader(XmlDictionaryWriter writer, MessageVersion messageVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteStartHeader", writer == null ? null : writer.getJCOInstance(), messageVersion == null ? null : messageVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,16 +259,6 @@ public class MessageHeader extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getActor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Actor");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsReferenceParameter() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -294,6 +284,16 @@ public class MessageHeader extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("Relay");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getActor() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Actor");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

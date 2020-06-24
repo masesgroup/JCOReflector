@@ -94,17 +94,13 @@ public interface ISoapMessage extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String[] getParamNames() throws Throwable;
-
-    public void setParamNames(java.lang.String[] ParamNames) throws Throwable;
-
     public NetObject[] getParamValues() throws Throwable;
 
     public void setParamValues(NetObject[] ParamValues) throws Throwable;
 
-    public NetType[] getParamTypes() throws Throwable;
+    public Header[] getHeaders() throws Throwable;
 
-    public void setParamTypes(NetType[] ParamTypes) throws Throwable;
+    public void setHeaders(Header[] Headers) throws Throwable;
 
     public java.lang.String getMethodName() throws Throwable;
 
@@ -114,9 +110,13 @@ public interface ISoapMessage extends IJCOBridgeReflected {
 
     public void setXmlNameSpace(java.lang.String XmlNameSpace) throws Throwable;
 
-    public Header[] getHeaders() throws Throwable;
+    public java.lang.String[] getParamNames() throws Throwable;
 
-    public void setHeaders(Header[] Headers) throws Throwable;
+    public void setParamNames(java.lang.String[] ParamNames) throws Throwable;
+
+    public NetType[] getParamTypes() throws Throwable;
+
+    public void setParamTypes(NetType[] ParamTypes) throws Throwable;
 
 
 

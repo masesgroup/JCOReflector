@@ -125,23 +125,23 @@ public class ReflectionContext extends NetObject  {
         }
     }
 
-    public TypeInfo MapType(TypeInfo type) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objMapType = (JCObject)classInstance.Invoke("MapType", type == null ? null : type.getJCOInstance());
-            return new TypeInfo(objMapType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TypeInfo GetTypeForObject(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetTypeForObject = (JCObject)classInstance.Invoke("GetTypeForObject", value == null ? null : value.getJCOInstance());
             return new TypeInfo(objGetTypeForObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeInfo MapType(TypeInfo type) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objMapType = (JCObject)classInstance.Invoke("MapType", type == null ? null : type.getJCOInstance());
+            return new TypeInfo(objMapType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

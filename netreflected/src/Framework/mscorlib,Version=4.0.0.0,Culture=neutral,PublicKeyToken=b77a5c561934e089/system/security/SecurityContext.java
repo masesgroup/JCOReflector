@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.SecurityContext;
-import system.threading.ContextCallback;
 import system.threading.AsyncFlowControl;
+import system.threading.ContextCallback;
 
 
 /**
@@ -115,22 +115,21 @@ public class SecurityContext extends NetObject  {
     
     // Methods section
     
-    public static void Run(SecurityContext securityContext, ContextCallback callback, NetObject state) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.NullReferenceException {
+    public static boolean IsFlowSuppressed() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Run", securityContext == null ? null : securityContext.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return (boolean)classType.Invoke("IsFlowSuppressed");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SecurityContext CreateCopy() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean IsWindowsIdentityFlowSuppressed() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateCopy = (JCObject)classInstance.Invoke("CreateCopy");
-            return new SecurityContext(objCreateCopy);
+            return (boolean)classType.Invoke("IsWindowsIdentityFlowSuppressed");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,11 +146,12 @@ public class SecurityContext extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable {
+    public SecurityContext CreateCopy() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Dispose");
+            JCObject objCreateCopy = (JCObject)classInstance.Invoke("CreateCopy");
+            return new SecurityContext(objCreateCopy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,6 +179,16 @@ public class SecurityContext extends NetObject  {
         }
     }
 
+    public void Dispose() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void RestoreFlow() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -189,21 +199,11 @@ public class SecurityContext extends NetObject  {
         }
     }
 
-    public static boolean IsFlowSuppressed() throws Throwable {
+    public static void Run(SecurityContext securityContext, ContextCallback callback, NetObject state) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsFlowSuppressed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsWindowsIdentityFlowSuppressed() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsWindowsIdentityFlowSuppressed");
+            classType.Invoke("Run", securityContext == null ? null : securityContext.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

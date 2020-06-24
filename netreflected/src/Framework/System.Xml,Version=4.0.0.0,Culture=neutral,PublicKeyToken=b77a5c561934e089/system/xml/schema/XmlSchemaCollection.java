@@ -42,8 +42,8 @@ import system.xml.XmlNameTable;
 import system.xml.schema.XmlSchema;
 import system.xml.XmlReader;
 import system.xml.XmlResolver;
-import system.xml.schema.XmlSchemaCollection;
 import system.xml.schema.XmlSchemaCollectionEnumerator;
+import system.xml.schema.XmlSchemaCollection;
 import system.xml.schema.ValidationEventHandler;
 
 
@@ -140,6 +140,26 @@ public class XmlSchemaCollection extends NetObject implements Iterable<XmlSchema
     
     // Methods section
     
+    public boolean Contains(java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Contains", ns);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Contains(XmlSchema schema) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Contains", schema == null ? null : schema.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XmlSchema Add(java.lang.String ns, java.lang.String uri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.UriFormatException, system.io.PathTooLongException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.xml.XmlException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -195,6 +215,15 @@ public class XmlSchemaCollection extends NetObject implements Iterable<XmlSchema
         }
     }
 
+    public XmlSchemaCollectionEnumerator GetEnumerator() throws Throwable {
+        return new XmlSchemaCollectionEnumerator(classInstance);
+    }
+
+	@SuppressWarnings("unchecked")
+	public java.util.Iterator<XmlSchema> iterator() {
+		return new XmlSchemaCollectionEnumerator(classInstance);
+	}
+
     public void Add(XmlSchemaCollection schema) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -204,35 +233,6 @@ public class XmlSchemaCollection extends NetObject implements Iterable<XmlSchema
             throw translateException(jcne);
         }
     }
-
-    public boolean Contains(XmlSchema schema) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Contains", schema == null ? null : schema.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Contains(java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Contains", ns);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSchemaCollectionEnumerator GetEnumerator() throws Throwable {
-        return new XmlSchemaCollectionEnumerator(classInstance);
-    }
-
-	@SuppressWarnings("unchecked")
-	public java.util.Iterator<XmlSchema> iterator() {
-		return new XmlSchemaCollectionEnumerator(classInstance);
-	}
 
     public void CopyTo(XmlSchema[] array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)

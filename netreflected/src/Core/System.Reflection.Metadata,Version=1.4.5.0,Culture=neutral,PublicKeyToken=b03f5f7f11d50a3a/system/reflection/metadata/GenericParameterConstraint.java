@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.CustomAttributeHandleCollection;
-import system.reflection.metadata.GenericParameterHandle;
 import system.reflection.metadata.EntityHandle;
+import system.reflection.metadata.GenericParameterHandle;
 
 
 /**
@@ -130,23 +130,23 @@ public class GenericParameterConstraint extends NetObject  {
     
     // Properties section
     
-    public GenericParameterHandle getParameter() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parameter");
-            return new GenericParameterHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EntityHandle getType() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Type");
             return new EntityHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public GenericParameterHandle getParameter() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Parameter");
+            return new GenericParameterHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

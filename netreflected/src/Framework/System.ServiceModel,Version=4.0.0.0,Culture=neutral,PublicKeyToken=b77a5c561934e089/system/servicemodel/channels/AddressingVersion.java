@@ -117,11 +117,11 @@ public class AddressingVersion extends NetObject  {
     
     // Properties section
     
-    public static AddressingVersion getWSAddressingAugust2004() throws Throwable {
+    public static AddressingVersion getNone() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSAddressingAugust2004");
+            JCObject val = (JCObject)classType.Get("None");
             return new AddressingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -139,11 +139,11 @@ public class AddressingVersion extends NetObject  {
         }
     }
 
-    public static AddressingVersion getNone() throws Throwable {
+    public static AddressingVersion getWSAddressingAugust2004() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("None");
+            JCObject val = (JCObject)classType.Get("WSAddressingAugust2004");
             return new AddressingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

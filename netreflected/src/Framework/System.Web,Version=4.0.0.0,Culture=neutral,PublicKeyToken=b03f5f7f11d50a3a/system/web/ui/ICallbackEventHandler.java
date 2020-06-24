@@ -89,9 +89,9 @@ public interface ICallbackEventHandler extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void RaiseCallbackEvent(java.lang.String eventArgument) throws Throwable;
-
     public java.lang.String GetCallbackResult() throws Throwable;
+
+    public void RaiseCallbackEvent(java.lang.String eventArgument) throws Throwable;
 
 
     

@@ -135,11 +135,12 @@ public class ChannelProtectionRequirements extends NetObject  {
     
     // Methods section
     
-    public void Add(ChannelProtectionRequirements protectionRequirements, boolean channelScopeOnly) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public ChannelProtectionRequirements CreateInverse() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Add", protectionRequirements == null ? null : protectionRequirements.getJCOInstance(), channelScopeOnly);
+            JCObject objCreateInverse = (JCObject)classInstance.Invoke("CreateInverse");
+            return new ChannelProtectionRequirements(objCreateInverse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,22 +156,21 @@ public class ChannelProtectionRequirements extends NetObject  {
         }
     }
 
-    public void MakeReadOnly() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public void Add(ChannelProtectionRequirements protectionRequirements, boolean channelScopeOnly) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("MakeReadOnly");
+            classInstance.Invoke("Add", protectionRequirements == null ? null : protectionRequirements.getJCOInstance(), channelScopeOnly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ChannelProtectionRequirements CreateInverse() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public void MakeReadOnly() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateInverse = (JCObject)classInstance.Invoke("CreateInverse");
-            return new ChannelProtectionRequirements(objCreateInverse);
+            classInstance.Invoke("MakeReadOnly");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,17 +190,6 @@ public class ChannelProtectionRequirements extends NetObject  {
         }
     }
 
-    public ScopedMessagePartSpecification getIncomingSignatureParts() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("IncomingSignatureParts");
-            return new ScopedMessagePartSpecification(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ScopedMessagePartSpecification getIncomingEncryptionParts() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -212,11 +201,11 @@ public class ChannelProtectionRequirements extends NetObject  {
         }
     }
 
-    public ScopedMessagePartSpecification getOutgoingSignatureParts() throws Throwable {
+    public ScopedMessagePartSpecification getIncomingSignatureParts() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OutgoingSignatureParts");
+            JCObject val = (JCObject)classInstance.Get("IncomingSignatureParts");
             return new ScopedMessagePartSpecification(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,6 +217,17 @@ public class ChannelProtectionRequirements extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("OutgoingEncryptionParts");
+            return new ScopedMessagePartSpecification(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ScopedMessagePartSpecification getOutgoingSignatureParts() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("OutgoingSignatureParts");
             return new ScopedMessagePartSpecification(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

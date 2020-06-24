@@ -39,17 +39,17 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.NamedPermissionSet;
-import system.security.policy.PolicyStatement;
-import system.security.policy.Evidence;
-import system.security.SecurityElement;
-import system.security.policy.PolicyLevel;
+import system.security.PermissionSet;
 import system.security.policy.CodeGroup;
+import system.security.policy.Evidence;
+import system.security.policy.PolicyLevel;
+import system.security.policy.PolicyStatement;
+import system.security.SecurityElement;
 import system.security.policy.StrongName;
 import system.security.policy.StrongNameMembershipCondition;
-import system.security.PermissionSet;
-import system.security.PolicyLevelType;
 import system.collections.IList;
 import system.collections.IListImplementation;
+import system.security.PolicyLevelType;
 
 
 /**
@@ -124,105 +124,23 @@ public class PolicyLevel extends NetObject  {
     
     // Methods section
     
+    public NamedPermissionSet ChangeNamedPermissionSet(java.lang.String name, PermissionSet pSet) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.XmlSyntaxException, system.RankException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objChangeNamedPermissionSet = (JCObject)classInstance.Invoke("ChangeNamedPermissionSet", name, pSet == null ? null : pSet.getJCOInstance());
+            return new NamedPermissionSet(objChangeNamedPermissionSet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NamedPermissionSet GetNamedPermissionSet(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NullReferenceException, system.security.XmlSyntaxException, system.ObjectDisposedException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetNamedPermissionSet = (JCObject)classInstance.Invoke("GetNamedPermissionSet", name);
             return new NamedPermissionSet(objGetNamedPermissionSet);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PolicyStatement Resolve(Evidence evidence) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.security.XmlSyntaxException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.InvalidCastException, system.NotSupportedException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.runtime.serialization.SerializationException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolve = (JCObject)classInstance.Invoke("Resolve", evidence == null ? null : evidence.getJCOInstance());
-            return new PolicyStatement(objResolve);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void FromXml(SecurityElement e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.security.XmlSyntaxException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("FromXml", e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static PolicyLevel CreateAppDomainLevel() throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateAppDomainLevel = (JCObject)classType.Invoke("CreateAppDomainLevel");
-            return new PolicyLevel(objCreateAppDomainLevel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeGroup ResolveMatchingCodeGroups(Evidence evidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NullReferenceException, system.security.XmlSyntaxException, system.ObjectDisposedException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveMatchingCodeGroups = (JCObject)classInstance.Invoke("ResolveMatchingCodeGroups", evidence == null ? null : evidence.getJCOInstance());
-            return new CodeGroup(objResolveMatchingCodeGroups);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddFullTrustAssembly(StrongName sn) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.security.XmlSyntaxException, system.ObjectDisposedException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddFullTrustAssembly", sn == null ? null : sn.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddFullTrustAssembly(StrongNameMembershipCondition snMC) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.XmlSyntaxException, system.OutOfMemoryException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddFullTrustAssembly", snMC == null ? null : snMC.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveFullTrustAssembly(StrongName sn) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.security.XmlSyntaxException, system.ObjectDisposedException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveFullTrustAssembly", sn == null ? null : sn.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveFullTrustAssembly(StrongNameMembershipCondition snMC) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.XmlSyntaxException, system.OutOfMemoryException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveFullTrustAssembly", snMC == null ? null : snMC.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddNamedPermissionSet(NamedPermissionSet permSet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.XmlSyntaxException, system.OutOfMemoryException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddNamedPermissionSet", permSet == null ? null : permSet.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,32 +168,34 @@ public class PolicyLevel extends NetObject  {
         }
     }
 
-    public NamedPermissionSet ChangeNamedPermissionSet(java.lang.String name, PermissionSet pSet) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.XmlSyntaxException, system.RankException {
+    public CodeGroup ResolveMatchingCodeGroups(Evidence evidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NullReferenceException, system.security.XmlSyntaxException, system.ObjectDisposedException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objChangeNamedPermissionSet = (JCObject)classInstance.Invoke("ChangeNamedPermissionSet", name, pSet == null ? null : pSet.getJCOInstance());
-            return new NamedPermissionSet(objChangeNamedPermissionSet);
+            JCObject objResolveMatchingCodeGroups = (JCObject)classInstance.Invoke("ResolveMatchingCodeGroups", evidence == null ? null : evidence.getJCOInstance());
+            return new CodeGroup(objResolveMatchingCodeGroups);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Recover() throws Throwable, system.security.policy.PolicyException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static PolicyLevel CreateAppDomainLevel() throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("Recover");
+            JCObject objCreateAppDomainLevel = (JCObject)classType.Invoke("CreateAppDomainLevel");
+            return new PolicyLevel(objCreateAppDomainLevel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Reset() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException, system.security.SecurityException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException {
+    public PolicyStatement Resolve(Evidence evidence) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.security.XmlSyntaxException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.InvalidCastException, system.NotSupportedException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.runtime.serialization.SerializationException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Reset");
+            JCObject objResolve = (JCObject)classInstance.Invoke("Resolve", evidence == null ? null : evidence.getJCOInstance());
+            return new PolicyStatement(objResolve);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,36 +212,107 @@ public class PolicyLevel extends NetObject  {
         }
     }
 
+    public void AddFullTrustAssembly(StrongName sn) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.security.XmlSyntaxException, system.ObjectDisposedException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddFullTrustAssembly", sn == null ? null : sn.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddFullTrustAssembly(StrongNameMembershipCondition snMC) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.XmlSyntaxException, system.OutOfMemoryException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddFullTrustAssembly", snMC == null ? null : snMC.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddNamedPermissionSet(NamedPermissionSet permSet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.XmlSyntaxException, system.OutOfMemoryException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddNamedPermissionSet", permSet == null ? null : permSet.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void FromXml(SecurityElement e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.security.XmlSyntaxException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("FromXml", e == null ? null : e.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Recover() throws Throwable, system.security.policy.PolicyException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Recover");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveFullTrustAssembly(StrongName sn) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.security.XmlSyntaxException, system.ObjectDisposedException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveFullTrustAssembly", sn == null ? null : sn.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveFullTrustAssembly(StrongNameMembershipCondition snMC) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.XmlSyntaxException, system.OutOfMemoryException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveFullTrustAssembly", snMC == null ? null : snMC.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Reset() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException, system.security.SecurityException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Reset");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public java.lang.String getLabel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public IList getFullTrustAssemblies() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.XmlSyntaxException, system.OutOfMemoryException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Label");
+            JCObject val = (JCObject)classInstance.Get("FullTrustAssemblies");
+            return new IListImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PolicyLevelType getType() throws Throwable {
+    public IList getNamedPermissionSets() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.XmlSyntaxException, system.OutOfMemoryException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new PolicyLevelType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getStoreLocation() throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("StoreLocation");
+            JCObject val = (JCObject)classInstance.Get("NamedPermissionSets");
+            return new IListImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,23 +339,32 @@ public class PolicyLevel extends NetObject  {
         }
     }
 
-    public IList getNamedPermissionSets() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.XmlSyntaxException, system.OutOfMemoryException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public PolicyLevelType getType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NamedPermissionSets");
-            return new IListImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("Type");
+            return new PolicyLevelType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IList getFullTrustAssemblies() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.XmlSyntaxException, system.OutOfMemoryException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public java.lang.String getLabel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("FullTrustAssemblies");
-            return new IListImplementation(val);
+            return (java.lang.String)classInstance.Get("Label");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getStoreLocation() throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("StoreLocation");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

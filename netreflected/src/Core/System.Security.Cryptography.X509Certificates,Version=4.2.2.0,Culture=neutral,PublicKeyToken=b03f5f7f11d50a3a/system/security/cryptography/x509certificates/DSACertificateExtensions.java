@@ -114,23 +114,23 @@ public class DSACertificateExtensions extends NetObject  {
     
     // Methods section
     
-    public static DSA GetDSAPublicKey(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetDSAPublicKey = (JCObject)classType.Invoke("GetDSAPublicKey", certificate == null ? null : certificate.getJCOInstance());
-            return new DSA(objGetDSAPublicKey);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static DSA GetDSAPrivateKey(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetDSAPrivateKey = (JCObject)classType.Invoke("GetDSAPrivateKey", certificate == null ? null : certificate.getJCOInstance());
             return new DSA(objGetDSAPrivateKey);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DSA GetDSAPublicKey(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetDSAPublicKey = (JCObject)classType.Invoke("GetDSAPublicKey", certificate == null ? null : certificate.getJCOInstance());
+            return new DSA(objGetDSAPublicKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

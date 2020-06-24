@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.TimeSpan;
 import system.runtime.remoting.lifetime.ISponsor;
 import system.runtime.remoting.lifetime.ISponsorImplementation;
-import system.TimeSpan;
 import system.runtime.remoting.lifetime.LeaseState;
 
 
@@ -93,18 +93,26 @@ public interface ILease extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Register(ISponsor obj, TimeSpan renewalTime) throws Throwable;
+    public TimeSpan Renew(TimeSpan renewalTime) throws Throwable;
 
     public void Register(ISponsor obj) throws Throwable;
 
-    public void Unregister(ISponsor obj) throws Throwable;
+    public void Register(ISponsor obj, TimeSpan renewalTime) throws Throwable;
 
-    public TimeSpan Renew(TimeSpan renewalTime) throws Throwable;
+    public void Unregister(ISponsor obj) throws Throwable;
 
 
     
     // Properties section
     
+    public LeaseState getCurrentState() throws Throwable;
+
+    public TimeSpan getCurrentLeaseTime() throws Throwable;
+
+    public TimeSpan getInitialLeaseTime() throws Throwable;
+
+    public void setInitialLeaseTime(TimeSpan InitialLeaseTime) throws Throwable;
+
     public TimeSpan getRenewOnCallTime() throws Throwable;
 
     public void setRenewOnCallTime(TimeSpan RenewOnCallTime) throws Throwable;
@@ -112,14 +120,6 @@ public interface ILease extends IJCOBridgeReflected {
     public TimeSpan getSponsorshipTimeout() throws Throwable;
 
     public void setSponsorshipTimeout(TimeSpan SponsorshipTimeout) throws Throwable;
-
-    public TimeSpan getInitialLeaseTime() throws Throwable;
-
-    public void setInitialLeaseTime(TimeSpan InitialLeaseTime) throws Throwable;
-
-    public TimeSpan getCurrentLeaseTime() throws Throwable;
-
-    public LeaseState getCurrentState() throws Throwable;
 
 
 

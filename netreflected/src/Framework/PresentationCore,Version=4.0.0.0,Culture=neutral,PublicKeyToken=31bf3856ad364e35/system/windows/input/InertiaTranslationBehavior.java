@@ -128,27 +128,6 @@ public class InertiaTranslationBehavior extends NetObject  {
     
     // Properties section
     
-    public Vector getInitialVelocity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InitialVelocity");
-            return new Vector(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInitialVelocity(Vector InitialVelocity) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InitialVelocity", InitialVelocity == null ? null : InitialVelocity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public double getDesiredDeceleration() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -184,6 +163,27 @@ public class InertiaTranslationBehavior extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesiredDisplacement", DesiredDisplacement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Vector getInitialVelocity() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("InitialVelocity");
+            return new Vector(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInitialVelocity(Vector InitialVelocity) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InitialVelocity", InitialVelocity == null ? null : InitialVelocity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

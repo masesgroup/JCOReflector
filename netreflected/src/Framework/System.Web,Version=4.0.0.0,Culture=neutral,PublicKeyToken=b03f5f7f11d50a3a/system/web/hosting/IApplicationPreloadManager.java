@@ -91,9 +91,9 @@ public interface IApplicationPreloadManager extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void SetApplicationPreloadUtil(IApplicationPreloadUtil preloadUtil) throws Throwable;
-
     public void SetApplicationPreloadState(java.lang.String context, java.lang.String appId, boolean enabled) throws Throwable;
+
+    public void SetApplicationPreloadUtil(IApplicationPreloadUtil preloadUtil) throws Throwable;
 
 
     

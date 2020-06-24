@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.transactions.configuration.TransactionsSectionGroup;
 import system.configuration.Configuration;
-import system.transactions.configuration.DefaultSettingsSection;
-import system.transactions.configuration.MachineSettingsSection;
 import system.configuration.ConfigurationSectionCollection;
 import system.configuration.ConfigurationSectionGroupCollection;
+import system.transactions.configuration.DefaultSettingsSection;
+import system.transactions.configuration.MachineSettingsSection;
 
 
 /**
@@ -164,23 +164,11 @@ public class TransactionsSectionGroup extends NetObject  {
     
     // Properties section
     
-    public DefaultSettingsSection getDefaultSettings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
+    public boolean getIsDeclarationRequired() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultSettings");
-            return new DefaultSettingsSection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MachineSettingsSection getMachineSettings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MachineSettings");
-            return new MachineSettingsSection(val);
+            return (boolean)classInstance.Get("IsDeclarationRequired");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,21 +184,23 @@ public class TransactionsSectionGroup extends NetObject  {
         }
     }
 
-    public boolean getIsDeclarationRequired() throws Throwable {
+    public ConfigurationSectionCollection getSections() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsDeclarationRequired");
+            JCObject val = (JCObject)classInstance.Get("Sections");
+            return new ConfigurationSectionCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getSectionGroupName() throws Throwable {
+    public ConfigurationSectionGroupCollection getSectionGroups() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("SectionGroupName");
+            JCObject val = (JCObject)classInstance.Get("SectionGroups");
+            return new ConfigurationSectionGroupCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,6 +211,16 @@ public class TransactionsSectionGroup extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Name");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getSectionGroupName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("SectionGroupName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,23 +246,23 @@ public class TransactionsSectionGroup extends NetObject  {
         }
     }
 
-    public ConfigurationSectionCollection getSections() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public DefaultSettingsSection getDefaultSettings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Sections");
-            return new ConfigurationSectionCollection(val);
+            JCObject val = (JCObject)classInstance.Get("DefaultSettings");
+            return new DefaultSettingsSection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ConfigurationSectionGroupCollection getSectionGroups() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public MachineSettingsSection getMachineSettings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SectionGroups");
-            return new ConfigurationSectionGroupCollection(val);
+            JCObject val = (JCObject)classInstance.Get("MachineSettings");
+            return new MachineSettingsSection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

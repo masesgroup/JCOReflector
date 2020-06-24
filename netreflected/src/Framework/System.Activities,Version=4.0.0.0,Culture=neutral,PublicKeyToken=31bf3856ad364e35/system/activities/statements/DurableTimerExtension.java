@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.hosting.WorkflowInstanceProxy;
-import system.TimeSpan;
 import system.activities.Bookmark;
+import system.TimeSpan;
+import system.activities.hosting.WorkflowInstanceProxy;
 
 
 /**
@@ -126,11 +126,11 @@ public class DurableTimerExtension extends NetObject  {
     
     // Methods section
     
-    public void SetInstance(WorkflowInstanceProxy instance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public void CancelTimer(Bookmark bookmark) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetInstance", instance == null ? null : instance.getJCOInstance());
+            classInstance.Invoke("CancelTimer", bookmark == null ? null : bookmark.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,11 +156,11 @@ public class DurableTimerExtension extends NetObject  {
         }
     }
 
-    public void CancelTimer(Bookmark bookmark) throws Throwable {
+    public void SetInstance(WorkflowInstanceProxy instance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CancelTimer", bookmark == null ? null : bookmark.getJCOInstance());
+            classInstance.Invoke("SetInstance", instance == null ? null : instance.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

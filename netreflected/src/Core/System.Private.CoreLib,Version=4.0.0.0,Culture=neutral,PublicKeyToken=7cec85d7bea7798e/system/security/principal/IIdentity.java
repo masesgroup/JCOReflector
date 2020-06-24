@@ -93,11 +93,11 @@ public interface IIdentity extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable;
+    public boolean getIsAuthenticated() throws Throwable;
 
     public java.lang.String getAuthenticationType() throws Throwable;
 
-    public boolean getIsAuthenticated() throws Throwable;
+    public java.lang.String getName() throws Throwable;
 
 
 

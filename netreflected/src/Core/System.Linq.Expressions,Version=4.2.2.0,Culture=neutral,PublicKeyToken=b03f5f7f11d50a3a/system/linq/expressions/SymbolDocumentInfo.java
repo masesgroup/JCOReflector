@@ -117,11 +117,12 @@ public class SymbolDocumentInfo extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getFileName() throws Throwable {
+    public Guid getDocumentType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("FileName");
+            JCObject val = (JCObject)classInstance.Get("DocumentType");
+            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,12 +150,11 @@ public class SymbolDocumentInfo extends NetObject  {
         }
     }
 
-    public Guid getDocumentType() throws Throwable {
+    public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DocumentType");
-            return new Guid(val);
+            return (java.lang.String)classInstance.Get("FileName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

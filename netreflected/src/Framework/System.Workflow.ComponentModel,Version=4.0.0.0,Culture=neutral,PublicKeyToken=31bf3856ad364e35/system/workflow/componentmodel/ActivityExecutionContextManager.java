@@ -126,26 +126,6 @@ public class ActivityExecutionContextManager extends NetObject  {
         }
     }
 
-    public void CompleteExecutionContext(ActivityExecutionContext childContext) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CompleteExecutionContext", childContext == null ? null : childContext.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CompleteExecutionContext(ActivityExecutionContext childContext, boolean forcePersist) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CompleteExecutionContext", childContext == null ? null : childContext.getJCOInstance(), forcePersist);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ActivityExecutionContext GetExecutionContext(Activity activity) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -163,6 +143,26 @@ public class ActivityExecutionContextManager extends NetObject  {
         try {
             JCObject objGetPersistedExecutionContext = (JCObject)classInstance.Invoke("GetPersistedExecutionContext", contextGuid == null ? null : contextGuid.getJCOInstance());
             return new ActivityExecutionContext(objGetPersistedExecutionContext);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CompleteExecutionContext(ActivityExecutionContext childContext) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CompleteExecutionContext", childContext == null ? null : childContext.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CompleteExecutionContext(ActivityExecutionContext childContext, boolean forcePersist) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CompleteExecutionContext", childContext == null ? null : childContext.getJCOInstance(), forcePersist);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

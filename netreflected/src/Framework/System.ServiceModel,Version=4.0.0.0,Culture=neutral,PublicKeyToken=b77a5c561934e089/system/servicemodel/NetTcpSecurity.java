@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.MessageSecurityOverTcp;
 import system.servicemodel.SecurityMode;
 import system.servicemodel.TcpTransportSecurity;
-import system.servicemodel.MessageSecurityOverTcp;
 
 
 /**
@@ -130,6 +130,27 @@ public class NetTcpSecurity extends NetObject  {
     
     // Properties section
     
+    public MessageSecurityOverTcp getMessage() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Message");
+            return new MessageSecurityOverTcp(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMessage(MessageSecurityOverTcp Message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Message", Message == null ? null : Message.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityMode getMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -167,27 +188,6 @@ public class NetTcpSecurity extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transport", Transport == null ? null : Transport.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MessageSecurityOverTcp getMessage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Message");
-            return new MessageSecurityOverTcp(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMessage(MessageSecurityOverTcp Message) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Message", Message == null ? null : Message.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

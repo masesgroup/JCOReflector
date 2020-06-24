@@ -38,17 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.DataTable;
 import system.data.DataSet;
+import system.data.DataTable;
 import system.data.SchemaType;
 import system.data.IDataParameter;
 import system.data.IDataParameterImplementation;
 import system.data.IDbCommand;
 import system.data.IDbCommandImplementation;
-import system.data.MissingMappingAction;
-import system.data.MissingSchemaAction;
 import system.data.ITableMappingCollection;
 import system.data.ITableMappingCollectionImplementation;
+import system.data.MissingMappingAction;
+import system.data.MissingSchemaAction;
 
 
 /**
@@ -114,6 +114,26 @@ public class IDbDataAdapterImplementation extends NetObject implements IDbDataAd
 
     // Methods section
     
+    public int Fill(DataSet dataSet) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int Update(DataSet dataSet) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Update", dataSet == null ? null : dataSet.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DataTable[] FillSchema(DataSet dataSet, SchemaType schemaType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -126,16 +146,6 @@ public class IDbDataAdapterImplementation extends NetObject implements IDbDataAd
             DataTable[] resultingArray = new DataTable[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int Fill(DataSet dataSet) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,36 +168,26 @@ public class IDbDataAdapterImplementation extends NetObject implements IDbDataAd
         }
     }
 
-    public int Update(DataSet dataSet) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("Update", dataSet == null ? null : dataSet.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public IDbCommand getSelectCommand() throws Throwable {
+    public IDbCommand getDeleteCommand() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectCommand");
+            JCObject val = (JCObject)classInstance.Get("DeleteCommand");
             return new IDbCommandImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSelectCommand(IDbCommand SelectCommand) throws Throwable {
+    public void setDeleteCommand(IDbCommand DeleteCommand) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SelectCommand", SelectCommand == null ? null : SelectCommand.getJCOInstance());
+            classInstance.Set("DeleteCommand", DeleteCommand == null ? null : DeleteCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,6 +214,27 @@ public class IDbDataAdapterImplementation extends NetObject implements IDbDataAd
         }
     }
 
+    public IDbCommand getSelectCommand() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SelectCommand");
+            return new IDbCommandImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSelectCommand(IDbCommand SelectCommand) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SelectCommand", SelectCommand == null ? null : SelectCommand.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IDbCommand getUpdateCommand() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -235,22 +256,12 @@ public class IDbDataAdapterImplementation extends NetObject implements IDbDataAd
         }
     }
 
-    public IDbCommand getDeleteCommand() throws Throwable {
+    public ITableMappingCollection getTableMappings() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DeleteCommand");
-            return new IDbCommandImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDeleteCommand(IDbCommand DeleteCommand) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DeleteCommand", DeleteCommand == null ? null : DeleteCommand.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("TableMappings");
+            return new ITableMappingCollectionImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,17 +304,6 @@ public class IDbDataAdapterImplementation extends NetObject implements IDbDataAd
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MissingSchemaAction", MissingSchemaAction == null ? null : MissingSchemaAction.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITableMappingCollection getTableMappings() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TableMappings");
-            return new ITableMappingCollectionImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

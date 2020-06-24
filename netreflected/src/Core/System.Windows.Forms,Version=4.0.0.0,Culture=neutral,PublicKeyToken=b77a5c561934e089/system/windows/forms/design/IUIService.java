@@ -39,10 +39,10 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.IWin32Window;
 import system.windows.forms.IWin32WindowImplementation;
+import system.Guid;
 import system.windows.forms.DialogResult;
 import system.windows.forms.Form;
 import system.windows.forms.MessageBoxButtons;
-import system.Guid;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 
@@ -99,27 +99,27 @@ public interface IUIService extends IJCOBridgeReflected {
     
     public boolean CanShowComponentEditor(NetObject component) throws Throwable;
 
-    public IWin32Window GetDialogOwnerWindow() throws Throwable;
-
-    public void SetUIDirty() throws Throwable;
-
     public boolean ShowComponentEditor(NetObject component, IWin32Window parent) throws Throwable;
+
+    public boolean ShowToolWindow(Guid toolWindow) throws Throwable;
 
     public DialogResult ShowDialog(Form form) throws Throwable;
 
-    public void ShowError(java.lang.String message) throws Throwable;
+    public DialogResult ShowMessage(java.lang.String message, java.lang.String caption, MessageBoxButtons buttons) throws Throwable;
+
+    public IWin32Window GetDialogOwnerWindow() throws Throwable;
+
+    public void SetUIDirty() throws Throwable;
 
     public void ShowError(NetException ex) throws Throwable;
 
     public void ShowError(NetException ex, java.lang.String message) throws Throwable;
 
+    public void ShowError(java.lang.String message) throws Throwable;
+
     public void ShowMessage(java.lang.String message) throws Throwable;
 
     public void ShowMessage(java.lang.String message, java.lang.String caption) throws Throwable;
-
-    public DialogResult ShowMessage(java.lang.String message, java.lang.String caption, MessageBoxButtons buttons) throws Throwable;
-
-    public boolean ShowToolWindow(Guid toolWindow) throws Throwable;
 
 
     

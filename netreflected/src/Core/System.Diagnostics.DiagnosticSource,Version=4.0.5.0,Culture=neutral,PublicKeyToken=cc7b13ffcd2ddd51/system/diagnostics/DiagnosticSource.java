@@ -113,16 +113,6 @@ public class DiagnosticSource extends NetObject  {
     
     // Methods section
     
-    public void Write(java.lang.String name, NetObject value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Write", name, value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsEnabled(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,11 +144,11 @@ public class DiagnosticSource extends NetObject  {
         }
     }
 
-    public void StopActivity(Activity activity, NetObject args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public void OnActivityExport(Activity activity, NetObject payload) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("StopActivity", activity == null ? null : activity.getJCOInstance(), args == null ? null : args.getJCOInstance());
+            classInstance.Invoke("OnActivityExport", activity == null ? null : activity.getJCOInstance(), payload == null ? null : payload.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,11 +164,21 @@ public class DiagnosticSource extends NetObject  {
         }
     }
 
-    public void OnActivityExport(Activity activity, NetObject payload) throws Throwable {
+    public void StopActivity(Activity activity, NetObject args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("OnActivityExport", activity == null ? null : activity.getJCOInstance(), payload == null ? null : payload.getJCOInstance());
+            classInstance.Invoke("StopActivity", activity == null ? null : activity.getJCOInstance(), args == null ? null : args.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Write(java.lang.String name, NetObject value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

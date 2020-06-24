@@ -123,16 +123,6 @@ public class SoapMethodAttribute extends NetObject  {
     
     // Methods section
     
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -143,25 +133,35 @@ public class SoapMethodAttribute extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public java.lang.String getSoapAction() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public boolean Match(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("SoapAction");
+            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSoapAction(java.lang.String SoapAction) throws Throwable {
+
+    
+    // Properties section
+    
+    public boolean getEmbedded() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SoapAction", SoapAction);
+            return (boolean)classInstance.Get("Embedded");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEmbedded(boolean Embedded) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Embedded", Embedded);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,21 +187,12 @@ public class SoapMethodAttribute extends NetObject  {
         }
     }
 
-    public java.lang.String getXmlNamespace() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException {
+    public NetObject getTypeId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("XmlNamespace");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setXmlNamespace(java.lang.String XmlNamespace) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("XmlNamespace", XmlNamespace);
+            JCObject val = (JCObject)classInstance.Get("TypeId");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,32 +258,41 @@ public class SoapMethodAttribute extends NetObject  {
         }
     }
 
-    public boolean getEmbedded() throws Throwable {
+    public java.lang.String getSoapAction() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Embedded");
+            return (java.lang.String)classInstance.Get("SoapAction");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEmbedded(boolean Embedded) throws Throwable {
+    public void setSoapAction(java.lang.String SoapAction) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Embedded", Embedded);
+            classInstance.Set("SoapAction", SoapAction);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject getTypeId() throws Throwable {
+    public java.lang.String getXmlNamespace() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
+            return (java.lang.String)classInstance.Get("XmlNamespace");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setXmlNamespace(java.lang.String XmlNamespace) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("XmlNamespace", XmlNamespace);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.services.protocols.SoapHeaderDirection;
 import system.reflection.MemberInfo;
+import system.web.services.protocols.SoapHeaderDirection;
 
 
 /**
@@ -118,12 +118,11 @@ public class SoapHeaderMapping extends NetObject  {
     
     // Properties section
     
-    public NetType getHeaderType() throws Throwable {
+    public boolean getCustom() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderType");
-            return new NetType(val);
+            return (boolean)classInstance.Get("Custom");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -139,11 +138,23 @@ public class SoapHeaderMapping extends NetObject  {
         }
     }
 
-    public boolean getCustom() throws Throwable {
+    public MemberInfo getMemberInfo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Custom");
+            JCObject val = (JCObject)classInstance.Get("MemberInfo");
+            return new MemberInfo(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType getHeaderType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("HeaderType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,17 +166,6 @@ public class SoapHeaderMapping extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Direction");
             return new SoapHeaderDirection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MemberInfo getMemberInfo() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MemberInfo");
-            return new MemberInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -124,34 +124,32 @@ public class ObjectType extends NetObject  {
     
     // Methods section
     
-    public static NetObject PlusObj(NetObject obj) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
+    public static boolean LikeObj(NetObject vLeft, NetObject vRight, CompareMethod CompareOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPlusObj = (JCObject)classType.Invoke("PlusObj", obj == null ? null : obj.getJCOInstance());
-            return new NetObject(objPlusObj);
+            return (boolean)classType.Invoke("LikeObj", vLeft == null ? null : vLeft.getJCOInstance(), vRight == null ? null : vRight.getJCOInstance(), CompareOption == null ? null : CompareOption.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject NegObj(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
+    public static int ObjTst(NetObject o1, NetObject o2, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNegObj = (JCObject)classType.Invoke("NegObj", obj == null ? null : obj.getJCOInstance());
-            return new NetObject(objNegObj);
+            return (int)classType.Invoke("ObjTst", o1 == null ? null : o1.getJCOInstance(), o2 == null ? null : o2.getJCOInstance(), TextCompare);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject NotObj(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException {
+    public static NetObject AddObj(NetObject o1, NetObject o2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNotObj = (JCObject)classType.Invoke("NotObj", obj == null ? null : obj.getJCOInstance());
-            return new NetObject(objNotObj);
+            JCObject objAddObj = (JCObject)classType.Invoke("AddObj", o1 == null ? null : o1.getJCOInstance(), o2 == null ? null : o2.getJCOInstance());
+            return new NetObject(objAddObj);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,28 +188,6 @@ public class ObjectType extends NetObject  {
         }
     }
 
-    public static NetObject SubObj(NetObject o1, NetObject o2) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSubObj = (JCObject)classType.Invoke("SubObj", o1 == null ? null : o1.getJCOInstance(), o2 == null ? null : o2.getJCOInstance());
-            return new NetObject(objSubObj);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject MulObj(NetObject o1, NetObject o2) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMulObj = (JCObject)classType.Invoke("MulObj", o1 == null ? null : o1.getJCOInstance(), o2 == null ? null : o2.getJCOInstance());
-            return new NetObject(objMulObj);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static NetObject DivObj(NetObject o1, NetObject o2) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -223,12 +199,23 @@ public class ObjectType extends NetObject  {
         }
     }
 
-    public static NetObject PowObj(NetObject obj1, NetObject obj2) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
+    public static NetObject GetObjectValuePrimitive(NetObject o) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPowObj = (JCObject)classType.Invoke("PowObj", obj1 == null ? null : obj1.getJCOInstance(), obj2 == null ? null : obj2.getJCOInstance());
-            return new NetObject(objPowObj);
+            JCObject objGetObjectValuePrimitive = (JCObject)classType.Invoke("GetObjectValuePrimitive", o == null ? null : o.getJCOInstance());
+            return new NetObject(objGetObjectValuePrimitive);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject IDivObj(NetObject o1, NetObject o2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objIDivObj = (JCObject)classType.Invoke("IDivObj", o1 == null ? null : o1.getJCOInstance(), o2 == null ? null : o2.getJCOInstance());
+            return new NetObject(objIDivObj);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,12 +232,56 @@ public class ObjectType extends NetObject  {
         }
     }
 
-    public static NetObject IDivObj(NetObject o1, NetObject o2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException {
+    public static NetObject MulObj(NetObject o1, NetObject o2) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objIDivObj = (JCObject)classType.Invoke("IDivObj", o1 == null ? null : o1.getJCOInstance(), o2 == null ? null : o2.getJCOInstance());
-            return new NetObject(objIDivObj);
+            JCObject objMulObj = (JCObject)classType.Invoke("MulObj", o1 == null ? null : o1.getJCOInstance(), o2 == null ? null : o2.getJCOInstance());
+            return new NetObject(objMulObj);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject NegObj(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objNegObj = (JCObject)classType.Invoke("NegObj", obj == null ? null : obj.getJCOInstance());
+            return new NetObject(objNegObj);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject NotObj(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objNotObj = (JCObject)classType.Invoke("NotObj", obj == null ? null : obj.getJCOInstance());
+            return new NetObject(objNotObj);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject PlusObj(NetObject obj) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objPlusObj = (JCObject)classType.Invoke("PlusObj", obj == null ? null : obj.getJCOInstance());
+            return new NetObject(objPlusObj);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject PowObj(NetObject obj1, NetObject obj2) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objPowObj = (JCObject)classType.Invoke("PowObj", obj1 == null ? null : obj1.getJCOInstance(), obj2 == null ? null : obj2.getJCOInstance());
+            return new NetObject(objPowObj);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,27 +309,6 @@ public class ObjectType extends NetObject  {
         }
     }
 
-    public static NetObject XorObj(NetObject obj1, NetObject obj2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objXorObj = (JCObject)classType.Invoke("XorObj", obj1 == null ? null : obj1.getJCOInstance(), obj2 == null ? null : obj2.getJCOInstance());
-            return new NetObject(objXorObj);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean LikeObj(NetObject vLeft, NetObject vRight, CompareMethod CompareOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("LikeObj", vLeft == null ? null : vLeft.getJCOInstance(), vRight == null ? null : vRight.getJCOInstance(), CompareOption == null ? null : CompareOption.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static NetObject StrCatObj(NetObject vLeft, NetObject vRight) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -310,33 +320,23 @@ public class ObjectType extends NetObject  {
         }
     }
 
-    public static NetObject GetObjectValuePrimitive(NetObject o) throws Throwable {
+    public static NetObject SubObj(NetObject o1, NetObject o2) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetObjectValuePrimitive = (JCObject)classType.Invoke("GetObjectValuePrimitive", o == null ? null : o.getJCOInstance());
-            return new NetObject(objGetObjectValuePrimitive);
+            JCObject objSubObj = (JCObject)classType.Invoke("SubObj", o1 == null ? null : o1.getJCOInstance(), o2 == null ? null : o2.getJCOInstance());
+            return new NetObject(objSubObj);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int ObjTst(NetObject o1, NetObject o2, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.OverflowException {
+    public static NetObject XorObj(NetObject obj1, NetObject obj2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ObjTst", o1 == null ? null : o1.getJCOInstance(), o2 == null ? null : o2.getJCOInstance(), TextCompare);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject AddObj(NetObject o1, NetObject o2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException, system.NullReferenceException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAddObj = (JCObject)classType.Invoke("AddObj", o1 == null ? null : o1.getJCOInstance(), o2 == null ? null : o2.getJCOInstance());
-            return new NetObject(objAddObj);
+            JCObject objXorObj = (JCObject)classType.Invoke("XorObj", obj1 == null ? null : obj1.getJCOInstance(), obj2 == null ? null : obj2.getJCOInstance());
+            return new NetObject(objXorObj);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Guid;
 import system.Single;
-import system.Decimal;
-import system.DateTime;
 import system.data.IDataReader;
 import system.data.IDataReaderImplementation;
+import system.DateTime;
+import system.Decimal;
+import system.Guid;
 
 
 /**
@@ -109,73 +109,21 @@ public class IDataRecordImplementation extends NetObject implements IDataRecord 
 
     // Methods section
     
-    public java.lang.String GetName(int i) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetName", i);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetDataTypeName(int i) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetDataTypeName", i);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType GetFieldType(int i) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetFieldType = (JCObject)classInstance.Invoke("GetFieldType", i);
-            return new NetType(objGetFieldType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetValue(int i) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", i);
-            return new NetObject(objGetValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetValues(NetObject[] values) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetValues", (Object)toObjectFromArray(values));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetOrdinal(java.lang.String name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetOrdinal", name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean GetBoolean(int i) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("GetBoolean", i);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsDBNull(int i) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsDBNull", i);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,16 +139,6 @@ public class IDataRecordImplementation extends NetObject implements IDataRecord 
         }
     }
 
-    public long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Invoke("GetBytes", i, fieldOffset, buffer, bufferoffset, length);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public char GetChar(int i) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -211,22 +149,11 @@ public class IDataRecordImplementation extends NetObject implements IDataRecord 
         }
     }
 
-    public long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) throws Throwable {
+    public double GetDouble(int i) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Invoke("GetChars", i, fieldoffset, buffer, bufferoffset, length);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Guid GetGuid(int i) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetGuid = (JCObject)classInstance.Invoke("GetGuid", i);
-            return new Guid(objGetGuid);
+            return (double)classInstance.Invoke("GetDouble", i);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,6 +174,46 @@ public class IDataRecordImplementation extends NetObject implements IDataRecord 
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetInt32", i);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetOrdinal(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetOrdinal", name);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetValues(NetObject[] values) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetValues", (Object)toObjectFromArray(values));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("GetBytes", i, fieldOffset, buffer, bufferoffset, length);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("GetChars", i, fieldoffset, buffer, bufferoffset, length);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,32 +240,12 @@ public class IDataRecordImplementation extends NetObject implements IDataRecord 
         }
     }
 
-    public double GetDouble(int i) throws Throwable {
+    public IDataReader GetData(int i) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Invoke("GetDouble", i);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetString(int i) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetString", i);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Decimal GetDecimal(int i) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDecimal = (JCObject)classInstance.Invoke("GetDecimal", i);
-            return new Decimal(objGetDecimal);
+            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", i);
+            return new IDataReaderImplementation(objGetData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,22 +262,75 @@ public class IDataRecordImplementation extends NetObject implements IDataRecord 
         }
     }
 
-    public IDataReader GetData(int i) throws Throwable {
+    public Decimal GetDecimal(int i) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", i);
-            return new IDataReaderImplementation(objGetData);
+            JCObject objGetDecimal = (JCObject)classInstance.Invoke("GetDecimal", i);
+            return new Decimal(objGetDecimal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean IsDBNull(int i) throws Throwable {
+    public Guid GetGuid(int i) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDBNull", i);
+            JCObject objGetGuid = (JCObject)classInstance.Invoke("GetGuid", i);
+            return new Guid(objGetGuid);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetValue(int i) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", i);
+            return new NetObject(objGetValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetDataTypeName(int i) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetDataTypeName", i);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetName(int i) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetName", i);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetString(int i) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetString", i);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType GetFieldType(int i) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetFieldType = (JCObject)classInstance.Invoke("GetFieldType", i);
+            return new NetType(objGetFieldType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

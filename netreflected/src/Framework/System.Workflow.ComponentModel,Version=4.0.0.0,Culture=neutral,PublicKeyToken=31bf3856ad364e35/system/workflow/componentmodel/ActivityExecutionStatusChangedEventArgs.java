@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.workflow.componentmodel.ActivityExecutionStatus;
-import system.workflow.componentmodel.ActivityExecutionResult;
 import system.workflow.componentmodel.Activity;
+import system.workflow.componentmodel.ActivityExecutionResult;
+import system.workflow.componentmodel.ActivityExecutionStatus;
 
 
 /**
@@ -119,12 +119,12 @@ public class ActivityExecutionStatusChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public ActivityExecutionStatus getExecutionStatus() throws Throwable {
+    public Activity getActivity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ExecutionStatus");
-            return new ActivityExecutionStatus(val);
+            JCObject val = (JCObject)classInstance.Get("Activity");
+            return new Activity(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -141,12 +141,12 @@ public class ActivityExecutionStatusChangedEventArgs extends NetObject  {
         }
     }
 
-    public Activity getActivity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public ActivityExecutionStatus getExecutionStatus() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Activity");
-            return new Activity(val);
+            JCObject val = (JCObject)classInstance.Get("ExecutionStatus");
+            return new ActivityExecutionStatus(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

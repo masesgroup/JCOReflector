@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Single;
 import system.SByte;
+import system.Single;
 import system.UInt16;
 import system.UInt32;
 import system.UInt64;
@@ -114,11 +114,21 @@ public class DefaultValueAttribute extends NetObject  {
     // Constructors section
     
 
-    public DefaultValueAttribute(NetType type, java.lang.String value) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.FormatException, system.ArgumentOutOfRangeException, system.OverflowException {
+    public DefaultValueAttribute(boolean value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), value));
+            setJCOInstance((JCObject)classType.NewObject(value));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DefaultValueAttribute(byte value) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(value));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -134,7 +144,7 @@ public class DefaultValueAttribute extends NetObject  {
         }
     }
 
-    public DefaultValueAttribute(byte value) throws Throwable {
+    public DefaultValueAttribute(double value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -174,7 +184,7 @@ public class DefaultValueAttribute extends NetObject  {
         }
     }
 
-    public DefaultValueAttribute(Single value) throws Throwable {
+    public DefaultValueAttribute(SByte value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -184,31 +194,11 @@ public class DefaultValueAttribute extends NetObject  {
         }
     }
 
-    public DefaultValueAttribute(double value) throws Throwable {
+    public DefaultValueAttribute(Single value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(value));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DefaultValueAttribute(boolean value) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(value));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DefaultValueAttribute(java.lang.String value) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(value));
+            setJCOInstance((JCObject)classType.NewObject(value == null ? null : value.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,11 +214,21 @@ public class DefaultValueAttribute extends NetObject  {
         }
     }
 
-    public DefaultValueAttribute(SByte value) throws Throwable {
+    public DefaultValueAttribute(java.lang.String value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(value == null ? null : value.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(value));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DefaultValueAttribute(NetType type, java.lang.String value) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.FormatException, system.ArgumentOutOfRangeException, system.OverflowException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), value));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,16 +268,6 @@ public class DefaultValueAttribute extends NetObject  {
     
     // Methods section
     
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -288,26 +278,36 @@ public class DefaultValueAttribute extends NetObject  {
         }
     }
 
+    public boolean Match(NetObject obj) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public NetObject getValue() throws Throwable {
+    public NetObject getTypeId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            JCObject val = (JCObject)classInstance.Get("TypeId");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject getTypeId() throws Throwable {
+    public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
+            JCObject val = (JCObject)classInstance.Get("Value");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

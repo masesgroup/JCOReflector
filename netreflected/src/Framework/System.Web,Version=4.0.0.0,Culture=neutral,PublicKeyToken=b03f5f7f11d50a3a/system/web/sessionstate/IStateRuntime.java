@@ -89,8 +89,6 @@ public interface IStateRuntime extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void StopProcessing() throws Throwable;
-
 
     
     // Properties section

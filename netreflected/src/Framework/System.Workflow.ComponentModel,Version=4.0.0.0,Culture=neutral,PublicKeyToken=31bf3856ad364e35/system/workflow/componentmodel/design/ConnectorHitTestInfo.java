@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.workflow.componentmodel.design.CompositeActivityDesigner;
 import system.workflow.componentmodel.design.HitTestLocations;
-import system.drawing.Rectangle;
-import system.workflow.componentmodel.design.ActivityDesigner;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.drawing.Rectangle;
+import system.workflow.componentmodel.design.ActivityDesigner;
 
 
 /**
@@ -143,6 +143,17 @@ public class ConnectorHitTestInfo extends NetObject  {
     
     // Properties section
     
+    public IDictionary getUserData() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("UserData");
+            return new IDictionaryImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Rectangle getBounds() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -182,17 +193,6 @@ public class ConnectorHitTestInfo extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("HitLocation");
             return new HitTestLocations(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary getUserData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
-            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

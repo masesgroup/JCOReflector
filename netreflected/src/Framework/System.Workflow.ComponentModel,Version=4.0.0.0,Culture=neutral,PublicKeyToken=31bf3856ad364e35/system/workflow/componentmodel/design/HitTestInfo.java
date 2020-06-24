@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.workflow.componentmodel.design.ActivityDesigner;
 import system.workflow.componentmodel.design.HitTestLocations;
-import system.drawing.Rectangle;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.drawing.Rectangle;
 import system.workflow.componentmodel.design.HitTestInfo;
 
 
@@ -143,23 +143,12 @@ public class HitTestInfo extends NetObject  {
     
     // Properties section
     
-    public ActivityDesigner getAssociatedDesigner() throws Throwable {
+    public IDictionary getUserData() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedDesigner");
-            return new ActivityDesigner(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HitTestLocations getHitLocation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("HitLocation");
-            return new HitTestLocations(val);
+            JCObject val = (JCObject)classInstance.Get("UserData");
+            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,12 +176,12 @@ public class HitTestInfo extends NetObject  {
         }
     }
 
-    public IDictionary getUserData() throws Throwable {
+    public ActivityDesigner getAssociatedDesigner() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
-            return new IDictionaryImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("AssociatedDesigner");
+            return new ActivityDesigner(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,6 +193,17 @@ public class HitTestInfo extends NetObject  {
         try {
             JCObject val = (JCObject)classType.Get("Nowhere");
             return new HitTestInfo(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HitTestLocations getHitLocation() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("HitLocation");
+            return new HitTestLocations(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

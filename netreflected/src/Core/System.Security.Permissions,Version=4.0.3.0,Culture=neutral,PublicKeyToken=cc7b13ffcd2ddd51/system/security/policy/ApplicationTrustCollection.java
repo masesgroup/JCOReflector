@@ -127,6 +127,26 @@ public class ApplicationTrustCollection extends NetObject implements Iterable<Ap
         }
     }
 
+    public ApplicationTrustCollection Find(ApplicationIdentity applicationIdentity, ApplicationVersionMatch versionMatch) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objFind = (JCObject)classInstance.Invoke("Find", applicationIdentity == null ? null : applicationIdentity.getJCOInstance(), versionMatch == null ? null : versionMatch.getJCOInstance());
+            return new ApplicationTrustCollection(objFind);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ApplicationTrustEnumerator GetEnumerator() throws Throwable {
+        return new ApplicationTrustEnumerator(classInstance);
+    }
+
+	@SuppressWarnings("unchecked")
+	public java.util.Iterator<ApplicationTrust> iterator() {
+		return new ApplicationTrustEnumerator(classInstance);
+	}
+
     public void AddRange(ApplicationTrust[] trusts) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -167,41 +187,21 @@ public class ApplicationTrustCollection extends NetObject implements Iterable<Ap
         }
     }
 
-    public ApplicationTrustCollection Find(ApplicationIdentity applicationIdentity, ApplicationVersionMatch versionMatch) throws Throwable {
+    public void Remove(ApplicationIdentity applicationIdentity, ApplicationVersionMatch versionMatch) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", applicationIdentity == null ? null : applicationIdentity.getJCOInstance(), versionMatch == null ? null : versionMatch.getJCOInstance());
-            return new ApplicationTrustCollection(objFind);
+            classInstance.Invoke("Remove", applicationIdentity == null ? null : applicationIdentity.getJCOInstance(), versionMatch == null ? null : versionMatch.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
-
-    public ApplicationTrustEnumerator GetEnumerator() throws Throwable {
-        return new ApplicationTrustEnumerator(classInstance);
-    }
-
-	@SuppressWarnings("unchecked")
-	public java.util.Iterator<ApplicationTrust> iterator() {
-		return new ApplicationTrustEnumerator(classInstance);
-	}
 
     public void Remove(ApplicationTrust trust) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", trust == null ? null : trust.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(ApplicationIdentity applicationIdentity, ApplicationVersionMatch versionMatch) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", applicationIdentity == null ? null : applicationIdentity.getJCOInstance(), versionMatch == null ? null : versionMatch.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,21 +231,21 @@ public class ApplicationTrustCollection extends NetObject implements Iterable<Ap
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsSynchronized");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Count");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

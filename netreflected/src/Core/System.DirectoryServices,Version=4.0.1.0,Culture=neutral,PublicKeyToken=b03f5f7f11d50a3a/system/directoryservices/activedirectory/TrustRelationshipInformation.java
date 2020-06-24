@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.directoryservices.activedirectory.TrustType;
 import system.directoryservices.activedirectory.TrustDirection;
+import system.directoryservices.activedirectory.TrustType;
 
 
 /**
@@ -118,21 +118,12 @@ public class TrustRelationshipInformation extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getSourceName() throws Throwable {
+    public TrustDirection getTrustDirection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("SourceName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getTargetName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("TargetName");
+            JCObject val = (JCObject)classInstance.Get("TrustDirection");
+            return new TrustDirection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,12 +140,21 @@ public class TrustRelationshipInformation extends NetObject  {
         }
     }
 
-    public TrustDirection getTrustDirection() throws Throwable {
+    public java.lang.String getSourceName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TrustDirection");
-            return new TrustDirection(val);
+            return (java.lang.String)classInstance.Get("SourceName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getTargetName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("TargetName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

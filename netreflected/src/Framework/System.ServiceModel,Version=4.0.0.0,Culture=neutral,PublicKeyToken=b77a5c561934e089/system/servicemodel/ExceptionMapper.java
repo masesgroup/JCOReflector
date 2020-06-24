@@ -124,6 +124,16 @@ public class ExceptionMapper extends NetObject  {
     
     // Methods section
     
+    public boolean HandleSecurityTokenProcessingException(NetException ex) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("HandleSecurityTokenProcessingException", ex == null ? null : ex.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public FaultException FromException(NetException ex) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -141,16 +151,6 @@ public class ExceptionMapper extends NetObject  {
         try {
             JCObject objFromException = (JCObject)classInstance.Invoke("FromException", ex == null ? null : ex.getJCOInstance(), soapNamespace, trustNamespace);
             return new FaultException(objFromException);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean HandleSecurityTokenProcessingException(NetException ex) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("HandleSecurityTokenProcessingException", ex == null ? null : ex.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

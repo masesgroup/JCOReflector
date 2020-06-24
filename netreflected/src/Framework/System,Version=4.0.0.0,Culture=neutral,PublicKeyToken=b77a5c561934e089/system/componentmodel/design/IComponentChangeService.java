@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.componentmodel.MemberDescriptor;
-import system.componentmodel.design.ComponentEventHandler;
 import system.componentmodel.design.ComponentChangedEventHandler;
 import system.componentmodel.design.ComponentChangingEventHandler;
+import system.componentmodel.design.ComponentEventHandler;
 import system.componentmodel.design.ComponentRenameEventHandler;
 
 
@@ -106,14 +106,6 @@ public interface IComponentChangeService extends IJCOBridgeReflected {
 
     // Instance Events section
     
-    public void addComponentAdded(ComponentEventHandler handler) throws Throwable;
-
-    public void removeComponentAdded(ComponentEventHandler handler) throws Throwable;
-
-    public void addComponentAdding(ComponentEventHandler handler) throws Throwable;
-
-    public void removeComponentAdding(ComponentEventHandler handler) throws Throwable;
-
     public void addComponentChanged(ComponentChangedEventHandler handler) throws Throwable;
 
     public void removeComponentChanged(ComponentChangedEventHandler handler) throws Throwable;
@@ -121,6 +113,14 @@ public interface IComponentChangeService extends IJCOBridgeReflected {
     public void addComponentChanging(ComponentChangingEventHandler handler) throws Throwable;
 
     public void removeComponentChanging(ComponentChangingEventHandler handler) throws Throwable;
+
+    public void addComponentAdded(ComponentEventHandler handler) throws Throwable;
+
+    public void removeComponentAdded(ComponentEventHandler handler) throws Throwable;
+
+    public void addComponentAdding(ComponentEventHandler handler) throws Throwable;
+
+    public void removeComponentAdding(ComponentEventHandler handler) throws Throwable;
 
     public void addComponentRemoved(ComponentEventHandler handler) throws Throwable;
 

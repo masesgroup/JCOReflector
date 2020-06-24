@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.RuntimeArgument;
 import system.activities.validation.ValidationError;
 import system.activities.Argument;
-import system.activities.RuntimeArgument;
 import system.activities.LocationReferenceEnvironment;
 
 
@@ -116,11 +116,11 @@ public class CodeActivityMetadata extends NetObject  {
     
     // Methods section
     
-    public void AddValidationError(java.lang.String validationErrorMessage) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public void AddArgument(RuntimeArgument argument) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.RankException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddValidationError", validationErrorMessage);
+            classInstance.Invoke("AddArgument", argument == null ? null : argument.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -136,21 +136,21 @@ public class CodeActivityMetadata extends NetObject  {
         }
     }
 
-    public void Bind(Argument binding, RuntimeArgument argument) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public void AddValidationError(java.lang.String validationErrorMessage) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Bind", binding == null ? null : binding.getJCOInstance(), argument == null ? null : argument.getJCOInstance());
+            classInstance.Invoke("AddValidationError", validationErrorMessage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void AddArgument(RuntimeArgument argument) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.RankException, system.NullReferenceException {
+    public void Bind(Argument binding, RuntimeArgument argument) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddArgument", argument == null ? null : argument.getJCOInstance());
+            classInstance.Invoke("Bind", binding == null ? null : binding.getJCOInstance(), argument == null ? null : argument.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,22 +170,22 @@ public class CodeActivityMetadata extends NetObject  {
     
     // Properties section
     
+    public boolean getHasViolations() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("HasViolations");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public LocationReferenceEnvironment getEnvironment() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Environment");
             return new LocationReferenceEnvironment(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getHasViolations() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("HasViolations");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

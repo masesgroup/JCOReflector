@@ -139,42 +139,21 @@ public class RegexCompilationInfo extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getPattern() throws Throwable {
+    public boolean getIsPublic() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Pattern");
+            return (boolean)classInstance.Get("IsPublic");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setPattern(java.lang.String Pattern) throws Throwable, system.ArgumentNullException {
+    public void setIsPublic(boolean IsPublic) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Pattern", Pattern);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public RegexOptions getOptions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Options");
-            return new RegexOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOptions(RegexOptions Options) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Options", Options == null ? null : Options.getJCOInstance());
+            classInstance.Set("IsPublic", IsPublic);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,21 +199,42 @@ public class RegexCompilationInfo extends NetObject  {
         }
     }
 
-    public boolean getIsPublic() throws Throwable {
+    public java.lang.String getPattern() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsPublic");
+            return (java.lang.String)classInstance.Get("Pattern");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIsPublic(boolean IsPublic) throws Throwable {
+    public void setPattern(java.lang.String Pattern) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IsPublic", IsPublic);
+            classInstance.Set("Pattern", Pattern);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RegexOptions getOptions() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Options");
+            return new RegexOptions(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setOptions(RegexOptions Options) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Options", Options == null ? null : Options.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

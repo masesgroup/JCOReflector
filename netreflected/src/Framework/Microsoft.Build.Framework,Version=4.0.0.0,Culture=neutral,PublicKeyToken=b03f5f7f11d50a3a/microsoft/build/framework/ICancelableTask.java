@@ -93,9 +93,9 @@ public interface ICancelableTask extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Cancel() throws Throwable;
-
     public boolean Execute() throws Throwable;
+
+    public void Cancel() throws Throwable;
 
 
     

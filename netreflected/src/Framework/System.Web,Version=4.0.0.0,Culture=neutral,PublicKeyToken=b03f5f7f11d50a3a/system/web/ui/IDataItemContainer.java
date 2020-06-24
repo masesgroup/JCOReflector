@@ -93,11 +93,11 @@ public interface IDataItemContainer extends IJCOBridgeReflected {
     
     // Properties section
     
-    public NetObject getDataItem() throws Throwable;
-
     public int getDataItemIndex() throws Throwable;
 
     public int getDisplayIndex() throws Throwable;
+
+    public NetObject getDataItem() throws Throwable;
 
 
 

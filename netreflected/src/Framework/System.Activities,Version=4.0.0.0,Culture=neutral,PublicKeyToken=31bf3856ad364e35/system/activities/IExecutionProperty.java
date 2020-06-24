@@ -89,9 +89,9 @@ public interface IExecutionProperty extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void SetupWorkflowThread() throws Throwable;
-
     public void CleanupWorkflowThread() throws Throwable;
+
+    public void SetupWorkflowThread() throws Throwable;
 
 
     

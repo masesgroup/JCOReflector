@@ -123,21 +123,21 @@ public class ProjectData extends NetObject  {
         }
     }
 
-    public static void EndApp() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
+    public static void ClearProjectError() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("EndApp");
+            classType.Invoke("ClearProjectError");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void SetProjectError(NetException ex, int lErl) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
+    public static void EndApp() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetProjectError", ex == null ? null : ex.getJCOInstance(), lErl);
+            classType.Invoke("EndApp");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,11 +153,11 @@ public class ProjectData extends NetObject  {
         }
     }
 
-    public static void ClearProjectError() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
+    public static void SetProjectError(NetException ex, int lErl) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("ClearProjectError");
+            classType.Invoke("SetProjectError", ex == null ? null : ex.getJCOInstance(), lErl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

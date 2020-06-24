@@ -114,45 +114,12 @@ public class DeleteMemberBinder extends NetObject  {
     
     // Methods section
     
-    public DynamicMetaObject FallbackDeleteMember(DynamicMetaObject target) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objFallbackDeleteMember = (JCObject)classInstance.Invoke("FallbackDeleteMember", target == null ? null : target.getJCOInstance());
-            return new DynamicMetaObject(objFallbackDeleteMember);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DynamicMetaObject FallbackDeleteMember(DynamicMetaObject target, DynamicMetaObject errorSuggestion) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objFallbackDeleteMember = (JCObject)classInstance.Invoke("FallbackDeleteMember", target == null ? null : target.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
-            return new DynamicMetaObject(objFallbackDeleteMember);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DynamicMetaObject Bind(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objBind = (JCObject)classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
             return new DynamicMetaObject(objBind);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Expression GetUpdateExpression(NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetUpdateExpression = (JCObject)classInstance.Invoke("GetUpdateExpression", type == null ? null : type.getJCOInstance());
-            return new Expression(objGetUpdateExpression);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,25 +147,58 @@ public class DeleteMemberBinder extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public java.lang.String getName() throws Throwable {
+    public DynamicMetaObject FallbackDeleteMember(DynamicMetaObject target) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            JCObject objFallbackDeleteMember = (JCObject)classInstance.Invoke("FallbackDeleteMember", target == null ? null : target.getJCOInstance());
+            return new DynamicMetaObject(objFallbackDeleteMember);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public DynamicMetaObject FallbackDeleteMember(DynamicMetaObject target, DynamicMetaObject errorSuggestion) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objFallbackDeleteMember = (JCObject)classInstance.Invoke("FallbackDeleteMember", target == null ? null : target.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            return new DynamicMetaObject(objFallbackDeleteMember);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Expression GetUpdateExpression(NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetUpdateExpression = (JCObject)classInstance.Invoke("GetUpdateExpression", type == null ? null : type.getJCOInstance());
+            return new Expression(objGetUpdateExpression);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+
+    
+    // Properties section
+    
     public boolean getIgnoreCase() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IgnoreCase");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

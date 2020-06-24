@@ -38,19 +38,19 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.presentation.WorkflowViewElement;
-import system.windows.UIElement;
-import system.windows.DragDropEffects;
-import system.windows.Point;
 import system.windows.IDataObject;
 import system.windows.IDataObjectImplementation;
 import system.activities.presentation.EditingContext;
-import system.windows.DependencyObject;
-import system.windows.DragEventArgs;
-import system.activities.presentation.model.ModelItem;
 import system.activities.presentation.ICompositeView;
 import system.activities.presentation.ICompositeViewImplementation;
+import system.windows.DragEventArgs;
+import system.activities.presentation.model.ModelItem;
+import system.windows.DependencyObject;
+import system.windows.DragDropEffects;
+import system.activities.presentation.WorkflowViewElement;
+import system.windows.Point;
 import system.windows.DataObject;
+import system.windows.UIElement;
 
 
 /**
@@ -125,65 +125,11 @@ public class DragDropHelper extends NetObject  {
     
     // Methods section
     
-    public static void SetCompositeView(WorkflowViewElement workflowViewElement, UIElement dragSource) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SetCompositeView", workflowViewElement == null ? null : workflowViewElement.getJCOInstance(), dragSource == null ? null : dragSource.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UIElement GetCompositeView(WorkflowViewElement workflowViewElement) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetCompositeView = (JCObject)classType.Invoke("GetCompositeView", workflowViewElement == null ? null : workflowViewElement.getJCOInstance());
-            return new UIElement(objGetCompositeView);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DragDropEffects DoDragMove(WorkflowViewElement draggedViewElement, Point referencePoint) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.OutOfMemoryException, system.threading.ThreadStateException, system.SystemException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDoDragMove = (JCObject)classType.Invoke("DoDragMove", draggedViewElement == null ? null : draggedViewElement.getJCOInstance(), referencePoint == null ? null : referencePoint.getJCOInstance());
-            return new DragDropEffects(objDoDragMove);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean AllowDrop(IDataObject draggedDataObject, EditingContext context, NetType... allowedItemTypes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeLoadException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("AllowDrop", draggedDataObject == null ? null : draggedDataObject.getJCOInstance(), context == null ? null : context.getJCOInstance(), toObjectFromArray(allowedItemTypes));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject GetDroppedObject(DependencyObject dropTarget, DragEventArgs e, EditingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.OverflowException, system.io.IOException, system.NotImplementedException, system.RankException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetDroppedObject = (JCObject)classType.Invoke("GetDroppedObject", dropTarget == null ? null : dropTarget.getJCOInstance(), e == null ? null : e.getJCOInstance(), context == null ? null : context.getJCOInstance());
-            return new NetObject(objGetDroppedObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static ModelItem GetDraggedModelItem(DragEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetDraggedModelItem = (JCObject)classType.Invoke("GetDraggedModelItem", e == null ? null : e.getJCOInstance());
-            return new ModelItem(objGetDraggedModelItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,22 +146,34 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
-    public static Point GetDragDropAnchorPoint(DragEventArgs e) throws Throwable {
+    public static ModelItem GetDraggedModelItem(DragEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetDragDropAnchorPoint = (JCObject)classType.Invoke("GetDragDropAnchorPoint", e == null ? null : e.getJCOInstance());
-            return new Point(objGetDragDropAnchorPoint);
+            JCObject objGetDraggedModelItem = (JCObject)classType.Invoke("GetDraggedModelItem", e == null ? null : e.getJCOInstance());
+            return new ModelItem(objGetDraggedModelItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void SetDragDropCompletedEffects(DragEventArgs e, DragDropEffects completedEffects) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException {
+    public static NetObject GetDroppedObject(DependencyObject dropTarget, DragEventArgs e, EditingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.OverflowException, system.io.IOException, system.NotImplementedException, system.RankException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetDragDropCompletedEffects", e == null ? null : e.getJCOInstance(), completedEffects == null ? null : completedEffects.getJCOInstance());
+            JCObject objGetDroppedObject = (JCObject)classType.Invoke("GetDroppedObject", dropTarget == null ? null : dropTarget.getJCOInstance(), e == null ? null : e.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            return new NetObject(objGetDroppedObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DragDropEffects DoDragMove(WorkflowViewElement draggedViewElement, Point referencePoint) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.OutOfMemoryException, system.threading.ThreadStateException, system.SystemException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDoDragMove = (JCObject)classType.Invoke("DoDragMove", draggedViewElement == null ? null : draggedViewElement.getJCOInstance(), referencePoint == null ? null : referencePoint.getJCOInstance());
+            return new DragDropEffects(objDoDragMove);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,6 +185,48 @@ public class DragDropHelper extends NetObject  {
         try {
             JCObject objGetDragDropCompletedEffects = (JCObject)classType.Invoke("GetDragDropCompletedEffects", data == null ? null : data.getJCOInstance());
             return new DragDropEffects(objGetDragDropCompletedEffects);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Point GetDragDropAnchorPoint(DragEventArgs e) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetDragDropAnchorPoint = (JCObject)classType.Invoke("GetDragDropAnchorPoint", e == null ? null : e.getJCOInstance());
+            return new Point(objGetDragDropAnchorPoint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UIElement GetCompositeView(WorkflowViewElement workflowViewElement) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetCompositeView = (JCObject)classType.Invoke("GetCompositeView", workflowViewElement == null ? null : workflowViewElement.getJCOInstance());
+            return new UIElement(objGetCompositeView);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetCompositeView(WorkflowViewElement workflowViewElement, UIElement dragSource) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetCompositeView", workflowViewElement == null ? null : workflowViewElement.getJCOInstance(), dragSource == null ? null : dragSource.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetDragDropCompletedEffects(DragEventArgs e, DragDropEffects completedEffects) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetDragDropCompletedEffects", e == null ? null : e.getJCOInstance(), completedEffects == null ? null : completedEffects.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

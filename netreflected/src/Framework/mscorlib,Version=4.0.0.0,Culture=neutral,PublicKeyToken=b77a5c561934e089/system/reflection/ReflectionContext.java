@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.TypeInfo;
 import system.reflection.Assembly;
+import system.reflection.TypeInfo;
 
 
 /**
@@ -114,23 +114,23 @@ public class ReflectionContext extends NetObject  {
     
     // Methods section
     
-    public TypeInfo GetTypeForObject(NetObject value) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetTypeForObject = (JCObject)classInstance.Invoke("GetTypeForObject", value == null ? null : value.getJCOInstance());
-            return new TypeInfo(objGetTypeForObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Assembly MapAssembly(Assembly assembly) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objMapAssembly = (JCObject)classInstance.Invoke("MapAssembly", assembly == null ? null : assembly.getJCOInstance());
             return new Assembly(objMapAssembly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeInfo GetTypeForObject(NetObject value) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetTypeForObject = (JCObject)classInstance.Invoke("GetTypeForObject", value == null ? null : value.getJCOInstance());
+            return new TypeInfo(objGetTypeForObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

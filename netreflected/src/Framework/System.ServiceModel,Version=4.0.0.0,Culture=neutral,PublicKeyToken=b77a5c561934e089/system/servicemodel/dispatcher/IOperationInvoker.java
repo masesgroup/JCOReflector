@@ -92,9 +92,9 @@ public interface IOperationInvoker extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject[] AllocateInputs() throws Throwable;
-
     public IAsyncResult InvokeBegin(NetObject instance, NetObject[] inputs, AsyncCallback callback, NetObject state) throws Throwable;
+
+    public NetObject[] AllocateInputs() throws Throwable;
 
 
     

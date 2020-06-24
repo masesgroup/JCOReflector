@@ -37,16 +37,16 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.UInt32;
-import system.reflection.ParameterInfo;
-import system.reflection.MethodImplAttributes;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.globalization.CultureInfo;
-import system.reflection.MemberTypes;
-import system.RuntimeMethodHandle;
-import system.reflection.MethodAttributes;
+import system.reflection.MethodImplAttributes;
+import system.reflection.ParameterInfo;
+import system.UInt32;
 import system.reflection.CallingConventions;
+import system.reflection.MemberTypes;
+import system.reflection.MethodAttributes;
+import system.RuntimeMethodHandle;
 
 
 /**
@@ -99,63 +99,63 @@ public interface _MethodBase extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
-
-    public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
-
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable;
 
-    public ParameterInfo[] GetParameters() throws Throwable;
-
-    public MethodImplAttributes GetMethodImplementationFlags() throws Throwable;
+    public NetObject Invoke(NetObject obj, NetObject[] parameters) throws Throwable;
 
     public NetObject Invoke(NetObject obj, BindingFlags invokeAttr, Binder binder, NetObject[] parameters, CultureInfo culture) throws Throwable;
 
-    public NetObject Invoke(NetObject obj, NetObject[] parameters) throws Throwable;
+    public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
+
+    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
+
+    public MethodImplAttributes GetMethodImplementationFlags() throws Throwable;
+
+    public ParameterInfo[] GetParameters() throws Throwable;
 
 
     
     // Properties section
     
+    public boolean getIsAbstract() throws Throwable;
+
+    public boolean getIsAssembly() throws Throwable;
+
+    public boolean getIsConstructor() throws Throwable;
+
+    public boolean getIsFamily() throws Throwable;
+
+    public boolean getIsFamilyAndAssembly() throws Throwable;
+
+    public boolean getIsFamilyOrAssembly() throws Throwable;
+
+    public boolean getIsFinal() throws Throwable;
+
+    public boolean getIsHideBySig() throws Throwable;
+
+    public boolean getIsPrivate() throws Throwable;
+
+    public boolean getIsPublic() throws Throwable;
+
+    public boolean getIsSpecialName() throws Throwable;
+
+    public boolean getIsStatic() throws Throwable;
+
+    public boolean getIsVirtual() throws Throwable;
+
+    public CallingConventions getCallingConvention() throws Throwable;
+
     public MemberTypes getMemberType() throws Throwable;
+
+    public MethodAttributes getAttributes() throws Throwable;
+
+    public RuntimeMethodHandle getMethodHandle() throws Throwable;
 
     public java.lang.String getName() throws Throwable;
 
     public NetType getDeclaringType() throws Throwable;
 
     public NetType getReflectedType() throws Throwable;
-
-    public RuntimeMethodHandle getMethodHandle() throws Throwable;
-
-    public MethodAttributes getAttributes() throws Throwable;
-
-    public CallingConventions getCallingConvention() throws Throwable;
-
-    public boolean getIsPublic() throws Throwable;
-
-    public boolean getIsPrivate() throws Throwable;
-
-    public boolean getIsFamily() throws Throwable;
-
-    public boolean getIsAssembly() throws Throwable;
-
-    public boolean getIsFamilyAndAssembly() throws Throwable;
-
-    public boolean getIsFamilyOrAssembly() throws Throwable;
-
-    public boolean getIsStatic() throws Throwable;
-
-    public boolean getIsFinal() throws Throwable;
-
-    public boolean getIsVirtual() throws Throwable;
-
-    public boolean getIsHideBySig() throws Throwable;
-
-    public boolean getIsAbstract() throws Throwable;
-
-    public boolean getIsSpecialName() throws Throwable;
-
-    public boolean getIsConstructor() throws Throwable;
 
 
 

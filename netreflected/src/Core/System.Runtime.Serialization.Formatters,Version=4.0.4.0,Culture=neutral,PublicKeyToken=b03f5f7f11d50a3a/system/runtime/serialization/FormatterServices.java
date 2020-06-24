@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.reflection.MemberInfo;
 import system.runtime.serialization.StreamingContext;
-import system.runtime.serialization.formatters.TypeFilterLevel;
 import system.runtime.serialization.ISerializationSurrogate;
 import system.runtime.serialization.ISerializationSurrogateImplementation;
 import system.reflection.Assembly;
+import system.runtime.serialization.formatters.TypeFilterLevel;
 
 
 /**
@@ -118,6 +118,56 @@ public class FormatterServices extends NetObject  {
     
     // Methods section
     
+    public static NetObject GetSafeUninitializedObject(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetSafeUninitializedObject = (JCObject)classType.Invoke("GetSafeUninitializedObject", type == null ? null : type.getJCOInstance());
+            return new NetObject(objGetSafeUninitializedObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject GetUninitializedObject(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetUninitializedObject = (JCObject)classType.Invoke("GetUninitializedObject", type == null ? null : type.getJCOInstance());
+            return new NetObject(objGetUninitializedObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject PopulateObjectMembers(NetObject obj, MemberInfo[] members, NetObject[] data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objPopulateObjectMembers = (JCObject)classType.Invoke("PopulateObjectMembers", obj == null ? null : obj.getJCOInstance(), toObjectFromArray(members), toObjectFromArray(data));
+            return new NetObject(objPopulateObjectMembers);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject[] GetObjectData(NetObject obj, MemberInfo[] members) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetObjectData", obj == null ? null : obj.getJCOInstance(), toObjectFromArray(members));
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new NetObject(resultingObject));
+            }
+            NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static MemberInfo[] GetSerializableMembers(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -152,66 +202,6 @@ public class FormatterServices extends NetObject  {
         }
     }
 
-    public static void CheckTypeSecurity(NetType t, TypeFilterLevel securityLevel) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("CheckTypeSecurity", t == null ? null : t.getJCOInstance(), securityLevel == null ? null : securityLevel.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject GetUninitializedObject(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetUninitializedObject = (JCObject)classType.Invoke("GetUninitializedObject", type == null ? null : type.getJCOInstance());
-            return new NetObject(objGetUninitializedObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject GetSafeUninitializedObject(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetSafeUninitializedObject = (JCObject)classType.Invoke("GetSafeUninitializedObject", type == null ? null : type.getJCOInstance());
-            return new NetObject(objGetSafeUninitializedObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject PopulateObjectMembers(NetObject obj, MemberInfo[] members, NetObject[] data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objPopulateObjectMembers = (JCObject)classType.Invoke("PopulateObjectMembers", obj == null ? null : obj.getJCOInstance(), toObjectFromArray(members), toObjectFromArray(data));
-            return new NetObject(objPopulateObjectMembers);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject[] GetObjectData(NetObject obj, MemberInfo[] members) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetObjectData", obj == null ? null : obj.getJCOInstance(), toObjectFromArray(members));
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetObject(resultingObject));
-            }
-            NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static ISerializationSurrogate GetSurrogateForCyclicalReference(ISerializationSurrogate innerSurrogate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -229,6 +219,16 @@ public class FormatterServices extends NetObject  {
         try {
             JCObject objGetTypeFromAssembly = (JCObject)classType.Invoke("GetTypeFromAssembly", assem == null ? null : assem.getJCOInstance(), name);
             return new NetType(objGetTypeFromAssembly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void CheckTypeSecurity(NetType t, TypeFilterLevel securityLevel) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("CheckTypeSecurity", t == null ? null : t.getJCOInstance(), securityLevel == null ? null : securityLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

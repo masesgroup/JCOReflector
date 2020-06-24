@@ -131,23 +131,21 @@ public class PopupEventArgs extends NetObject  {
     
     // Properties section
     
-    public IWin32Window getAssociatedWindow() throws Throwable {
+    public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedWindow");
-            return new IWin32WindowImplementation(val);
+            return (boolean)classInstance.Get("Cancel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Control getAssociatedControl() throws Throwable {
+    public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedControl");
-            return new Control(val);
+            classInstance.Set("Cancel", Cancel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,21 +182,23 @@ public class PopupEventArgs extends NetObject  {
         }
     }
 
-    public boolean getCancel() throws Throwable {
+    public Control getAssociatedControl() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Cancel");
+            JCObject val = (JCObject)classInstance.Get("AssociatedControl");
+            return new Control(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCancel(boolean Cancel) throws Throwable {
+    public IWin32Window getAssociatedWindow() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Cancel", Cancel);
+            JCObject val = (JCObject)classInstance.Get("AssociatedWindow");
+            return new IWin32WindowImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

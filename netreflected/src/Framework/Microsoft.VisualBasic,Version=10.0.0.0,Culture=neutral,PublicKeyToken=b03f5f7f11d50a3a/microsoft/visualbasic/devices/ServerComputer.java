@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import microsoft.visualbasic.devices.Clock;
-import microsoft.visualbasic.myservices.FileSystemProxy;
 import microsoft.visualbasic.devices.ComputerInfo;
 import microsoft.visualbasic.devices.Network;
+import microsoft.visualbasic.myservices.FileSystemProxy;
 import microsoft.visualbasic.myservices.RegistryProxy;
 
 
@@ -143,17 +143,6 @@ public class ServerComputer extends NetObject  {
         }
     }
 
-    public FileSystemProxy getFileSystem() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("FileSystem");
-            return new FileSystemProxy(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ComputerInfo getInfo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,11 +165,12 @@ public class ServerComputer extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
+    public FileSystemProxy getFileSystem() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            JCObject val = (JCObject)classInstance.Get("FileSystem");
+            return new FileSystemProxy(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,6 +182,16 @@ public class ServerComputer extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Registry");
             return new RegistryProxy(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

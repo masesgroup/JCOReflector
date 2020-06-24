@@ -37,12 +37,12 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.runtime.interopservices.UCOMIStream;
-import system.runtime.interopservices.UCOMIStreamImplementation;
 import system.runtime.interopservices.UCOMIBindCtx;
 import system.runtime.interopservices.UCOMIBindCtxImplementation;
 import system.runtime.interopservices.UCOMIMoniker;
 import system.runtime.interopservices.UCOMIMonikerImplementation;
+import system.runtime.interopservices.UCOMIStream;
+import system.runtime.interopservices.UCOMIStreamImplementation;
 
 
 /**
@@ -97,13 +97,13 @@ public interface UCOMIMoniker extends IJCOBridgeReflected {
     
     public int IsDirty() throws Throwable;
 
-    public void Load(UCOMIStream pStm) throws Throwable;
-
-    public void Save(UCOMIStream pStm, boolean fClearDirty) throws Throwable;
-
     public void IsEqual(UCOMIMoniker pmkOtherMoniker) throws Throwable;
 
     public void IsRunning(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, UCOMIMoniker pmkNewlyRunning) throws Throwable;
+
+    public void Load(UCOMIStream pStm) throws Throwable;
+
+    public void Save(UCOMIStream pStm, boolean fClearDirty) throws Throwable;
 
 
     

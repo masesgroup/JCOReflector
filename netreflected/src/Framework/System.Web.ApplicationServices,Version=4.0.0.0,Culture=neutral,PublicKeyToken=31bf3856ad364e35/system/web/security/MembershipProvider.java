@@ -117,26 +117,6 @@ public class MembershipProvider extends NetObject  {
     
     // Methods section
     
-    public boolean ChangePasswordQuestionAndAnswer(java.lang.String username, java.lang.String password, java.lang.String newPasswordQuestion, java.lang.String newPasswordAnswer) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ChangePasswordQuestionAndAnswer", username, password, newPasswordQuestion, newPasswordAnswer);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetPassword(java.lang.String username, java.lang.String answer) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetPassword", username, answer);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean ChangePassword(java.lang.String username, java.lang.String oldPassword, java.lang.String newPassword) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -147,21 +127,31 @@ public class MembershipProvider extends NetObject  {
         }
     }
 
-    public java.lang.String ResetPassword(java.lang.String username, java.lang.String answer) throws Throwable {
+    public boolean ChangePasswordQuestionAndAnswer(java.lang.String username, java.lang.String password, java.lang.String newPasswordQuestion, java.lang.String newPasswordAnswer) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("ResetPassword", username, answer);
+            return (boolean)classInstance.Invoke("ChangePasswordQuestionAndAnswer", username, password, newPasswordQuestion, newPasswordAnswer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void UpdateUser(MembershipUser user) throws Throwable {
+    public boolean DeleteUser(java.lang.String username, boolean deleteAllRelatedData) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("UpdateUser", user == null ? null : user.getJCOInstance());
+            return (boolean)classInstance.Invoke("DeleteUser", username, deleteAllRelatedData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean UnlockUser(java.lang.String userName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("UnlockUser", userName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,11 +167,41 @@ public class MembershipProvider extends NetObject  {
         }
     }
 
-    public boolean UnlockUser(java.lang.String userName) throws Throwable {
+    public int GetNumberOfUsersOnline() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("UnlockUser", userName);
+            return (int)classInstance.Invoke("GetNumberOfUsersOnline");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetPassword(java.lang.String username, java.lang.String answer) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetPassword", username, answer);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetUserNameByEmail(java.lang.String email) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetUserNameByEmail", email);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ResetPassword(java.lang.String username, java.lang.String answer) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ResetPassword", username, answer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,36 +229,6 @@ public class MembershipProvider extends NetObject  {
         }
     }
 
-    public java.lang.String GetUserNameByEmail(java.lang.String email) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetUserNameByEmail", email);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean DeleteUser(java.lang.String username, boolean deleteAllRelatedData) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("DeleteUser", username, deleteAllRelatedData);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetNumberOfUsersOnline() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetNumberOfUsersOnline");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -249,20 +239,20 @@ public class MembershipProvider extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public boolean getEnablePasswordRetrieval() throws Throwable {
+    public void UpdateUser(MembershipUser user) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("EnablePasswordRetrieval");
+            classInstance.Invoke("UpdateUser", user == null ? null : user.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public boolean getEnablePasswordReset() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -273,11 +263,71 @@ public class MembershipProvider extends NetObject  {
         }
     }
 
+    public boolean getEnablePasswordRetrieval() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("EnablePasswordRetrieval");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getRequiresQuestionAndAnswer() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("RequiresQuestionAndAnswer");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getRequiresUniqueEmail() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("RequiresUniqueEmail");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getMaxInvalidPasswordAttempts() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("MaxInvalidPasswordAttempts");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getMinRequiredNonAlphanumericCharacters() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("MinRequiredNonAlphanumericCharacters");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getMinRequiredPasswordLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("MinRequiredPasswordLength");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getPasswordAttemptWindow() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("PasswordAttemptWindow");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,72 +353,11 @@ public class MembershipProvider extends NetObject  {
         }
     }
 
-    public int getMaxInvalidPasswordAttempts() throws Throwable {
+    public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("MaxInvalidPasswordAttempts");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getPasswordAttemptWindow() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("PasswordAttemptWindow");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getRequiresUniqueEmail() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("RequiresUniqueEmail");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MembershipPasswordFormat getPasswordFormat() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PasswordFormat");
-            return new MembershipPasswordFormat(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getMinRequiredPasswordLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MinRequiredPasswordLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getMinRequiredNonAlphanumericCharacters() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MinRequiredNonAlphanumericCharacters");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getPasswordStrengthRegularExpression() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("PasswordStrengthRegularExpression");
+            return (java.lang.String)classInstance.Get("Description");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,11 +373,22 @@ public class MembershipProvider extends NetObject  {
         }
     }
 
-    public java.lang.String getDescription() throws Throwable {
+    public java.lang.String getPasswordStrengthRegularExpression() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            return (java.lang.String)classInstance.Get("PasswordStrengthRegularExpression");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MembershipPasswordFormat getPasswordFormat() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PasswordFormat");
+            return new MembershipPasswordFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

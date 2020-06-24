@@ -94,9 +94,9 @@ public interface ITokenColorInfo extends IJCOBridgeReflected {
     
     // Properties section
     
-    public int getStartPosition() throws Throwable;
-
     public int getEndPosition() throws Throwable;
+
+    public int getStartPosition() throws Throwable;
 
     public TokenColor getColor() throws Throwable;
 

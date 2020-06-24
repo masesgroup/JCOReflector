@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.xaml.XamlReaderSettings;
-import system.Uri;
 import system.reflection.Assembly;
+import system.Uri;
 
 
 /**
@@ -112,21 +112,21 @@ public class XamlReaderSettings extends NetObject  {
     // Constructors section
     
 
-    public XamlReaderSettings(XamlReaderSettings settings) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(settings == null ? null : settings.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XamlReaderSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XamlReaderSettings(XamlReaderSettings settings) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(settings == null ? null : settings.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,6 +160,26 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
+    public boolean getIgnoreUidsOnPropertyElements() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IgnoreUidsOnPropertyElements");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIgnoreUidsOnPropertyElements(boolean IgnoreUidsOnPropertyElements) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IgnoreUidsOnPropertyElements", IgnoreUidsOnPropertyElements);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getProvideLineInfo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -180,22 +200,21 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
-    public Uri getBaseUri() throws Throwable {
+    public boolean getValuesMustBeString() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseUri");
-            return new Uri(val);
+            return (boolean)classInstance.Get("ValuesMustBeString");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setBaseUri(Uri BaseUri) throws Throwable {
+    public void setValuesMustBeString(boolean ValuesMustBeString) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
+            classInstance.Set("ValuesMustBeString", ValuesMustBeString);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,41 +241,22 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
-    public boolean getIgnoreUidsOnPropertyElements() throws Throwable {
+    public Uri getBaseUri() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IgnoreUidsOnPropertyElements");
+            JCObject val = (JCObject)classInstance.Get("BaseUri");
+            return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIgnoreUidsOnPropertyElements(boolean IgnoreUidsOnPropertyElements) throws Throwable {
+    public void setBaseUri(Uri BaseUri) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IgnoreUidsOnPropertyElements", IgnoreUidsOnPropertyElements);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getValuesMustBeString() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ValuesMustBeString");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setValuesMustBeString(boolean ValuesMustBeString) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ValuesMustBeString", ValuesMustBeString);
+            classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

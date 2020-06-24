@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.codedom.CodeExpression;
 import system.web.ui.BoundPropertyEntry;
 import system.web.compilation.ExpressionBuilderContext;
 import system.web.ui.Page;
-import system.codedom.CodeExpression;
 
 
 /**
@@ -127,6 +127,17 @@ public class RouteValueExpressionBuilder extends NetObject  {
     
     // Methods section
     
+    public CodeExpression GetCodeExpression(BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetCodeExpression = (JCObject)classInstance.Invoke("GetCodeExpression", entry == null ? null : entry.getJCOInstance(), parsedData == null ? null : parsedData.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            return new CodeExpression(objGetCodeExpression);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject EvaluateExpression(NetObject target, BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -144,17 +155,6 @@ public class RouteValueExpressionBuilder extends NetObject  {
         try {
             JCObject objGetRouteValue = (JCObject)classType.Invoke("GetRouteValue", page == null ? null : page.getJCOInstance(), key, controlType == null ? null : controlType.getJCOInstance(), propertyName);
             return new NetObject(objGetRouteValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeExpression GetCodeExpression(BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCodeExpression = (JCObject)classInstance.Invoke("GetCodeExpression", entry == null ? null : entry.getJCOInstance(), parsedData == null ? null : parsedData.getJCOInstance(), context == null ? null : context.getJCOInstance());
-            return new CodeExpression(objGetCodeExpression);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

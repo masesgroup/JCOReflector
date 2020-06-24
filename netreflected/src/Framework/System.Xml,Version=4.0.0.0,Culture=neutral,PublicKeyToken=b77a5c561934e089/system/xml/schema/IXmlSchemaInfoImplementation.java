@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.schema.XmlSchemaValidity;
+import system.xml.schema.XmlSchemaAttribute;
+import system.xml.schema.XmlSchemaElement;
 import system.xml.schema.XmlSchemaSimpleType;
 import system.xml.schema.XmlSchemaType;
-import system.xml.schema.XmlSchemaElement;
-import system.xml.schema.XmlSchemaAttribute;
+import system.xml.schema.XmlSchemaValidity;
 
 
 /**
@@ -112,17 +112,6 @@ public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchem
     
     // Properties section
     
-    public XmlSchemaValidity getValidity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Validity");
-            return new XmlSchemaValidity(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsDefault() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -138,6 +127,28 @@ public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchem
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsNil");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSchemaAttribute getSchemaAttribute() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SchemaAttribute");
+            return new XmlSchemaAttribute(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSchemaElement getSchemaElement() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SchemaElement");
+            return new XmlSchemaElement(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,23 +176,12 @@ public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchem
         }
     }
 
-    public XmlSchemaElement getSchemaElement() throws Throwable {
+    public XmlSchemaValidity getValidity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaElement");
-            return new XmlSchemaElement(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSchemaAttribute getSchemaAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SchemaAttribute");
-            return new XmlSchemaAttribute(val);
+            JCObject val = (JCObject)classInstance.Get("Validity");
+            return new XmlSchemaValidity(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

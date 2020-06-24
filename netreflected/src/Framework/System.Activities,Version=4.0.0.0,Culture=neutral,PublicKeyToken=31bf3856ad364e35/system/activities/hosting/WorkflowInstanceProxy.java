@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.BookmarkResumptionResult;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.activities.Bookmark;
 import system.AsyncCallback;
-import system.activities.BookmarkResumptionResult;
 import system.TimeSpan;
-import system.Guid;
 import system.activities.Activity;
+import system.Guid;
 
 
 /**
@@ -120,23 +120,23 @@ public class WorkflowInstanceProxy extends NetObject  {
     
     // Methods section
     
-    public IAsyncResult BeginResumeBookmark(Bookmark bookmark, NetObject value, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBeginResumeBookmark = (JCObject)classInstance.Invoke("BeginResumeBookmark", bookmark == null ? null : bookmark.getJCOInstance(), value == null ? null : value.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginResumeBookmark);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public BookmarkResumptionResult EndResumeBookmark(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objEndResumeBookmark = (JCObject)classInstance.Invoke("EndResumeBookmark", result == null ? null : result.getJCOInstance());
             return new BookmarkResumptionResult(objEndResumeBookmark);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginResumeBookmark(Bookmark bookmark, NetObject value, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginResumeBookmark = (JCObject)classInstance.Invoke("BeginResumeBookmark", bookmark == null ? null : bookmark.getJCOInstance(), value == null ? null : value.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginResumeBookmark);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,23 +157,23 @@ public class WorkflowInstanceProxy extends NetObject  {
     
     // Properties section
     
-    public Guid getId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Id");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Activity getWorkflowDefinition() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("WorkflowDefinition");
             return new Activity(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Guid getId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Id");
+            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.HashAlgorithm;
-import system.xml.XmlNodeList;
 import system.xml.XmlElement;
-import system.xml.XmlResolver;
+import system.xml.XmlNodeList;
 import system.collections.Hashtable;
+import system.xml.XmlResolver;
 
 
 /**
@@ -138,6 +138,25 @@ public class XmlDsigExcC14NWithCommentsTransform extends NetObject  {
     
     // Methods section
     
+    public byte[] GetDigestedOutput(HashAlgorithm hash) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDigestedOutput", hash == null ? null : hash.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexGetDigestedOutput = 0; indexGetDigestedOutput < resultingArrayList.size(); indexGetDigestedOutput++ ) {
+				resultingArray[indexGetDigestedOutput] = (byte)resultingArrayList.get(indexGetDigestedOutput);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetOutput() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -160,20 +179,12 @@ public class XmlDsigExcC14NWithCommentsTransform extends NetObject  {
         }
     }
 
-    public byte[] GetDigestedOutput(HashAlgorithm hash) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public XmlElement GetXml() throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.xml.XmlException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDigestedOutput", hash == null ? null : hash.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexGetDigestedOutput = 0; indexGetDigestedOutput < resultingArrayList.size(); indexGetDigestedOutput++ ) {
-				resultingArray[indexGetDigestedOutput] = (byte)resultingArrayList.get(indexGetDigestedOutput);
-            }
-            return resultingArray;
+            JCObject objGetXml = (JCObject)classInstance.Invoke("GetXml");
+            return new XmlElement(objGetXml);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,21 +210,41 @@ public class XmlDsigExcC14NWithCommentsTransform extends NetObject  {
         }
     }
 
-    public XmlElement GetXml() throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.xml.XmlException, system.InvalidOperationException, system.IndexOutOfRangeException {
+
+    
+    // Properties section
+    
+    public Hashtable getPropagatedNamespaces() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetXml = (JCObject)classInstance.Invoke("GetXml");
-            return new XmlElement(objGetXml);
+            JCObject val = (JCObject)classInstance.Get("PropagatedNamespaces");
+            return new Hashtable(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public java.lang.String getAlgorithm() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Algorithm");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
-    
-    // Properties section
-    
+    public void setAlgorithm(java.lang.String Algorithm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Algorithm", Algorithm);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getInclusiveNamespacesPrefixList() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -268,47 +299,6 @@ public class XmlDsigExcC14NWithCommentsTransform extends NetObject  {
         }
     }
 
-    public java.lang.String getAlgorithm() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Algorithm");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAlgorithm(java.lang.String Algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Algorithm", Algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlResolver getResolver() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Resolver");
-            return new XmlResolver(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setResolver(XmlResolver Resolver) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Resolver", Resolver == null ? null : Resolver.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlElement getContext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -330,12 +320,22 @@ public class XmlDsigExcC14NWithCommentsTransform extends NetObject  {
         }
     }
 
-    public Hashtable getPropagatedNamespaces() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.xml.XmlException {
+    public XmlResolver getResolver() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PropagatedNamespaces");
-            return new Hashtable(val);
+            JCObject val = (JCObject)classInstance.Get("Resolver");
+            return new XmlResolver(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setResolver(XmlResolver Resolver) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Resolver", Resolver == null ? null : Resolver.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

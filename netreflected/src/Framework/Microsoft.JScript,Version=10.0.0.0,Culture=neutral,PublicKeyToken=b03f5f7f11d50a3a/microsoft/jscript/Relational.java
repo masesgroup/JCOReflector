@@ -123,21 +123,21 @@ public class Relational extends NetObject  {
     
     // Methods section
     
-    public static double JScriptCompare(NetObject v1, NetObject v2) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.ArithmeticException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (double)classType.Invoke("JScriptCompare", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public double EvaluateRelational(NetObject v1, NetObject v2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, microsoft.jscript.EndOfFile, system.MissingMethodException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.ArithmeticException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (double)classInstance.Invoke("EvaluateRelational", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double JScriptCompare(NetObject v1, NetObject v2) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.ArithmeticException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("JScriptCompare", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

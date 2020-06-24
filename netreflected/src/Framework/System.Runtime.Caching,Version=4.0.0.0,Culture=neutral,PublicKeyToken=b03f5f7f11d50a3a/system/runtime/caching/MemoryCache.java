@@ -39,14 +39,14 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.specialized.NameValueCollection;
-import system.runtime.caching.CacheEntryChangeMonitor;
 import system.runtime.caching.CacheItem;
 import system.runtime.caching.CacheItemPolicy;
 import system.DateTimeOffset;
 import system.runtime.caching.CacheEntryRemovedReason;
+import system.runtime.caching.CacheEntryChangeMonitor;
 import system.runtime.caching.DefaultCacheCapabilities;
-import system.TimeSpan;
 import system.runtime.caching.MemoryCache;
+import system.TimeSpan;
 
 
 /**
@@ -142,11 +142,31 @@ public class MemoryCache extends NetObject  {
     
     // Methods section
     
-    public long Trim(int percent) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public boolean Add(CacheItem item, CacheItemPolicy policy) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Invoke("Trim", percent);
+            return (boolean)classInstance.Invoke("Add", item == null ? null : item.getJCOInstance(), policy == null ? null : policy.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Add(java.lang.String key, NetObject value, DateTimeOffset absoluteExpiration, java.lang.String regionName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Add", key, value == null ? null : value.getJCOInstance(), absoluteExpiration == null ? null : absoluteExpiration.getJCOInstance(), regionName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Add(java.lang.String key, NetObject value, CacheItemPolicy policy, java.lang.String regionName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Add", key, value == null ? null : value.getJCOInstance(), policy == null ? null : policy.getJCOInstance(), regionName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,11 +182,31 @@ public class MemoryCache extends NetObject  {
         }
     }
 
-    public boolean Add(CacheItem item, CacheItemPolicy policy) throws Throwable {
+    public long GetCount(java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Add", item == null ? null : item.getJCOInstance(), policy == null ? null : policy.getJCOInstance());
+            return (long)classInstance.Invoke("GetCount", regionName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long GetLastSize(java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("GetLastSize", regionName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long Trim(int percent) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("Trim", percent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,17 +218,6 @@ public class MemoryCache extends NetObject  {
         try {
             JCObject objAddOrGetExisting = (JCObject)classInstance.Invoke("AddOrGetExisting", key, value == null ? null : value.getJCOInstance(), absoluteExpiration == null ? null : absoluteExpiration.getJCOInstance(), regionName);
             return new NetObject(objAddOrGetExisting);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CacheItem AddOrGetExisting(CacheItem item, CacheItemPolicy policy) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddOrGetExisting = (JCObject)classInstance.Invoke("AddOrGetExisting", item == null ? null : item.getJCOInstance(), policy == null ? null : policy.getJCOInstance());
-            return new CacheItem(objAddOrGetExisting);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,42 +245,12 @@ public class MemoryCache extends NetObject  {
         }
     }
 
-    public CacheItem GetCacheItem(java.lang.String key, java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public NetObject Remove(java.lang.String key, CacheEntryRemovedReason reason, java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetCacheItem = (JCObject)classInstance.Invoke("GetCacheItem", key, regionName);
-            return new CacheItem(objGetCacheItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Set(java.lang.String key, NetObject value, DateTimeOffset absoluteExpiration, java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Set", key, value == null ? null : value.getJCOInstance(), absoluteExpiration == null ? null : absoluteExpiration.getJCOInstance(), regionName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Set(CacheItem item, CacheItemPolicy policy) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Set", item == null ? null : item.getJCOInstance(), policy == null ? null : policy.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Set(java.lang.String key, NetObject value, CacheItemPolicy policy, java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Set", key, value == null ? null : value.getJCOInstance(), policy == null ? null : policy.getJCOInstance(), regionName);
+            JCObject objRemove = (JCObject)classInstance.Invoke("Remove", key, reason == null ? null : reason.getJCOInstance(), regionName);
+            return new NetObject(objRemove);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,52 +267,63 @@ public class MemoryCache extends NetObject  {
         }
     }
 
-    public NetObject Remove(java.lang.String key, CacheEntryRemovedReason reason, java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
+    public CacheItem AddOrGetExisting(CacheItem item, CacheItemPolicy policy) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objRemove = (JCObject)classInstance.Invoke("Remove", key, reason == null ? null : reason.getJCOInstance(), regionName);
-            return new NetObject(objRemove);
+            JCObject objAddOrGetExisting = (JCObject)classInstance.Invoke("AddOrGetExisting", item == null ? null : item.getJCOInstance(), policy == null ? null : policy.getJCOInstance());
+            return new CacheItem(objAddOrGetExisting);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public long GetCount(java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public CacheItem GetCacheItem(java.lang.String key, java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Invoke("GetCount", regionName);
+            JCObject objGetCacheItem = (JCObject)classInstance.Invoke("GetCacheItem", key, regionName);
+            return new CacheItem(objGetCacheItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public long GetLastSize(java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public void Dispose() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.SystemException, system.ApplicationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Invoke("GetLastSize", regionName);
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean Add(java.lang.String key, NetObject value, DateTimeOffset absoluteExpiration, java.lang.String regionName) throws Throwable {
+    public void Set(CacheItem item, CacheItemPolicy policy) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Add", key, value == null ? null : value.getJCOInstance(), absoluteExpiration == null ? null : absoluteExpiration.getJCOInstance(), regionName);
+            classInstance.Invoke("Set", item == null ? null : item.getJCOInstance(), policy == null ? null : policy.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean Add(java.lang.String key, NetObject value, CacheItemPolicy policy, java.lang.String regionName) throws Throwable {
+    public void Set(java.lang.String key, NetObject value, DateTimeOffset absoluteExpiration, java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Add", key, value == null ? null : value.getJCOInstance(), policy == null ? null : policy.getJCOInstance(), regionName);
+            classInstance.Invoke("Set", key, value == null ? null : value.getJCOInstance(), absoluteExpiration == null ? null : absoluteExpiration.getJCOInstance(), regionName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Set(java.lang.String key, NetObject value, CacheItemPolicy policy, java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Set", key, value == null ? null : value.getJCOInstance(), policy == null ? null : policy.getJCOInstance(), regionName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,12 +343,33 @@ public class MemoryCache extends NetObject  {
         }
     }
 
+    public long getPhysicalMemoryLimit() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Get("PhysicalMemoryLimit");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DefaultCacheCapabilities getDefaultCacheCapabilities() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("DefaultCacheCapabilities");
             return new DefaultCacheCapabilities(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MemoryCache getDefault() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NullReferenceException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OverflowException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Default");
+            return new MemoryCache(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,33 +385,12 @@ public class MemoryCache extends NetObject  {
         }
     }
 
-    public long getPhysicalMemoryLimit() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("PhysicalMemoryLimit");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TimeSpan getPollingInterval() throws Throwable, system.ArgumentException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("PollingInterval");
             return new TimeSpan(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MemoryCache getDefault() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NullReferenceException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OverflowException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Default");
-            return new MemoryCache(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

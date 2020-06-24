@@ -120,36 +120,6 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
-    public UserTrackingLocation(NetType argumentType) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(argumentType == null ? null : argumentType.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UserTrackingLocation(NetType argumentType, NetType activityType) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(argumentType == null ? null : argumentType.getJCOInstance(), activityType == null ? null : activityType.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UserTrackingLocation(NetType argumentType, java.lang.String activityTypeName) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(argumentType == null ? null : argumentType.getJCOInstance(), activityTypeName));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public UserTrackingLocation(java.lang.String argumentTypeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +150,36 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    public UserTrackingLocation(NetType argumentType) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(argumentType == null ? null : argumentType.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UserTrackingLocation(NetType argumentType, java.lang.String activityTypeName) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(argumentType == null ? null : argumentType.getJCOInstance(), activityTypeName));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UserTrackingLocation(NetType argumentType, NetType activityType) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(argumentType == null ? null : argumentType.getJCOInstance(), activityType == null ? null : activityType.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -188,42 +188,61 @@ public class UserTrackingLocation extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getKeyName() throws Throwable {
+    public boolean getMatchDerivedActivityTypes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("KeyName");
+            return (boolean)classInstance.Get("MatchDerivedActivityTypes");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setKeyName(java.lang.String KeyName) throws Throwable {
+    public void setMatchDerivedActivityTypes(boolean MatchDerivedActivityTypes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("KeyName", KeyName);
+            classInstance.Set("MatchDerivedActivityTypes", MatchDerivedActivityTypes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType getArgumentType() throws Throwable {
+    public boolean getMatchDerivedArgumentTypes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ArgumentType");
-            return new NetType(val);
+            return (boolean)classInstance.Get("MatchDerivedArgumentTypes");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setArgumentType(NetType ArgumentType) throws Throwable {
+    public void setMatchDerivedArgumentTypes(boolean MatchDerivedArgumentTypes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ArgumentType", ArgumentType == null ? null : ArgumentType.getJCOInstance());
+            classInstance.Set("MatchDerivedArgumentTypes", MatchDerivedArgumentTypes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getActivityTypeName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ActivityTypeName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setActivityTypeName(java.lang.String ActivityTypeName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ActivityTypeName", ActivityTypeName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,21 +268,21 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
-    public boolean getMatchDerivedArgumentTypes() throws Throwable {
+    public java.lang.String getKeyName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("MatchDerivedArgumentTypes");
+            return (java.lang.String)classInstance.Get("KeyName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMatchDerivedArgumentTypes(boolean MatchDerivedArgumentTypes) throws Throwable {
+    public void setKeyName(java.lang.String KeyName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("MatchDerivedArgumentTypes", MatchDerivedArgumentTypes);
+            classInstance.Set("KeyName", KeyName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,41 +309,22 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
-    public java.lang.String getActivityTypeName() throws Throwable {
+    public NetType getArgumentType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ActivityTypeName");
+            JCObject val = (JCObject)classInstance.Get("ArgumentType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setActivityTypeName(java.lang.String ActivityTypeName) throws Throwable {
+    public void setArgumentType(NetType ArgumentType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ActivityTypeName", ActivityTypeName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getMatchDerivedActivityTypes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("MatchDerivedActivityTypes");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMatchDerivedActivityTypes(boolean MatchDerivedActivityTypes) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MatchDerivedActivityTypes", MatchDerivedActivityTypes);
+            classInstance.Set("ArgumentType", ArgumentType == null ? null : ArgumentType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

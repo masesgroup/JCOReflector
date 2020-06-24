@@ -139,11 +139,12 @@ public class PropertyValidationContext extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getPropertyName() throws Throwable {
+    public NetObject getProperty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("PropertyName");
+            JCObject val = (JCObject)classInstance.Get("Property");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,12 +161,11 @@ public class PropertyValidationContext extends NetObject  {
         }
     }
 
-    public NetObject getProperty() throws Throwable {
+    public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Property");
-            return new NetObject(val);
+            return (java.lang.String)classInstance.Get("PropertyName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -115,6 +115,16 @@ public class DesignerActionUIService extends NetObject  {
     
     // Methods section
     
+    public boolean ShouldAutoShow(IComponent component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ShouldAutoShow", component == null ? null : component.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -135,16 +145,6 @@ public class DesignerActionUIService extends NetObject  {
         }
     }
 
-    public void ShowUI(IComponent component) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ShowUI", component == null ? null : component.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Refresh(IComponent component) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -155,11 +155,11 @@ public class DesignerActionUIService extends NetObject  {
         }
     }
 
-    public boolean ShouldAutoShow(IComponent component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException {
+    public void ShowUI(IComponent component) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("ShouldAutoShow", component == null ? null : component.getJCOInstance());
+            classInstance.Invoke("ShowUI", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

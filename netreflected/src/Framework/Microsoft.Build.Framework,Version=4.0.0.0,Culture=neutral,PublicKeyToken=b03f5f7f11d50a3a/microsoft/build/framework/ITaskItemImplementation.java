@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import microsoft.build.framework.ITaskItem;
-import microsoft.build.framework.ITaskItemImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import microsoft.build.framework.ITaskItem;
+import microsoft.build.framework.ITaskItemImplementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 
@@ -109,31 +109,22 @@ public class ITaskItemImplementation extends NetObject implements ITaskItem {
 
     // Methods section
     
+    public IDictionary CloneCustomMetadata() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCloneCustomMetadata = (JCObject)classInstance.Invoke("CloneCustomMetadata");
+            return new IDictionaryImplementation(objCloneCustomMetadata);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String GetMetadata(java.lang.String metadataName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("GetMetadata", metadataName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetMetadata(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetMetadata", metadataName, metadataValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveMetadata(java.lang.String metadataName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveMetadata", metadataName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,12 +140,21 @@ public class ITaskItemImplementation extends NetObject implements ITaskItem {
         }
     }
 
-    public IDictionary CloneCustomMetadata() throws Throwable {
+    public void RemoveMetadata(java.lang.String metadataName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCloneCustomMetadata = (JCObject)classInstance.Invoke("CloneCustomMetadata");
-            return new IDictionaryImplementation(objCloneCustomMetadata);
+            classInstance.Invoke("RemoveMetadata", metadataName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetMetadata(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetMetadata", metadataName, metadataValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,21 +164,11 @@ public class ITaskItemImplementation extends NetObject implements ITaskItem {
     
     // Properties section
     
-    public java.lang.String getItemSpec() throws Throwable {
+    public int getMetadataCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ItemSpec");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setItemSpec(java.lang.String ItemSpec) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ItemSpec", ItemSpec);
+            return (int)classInstance.Get("MetadataCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,11 +185,21 @@ public class ITaskItemImplementation extends NetObject implements ITaskItem {
         }
     }
 
-    public int getMetadataCount() throws Throwable {
+    public java.lang.String getItemSpec() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("MetadataCount");
+            return (java.lang.String)classInstance.Get("ItemSpec");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setItemSpec(java.lang.String ItemSpec) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ItemSpec", ItemSpec);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

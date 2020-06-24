@@ -114,20 +114,23 @@ public class CompilerInfo extends NetObject  {
     
     // Methods section
     
-    public java.lang.String[] GetLanguages() throws Throwable, system.ArgumentNullException {
+    public CodeDomProvider CreateProvider() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetLanguages");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetLanguages = 0; indexGetLanguages < resultingArrayList.size(); indexGetLanguages++ ) {
-				resultingArray[indexGetLanguages] = (java.lang.String)resultingArrayList.get(indexGetLanguages);
-            }
-            return resultingArray;
+            JCObject objCreateProvider = (JCObject)classInstance.Invoke("CreateProvider");
+            return new CodeDomProvider(objCreateProvider);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CompilerParameters CreateDefaultCompilerParameters() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateDefaultCompilerParameters = (JCObject)classInstance.Invoke("CreateDefaultCompilerParameters");
+            return new CompilerParameters(objCreateDefaultCompilerParameters);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,23 +155,20 @@ public class CompilerInfo extends NetObject  {
         }
     }
 
-    public CompilerParameters CreateDefaultCompilerParameters() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public java.lang.String[] GetLanguages() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateDefaultCompilerParameters = (JCObject)classInstance.Invoke("CreateDefaultCompilerParameters");
-            return new CompilerParameters(objCreateDefaultCompilerParameters);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeDomProvider CreateProvider() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateProvider = (JCObject)classInstance.Invoke("CreateProvider");
-            return new CodeDomProvider(objCreateProvider);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetLanguages");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetLanguages = 0; indexGetLanguages < resultingArrayList.size(); indexGetLanguages++ ) {
+				resultingArray[indexGetLanguages] = (java.lang.String)resultingArrayList.get(indexGetLanguages);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,22 +178,22 @@ public class CompilerInfo extends NetObject  {
     
     // Properties section
     
+    public boolean getIsCodeDomProviderTypeValid() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsCodeDomProviderTypeValid");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetType getCodeDomProviderType() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("CodeDomProviderType");
             return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsCodeDomProviderTypeValid() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsCodeDomProviderTypeValid");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

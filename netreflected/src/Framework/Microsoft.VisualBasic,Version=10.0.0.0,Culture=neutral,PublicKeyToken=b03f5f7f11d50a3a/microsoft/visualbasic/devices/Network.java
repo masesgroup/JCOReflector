@@ -138,6 +138,16 @@ public class Network extends NetObject  {
         }
     }
 
+    public boolean Ping(java.lang.String hostNameOrAddress, int timeout) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.net.networkinformation.NetworkInformationException, system.net.sockets.SocketException, system.NotImplementedException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.IndexOutOfRangeException, system.AccessViolationException, system.net.networkinformation.PingException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Ping", hostNameOrAddress, timeout);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean Ping(Uri address) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.net.networkinformation.NetworkInformationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.net.sockets.SocketException, system.AccessViolationException, system.net.networkinformation.PingException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -168,31 +178,11 @@ public class Network extends NetObject  {
         }
     }
 
-    public void DownloadFile(Uri address, java.lang.String destinationFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.IOException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.NotImplementedException, system.net.WebException, system.componentmodel.Win32Exception {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void DownloadFile(java.lang.String address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException, system.io.IOException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.net.WebException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFile", address, destinationFileName, userName, password);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DownloadFile(Uri address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.IOException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.NotImplementedException, system.net.WebException, system.componentmodel.Win32Exception {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName, userName, password);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,6 +208,46 @@ public class Network extends NetObject  {
         }
     }
 
+    public void DownloadFile(Uri address, java.lang.String destinationFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.IOException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.NotImplementedException, system.net.WebException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DownloadFile(Uri address, java.lang.String destinationFileName, ICredentials networkCredentials, boolean showUI, int connectionTimeout, boolean overwrite) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.PathTooLongException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.net.WebException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName, networkCredentials == null ? null : networkCredentials.getJCOInstance(), showUI, connectionTimeout, overwrite);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DownloadFile(Uri address, java.lang.String destinationFileName, ICredentials networkCredentials, boolean showUI, int connectionTimeout, boolean overwrite, UICancelOption onUserCancel) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.componentmodel.Win32Exception, system.security.SecurityException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.EndOfStreamException, system.FormatException, system.BadImageFormatException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName, networkCredentials == null ? null : networkCredentials.getJCOInstance(), showUI, connectionTimeout, overwrite, onUserCancel == null ? null : onUserCancel.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DownloadFile(Uri address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.IOException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.NotImplementedException, system.net.WebException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName, userName, password);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void DownloadFile(Uri address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, boolean overwrite) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -238,31 +268,11 @@ public class Network extends NetObject  {
         }
     }
 
-    public void DownloadFile(Uri address, java.lang.String destinationFileName, ICredentials networkCredentials, boolean showUI, int connectionTimeout, boolean overwrite) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.PathTooLongException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.net.WebException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName, networkCredentials == null ? null : networkCredentials.getJCOInstance(), showUI, connectionTimeout, overwrite);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void UploadFile(java.lang.String sourceFileName, java.lang.String address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.net.WebException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFile", sourceFileName, address);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void UploadFile(java.lang.String sourceFileName, Uri address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.NotImplementedException, system.net.WebException, system.componentmodel.Win32Exception {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,21 +288,61 @@ public class Network extends NetObject  {
         }
     }
 
-    public void UploadFile(java.lang.String sourceFileName, Uri address, java.lang.String userName, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.NotImplementedException, system.net.WebException, system.componentmodel.Win32Exception {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance(), userName, password);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void UploadFile(java.lang.String sourceFileName, java.lang.String address, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.InvalidEnumArgumentException, system.net.WebException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFile", sourceFileName, address, userName, password, showUI, connectionTimeout);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UploadFile(java.lang.String sourceFileName, java.lang.String address, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.security.cryptography.CryptographicException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UploadFile", sourceFileName, address, userName, password, showUI, connectionTimeout, onUserCancel == null ? null : onUserCancel.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UploadFile(java.lang.String sourceFileName, Uri address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.NotImplementedException, system.net.WebException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UploadFile(java.lang.String sourceFileName, Uri address, ICredentials networkCredentials, boolean showUI, int connectionTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.io.IOException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.net.WebException, system.OverflowException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance(), networkCredentials == null ? null : networkCredentials.getJCOInstance(), showUI, connectionTimeout);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UploadFile(java.lang.String sourceFileName, Uri address, ICredentials networkCredentials, boolean showUI, int connectionTimeout, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.componentmodel.Win32Exception, system.security.SecurityException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.EndOfStreamException, system.FormatException, system.BadImageFormatException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance(), networkCredentials == null ? null : networkCredentials.getJCOInstance(), showUI, connectionTimeout, onUserCancel == null ? null : onUserCancel.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UploadFile(java.lang.String sourceFileName, Uri address, java.lang.String userName, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.NotImplementedException, system.net.WebException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance(), userName, password);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,56 +363,6 @@ public class Network extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance(), userName, password, showUI, connectionTimeout, onUserCancel == null ? null : onUserCancel.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void UploadFile(java.lang.String sourceFileName, Uri address, ICredentials networkCredentials, boolean showUI, int connectionTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.io.IOException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.net.WebException, system.OverflowException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance(), networkCredentials == null ? null : networkCredentials.getJCOInstance(), showUI, connectionTimeout);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Ping(java.lang.String hostNameOrAddress, int timeout) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.net.networkinformation.NetworkInformationException, system.net.sockets.SocketException, system.NotImplementedException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.IndexOutOfRangeException, system.AccessViolationException, system.net.networkinformation.PingException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.componentmodel.Win32Exception {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Ping", hostNameOrAddress, timeout);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DownloadFile(Uri address, java.lang.String destinationFileName, ICredentials networkCredentials, boolean showUI, int connectionTimeout, boolean overwrite, UICancelOption onUserCancel) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.componentmodel.Win32Exception, system.security.SecurityException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.EndOfStreamException, system.FormatException, system.BadImageFormatException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName, networkCredentials == null ? null : networkCredentials.getJCOInstance(), showUI, connectionTimeout, overwrite, onUserCancel == null ? null : onUserCancel.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void UploadFile(java.lang.String sourceFileName, java.lang.String address, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.security.cryptography.CryptographicException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UploadFile", sourceFileName, address, userName, password, showUI, connectionTimeout, onUserCancel == null ? null : onUserCancel.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void UploadFile(java.lang.String sourceFileName, Uri address, ICredentials networkCredentials, boolean showUI, int connectionTimeout, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.componentmodel.Win32Exception, system.security.SecurityException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.EndOfStreamException, system.FormatException, system.BadImageFormatException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance(), networkCredentials == null ? null : networkCredentials.getJCOInstance(), showUI, connectionTimeout, onUserCancel == null ? null : onUserCancel.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

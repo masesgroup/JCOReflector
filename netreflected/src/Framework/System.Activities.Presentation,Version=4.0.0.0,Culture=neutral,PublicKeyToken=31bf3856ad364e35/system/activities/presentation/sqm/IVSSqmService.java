@@ -90,11 +90,11 @@ public interface IVSSqmService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void SetDatapoint(int dataPointId, UInt32 value) throws Throwable;
+    public void AddArrayToStream(int dataPointId, UInt32[] data, int count) throws Throwable;
 
     public void AddItemToStream(int dataPointId, UInt32 value) throws Throwable;
 
-    public void AddArrayToStream(int dataPointId, UInt32[] data, int count) throws Throwable;
+    public void SetDatapoint(int dataPointId, UInt32 value) throws Throwable;
 
 
     

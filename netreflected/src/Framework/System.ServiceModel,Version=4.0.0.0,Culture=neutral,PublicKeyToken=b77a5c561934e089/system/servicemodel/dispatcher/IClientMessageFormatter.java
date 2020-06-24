@@ -91,9 +91,9 @@ public interface IClientMessageFormatter extends IJCOBridgeReflected {
 
     // Methods section
     
-    public Message SerializeRequest(MessageVersion messageVersion, NetObject[] parameters) throws Throwable;
-
     public NetObject DeserializeReply(Message message, NetObject[] parameters) throws Throwable;
+
+    public Message SerializeRequest(MessageVersion messageVersion, NetObject[] parameters) throws Throwable;
 
 
     

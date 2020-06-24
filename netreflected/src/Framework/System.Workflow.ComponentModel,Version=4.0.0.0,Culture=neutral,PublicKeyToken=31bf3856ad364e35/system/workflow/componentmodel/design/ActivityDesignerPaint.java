@@ -38,19 +38,19 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.drawing.Graphics;
-import system.drawing.Font;
+import system.drawing.drawing2d.GraphicsPath;
 import system.drawing.Rectangle;
-import system.drawing.StringAlignment;
-import system.workflow.componentmodel.design.TextQuality;
-import system.drawing.Brush;
+import system.drawing.Graphics;
 import system.drawing.Image;
-import system.workflow.componentmodel.design.DesignerContentAlignment;
 import system.Single;
 import system.windows.forms.ButtonState;
 import system.workflow.componentmodel.design.CompositeDesignerTheme;
+import system.workflow.componentmodel.design.DesignerContentAlignment;
 import system.drawing.Pen;
-import system.drawing.drawing2d.GraphicsPath;
+import system.drawing.Font;
+import system.drawing.StringAlignment;
+import system.workflow.componentmodel.design.TextQuality;
+import system.drawing.Brush;
 
 
 /**
@@ -125,31 +125,12 @@ public class ActivityDesignerPaint extends NetObject  {
     
     // Methods section
     
-    public static void DrawText(Graphics graphics, Font font, java.lang.String text, Rectangle boundingRect, StringAlignment alignment, TextQuality textQuality, Brush textBrush) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public static GraphicsPath GetRoundedRectanglePath(Rectangle rectangle, int radius) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("DrawText", graphics == null ? null : graphics.getJCOInstance(), font == null ? null : font.getJCOInstance(), text, boundingRect == null ? null : boundingRect.getJCOInstance(), alignment == null ? null : alignment.getJCOInstance(), textQuality == null ? null : textQuality.getJCOInstance(), textBrush == null ? null : textBrush.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void DrawImage(Graphics graphics, Image image, Rectangle destination, DesignerContentAlignment alignment) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("DrawImage", graphics == null ? null : graphics.getJCOInstance(), image == null ? null : image.getJCOInstance(), destination == null ? null : destination.getJCOInstance(), alignment == null ? null : alignment.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void DrawImage(Graphics graphics, Image image, Rectangle destination, Rectangle source, DesignerContentAlignment alignment, Single transparency, boolean grayscale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("DrawImage", graphics == null ? null : graphics.getJCOInstance(), image == null ? null : image.getJCOInstance(), destination == null ? null : destination.getJCOInstance(), source == null ? null : source.getJCOInstance(), alignment == null ? null : alignment.getJCOInstance(), transparency == null ? null : transparency.getJCOInstance(), grayscale);
+            JCObject objGetRoundedRectanglePath = (JCObject)classType.Invoke("GetRoundedRectanglePath", rectangle == null ? null : rectangle.getJCOInstance(), radius);
+            return new GraphicsPath(objGetRoundedRectanglePath);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,6 +156,26 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
+    public static void DrawImage(Graphics graphics, Image image, Rectangle destination, Rectangle source, DesignerContentAlignment alignment, Single transparency, boolean grayscale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("DrawImage", graphics == null ? null : graphics.getJCOInstance(), image == null ? null : image.getJCOInstance(), destination == null ? null : destination.getJCOInstance(), source == null ? null : source.getJCOInstance(), alignment == null ? null : alignment.getJCOInstance(), transparency == null ? null : transparency.getJCOInstance(), grayscale);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void DrawImage(Graphics graphics, Image image, Rectangle destination, DesignerContentAlignment alignment) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("DrawImage", graphics == null ? null : graphics.getJCOInstance(), image == null ? null : image.getJCOInstance(), destination == null ? null : destination.getJCOInstance(), alignment == null ? null : alignment.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void DrawRoundedRectangle(Graphics graphics, Pen drawingPen, Rectangle rectangle, int radius) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -185,12 +186,11 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
-    public static GraphicsPath GetRoundedRectanglePath(Rectangle rectangle, int radius) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static void DrawText(Graphics graphics, Font font, java.lang.String text, Rectangle boundingRect, StringAlignment alignment, TextQuality textQuality, Brush textBrush) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetRoundedRectanglePath = (JCObject)classType.Invoke("GetRoundedRectanglePath", rectangle == null ? null : rectangle.getJCOInstance(), radius);
-            return new GraphicsPath(objGetRoundedRectanglePath);
+            classType.Invoke("DrawText", graphics == null ? null : graphics.getJCOInstance(), font == null ? null : font.getJCOInstance(), text, boundingRect == null ? null : boundingRect.getJCOInstance(), alignment == null ? null : alignment.getJCOInstance(), textQuality == null ? null : textQuality.getJCOInstance(), textBrush == null ? null : textBrush.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

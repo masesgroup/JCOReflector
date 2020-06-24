@@ -41,9 +41,9 @@ import java.util.ArrayList;
 import system.reflection.metadata.ConstantHandle;
 import system.reflection.metadata.CustomAttributeHandleCollection;
 import system.reflection.metadata.PropertyAccessors;
+import system.reflection.metadata.BlobHandle;
 import system.reflection.metadata.StringHandle;
 import system.reflection.PropertyAttributes;
-import system.reflection.metadata.BlobHandle;
 
 
 /**
@@ -155,6 +155,17 @@ public class PropertyDefinition extends NetObject  {
     
     // Properties section
     
+    public BlobHandle getSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Signature");
+            return new BlobHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public StringHandle getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -172,17 +183,6 @@ public class PropertyDefinition extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Attributes");
             return new PropertyAttributes(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BlobHandle getSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Signature");
-            return new BlobHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,9 +39,9 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.servicemodel.description.ContractDescription;
 import system.servicemodel.description.ServiceEndpoint;
-import system.servicemodel.dispatcher.DispatchRuntime;
-import system.servicemodel.dispatcher.ClientRuntime;
 import system.servicemodel.channels.BindingParameterCollection;
+import system.servicemodel.dispatcher.ClientRuntime;
+import system.servicemodel.dispatcher.DispatchRuntime;
 
 
 /**
@@ -94,13 +94,13 @@ public interface IContractBehavior extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Validate(ContractDescription contractDescription, ServiceEndpoint endpoint) throws Throwable;
-
-    public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime) throws Throwable;
+    public void AddBindingParameters(ContractDescription contractDescription, ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable;
 
     public void ApplyClientBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable;
 
-    public void AddBindingParameters(ContractDescription contractDescription, ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable;
+    public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime) throws Throwable;
+
+    public void Validate(ContractDescription contractDescription, ServiceEndpoint endpoint) throws Throwable;
 
 
     

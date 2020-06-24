@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.FlowDirection;
-import system.windows.TextAlignment;
+import system.windows.media.textformatting.TextMarkerProperties;
 import system.windows.media.textformatting.TextRunProperties;
+import system.windows.TextAlignment;
 import system.windows.TextDecorationCollection;
 import system.windows.TextWrapping;
-import system.windows.media.textformatting.TextMarkerProperties;
 
 
 /**
@@ -122,33 +122,11 @@ public class TextParagraphProperties extends NetObject  {
     
     // Properties section
     
-    public FlowDirection getFlowDirection() throws Throwable {
+    public boolean getAlwaysCollapsible() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("FlowDirection");
-            return new FlowDirection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TextAlignment getTextAlignment() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TextAlignment");
-            return new TextAlignment(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getLineHeight() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("LineHeight");
+            return (boolean)classInstance.Get("AlwaysCollapsible");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,11 +142,63 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
 
-    public boolean getAlwaysCollapsible() throws Throwable {
+    public double getDefaultIncrementalTab() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("AlwaysCollapsible");
+            return (double)classInstance.Get("DefaultIncrementalTab");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getIndent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("Indent");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getLineHeight() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("LineHeight");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getParagraphIndent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("ParagraphIndent");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FlowDirection getFlowDirection() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("FlowDirection");
+            return new FlowDirection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TextMarkerProperties getTextMarkerProperties() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TextMarkerProperties");
+            return new TextMarkerProperties(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,6 +210,17 @@ public class TextParagraphProperties extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("DefaultTextRunProperties");
             return new TextRunProperties(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TextAlignment getTextAlignment() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TextAlignment");
+            return new TextAlignment(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,47 +243,6 @@ public class TextParagraphProperties extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("TextWrapping");
             return new TextWrapping(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TextMarkerProperties getTextMarkerProperties() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TextMarkerProperties");
-            return new TextMarkerProperties(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getIndent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("Indent");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getParagraphIndent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("ParagraphIndent");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getDefaultIncrementalTab() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("DefaultIncrementalTab");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

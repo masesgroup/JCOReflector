@@ -37,20 +37,20 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import microsoft.build.framework.BuildMessageEventHandler;
-import microsoft.build.framework.BuildErrorEventHandler;
-import microsoft.build.framework.BuildWarningEventHandler;
-import microsoft.build.framework.BuildStartedEventHandler;
-import microsoft.build.framework.BuildFinishedEventHandler;
-import microsoft.build.framework.ProjectStartedEventHandler;
-import microsoft.build.framework.ProjectFinishedEventHandler;
-import microsoft.build.framework.TargetStartedEventHandler;
-import microsoft.build.framework.TargetFinishedEventHandler;
-import microsoft.build.framework.TaskStartedEventHandler;
-import microsoft.build.framework.TaskFinishedEventHandler;
-import microsoft.build.framework.CustomBuildEventHandler;
-import microsoft.build.framework.BuildStatusEventHandler;
 import microsoft.build.framework.AnyEventHandler;
+import microsoft.build.framework.BuildErrorEventHandler;
+import microsoft.build.framework.BuildFinishedEventHandler;
+import microsoft.build.framework.BuildMessageEventHandler;
+import microsoft.build.framework.BuildStartedEventHandler;
+import microsoft.build.framework.BuildStatusEventHandler;
+import microsoft.build.framework.BuildWarningEventHandler;
+import microsoft.build.framework.CustomBuildEventHandler;
+import microsoft.build.framework.ProjectFinishedEventHandler;
+import microsoft.build.framework.ProjectStartedEventHandler;
+import microsoft.build.framework.TargetFinishedEventHandler;
+import microsoft.build.framework.TargetStartedEventHandler;
+import microsoft.build.framework.TaskFinishedEventHandler;
+import microsoft.build.framework.TaskStartedEventHandler;
 
 
 /**
@@ -111,61 +111,61 @@ public interface IEventSource extends IJCOBridgeReflected {
 
     // Instance Events section
     
-    public void addMessageRaised(BuildMessageEventHandler handler) throws Throwable;
+    public void addAnyEventRaised(AnyEventHandler handler) throws Throwable;
 
-    public void removeMessageRaised(BuildMessageEventHandler handler) throws Throwable;
+    public void removeAnyEventRaised(AnyEventHandler handler) throws Throwable;
 
     public void addErrorRaised(BuildErrorEventHandler handler) throws Throwable;
 
     public void removeErrorRaised(BuildErrorEventHandler handler) throws Throwable;
 
-    public void addWarningRaised(BuildWarningEventHandler handler) throws Throwable;
+    public void addBuildFinished(BuildFinishedEventHandler handler) throws Throwable;
 
-    public void removeWarningRaised(BuildWarningEventHandler handler) throws Throwable;
+    public void removeBuildFinished(BuildFinishedEventHandler handler) throws Throwable;
+
+    public void addMessageRaised(BuildMessageEventHandler handler) throws Throwable;
+
+    public void removeMessageRaised(BuildMessageEventHandler handler) throws Throwable;
 
     public void addBuildStarted(BuildStartedEventHandler handler) throws Throwable;
 
     public void removeBuildStarted(BuildStartedEventHandler handler) throws Throwable;
 
-    public void addBuildFinished(BuildFinishedEventHandler handler) throws Throwable;
+    public void addStatusEventRaised(BuildStatusEventHandler handler) throws Throwable;
 
-    public void removeBuildFinished(BuildFinishedEventHandler handler) throws Throwable;
+    public void removeStatusEventRaised(BuildStatusEventHandler handler) throws Throwable;
 
-    public void addProjectStarted(ProjectStartedEventHandler handler) throws Throwable;
+    public void addWarningRaised(BuildWarningEventHandler handler) throws Throwable;
 
-    public void removeProjectStarted(ProjectStartedEventHandler handler) throws Throwable;
-
-    public void addProjectFinished(ProjectFinishedEventHandler handler) throws Throwable;
-
-    public void removeProjectFinished(ProjectFinishedEventHandler handler) throws Throwable;
-
-    public void addTargetStarted(TargetStartedEventHandler handler) throws Throwable;
-
-    public void removeTargetStarted(TargetStartedEventHandler handler) throws Throwable;
-
-    public void addTargetFinished(TargetFinishedEventHandler handler) throws Throwable;
-
-    public void removeTargetFinished(TargetFinishedEventHandler handler) throws Throwable;
-
-    public void addTaskStarted(TaskStartedEventHandler handler) throws Throwable;
-
-    public void removeTaskStarted(TaskStartedEventHandler handler) throws Throwable;
-
-    public void addTaskFinished(TaskFinishedEventHandler handler) throws Throwable;
-
-    public void removeTaskFinished(TaskFinishedEventHandler handler) throws Throwable;
+    public void removeWarningRaised(BuildWarningEventHandler handler) throws Throwable;
 
     public void addCustomEventRaised(CustomBuildEventHandler handler) throws Throwable;
 
     public void removeCustomEventRaised(CustomBuildEventHandler handler) throws Throwable;
 
-    public void addStatusEventRaised(BuildStatusEventHandler handler) throws Throwable;
+    public void addProjectFinished(ProjectFinishedEventHandler handler) throws Throwable;
 
-    public void removeStatusEventRaised(BuildStatusEventHandler handler) throws Throwable;
+    public void removeProjectFinished(ProjectFinishedEventHandler handler) throws Throwable;
 
-    public void addAnyEventRaised(AnyEventHandler handler) throws Throwable;
+    public void addProjectStarted(ProjectStartedEventHandler handler) throws Throwable;
 
-    public void removeAnyEventRaised(AnyEventHandler handler) throws Throwable;
+    public void removeProjectStarted(ProjectStartedEventHandler handler) throws Throwable;
+
+    public void addTargetFinished(TargetFinishedEventHandler handler) throws Throwable;
+
+    public void removeTargetFinished(TargetFinishedEventHandler handler) throws Throwable;
+
+    public void addTargetStarted(TargetStartedEventHandler handler) throws Throwable;
+
+    public void removeTargetStarted(TargetStartedEventHandler handler) throws Throwable;
+
+    public void addTaskFinished(TaskFinishedEventHandler handler) throws Throwable;
+
+    public void removeTaskFinished(TaskFinishedEventHandler handler) throws Throwable;
+
+    public void addTaskStarted(TaskStartedEventHandler handler) throws Throwable;
+
+    public void removeTaskStarted(TaskStartedEventHandler handler) throws Throwable;
 
 
 }

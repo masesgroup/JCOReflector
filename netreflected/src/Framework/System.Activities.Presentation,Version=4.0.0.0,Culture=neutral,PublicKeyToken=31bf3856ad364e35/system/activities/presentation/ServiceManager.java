@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.presentation.SubscribeServiceCallback;
 import system.activities.presentation.PublishServiceCallback;
+import system.activities.presentation.SubscribeServiceCallback;
 
 
 /**
@@ -135,16 +135,6 @@ public class ServiceManager extends NetObject  {
         }
     }
 
-    public void Subscribe(NetType serviceType, SubscribeServiceCallback callback) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Subscribe", serviceType == null ? null : serviceType.getJCOInstance(), callback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Publish(NetType serviceType, PublishServiceCallback callback) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -160,6 +150,16 @@ public class ServiceManager extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Publish", serviceType == null ? null : serviceType.getJCOInstance(), serviceInstance == null ? null : serviceInstance.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Subscribe(NetType serviceType, SubscribeServiceCallback callback) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Subscribe", serviceType == null ? null : serviceType.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

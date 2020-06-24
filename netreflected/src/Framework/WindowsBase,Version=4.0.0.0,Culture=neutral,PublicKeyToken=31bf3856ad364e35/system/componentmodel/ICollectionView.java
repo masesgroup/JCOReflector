@@ -39,11 +39,11 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.IDisposable;
 import system.IDisposableImplementation;
-import system.globalization.CultureInfo;
 import system.componentmodel.SortDescriptionCollection;
+import system.globalization.CultureInfo;
+import system.collections.specialized.NotifyCollectionChangedEventHandler;
 import system.componentmodel.CurrentChangingEventHandler;
 import system.EventHandler;
-import system.collections.specialized.NotifyCollectionChangedEventHandler;
 
 
 /**
@@ -96,11 +96,9 @@ public interface ICollectionView extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Refresh() throws Throwable;
-
     public boolean Contains(NetObject item) throws Throwable;
 
-    public IDisposable DeferRefresh() throws Throwable;
+    public boolean MoveCurrentTo(NetObject item) throws Throwable;
 
     public boolean MoveCurrentToFirst() throws Throwable;
 
@@ -108,44 +106,50 @@ public interface ICollectionView extends IJCOBridgeReflected {
 
     public boolean MoveCurrentToNext() throws Throwable;
 
+    public boolean MoveCurrentToPosition(int position) throws Throwable;
+
     public boolean MoveCurrentToPrevious() throws Throwable;
 
-    public boolean MoveCurrentTo(NetObject item) throws Throwable;
+    public IDisposable DeferRefresh() throws Throwable;
 
-    public boolean MoveCurrentToPosition(int position) throws Throwable;
+    public void Refresh() throws Throwable;
 
 
     
     // Properties section
     
-    public CultureInfo getCulture() throws Throwable;
-
-    public void setCulture(CultureInfo Culture) throws Throwable;
-
-    public IEnumerable getSourceCollection() throws Throwable;
-
     public boolean getCanFilter() throws Throwable;
-
-    public SortDescriptionCollection getSortDescriptions() throws Throwable;
-
-    public boolean getCanSort() throws Throwable;
 
     public boolean getCanGroup() throws Throwable;
 
-    public boolean getIsEmpty() throws Throwable;
-
-    public NetObject getCurrentItem() throws Throwable;
-
-    public int getCurrentPosition() throws Throwable;
+    public boolean getCanSort() throws Throwable;
 
     public boolean getIsCurrentAfterLast() throws Throwable;
 
     public boolean getIsCurrentBeforeFirst() throws Throwable;
 
+    public boolean getIsEmpty() throws Throwable;
+
+    public int getCurrentPosition() throws Throwable;
+
+    public IEnumerable getSourceCollection() throws Throwable;
+
+    public SortDescriptionCollection getSortDescriptions() throws Throwable;
+
+    public CultureInfo getCulture() throws Throwable;
+
+    public void setCulture(CultureInfo Culture) throws Throwable;
+
+    public NetObject getCurrentItem() throws Throwable;
+
 
 
     // Instance Events section
     
+    public void addCollectionChanged(NotifyCollectionChangedEventHandler handler) throws Throwable;
+
+    public void removeCollectionChanged(NotifyCollectionChangedEventHandler handler) throws Throwable;
+
     public void addCurrentChanging(CurrentChangingEventHandler handler) throws Throwable;
 
     public void removeCurrentChanging(CurrentChangingEventHandler handler) throws Throwable;
@@ -153,10 +157,6 @@ public interface ICollectionView extends IJCOBridgeReflected {
     public void addCurrentChanged(EventHandler handler) throws Throwable;
 
     public void removeCurrentChanged(EventHandler handler) throws Throwable;
-
-    public void addCollectionChanged(NotifyCollectionChangedEventHandler handler) throws Throwable;
-
-    public void removeCollectionChanged(NotifyCollectionChangedEventHandler handler) throws Throwable;
 
 
 }

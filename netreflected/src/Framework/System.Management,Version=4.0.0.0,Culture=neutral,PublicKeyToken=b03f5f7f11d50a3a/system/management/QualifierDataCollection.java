@@ -114,6 +114,26 @@ public class QualifierDataCollection extends NetObject  {
     
     // Methods section
     
+    public void Add(java.lang.String qualifierName, NetObject qualifierValue) throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Add", qualifierName, qualifierValue == null ? null : qualifierValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Add(java.lang.String qualifierName, NetObject qualifierValue, boolean isAmended, boolean propagatesToInstance, boolean propagatesToSubclass, boolean isOverridable) throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Add", qualifierName, qualifierValue == null ? null : qualifierValue.getJCOInstance(), isAmended, propagatesToInstance, propagatesToSubclass, isOverridable);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -144,45 +164,25 @@ public class QualifierDataCollection extends NetObject  {
         }
     }
 
-    public void Add(java.lang.String qualifierName, NetObject qualifierValue) throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", qualifierName, qualifierValue == null ? null : qualifierValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Add(java.lang.String qualifierName, NetObject qualifierValue, boolean isAmended, boolean propagatesToInstance, boolean propagatesToSubclass, boolean isOverridable) throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", qualifierName, qualifierValue == null ? null : qualifierValue.getJCOInstance(), isAmended, propagatesToInstance, propagatesToSubclass, isOverridable);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public int getCount() throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsSynchronized");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getCount() throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Count");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

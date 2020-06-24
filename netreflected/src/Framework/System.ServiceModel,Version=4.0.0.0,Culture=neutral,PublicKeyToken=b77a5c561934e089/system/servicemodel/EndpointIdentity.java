@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.EndpointIdentity;
+import system.identitymodel.claims.Claim;
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.x509certificates.X509Certificate2Collection;
-import system.identitymodel.claims.Claim;
 
 
 /**
@@ -127,6 +127,39 @@ public class EndpointIdentity extends NetObject  {
         }
     }
 
+    public static EndpointIdentity CreateIdentity(Claim identity) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateIdentity = (JCObject)classType.Invoke("CreateIdentity", identity == null ? null : identity.getJCOInstance());
+            return new EndpointIdentity(objCreateIdentity);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static EndpointIdentity CreateRsaIdentity(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateRsaIdentity = (JCObject)classType.Invoke("CreateRsaIdentity", certificate == null ? null : certificate.getJCOInstance());
+            return new EndpointIdentity(objCreateRsaIdentity);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static EndpointIdentity CreateRsaIdentity(java.lang.String publicKey) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException, system.NotImplementedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateRsaIdentity = (JCObject)classType.Invoke("CreateRsaIdentity", publicKey);
+            return new EndpointIdentity(objCreateRsaIdentity);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static EndpointIdentity CreateSpnIdentity(java.lang.String spnName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -149,28 +182,6 @@ public class EndpointIdentity extends NetObject  {
         }
     }
 
-    public static EndpointIdentity CreateRsaIdentity(java.lang.String publicKey) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException, system.NotImplementedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateRsaIdentity = (JCObject)classType.Invoke("CreateRsaIdentity", publicKey);
-            return new EndpointIdentity(objCreateRsaIdentity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static EndpointIdentity CreateRsaIdentity(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateRsaIdentity = (JCObject)classType.Invoke("CreateRsaIdentity", certificate == null ? null : certificate.getJCOInstance());
-            return new EndpointIdentity(objCreateRsaIdentity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static EndpointIdentity CreateX509CertificateIdentity(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -188,17 +199,6 @@ public class EndpointIdentity extends NetObject  {
         try {
             JCObject objCreateX509CertificateIdentity = (JCObject)classType.Invoke("CreateX509CertificateIdentity", primaryCertificate == null ? null : primaryCertificate.getJCOInstance(), supportingCertificates == null ? null : supportingCertificates.getJCOInstance());
             return new EndpointIdentity(objCreateX509CertificateIdentity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static EndpointIdentity CreateIdentity(Claim identity) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateIdentity = (JCObject)classType.Invoke("CreateIdentity", identity == null ? null : identity.getJCOInstance());
-            return new EndpointIdentity(objCreateIdentity);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

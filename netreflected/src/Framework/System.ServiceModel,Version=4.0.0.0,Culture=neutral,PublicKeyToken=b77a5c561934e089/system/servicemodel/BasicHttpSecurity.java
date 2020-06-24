@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.BasicHttpMessageSecurity;
 import system.servicemodel.BasicHttpSecurityMode;
 import system.servicemodel.HttpTransportSecurity;
-import system.servicemodel.BasicHttpMessageSecurity;
 
 
 /**
@@ -150,6 +150,27 @@ public class BasicHttpSecurity extends NetObject  {
     
     // Properties section
     
+    public BasicHttpMessageSecurity getMessage() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Message");
+            return new BasicHttpMessageSecurity(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMessage(BasicHttpMessageSecurity Message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Message", Message == null ? null : Message.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BasicHttpSecurityMode getMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -187,27 +208,6 @@ public class BasicHttpSecurity extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transport", Transport == null ? null : Transport.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BasicHttpMessageSecurity getMessage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Message");
-            return new BasicHttpMessageSecurity(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMessage(BasicHttpMessageSecurity Message) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Message", Message == null ? null : Message.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

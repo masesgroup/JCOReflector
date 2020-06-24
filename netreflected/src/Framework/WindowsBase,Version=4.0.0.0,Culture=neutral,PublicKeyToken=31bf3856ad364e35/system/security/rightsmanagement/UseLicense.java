@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.security.rightsmanagement.CryptoProvider;
 import system.security.rightsmanagement.SecureEnvironment;
-import system.security.rightsmanagement.ContentUser;
 import system.Guid;
+import system.security.rightsmanagement.ContentUser;
 
 
 /**
@@ -142,23 +142,23 @@ public class UseLicense extends NetObject  {
     
     // Properties section
     
-    public ContentUser getOwner() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
-            return new ContentUser(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Guid getContentId() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ContentId");
             return new Guid(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ContentUser getOwner() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Owner");
+            return new ContentUser(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

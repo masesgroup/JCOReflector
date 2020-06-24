@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.codedom.CodeMethodReferenceExpression;
 import system.codedom.CodeExpression;
+import system.codedom.CodeMethodReferenceExpression;
 import system.codedom.CodeExpressionCollection;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
@@ -124,21 +124,21 @@ public class CodeMethodInvokeExpression extends NetObject  {
         }
     }
 
-    public CodeMethodInvokeExpression(CodeMethodReferenceExpression method, CodeExpression... parameters) throws Throwable, system.ArgumentNullException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(method == null ? null : method.getJCOInstance(), toObjectFromArray(parameters)));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CodeMethodInvokeExpression(CodeExpression targetObject, java.lang.String methodName, CodeExpression... parameters) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(targetObject == null ? null : targetObject.getJCOInstance(), methodName, toObjectFromArray(parameters)));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeMethodInvokeExpression(CodeMethodReferenceExpression method, CodeExpression... parameters) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(method == null ? null : method.getJCOInstance(), toObjectFromArray(parameters)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,6 +152,17 @@ public class CodeMethodInvokeExpression extends NetObject  {
     
     // Properties section
     
+    public CodeExpressionCollection getParameters() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Parameters");
+            return new CodeExpressionCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CodeMethodReferenceExpression getMethod() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -168,17 +179,6 @@ public class CodeMethodInvokeExpression extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Method", Method == null ? null : Method.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeExpressionCollection getParameters() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parameters");
-            return new CodeExpressionCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

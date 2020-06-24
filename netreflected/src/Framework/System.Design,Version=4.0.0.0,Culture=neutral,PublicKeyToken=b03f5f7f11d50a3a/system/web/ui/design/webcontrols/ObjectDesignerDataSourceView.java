@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.design.webcontrols.ObjectDataSourceDesigner;
-import system.web.ui.design.IDataSourceViewSchema;
-import system.web.ui.design.IDataSourceViewSchemaImplementation;
 import system.web.ui.design.IDataSourceDesigner;
 import system.web.ui.design.IDataSourceDesignerImplementation;
+import system.web.ui.design.IDataSourceViewSchema;
+import system.web.ui.design.IDataSourceViewSchemaImplementation;
 
 
 /**
@@ -192,12 +192,11 @@ public class ObjectDesignerDataSourceView extends NetObject  {
         }
     }
 
-    public IDataSourceViewSchema getSchema() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.data.DataException {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Schema");
-            return new IDataSourceViewSchemaImplementation(val);
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,11 +213,12 @@ public class ObjectDesignerDataSourceView extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
+    public IDataSourceViewSchema getSchema() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.data.DataException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            JCObject val = (JCObject)classInstance.Get("Schema");
+            return new IDataSourceViewSchemaImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

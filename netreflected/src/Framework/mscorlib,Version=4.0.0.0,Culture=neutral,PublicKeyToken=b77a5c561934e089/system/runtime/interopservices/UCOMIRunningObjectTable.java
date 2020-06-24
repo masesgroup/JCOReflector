@@ -91,9 +91,9 @@ public interface UCOMIRunningObjectTable extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Revoke(int dwRegister) throws Throwable;
-
     public void IsRunning(UCOMIMoniker pmkObjectName) throws Throwable;
+
+    public void Revoke(int dwRegister) throws Throwable;
 
 
     

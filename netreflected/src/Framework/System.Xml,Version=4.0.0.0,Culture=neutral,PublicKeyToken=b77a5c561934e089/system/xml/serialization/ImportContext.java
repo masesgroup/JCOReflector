@@ -129,17 +129,6 @@ public class ImportContext extends NetObject  {
     
     // Properties section
     
-    public CodeIdentifiers getTypeIdentifiers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeIdentifiers");
-            return new CodeIdentifiers(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getShareTypes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -156,6 +145,17 @@ public class ImportContext extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Warnings");
             return new StringCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeIdentifiers getTypeIdentifiers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TypeIdentifiers");
+            return new CodeIdentifiers(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

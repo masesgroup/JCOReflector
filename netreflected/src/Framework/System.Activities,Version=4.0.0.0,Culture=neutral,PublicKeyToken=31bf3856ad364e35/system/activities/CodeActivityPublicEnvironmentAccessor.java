@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.CodeActivityPublicEnvironmentAccessor;
-import system.activities.CodeActivityMetadata;
 import system.activities.LocationReference;
 import system.activities.ArgumentDirection;
+import system.activities.CodeActivityPublicEnvironmentAccessor;
+import system.activities.CodeActivityMetadata;
 
 
 /**

@@ -128,21 +128,21 @@ public class State extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getDisplayName() throws Throwable {
+    public boolean getIsFinal() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            return (boolean)classInstance.Get("IsFinal");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDisplayName(java.lang.String DisplayName) throws Throwable {
+    public void setIsFinal(boolean IsFinal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("DisplayName", DisplayName);
+            classInstance.Set("IsFinal", IsFinal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,21 +190,21 @@ public class State extends NetObject  {
         }
     }
 
-    public boolean getIsFinal() throws Throwable {
+    public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsFinal");
+            return (java.lang.String)classInstance.Get("DisplayName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIsFinal(boolean IsFinal) throws Throwable {
+    public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IsFinal", IsFinal);
+            classInstance.Set("DisplayName", DisplayName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

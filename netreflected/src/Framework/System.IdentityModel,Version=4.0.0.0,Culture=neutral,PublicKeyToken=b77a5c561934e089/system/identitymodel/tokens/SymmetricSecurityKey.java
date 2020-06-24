@@ -116,93 +116,31 @@ public class SymmetricSecurityKey extends NetObject  {
     
     // Methods section
     
-    public byte[] GenerateDerivedKey(java.lang.String algorithm, byte[] label, byte[] nonce, int derivedKeyLength, int offset) throws Throwable {
+    public boolean IsAsymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateDerivedKey", algorithm, label, nonce, derivedKeyLength, offset);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexGenerateDerivedKey = 0; indexGenerateDerivedKey < resultingArrayList.size(); indexGenerateDerivedKey++ ) {
-				resultingArray[indexGenerateDerivedKey] = (byte)resultingArrayList.get(indexGenerateDerivedKey);
-            }
-            return resultingArray;
+            return (boolean)classInstance.Invoke("IsAsymmetricAlgorithm", algorithm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ICryptoTransform GetDecryptionTransform(java.lang.String algorithm, byte[] iv) throws Throwable {
+    public boolean IsSupportedAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetDecryptionTransform = (JCObject)classInstance.Invoke("GetDecryptionTransform", algorithm, iv);
-            return new ICryptoTransformImplementation(objGetDecryptionTransform);
+            return (boolean)classInstance.Invoke("IsSupportedAlgorithm", algorithm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ICryptoTransform GetEncryptionTransform(java.lang.String algorithm, byte[] iv) throws Throwable {
+    public boolean IsSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetEncryptionTransform = (JCObject)classInstance.Invoke("GetEncryptionTransform", algorithm, iv);
-            return new ICryptoTransformImplementation(objGetEncryptionTransform);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetIVSize(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetIVSize", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public KeyedHashAlgorithm GetKeyedHashAlgorithm(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetKeyedHashAlgorithm = (JCObject)classInstance.Invoke("GetKeyedHashAlgorithm", algorithm);
-            return new KeyedHashAlgorithm(objGetKeyedHashAlgorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SymmetricAlgorithm GetSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSymmetricAlgorithm = (JCObject)classInstance.Invoke("GetSymmetricAlgorithm", algorithm);
-            return new SymmetricAlgorithm(objGetSymmetricAlgorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] GetSymmetricKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSymmetricKey");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexGetSymmetricKey = 0; indexGetSymmetricKey < resultingArrayList.size(); indexGetSymmetricKey++ ) {
-				resultingArray[indexGetSymmetricKey] = (byte)resultingArrayList.get(indexGetSymmetricKey);
-            }
-            return resultingArray;
+            return (boolean)classInstance.Invoke("IsSymmetricAlgorithm", algorithm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,31 +184,93 @@ public class SymmetricSecurityKey extends NetObject  {
         }
     }
 
-    public boolean IsAsymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
+    public byte[] GenerateDerivedKey(java.lang.String algorithm, byte[] label, byte[] nonce, int derivedKeyLength, int offset) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsAsymmetricAlgorithm", algorithm);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateDerivedKey", algorithm, label, nonce, derivedKeyLength, offset);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexGenerateDerivedKey = 0; indexGenerateDerivedKey < resultingArrayList.size(); indexGenerateDerivedKey++ ) {
+				resultingArray[indexGenerateDerivedKey] = (byte)resultingArrayList.get(indexGenerateDerivedKey);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean IsSupportedAlgorithm(java.lang.String algorithm) throws Throwable {
+    public byte[] GetSymmetricKey() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsSupportedAlgorithm", algorithm);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSymmetricKey");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexGetSymmetricKey = 0; indexGetSymmetricKey < resultingArrayList.size(); indexGetSymmetricKey++ ) {
+				resultingArray[indexGetSymmetricKey] = (byte)resultingArrayList.get(indexGetSymmetricKey);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean IsSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
+    public int GetIVSize(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsSymmetricAlgorithm", algorithm);
+            return (int)classInstance.Invoke("GetIVSize", algorithm);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICryptoTransform GetDecryptionTransform(java.lang.String algorithm, byte[] iv) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDecryptionTransform = (JCObject)classInstance.Invoke("GetDecryptionTransform", algorithm, iv);
+            return new ICryptoTransformImplementation(objGetDecryptionTransform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICryptoTransform GetEncryptionTransform(java.lang.String algorithm, byte[] iv) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetEncryptionTransform = (JCObject)classInstance.Invoke("GetEncryptionTransform", algorithm, iv);
+            return new ICryptoTransformImplementation(objGetEncryptionTransform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public KeyedHashAlgorithm GetKeyedHashAlgorithm(java.lang.String algorithm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetKeyedHashAlgorithm = (JCObject)classInstance.Invoke("GetKeyedHashAlgorithm", algorithm);
+            return new KeyedHashAlgorithm(objGetKeyedHashAlgorithm);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SymmetricAlgorithm GetSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetSymmetricAlgorithm = (JCObject)classInstance.Invoke("GetSymmetricAlgorithm", algorithm);
+            return new SymmetricAlgorithm(objGetSymmetricAlgorithm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

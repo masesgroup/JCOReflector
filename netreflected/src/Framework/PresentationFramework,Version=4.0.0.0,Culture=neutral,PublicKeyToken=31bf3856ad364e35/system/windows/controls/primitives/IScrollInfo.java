@@ -92,7 +92,7 @@ public interface IScrollInfo extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void LineUp() throws Throwable;
+    public Rect MakeVisible(Visual visual, Rect rectangle) throws Throwable;
 
     public void LineDown() throws Throwable;
 
@@ -100,15 +100,7 @@ public interface IScrollInfo extends IJCOBridgeReflected {
 
     public void LineRight() throws Throwable;
 
-    public void PageUp() throws Throwable;
-
-    public void PageDown() throws Throwable;
-
-    public void PageLeft() throws Throwable;
-
-    public void PageRight() throws Throwable;
-
-    public void MouseWheelUp() throws Throwable;
+    public void LineUp() throws Throwable;
 
     public void MouseWheelDown() throws Throwable;
 
@@ -116,35 +108,43 @@ public interface IScrollInfo extends IJCOBridgeReflected {
 
     public void MouseWheelRight() throws Throwable;
 
+    public void MouseWheelUp() throws Throwable;
+
+    public void PageDown() throws Throwable;
+
+    public void PageLeft() throws Throwable;
+
+    public void PageRight() throws Throwable;
+
+    public void PageUp() throws Throwable;
+
     public void SetHorizontalOffset(double offset) throws Throwable;
 
     public void SetVerticalOffset(double offset) throws Throwable;
-
-    public Rect MakeVisible(Visual visual, Rect rectangle) throws Throwable;
 
 
     
     // Properties section
     
-    public boolean getCanVerticallyScroll() throws Throwable;
-
-    public void setCanVerticallyScroll(boolean CanVerticallyScroll) throws Throwable;
-
     public boolean getCanHorizontallyScroll() throws Throwable;
 
     public void setCanHorizontallyScroll(boolean CanHorizontallyScroll) throws Throwable;
 
-    public double getExtentWidth() throws Throwable;
+    public boolean getCanVerticallyScroll() throws Throwable;
+
+    public void setCanVerticallyScroll(boolean CanVerticallyScroll) throws Throwable;
 
     public double getExtentHeight() throws Throwable;
 
-    public double getViewportWidth() throws Throwable;
-
-    public double getViewportHeight() throws Throwable;
+    public double getExtentWidth() throws Throwable;
 
     public double getHorizontalOffset() throws Throwable;
 
     public double getVerticalOffset() throws Throwable;
+
+    public double getViewportHeight() throws Throwable;
+
+    public double getViewportWidth() throws Throwable;
 
     public ScrollViewer getScrollOwner() throws Throwable;
 

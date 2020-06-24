@@ -38,15 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.xps.packaging.XpsResource;
-import system.Uri;
-import system.windows.xps.packaging.XpsFont;
 import system.windows.xps.packaging.XpsColorContext;
-import system.windows.xps.packaging.XpsResourceDictionary;
+import system.windows.xps.packaging.XpsFont;
 import system.windows.xps.packaging.XpsImage;
 import system.windows.xps.packaging.XpsImageType;
-import system.windows.xps.packaging.XpsThumbnail;
+import system.windows.xps.packaging.XpsResource;
+import system.Uri;
+import system.windows.xps.packaging.XpsResourceDictionary;
 import system.windows.xps.packaging.XpsStructure;
+import system.windows.xps.packaging.XpsThumbnail;
 import system.printing.PrintTicket;
 import system.xml.XmlWriter;
 
@@ -114,12 +114,12 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     // Methods section
     
-    public XpsResource AddResource(NetType resourceType, Uri resourceUri) throws Throwable {
+    public XpsColorContext AddColorContext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAddResource = (JCObject)classInstance.Invoke("AddResource", resourceType == null ? null : resourceType.getJCOInstance(), resourceUri == null ? null : resourceUri.getJCOInstance());
-            return new XpsResource(objAddResource);
+            JCObject objAddColorContext = (JCObject)classInstance.Invoke("AddColorContext");
+            return new XpsColorContext(objAddColorContext);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,28 +158,6 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
-    public XpsColorContext AddColorContext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddColorContext = (JCObject)classInstance.Invoke("AddColorContext");
-            return new XpsColorContext(objAddColorContext);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XpsResourceDictionary AddResourceDictionary() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddResourceDictionary = (JCObject)classInstance.Invoke("AddResourceDictionary");
-            return new XpsResourceDictionary(objAddResourceDictionary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XpsImage AddImage(java.lang.String mimeType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -197,6 +175,39 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         try {
             JCObject objAddImage = (JCObject)classInstance.Invoke("AddImage", imageType == null ? null : imageType.getJCOInstance());
             return new XpsImage(objAddImage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XpsResource AddResource(NetType resourceType, Uri resourceUri) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddResource = (JCObject)classInstance.Invoke("AddResource", resourceType == null ? null : resourceType.getJCOInstance(), resourceUri == null ? null : resourceUri.getJCOInstance());
+            return new XpsResource(objAddResource);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XpsResourceDictionary AddResourceDictionary() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddResourceDictionary = (JCObject)classInstance.Invoke("AddResourceDictionary");
+            return new XpsResourceDictionary(objAddResourceDictionary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XpsStructure AddStoryFragment() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddStoryFragment = (JCObject)classInstance.Invoke("AddStoryFragment");
+            return new XpsStructure(objAddStoryFragment);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,21 +234,20 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
-    public XpsStructure AddStoryFragment() throws Throwable {
+
+    
+    // Properties section
+    
+    public int getPageNumber() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAddStoryFragment = (JCObject)classInstance.Invoke("AddStoryFragment");
-            return new XpsStructure(objAddStoryFragment);
+            return (int)classInstance.Get("PageNumber");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-
-    
-    // Properties section
-    
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -265,16 +275,6 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         try {
             JCObject val = (JCObject)classInstance.Get("XmlWriter");
             return new XmlWriter(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getPageNumber() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("PageNumber");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

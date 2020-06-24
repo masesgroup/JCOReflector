@@ -116,12 +116,11 @@ public class CollectionViewGroup extends NetObject  {
     
     // Properties section
     
-    public NetObject getName() throws Throwable {
+    public boolean getIsBottomLevel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
-            return new NetObject(val);
+            return (boolean)classInstance.Get("IsBottomLevel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -137,11 +136,12 @@ public class CollectionViewGroup extends NetObject  {
         }
     }
 
-    public boolean getIsBottomLevel() throws Throwable {
+    public NetObject getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsBottomLevel");
+            JCObject val = (JCObject)classInstance.Get("Name");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

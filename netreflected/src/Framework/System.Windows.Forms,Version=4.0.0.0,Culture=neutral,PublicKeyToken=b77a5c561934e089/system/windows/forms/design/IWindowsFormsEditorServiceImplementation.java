@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.forms.Control;
 import system.windows.forms.DialogResult;
 import system.windows.forms.Form;
+import system.windows.forms.Control;
 
 
 /**
@@ -106,6 +106,17 @@ public class IWindowsFormsEditorServiceImplementation extends NetObject implemen
 
     // Methods section
     
+    public DialogResult ShowDialog(Form dialog) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objShowDialog = (JCObject)classInstance.Invoke("ShowDialog", dialog == null ? null : dialog.getJCOInstance());
+            return new DialogResult(objShowDialog);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void CloseDropDown() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -121,17 +132,6 @@ public class IWindowsFormsEditorServiceImplementation extends NetObject implemen
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DropDownControl", control == null ? null : control.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DialogResult ShowDialog(Form dialog) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objShowDialog = (JCObject)classInstance.Invoke("ShowDialog", dialog == null ? null : dialog.getJCOInstance());
-            return new DialogResult(objShowDialog);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

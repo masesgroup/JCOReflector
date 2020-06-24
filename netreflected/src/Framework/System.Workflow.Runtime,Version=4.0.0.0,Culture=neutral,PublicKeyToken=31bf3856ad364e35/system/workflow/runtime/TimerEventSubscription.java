@@ -163,6 +163,17 @@ public class TimerEventSubscription extends NetObject  {
         }
     }
 
+    public Guid getWorkflowInstanceId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("WorkflowInstanceId");
+            return new Guid(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IComparable getQueueName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -179,17 +190,6 @@ public class TimerEventSubscription extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QueueName", QueueName == null ? null : QueueName.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Guid getWorkflowInstanceId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowInstanceId");
-            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

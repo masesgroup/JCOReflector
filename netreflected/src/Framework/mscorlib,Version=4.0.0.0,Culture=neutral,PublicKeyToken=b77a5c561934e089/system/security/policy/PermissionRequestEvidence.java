@@ -152,11 +152,11 @@ public class PermissionRequestEvidence extends NetObject  {
     
     // Properties section
     
-    public PermissionSet getRequestedPermissions() throws Throwable {
+    public PermissionSet getDeniedPermissions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestedPermissions");
+            JCObject val = (JCObject)classInstance.Get("DeniedPermissions");
             return new PermissionSet(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -174,11 +174,11 @@ public class PermissionRequestEvidence extends NetObject  {
         }
     }
 
-    public PermissionSet getDeniedPermissions() throws Throwable {
+    public PermissionSet getRequestedPermissions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DeniedPermissions");
+            JCObject val = (JCObject)classInstance.Get("RequestedPermissions");
             return new PermissionSet(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

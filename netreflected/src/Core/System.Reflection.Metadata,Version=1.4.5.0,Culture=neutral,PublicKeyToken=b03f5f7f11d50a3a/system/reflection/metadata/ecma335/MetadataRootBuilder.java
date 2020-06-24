@@ -140,16 +140,6 @@ public class MetadataRootBuilder extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getMetadataVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("MetadataVersion");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getSuppressValidation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,6 +156,16 @@ public class MetadataRootBuilder extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Sizes");
             return new MetadataSizes(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getMetadataVersion() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("MetadataVersion");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

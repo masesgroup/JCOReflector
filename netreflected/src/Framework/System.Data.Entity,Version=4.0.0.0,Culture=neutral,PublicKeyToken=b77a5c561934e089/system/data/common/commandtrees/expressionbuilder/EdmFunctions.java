@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.common.commandtrees.DbFunctionExpression;
 import system.data.common.commandtrees.DbExpression;
+import system.data.common.commandtrees.DbFunctionExpression;
 
 
 /**
@@ -114,6 +114,127 @@ public class EdmFunctions extends NetObject  {
     
     // Methods section
     
+    public static DbExpression Contains(DbExpression searchedString, DbExpression searchedForString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objContains = (JCObject)classType.Invoke("Contains", searchedString == null ? null : searchedString.getJCOInstance(), searchedForString == null ? null : searchedForString.getJCOInstance());
+            return new DbExpression(objContains);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression Abs(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAbs = (JCObject)classType.Invoke("Abs", value == null ? null : value.getJCOInstance());
+            return new DbFunctionExpression(objAbs);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression AddDays(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAddDays = (JCObject)classType.Invoke("AddDays", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            return new DbFunctionExpression(objAddDays);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression AddHours(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAddHours = (JCObject)classType.Invoke("AddHours", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            return new DbFunctionExpression(objAddHours);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression AddMicroseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAddMicroseconds = (JCObject)classType.Invoke("AddMicroseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            return new DbFunctionExpression(objAddMicroseconds);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression AddMilliseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAddMilliseconds = (JCObject)classType.Invoke("AddMilliseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            return new DbFunctionExpression(objAddMilliseconds);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression AddMinutes(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAddMinutes = (JCObject)classType.Invoke("AddMinutes", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            return new DbFunctionExpression(objAddMinutes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression AddMonths(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAddMonths = (JCObject)classType.Invoke("AddMonths", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            return new DbFunctionExpression(objAddMonths);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression AddNanoseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAddNanoseconds = (JCObject)classType.Invoke("AddNanoseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            return new DbFunctionExpression(objAddNanoseconds);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression AddSeconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAddSeconds = (JCObject)classType.Invoke("AddSeconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            return new DbFunctionExpression(objAddSeconds);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression AddYears(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAddYears = (JCObject)classType.Invoke("AddYears", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            return new DbFunctionExpression(objAddYears);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbFunctionExpression Average(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -125,100 +246,56 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Count(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression BitwiseAnd(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCount = (JCObject)classType.Invoke("Count", collection == null ? null : collection.getJCOInstance());
-            return new DbFunctionExpression(objCount);
+            JCObject objBitwiseAnd = (JCObject)classType.Invoke("BitwiseAnd", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            return new DbFunctionExpression(objBitwiseAnd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DbFunctionExpression LongCount(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression BitwiseNot(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLongCount = (JCObject)classType.Invoke("LongCount", collection == null ? null : collection.getJCOInstance());
-            return new DbFunctionExpression(objLongCount);
+            JCObject objBitwiseNot = (JCObject)classType.Invoke("BitwiseNot", value == null ? null : value.getJCOInstance());
+            return new DbFunctionExpression(objBitwiseNot);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DbFunctionExpression Max(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression BitwiseOr(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMax = (JCObject)classType.Invoke("Max", collection == null ? null : collection.getJCOInstance());
-            return new DbFunctionExpression(objMax);
+            JCObject objBitwiseOr = (JCObject)classType.Invoke("BitwiseOr", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            return new DbFunctionExpression(objBitwiseOr);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DbFunctionExpression Min(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression BitwiseXor(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMin = (JCObject)classType.Invoke("Min", collection == null ? null : collection.getJCOInstance());
-            return new DbFunctionExpression(objMin);
+            JCObject objBitwiseXor = (JCObject)classType.Invoke("BitwiseXor", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            return new DbFunctionExpression(objBitwiseXor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DbFunctionExpression Sum(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression Ceiling(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSum = (JCObject)classType.Invoke("Sum", collection == null ? null : collection.getJCOInstance());
-            return new DbFunctionExpression(objSum);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression StDev(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objStDev = (JCObject)classType.Invoke("StDev", collection == null ? null : collection.getJCOInstance());
-            return new DbFunctionExpression(objStDev);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression StDevP(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objStDevP = (JCObject)classType.Invoke("StDevP", collection == null ? null : collection.getJCOInstance());
-            return new DbFunctionExpression(objStDevP);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Var(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objVar = (JCObject)classType.Invoke("Var", collection == null ? null : collection.getJCOInstance());
-            return new DbFunctionExpression(objVar);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression VarP(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objVarP = (JCObject)classType.Invoke("VarP", collection == null ? null : collection.getJCOInstance());
-            return new DbFunctionExpression(objVarP);
+            JCObject objCeiling = (JCObject)classType.Invoke("Ceiling", value == null ? null : value.getJCOInstance());
+            return new DbFunctionExpression(objCeiling);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,12 +312,199 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbExpression Contains(DbExpression searchedString, DbExpression searchedForString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression Count(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objContains = (JCObject)classType.Invoke("Contains", searchedString == null ? null : searchedString.getJCOInstance(), searchedForString == null ? null : searchedForString.getJCOInstance());
-            return new DbExpression(objContains);
+            JCObject objCount = (JCObject)classType.Invoke("Count", collection == null ? null : collection.getJCOInstance());
+            return new DbFunctionExpression(objCount);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression CreateDateTime(DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateDateTime = (JCObject)classType.Invoke("CreateDateTime", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), day == null ? null : day.getJCOInstance(), hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            return new DbFunctionExpression(objCreateDateTime);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression CreateDateTimeOffset(DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second, DbExpression timeZoneOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateDateTimeOffset = (JCObject)classType.Invoke("CreateDateTimeOffset", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), day == null ? null : day.getJCOInstance(), hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance(), timeZoneOffset == null ? null : timeZoneOffset.getJCOInstance());
+            return new DbFunctionExpression(objCreateDateTimeOffset);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression CreateTime(DbExpression hour, DbExpression minute, DbExpression second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateTime = (JCObject)classType.Invoke("CreateTime", hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            return new DbFunctionExpression(objCreateTime);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression CurrentDateTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCurrentDateTime = (JCObject)classType.Invoke("CurrentDateTime");
+            return new DbFunctionExpression(objCurrentDateTime);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression CurrentDateTimeOffset() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCurrentDateTimeOffset = (JCObject)classType.Invoke("CurrentDateTimeOffset");
+            return new DbFunctionExpression(objCurrentDateTimeOffset);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression CurrentUtcDateTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCurrentUtcDateTime = (JCObject)classType.Invoke("CurrentUtcDateTime");
+            return new DbFunctionExpression(objCurrentUtcDateTime);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression Day(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDay = (JCObject)classType.Invoke("Day", dateValue == null ? null : dateValue.getJCOInstance());
+            return new DbFunctionExpression(objDay);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression DayOfYear(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDayOfYear = (JCObject)classType.Invoke("DayOfYear", dateValue == null ? null : dateValue.getJCOInstance());
+            return new DbFunctionExpression(objDayOfYear);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression DiffDays(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDiffDays = (JCObject)classType.Invoke("DiffDays", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
+            return new DbFunctionExpression(objDiffDays);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression DiffHours(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDiffHours = (JCObject)classType.Invoke("DiffHours", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            return new DbFunctionExpression(objDiffHours);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression DiffMicroseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDiffMicroseconds = (JCObject)classType.Invoke("DiffMicroseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            return new DbFunctionExpression(objDiffMicroseconds);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression DiffMilliseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDiffMilliseconds = (JCObject)classType.Invoke("DiffMilliseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            return new DbFunctionExpression(objDiffMilliseconds);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression DiffMinutes(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDiffMinutes = (JCObject)classType.Invoke("DiffMinutes", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            return new DbFunctionExpression(objDiffMinutes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression DiffMonths(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDiffMonths = (JCObject)classType.Invoke("DiffMonths", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
+            return new DbFunctionExpression(objDiffMonths);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression DiffNanoseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDiffNanoseconds = (JCObject)classType.Invoke("DiffNanoseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            return new DbFunctionExpression(objDiffNanoseconds);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression DiffSeconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDiffSeconds = (JCObject)classType.Invoke("DiffSeconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            return new DbFunctionExpression(objDiffSeconds);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression DiffYears(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDiffYears = (JCObject)classType.Invoke("DiffYears", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
+            return new DbFunctionExpression(objDiffYears);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,6 +516,39 @@ public class EdmFunctions extends NetObject  {
         try {
             JCObject objEndsWith = (JCObject)classType.Invoke("EndsWith", stringArgument == null ? null : stringArgument.getJCOInstance(), suffix == null ? null : suffix.getJCOInstance());
             return new DbFunctionExpression(objEndsWith);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression Floor(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFloor = (JCObject)classType.Invoke("Floor", value == null ? null : value.getJCOInstance());
+            return new DbFunctionExpression(objFloor);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GetTotalOffsetMinutes(DbExpression dateTimeOffsetArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetTotalOffsetMinutes = (JCObject)classType.Invoke("GetTotalOffsetMinutes", dateTimeOffsetArgument == null ? null : dateTimeOffsetArgument.getJCOInstance());
+            return new DbFunctionExpression(objGetTotalOffsetMinutes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression Hour(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objHour = (JCObject)classType.Invoke("Hour", timeValue == null ? null : timeValue.getJCOInstance());
+            return new DbFunctionExpression(objHour);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,6 +587,94 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    public static DbFunctionExpression LongCount(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLongCount = (JCObject)classType.Invoke("LongCount", collection == null ? null : collection.getJCOInstance());
+            return new DbFunctionExpression(objLongCount);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression Max(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMax = (JCObject)classType.Invoke("Max", collection == null ? null : collection.getJCOInstance());
+            return new DbFunctionExpression(objMax);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression Millisecond(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMillisecond = (JCObject)classType.Invoke("Millisecond", timeValue == null ? null : timeValue.getJCOInstance());
+            return new DbFunctionExpression(objMillisecond);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression Min(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMin = (JCObject)classType.Invoke("Min", collection == null ? null : collection.getJCOInstance());
+            return new DbFunctionExpression(objMin);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression Minute(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMinute = (JCObject)classType.Invoke("Minute", timeValue == null ? null : timeValue.getJCOInstance());
+            return new DbFunctionExpression(objMinute);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression Month(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMonth = (JCObject)classType.Invoke("Month", dateValue == null ? null : dateValue.getJCOInstance());
+            return new DbFunctionExpression(objMonth);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression NewGuid() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objNewGuid = (JCObject)classType.Invoke("NewGuid");
+            return new DbFunctionExpression(objNewGuid);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression Power(DbExpression baseArgument, DbExpression exponent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objPower = (JCObject)classType.Invoke("Power", baseArgument == null ? null : baseArgument.getJCOInstance(), exponent == null ? null : exponent.getJCOInstance());
+            return new DbFunctionExpression(objPower);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbFunctionExpression Replace(DbExpression stringArgument, DbExpression toReplace, DbExpression replacement) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -323,6 +708,39 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    public static DbFunctionExpression Round(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRound = (JCObject)classType.Invoke("Round", value == null ? null : value.getJCOInstance());
+            return new DbFunctionExpression(objRound);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression Round(DbExpression value, DbExpression digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRound = (JCObject)classType.Invoke("Round", value == null ? null : value.getJCOInstance(), digits == null ? null : digits.getJCOInstance());
+            return new DbFunctionExpression(objRound);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression Second(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSecond = (JCObject)classType.Invoke("Second", timeValue == null ? null : timeValue.getJCOInstance());
+            return new DbFunctionExpression(objSecond);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbFunctionExpression StartsWith(DbExpression stringArgument, DbExpression prefix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -334,12 +752,45 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    public static DbFunctionExpression StDev(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objStDev = (JCObject)classType.Invoke("StDev", collection == null ? null : collection.getJCOInstance());
+            return new DbFunctionExpression(objStDev);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression StDevP(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objStDevP = (JCObject)classType.Invoke("StDevP", collection == null ? null : collection.getJCOInstance());
+            return new DbFunctionExpression(objStDevP);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbFunctionExpression Substring(DbExpression stringArgument, DbExpression start, DbExpression length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objSubstring = (JCObject)classType.Invoke("Substring", stringArgument == null ? null : stringArgument.getJCOInstance(), start == null ? null : start.getJCOInstance(), length == null ? null : length.getJCOInstance());
             return new DbFunctionExpression(objSubstring);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression Sum(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSum = (JCObject)classType.Invoke("Sum", collection == null ? null : collection.getJCOInstance());
+            return new DbFunctionExpression(objSum);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,133 +851,12 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Year(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression Truncate(DbExpression value, DbExpression digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objYear = (JCObject)classType.Invoke("Year", dateValue == null ? null : dateValue.getJCOInstance());
-            return new DbFunctionExpression(objYear);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Month(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMonth = (JCObject)classType.Invoke("Month", dateValue == null ? null : dateValue.getJCOInstance());
-            return new DbFunctionExpression(objMonth);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Day(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDay = (JCObject)classType.Invoke("Day", dateValue == null ? null : dateValue.getJCOInstance());
-            return new DbFunctionExpression(objDay);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression DayOfYear(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDayOfYear = (JCObject)classType.Invoke("DayOfYear", dateValue == null ? null : dateValue.getJCOInstance());
-            return new DbFunctionExpression(objDayOfYear);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Hour(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objHour = (JCObject)classType.Invoke("Hour", timeValue == null ? null : timeValue.getJCOInstance());
-            return new DbFunctionExpression(objHour);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Minute(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMinute = (JCObject)classType.Invoke("Minute", timeValue == null ? null : timeValue.getJCOInstance());
-            return new DbFunctionExpression(objMinute);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Second(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSecond = (JCObject)classType.Invoke("Second", timeValue == null ? null : timeValue.getJCOInstance());
-            return new DbFunctionExpression(objSecond);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Millisecond(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMillisecond = (JCObject)classType.Invoke("Millisecond", timeValue == null ? null : timeValue.getJCOInstance());
-            return new DbFunctionExpression(objMillisecond);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GetTotalOffsetMinutes(DbExpression dateTimeOffsetArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetTotalOffsetMinutes = (JCObject)classType.Invoke("GetTotalOffsetMinutes", dateTimeOffsetArgument == null ? null : dateTimeOffsetArgument.getJCOInstance());
-            return new DbFunctionExpression(objGetTotalOffsetMinutes);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression CurrentDateTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCurrentDateTime = (JCObject)classType.Invoke("CurrentDateTime");
-            return new DbFunctionExpression(objCurrentDateTime);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression CurrentDateTimeOffset() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCurrentDateTimeOffset = (JCObject)classType.Invoke("CurrentDateTimeOffset");
-            return new DbFunctionExpression(objCurrentDateTimeOffset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression CurrentUtcDateTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCurrentUtcDateTime = (JCObject)classType.Invoke("CurrentUtcDateTime");
-            return new DbFunctionExpression(objCurrentUtcDateTime);
+            JCObject objTruncate = (JCObject)classType.Invoke("Truncate", value == null ? null : value.getJCOInstance(), digits == null ? null : digits.getJCOInstance());
+            return new DbFunctionExpression(objTruncate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,364 +873,34 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression CreateDateTime(DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression Var(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateDateTime = (JCObject)classType.Invoke("CreateDateTime", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), day == null ? null : day.getJCOInstance(), hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance());
-            return new DbFunctionExpression(objCreateDateTime);
+            JCObject objVar = (JCObject)classType.Invoke("Var", collection == null ? null : collection.getJCOInstance());
+            return new DbFunctionExpression(objVar);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DbFunctionExpression CreateDateTimeOffset(DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second, DbExpression timeZoneOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression VarP(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateDateTimeOffset = (JCObject)classType.Invoke("CreateDateTimeOffset", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), day == null ? null : day.getJCOInstance(), hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance(), timeZoneOffset == null ? null : timeZoneOffset.getJCOInstance());
-            return new DbFunctionExpression(objCreateDateTimeOffset);
+            JCObject objVarP = (JCObject)classType.Invoke("VarP", collection == null ? null : collection.getJCOInstance());
+            return new DbFunctionExpression(objVarP);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DbFunctionExpression CreateTime(DbExpression hour, DbExpression minute, DbExpression second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression Year(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateTime = (JCObject)classType.Invoke("CreateTime", hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance());
-            return new DbFunctionExpression(objCreateTime);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression AddYears(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAddYears = (JCObject)classType.Invoke("AddYears", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
-            return new DbFunctionExpression(objAddYears);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression AddMonths(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAddMonths = (JCObject)classType.Invoke("AddMonths", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
-            return new DbFunctionExpression(objAddMonths);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression AddDays(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAddDays = (JCObject)classType.Invoke("AddDays", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
-            return new DbFunctionExpression(objAddDays);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression AddHours(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAddHours = (JCObject)classType.Invoke("AddHours", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
-            return new DbFunctionExpression(objAddHours);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression AddMinutes(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAddMinutes = (JCObject)classType.Invoke("AddMinutes", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
-            return new DbFunctionExpression(objAddMinutes);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression AddSeconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAddSeconds = (JCObject)classType.Invoke("AddSeconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
-            return new DbFunctionExpression(objAddSeconds);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression AddMilliseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAddMilliseconds = (JCObject)classType.Invoke("AddMilliseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
-            return new DbFunctionExpression(objAddMilliseconds);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression AddMicroseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAddMicroseconds = (JCObject)classType.Invoke("AddMicroseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
-            return new DbFunctionExpression(objAddMicroseconds);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression AddNanoseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAddNanoseconds = (JCObject)classType.Invoke("AddNanoseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
-            return new DbFunctionExpression(objAddNanoseconds);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression DiffYears(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDiffYears = (JCObject)classType.Invoke("DiffYears", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
-            return new DbFunctionExpression(objDiffYears);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression DiffMonths(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDiffMonths = (JCObject)classType.Invoke("DiffMonths", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
-            return new DbFunctionExpression(objDiffMonths);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression DiffDays(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDiffDays = (JCObject)classType.Invoke("DiffDays", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
-            return new DbFunctionExpression(objDiffDays);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression DiffHours(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDiffHours = (JCObject)classType.Invoke("DiffHours", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
-            return new DbFunctionExpression(objDiffHours);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression DiffMinutes(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDiffMinutes = (JCObject)classType.Invoke("DiffMinutes", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
-            return new DbFunctionExpression(objDiffMinutes);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression DiffSeconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDiffSeconds = (JCObject)classType.Invoke("DiffSeconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
-            return new DbFunctionExpression(objDiffSeconds);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression DiffMilliseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDiffMilliseconds = (JCObject)classType.Invoke("DiffMilliseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
-            return new DbFunctionExpression(objDiffMilliseconds);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression DiffMicroseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDiffMicroseconds = (JCObject)classType.Invoke("DiffMicroseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
-            return new DbFunctionExpression(objDiffMicroseconds);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression DiffNanoseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDiffNanoseconds = (JCObject)classType.Invoke("DiffNanoseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
-            return new DbFunctionExpression(objDiffNanoseconds);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Round(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", value == null ? null : value.getJCOInstance());
-            return new DbFunctionExpression(objRound);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Round(DbExpression value, DbExpression digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", value == null ? null : value.getJCOInstance(), digits == null ? null : digits.getJCOInstance());
-            return new DbFunctionExpression(objRound);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Floor(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFloor = (JCObject)classType.Invoke("Floor", value == null ? null : value.getJCOInstance());
-            return new DbFunctionExpression(objFloor);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Ceiling(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCeiling = (JCObject)classType.Invoke("Ceiling", value == null ? null : value.getJCOInstance());
-            return new DbFunctionExpression(objCeiling);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Abs(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAbs = (JCObject)classType.Invoke("Abs", value == null ? null : value.getJCOInstance());
-            return new DbFunctionExpression(objAbs);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Truncate(DbExpression value, DbExpression digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objTruncate = (JCObject)classType.Invoke("Truncate", value == null ? null : value.getJCOInstance(), digits == null ? null : digits.getJCOInstance());
-            return new DbFunctionExpression(objTruncate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Power(DbExpression baseArgument, DbExpression exponent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objPower = (JCObject)classType.Invoke("Power", baseArgument == null ? null : baseArgument.getJCOInstance(), exponent == null ? null : exponent.getJCOInstance());
-            return new DbFunctionExpression(objPower);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression BitwiseAnd(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objBitwiseAnd = (JCObject)classType.Invoke("BitwiseAnd", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
-            return new DbFunctionExpression(objBitwiseAnd);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression BitwiseOr(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objBitwiseOr = (JCObject)classType.Invoke("BitwiseOr", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
-            return new DbFunctionExpression(objBitwiseOr);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression BitwiseNot(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objBitwiseNot = (JCObject)classType.Invoke("BitwiseNot", value == null ? null : value.getJCOInstance());
-            return new DbFunctionExpression(objBitwiseNot);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression BitwiseXor(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objBitwiseXor = (JCObject)classType.Invoke("BitwiseXor", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
-            return new DbFunctionExpression(objBitwiseXor);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression NewGuid() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objNewGuid = (JCObject)classType.Invoke("NewGuid");
-            return new DbFunctionExpression(objNewGuid);
+            JCObject objYear = (JCObject)classType.Invoke("Year", dateValue == null ? null : dateValue.getJCOInstance());
+            return new DbFunctionExpression(objYear);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

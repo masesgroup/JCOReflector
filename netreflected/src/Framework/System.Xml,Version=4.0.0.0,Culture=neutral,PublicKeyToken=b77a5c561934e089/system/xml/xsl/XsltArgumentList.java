@@ -124,17 +124,6 @@ public class XsltArgumentList extends NetObject  {
     
     // Methods section
     
-    public NetObject GetParam(java.lang.String name, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetParam = (JCObject)classInstance.Invoke("GetParam", name, namespaceUri);
-            return new NetObject(objGetParam);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetExtensionObject(java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -146,21 +135,23 @@ public class XsltArgumentList extends NetObject  {
         }
     }
 
-    public void AddParam(java.lang.String name, java.lang.String namespaceUri, NetObject parameter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException {
+    public NetObject GetParam(java.lang.String name, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddParam", name, namespaceUri, parameter == null ? null : parameter.getJCOInstance());
+            JCObject objGetParam = (JCObject)classInstance.Invoke("GetParam", name, namespaceUri);
+            return new NetObject(objGetParam);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void AddExtensionObject(java.lang.String namespaceUri, NetObject extension) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
+    public NetObject RemoveExtensionObject(java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddExtensionObject", namespaceUri, extension == null ? null : extension.getJCOInstance());
+            JCObject objRemoveExtensionObject = (JCObject)classInstance.Invoke("RemoveExtensionObject", namespaceUri);
+            return new NetObject(objRemoveExtensionObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,12 +168,21 @@ public class XsltArgumentList extends NetObject  {
         }
     }
 
-    public NetObject RemoveExtensionObject(java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public void AddExtensionObject(java.lang.String namespaceUri, NetObject extension) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objRemoveExtensionObject = (JCObject)classInstance.Invoke("RemoveExtensionObject", namespaceUri);
-            return new NetObject(objRemoveExtensionObject);
+            classInstance.Invoke("AddExtensionObject", namespaceUri, extension == null ? null : extension.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddParam(java.lang.String name, java.lang.String namespaceUri, NetObject parameter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddParam", name, namespaceUri, parameter == null ? null : parameter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

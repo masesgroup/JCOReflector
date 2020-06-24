@@ -129,17 +129,6 @@ public class TabControlEventArgs extends NetObject  {
     
     // Properties section
     
-    public TabPage getTabPage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TabPage");
-            return new TabPage(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getTabPageIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -156,6 +145,17 @@ public class TabControlEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Action");
             return new TabControlAction(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TabPage getTabPage() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TabPage");
+            return new TabPage(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

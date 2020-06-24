@@ -89,15 +89,11 @@ public interface IListenerChannelCallback extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void ReportStarted() throws Throwable;
-
-    public void ReportStopped(int hr) throws Throwable;
-
-    public void ReportMessageReceived() throws Throwable;
+    public int GetBlobLength() throws Throwable;
 
     public int GetId() throws Throwable;
 
-    public int GetBlobLength() throws Throwable;
+    public void ReportStopped(int hr) throws Throwable;
 
 
     

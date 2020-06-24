@@ -151,20 +151,21 @@ public class WebSocket extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable {
+
+    
+    // Properties section
+    
+    public WebSocketState getState() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Dispose");
+            JCObject val = (JCObject)classInstance.Get("State");
+            return new WebSocketState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-
-    
-    // Properties section
-    
     public java.lang.String getCloseStatusDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -180,17 +181,6 @@ public class WebSocket extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("SubProtocol");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WebSocketState getState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("State");
-            return new WebSocketState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -42,12 +42,12 @@ import system.runtime.serialization.ISurrogateSelector;
 import system.runtime.serialization.ISurrogateSelectorImplementation;
 import system.runtime.serialization.StreamingContext;
 import system.io.Stream;
-import system.runtime.remoting.messaging.Header;
 import system.runtime.remoting.messaging.HeaderHandler;
+import system.runtime.remoting.messaging.Header;
+import system.runtime.serialization.formatters.FormatterAssemblyStyle;
+import system.runtime.serialization.formatters.FormatterTypeStyle;
 import system.runtime.serialization.formatters.ISoapMessage;
 import system.runtime.serialization.formatters.ISoapMessageImplementation;
-import system.runtime.serialization.formatters.FormatterTypeStyle;
-import system.runtime.serialization.formatters.FormatterAssemblyStyle;
 import system.runtime.serialization.formatters.TypeFilterLevel;
 import system.runtime.serialization.SerializationBinder;
 
@@ -156,6 +156,17 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    public NetObject Deserialize(Stream serializationStream, HeaderHandler handler) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.FormatException, system.MissingMemberException, system.reflection.TargetException, system.RankException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.MulticastNotSupportedException, system.runtime.remoting.ServerException, system.OverflowException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", serializationStream == null ? null : serializationStream.getJCOInstance(), handler);
+            return new NetObject(objDeserialize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Serialize(Stream serializationStream, NetObject graph) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.reflection.TargetException, system.MulticastNotSupportedException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,37 +187,26 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
-    public NetObject Deserialize(Stream serializationStream, HeaderHandler handler) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.FormatException, system.MissingMemberException, system.reflection.TargetException, system.RankException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.MulticastNotSupportedException, system.runtime.remoting.ServerException, system.OverflowException, system.InvalidCastException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", serializationStream == null ? null : serializationStream.getJCOInstance(), handler);
-            return new NetObject(objDeserialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public ISoapMessage getTopObject() throws Throwable {
+    public FormatterAssemblyStyle getAssemblyFormat() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TopObject");
-            return new ISoapMessageImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("AssemblyFormat");
+            return new FormatterAssemblyStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTopObject(ISoapMessage TopObject) throws Throwable {
+    public void setAssemblyFormat(FormatterAssemblyStyle AssemblyFormat) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("TopObject", TopObject == null ? null : TopObject.getJCOInstance());
+            classInstance.Set("AssemblyFormat", AssemblyFormat == null ? null : AssemblyFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,22 +233,22 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
-    public FormatterAssemblyStyle getAssemblyFormat() throws Throwable {
+    public ISoapMessage getTopObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyFormat");
-            return new FormatterAssemblyStyle(val);
+            JCObject val = (JCObject)classInstance.Get("TopObject");
+            return new ISoapMessageImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAssemblyFormat(FormatterAssemblyStyle AssemblyFormat) throws Throwable {
+    public void setTopObject(ISoapMessage TopObject) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("AssemblyFormat", AssemblyFormat == null ? null : AssemblyFormat.getJCOInstance());
+            classInstance.Set("TopObject", TopObject == null ? null : TopObject.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

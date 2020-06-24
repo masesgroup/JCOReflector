@@ -114,17 +114,6 @@ public class OutputCacheProvider extends NetObject  {
     
     // Methods section
     
-    public NetObject Get(java.lang.String key) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGet = (JCObject)classInstance.Invoke("Get", key);
-            return new NetObject(objGet);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject Add(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,21 +125,12 @@ public class OutputCacheProvider extends NetObject  {
         }
     }
 
-    public void Set(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
+    public NetObject Get(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Set", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(java.lang.String key) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", key);
+            JCObject objGet = (JCObject)classInstance.Invoke("Get", key);
+            return new NetObject(objGet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,25 +146,45 @@ public class OutputCacheProvider extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public java.lang.String getName() throws Throwable {
+    public void Remove(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            classInstance.Invoke("Remove", key);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public void Set(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Set", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+
+    
+    // Properties section
+    
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Description");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

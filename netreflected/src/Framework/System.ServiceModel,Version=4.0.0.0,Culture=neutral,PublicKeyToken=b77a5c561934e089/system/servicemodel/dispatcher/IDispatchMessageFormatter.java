@@ -91,9 +91,9 @@ public interface IDispatchMessageFormatter extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void DeserializeRequest(Message message, NetObject[] parameters) throws Throwable;
-
     public Message SerializeReply(MessageVersion messageVersion, NetObject[] parameters, NetObject result) throws Throwable;
+
+    public void DeserializeRequest(Message message, NetObject[] parameters) throws Throwable;
 
 
     

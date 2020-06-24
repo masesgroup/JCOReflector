@@ -114,21 +114,21 @@ public class AsymmetricSignatureDeformatter extends NetObject  {
     
     // Methods section
     
-    public boolean VerifySignature(HashAlgorithm hash, byte[] rgbSignature) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public boolean VerifySignature(byte[] rgbHash, byte[] rgbSignature) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", hash == null ? null : hash.getJCOInstance(), rgbSignature);
+            return (boolean)classInstance.Invoke("VerifySignature", rgbHash, rgbSignature);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void SetKey(AsymmetricAlgorithm key) throws Throwable {
+    public boolean VerifySignature(HashAlgorithm hash, byte[] rgbSignature) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetKey", key == null ? null : key.getJCOInstance());
+            return (boolean)classInstance.Invoke("VerifySignature", hash == null ? null : hash.getJCOInstance(), rgbSignature);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,11 +144,11 @@ public class AsymmetricSignatureDeformatter extends NetObject  {
         }
     }
 
-    public boolean VerifySignature(byte[] rgbHash, byte[] rgbSignature) throws Throwable {
+    public void SetKey(AsymmetricAlgorithm key) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", rgbHash, rgbSignature);
+            classInstance.Invoke("SetKey", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

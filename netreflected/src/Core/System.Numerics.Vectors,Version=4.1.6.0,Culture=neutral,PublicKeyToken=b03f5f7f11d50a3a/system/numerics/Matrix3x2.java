@@ -126,23 +126,66 @@ public class Matrix3x2 extends NetObject  {
     
     // Methods section
     
-    public static Matrix3x2 CreateTranslation(Vector2 position) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean Equals(Matrix3x2 other) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateTranslation = (JCObject)classType.Invoke("CreateTranslation", position == null ? null : position.getJCOInstance());
-            return new Matrix3x2(objCreateTranslation);
+            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Matrix3x2 CreateTranslation(Single xPosition, Single yPosition) throws Throwable {
+    public Single GetDeterminant() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDeterminant = (JCObject)classInstance.Invoke("GetDeterminant");
+            return new Single(objGetDeterminant);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Matrix3x2 Add(Matrix3x2 value1, Matrix3x2 value2) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateTranslation = (JCObject)classType.Invoke("CreateTranslation", xPosition == null ? null : xPosition.getJCOInstance(), yPosition == null ? null : yPosition.getJCOInstance());
-            return new Matrix3x2(objCreateTranslation);
+            JCObject objAdd = (JCObject)classType.Invoke("Add", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            return new Matrix3x2(objAdd);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Matrix3x2 CreateRotation(Single radians) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArithmeticException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateRotation = (JCObject)classType.Invoke("CreateRotation", radians == null ? null : radians.getJCOInstance());
+            return new Matrix3x2(objCreateRotation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Matrix3x2 CreateRotation(Single radians, Vector2 centerPoint) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArithmeticException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateRotation = (JCObject)classType.Invoke("CreateRotation", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            return new Matrix3x2(objCreateRotation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Matrix3x2 CreateScale(Single scale) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scale == null ? null : scale.getJCOInstance());
+            return new Matrix3x2(objCreateScale);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,6 +207,17 @@ public class Matrix3x2 extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", xScale == null ? null : xScale.getJCOInstance(), yScale == null ? null : yScale.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            return new Matrix3x2(objCreateScale);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Matrix3x2 CreateScale(Single scale, Vector2 centerPoint) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scale == null ? null : scale.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
             return new Matrix3x2(objCreateScale);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -192,28 +246,6 @@ public class Matrix3x2 extends NetObject  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Single scale) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scale == null ? null : scale.getJCOInstance());
-            return new Matrix3x2(objCreateScale);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Matrix3x2 CreateScale(Single scale, Vector2 centerPoint) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scale == null ? null : scale.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
-            return new Matrix3x2(objCreateScale);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Matrix3x2 CreateSkew(Single radiansX, Single radiansY) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -236,34 +268,23 @@ public class Matrix3x2 extends NetObject  {
         }
     }
 
-    public static Matrix3x2 CreateRotation(Single radians) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArithmeticException {
+    public static Matrix3x2 CreateTranslation(Single xPosition, Single yPosition) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateRotation = (JCObject)classType.Invoke("CreateRotation", radians == null ? null : radians.getJCOInstance());
-            return new Matrix3x2(objCreateRotation);
+            JCObject objCreateTranslation = (JCObject)classType.Invoke("CreateTranslation", xPosition == null ? null : xPosition.getJCOInstance(), yPosition == null ? null : yPosition.getJCOInstance());
+            return new Matrix3x2(objCreateTranslation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Matrix3x2 CreateRotation(Single radians, Vector2 centerPoint) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArithmeticException {
+    public static Matrix3x2 CreateTranslation(Vector2 position) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateRotation = (JCObject)classType.Invoke("CreateRotation", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
-            return new Matrix3x2(objCreateRotation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Single GetDeterminant() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDeterminant = (JCObject)classInstance.Invoke("GetDeterminant");
-            return new Single(objGetDeterminant);
+            JCObject objCreateTranslation = (JCObject)classType.Invoke("CreateTranslation", position == null ? null : position.getJCOInstance());
+            return new Matrix3x2(objCreateTranslation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,34 +301,12 @@ public class Matrix3x2 extends NetObject  {
         }
     }
 
-    public static Matrix3x2 Negate(Matrix3x2 value) throws Throwable {
+    public static Matrix3x2 Multiply(Matrix3x2 value1, Single value2) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNegate = (JCObject)classType.Invoke("Negate", value == null ? null : value.getJCOInstance());
-            return new Matrix3x2(objNegate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Matrix3x2 Add(Matrix3x2 value1, Matrix3x2 value2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
-            return new Matrix3x2(objAdd);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Matrix3x2 Subtract(Matrix3x2 value1, Matrix3x2 value2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
-            return new Matrix3x2(objSubtract);
+            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            return new Matrix3x2(objMultiply);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,22 +323,23 @@ public class Matrix3x2 extends NetObject  {
         }
     }
 
-    public static Matrix3x2 Multiply(Matrix3x2 value1, Single value2) throws Throwable {
+    public static Matrix3x2 Negate(Matrix3x2 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
-            return new Matrix3x2(objMultiply);
+            JCObject objNegate = (JCObject)classType.Invoke("Negate", value == null ? null : value.getJCOInstance());
+            return new Matrix3x2(objNegate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean Equals(Matrix3x2 other) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Matrix3x2 Subtract(Matrix3x2 value1, Matrix3x2 value2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            return new Matrix3x2(objSubtract);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,6 +354,17 @@ public class Matrix3x2 extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsIdentity");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Matrix3x2 getIdentity() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Identity");
+            return new Matrix3x2(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,17 +386,6 @@ public class Matrix3x2 extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Translation", Translation == null ? null : Translation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Matrix3x2 getIdentity() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Identity");
-            return new Matrix3x2(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -118,22 +118,22 @@ public class DesignerDataTable extends NetObject  {
     
     // Properties section
     
-    public ICollection getRelationships() throws Throwable {
+    public ICollection getColumns() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Relationships");
+            JCObject val = (JCObject)classInstance.Get("Columns");
             return new ICollectionImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ICollection getColumns() throws Throwable {
+    public ICollection getRelationships() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Columns");
+            JCObject val = (JCObject)classInstance.Get("Relationships");
             return new ICollectionImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

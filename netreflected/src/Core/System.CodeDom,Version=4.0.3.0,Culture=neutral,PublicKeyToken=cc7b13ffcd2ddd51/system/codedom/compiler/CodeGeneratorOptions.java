@@ -127,41 +127,21 @@ public class CodeGeneratorOptions extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getIndentString() throws Throwable {
+    public boolean getBlankLinesBetweenMembers() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("IndentString");
+            return (boolean)classInstance.Get("BlankLinesBetweenMembers");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIndentString(java.lang.String IndentString) throws Throwable {
+    public void setBlankLinesBetweenMembers(boolean BlankLinesBetweenMembers) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IndentString", IndentString);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getBracingStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("BracingStyle");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBracingStyle(java.lang.String BracingStyle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BracingStyle", BracingStyle);
+            classInstance.Set("BlankLinesBetweenMembers", BlankLinesBetweenMembers);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,26 +167,6 @@ public class CodeGeneratorOptions extends NetObject  {
         }
     }
 
-    public boolean getBlankLinesBetweenMembers() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("BlankLinesBetweenMembers");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBlankLinesBetweenMembers(boolean BlankLinesBetweenMembers) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BlankLinesBetweenMembers", BlankLinesBetweenMembers);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getVerbatimOrder() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -222,6 +182,46 @@ public class CodeGeneratorOptions extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerbatimOrder", VerbatimOrder);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getBracingStyle() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("BracingStyle");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBracingStyle(java.lang.String BracingStyle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("BracingStyle", BracingStyle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getIndentString() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("IndentString");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIndentString(java.lang.String IndentString) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IndentString", IndentString);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

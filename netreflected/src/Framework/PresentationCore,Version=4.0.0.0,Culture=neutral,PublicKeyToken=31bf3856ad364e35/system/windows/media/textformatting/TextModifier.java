@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.textformatting.TextRunProperties;
-import system.windows.media.textformatting.CharacterBufferReference;
 import system.windows.FlowDirection;
+import system.windows.media.textformatting.CharacterBufferReference;
 
 
 /**
@@ -130,22 +130,21 @@ public class TextModifier extends NetObject  {
     
     // Properties section
     
-    public CharacterBufferReference getCharacterBufferReference() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CharacterBufferReference");
-            return new CharacterBufferReference(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getHasDirectionalEmbedding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("HasDirectionalEmbedding");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Length");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,11 +161,12 @@ public class TextModifier extends NetObject  {
         }
     }
 
-    public int getLength() throws Throwable {
+    public CharacterBufferReference getCharacterBufferReference() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Length");
+            JCObject val = (JCObject)classInstance.Get("CharacterBufferReference");
+            return new CharacterBufferReference(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

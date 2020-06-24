@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.io.packaging.StorageInfo;
 import system.io.packaging.StreamInfo;
 import system.io.packaging.CompressionOption;
 import system.io.packaging.EncryptionOption;
-import system.io.packaging.StorageInfo;
 
 
 /**
@@ -116,39 +116,6 @@ public class StorageInfo extends NetObject  {
     
     // Methods section
     
-    public StreamInfo CreateStream(java.lang.String name, CompressionOption compressionOption, EncryptionOption encryptionOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException, system.io.FileFormatException, system.RankException, system.NotSupportedException, system.SystemException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateStream = (JCObject)classInstance.Invoke("CreateStream", name, compressionOption == null ? null : compressionOption.getJCOInstance(), encryptionOption == null ? null : encryptionOption.getJCOInstance());
-            return new StreamInfo(objCreateStream);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StreamInfo CreateStream(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.NotSupportedException, system.UnauthorizedAccessException, system.SystemException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateStream = (JCObject)classInstance.Invoke("CreateStream", name);
-            return new StreamInfo(objCreateStream);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StreamInfo GetStreamInfo(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.io.DirectoryNotFoundException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetStreamInfo = (JCObject)classInstance.Invoke("GetStreamInfo", name);
-            return new StreamInfo(objGetStreamInfo);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean StreamExists(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.io.DirectoryNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -159,11 +126,11 @@ public class StorageInfo extends NetObject  {
         }
     }
 
-    public void DeleteStream(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.io.DirectoryNotFoundException, system.NotSupportedException, system.UnauthorizedAccessException {
+    public boolean SubStorageExists(java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.io.DirectoryNotFoundException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DeleteStream", name);
+            return (boolean)classInstance.Invoke("SubStorageExists", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,21 +158,51 @@ public class StorageInfo extends NetObject  {
         }
     }
 
-    public boolean SubStorageExists(java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.io.DirectoryNotFoundException, system.io.IOException {
+    public StorageInfo[] GetSubStorages() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.io.DirectoryNotFoundException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SubStorageExists", name);
+            ArrayList<StorageInfo> resultingArrayList = new ArrayList<StorageInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSubStorages");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new StorageInfo(resultingObject));
+            }
+            StorageInfo[] resultingArray = new StorageInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void DeleteSubStorage(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.io.DirectoryNotFoundException, system.io.IOException, system.UnauthorizedAccessException, system.NotSupportedException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.RankException {
+    public StreamInfo CreateStream(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.NotSupportedException, system.UnauthorizedAccessException, system.SystemException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DeleteSubStorage", name);
+            JCObject objCreateStream = (JCObject)classInstance.Invoke("CreateStream", name);
+            return new StreamInfo(objCreateStream);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StreamInfo CreateStream(java.lang.String name, CompressionOption compressionOption, EncryptionOption encryptionOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException, system.io.FileFormatException, system.RankException, system.NotSupportedException, system.SystemException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateStream = (JCObject)classInstance.Invoke("CreateStream", name, compressionOption == null ? null : compressionOption.getJCOInstance(), encryptionOption == null ? null : encryptionOption.getJCOInstance());
+            return new StreamInfo(objCreateStream);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StreamInfo GetStreamInfo(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.io.DirectoryNotFoundException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetStreamInfo = (JCObject)classInstance.Invoke("GetStreamInfo", name);
+            return new StreamInfo(objGetStreamInfo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,18 +225,21 @@ public class StorageInfo extends NetObject  {
         }
     }
 
-    public StorageInfo[] GetSubStorages() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.io.DirectoryNotFoundException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.NotSupportedException {
+    public void DeleteStream(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.io.DirectoryNotFoundException, system.NotSupportedException, system.UnauthorizedAccessException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<StorageInfo> resultingArrayList = new ArrayList<StorageInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSubStorages");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new StorageInfo(resultingObject));
-            }
-            StorageInfo[] resultingArray = new StorageInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            classInstance.Invoke("DeleteStream", name);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DeleteSubStorage(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.io.DirectoryNotFoundException, system.io.IOException, system.UnauthorizedAccessException, system.NotSupportedException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.RankException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DeleteSubStorage", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,17 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.emit.AssemblyBuilder;
-import system.runtime.interopservices.TypeLibImporterFlags;
-import system.runtime.interopservices.ITypeLibImporterNotifySink;
-import system.runtime.interopservices.ITypeLibImporterNotifySinkImplementation;
-import system.reflection.StrongNameKeyPair;
-import system.Version;
+import system.Guid;
 import system.reflection.Assembly;
 import system.runtime.interopservices.TypeLibExporterFlags;
 import system.runtime.interopservices.ITypeLibExporterNotifySink;
 import system.runtime.interopservices.ITypeLibExporterNotifySinkImplementation;
-import system.Guid;
+import system.reflection.emit.AssemblyBuilder;
+import system.runtime.interopservices.ITypeLibImporterNotifySink;
+import system.runtime.interopservices.ITypeLibImporterNotifySinkImplementation;
+import system.reflection.StrongNameKeyPair;
+import system.runtime.interopservices.TypeLibImporterFlags;
+import system.Version;
 
 
 /**
@@ -114,17 +114,6 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
 
     // Methods section
     
-    public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, TypeLibImporterFlags flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, java.lang.String asmNamespace, Version asmVersion) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objConvertTypeLibToAssembly = (JCObject)classInstance.Invoke("ConvertTypeLibToAssembly", typeLib == null ? null : typeLib.getJCOInstance(), asmFileName, flags == null ? null : flags.getJCOInstance(), notifySink == null ? null : notifySink.getJCOInstance(), publicKey, keyPair == null ? null : keyPair.getJCOInstance(), asmNamespace, asmVersion == null ? null : asmVersion.getJCOInstance());
-            return new AssemblyBuilder(objConvertTypeLibToAssembly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject ConvertAssemblyToTypeLib(Assembly assembly, java.lang.String typeLibName, TypeLibExporterFlags flags, ITypeLibExporterNotifySink notifySink) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -141,6 +130,17 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objConvertTypeLibToAssembly = (JCObject)classInstance.Invoke("ConvertTypeLibToAssembly", typeLib == null ? null : typeLib.getJCOInstance(), asmFileName, flags, notifySink == null ? null : notifySink.getJCOInstance(), publicKey, keyPair == null ? null : keyPair.getJCOInstance(), unsafeInterfaces);
+            return new AssemblyBuilder(objConvertTypeLibToAssembly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, TypeLibImporterFlags flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, java.lang.String asmNamespace, Version asmVersion) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objConvertTypeLibToAssembly = (JCObject)classInstance.Invoke("ConvertTypeLibToAssembly", typeLib == null ? null : typeLib.getJCOInstance(), asmFileName, flags == null ? null : flags.getJCOInstance(), notifySink == null ? null : notifySink.getJCOInstance(), publicKey, keyPair == null ? null : keyPair.getJCOInstance(), asmNamespace, asmVersion == null ? null : asmVersion.getJCOInstance());
             return new AssemblyBuilder(objConvertTypeLibToAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

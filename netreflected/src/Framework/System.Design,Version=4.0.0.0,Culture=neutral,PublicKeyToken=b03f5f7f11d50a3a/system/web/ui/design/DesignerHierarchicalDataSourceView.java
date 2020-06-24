@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.web.ui.IHierarchicalEnumerable;
 import system.web.ui.IHierarchicalEnumerableImplementation;
-import system.web.ui.design.IHierarchicalDataSourceDesigner;
-import system.web.ui.design.IHierarchicalDataSourceDesignerImplementation;
 import system.web.ui.design.IDataSourceSchema;
 import system.web.ui.design.IDataSourceSchemaImplementation;
+import system.web.ui.design.IHierarchicalDataSourceDesigner;
+import system.web.ui.design.IHierarchicalDataSourceDesignerImplementation;
 
 
 /**
@@ -122,17 +122,6 @@ public class DesignerHierarchicalDataSourceView extends NetObject  {
     
     // Properties section
     
-    public IHierarchicalDataSourceDesigner getDataSourceDesigner() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DataSourceDesigner");
-            return new IHierarchicalDataSourceDesignerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -149,6 +138,17 @@ public class DesignerHierarchicalDataSourceView extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Schema");
             return new IDataSourceSchemaImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IHierarchicalDataSourceDesigner getDataSourceDesigner() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DataSourceDesigner");
+            return new IHierarchicalDataSourceDesignerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,16 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Single;
+import system.data.common.DbDataReader;
+import system.data.common.DbDataRecord;
+import system.data.IDataReader;
+import system.data.IDataReaderImplementation;
 import system.DateTime;
 import system.Decimal;
-import system.Single;
 import system.Guid;
 import system.data.IDataRecord;
 import system.data.IDataRecordImplementation;
-import system.data.common.DbDataRecord;
-import system.data.common.DbDataReader;
-import system.data.IDataReader;
-import system.data.IDataReaderImplementation;
 import system.data.common.DataRecordInfo;
 
 
@@ -133,21 +133,21 @@ public class OriginalValueRecord extends NetObject  {
         }
     }
 
-    public byte GetByte(int ordinal) throws Throwable {
+    public boolean IsDBNull(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (byte)classInstance.Invoke("GetByte", ordinal);
+            return (boolean)classInstance.Invoke("IsDBNull", ordinal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public long GetBytes(int ordinal, long dataIndex, byte[] buffer, int bufferIndex, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public byte GetByte(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Invoke("GetBytes", ordinal, dataIndex, buffer, bufferIndex, length);
+            return (byte)classInstance.Invoke("GetByte", ordinal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,6 +163,76 @@ public class OriginalValueRecord extends NetObject  {
         }
     }
 
+    public double GetDouble(int ordinal) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Invoke("GetDouble", ordinal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public short GetInt16(int ordinal) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (short)classInstance.Invoke("GetInt16", ordinal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetInt32(int ordinal) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetInt32", ordinal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetOrdinal(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetOrdinal", name);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetValues(NetObject[] values) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetValues", (Object)toObjectFromArray(values));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int SetValues(NetObject... values) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("SetValues", (Object)toObjectFromArray(values));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long GetBytes(int ordinal, long dataIndex, byte[] buffer, int bufferIndex, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("GetBytes", ordinal, dataIndex, buffer, bufferIndex, length);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public long GetChars(int ordinal, long dataIndex, char[] buffer, int bufferIndex, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -173,11 +243,55 @@ public class OriginalValueRecord extends NetObject  {
         }
     }
 
-    public java.lang.String GetDataTypeName(int ordinal) throws Throwable {
+    public long GetInt64(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetDataTypeName", ordinal);
+            return (long)classInstance.Invoke("GetInt64", ordinal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Single GetFloat(int ordinal) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetFloat = (JCObject)classInstance.Invoke("GetFloat", ordinal);
+            return new Single(objGetFloat);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbDataReader GetDataReader(int i) throws Throwable, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDataReader = (JCObject)classInstance.Invoke("GetDataReader", i);
+            return new DbDataReader(objGetDataReader);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbDataRecord GetDataRecord(int ordinal) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDataRecord = (JCObject)classInstance.Invoke("GetDataRecord", ordinal);
+            return new DbDataRecord(objGetDataRecord);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDataReader GetData(int i) throws Throwable, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", i);
+            return new IDataReaderImplementation(objGetData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,104 +319,12 @@ public class OriginalValueRecord extends NetObject  {
         }
     }
 
-    public double GetDouble(int ordinal) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Invoke("GetDouble", ordinal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType GetFieldType(int ordinal) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetFieldType = (JCObject)classInstance.Invoke("GetFieldType", ordinal);
-            return new NetType(objGetFieldType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Single GetFloat(int ordinal) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetFloat = (JCObject)classInstance.Invoke("GetFloat", ordinal);
-            return new Single(objGetFloat);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Guid GetGuid(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetGuid = (JCObject)classInstance.Invoke("GetGuid", ordinal);
             return new Guid(objGetGuid);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public short GetInt16(int ordinal) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (short)classInstance.Invoke("GetInt16", ordinal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetInt32(int ordinal) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetInt32", ordinal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public long GetInt64(int ordinal) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Invoke("GetInt64", ordinal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetName(int ordinal) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetName", ordinal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetOrdinal(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetOrdinal", name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetString(int ordinal) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetString", ordinal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,21 +341,42 @@ public class OriginalValueRecord extends NetObject  {
         }
     }
 
-    public int GetValues(NetObject[] values) throws Throwable, system.ArgumentNullException {
+    public java.lang.String GetDataTypeName(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetValues", (Object)toObjectFromArray(values));
+            return (java.lang.String)classInstance.Invoke("GetDataTypeName", ordinal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean IsDBNull(int ordinal) throws Throwable {
+    public java.lang.String GetName(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDBNull", ordinal);
+            return (java.lang.String)classInstance.Invoke("GetName", ordinal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetString(int ordinal) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetString", ordinal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType GetFieldType(int ordinal) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetFieldType = (JCObject)classInstance.Invoke("GetFieldType", ordinal);
+            return new NetType(objGetFieldType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,6 +427,16 @@ public class OriginalValueRecord extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDateTime", ordinal, value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetDBNull(int ordinal) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetDBNull", ordinal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,59 +527,6 @@ public class OriginalValueRecord extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", ordinal, value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int SetValues(NetObject... values) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("SetValues", (Object)toObjectFromArray(values));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetDBNull(int ordinal) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetDBNull", ordinal);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbDataRecord GetDataRecord(int ordinal) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDataRecord = (JCObject)classInstance.Invoke("GetDataRecord", ordinal);
-            return new DbDataRecord(objGetDataRecord);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbDataReader GetDataReader(int i) throws Throwable, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDataReader = (JCObject)classInstance.Invoke("GetDataReader", i);
-            return new DbDataReader(objGetDataReader);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDataReader GetData(int i) throws Throwable, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", i);
-            return new IDataReaderImplementation(objGetData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -105,11 +105,11 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
 
     // Methods section
     
-    public void OnViewChange(int aspect, int index) throws Throwable {
+    public void OnClose() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("OnViewChange", aspect, index);
+            classInstance.Invoke("OnClose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -135,11 +135,11 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
         }
     }
 
-    public void OnClose() throws Throwable {
+    public void OnViewChange(int aspect, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("OnClose");
+            classInstance.Invoke("OnViewChange", aspect, index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -116,41 +116,21 @@ public class ActivitySymbol extends NetObject  {
     
     // Properties section
     
-    public int getStartLine() throws Throwable {
+    public int getEndColumn() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("StartLine");
+            return (int)classInstance.Get("EndColumn");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setStartLine(int StartLine) throws Throwable {
+    public void setEndColumn(int EndColumn) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("StartLine", StartLine);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getStartColumn() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("StartColumn");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setStartColumn(int StartColumn) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("StartColumn", StartColumn);
+            classInstance.Set("EndColumn", EndColumn);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,21 +156,41 @@ public class ActivitySymbol extends NetObject  {
         }
     }
 
-    public int getEndColumn() throws Throwable {
+    public int getStartColumn() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("EndColumn");
+            return (int)classInstance.Get("StartColumn");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEndColumn(int EndColumn) throws Throwable {
+    public void setStartColumn(int StartColumn) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("EndColumn", EndColumn);
+            classInstance.Set("StartColumn", StartColumn);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getStartLine() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("StartLine");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setStartLine(int StartLine) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("StartLine", StartLine);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

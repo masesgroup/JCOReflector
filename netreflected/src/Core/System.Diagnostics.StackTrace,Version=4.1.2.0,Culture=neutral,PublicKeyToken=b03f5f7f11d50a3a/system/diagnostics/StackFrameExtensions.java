@@ -113,11 +113,11 @@ public class StackFrameExtensions extends NetObject  {
     
     // Methods section
     
-    public static boolean HasNativeImage(StackFrame stackFrame) throws Throwable {
+    public static boolean HasILOffset(StackFrame stackFrame) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("HasNativeImage", stackFrame == null ? null : stackFrame.getJCOInstance());
+            return (boolean)classType.Invoke("HasILOffset", stackFrame == null ? null : stackFrame.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -133,11 +133,11 @@ public class StackFrameExtensions extends NetObject  {
         }
     }
 
-    public static boolean HasILOffset(StackFrame stackFrame) throws Throwable {
+    public static boolean HasNativeImage(StackFrame stackFrame) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("HasILOffset", stackFrame == null ? null : stackFrame.getJCOInstance());
+            return (boolean)classType.Invoke("HasNativeImage", stackFrame == null ? null : stackFrame.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

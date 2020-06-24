@@ -120,6 +120,46 @@ public class InstanceView extends NetObject  {
     
     // Properties section
     
+    public boolean getIsBoundToInstance() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsBoundToInstance");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIsBoundToInstance(boolean IsBoundToInstance) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IsBoundToInstance", IsBoundToInstance);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsBoundToInstanceOwner() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsBoundToInstanceOwner");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsBoundToLock() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsBoundToLock");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getInstanceId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -141,26 +181,6 @@ public class InstanceView extends NetObject  {
         }
     }
 
-    public boolean getIsBoundToInstance() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsBoundToInstance");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIsBoundToInstance(boolean IsBoundToInstance) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IsBoundToInstance", IsBoundToInstance);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public InstanceOwner getInstanceOwner() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -177,26 +197,6 @@ public class InstanceView extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceOwner", InstanceOwner == null ? null : InstanceOwner.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsBoundToInstanceOwner() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsBoundToInstanceOwner");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsBoundToLock() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsBoundToLock");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,6 +244,27 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    public InstanceValueConsistency getInstanceKeysConsistency() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("InstanceKeysConsistency");
+            return new InstanceValueConsistency(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInstanceKeysConsistency(InstanceValueConsistency InstanceKeysConsistency) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InstanceKeysConsistency", InstanceKeysConsistency == null ? null : InstanceKeysConsistency.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public InstanceValueConsistency getInstanceMetadataConsistency() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -281,27 +302,6 @@ public class InstanceView extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceOwnerMetadataConsistency", InstanceOwnerMetadataConsistency == null ? null : InstanceOwnerMetadataConsistency.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public InstanceValueConsistency getInstanceKeysConsistency() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InstanceKeysConsistency");
-            return new InstanceValueConsistency(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInstanceKeysConsistency(InstanceValueConsistency InstanceKeysConsistency) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InstanceKeysConsistency", InstanceKeysConsistency == null ? null : InstanceKeysConsistency.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,12 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.webcontrols.Parameter;
+import system.data.DbType;
 import system.TypeCode;
 import system.collections.specialized.IOrderedDictionary;
 import system.collections.specialized.IOrderedDictionaryImplementation;
 import system.web.HttpContext;
 import system.web.ui.Control;
-import system.data.DbType;
 import system.Array;
 import system.EventHandler;
 
@@ -132,11 +132,21 @@ public class ParameterCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(Parameter parameter) throws Throwable {
+    public boolean Contains(Parameter parameter) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", parameter == null ? null : parameter.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", parameter == null ? null : parameter.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int Add(java.lang.String name, DbType dbType, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Add", name, dbType == null ? null : dbType.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,21 +172,21 @@ public class ParameterCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(Parameter parameter) throws Throwable {
+    public int Add(Parameter parameter) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", parameter == null ? null : parameter.getJCOInstance());
+            return (int)classInstance.Invoke("Add", parameter == null ? null : parameter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void CopyTo(Parameter[] parameterArray, int index) throws Throwable, system.ArgumentException {
+    public int IndexOf(Parameter parameter) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CopyTo", toObjectFromArray(parameterArray), index);
+            return (int)classInstance.Invoke("IndexOf", parameter == null ? null : parameter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,11 +203,31 @@ public class ParameterCollection extends NetObject  {
         }
     }
 
-    public int IndexOf(Parameter parameter) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("IndexOf", parameter == null ? null : parameter.getJCOInstance());
+            classInstance.Invoke("Clear");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CopyTo(Array array, int index) throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CopyTo(Parameter[] parameterArray, int index) throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CopyTo", toObjectFromArray(parameterArray), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,51 +263,21 @@ public class ParameterCollection extends NetObject  {
         }
     }
 
-    public void UpdateValues(HttpContext context, Control control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UpdateValues", context == null ? null : context.getJCOInstance(), control == null ? null : control.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int Add(java.lang.String name, DbType dbType, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("Add", name, dbType == null ? null : dbType.getJCOInstance(), value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Clear() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(Array array, int index) throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void SetDirty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDirty");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UpdateValues(HttpContext context, Control control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateValues", context == null ? null : context.getJCOInstance(), control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

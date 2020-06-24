@@ -174,32 +174,11 @@ public class StackFrame extends NetObject  {
     
     // Methods section
     
-    public MethodBase GetMethod() throws Throwable {
+    public int GetFileColumnNumber() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod");
-            return new MethodBase(objGetMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetILOffset() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetILOffset");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetFileName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetFileName");
+            return (int)classInstance.Invoke("GetFileColumnNumber");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,6 +194,16 @@ public class StackFrame extends NetObject  {
         }
     }
 
+    public int GetILOffset() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetILOffset");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int GetNativeOffset() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -225,11 +214,22 @@ public class StackFrame extends NetObject  {
         }
     }
 
-    public int GetFileColumnNumber() throws Throwable {
+    public MethodBase GetMethod() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetFileColumnNumber");
+            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod");
+            return new MethodBase(objGetMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetFileName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetFileName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

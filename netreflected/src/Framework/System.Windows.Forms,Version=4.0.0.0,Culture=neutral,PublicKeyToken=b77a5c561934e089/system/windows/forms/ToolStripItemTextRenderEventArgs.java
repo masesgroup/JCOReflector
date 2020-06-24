@@ -43,10 +43,10 @@ import system.windows.forms.ToolStripItem;
 import system.drawing.Rectangle;
 import system.drawing.Color;
 import system.drawing.Font;
-import system.windows.forms.TextFormatFlags;
 import system.drawing.ContentAlignment;
-import system.windows.forms.ToolStripTextDirection;
+import system.windows.forms.TextFormatFlags;
 import system.windows.forms.ToolStrip;
+import system.windows.forms.ToolStripTextDirection;
 
 
 /**
@@ -118,21 +118,21 @@ public class ToolStripItemTextRenderEventArgs extends NetObject  {
     // Constructors section
     
 
-    public ToolStripItemTextRenderEventArgs(Graphics g, ToolStripItem item, java.lang.String text, Rectangle textRectangle, Color textColor, Font textFont, TextFormatFlags format) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(g == null ? null : g.getJCOInstance(), item == null ? null : item.getJCOInstance(), text, textRectangle == null ? null : textRectangle.getJCOInstance(), textColor == null ? null : textColor.getJCOInstance(), textFont == null ? null : textFont.getJCOInstance(), format == null ? null : format.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ToolStripItemTextRenderEventArgs(Graphics g, ToolStripItem item, java.lang.String text, Rectangle textRectangle, Color textColor, Font textFont, ContentAlignment textAlign) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(g == null ? null : g.getJCOInstance(), item == null ? null : item.getJCOInstance(), text, textRectangle == null ? null : textRectangle.getJCOInstance(), textColor == null ? null : textColor.getJCOInstance(), textFont == null ? null : textFont.getJCOInstance(), textAlign == null ? null : textAlign.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ToolStripItemTextRenderEventArgs(Graphics g, ToolStripItem item, java.lang.String text, Rectangle textRectangle, Color textColor, Font textFont, TextFormatFlags format) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(g == null ? null : g.getJCOInstance(), item == null ? null : item.getJCOInstance(), text, textRectangle == null ? null : textRectangle.getJCOInstance(), textColor == null ? null : textColor.getJCOInstance(), textFont == null ? null : textFont.getJCOInstance(), format == null ? null : format.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -146,26 +146,6 @@ public class ToolStripItemTextRenderEventArgs extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getText() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Text");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setText(java.lang.String Text) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Text", Text);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Color getTextColor() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -208,6 +188,17 @@ public class ToolStripItemTextRenderEventArgs extends NetObject  {
         }
     }
 
+    public Graphics getGraphics() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Graphics");
+            return new Graphics(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Rectangle getTextRectangle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -224,6 +215,26 @@ public class ToolStripItemTextRenderEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextRectangle", TextRectangle == null ? null : TextRectangle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getText() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Text");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setText(java.lang.String Text) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,33 +261,12 @@ public class ToolStripItemTextRenderEventArgs extends NetObject  {
         }
     }
 
-    public ToolStripTextDirection getTextDirection() throws Throwable {
+    public ToolStrip getToolStrip() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TextDirection");
-            return new ToolStripTextDirection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTextDirection(ToolStripTextDirection TextDirection) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TextDirection", TextDirection == null ? null : TextDirection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Graphics getGraphics() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
-            return new Graphics(val);
+            JCObject val = (JCObject)classInstance.Get("ToolStrip");
+            return new ToolStrip(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,12 +283,22 @@ public class ToolStripItemTextRenderEventArgs extends NetObject  {
         }
     }
 
-    public ToolStrip getToolStrip() throws Throwable {
+    public ToolStripTextDirection getTextDirection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolStrip");
-            return new ToolStrip(val);
+            JCObject val = (JCObject)classInstance.Get("TextDirection");
+            return new ToolStripTextDirection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTextDirection(ToolStripTextDirection TextDirection) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TextDirection", TextDirection == null ? null : TextDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

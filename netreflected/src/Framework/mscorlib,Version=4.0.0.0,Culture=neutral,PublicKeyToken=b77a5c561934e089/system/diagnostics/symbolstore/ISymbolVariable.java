@@ -96,21 +96,21 @@ public interface ISymbolVariable extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable;
-
-    public NetObject getAttributes() throws Throwable;
-
-    public SymAddressKind getAddressKind() throws Throwable;
-
     public int getAddressField1() throws Throwable;
 
     public int getAddressField2() throws Throwable;
 
     public int getAddressField3() throws Throwable;
 
+    public int getEndOffset() throws Throwable;
+
     public int getStartOffset() throws Throwable;
 
-    public int getEndOffset() throws Throwable;
+    public SymAddressKind getAddressKind() throws Throwable;
+
+    public NetObject getAttributes() throws Throwable;
+
+    public java.lang.String getName() throws Throwable;
 
 
 

@@ -125,11 +125,11 @@ public class TransactionScope extends NetObject  {
     
     // Methods section
     
-    public boolean ShouldSerializeTimeout() throws Throwable {
+    public boolean ShouldSerializeDisplayName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeTimeout");
+            return (boolean)classInstance.Invoke("ShouldSerializeDisplayName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,11 +145,11 @@ public class TransactionScope extends NetObject  {
         }
     }
 
-    public boolean ShouldSerializeDisplayName() throws Throwable {
+    public boolean ShouldSerializeTimeout() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeDisplayName");
+            return (boolean)classInstance.Invoke("ShouldSerializeTimeout");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,27 +159,6 @@ public class TransactionScope extends NetObject  {
     
     // Properties section
     
-    public Activity getBody() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Body");
-            return new Activity(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBody(Activity Body) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Body", Body == null ? null : Body.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getAbortInstanceOnTransactionFailure() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -200,22 +179,22 @@ public class TransactionScope extends NetObject  {
         }
     }
 
-    public IsolationLevel getIsolationLevel() throws Throwable {
+    public Activity getBody() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("IsolationLevel");
-            return new IsolationLevel(val);
+            JCObject val = (JCObject)classInstance.Get("Body");
+            return new Activity(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIsolationLevel(IsolationLevel IsolationLevel) throws Throwable {
+    public void setBody(Activity Body) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IsolationLevel", IsolationLevel == null ? null : IsolationLevel.getJCOInstance());
+            classInstance.Set("Body", Body == null ? null : Body.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,6 +225,27 @@ public class TransactionScope extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Id");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IsolationLevel getIsolationLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("IsolationLevel");
+            return new IsolationLevel(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIsolationLevel(IsolationLevel IsolationLevel) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IsolationLevel", IsolationLevel == null ? null : IsolationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

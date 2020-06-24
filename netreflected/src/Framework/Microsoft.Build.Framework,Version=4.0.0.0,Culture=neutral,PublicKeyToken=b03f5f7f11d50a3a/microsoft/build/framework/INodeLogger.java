@@ -92,9 +92,9 @@ public interface INodeLogger extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Initialize(IEventSource eventSource, int nodeCount) throws Throwable;
-
     public void Initialize(IEventSource eventSource) throws Throwable;
+
+    public void Initialize(IEventSource eventSource, int nodeCount) throws Throwable;
 
     public void Shutdown() throws Throwable;
 

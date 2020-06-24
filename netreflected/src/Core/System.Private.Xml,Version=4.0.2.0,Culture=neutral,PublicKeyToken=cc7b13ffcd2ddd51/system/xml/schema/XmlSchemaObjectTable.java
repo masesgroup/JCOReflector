@@ -41,9 +41,9 @@ import java.util.ArrayList;
 import system.xml.XmlQualifiedName;
 import system.collections.IDictionaryEnumerator;
 import system.collections.IDictionaryEnumeratorImplementation;
-import system.xml.schema.XmlSchemaObject;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.xml.schema.XmlSchemaObject;
 
 
 /**

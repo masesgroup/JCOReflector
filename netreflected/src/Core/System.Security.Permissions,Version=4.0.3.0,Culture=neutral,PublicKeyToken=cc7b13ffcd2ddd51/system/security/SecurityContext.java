@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.SecurityContext;
-import system.threading.ContextCallback;
 import system.threading.AsyncFlowControl;
+import system.threading.ContextCallback;
 
 
 /**
@@ -115,6 +115,26 @@ public class SecurityContext extends NetObject  {
     
     // Methods section
     
+    public static boolean IsFlowSuppressed() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsFlowSuppressed");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean IsWindowsIdentityFlowSuppressed() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsWindowsIdentityFlowSuppressed");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static SecurityContext Capture() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -137,31 +157,33 @@ public class SecurityContext extends NetObject  {
         }
     }
 
+    public static AsyncFlowControl SuppressFlow() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSuppressFlow = (JCObject)classType.Invoke("SuppressFlow");
+            return new AsyncFlowControl(objSuppressFlow);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static AsyncFlowControl SuppressFlowWindowsIdentity() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSuppressFlowWindowsIdentity = (JCObject)classType.Invoke("SuppressFlowWindowsIdentity");
+            return new AsyncFlowControl(objSuppressFlowWindowsIdentity);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsFlowSuppressed() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsFlowSuppressed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsWindowsIdentityFlowSuppressed() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsWindowsIdentityFlowSuppressed");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,28 +204,6 @@ public class SecurityContext extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Run", securityContext == null ? null : securityContext.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static AsyncFlowControl SuppressFlow() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSuppressFlow = (JCObject)classType.Invoke("SuppressFlow");
-            return new AsyncFlowControl(objSuppressFlow);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static AsyncFlowControl SuppressFlowWindowsIdentity() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSuppressFlowWindowsIdentity = (JCObject)classType.Invoke("SuppressFlowWindowsIdentity");
-            return new AsyncFlowControl(objSuppressFlowWindowsIdentity);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

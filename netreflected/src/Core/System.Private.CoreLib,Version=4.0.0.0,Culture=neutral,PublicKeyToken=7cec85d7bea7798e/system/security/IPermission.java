@@ -92,19 +92,19 @@ public interface IPermission extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IPermission Copy() throws Throwable;
+    public boolean IsSubsetOf(IPermission target) throws Throwable;
 
-    public void Demand() throws Throwable;
+    public IPermission Copy() throws Throwable;
 
     public IPermission Intersect(IPermission target) throws Throwable;
 
-    public boolean IsSubsetOf(IPermission target) throws Throwable;
-
     public IPermission Union(IPermission target) throws Throwable;
 
-    public void FromXml(SecurityElement e) throws Throwable;
-
     public SecurityElement ToXml() throws Throwable;
+
+    public void Demand() throws Throwable;
+
+    public void FromXml(SecurityElement e) throws Throwable;
 
 
     

@@ -116,6 +116,16 @@ public class ScopingExtensions extends NetObject  {
     
     // Methods section
     
+    public static boolean ContainsPartMetadataWithKey(ComposablePartDefinition part, java.lang.String key) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ContainsPartMetadataWithKey", part == null ? null : part.getJCOInstance(), key);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static boolean Exports(ComposablePartDefinition part, java.lang.String contractName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -141,16 +151,6 @@ public class ScopingExtensions extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("Imports", part == null ? null : part.getJCOInstance(), contractName, importCardinality == null ? null : importCardinality.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ContainsPartMetadataWithKey(ComposablePartDefinition part, java.lang.String key) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ContainsPartMetadataWithKey", part == null ? null : part.getJCOInstance(), key);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

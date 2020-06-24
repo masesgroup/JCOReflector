@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.linq.expressions.InvocationExpression;
 import system.linq.expressions.Expression;
+import system.linq.expressions.InvocationExpression;
 import system.linq.expressions.ExpressionType;
 
 
@@ -163,23 +163,21 @@ public class InvocationExpression extends NetObject  {
     
     // Properties section
     
-    public NetType getType() throws Throwable {
+    public boolean getCanReduce() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new NetType(val);
+            return (boolean)classInstance.Get("CanReduce");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ExpressionType getNodeType() throws Throwable {
+    public int getArgumentCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NodeType");
-            return new ExpressionType(val);
+            return (int)classInstance.Get("ArgumentCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,21 +194,23 @@ public class InvocationExpression extends NetObject  {
         }
     }
 
-    public int getArgumentCount() throws Throwable {
+    public ExpressionType getNodeType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("ArgumentCount");
+            JCObject val = (JCObject)classInstance.Get("NodeType");
+            return new ExpressionType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getCanReduce() throws Throwable {
+    public NetType getType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CanReduce");
+            JCObject val = (JCObject)classInstance.Get("Type");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

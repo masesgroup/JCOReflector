@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.remoting.channels.IClientChannelSinkProvider;
-import system.runtime.remoting.channels.IClientChannelSinkProviderImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.runtime.remoting.channels.IClientChannelSinkProvider;
+import system.runtime.remoting.channels.IClientChannelSinkProviderImplementation;
 import system.runtime.remoting.messaging.IMessageSink;
 import system.runtime.remoting.messaging.IMessageSinkImplementation;
 
@@ -125,21 +125,21 @@ public class TcpClientChannel extends NetObject  {
         }
     }
 
-    public TcpClientChannel(java.lang.String name, IClientChannelSinkProvider sinkProvider) throws Throwable, system.ArgumentNullException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, sinkProvider == null ? null : sinkProvider.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TcpClientChannel(IDictionary properties, IClientChannelSinkProvider sinkProvider) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(properties == null ? null : properties.getJCOInstance(), sinkProvider == null ? null : sinkProvider.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TcpClientChannel(java.lang.String name, IClientChannelSinkProvider sinkProvider) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, sinkProvider == null ? null : sinkProvider.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

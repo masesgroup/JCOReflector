@@ -150,17 +150,6 @@ public class PrintPageEventArgs extends NetObject  {
         }
     }
 
-    public Graphics getGraphics() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
-            return new Graphics(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getHasMorePages() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,6 +165,28 @@ public class PrintPageEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasMorePages", HasMorePages);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Graphics getGraphics() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Graphics");
+            return new Graphics(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PageSettings getPageSettings() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PageSettings");
+            return new PageSettings(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,17 +209,6 @@ public class PrintPageEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("PageBounds");
             return new Rectangle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PageSettings getPageSettings() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PageSettings");
-            return new PageSettings(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

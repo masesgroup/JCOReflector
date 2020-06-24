@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.remoting.contexts.IContextProperty;
-import system.runtime.remoting.contexts.IContextPropertyImplementation;
-import system.runtime.remoting.contexts.CrossContextDelegate;
-import system.LocalDataStoreSlot;
 import system.runtime.remoting.contexts.IDynamicProperty;
 import system.runtime.remoting.contexts.IDynamicPropertyImplementation;
 import system.ContextBoundObject;
 import system.runtime.remoting.contexts.Context;
+import system.LocalDataStoreSlot;
+import system.runtime.remoting.contexts.IContextProperty;
+import system.runtime.remoting.contexts.IContextPropertyImplementation;
+import system.runtime.remoting.contexts.CrossContextDelegate;
 
 
 /**
@@ -131,42 +131,21 @@ public class Context extends NetObject  {
     
     // Methods section
     
-    public void SetProperty(IContextProperty prop) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean RegisterDynamicProperty(IDynamicProperty prop, ContextBoundObject obj, Context ctx) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.runtime.remoting.RemotingException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("SetProperty", prop == null ? null : prop.getJCOInstance());
+            return (boolean)classType.Invoke("RegisterDynamicProperty", prop == null ? null : prop.getJCOInstance(), obj == null ? null : obj.getJCOInstance(), ctx == null ? null : ctx.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IContextProperty GetProperty(java.lang.String name) throws Throwable, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean UnregisterDynamicProperty(java.lang.String name, ContextBoundObject obj, Context ctx) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetProperty = (JCObject)classInstance.Invoke("GetProperty", name);
-            return new IContextPropertyImplementation(objGetProperty);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Freeze() throws Throwable, system.ArgumentException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Freeze");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DoCallBack(CrossContextDelegate deleg) throws Throwable, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DoCallBack", deleg);
+            return (boolean)classType.Invoke("UnregisterDynamicProperty", name, obj == null ? null : obj.getJCOInstance(), ctx == null ? null : ctx.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,11 +184,53 @@ public class Context extends NetObject  {
         }
     }
 
+    public static NetObject GetData(LocalDataStoreSlot slot) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetData = (JCObject)classType.Invoke("GetData", slot == null ? null : slot.getJCOInstance());
+            return new NetObject(objGetData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IContextProperty GetProperty(java.lang.String name) throws Throwable, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetProperty = (JCObject)classInstance.Invoke("GetProperty", name);
+            return new IContextPropertyImplementation(objGetProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DoCallBack(CrossContextDelegate deleg) throws Throwable, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DoCallBack", deleg);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void FreeNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FreeNamedDataSlot", name);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Freeze() throws Throwable, system.ArgumentException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Freeze");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,32 +246,11 @@ public class Context extends NetObject  {
         }
     }
 
-    public static NetObject GetData(LocalDataStoreSlot slot) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void SetProperty(IContextProperty prop) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetData = (JCObject)classType.Invoke("GetData", slot == null ? null : slot.getJCOInstance());
-            return new NetObject(objGetData);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean RegisterDynamicProperty(IDynamicProperty prop, ContextBoundObject obj, Context ctx) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.runtime.remoting.RemotingException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("RegisterDynamicProperty", prop == null ? null : prop.getJCOInstance(), obj == null ? null : obj.getJCOInstance(), ctx == null ? null : ctx.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean UnregisterDynamicProperty(java.lang.String name, ContextBoundObject obj, Context ctx) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("UnregisterDynamicProperty", name, obj == null ? null : obj.getJCOInstance(), ctx == null ? null : ctx.getJCOInstance());
+            classInstance.Invoke("SetProperty", prop == null ? null : prop.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,6 +270,17 @@ public class Context extends NetObject  {
         }
     }
 
+    public static Context getDefaultContext() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("DefaultContext");
+            return new Context(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IContextProperty[] getContextProperties() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -282,17 +293,6 @@ public class Context extends NetObject  {
             IContextProperty[] resultingArray = new IContextProperty[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Context getDefaultContext() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("DefaultContext");
-            return new Context(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

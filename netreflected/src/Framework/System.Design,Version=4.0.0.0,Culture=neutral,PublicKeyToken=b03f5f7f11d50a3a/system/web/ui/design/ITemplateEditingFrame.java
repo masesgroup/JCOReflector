@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.web.ui.webcontrols.Style;
 import system.web.ui.design.TemplateEditingVerb;
+import system.web.ui.webcontrols.Style;
 
 
 /**
@@ -93,6 +93,8 @@ public interface ITemplateEditingFrame extends IJCOBridgeReflected {
     
     public void Close(boolean saveChanges) throws Throwable;
 
+    public void Dispose() throws Throwable;
+
     public void Open() throws Throwable;
 
     public void Resize(int width, int height) throws Throwable;
@@ -101,16 +103,10 @@ public interface ITemplateEditingFrame extends IJCOBridgeReflected {
 
     public void UpdateControlName(java.lang.String newName) throws Throwable;
 
-    public void Dispose() throws Throwable;
-
 
     
     // Properties section
     
-    public Style getControlStyle() throws Throwable;
-
-    public java.lang.String getName() throws Throwable;
-
     public int getInitialHeight() throws Throwable;
 
     public void setInitialHeight(int InitialHeight) throws Throwable;
@@ -119,13 +115,17 @@ public interface ITemplateEditingFrame extends IJCOBridgeReflected {
 
     public void setInitialWidth(int InitialWidth) throws Throwable;
 
-    public java.lang.String[] getTemplateNames() throws Throwable;
+    public java.lang.String getName() throws Throwable;
 
-    public Style[] getTemplateStyles() throws Throwable;
+    public java.lang.String[] getTemplateNames() throws Throwable;
 
     public TemplateEditingVerb getVerb() throws Throwable;
 
     public void setVerb(TemplateEditingVerb Verb) throws Throwable;
+
+    public Style getControlStyle() throws Throwable;
+
+    public Style[] getTemplateStyles() throws Throwable;
 
 
 

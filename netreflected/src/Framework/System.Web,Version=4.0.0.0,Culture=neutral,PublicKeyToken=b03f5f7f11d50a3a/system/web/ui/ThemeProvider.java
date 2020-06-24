@@ -42,10 +42,10 @@ import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
-import system.web.ui.SkinBuilder;
-import system.web.ui.Control;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.web.ui.SkinBuilder;
+import system.web.ui.Control;
 
 
 /**
@@ -142,23 +142,23 @@ public class ThemeProvider extends NetObject  {
         }
     }
 
-    public SkinBuilder GetSkinBuilder(Control control) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSkinBuilder = (JCObject)classInstance.Invoke("GetSkinBuilder", control == null ? null : control.getJCOInstance());
-            return new SkinBuilder(objGetSkinBuilder);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IDictionary GetSkinControlBuildersForControlType(NetType type) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetSkinControlBuildersForControlType = (JCObject)classInstance.Invoke("GetSkinControlBuildersForControlType", type == null ? null : type.getJCOInstance());
             return new IDictionaryImplementation(objGetSkinControlBuildersForControlType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SkinBuilder GetSkinBuilder(Control control) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetSkinBuilder = (JCObject)classInstance.Invoke("GetSkinBuilder", control == null ? null : control.getJCOInstance());
+            return new SkinBuilder(objGetSkinBuilder);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

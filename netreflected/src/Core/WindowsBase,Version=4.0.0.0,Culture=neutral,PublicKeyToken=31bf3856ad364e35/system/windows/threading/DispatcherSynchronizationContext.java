@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.windows.threading.Dispatcher;
 import system.windows.threading.DispatcherPriority;
-import system.threading.SendOrPostCallback;
 import system.threading.SynchronizationContext;
+import system.threading.SendOrPostCallback;
 
 
 /**
@@ -113,6 +113,16 @@ public class DispatcherSynchronizationContext extends NetObject  {
     // Constructors section
     
 
+    public DispatcherSynchronizationContext() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException, system.TimeoutException, system.PlatformNotSupportedException, system.InvalidCastException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DispatcherSynchronizationContext(Dispatcher dispatcher) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -133,35 +143,15 @@ public class DispatcherSynchronizationContext extends NetObject  {
         }
     }
 
-    public DispatcherSynchronizationContext() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException, system.TimeoutException, system.PlatformNotSupportedException, system.InvalidCastException, system.ObjectDisposedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Methods section
     
-    public void Send(SendOrPostCallback d, NetObject state) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.NullReferenceException, system.threading.AbandonedMutexException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.TimeoutException {
+    public boolean IsWaitNotificationRequired() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Send", d, state == null ? null : state.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Post(SendOrPostCallback d, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidCastException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Post", d, state == null ? null : state.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsWaitNotificationRequired");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,11 +168,11 @@ public class DispatcherSynchronizationContext extends NetObject  {
         }
     }
 
-    public boolean IsWaitNotificationRequired() throws Throwable {
+    public void OperationCompleted() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsWaitNotificationRequired");
+            classInstance.Invoke("OperationCompleted");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,11 +188,21 @@ public class DispatcherSynchronizationContext extends NetObject  {
         }
     }
 
-    public void OperationCompleted() throws Throwable {
+    public void Post(SendOrPostCallback d, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidCastException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("OperationCompleted");
+            classInstance.Invoke("Post", d, state == null ? null : state.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Send(SendOrPostCallback d, NetObject state) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.NullReferenceException, system.threading.AbandonedMutexException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.TimeoutException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Send", d, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

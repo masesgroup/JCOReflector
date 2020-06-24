@@ -116,17 +116,6 @@ public class ZipFile extends NetObject  {
     
     // Methods section
     
-    public static ZipArchive OpenRead(java.lang.String archiveFileName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.io.InvalidDataException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objOpenRead = (JCObject)classType.Invoke("OpenRead", archiveFileName);
-            return new ZipArchive(objOpenRead);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static ZipArchive Open(java.lang.String archiveFileName, ZipArchiveMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -144,6 +133,17 @@ public class ZipFile extends NetObject  {
         try {
             JCObject objOpen = (JCObject)classType.Invoke("Open", archiveFileName, mode == null ? null : mode.getJCOInstance(), entryNameEncoding == null ? null : entryNameEncoding.getJCOInstance());
             return new ZipArchive(objOpen);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ZipArchive OpenRead(java.lang.String archiveFileName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.io.InvalidDataException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objOpenRead = (JCObject)classType.Invoke("OpenRead", archiveFileName);
+            return new ZipArchive(objOpenRead);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

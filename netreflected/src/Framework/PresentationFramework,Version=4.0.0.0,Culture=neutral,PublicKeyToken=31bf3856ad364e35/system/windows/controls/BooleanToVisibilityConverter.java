@@ -124,23 +124,23 @@ public class BooleanToVisibilityConverter extends NetObject  {
     
     // Methods section
     
-    public NetObject ConvertBack(NetObject value, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objConvertBack = (JCObject)classInstance.Invoke("ConvertBack", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
-            return new NetObject(objConvertBack);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject Convert(NetObject value, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objConvert = (JCObject)classInstance.Invoke("Convert", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
             return new NetObject(objConvert);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject ConvertBack(NetObject value, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objConvertBack = (JCObject)classInstance.Invoke("ConvertBack", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            return new NetObject(objConvertBack);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

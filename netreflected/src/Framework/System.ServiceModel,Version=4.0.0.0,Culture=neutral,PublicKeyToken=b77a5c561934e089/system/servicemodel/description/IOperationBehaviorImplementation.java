@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.description.OperationDescription;
-import system.servicemodel.dispatcher.DispatchOperation;
-import system.servicemodel.dispatcher.ClientOperation;
 import system.servicemodel.channels.BindingParameterCollection;
+import system.servicemodel.dispatcher.ClientOperation;
+import system.servicemodel.dispatcher.DispatchOperation;
 
 
 /**
@@ -107,21 +107,11 @@ public class IOperationBehaviorImplementation extends NetObject implements IOper
 
     // Methods section
     
-    public void Validate(OperationDescription operationDescription) throws Throwable {
+    public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Validate", operationDescription == null ? null : operationDescription.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ApplyDispatchBehavior", operationDescription == null ? null : operationDescription.getJCOInstance(), dispatchOperation == null ? null : dispatchOperation.getJCOInstance());
+            classInstance.Invoke("AddBindingParameters", operationDescription == null ? null : operationDescription.getJCOInstance(), bindingParameters == null ? null : bindingParameters.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -137,11 +127,21 @@ public class IOperationBehaviorImplementation extends NetObject implements IOper
         }
     }
 
-    public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable {
+    public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddBindingParameters", operationDescription == null ? null : operationDescription.getJCOInstance(), bindingParameters == null ? null : bindingParameters.getJCOInstance());
+            classInstance.Invoke("ApplyDispatchBehavior", operationDescription == null ? null : operationDescription.getJCOInstance(), dispatchOperation == null ? null : dispatchOperation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Validate(OperationDescription operationDescription) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Validate", operationDescription == null ? null : operationDescription.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -91,9 +91,9 @@ public interface IEditableObject extends IJCOBridgeReflected {
     
     public void BeginEdit() throws Throwable;
 
-    public void EndEdit() throws Throwable;
-
     public void CancelEdit() throws Throwable;
+
+    public void EndEdit() throws Throwable;
 
 
     

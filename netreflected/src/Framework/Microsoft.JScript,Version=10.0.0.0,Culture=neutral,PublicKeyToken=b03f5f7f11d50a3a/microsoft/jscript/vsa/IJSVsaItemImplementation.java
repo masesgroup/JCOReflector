@@ -129,21 +129,11 @@ public class IJSVsaItemImplementation extends NetObject implements IJSVsaItem {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable {
+    public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setName(java.lang.String Name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Name", Name);
+            return (boolean)classInstance.Get("IsDirty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,11 +150,21 @@ public class IJSVsaItemImplementation extends NetObject implements IJSVsaItem {
         }
     }
 
-    public boolean getIsDirty() throws Throwable {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsDirty");
+            return (java.lang.String)classInstance.Get("Name");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setName(java.lang.String Name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

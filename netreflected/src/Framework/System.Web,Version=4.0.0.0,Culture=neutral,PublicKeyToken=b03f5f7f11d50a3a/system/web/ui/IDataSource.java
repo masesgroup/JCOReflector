@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.web.ui.DataSourceView;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.web.ui.DataSourceView;
 import system.EventHandler;
 
 
@@ -93,9 +93,9 @@ public interface IDataSource extends IJCOBridgeReflected {
 
     // Methods section
     
-    public DataSourceView GetView(java.lang.String viewName) throws Throwable;
-
     public ICollection GetViewNames() throws Throwable;
+
+    public DataSourceView GetView(java.lang.String viewName) throws Throwable;
 
 
     

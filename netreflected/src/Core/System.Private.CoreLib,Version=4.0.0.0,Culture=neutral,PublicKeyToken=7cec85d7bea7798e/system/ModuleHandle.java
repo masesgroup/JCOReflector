@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.ModuleHandle;
+import system.RuntimeFieldHandle;
 import system.RuntimeTypeHandle;
 import system.RuntimeMethodHandle;
-import system.RuntimeFieldHandle;
 
 
 /**
@@ -126,34 +126,34 @@ public class ModuleHandle extends NetObject  {
         }
     }
 
-    public RuntimeTypeHandle GetRuntimeTypeHandleFromMetadataToken(int typeToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public RuntimeFieldHandle GetRuntimeFieldHandleFromMetadataToken(int fieldToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetRuntimeTypeHandleFromMetadataToken = (JCObject)classInstance.Invoke("GetRuntimeTypeHandleFromMetadataToken", typeToken);
-            return new RuntimeTypeHandle(objGetRuntimeTypeHandleFromMetadataToken);
+            JCObject objGetRuntimeFieldHandleFromMetadataToken = (JCObject)classInstance.Invoke("GetRuntimeFieldHandleFromMetadataToken", fieldToken);
+            return new RuntimeFieldHandle(objGetRuntimeFieldHandleFromMetadataToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RuntimeTypeHandle ResolveTypeHandle(int typeToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public RuntimeFieldHandle ResolveFieldHandle(int fieldToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveTypeHandle = (JCObject)classInstance.Invoke("ResolveTypeHandle", typeToken);
-            return new RuntimeTypeHandle(objResolveTypeHandle);
+            JCObject objResolveFieldHandle = (JCObject)classInstance.Invoke("ResolveFieldHandle", fieldToken);
+            return new RuntimeFieldHandle(objResolveFieldHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RuntimeTypeHandle ResolveTypeHandle(int typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public RuntimeFieldHandle ResolveFieldHandle(int fieldToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveTypeHandle = (JCObject)classInstance.Invoke("ResolveTypeHandle", typeToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
-            return new RuntimeTypeHandle(objResolveTypeHandle);
+            JCObject objResolveFieldHandle = (JCObject)classInstance.Invoke("ResolveFieldHandle", fieldToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
+            return new RuntimeFieldHandle(objResolveFieldHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,34 +192,34 @@ public class ModuleHandle extends NetObject  {
         }
     }
 
-    public RuntimeFieldHandle GetRuntimeFieldHandleFromMetadataToken(int fieldToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public RuntimeTypeHandle GetRuntimeTypeHandleFromMetadataToken(int typeToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetRuntimeFieldHandleFromMetadataToken = (JCObject)classInstance.Invoke("GetRuntimeFieldHandleFromMetadataToken", fieldToken);
-            return new RuntimeFieldHandle(objGetRuntimeFieldHandleFromMetadataToken);
+            JCObject objGetRuntimeTypeHandleFromMetadataToken = (JCObject)classInstance.Invoke("GetRuntimeTypeHandleFromMetadataToken", typeToken);
+            return new RuntimeTypeHandle(objGetRuntimeTypeHandleFromMetadataToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RuntimeFieldHandle ResolveFieldHandle(int fieldToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public RuntimeTypeHandle ResolveTypeHandle(int typeToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveFieldHandle = (JCObject)classInstance.Invoke("ResolveFieldHandle", fieldToken);
-            return new RuntimeFieldHandle(objResolveFieldHandle);
+            JCObject objResolveTypeHandle = (JCObject)classInstance.Invoke("ResolveTypeHandle", typeToken);
+            return new RuntimeTypeHandle(objResolveTypeHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RuntimeFieldHandle ResolveFieldHandle(int fieldToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public RuntimeTypeHandle ResolveTypeHandle(int typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveFieldHandle = (JCObject)classInstance.Invoke("ResolveFieldHandle", fieldToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
-            return new RuntimeFieldHandle(objResolveFieldHandle);
+            JCObject objResolveTypeHandle = (JCObject)classInstance.Invoke("ResolveTypeHandle", typeToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
+            return new RuntimeTypeHandle(objResolveTypeHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

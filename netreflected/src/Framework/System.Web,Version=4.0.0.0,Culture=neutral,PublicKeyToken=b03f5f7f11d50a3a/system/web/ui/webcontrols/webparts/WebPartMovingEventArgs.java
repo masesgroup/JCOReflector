@@ -129,22 +129,21 @@ public class WebPartMovingEventArgs extends NetObject  {
     
     // Properties section
     
-    public WebPartZoneBase getZone() throws Throwable {
+    public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Zone");
-            return new WebPartZoneBase(val);
+            return (boolean)classInstance.Get("Cancel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setZone(WebPartZoneBase Zone) throws Throwable {
+    public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Zone", Zone == null ? null : Zone.getJCOInstance());
+            classInstance.Set("Cancel", Cancel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,21 +190,22 @@ public class WebPartMovingEventArgs extends NetObject  {
         }
     }
 
-    public boolean getCancel() throws Throwable {
+    public WebPartZoneBase getZone() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Cancel");
+            JCObject val = (JCObject)classInstance.Get("Zone");
+            return new WebPartZoneBase(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCancel(boolean Cancel) throws Throwable {
+    public void setZone(WebPartZoneBase Zone) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Cancel", Cancel);
+            classInstance.Set("Zone", Zone == null ? null : Zone.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

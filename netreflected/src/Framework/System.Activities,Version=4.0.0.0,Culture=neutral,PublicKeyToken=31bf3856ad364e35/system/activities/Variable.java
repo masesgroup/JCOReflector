@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.Variable;
-import system.activities.VariableModifiers;
 import system.activities.Location;
 import system.activities.ActivityContext;
+import system.activities.Variable;
+import system.activities.VariableModifiers;
 import system.activities.ActivityWithResult;
 
 
@@ -117,23 +117,23 @@ public class Variable extends NetObject  {
     
     // Methods section
     
-    public static Variable Create(java.lang.String name, NetType type, VariableModifiers modifiers) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", name, type == null ? null : type.getJCOInstance(), modifiers == null ? null : modifiers.getJCOInstance());
-            return new Variable(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Location GetLocation(ActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetLocation = (JCObject)classInstance.Invoke("GetLocation", context == null ? null : context.getJCOInstance());
             return new Location(objGetLocation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Variable Create(java.lang.String name, NetType type, VariableModifiers modifiers) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", name, type == null ? null : type.getJCOInstance(), modifiers == null ? null : modifiers.getJCOInstance());
+            return new Variable(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,21 +164,22 @@ public class Variable extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable {
+    public ActivityWithResult getDefault() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            JCObject val = (JCObject)classInstance.Get("Default");
+            return new ActivityWithResult(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setName(java.lang.String Name) throws Throwable {
+    public void setDefault(ActivityWithResult Default) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Name", Name);
+            classInstance.Set("Default", Default == null ? null : Default.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,22 +206,21 @@ public class Variable extends NetObject  {
         }
     }
 
-    public ActivityWithResult getDefault() throws Throwable {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
-            return new ActivityWithResult(val);
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDefault(ActivityWithResult Default) throws Throwable {
+    public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Default", Default == null ? null : Default.getJCOInstance());
+            classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

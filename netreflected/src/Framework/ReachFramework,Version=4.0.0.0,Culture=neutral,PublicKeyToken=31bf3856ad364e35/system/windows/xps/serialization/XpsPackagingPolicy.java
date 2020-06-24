@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.windows.xps.packaging.XpsDocument;
 import system.windows.xps.packaging.PackageInterleavingOrder;
-import system.xml.XmlWriter;
 import system.windows.xps.serialization.XpsResourceStream;
-import system.Uri;
+import system.xml.XmlWriter;
 import system.printing.PrintTicket;
+import system.Uri;
 import system.windows.xps.packaging.PackagingProgressEventHandler;
 
 
@@ -140,64 +140,12 @@ public class XpsPackagingPolicy extends NetObject  {
     
     // Methods section
     
-    public XmlWriter AcquireXmlWriterForFixedDocumentSequence() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.windows.xps.XpsPackagingException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
+    public XpsResourceStream AcquireResourceStreamForXpsColorContext(java.lang.String resourceId) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.windows.xps.XpsSerializationException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAcquireXmlWriterForFixedDocumentSequence = (JCObject)classInstance.Invoke("AcquireXmlWriterForFixedDocumentSequence");
-            return new XmlWriter(objAcquireXmlWriterForFixedDocumentSequence);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ReleaseXmlWriterForFixedDocumentSequence() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReleaseXmlWriterForFixedDocumentSequence");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlWriter AcquireXmlWriterForFixedDocument() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.xps.XpsPackagingException, system.io.IOException, system.NotSupportedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAcquireXmlWriterForFixedDocument = (JCObject)classInstance.Invoke("AcquireXmlWriterForFixedDocument");
-            return new XmlWriter(objAcquireXmlWriterForFixedDocument);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ReleaseXmlWriterForFixedDocument() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReleaseXmlWriterForFixedDocument");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlWriter AcquireXmlWriterForFixedPage() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.xps.XpsPackagingException, system.io.IOException, system.NotSupportedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAcquireXmlWriterForFixedPage = (JCObject)classInstance.Invoke("AcquireXmlWriterForFixedPage");
-            return new XmlWriter(objAcquireXmlWriterForFixedPage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ReleaseXmlWriterForFixedPage() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.io.IOException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.windows.xps.XpsSerializationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReleaseXmlWriterForFixedPage");
+            JCObject objAcquireResourceStreamForXpsColorContext = (JCObject)classInstance.Invoke("AcquireResourceStreamForXpsColorContext", resourceId);
+            return new XpsResourceStream(objAcquireResourceStreamForXpsColorContext);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,63 +173,12 @@ public class XpsPackagingPolicy extends NetObject  {
         }
     }
 
-    public void ReleaseResourceStreamForXpsFont() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReleaseResourceStreamForXpsFont");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ReleaseResourceStreamForXpsFont(java.lang.String resourceId) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReleaseResourceStreamForXpsFont", resourceId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XpsResourceStream AcquireResourceStreamForXpsImage(java.lang.String resourceId) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.windows.xps.XpsSerializationException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objAcquireResourceStreamForXpsImage = (JCObject)classInstance.Invoke("AcquireResourceStreamForXpsImage", resourceId);
             return new XpsResourceStream(objAcquireResourceStreamForXpsImage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ReleaseResourceStreamForXpsImage() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReleaseResourceStreamForXpsImage");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XpsResourceStream AcquireResourceStreamForXpsColorContext(java.lang.String resourceId) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.windows.xps.XpsSerializationException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAcquireResourceStreamForXpsColorContext = (JCObject)classInstance.Invoke("AcquireResourceStreamForXpsColorContext", resourceId);
-            return new XpsResourceStream(objAcquireResourceStreamForXpsColorContext);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ReleaseResourceStreamForXpsColorContext() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReleaseResourceStreamForXpsColorContext");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,11 +195,76 @@ public class XpsPackagingPolicy extends NetObject  {
         }
     }
 
-    public void ReleaseResourceStreamForXpsResourceDictionary() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
+    public XmlWriter AcquireXmlWriterForFixedDocument() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.xps.XpsPackagingException, system.io.IOException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ReleaseResourceStreamForXpsResourceDictionary");
+            JCObject objAcquireXmlWriterForFixedDocument = (JCObject)classInstance.Invoke("AcquireXmlWriterForFixedDocument");
+            return new XmlWriter(objAcquireXmlWriterForFixedDocument);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlWriter AcquireXmlWriterForFixedDocumentSequence() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.windows.xps.XpsPackagingException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAcquireXmlWriterForFixedDocumentSequence = (JCObject)classInstance.Invoke("AcquireXmlWriterForFixedDocumentSequence");
+            return new XmlWriter(objAcquireXmlWriterForFixedDocumentSequence);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlWriter AcquireXmlWriterForFixedPage() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.xps.XpsPackagingException, system.io.IOException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAcquireXmlWriterForFixedPage = (JCObject)classInstance.Invoke("AcquireXmlWriterForFixedPage");
+            return new XmlWriter(objAcquireXmlWriterForFixedPage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlWriter AcquireXmlWriterForPage() throws Throwable, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAcquireXmlWriterForPage = (JCObject)classInstance.Invoke("AcquireXmlWriterForPage");
+            return new XmlWriter(objAcquireXmlWriterForPage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlWriter AcquireXmlWriterForResourceDictionary() throws Throwable, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAcquireXmlWriterForResourceDictionary = (JCObject)classInstance.Invoke("AcquireXmlWriterForResourceDictionary");
+            return new XmlWriter(objAcquireXmlWriterForResourceDictionary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PersistPrintTicket(PrintTicket printTicket) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PersistPrintTicket", printTicket == null ? null : printTicket.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PreCommitCurrentPage() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.ArgumentOutOfRangeException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PreCommitCurrentPage");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,43 +290,81 @@ public class XpsPackagingPolicy extends NetObject  {
         }
     }
 
-    public void PersistPrintTicket(PrintTicket printTicket) throws Throwable, system.ArgumentNullException {
+    public void ReleaseResourceStreamForXpsColorContext() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("PersistPrintTicket", printTicket == null ? null : printTicket.getJCOInstance());
+            classInstance.Invoke("ReleaseResourceStreamForXpsColorContext");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlWriter AcquireXmlWriterForPage() throws Throwable, system.InvalidOperationException {
+    public void ReleaseResourceStreamForXpsFont() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAcquireXmlWriterForPage = (JCObject)classInstance.Invoke("AcquireXmlWriterForPage");
-            return new XmlWriter(objAcquireXmlWriterForPage);
+            classInstance.Invoke("ReleaseResourceStreamForXpsFont");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void PreCommitCurrentPage() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.ArgumentOutOfRangeException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException {
+    public void ReleaseResourceStreamForXpsFont(java.lang.String resourceId) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("PreCommitCurrentPage");
+            classInstance.Invoke("ReleaseResourceStreamForXpsFont", resourceId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlWriter AcquireXmlWriterForResourceDictionary() throws Throwable, system.InvalidOperationException {
+    public void ReleaseResourceStreamForXpsImage() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAcquireXmlWriterForResourceDictionary = (JCObject)classInstance.Invoke("AcquireXmlWriterForResourceDictionary");
-            return new XmlWriter(objAcquireXmlWriterForResourceDictionary);
+            classInstance.Invoke("ReleaseResourceStreamForXpsImage");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReleaseResourceStreamForXpsResourceDictionary() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReleaseResourceStreamForXpsResourceDictionary");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReleaseXmlWriterForFixedDocument() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReleaseXmlWriterForFixedDocument");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReleaseXmlWriterForFixedDocumentSequence() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.windows.xps.XpsSerializationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReleaseXmlWriterForFixedDocumentSequence");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReleaseXmlWriterForFixedPage() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.io.IOException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.windows.xps.XpsSerializationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReleaseXmlWriterForFixedPage");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

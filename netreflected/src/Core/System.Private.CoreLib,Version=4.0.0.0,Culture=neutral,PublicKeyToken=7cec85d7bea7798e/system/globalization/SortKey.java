@@ -127,16 +127,6 @@ public class SortKey extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getOriginalString() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("OriginalString");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] getKeyData() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -151,6 +141,16 @@ public class SortKey extends NetObject  {
 				resultingArray[indexKeyData] = (byte)resultingArrayList.get(indexKeyData);
 			}
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getOriginalString() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("OriginalString");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,47 +38,47 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.emit.TypeBuilder;
-import system.reflection.TypeAttributes;
-import system.reflection.MethodBase;
-import system.reflection.FieldInfo;
-import system.reflection.MemberInfo;
-import system.reflection.BindingFlags;
-import system.reflection.MethodInfo;
-import system.security.cryptography.x509certificates.X509Certificate;
-import system.reflection.emit.PackingSize;
+import system.diagnostics.symbolstore.ISymbolDocumentWriter;
+import system.diagnostics.symbolstore.ISymbolDocumentWriterImplementation;
+import system.Guid;
+import system.diagnostics.symbolstore.ISymbolWriter;
+import system.diagnostics.symbolstore.ISymbolWriterImplementation;
 import system.reflection.emit.EnumBuilder;
-import system.resources.IResourceWriter;
-import system.resources.IResourceWriterImplementation;
-import system.reflection.ResourceAttributes;
-import system.io.Stream;
+import system.reflection.TypeAttributes;
+import system.reflection.emit.FieldBuilder;
+import system.reflection.FieldAttributes;
+import system.reflection.emit.FieldToken;
+import system.reflection.FieldInfo;
 import system.reflection.emit.MethodBuilder;
 import system.reflection.MethodAttributes;
 import system.reflection.CallingConventions;
 import system.runtime.interopservices.CallingConvention;
 import system.runtime.interopservices.CharSet;
-import system.reflection.emit.FieldBuilder;
-import system.reflection.FieldAttributes;
-import system.reflection.emit.TypeToken;
 import system.reflection.emit.MethodToken;
 import system.reflection.ConstructorInfo;
-import system.reflection.emit.FieldToken;
-import system.reflection.emit.StringToken;
+import system.reflection.MethodInfo;
 import system.reflection.emit.SignatureToken;
 import system.reflection.emit.SignatureHelper;
-import system.reflection.emit.CustomAttributeBuilder;
-import system.diagnostics.symbolstore.ISymbolWriter;
-import system.diagnostics.symbolstore.ISymbolWriterImplementation;
-import system.diagnostics.symbolstore.ISymbolDocumentWriter;
-import system.diagnostics.symbolstore.ISymbolDocumentWriterImplementation;
-import system.Guid;
-import system.runtime.serialization.SerializationInfo;
-import system.runtime.serialization.StreamingContext;
-import system.reflection.TypeFilter;
+import system.reflection.emit.StringToken;
+import system.reflection.emit.TypeBuilder;
+import system.reflection.emit.PackingSize;
+import system.reflection.emit.TypeToken;
+import system.reflection.BindingFlags;
+import system.reflection.MemberInfo;
+import system.reflection.MethodBase;
 import system.reflection.Binder;
 import system.reflection.ParameterModifier;
-import system.reflection.Assembly;
+import system.resources.IResourceWriter;
+import system.resources.IResourceWriterImplementation;
+import system.reflection.ResourceAttributes;
+import system.security.cryptography.x509certificates.X509Certificate;
+import system.reflection.TypeFilter;
+import system.io.Stream;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
+import system.reflection.emit.CustomAttributeBuilder;
 import system.ModuleHandle;
+import system.reflection.Assembly;
 
 
 /**
@@ -153,12 +153,72 @@ public class ModuleBuilder extends NetObject  {
     
     // Methods section
     
-    public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, NetType[] interfaces) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException {
+    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), toObjectFromArray(interfaces));
-            return new TypeBuilder(objDefineType);
+            return (boolean)classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsResource() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsResource");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsTransient() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsTransient");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] ResolveSignature(int metadataToken) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("ResolveSignature", metadataToken);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexResolveSignature = 0; indexResolveSignature < resultingArrayList.size(); indexResolveSignature++ ) {
+				resultingArray[indexResolveSignature] = (byte)resultingArrayList.get(indexResolveSignature);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ISymbolDocumentWriter DefineDocument(java.lang.String url, Guid language, Guid languageVendor, Guid documentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineDocument = (JCObject)classInstance.Invoke("DefineDocument", url, language == null ? null : language.getJCOInstance(), languageVendor == null ? null : languageVendor.getJCOInstance(), documentType == null ? null : documentType.getJCOInstance());
+            return new ISymbolDocumentWriterImplementation(objDefineDocument);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ISymbolWriter GetSymWriter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetSymWriter = (JCObject)classInstance.Invoke("GetSymWriter");
+            return new ISymbolWriterImplementation(objGetSymWriter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,200 +258,155 @@ public class ModuleBuilder extends NetObject  {
         }
     }
 
-    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable, system.NotImplementedException {
+    public EnumBuilder DefineEnum(java.lang.String name, TypeAttributes visibility, NetType underlyingType) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject objDefineEnum = (JCObject)classInstance.Invoke("DefineEnum", name, visibility == null ? null : visibility.getJCOInstance(), underlyingType == null ? null : underlyingType.getJCOInstance());
+            return new EnumBuilder(objDefineEnum);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType[] GetTypes() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public FieldBuilder DefineInitializedData(java.lang.String name, byte[] data, FieldAttributes attributes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTypes");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetType(resultingObject));
-            }
-            NetType[] resultingArray = new NetType[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            JCObject objDefineInitializedData = (JCObject)classInstance.Invoke("DefineInitializedData", name, data, attributes == null ? null : attributes.getJCOInstance());
+            return new FieldBuilder(objDefineInitializedData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType GetType(java.lang.String className) throws Throwable, system.NotImplementedException {
+    public FieldBuilder DefineUninitializedData(java.lang.String name, int size, FieldAttributes attributes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className);
-            return new NetType(objGetType);
+            JCObject objDefineUninitializedData = (JCObject)classInstance.Invoke("DefineUninitializedData", name, size, attributes == null ? null : attributes.getJCOInstance());
+            return new FieldBuilder(objDefineUninitializedData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType GetType(java.lang.String className, boolean ignoreCase) throws Throwable, system.NotImplementedException {
+    public FieldToken GetFieldToken(FieldInfo field) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className, ignoreCase);
-            return new NetType(objGetType);
+            JCObject objGetFieldToken = (JCObject)classInstance.Invoke("GetFieldToken", field == null ? null : field.getJCOInstance());
+            return new FieldToken(objGetFieldToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType GetType(java.lang.String className, boolean throwOnError, boolean ignoreCase) throws Throwable, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
+    public MethodBuilder DefineGlobalMethod(java.lang.String name, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.FormatException, system.NullReferenceException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className, throwOnError, ignoreCase);
-            return new NetType(objGetType);
+            JCObject objDefineGlobalMethod = (JCObject)classInstance.Invoke("DefineGlobalMethod", name, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            return new MethodBuilder(objDefineGlobalMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public byte[] ResolveSignature(int metadataToken) throws Throwable, system.NotImplementedException {
+    public MethodBuilder DefineGlobalMethod(java.lang.String name, MethodAttributes attributes, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.FormatException, system.NullReferenceException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ResolveSignature", metadataToken);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexResolveSignature = 0; indexResolveSignature < resultingArrayList.size(); indexResolveSignature++ ) {
-				resultingArray[indexResolveSignature] = (byte)resultingArrayList.get(indexResolveSignature);
-            }
-            return resultingArray;
+            JCObject objDefineGlobalMethod = (JCObject)classInstance.Invoke("DefineGlobalMethod", name, attributes == null ? null : attributes.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            return new MethodBuilder(objDefineGlobalMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MethodBase ResolveMethod(int metadataToken, NetType[] genericTypeArguments, NetType[] genericMethodArguments) throws Throwable, system.NotImplementedException {
+    public MethodBuilder DefinePInvokeMethod(java.lang.String name, java.lang.String dllName, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, CallingConvention nativeCallConv, CharSet nativeCharSet) throws Throwable, system.ArgumentException, system.NotImplementedException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveMethod = (JCObject)classInstance.Invoke("ResolveMethod", metadataToken, toObjectFromArray(genericTypeArguments), toObjectFromArray(genericMethodArguments));
-            return new MethodBase(objResolveMethod);
+            JCObject objDefinePInvokeMethod = (JCObject)classInstance.Invoke("DefinePInvokeMethod", name, dllName, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), nativeCallConv == null ? null : nativeCallConv.getJCOInstance(), nativeCharSet == null ? null : nativeCharSet.getJCOInstance());
+            return new MethodBuilder(objDefinePInvokeMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public FieldInfo ResolveField(int metadataToken, NetType[] genericTypeArguments, NetType[] genericMethodArguments) throws Throwable, system.NotImplementedException {
+    public MethodBuilder DefinePInvokeMethod(java.lang.String name, java.lang.String dllName, java.lang.String entryName, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, CallingConvention nativeCallConv, CharSet nativeCharSet) throws Throwable, system.ArgumentException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveField = (JCObject)classInstance.Invoke("ResolveField", metadataToken, toObjectFromArray(genericTypeArguments), toObjectFromArray(genericMethodArguments));
-            return new FieldInfo(objResolveField);
+            JCObject objDefinePInvokeMethod = (JCObject)classInstance.Invoke("DefinePInvokeMethod", name, dllName, entryName, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), nativeCallConv == null ? null : nativeCallConv.getJCOInstance(), nativeCharSet == null ? null : nativeCharSet.getJCOInstance());
+            return new MethodBuilder(objDefinePInvokeMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType ResolveType(int metadataToken, NetType[] genericTypeArguments, NetType[] genericMethodArguments) throws Throwable, system.NotImplementedException {
+    public MethodToken GetArrayMethodToken(NetType arrayClass, java.lang.String methodName, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveType = (JCObject)classInstance.Invoke("ResolveType", metadataToken, toObjectFromArray(genericTypeArguments), toObjectFromArray(genericMethodArguments));
-            return new NetType(objResolveType);
+            JCObject objGetArrayMethodToken = (JCObject)classInstance.Invoke("GetArrayMethodToken", arrayClass == null ? null : arrayClass.getJCOInstance(), methodName, callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            return new MethodToken(objGetArrayMethodToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MemberInfo ResolveMember(int metadataToken, NetType[] genericTypeArguments, NetType[] genericMethodArguments) throws Throwable, system.NotImplementedException {
+    public MethodToken GetConstructorToken(ConstructorInfo con) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.MissingMethodException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveMember = (JCObject)classInstance.Invoke("ResolveMember", metadataToken, toObjectFromArray(genericTypeArguments), toObjectFromArray(genericMethodArguments));
-            return new MemberInfo(objResolveMember);
+            JCObject objGetConstructorToken = (JCObject)classInstance.Invoke("GetConstructorToken", con == null ? null : con.getJCOInstance());
+            return new MethodToken(objGetConstructorToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String ResolveString(int metadataToken) throws Throwable, system.NotImplementedException {
+    public MethodToken GetMethodToken(MethodInfo method) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.MissingMethodException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("ResolveString", metadataToken);
+            JCObject objGetMethodToken = (JCObject)classInstance.Invoke("GetMethodToken", method == null ? null : method.getJCOInstance());
+            return new MethodToken(objGetMethodToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean IsResource() throws Throwable, system.NotImplementedException {
+    public SignatureToken GetSignatureToken(byte[] sigBytes, int sigLength) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsResource");
+            JCObject objGetSignatureToken = (JCObject)classInstance.Invoke("GetSignatureToken", sigBytes, sigLength);
+            return new SignatureToken(objGetSignatureToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public FieldInfo[] GetFields(BindingFlags bindingFlags) throws Throwable, system.NotImplementedException {
+    public SignatureToken GetSignatureToken(SignatureHelper sigHelper) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields", bindingFlags == null ? null : bindingFlags.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new FieldInfo(resultingObject));
-            }
-            FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            JCObject objGetSignatureToken = (JCObject)classInstance.Invoke("GetSignatureToken", sigHelper == null ? null : sigHelper.getJCOInstance());
+            return new SignatureToken(objGetSignatureToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.NotImplementedException {
+    public StringToken GetStringConstant(java.lang.String str) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetField = (JCObject)classInstance.Invoke("GetField", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            return new FieldInfo(objGetField);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo[] GetMethods(BindingFlags bindingFlags) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMethods", bindingFlags == null ? null : bindingFlags.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new MethodInfo(resultingObject));
-            }
-            MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public X509Certificate GetSignerCertificate() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSignerCertificate = (JCObject)classInstance.Invoke("GetSignerCertificate");
-            return new X509Certificate(objGetSignerCertificate);
+            JCObject objGetStringConstant = (JCObject)classInstance.Invoke("GetStringConstant", str);
+            return new StringToken(objGetStringConstant);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,17 +456,6 @@ public class ModuleBuilder extends NetObject  {
         }
     }
 
-    public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, PackingSize packingSize, int typesize) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), packingSize == null ? null : packingSize.getJCOInstance(), typesize);
-            return new TypeBuilder(objDefineType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, PackingSize packsize) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -463,12 +467,245 @@ public class ModuleBuilder extends NetObject  {
         }
     }
 
-    public EnumBuilder DefineEnum(java.lang.String name, TypeAttributes visibility, NetType underlyingType) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, PackingSize packingSize, int typesize) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineEnum = (JCObject)classInstance.Invoke("DefineEnum", name, visibility == null ? null : visibility.getJCOInstance(), underlyingType == null ? null : underlyingType.getJCOInstance());
-            return new EnumBuilder(objDefineEnum);
+            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), packingSize == null ? null : packingSize.getJCOInstance(), typesize);
+            return new TypeBuilder(objDefineType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, NetType[] interfaces) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), toObjectFromArray(interfaces));
+            return new TypeBuilder(objDefineType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeToken GetTypeToken(java.lang.String name) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetTypeToken = (JCObject)classInstance.Invoke("GetTypeToken", name);
+            return new TypeToken(objGetTypeToken);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeToken GetTypeToken(NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetTypeToken = (JCObject)classInstance.Invoke("GetTypeToken", type == null ? null : type.getJCOInstance());
+            return new TypeToken(objGetTypeToken);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FieldInfo GetField(java.lang.String name) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetField = (JCObject)classInstance.Invoke("GetField", name);
+            return new FieldInfo(objGetField);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetField = (JCObject)classInstance.Invoke("GetField", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            return new FieldInfo(objGetField);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FieldInfo ResolveField(int metadataToken) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveField = (JCObject)classInstance.Invoke("ResolveField", metadataToken);
+            return new FieldInfo(objResolveField);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FieldInfo ResolveField(int metadataToken, NetType[] genericTypeArguments, NetType[] genericMethodArguments) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveField = (JCObject)classInstance.Invoke("ResolveField", metadataToken, toObjectFromArray(genericTypeArguments), toObjectFromArray(genericMethodArguments));
+            return new FieldInfo(objResolveField);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FieldInfo[] GetFields() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new FieldInfo(resultingObject));
+            }
+            FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FieldInfo[] GetFields(BindingFlags bindingFlags) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields", bindingFlags == null ? null : bindingFlags.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new FieldInfo(resultingObject));
+            }
+            FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MemberInfo ResolveMember(int metadataToken) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveMember = (JCObject)classInstance.Invoke("ResolveMember", metadataToken);
+            return new MemberInfo(objResolveMember);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MemberInfo ResolveMember(int metadataToken, NetType[] genericTypeArguments, NetType[] genericMethodArguments) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveMember = (JCObject)classInstance.Invoke("ResolveMember", metadataToken, toObjectFromArray(genericTypeArguments), toObjectFromArray(genericMethodArguments));
+            return new MemberInfo(objResolveMember);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodBase ResolveMethod(int metadataToken) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveMethod = (JCObject)classInstance.Invoke("ResolveMethod", metadataToken);
+            return new MethodBase(objResolveMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodBase ResolveMethod(int metadataToken, NetType[] genericTypeArguments, NetType[] genericMethodArguments) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveMethod = (JCObject)classInstance.Invoke("ResolveMethod", metadataToken, toObjectFromArray(genericTypeArguments), toObjectFromArray(genericMethodArguments));
+            return new MethodBase(objResolveMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo GetArrayMethod(NetType arrayClass, java.lang.String methodName, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetArrayMethod = (JCObject)classInstance.Invoke("GetArrayMethod", arrayClass == null ? null : arrayClass.getJCOInstance(), methodName, callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            return new MethodInfo(objGetArrayMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo GetMethod(java.lang.String name) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name);
+            return new MethodInfo(objGetMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, NetType[] types, ParameterModifier[] modifiers) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), callConvention == null ? null : callConvention.getJCOInstance(), toObjectFromArray(types), toObjectFromArray(modifiers));
+            return new MethodInfo(objGetMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo GetMethod(java.lang.String name, NetType[] types) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name, toObjectFromArray(types));
+            return new MethodInfo(objGetMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo[] GetMethods() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMethods");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new MethodInfo(resultingObject));
+            }
+            MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo[] GetMethods(BindingFlags bindingFlags) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMethods", bindingFlags == null ? null : bindingFlags.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new MethodInfo(resultingObject));
+            }
+            MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,6 +728,126 @@ public class ModuleBuilder extends NetObject  {
         try {
             JCObject objDefineResource = (JCObject)classInstance.Invoke("DefineResource", name, description, attribute == null ? null : attribute.getJCOInstance());
             return new IResourceWriterImplementation(objDefineResource);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public X509Certificate GetSignerCertificate() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetSignerCertificate = (JCObject)classInstance.Invoke("GetSignerCertificate");
+            return new X509Certificate(objGetSignerCertificate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ResolveString(int metadataToken) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ResolveString", metadataToken);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType GetType(java.lang.String className) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className);
+            return new NetType(objGetType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType GetType(java.lang.String className, boolean ignoreCase) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className, ignoreCase);
+            return new NetType(objGetType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType GetType(java.lang.String className, boolean throwOnError, boolean ignoreCase) throws Throwable, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className, throwOnError, ignoreCase);
+            return new NetType(objGetType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType ResolveType(int metadataToken) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveType = (JCObject)classInstance.Invoke("ResolveType", metadataToken);
+            return new NetType(objResolveType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType ResolveType(int metadataToken, NetType[] genericTypeArguments, NetType[] genericMethodArguments) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveType = (JCObject)classInstance.Invoke("ResolveType", metadataToken, toObjectFromArray(genericTypeArguments), toObjectFromArray(genericMethodArguments));
+            return new NetType(objResolveType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType[] FindTypes(TypeFilter filter, NetObject filterCriteria) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindTypes", filter, filterCriteria == null ? null : filterCriteria.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new NetType(resultingObject));
+            }
+            NetType[] resultingArray = new NetType[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType[] GetTypes() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTypes");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new NetType(resultingObject));
+            }
+            NetType[] resultingArray = new NetType[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CreateGlobalFunctions() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CreateGlobalFunctions");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -526,187 +883,11 @@ public class ModuleBuilder extends NetObject  {
         }
     }
 
-    public MethodBuilder DefineGlobalMethod(java.lang.String name, MethodAttributes attributes, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.FormatException, system.NullReferenceException, system.ArgumentOutOfRangeException {
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineGlobalMethod = (JCObject)classInstance.Invoke("DefineGlobalMethod", name, attributes == null ? null : attributes.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
-            return new MethodBuilder(objDefineGlobalMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodBuilder DefineGlobalMethod(java.lang.String name, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.FormatException, system.NullReferenceException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineGlobalMethod = (JCObject)classInstance.Invoke("DefineGlobalMethod", name, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
-            return new MethodBuilder(objDefineGlobalMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodBuilder DefinePInvokeMethod(java.lang.String name, java.lang.String dllName, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, CallingConvention nativeCallConv, CharSet nativeCharSet) throws Throwable, system.ArgumentException, system.NotImplementedException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefinePInvokeMethod = (JCObject)classInstance.Invoke("DefinePInvokeMethod", name, dllName, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), nativeCallConv == null ? null : nativeCallConv.getJCOInstance(), nativeCharSet == null ? null : nativeCharSet.getJCOInstance());
-            return new MethodBuilder(objDefinePInvokeMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodBuilder DefinePInvokeMethod(java.lang.String name, java.lang.String dllName, java.lang.String entryName, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, CallingConvention nativeCallConv, CharSet nativeCharSet) throws Throwable, system.ArgumentException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefinePInvokeMethod = (JCObject)classInstance.Invoke("DefinePInvokeMethod", name, dllName, entryName, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), nativeCallConv == null ? null : nativeCallConv.getJCOInstance(), nativeCharSet == null ? null : nativeCharSet.getJCOInstance());
-            return new MethodBuilder(objDefinePInvokeMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CreateGlobalFunctions() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CreateGlobalFunctions");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FieldBuilder DefineInitializedData(java.lang.String name, byte[] data, FieldAttributes attributes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineInitializedData = (JCObject)classInstance.Invoke("DefineInitializedData", name, data, attributes == null ? null : attributes.getJCOInstance());
-            return new FieldBuilder(objDefineInitializedData);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FieldBuilder DefineUninitializedData(java.lang.String name, int size, FieldAttributes attributes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineUninitializedData = (JCObject)classInstance.Invoke("DefineUninitializedData", name, size, attributes == null ? null : attributes.getJCOInstance());
-            return new FieldBuilder(objDefineUninitializedData);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeToken GetTypeToken(NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MissingMethodException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetTypeToken = (JCObject)classInstance.Invoke("GetTypeToken", type == null ? null : type.getJCOInstance());
-            return new TypeToken(objGetTypeToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeToken GetTypeToken(java.lang.String name) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetTypeToken = (JCObject)classInstance.Invoke("GetTypeToken", name);
-            return new TypeToken(objGetTypeToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodToken GetMethodToken(MethodInfo method) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.MissingMethodException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMethodToken = (JCObject)classInstance.Invoke("GetMethodToken", method == null ? null : method.getJCOInstance());
-            return new MethodToken(objGetMethodToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodToken GetArrayMethodToken(NetType arrayClass, java.lang.String methodName, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetArrayMethodToken = (JCObject)classInstance.Invoke("GetArrayMethodToken", arrayClass == null ? null : arrayClass.getJCOInstance(), methodName, callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
-            return new MethodToken(objGetArrayMethodToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo GetArrayMethod(NetType arrayClass, java.lang.String methodName, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetArrayMethod = (JCObject)classInstance.Invoke("GetArrayMethod", arrayClass == null ? null : arrayClass.getJCOInstance(), methodName, callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
-            return new MethodInfo(objGetArrayMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodToken GetConstructorToken(ConstructorInfo con) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.MissingMethodException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetConstructorToken = (JCObject)classInstance.Invoke("GetConstructorToken", con == null ? null : con.getJCOInstance());
-            return new MethodToken(objGetConstructorToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FieldToken GetFieldToken(FieldInfo field) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetFieldToken = (JCObject)classInstance.Invoke("GetFieldToken", field == null ? null : field.getJCOInstance());
-            return new FieldToken(objGetFieldToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StringToken GetStringConstant(java.lang.String str) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetStringConstant = (JCObject)classInstance.Invoke("GetStringConstant", str);
-            return new StringToken(objGetStringConstant);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SignatureToken GetSignatureToken(SignatureHelper sigHelper) throws Throwable, system.ArgumentNullException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSignatureToken = (JCObject)classInstance.Invoke("GetSignatureToken", sigHelper == null ? null : sigHelper.getJCOInstance());
-            return new SignatureToken(objGetSignatureToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SignatureToken GetSignatureToken(byte[] sigBytes, int sigLength) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSignatureToken = (JCObject)classInstance.Invoke("GetSignatureToken", sigBytes, sigLength);
-            return new SignatureToken(objGetSignatureToken);
+            classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -732,23 +913,11 @@ public class ModuleBuilder extends NetObject  {
         }
     }
 
-    public ISymbolWriter GetSymWriter() throws Throwable {
+    public void SetSymCustomAttribute(java.lang.String name, byte[] data) throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetSymWriter = (JCObject)classInstance.Invoke("GetSymWriter");
-            return new ISymbolWriterImplementation(objGetSymWriter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ISymbolDocumentWriter DefineDocument(java.lang.String url, Guid language, Guid languageVendor, Guid documentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineDocument = (JCObject)classInstance.Invoke("DefineDocument", url, language == null ? null : language.getJCOInstance(), languageVendor == null ? null : languageVendor.getJCOInstance(), documentType == null ? null : documentType.getJCOInstance());
-            return new ISymbolDocumentWriterImplementation(objDefineDocument);
+            classInstance.Invoke("SetSymCustomAttribute", name, data);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -764,194 +933,25 @@ public class ModuleBuilder extends NetObject  {
         }
     }
 
-    public void SetSymCustomAttribute(java.lang.String name, byte[] data) throws Throwable, system.ArgumentException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetSymCustomAttribute", name, data);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsTransient() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsTransient");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodBase ResolveMethod(int metadataToken) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveMethod = (JCObject)classInstance.Invoke("ResolveMethod", metadataToken);
-            return new MethodBase(objResolveMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FieldInfo ResolveField(int metadataToken) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveField = (JCObject)classInstance.Invoke("ResolveField", metadataToken);
-            return new FieldInfo(objResolveField);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType ResolveType(int metadataToken) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveType = (JCObject)classInstance.Invoke("ResolveType", metadataToken);
-            return new NetType(objResolveType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MemberInfo ResolveMember(int metadataToken) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveMember = (JCObject)classInstance.Invoke("ResolveMember", metadataToken);
-            return new MemberInfo(objResolveMember);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType[] FindTypes(TypeFilter filter, NetObject filterCriteria) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindTypes", filter, filterCriteria == null ? null : filterCriteria.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetType(resultingObject));
-            }
-            NetType[] resultingArray = new NetType[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FieldInfo[] GetFields() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new FieldInfo(resultingObject));
-            }
-            FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FieldInfo GetField(java.lang.String name) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetField = (JCObject)classInstance.Invoke("GetField", name);
-            return new FieldInfo(objGetField);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo[] GetMethods() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMethods");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new MethodInfo(resultingObject));
-            }
-            MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, NetType[] types, ParameterModifier[] modifiers) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), callConvention == null ? null : callConvention.getJCOInstance(), toObjectFromArray(types), toObjectFromArray(modifiers));
-            return new MethodInfo(objGetMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo GetMethod(java.lang.String name, NetType[] types) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name, toObjectFromArray(types));
-            return new MethodInfo(objGetMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo GetMethod(java.lang.String name) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name);
-            return new MethodInfo(objGetMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public java.lang.String getFullyQualifiedName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("FullyQualifiedName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getMDStreamVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("MDStreamVersion");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getMetadataToken() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("MetadataToken");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -968,31 +968,12 @@ public class ModuleBuilder extends NetObject  {
         }
     }
 
-    public int getMetadataToken() throws Throwable, system.NotImplementedException {
+    public ModuleHandle getModuleHandle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("MetadataToken");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getScopeName() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ScopeName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
+            JCObject val = (JCObject)classInstance.Get("ModuleHandle");
+            return new ModuleHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1009,12 +990,31 @@ public class ModuleBuilder extends NetObject  {
         }
     }
 
-    public ModuleHandle getModuleHandle() throws Throwable {
+    public java.lang.String getFullyQualifiedName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ModuleHandle");
-            return new ModuleHandle(val);
+            return (java.lang.String)classInstance.Get("FullyQualifiedName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getScopeName() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ScopeName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

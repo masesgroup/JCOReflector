@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.serialization.XmlSerializer;
+import system.collections.Hashtable;
 import system.xml.serialization.XmlSerializationReader;
 import system.xml.serialization.XmlSerializationWriter;
-import system.collections.Hashtable;
 
 
 /**
@@ -141,33 +141,22 @@ public class XmlSerializerImplementation extends NetObject  {
     
     // Properties section
     
-    public XmlSerializationReader getReader() throws Throwable, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Reader");
-            return new XmlSerializationReader(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSerializationWriter getWriter() throws Throwable, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Writer");
-            return new XmlSerializationWriter(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Hashtable getReadMethods() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ReadMethods");
+            return new Hashtable(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Hashtable getTypedSerializers() throws Throwable, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TypedSerializers");
             return new Hashtable(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -185,12 +174,23 @@ public class XmlSerializerImplementation extends NetObject  {
         }
     }
 
-    public Hashtable getTypedSerializers() throws Throwable, system.NotSupportedException {
+    public XmlSerializationReader getReader() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TypedSerializers");
-            return new Hashtable(val);
+            JCObject val = (JCObject)classInstance.Get("Reader");
+            return new XmlSerializationReader(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSerializationWriter getWriter() throws Throwable, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Writer");
+            return new XmlSerializationWriter(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

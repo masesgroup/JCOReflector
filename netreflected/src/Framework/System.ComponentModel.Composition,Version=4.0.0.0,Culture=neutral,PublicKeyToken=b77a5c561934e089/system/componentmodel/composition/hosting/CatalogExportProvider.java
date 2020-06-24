@@ -148,31 +148,10 @@ public class CatalogExportProvider extends NetObject  {
     
     // Methods section
     
-    public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.threading.SynchronizationLockException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public ComposablePartCatalog getCatalog() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Catalog");
-            return new ComposablePartCatalog(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ExportProvider getSourceProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -189,6 +168,17 @@ public class CatalogExportProvider extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceProvider", SourceProvider == null ? null : SourceProvider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ComposablePartCatalog getCatalog() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Catalog");
+            return new ComposablePartCatalog(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

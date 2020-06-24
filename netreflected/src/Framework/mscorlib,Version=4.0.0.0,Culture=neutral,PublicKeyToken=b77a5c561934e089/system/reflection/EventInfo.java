@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.MethodInfo;
-import system.reflection.MemberTypes;
 import system.reflection.EventAttributes;
+import system.reflection.MemberTypes;
 import system.reflection.Module;
 
 
@@ -116,101 +116,11 @@ public class EventInfo extends NetObject  {
     
     // Methods section
     
-    public MethodInfo[] GetOtherMethods(boolean nonPublic) throws Throwable, system.NotImplementedException {
+    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetOtherMethods", nonPublic);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new MethodInfo(resultingObject));
-            }
-            MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo[] GetOtherMethods() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetOtherMethods");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new MethodInfo(resultingObject));
-            }
-            MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo GetAddMethod() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetAddMethod = (JCObject)classInstance.Invoke("GetAddMethod");
-            return new MethodInfo(objGetAddMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo GetRemoveMethod() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRemoveMethod = (JCObject)classInstance.Invoke("GetRemoveMethod");
-            return new MethodInfo(objGetRemoveMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo GetRaiseMethod() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRaiseMethod = (JCObject)classInstance.Invoke("GetRaiseMethod");
-            return new MethodInfo(objGetRaiseMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo GetAddMethod(boolean nonPublic) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetAddMethod = (JCObject)classInstance.Invoke("GetAddMethod", nonPublic);
-            return new MethodInfo(objGetAddMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo GetRemoveMethod(boolean nonPublic) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRemoveMethod = (JCObject)classInstance.Invoke("GetRemoveMethod", nonPublic);
-            return new MethodInfo(objGetRemoveMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo GetRaiseMethod(boolean nonPublic) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRaiseMethod = (JCObject)classInstance.Invoke("GetRaiseMethod", nonPublic);
-            return new MethodInfo(objGetRaiseMethod);
+            return (boolean)classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,11 +160,101 @@ public class EventInfo extends NetObject  {
         }
     }
 
-    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
+    public MethodInfo GetAddMethod() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject objGetAddMethod = (JCObject)classInstance.Invoke("GetAddMethod");
+            return new MethodInfo(objGetAddMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo GetAddMethod(boolean nonPublic) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetAddMethod = (JCObject)classInstance.Invoke("GetAddMethod", nonPublic);
+            return new MethodInfo(objGetAddMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo GetRaiseMethod() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetRaiseMethod = (JCObject)classInstance.Invoke("GetRaiseMethod");
+            return new MethodInfo(objGetRaiseMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo GetRaiseMethod(boolean nonPublic) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetRaiseMethod = (JCObject)classInstance.Invoke("GetRaiseMethod", nonPublic);
+            return new MethodInfo(objGetRaiseMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo GetRemoveMethod() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetRemoveMethod = (JCObject)classInstance.Invoke("GetRemoveMethod");
+            return new MethodInfo(objGetRemoveMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo GetRemoveMethod(boolean nonPublic) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetRemoveMethod = (JCObject)classInstance.Invoke("GetRemoveMethod", nonPublic);
+            return new MethodInfo(objGetRemoveMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo[] GetOtherMethods() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetOtherMethods");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new MethodInfo(resultingObject));
+            }
+            MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo[] GetOtherMethods(boolean nonPublic) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetOtherMethods", nonPublic);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new MethodInfo(resultingObject));
+            }
+            MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,12 +264,31 @@ public class EventInfo extends NetObject  {
     
     // Properties section
     
-    public MemberTypes getMemberType() throws Throwable {
+    public boolean getIsMulticast() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MemberType");
-            return new MemberTypes(val);
+            return (boolean)classInstance.Get("IsMulticast");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsSpecialName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsSpecialName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getMetadataToken() throws Throwable, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("MetadataToken");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,22 +305,22 @@ public class EventInfo extends NetObject  {
         }
     }
 
-    public MethodInfo getAddMethod() throws Throwable {
+    public MemberTypes getMemberType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AddMethod");
-            return new MethodInfo(val);
+            JCObject val = (JCObject)classInstance.Get("MemberType");
+            return new MemberTypes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MethodInfo getRemoveMethod() throws Throwable {
+    public MethodInfo getAddMethod() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoveMethod");
+            JCObject val = (JCObject)classInstance.Get("AddMethod");
             return new MethodInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -319,32 +338,23 @@ public class EventInfo extends NetObject  {
         }
     }
 
-    public NetType getEventHandlerType() throws Throwable {
+    public MethodInfo getRemoveMethod() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EventHandlerType");
-            return new NetType(val);
+            JCObject val = (JCObject)classInstance.Get("RemoveMethod");
+            return new MethodInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsSpecialName() throws Throwable {
+    public Module getModule() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsSpecialName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsMulticast() throws Throwable, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsMulticast");
+            JCObject val = (JCObject)classInstance.Get("Module");
+            return new Module(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,33 +381,23 @@ public class EventInfo extends NetObject  {
         }
     }
 
-    public NetType getReflectedType() throws Throwable {
+    public NetType getEventHandlerType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ReflectedType");
+            JCObject val = (JCObject)classInstance.Get("EventHandlerType");
             return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getMetadataToken() throws Throwable, system.InvalidOperationException {
+    public NetType getReflectedType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("MetadataToken");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Module getModule() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Module");
-            return new Module(val);
+            JCObject val = (JCObject)classInstance.Get("ReflectedType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

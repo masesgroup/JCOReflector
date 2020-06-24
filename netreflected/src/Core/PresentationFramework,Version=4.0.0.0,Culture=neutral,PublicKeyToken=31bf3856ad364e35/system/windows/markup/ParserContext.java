@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.xml.XmlParserContext;
 import system.windows.markup.ParserContext;
-import system.windows.markup.XmlnsDictionary;
-import system.windows.markup.XamlTypeMapper;
 import system.Uri;
+import system.windows.markup.XamlTypeMapper;
+import system.windows.markup.XmlnsDictionary;
 
 
 /**
@@ -153,17 +153,6 @@ public class ParserContext extends NetObject  {
     
     // Properties section
     
-    public XmlnsDictionary getXmlnsDictionary() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("XmlnsDictionary");
-            return new XmlnsDictionary(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getXmlLang() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -204,6 +193,27 @@ public class ParserContext extends NetObject  {
         }
     }
 
+    public Uri getBaseUri() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("BaseUri");
+            return new Uri(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBaseUri(Uri BaseUri) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XamlTypeMapper getXamlTypeMapper() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -225,22 +235,12 @@ public class ParserContext extends NetObject  {
         }
     }
 
-    public Uri getBaseUri() throws Throwable {
+    public XmlnsDictionary getXmlnsDictionary() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseUri");
-            return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBaseUri(Uri BaseUri) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("XmlnsDictionary");
+            return new XmlnsDictionary(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

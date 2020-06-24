@@ -39,16 +39,16 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.selectors.SecurityTokenSerializer;
+import system.xml.XmlReader;
+import system.identitymodel.metadata.WebServiceDescriptor;
 import system.identitymodel.metadata.MetadataBase;
 import system.io.Stream;
-import system.xml.XmlReader;
 import system.identitymodel.selectors.SecurityTokenResolver;
-import system.identitymodel.metadata.WebServiceDescriptor;
 import system.xml.XmlWriter;
-import system.servicemodel.security.X509CertificateValidationMode;
-import system.security.cryptography.x509certificates.X509RevocationMode;
-import system.security.cryptography.x509certificates.StoreLocation;
 import system.identitymodel.selectors.X509CertificateValidator;
+import system.security.cryptography.x509certificates.StoreLocation;
+import system.security.cryptography.x509certificates.X509RevocationMode;
+import system.servicemodel.security.X509CertificateValidationMode;
 
 
 /**
@@ -144,6 +144,16 @@ public class MetadataSerializer extends NetObject  {
     
     // Methods section
     
+    public boolean ReadWebServiceDescriptorElement(XmlReader reader, WebServiceDescriptor roleDescriptor) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.xml.schema.XmlSchemaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ReadWebServiceDescriptorElement", reader == null ? null : reader.getJCOInstance(), roleDescriptor == null ? null : roleDescriptor.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MetadataBase ReadMetadata(Stream stream) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -177,16 +187,6 @@ public class MetadataSerializer extends NetObject  {
         }
     }
 
-    public boolean ReadWebServiceDescriptorElement(XmlReader reader, WebServiceDescriptor roleDescriptor) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.xml.schema.XmlSchemaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ReadWebServiceDescriptorElement", reader == null ? null : reader.getJCOInstance(), roleDescriptor == null ? null : roleDescriptor.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void WriteMetadata(Stream stream, MetadataBase metadata) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -211,64 +211,12 @@ public class MetadataSerializer extends NetObject  {
     
     // Properties section
     
-    public X509CertificateValidationMode getCertificateValidationMode() throws Throwable {
+    public SecurityTokenSerializer getSecurityTokenSerializer() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CertificateValidationMode");
-            return new X509CertificateValidationMode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCertificateValidationMode(X509CertificateValidationMode CertificateValidationMode) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CertificateValidationMode", CertificateValidationMode == null ? null : CertificateValidationMode.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public X509RevocationMode getRevocationMode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RevocationMode");
-            return new X509RevocationMode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRevocationMode(X509RevocationMode RevocationMode) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RevocationMode", RevocationMode == null ? null : RevocationMode.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StoreLocation getTrustedStoreLocation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TrustedStoreLocation");
-            return new StoreLocation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTrustedStoreLocation(StoreLocation TrustedStoreLocation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TrustedStoreLocation", TrustedStoreLocation == null ? null : TrustedStoreLocation.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("SecurityTokenSerializer");
+            return new SecurityTokenSerializer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,12 +243,64 @@ public class MetadataSerializer extends NetObject  {
         }
     }
 
-    public SecurityTokenSerializer getSecurityTokenSerializer() throws Throwable {
+    public StoreLocation getTrustedStoreLocation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenSerializer");
-            return new SecurityTokenSerializer(val);
+            JCObject val = (JCObject)classInstance.Get("TrustedStoreLocation");
+            return new StoreLocation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTrustedStoreLocation(StoreLocation TrustedStoreLocation) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TrustedStoreLocation", TrustedStoreLocation == null ? null : TrustedStoreLocation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public X509RevocationMode getRevocationMode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RevocationMode");
+            return new X509RevocationMode(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRevocationMode(X509RevocationMode RevocationMode) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RevocationMode", RevocationMode == null ? null : RevocationMode.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public X509CertificateValidationMode getCertificateValidationMode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CertificateValidationMode");
+            return new X509CertificateValidationMode(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCertificateValidationMode(X509CertificateValidationMode CertificateValidationMode) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CertificateValidationMode", CertificateValidationMode == null ? null : CertificateValidationMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

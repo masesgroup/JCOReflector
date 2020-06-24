@@ -95,21 +95,21 @@ public interface IRootDesigner extends IJCOBridgeReflected {
     
     public NetObject GetView(ViewTechnology technology) throws Throwable;
 
+    public void Dispose() throws Throwable;
+
     public void DoDefaultAction() throws Throwable;
 
     public void Initialize(IComponent component) throws Throwable;
-
-    public void Dispose() throws Throwable;
 
 
     
     // Properties section
     
+    public DesignerVerbCollection getVerbs() throws Throwable;
+
     public ViewTechnology[] getSupportedTechnologies() throws Throwable;
 
     public IComponent getComponent() throws Throwable;
-
-    public DesignerVerbCollection getVerbs() throws Throwable;
 
 
 

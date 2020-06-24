@@ -93,15 +93,15 @@ public interface IContextPropertyActivator extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean DeliverClientContextToServerContext(IConstructionCallMessage msg) throws Throwable;
+
+    public boolean DeliverServerContextToClientContext(IConstructionReturnMessage msg) throws Throwable;
+
     public boolean IsOKToActivate(IConstructionCallMessage msg) throws Throwable;
 
     public void CollectFromClientContext(IConstructionCallMessage msg) throws Throwable;
 
-    public boolean DeliverClientContextToServerContext(IConstructionCallMessage msg) throws Throwable;
-
     public void CollectFromServerContext(IConstructionReturnMessage msg) throws Throwable;
-
-    public boolean DeliverServerContextToClientContext(IConstructionReturnMessage msg) throws Throwable;
 
 
     

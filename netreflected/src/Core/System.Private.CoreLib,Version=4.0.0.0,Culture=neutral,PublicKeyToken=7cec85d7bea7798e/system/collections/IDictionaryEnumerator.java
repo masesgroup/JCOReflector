@@ -98,13 +98,13 @@ public interface IDictionaryEnumerator extends IJCOBridgeReflected {
     
     // Properties section
     
-    public NetObject getKey() throws Throwable;
-
-    public NetObject getValue() throws Throwable;
-
     public DictionaryEntry getEntry() throws Throwable;
 
     public NetObject getCurrent() throws Throwable;
+
+    public NetObject getKey() throws Throwable;
+
+    public NetObject getValue() throws Throwable;
 
 
 

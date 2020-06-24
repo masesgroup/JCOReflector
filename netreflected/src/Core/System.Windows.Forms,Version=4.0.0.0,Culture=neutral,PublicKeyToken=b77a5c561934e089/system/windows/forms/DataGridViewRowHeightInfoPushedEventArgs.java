@@ -116,11 +116,21 @@ public class DataGridViewRowHeightInfoPushedEventArgs extends NetObject  {
     
     // Properties section
     
-    public int getRowIndex() throws Throwable {
+    public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("RowIndex");
+            return (boolean)classInstance.Get("Handled");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setHandled(boolean Handled) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Handled", Handled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -146,21 +156,11 @@ public class DataGridViewRowHeightInfoPushedEventArgs extends NetObject  {
         }
     }
 
-    public boolean getHandled() throws Throwable {
+    public int getRowIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Handled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHandled(boolean Handled) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Handled", Handled);
+            return (int)classInstance.Get("RowIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

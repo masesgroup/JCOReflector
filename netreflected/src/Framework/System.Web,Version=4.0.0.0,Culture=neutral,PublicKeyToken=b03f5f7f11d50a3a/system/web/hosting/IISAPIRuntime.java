@@ -89,10 +89,6 @@ public interface IISAPIRuntime extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void StartProcessing() throws Throwable;
-
-    public void StopProcessing() throws Throwable;
-
 
     
     // Properties section

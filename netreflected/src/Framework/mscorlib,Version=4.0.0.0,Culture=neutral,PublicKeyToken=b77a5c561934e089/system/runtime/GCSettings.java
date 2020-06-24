@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.GCLatencyMode;
 import system.runtime.GCLargeObjectHeapCompactionMode;
+import system.runtime.GCLatencyMode;
 
 
 /**
@@ -118,22 +118,11 @@ public class GCSettings extends NetObject  {
     
     // Properties section
     
-    public static GCLatencyMode getLatencyMode() throws Throwable {
+    public static boolean getIsServerGC() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("LatencyMode");
-            return new GCLatencyMode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void setLatencyMode(GCLatencyMode LatencyMode) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Set("LatencyMode", LatencyMode == null ? null : LatencyMode.getJCOInstance());
+            return (boolean)classType.Get("IsServerGC");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,11 +149,22 @@ public class GCSettings extends NetObject  {
         }
     }
 
-    public static boolean getIsServerGC() throws Throwable {
+    public static GCLatencyMode getLatencyMode() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Get("IsServerGC");
+            JCObject val = (JCObject)classType.Get("LatencyMode");
+            return new GCLatencyMode(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void setLatencyMode(GCLatencyMode LatencyMode) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Set("LatencyMode", LatencyMode == null ? null : LatencyMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

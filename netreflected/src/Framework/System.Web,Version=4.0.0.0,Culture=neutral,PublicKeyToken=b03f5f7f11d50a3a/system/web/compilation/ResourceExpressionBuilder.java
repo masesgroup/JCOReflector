@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.compilation.ResourceExpressionFields;
 import system.codedom.CodeExpression;
 import system.web.ui.BoundPropertyEntry;
 import system.web.compilation.ExpressionBuilderContext;
+import system.web.compilation.ResourceExpressionFields;
 
 
 /**
@@ -127,17 +127,6 @@ public class ResourceExpressionBuilder extends NetObject  {
     
     // Methods section
     
-    public static ResourceExpressionFields ParseExpression(java.lang.String expression) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objParseExpression = (JCObject)classType.Invoke("ParseExpression", expression);
-            return new ResourceExpressionFields(objParseExpression);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CodeExpression GetCodeExpression(BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,6 +155,17 @@ public class ResourceExpressionBuilder extends NetObject  {
         try {
             JCObject objParseExpression = (JCObject)classInstance.Invoke("ParseExpression", expression, propertyType == null ? null : propertyType.getJCOInstance(), context == null ? null : context.getJCOInstance());
             return new NetObject(objParseExpression);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ResourceExpressionFields ParseExpression(java.lang.String expression) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objParseExpression = (JCObject)classType.Invoke("ParseExpression", expression);
+            return new ResourceExpressionFields(objParseExpression);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.InheritanceAttribute;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.componentmodel.IContainer;
 import system.componentmodel.IContainerImplementation;
-import system.componentmodel.InheritanceAttribute;
 
 
 /**
@@ -108,22 +108,22 @@ public class IInheritanceServiceImplementation extends NetObject implements IInh
 
     // Methods section
     
-    public void AddInheritedComponents(IComponent component, IContainer container) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddInheritedComponents", component == null ? null : component.getJCOInstance(), container == null ? null : container.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public InheritanceAttribute GetInheritanceAttribute(IComponent component) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetInheritanceAttribute = (JCObject)classInstance.Invoke("GetInheritanceAttribute", component == null ? null : component.getJCOInstance());
             return new InheritanceAttribute(objGetInheritanceAttribute);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddInheritedComponents(IComponent component, IContainer container) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddInheritedComponents", component == null ? null : component.getJCOInstance(), container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

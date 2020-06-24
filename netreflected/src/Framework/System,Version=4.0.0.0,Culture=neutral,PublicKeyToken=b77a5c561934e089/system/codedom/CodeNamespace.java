@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.codedom.CodeTypeDeclarationCollection;
-import system.codedom.CodeNamespaceImportCollection;
 import system.codedom.CodeCommentStatementCollection;
+import system.codedom.CodeNamespaceImportCollection;
+import system.codedom.CodeTypeDeclarationCollection;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.EventHandler;
@@ -143,12 +143,12 @@ public class CodeNamespace extends NetObject  {
     
     // Properties section
     
-    public CodeTypeDeclarationCollection getTypes() throws Throwable {
+    public CodeCommentStatementCollection getComments() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Types");
-            return new CodeTypeDeclarationCollection(val);
+            JCObject val = (JCObject)classInstance.Get("Comments");
+            return new CodeCommentStatementCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,6 +160,28 @@ public class CodeNamespace extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Imports");
             return new CodeNamespaceImportCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeTypeDeclarationCollection getTypes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Types");
+            return new CodeTypeDeclarationCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary getUserData() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("UserData");
+            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,28 +202,6 @@ public class CodeNamespace extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeCommentStatementCollection getComments() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Comments");
-            return new CodeCommentStatementCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary getUserData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
-            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

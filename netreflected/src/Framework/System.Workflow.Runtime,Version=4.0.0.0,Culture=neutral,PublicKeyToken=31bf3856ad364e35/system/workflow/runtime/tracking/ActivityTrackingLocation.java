@@ -148,22 +148,21 @@ public class ActivityTrackingLocation extends NetObject  {
     
     // Properties section
     
-    public NetType getActivityType() throws Throwable {
+    public boolean getMatchDerivedTypes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivityType");
-            return new NetType(val);
+            return (boolean)classInstance.Get("MatchDerivedTypes");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setActivityType(NetType ActivityType) throws Throwable {
+    public void setMatchDerivedTypes(boolean MatchDerivedTypes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ActivityType", ActivityType == null ? null : ActivityType.getJCOInstance());
+            classInstance.Set("MatchDerivedTypes", MatchDerivedTypes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,21 +188,22 @@ public class ActivityTrackingLocation extends NetObject  {
         }
     }
 
-    public boolean getMatchDerivedTypes() throws Throwable {
+    public NetType getActivityType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("MatchDerivedTypes");
+            JCObject val = (JCObject)classInstance.Get("ActivityType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMatchDerivedTypes(boolean MatchDerivedTypes) throws Throwable {
+    public void setActivityType(NetType ActivityType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("MatchDerivedTypes", MatchDerivedTypes);
+            classInstance.Set("ActivityType", ActivityType == null ? null : ActivityType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

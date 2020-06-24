@@ -38,20 +38,20 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Single;
-import system.reflection.MethodInfo;
-import system.threading.Thread;
-import system.runtime.interopservices.UCOMITypeLib;
-import system.runtime.interopservices.UCOMITypeLibImplementation;
+import system.reflection.MemberInfo;
 import system.runtime.interopservices.comtypes.ITypeLib;
 import system.runtime.interopservices.comtypes.ITypeLibImplementation;
+import system.runtime.interopservices.UCOMITypeLib;
+import system.runtime.interopservices.UCOMITypeLibImplementation;
+import system.reflection.MethodInfo;
 import system.Guid;
 import system.reflection.Assembly;
-import system.runtime.interopservices.UCOMITypeInfo;
-import system.runtime.interopservices.UCOMITypeInfoImplementation;
 import system.runtime.interopservices.comtypes.ITypeInfo;
 import system.runtime.interopservices.comtypes.ITypeInfoImplementation;
-import system.reflection.MemberInfo;
+import system.runtime.interopservices.UCOMITypeInfo;
+import system.runtime.interopservices.UCOMITypeInfoImplementation;
+import system.threading.Thread;
+import system.Single;
 
 
 /**
@@ -126,218 +126,31 @@ public class Marshal extends NetObject  {
     
     // Methods section
     
-    public static int SizeOf(NetObject structure) throws Throwable, system.ArgumentNullException {
+    public static boolean AreComObjectsAvailableForCleanup() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("SizeOf", structure == null ? null : structure.getJCOInstance());
+            return (boolean)classType.Invoke("AreComObjectsAvailableForCleanup");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int SizeOf(NetType t) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static boolean IsComObject(NetObject o) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("SizeOf", t == null ? null : t.getJCOInstance());
+            return (boolean)classType.Invoke("IsComObject", o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int GetHRForLastWin32Error() throws Throwable {
+    public static boolean IsTypeVisibleFromCom(NetType t) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("GetHRForLastWin32Error");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Prelink(MethodInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Prelink", m == null ? null : m.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void PrelinkAll(NetType c) throws Throwable, system.ArgumentNullException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("PrelinkAll", c == null ? null : c.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int NumParamBytes(MethodInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("NumParamBytes", m == null ? null : m.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void ThrowExceptionForHR(int errorCode) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("ThrowExceptionForHR", errorCode);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetException GetExceptionForHR(int errorCode) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetExceptionForHR = (JCObject)classType.Invoke("GetExceptionForHR", errorCode);
-            return new NetException(objGetExceptionForHR);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Thread GetThreadFromFiberCookie(int cookie) throws Throwable, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetThreadFromFiberCookie = (JCObject)classType.Invoke("GetThreadFromFiberCookie", cookie);
-            return new Thread(objGetThreadFromFiberCookie);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetTypeLibName(UCOMITypeLib pTLB) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetTypeLibName", pTLB == null ? null : pTLB.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetTypeLibName(ITypeLib typelib) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetTypeLibName", typelib == null ? null : typelib.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Guid GetTypeLibGuid(UCOMITypeLib pTLB) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetTypeLibGuid = (JCObject)classType.Invoke("GetTypeLibGuid", pTLB == null ? null : pTLB.getJCOInstance());
-            return new Guid(objGetTypeLibGuid);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Guid GetTypeLibGuid(ITypeLib typelib) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetTypeLibGuid = (JCObject)classType.Invoke("GetTypeLibGuid", typelib == null ? null : typelib.getJCOInstance());
-            return new Guid(objGetTypeLibGuid);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int GetTypeLibLcid(UCOMITypeLib pTLB) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("GetTypeLibLcid", pTLB == null ? null : pTLB.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Guid GetTypeLibGuidForAssembly(Assembly asm) throws Throwable, system.ArgumentNullException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetTypeLibGuidForAssembly = (JCObject)classType.Invoke("GetTypeLibGuidForAssembly", asm == null ? null : asm.getJCOInstance());
-            return new Guid(objGetTypeLibGuidForAssembly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetTypeInfoName(UCOMITypeInfo pTI) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetTypeInfoName", pTI == null ? null : pTI.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetTypeInfoName(ITypeInfo typeInfo) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetTypeInfoName", typeInfo == null ? null : typeInfo.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetType GetTypeFromCLSID(Guid clsid) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetTypeFromCLSID = (JCObject)classType.Invoke("GetTypeFromCLSID", clsid == null ? null : clsid.getJCOInstance());
-            return new NetType(objGetTypeFromCLSID);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int ReleaseComObject(NetObject o) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("ReleaseComObject", o == null ? null : o.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int FinalReleaseComObject(NetObject o) throws Throwable, system.ArgumentNullException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("FinalReleaseComObject", o == null ? null : o.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject GetComObjectData(NetObject obj, NetObject key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetComObjectData = (JCObject)classType.Invoke("GetComObjectData", obj == null ? null : obj.getJCOInstance(), key == null ? null : key.getJCOInstance());
-            return new NetObject(objGetComObjectData);
+            return (boolean)classType.Invoke("IsTypeVisibleFromCom", t == null ? null : t.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,80 +161,6 @@ public class Marshal extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("SetComObjectData", obj == null ? null : obj.getJCOInstance(), key == null ? null : key.getJCOInstance(), data == null ? null : data.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject CreateWrapperOfType(NetObject o, NetType t) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateWrapperOfType = (JCObject)classType.Invoke("CreateWrapperOfType", o == null ? null : o.getJCOInstance(), t == null ? null : t.getJCOInstance());
-            return new NetObject(objCreateWrapperOfType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void ReleaseThreadCache() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("ReleaseThreadCache");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int GetComSlotForMethodInfo(MemberInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("GetComSlotForMethodInfo", m == null ? null : m.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Guid GenerateGuidForType(NetType type) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGenerateGuidForType = (JCObject)classType.Invoke("GenerateGuidForType", type == null ? null : type.getJCOInstance());
-            return new Guid(objGenerateGuidForType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GenerateProgIdForType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GenerateProgIdForType", type == null ? null : type.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject BindToMoniker(java.lang.String monikerName) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objBindToMoniker = (JCObject)classType.Invoke("BindToMoniker", monikerName);
-            return new NetObject(objBindToMoniker);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject GetActiveObject(java.lang.String progID) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetActiveObject = (JCObject)classType.Invoke("GetActiveObject", progID);
-            return new NetObject(objGetActiveObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,21 +186,31 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int ReadInt32(NetObject ptr, int ofs) throws Throwable {
+    public static int FinalReleaseComObject(NetObject o) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ReadInt32", ptr == null ? null : ptr.getJCOInstance(), ofs);
+            return (int)classType.Invoke("FinalReleaseComObject", o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long ReadInt64(NetObject ptr, int ofs) throws Throwable {
+    public static int GetComSlotForMethodInfo(MemberInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("ReadInt64", ptr == null ? null : ptr.getJCOInstance(), ofs);
+            return (int)classType.Invoke("GetComSlotForMethodInfo", m == null ? null : m.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int GetEndComSlot(NetType t) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetEndComSlot", t == null ? null : t.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,61 +236,11 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetTypeLibLcid(ITypeLib typelib) throws Throwable {
+    public static int GetHRForLastWin32Error() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("GetTypeLibLcid", typelib == null ? null : typelib.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean AreComObjectsAvailableForCleanup() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("AreComObjectsAvailableForCleanup");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsTypeVisibleFromCom(NetType t) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsTypeVisibleFromCom", t == null ? null : t.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int GetStartComSlot(NetType t) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("GetStartComSlot", t == null ? null : t.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int GetEndComSlot(NetType t) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("GetEndComSlot", t == null ? null : t.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void ChangeWrapperHandleStrength(NetObject otp, boolean fIsWeak) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("ChangeWrapperHandleStrength", otp == null ? null : otp.getJCOInstance(), fIsWeak);
+            return (int)classType.Invoke("GetHRForLastWin32Error");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -557,11 +256,312 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static boolean IsComObject(NetObject o) throws Throwable {
+    public static int GetStartComSlot(NetType t) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsComObject", o == null ? null : o.getJCOInstance());
+            return (int)classType.Invoke("GetStartComSlot", t == null ? null : t.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int GetTypeLibLcid(ITypeLib typelib) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetTypeLibLcid", typelib == null ? null : typelib.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int GetTypeLibLcid(UCOMITypeLib pTLB) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetTypeLibLcid", pTLB == null ? null : pTLB.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int NumParamBytes(MethodInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("NumParamBytes", m == null ? null : m.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int ReadInt32(NetObject ptr, int ofs) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("ReadInt32", ptr == null ? null : ptr.getJCOInstance(), ofs);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int ReleaseComObject(NetObject o) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("ReleaseComObject", o == null ? null : o.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int SizeOf(NetObject structure) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("SizeOf", structure == null ? null : structure.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int SizeOf(NetType t) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("SizeOf", t == null ? null : t.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static long ReadInt64(NetObject ptr, int ofs) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (long)classType.Invoke("ReadInt64", ptr == null ? null : ptr.getJCOInstance(), ofs);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetException GetExceptionForHR(int errorCode) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetExceptionForHR = (JCObject)classType.Invoke("GetExceptionForHR", errorCode);
+            return new NetException(objGetExceptionForHR);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Guid GenerateGuidForType(NetType type) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGenerateGuidForType = (JCObject)classType.Invoke("GenerateGuidForType", type == null ? null : type.getJCOInstance());
+            return new Guid(objGenerateGuidForType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Guid GetTypeLibGuid(ITypeLib typelib) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetTypeLibGuid = (JCObject)classType.Invoke("GetTypeLibGuid", typelib == null ? null : typelib.getJCOInstance());
+            return new Guid(objGetTypeLibGuid);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Guid GetTypeLibGuid(UCOMITypeLib pTLB) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetTypeLibGuid = (JCObject)classType.Invoke("GetTypeLibGuid", pTLB == null ? null : pTLB.getJCOInstance());
+            return new Guid(objGetTypeLibGuid);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Guid GetTypeLibGuidForAssembly(Assembly asm) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetTypeLibGuidForAssembly = (JCObject)classType.Invoke("GetTypeLibGuidForAssembly", asm == null ? null : asm.getJCOInstance());
+            return new Guid(objGetTypeLibGuidForAssembly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject BindToMoniker(java.lang.String monikerName) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objBindToMoniker = (JCObject)classType.Invoke("BindToMoniker", monikerName);
+            return new NetObject(objBindToMoniker);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject CreateWrapperOfType(NetObject o, NetType t) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateWrapperOfType = (JCObject)classType.Invoke("CreateWrapperOfType", o == null ? null : o.getJCOInstance(), t == null ? null : t.getJCOInstance());
+            return new NetObject(objCreateWrapperOfType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject GetActiveObject(java.lang.String progID) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetActiveObject = (JCObject)classType.Invoke("GetActiveObject", progID);
+            return new NetObject(objGetActiveObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject GetComObjectData(NetObject obj, NetObject key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetComObjectData = (JCObject)classType.Invoke("GetComObjectData", obj == null ? null : obj.getJCOInstance(), key == null ? null : key.getJCOInstance());
+            return new NetObject(objGetComObjectData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GenerateProgIdForType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GenerateProgIdForType", type == null ? null : type.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetTypeInfoName(ITypeInfo typeInfo) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetTypeInfoName", typeInfo == null ? null : typeInfo.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetTypeInfoName(UCOMITypeInfo pTI) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetTypeInfoName", pTI == null ? null : pTI.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetTypeLibName(ITypeLib typelib) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetTypeLibName", typelib == null ? null : typelib.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetTypeLibName(UCOMITypeLib pTLB) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetTypeLibName", pTLB == null ? null : pTLB.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Thread GetThreadFromFiberCookie(int cookie) throws Throwable, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetThreadFromFiberCookie = (JCObject)classType.Invoke("GetThreadFromFiberCookie", cookie);
+            return new Thread(objGetThreadFromFiberCookie);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetType GetTypeFromCLSID(Guid clsid) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetTypeFromCLSID = (JCObject)classType.Invoke("GetTypeFromCLSID", clsid == null ? null : clsid.getJCOInstance());
+            return new NetType(objGetTypeFromCLSID);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ChangeWrapperHandleStrength(NetObject otp, boolean fIsWeak) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ChangeWrapperHandleStrength", otp == null ? null : otp.getJCOInstance(), fIsWeak);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void CleanupUnusedObjectsInCurrentContext() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("CleanupUnusedObjectsInCurrentContext");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Prelink(MethodInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Prelink", m == null ? null : m.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void PrelinkAll(NetType c) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("PrelinkAll", c == null ? null : c.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ThrowExceptionForHR(int errorCode) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ThrowExceptionForHR", errorCode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

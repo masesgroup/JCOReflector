@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.documents.serialization.SerializerDescriptor;
 import system.windows.documents.serialization.SerializerWriter;
+import system.windows.documents.serialization.SerializerDescriptor;
 import system.io.Stream;
 
 
@@ -126,6 +126,17 @@ public class SerializerProvider extends NetObject  {
     
     // Methods section
     
+    public SerializerWriter CreateSerializerWriter(SerializerDescriptor serializerDescriptor, Stream stream) throws Throwable, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidCastException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateSerializerWriter = (JCObject)classInstance.Invoke("CreateSerializerWriter", serializerDescriptor == null ? null : serializerDescriptor.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
+            return new SerializerWriter(objCreateSerializerWriter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void RegisterSerializer(SerializerDescriptor serializerDescriptor, boolean overwrite) throws Throwable, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.IOException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -141,17 +152,6 @@ public class SerializerProvider extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UnregisterSerializer", serializerDescriptor == null ? null : serializerDescriptor.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SerializerWriter CreateSerializerWriter(SerializerDescriptor serializerDescriptor, Stream stream) throws Throwable, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidCastException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateSerializerWriter = (JCObject)classInstance.Invoke("CreateSerializerWriter", serializerDescriptor == null ? null : serializerDescriptor.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
-            return new SerializerWriter(objCreateSerializerWriter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

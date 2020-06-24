@@ -37,10 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import microsoft.build.framework.ITaskItem;
-import microsoft.build.framework.ITaskItemImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import microsoft.build.framework.ITaskItem;
+import microsoft.build.framework.ITaskItemImplementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 
@@ -95,27 +95,27 @@ public interface ITaskItem extends IJCOBridgeReflected {
 
     // Methods section
     
+    public IDictionary CloneCustomMetadata() throws Throwable;
+
     public java.lang.String GetMetadata(java.lang.String metadataName) throws Throwable;
-
-    public void SetMetadata(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable;
-
-    public void RemoveMetadata(java.lang.String metadataName) throws Throwable;
 
     public void CopyMetadataTo(ITaskItem destinationItem) throws Throwable;
 
-    public IDictionary CloneCustomMetadata() throws Throwable;
+    public void RemoveMetadata(java.lang.String metadataName) throws Throwable;
+
+    public void SetMetadata(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable;
 
 
     
     // Properties section
     
-    public java.lang.String getItemSpec() throws Throwable;
-
-    public void setItemSpec(java.lang.String ItemSpec) throws Throwable;
+    public int getMetadataCount() throws Throwable;
 
     public ICollection getMetadataNames() throws Throwable;
 
-    public int getMetadataCount() throws Throwable;
+    public java.lang.String getItemSpec() throws Throwable;
+
+    public void setItemSpec(java.lang.String ItemSpec) throws Throwable;
 
 
 

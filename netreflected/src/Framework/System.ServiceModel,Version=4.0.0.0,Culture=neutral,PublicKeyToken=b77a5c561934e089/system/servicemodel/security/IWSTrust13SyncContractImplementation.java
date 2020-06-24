@@ -115,45 +115,23 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
         }
     }
 
-    public Message ProcessTrust13Issue(Message message) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objProcessTrust13Issue = (JCObject)classInstance.Invoke("ProcessTrust13Issue", message == null ? null : message.getJCOInstance());
-            return new Message(objProcessTrust13Issue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Message ProcessTrust13Renew(Message message) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objProcessTrust13Renew = (JCObject)classInstance.Invoke("ProcessTrust13Renew", message == null ? null : message.getJCOInstance());
-            return new Message(objProcessTrust13Renew);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Message ProcessTrust13Validate(Message message) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objProcessTrust13Validate = (JCObject)classInstance.Invoke("ProcessTrust13Validate", message == null ? null : message.getJCOInstance());
-            return new Message(objProcessTrust13Validate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Message ProcessTrust13CancelResponse(Message message) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objProcessTrust13CancelResponse = (JCObject)classInstance.Invoke("ProcessTrust13CancelResponse", message == null ? null : message.getJCOInstance());
             return new Message(objProcessTrust13CancelResponse);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message ProcessTrust13Issue(Message message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objProcessTrust13Issue = (JCObject)classInstance.Invoke("ProcessTrust13Issue", message == null ? null : message.getJCOInstance());
+            return new Message(objProcessTrust13Issue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,12 +148,34 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
         }
     }
 
+    public Message ProcessTrust13Renew(Message message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objProcessTrust13Renew = (JCObject)classInstance.Invoke("ProcessTrust13Renew", message == null ? null : message.getJCOInstance());
+            return new Message(objProcessTrust13Renew);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Message ProcessTrust13RenewResponse(Message message) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objProcessTrust13RenewResponse = (JCObject)classInstance.Invoke("ProcessTrust13RenewResponse", message == null ? null : message.getJCOInstance());
             return new Message(objProcessTrust13RenewResponse);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message ProcessTrust13Validate(Message message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objProcessTrust13Validate = (JCObject)classInstance.Invoke("ProcessTrust13Validate", message == null ? null : message.getJCOInstance());
+            return new Message(objProcessTrust13Validate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

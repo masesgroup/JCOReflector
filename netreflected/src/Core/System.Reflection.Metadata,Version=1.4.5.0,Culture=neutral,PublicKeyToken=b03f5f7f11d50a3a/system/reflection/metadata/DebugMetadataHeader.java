@@ -117,22 +117,22 @@ public class DebugMetadataHeader extends NetObject  {
     
     // Properties section
     
+    public int getIdStartOffset() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("IdStartOffset");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MethodDefinitionHandle getEntryPoint() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("EntryPoint");
             return new MethodDefinitionHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getIdStartOffset() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("IdStartOffset");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

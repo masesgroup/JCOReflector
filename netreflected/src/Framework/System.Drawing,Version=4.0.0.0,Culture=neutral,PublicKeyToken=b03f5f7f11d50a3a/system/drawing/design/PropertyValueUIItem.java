@@ -139,22 +139,22 @@ public class PropertyValueUIItem extends NetObject  {
     
     // Properties section
     
+    public PropertyValueUIItemInvokeHandler getInvokeHandler() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (PropertyValueUIItemInvokeHandler)classInstance.Get("InvokeHandler");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Image getImage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Image");
             return new Image(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyValueUIItemInvokeHandler getInvokeHandler() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (PropertyValueUIItemInvokeHandler)classInstance.Get("InvokeHandler");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

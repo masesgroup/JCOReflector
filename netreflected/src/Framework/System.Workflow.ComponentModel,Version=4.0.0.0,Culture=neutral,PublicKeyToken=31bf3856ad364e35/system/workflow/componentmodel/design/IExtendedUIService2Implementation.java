@@ -105,21 +105,21 @@ public class IExtendedUIService2Implementation extends NetObject implements IExt
 
     // Methods section
     
-    public long GetTargetFrameworkVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Invoke("GetTargetFrameworkVersion");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsSupportedType(NetType type) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsSupportedType", type == null ? null : type.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long GetTargetFrameworkVersion() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("GetTargetFrameworkVersion");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

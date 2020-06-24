@@ -40,13 +40,13 @@ import java.util.ArrayList;
 // Import section
 import system.TimeSpan;
 import system.servicemodel.security.tokens.SecurityContextSecurityToken;
-import system.xml.UniqueId;
-import system.DateTime;
-import system.identitymodel.tokens.SecurityToken;
-import system.identitymodel.tokens.SecurityKeyIdentifier;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
+import system.identitymodel.tokens.SecurityKeyIdentifier;
 import system.identitymodel.tokens.SecurityKey;
+import system.identitymodel.tokens.SecurityToken;
+import system.xml.UniqueId;
 import system.xml.XmlNodeList;
+import system.DateTime;
 
 
 /**
@@ -142,16 +142,6 @@ public class SecurityContextSecurityTokenResolver extends NetObject  {
     
     // Methods section
     
-    public void AddContext(SecurityContextSecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddContext", token == null ? null : token.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean TryAddContext(SecurityContextSecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -162,52 +152,12 @@ public class SecurityContextSecurityTokenResolver extends NetObject  {
         }
     }
 
-    public void ClearContexts() throws Throwable, system.ArgumentException {
+    public SecurityKey ResolveSecurityKey(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ClearContexts");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveContext(UniqueId contextId, UniqueId generation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveContext", contextId == null ? null : contextId.getJCOInstance(), generation == null ? null : generation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveAllContexts(UniqueId contextId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveAllContexts", contextId == null ? null : contextId.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityContextSecurityToken GetContext(UniqueId contextId, UniqueId generation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetContext = (JCObject)classInstance.Invoke("GetContext", contextId == null ? null : contextId.getJCOInstance(), generation == null ? null : generation.getJCOInstance());
-            return new SecurityContextSecurityToken(objGetContext);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void UpdateContextCachingTime(SecurityContextSecurityToken context, DateTime expirationTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UpdateContextCachingTime", context == null ? null : context.getJCOInstance(), expirationTime == null ? null : expirationTime.getJCOInstance());
+            JCObject objResolveSecurityKey = (JCObject)classInstance.Invoke("ResolveSecurityKey", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return new SecurityKey(objResolveSecurityKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,12 +185,32 @@ public class SecurityContextSecurityTokenResolver extends NetObject  {
         }
     }
 
-    public SecurityKey ResolveSecurityKey(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public SecurityContextSecurityToken GetContext(UniqueId contextId, UniqueId generation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveSecurityKey = (JCObject)classInstance.Invoke("ResolveSecurityKey", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
-            return new SecurityKey(objResolveSecurityKey);
+            JCObject objGetContext = (JCObject)classInstance.Invoke("GetContext", contextId == null ? null : contextId.getJCOInstance(), generation == null ? null : generation.getJCOInstance());
+            return new SecurityContextSecurityToken(objGetContext);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddContext(SecurityContextSecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddContext", token == null ? null : token.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ClearContexts() throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ClearContexts");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +226,50 @@ public class SecurityContextSecurityTokenResolver extends NetObject  {
         }
     }
 
+    public void RemoveAllContexts(UniqueId contextId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveAllContexts", contextId == null ? null : contextId.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveContext(UniqueId contextId, UniqueId generation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveContext", contextId == null ? null : contextId.getJCOInstance(), generation == null ? null : generation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UpdateContextCachingTime(SecurityContextSecurityToken context, DateTime expirationTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateContextCachingTime", context == null ? null : context.getJCOInstance(), expirationTime == null ? null : expirationTime.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public boolean getRemoveOldestTokensOnCacheFull() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("RemoveOldestTokensOnCacheFull");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int getSecurityContextTokenCacheCapacity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -276,16 +286,6 @@ public class SecurityContextSecurityTokenResolver extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ClockSkew");
             return new TimeSpan(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getRemoveOldestTokensOnCacheFull() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("RemoveOldestTokensOnCacheFull");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

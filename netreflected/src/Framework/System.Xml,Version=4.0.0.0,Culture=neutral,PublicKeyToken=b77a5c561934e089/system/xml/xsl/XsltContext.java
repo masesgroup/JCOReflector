@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.xsl.IXsltContextVariable;
-import system.xml.xsl.IXsltContextVariableImplementation;
+import system.xml.xpath.XPathNavigator;
 import system.xml.xsl.IXsltContextFunction;
 import system.xml.xsl.IXsltContextFunctionImplementation;
 import system.xml.xpath.XPathResultType;
-import system.xml.xpath.XPathNavigator;
+import system.xml.xsl.IXsltContextVariable;
+import system.xml.xsl.IXsltContextVariableImplementation;
 import system.xml.XmlNameTable;
 
 
@@ -119,23 +119,21 @@ public class XsltContext extends NetObject  {
     
     // Methods section
     
-    public IXsltContextVariable ResolveVariable(java.lang.String prefix, java.lang.String name) throws Throwable {
+    public boolean HasNamespace(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveVariable = (JCObject)classInstance.Invoke("ResolveVariable", prefix, name);
-            return new IXsltContextVariableImplementation(objResolveVariable);
+            return (boolean)classInstance.Invoke("HasNamespace", prefix);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IXsltContextFunction ResolveFunction(java.lang.String prefix, java.lang.String name, XPathResultType[] ArgTypes) throws Throwable {
+    public boolean PopScope() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveFunction = (JCObject)classInstance.Invoke("ResolveFunction", prefix, name, toObjectFromArray(ArgTypes));
-            return new IXsltContextFunctionImplementation(objResolveFunction);
+            return (boolean)classInstance.Invoke("PopScope");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,36 +159,6 @@ public class XsltContext extends NetObject  {
         }
     }
 
-    public void PushScope() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PushScope");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean PopScope() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("PopScope");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveNamespace(java.lang.String prefix, java.lang.String uri) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveNamespace", prefix, uri);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String LookupNamespace(java.lang.String prefix) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -211,11 +179,23 @@ public class XsltContext extends NetObject  {
         }
     }
 
-    public boolean HasNamespace(java.lang.String prefix) throws Throwable {
+    public IXsltContextFunction ResolveFunction(java.lang.String prefix, java.lang.String name, XPathResultType[] ArgTypes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("HasNamespace", prefix);
+            JCObject objResolveFunction = (JCObject)classInstance.Invoke("ResolveFunction", prefix, name, toObjectFromArray(ArgTypes));
+            return new IXsltContextFunctionImplementation(objResolveFunction);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IXsltContextVariable ResolveVariable(java.lang.String prefix, java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveVariable = (JCObject)classInstance.Invoke("ResolveVariable", prefix, name);
+            return new IXsltContextVariableImplementation(objResolveVariable);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,6 +206,26 @@ public class XsltContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddNamespace", prefix, uri);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PushScope() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PushScope");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveNamespace(java.lang.String prefix, java.lang.String uri) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveNamespace", prefix, uri);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,22 +245,22 @@ public class XsltContext extends NetObject  {
         }
     }
 
+    public java.lang.String getDefaultNamespace() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("DefaultNamespace");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XmlNameTable getNameTable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("NameTable");
             return new XmlNameTable(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDefaultNamespace() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DefaultNamespace");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

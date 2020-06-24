@@ -96,41 +96,41 @@ public interface ISymbolWriter extends IJCOBridgeReflected {
 
     // Methods section
     
+    public int OpenScope(int startOffset) throws Throwable;
+
     public ISymbolDocumentWriter DefineDocument(java.lang.String url, Guid language, Guid languageVendor, Guid documentType) throws Throwable;
 
-    public void SetUserEntryPoint(SymbolToken entryMethod) throws Throwable;
-
-    public void OpenMethod(SymbolToken method) throws Throwable;
+    public void Close() throws Throwable;
 
     public void CloseMethod() throws Throwable;
 
-    public void DefineSequencePoints(ISymbolDocumentWriter document, int[] offsets, int[] lines, int[] columns, int[] endLines, int[] endColumns) throws Throwable;
-
-    public int OpenScope(int startOffset) throws Throwable;
+    public void CloseNamespace() throws Throwable;
 
     public void CloseScope(int endOffset) throws Throwable;
-
-    public void SetScopeRange(int scopeID, int startOffset, int endOffset) throws Throwable;
-
-    public void DefineLocalVariable(java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3, int startOffset, int endOffset) throws Throwable;
-
-    public void DefineParameter(java.lang.String name, ParameterAttributes attributes, int sequence, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable;
 
     public void DefineField(SymbolToken parent, java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable;
 
     public void DefineGlobalVariable(java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable;
 
-    public void Close() throws Throwable;
+    public void DefineLocalVariable(java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3, int startOffset, int endOffset) throws Throwable;
 
-    public void SetSymAttribute(SymbolToken parent, java.lang.String name, byte[] data) throws Throwable;
+    public void DefineParameter(java.lang.String name, ParameterAttributes attributes, int sequence, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable;
+
+    public void DefineSequencePoints(ISymbolDocumentWriter document, int[] offsets, int[] lines, int[] columns, int[] endLines, int[] endColumns) throws Throwable;
+
+    public void OpenMethod(SymbolToken method) throws Throwable;
 
     public void OpenNamespace(java.lang.String name) throws Throwable;
 
-    public void CloseNamespace() throws Throwable;
+    public void SetMethodSourceRange(ISymbolDocumentWriter startDoc, int startLine, int startColumn, ISymbolDocumentWriter endDoc, int endLine, int endColumn) throws Throwable;
+
+    public void SetScopeRange(int scopeID, int startOffset, int endOffset) throws Throwable;
+
+    public void SetSymAttribute(SymbolToken parent, java.lang.String name, byte[] data) throws Throwable;
+
+    public void SetUserEntryPoint(SymbolToken entryMethod) throws Throwable;
 
     public void UsingNamespace(java.lang.String fullName) throws Throwable;
-
-    public void SetMethodSourceRange(ISymbolDocumentWriter startDoc, int startLine, int startColumn, ISymbolDocumentWriter endDoc, int endLine, int endColumn) throws Throwable;
 
 
     

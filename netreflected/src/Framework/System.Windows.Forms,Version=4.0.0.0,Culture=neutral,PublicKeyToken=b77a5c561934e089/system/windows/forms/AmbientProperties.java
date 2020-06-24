@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.drawing.Color;
-import system.windows.forms.Cursor;
 import system.drawing.Font;
+import system.windows.forms.Cursor;
 
 
 /**
@@ -151,22 +151,22 @@ public class AmbientProperties extends NetObject  {
         }
     }
 
-    public Cursor getCursor() throws Throwable {
+    public Color getForeColor() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Cursor");
-            return new Cursor(val);
+            JCObject val = (JCObject)classInstance.Get("ForeColor");
+            return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCursor(Cursor Cursor) throws Throwable {
+    public void setForeColor(Color ForeColor) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Cursor", Cursor == null ? null : Cursor.getJCOInstance());
+            classInstance.Set("ForeColor", ForeColor == null ? null : ForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,22 +193,22 @@ public class AmbientProperties extends NetObject  {
         }
     }
 
-    public Color getForeColor() throws Throwable {
+    public Cursor getCursor() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ForeColor");
-            return new Color(val);
+            JCObject val = (JCObject)classInstance.Get("Cursor");
+            return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setForeColor(Color ForeColor) throws Throwable {
+    public void setCursor(Cursor Cursor) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ForeColor", ForeColor == null ? null : ForeColor.getJCOInstance());
+            classInstance.Set("Cursor", Cursor == null ? null : Cursor.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

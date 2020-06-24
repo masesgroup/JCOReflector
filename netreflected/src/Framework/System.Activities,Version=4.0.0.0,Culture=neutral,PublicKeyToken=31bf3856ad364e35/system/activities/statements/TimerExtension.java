@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.TimeSpan;
 import system.activities.Bookmark;
+import system.TimeSpan;
 
 
 /**
@@ -114,21 +114,21 @@ public class TimerExtension extends NetObject  {
     
     // Methods section
     
-    public void RegisterTimer(TimeSpan timeout, Bookmark bookmark) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RegisterTimer", timeout == null ? null : timeout.getJCOInstance(), bookmark == null ? null : bookmark.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void CancelTimer(Bookmark bookmark) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelTimer", bookmark == null ? null : bookmark.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RegisterTimer(TimeSpan timeout, Bookmark bookmark) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterTimer", timeout == null ? null : timeout.getJCOInstance(), bookmark == null ? null : bookmark.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -111,21 +111,11 @@ public class BindingCompleteEventArgs extends NetObject  {
     // Constructors section
     
 
-    public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context, java.lang.String errorText, NetException exception, boolean cancel) throws Throwable {
+    public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(binding == null ? null : binding.getJCOInstance(), state == null ? null : state.getJCOInstance(), context == null ? null : context.getJCOInstance(), errorText, exception == null ? null : exception.getJCOInstance(), cancel));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context, java.lang.String errorText, NetException exception) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(binding == null ? null : binding.getJCOInstance(), state == null ? null : state.getJCOInstance(), context == null ? null : context.getJCOInstance(), errorText, exception == null ? null : exception.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(binding == null ? null : binding.getJCOInstance(), state == null ? null : state.getJCOInstance(), context == null ? null : context.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -141,11 +131,21 @@ public class BindingCompleteEventArgs extends NetObject  {
         }
     }
 
-    public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context) throws Throwable {
+    public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context, java.lang.String errorText, NetException exception) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(binding == null ? null : binding.getJCOInstance(), state == null ? null : state.getJCOInstance(), context == null ? null : context.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(binding == null ? null : binding.getJCOInstance(), state == null ? null : state.getJCOInstance(), context == null ? null : context.getJCOInstance(), errorText, exception == null ? null : exception.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context, java.lang.String errorText, NetException exception, boolean cancel) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(binding == null ? null : binding.getJCOInstance(), state == null ? null : state.getJCOInstance(), context == null ? null : context.getJCOInstance(), errorText, exception == null ? null : exception.getJCOInstance(), cancel));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,44 +159,21 @@ public class BindingCompleteEventArgs extends NetObject  {
     
     // Properties section
     
-    public system.windows.forms.Binding getBinding() throws Throwable {
+    public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
-            return new system.windows.forms.Binding(val);
+            return (boolean)classInstance.Get("Cancel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public BindingCompleteState getBindingCompleteState() throws Throwable {
+    public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingCompleteState");
-            return new BindingCompleteState(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BindingCompleteContext getBindingCompleteContext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BindingCompleteContext");
-            return new BindingCompleteContext(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getErrorText() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ErrorText");
+            classInstance.Set("Cancel", Cancel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,21 +190,44 @@ public class BindingCompleteEventArgs extends NetObject  {
         }
     }
 
-    public boolean getCancel() throws Throwable {
+    public java.lang.String getErrorText() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Cancel");
+            return (java.lang.String)classInstance.Get("ErrorText");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCancel(boolean Cancel) throws Throwable {
+    public system.windows.forms.Binding getBinding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Cancel", Cancel);
+            JCObject val = (JCObject)classInstance.Get("Binding");
+            return new system.windows.forms.Binding(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BindingCompleteContext getBindingCompleteContext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("BindingCompleteContext");
+            return new BindingCompleteContext(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BindingCompleteState getBindingCompleteState() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("BindingCompleteState");
+            return new BindingCompleteState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

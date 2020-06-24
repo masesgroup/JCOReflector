@@ -128,11 +128,11 @@ public class ClerkInfo extends NetObject  {
         }
     }
 
-    public java.lang.String getInstanceId() throws Throwable {
+    public java.lang.String getActivityId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("InstanceId");
+            return (java.lang.String)classInstance.Get("ActivityId");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,21 +158,21 @@ public class ClerkInfo extends NetObject  {
         }
     }
 
-    public java.lang.String getTransactionUOW() throws Throwable {
+    public java.lang.String getInstanceId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("TransactionUOW");
+            return (java.lang.String)classInstance.Get("InstanceId");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getActivityId() throws Throwable {
+    public java.lang.String getTransactionUOW() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ActivityId");
+            return (java.lang.String)classInstance.Get("TransactionUOW");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

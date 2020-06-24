@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.workflow.componentmodel.compiler.AttributeInfo;
 import system.codedom.MemberAttributes;
 import system.codedom.CodeSnippetExpression;
-import system.workflow.componentmodel.compiler.AttributeInfo;
 import system.workflow.componentmodel.Activity;
 
 
@@ -107,6 +107,16 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
 
     // Methods section
     
+    public void CreateEvent(java.lang.String className, java.lang.String eventName, NetType eventType, AttributeInfo[] attributes, boolean emitDependencyProperty) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CreateEvent", className, eventName, eventType == null ? null : eventType.getJCOInstance(), toObjectFromArray(attributes), emitDependencyProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void CreateField(java.lang.String className, java.lang.String fieldName, NetType fieldType, NetType[] genericParameterTypes, MemberAttributes attributes, CodeSnippetExpression initializationExpression, boolean overwriteExisting) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -127,51 +137,11 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
 
-    public void CreateEvent(java.lang.String className, java.lang.String eventName, NetType eventType, AttributeInfo[] attributes, boolean emitDependencyProperty) throws Throwable {
+    public void RemoveEvent(java.lang.String className, java.lang.String eventName, NetType eventType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CreateEvent", className, eventName, eventType == null ? null : eventType.getJCOInstance(), toObjectFromArray(attributes), emitDependencyProperty);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void UpdateTypeName(java.lang.String oldClassName, java.lang.String newClassName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UpdateTypeName", oldClassName, newClassName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void UpdateBaseType(java.lang.String className, NetType baseType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UpdateBaseType", className, baseType == null ? null : baseType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void UpdateProperty(java.lang.String className, java.lang.String oldPropertyName, NetType oldPropertyType, java.lang.String newPropertyName, NetType newPropertyType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UpdateProperty", className, oldPropertyName, oldPropertyType == null ? null : oldPropertyType.getJCOInstance(), newPropertyName, newPropertyType == null ? null : newPropertyType.getJCOInstance(), toObjectFromArray(attributes), emitDependencyProperty, isMetaProperty);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void UpdateEvent(java.lang.String className, java.lang.String oldEventName, NetType oldEventType, java.lang.String newEventName, NetType newEventType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UpdateEvent", className, oldEventName, oldEventType == null ? null : oldEventType.getJCOInstance(), newEventName, newEventType == null ? null : newEventType.getJCOInstance(), toObjectFromArray(attributes), emitDependencyProperty, isMetaProperty);
+            classInstance.Invoke("RemoveEvent", className, eventName, eventType == null ? null : eventType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,11 +157,11 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
 
-    public void RemoveEvent(java.lang.String className, java.lang.String eventName, NetType eventType) throws Throwable {
+    public void ShowCode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RemoveEvent", className, eventName, eventType == null ? null : eventType.getJCOInstance());
+            classInstance.Invoke("ShowCode");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,11 +177,41 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
 
-    public void ShowCode() throws Throwable {
+    public void UpdateBaseType(java.lang.String className, NetType baseType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ShowCode");
+            classInstance.Invoke("UpdateBaseType", className, baseType == null ? null : baseType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UpdateEvent(java.lang.String className, java.lang.String oldEventName, NetType oldEventType, java.lang.String newEventName, NetType newEventType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateEvent", className, oldEventName, oldEventType == null ? null : oldEventType.getJCOInstance(), newEventName, newEventType == null ? null : newEventType.getJCOInstance(), toObjectFromArray(attributes), emitDependencyProperty, isMetaProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UpdateProperty(java.lang.String className, java.lang.String oldPropertyName, NetType oldPropertyType, java.lang.String newPropertyName, NetType newPropertyType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateProperty", className, oldPropertyName, oldPropertyType == null ? null : oldPropertyType.getJCOInstance(), newPropertyName, newPropertyType == null ? null : newPropertyType.getJCOInstance(), toObjectFromArray(attributes), emitDependencyProperty, isMetaProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UpdateTypeName(java.lang.String oldClassName, java.lang.String newClassName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateTypeName", oldClassName, newClassName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

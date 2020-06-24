@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.reflection.AssemblyName;
 import system.reflection.metadata.CustomAttributeHandleCollection;
-import system.Version;
 import system.reflection.AssemblyFlags;
-import system.reflection.metadata.StringHandle;
 import system.reflection.metadata.BlobHandle;
+import system.reflection.metadata.StringHandle;
+import system.Version;
 
 
 /**
@@ -144,17 +144,6 @@ public class AssemblyReference extends NetObject  {
     
     // Properties section
     
-    public Version getVersion() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Version");
-            return new Version(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AssemblyFlags getFlags() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,23 +155,12 @@ public class AssemblyReference extends NetObject  {
         }
     }
 
-    public StringHandle getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public BlobHandle getHashValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
-            return new StringHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StringHandle getCulture() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Culture");
-            return new StringHandle(val);
+            JCObject val = (JCObject)classInstance.Get("HashValue");
+            return new BlobHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,12 +177,34 @@ public class AssemblyReference extends NetObject  {
         }
     }
 
-    public BlobHandle getHashValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public StringHandle getCulture() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("HashValue");
-            return new BlobHandle(val);
+            JCObject val = (JCObject)classInstance.Get("Culture");
+            return new StringHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StringHandle getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Name");
+            return new StringHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Version getVersion() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Version");
+            return new Version(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

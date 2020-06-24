@@ -40,15 +40,15 @@ import java.util.ArrayList;
 // Import section
 import microsoft.jscript.ArrayObject;
 import microsoft.jscript.vsa.VsaEngine;
-import system.reflection.FieldInfo;
-import system.reflection.MemberInfo;
-import system.reflection.BindingFlags;
-import system.reflection.MethodInfo;
 import microsoft.jscript.ScriptObject;
-import system.reflection.PropertyInfo;
+import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.reflection.ParameterModifier;
 import system.globalization.CultureInfo;
+import system.reflection.FieldInfo;
+import system.reflection.MemberInfo;
+import system.reflection.MethodInfo;
+import system.reflection.PropertyInfo;
 import microsoft.jscript.ArrayConstructor;
 
 
@@ -124,6 +124,16 @@ public class ArrayPrototype extends NetObject  {
     
     // Methods section
     
+    public static long push(NetObject thisob, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (long)classType.Invoke("push", thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(args));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ArrayObject concat(NetObject thisob, VsaEngine engine, NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.JScriptException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -135,21 +145,45 @@ public class ArrayPrototype extends NetObject  {
         }
     }
 
-    public static java.lang.String toLocaleString(NetObject thisob) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, microsoft.jscript.vsa.JSVsaException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.FormatException, system.InvalidCastException, system.OutOfMemoryException {
+    public static ArrayObject slice(NetObject thisob, VsaEngine engine, double start, NetObject end) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("toLocaleString", thisob == null ? null : thisob.getJCOInstance());
+            JCObject objslice = (JCObject)classType.Invoke("slice", thisob == null ? null : thisob.getJCOInstance(), engine == null ? null : engine.getJCOInstance(), start, end == null ? null : end.getJCOInstance());
+            return new ArrayObject(objslice);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String join(NetObject thisob, NetObject separator) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.InvalidCastException, system.reflection.TargetInvocationException {
+    public static ArrayObject splice(NetObject thisob, VsaEngine engine, double start, double deleteCnt, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("join", thisob == null ? null : thisob.getJCOInstance(), separator == null ? null : separator.getJCOInstance());
+            JCObject objsplice = (JCObject)classType.Invoke("splice", thisob == null ? null : thisob.getJCOInstance(), engine == null ? null : engine.getJCOInstance(), start, deleteCnt, toObjectFromArray(args));
+            return new ArrayObject(objsplice);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ScriptObject GetParent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetParent = (JCObject)classInstance.Invoke("GetParent");
+            return new ScriptObject(objGetParent);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo locale, java.lang.String[] namedParameters) throws Throwable, system.reflection.TargetException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, microsoft.jscript.JScriptException, system.OverflowException, system.IndexOutOfRangeException, system.ArithmeticException, system.reflection.AmbiguousMatchException, system.MissingMemberException, system.InvalidCastException, system.security.SecurityException, system.MissingFieldException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objInvokeMember = (JCObject)classInstance.Invoke("InvokeMember", name, invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), target == null ? null : target.getJCOInstance(), toObjectFromArray(args), toObjectFromArray(modifiers), locale == null ? null : locale.getJCOInstance(), namedParameters);
+            return new NetObject(objInvokeMember);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,16 +195,6 @@ public class ArrayPrototype extends NetObject  {
         try {
             JCObject objpop = (JCObject)classType.Invoke("pop", thisob == null ? null : thisob.getJCOInstance());
             return new NetObject(objpop);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static long push(NetObject thisob, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (long)classType.Invoke("push", thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(args));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,44 +222,12 @@ public class ArrayPrototype extends NetObject  {
         }
     }
 
-    public static ArrayObject slice(NetObject thisob, VsaEngine engine, double start, NetObject end) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objslice = (JCObject)classType.Invoke("slice", thisob == null ? null : thisob.getJCOInstance(), engine == null ? null : engine.getJCOInstance(), start, end == null ? null : end.getJCOInstance());
-            return new ArrayObject(objslice);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static NetObject sort(NetObject thisob, NetObject function) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.RankException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objsort = (JCObject)classType.Invoke("sort", thisob == null ? null : thisob.getJCOInstance(), function == null ? null : function.getJCOInstance());
             return new NetObject(objsort);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static ArrayObject splice(NetObject thisob, VsaEngine engine, double start, double deleteCnt, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objsplice = (JCObject)classType.Invoke("splice", thisob == null ? null : thisob.getJCOInstance(), engine == null ? null : engine.getJCOInstance(), start, deleteCnt, toObjectFromArray(args));
-            return new ArrayObject(objsplice);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String toString(NetObject thisob) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.InvalidCastException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,6 +255,34 @@ public class ArrayPrototype extends NetObject  {
         }
     }
 
+    public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetField = (JCObject)classInstance.Invoke("GetField", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            return new FieldInfo(objGetField);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new FieldInfo(resultingObject));
+            }
+            FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MemberInfo[] GetMember(java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotImplementedException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.MissingMethodException, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -275,16 +295,6 @@ public class ArrayPrototype extends NetObject  {
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetMemberValue2(java.lang.String name, NetObject value) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetMemberValue2", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,62 +317,12 @@ public class ArrayPrototype extends NetObject  {
         }
     }
 
-    public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetField = (JCObject)classInstance.Invoke("GetField", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            return new FieldInfo(objGetField);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
             return new MethodInfo(objGetMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ScriptObject GetParent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetParent = (JCObject)classInstance.Invoke("GetParent");
-            return new ScriptObject(objGetParent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetProperty = (JCObject)classInstance.Invoke("GetProperty", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            return new PropertyInfo(objGetProperty);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields", bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new FieldInfo(resultingObject));
-            }
-            FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,6 +356,17 @@ public class ArrayPrototype extends NetObject  {
         }
     }
 
+    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetProperty = (JCObject)classInstance.Invoke("GetProperty", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            return new PropertyInfo(objGetProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -424,12 +395,41 @@ public class ArrayPrototype extends NetObject  {
         }
     }
 
-    public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo locale, java.lang.String[] namedParameters) throws Throwable, system.reflection.TargetException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, microsoft.jscript.JScriptException, system.OverflowException, system.IndexOutOfRangeException, system.ArithmeticException, system.reflection.AmbiguousMatchException, system.MissingMemberException, system.InvalidCastException, system.security.SecurityException, system.MissingFieldException {
+    public static java.lang.String join(NetObject thisob, NetObject separator) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.InvalidCastException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("join", thisob == null ? null : thisob.getJCOInstance(), separator == null ? null : separator.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String toLocaleString(NetObject thisob) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, microsoft.jscript.vsa.JSVsaException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.FormatException, system.InvalidCastException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("toLocaleString", thisob == null ? null : thisob.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String toString(NetObject thisob) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.InvalidCastException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetMemberValue2(java.lang.String name, NetObject value) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInvokeMember = (JCObject)classInstance.Invoke("InvokeMember", name, invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), target == null ? null : target.getJCOInstance(), toObjectFromArray(args), toObjectFromArray(modifiers), locale == null ? null : locale.getJCOInstance(), namedParameters);
-            return new NetObject(objInvokeMember);
+            classInstance.Invoke("SetMemberValue2", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,6 +439,17 @@ public class ArrayPrototype extends NetObject  {
     
     // Properties section
     
+    public static ArrayConstructor getconstructor() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("constructor");
+            return new ArrayConstructor(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject getlength() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -466,17 +477,6 @@ public class ArrayPrototype extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("UnderlyingSystemType");
             return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static ArrayConstructor getconstructor() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("constructor");
-            return new ArrayConstructor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

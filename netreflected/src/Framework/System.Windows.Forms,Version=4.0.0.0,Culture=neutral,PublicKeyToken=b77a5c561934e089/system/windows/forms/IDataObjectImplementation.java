@@ -103,12 +103,31 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
 
     // Methods section
     
-    public NetObject GetData(java.lang.String format, boolean autoConvert) throws Throwable {
+    public boolean GetDataPresent(java.lang.String format) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", format, autoConvert);
-            return new NetObject(objGetData);
+            return (boolean)classInstance.Invoke("GetDataPresent", format);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean GetDataPresent(java.lang.String format, boolean autoConvert) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("GetDataPresent", format, autoConvert);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean GetDataPresent(NetType format) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("GetDataPresent", format == null ? null : format.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -125,12 +144,71 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
+    public NetObject GetData(java.lang.String format, boolean autoConvert) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", format, autoConvert);
+            return new NetObject(objGetData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetData(NetType format) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetData = (JCObject)classInstance.Invoke("GetData", format == null ? null : format.getJCOInstance());
             return new NetObject(objGetData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String[] GetFormats() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFormats");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetFormats = 0; indexGetFormats < resultingArrayList.size(); indexGetFormats++ ) {
+				resultingArray[indexGetFormats] = (java.lang.String)resultingArrayList.get(indexGetFormats);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String[] GetFormats(boolean autoConvert) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFormats", autoConvert);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetFormats = 0; indexGetFormats < resultingArrayList.size(); indexGetFormats++ ) {
+				resultingArray[indexGetFormats] = (java.lang.String)resultingArrayList.get(indexGetFormats);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetData(NetObject data) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetData", data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,84 +239,6 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetData", format == null ? null : format.getJCOInstance(), data == null ? null : data.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetData(NetObject data) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetData", data == null ? null : data.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean GetDataPresent(java.lang.String format, boolean autoConvert) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetDataPresent", format, autoConvert);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean GetDataPresent(java.lang.String format) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetDataPresent", format);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean GetDataPresent(NetType format) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetDataPresent", format == null ? null : format.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String[] GetFormats(boolean autoConvert) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFormats", autoConvert);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetFormats = 0; indexGetFormats < resultingArrayList.size(); indexGetFormats++ ) {
-				resultingArray[indexGetFormats] = (java.lang.String)resultingArrayList.get(indexGetFormats);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String[] GetFormats() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFormats");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetFormats = 0; indexGetFormats < resultingArrayList.size(); indexGetFormats++ ) {
-				resultingArray[indexGetFormats] = (java.lang.String)resultingArrayList.get(indexGetFormats);
-            }
-            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

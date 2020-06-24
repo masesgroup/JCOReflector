@@ -114,45 +114,12 @@ public class ConvertBinder extends NetObject  {
     
     // Methods section
     
-    public DynamicMetaObject FallbackConvert(DynamicMetaObject target) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objFallbackConvert = (JCObject)classInstance.Invoke("FallbackConvert", target == null ? null : target.getJCOInstance());
-            return new DynamicMetaObject(objFallbackConvert);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DynamicMetaObject FallbackConvert(DynamicMetaObject target, DynamicMetaObject errorSuggestion) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objFallbackConvert = (JCObject)classInstance.Invoke("FallbackConvert", target == null ? null : target.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
-            return new DynamicMetaObject(objFallbackConvert);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DynamicMetaObject Bind(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objBind = (JCObject)classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
             return new DynamicMetaObject(objBind);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Expression GetUpdateExpression(NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetUpdateExpression = (JCObject)classInstance.Invoke("GetUpdateExpression", type == null ? null : type.getJCOInstance());
-            return new Expression(objGetUpdateExpression);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,21 +147,43 @@ public class ConvertBinder extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public NetType getType() throws Throwable {
+    public DynamicMetaObject FallbackConvert(DynamicMetaObject target) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new NetType(val);
+            JCObject objFallbackConvert = (JCObject)classInstance.Invoke("FallbackConvert", target == null ? null : target.getJCOInstance());
+            return new DynamicMetaObject(objFallbackConvert);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public DynamicMetaObject FallbackConvert(DynamicMetaObject target, DynamicMetaObject errorSuggestion) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objFallbackConvert = (JCObject)classInstance.Invoke("FallbackConvert", target == null ? null : target.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            return new DynamicMetaObject(objFallbackConvert);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Expression GetUpdateExpression(NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetUpdateExpression = (JCObject)classInstance.Invoke("GetUpdateExpression", type == null ? null : type.getJCOInstance());
+            return new Expression(objGetUpdateExpression);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+
+    
+    // Properties section
+    
     public boolean getExplicit() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -210,6 +199,17 @@ public class ConvertBinder extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ReturnType");
+            return new NetType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType getType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Type");
             return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

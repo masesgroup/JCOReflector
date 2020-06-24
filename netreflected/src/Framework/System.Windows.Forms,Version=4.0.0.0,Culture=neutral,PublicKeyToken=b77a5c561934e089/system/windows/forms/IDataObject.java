@@ -89,29 +89,29 @@ public interface IDataObject extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject GetData(java.lang.String format, boolean autoConvert) throws Throwable;
+    public boolean GetDataPresent(java.lang.String format) throws Throwable;
+
+    public boolean GetDataPresent(java.lang.String format, boolean autoConvert) throws Throwable;
+
+    public boolean GetDataPresent(NetType format) throws Throwable;
 
     public NetObject GetData(java.lang.String format) throws Throwable;
 
+    public NetObject GetData(java.lang.String format, boolean autoConvert) throws Throwable;
+
     public NetObject GetData(NetType format) throws Throwable;
+
+    public java.lang.String[] GetFormats() throws Throwable;
+
+    public java.lang.String[] GetFormats(boolean autoConvert) throws Throwable;
+
+    public void SetData(NetObject data) throws Throwable;
 
     public void SetData(java.lang.String format, boolean autoConvert, NetObject data) throws Throwable;
 
     public void SetData(java.lang.String format, NetObject data) throws Throwable;
 
     public void SetData(NetType format, NetObject data) throws Throwable;
-
-    public void SetData(NetObject data) throws Throwable;
-
-    public boolean GetDataPresent(java.lang.String format, boolean autoConvert) throws Throwable;
-
-    public boolean GetDataPresent(java.lang.String format) throws Throwable;
-
-    public boolean GetDataPresent(NetType format) throws Throwable;
-
-    public java.lang.String[] GetFormats(boolean autoConvert) throws Throwable;
-
-    public java.lang.String[] GetFormats() throws Throwable;
 
 
     

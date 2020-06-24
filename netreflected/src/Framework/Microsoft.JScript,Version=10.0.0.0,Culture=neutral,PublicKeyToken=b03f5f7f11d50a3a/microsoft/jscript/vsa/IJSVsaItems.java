@@ -95,9 +95,9 @@ public interface IJSVsaItems extends IJCOBridgeReflected {
     
     public IJSVsaItem CreateItem(java.lang.String name, JSVsaItemType itemType, JSVsaItemFlag itemFlag) throws Throwable;
 
-    public void Remove(java.lang.String name) throws Throwable;
-
     public void Remove(int index) throws Throwable;
+
+    public void Remove(java.lang.String name) throws Throwable;
 
 
     

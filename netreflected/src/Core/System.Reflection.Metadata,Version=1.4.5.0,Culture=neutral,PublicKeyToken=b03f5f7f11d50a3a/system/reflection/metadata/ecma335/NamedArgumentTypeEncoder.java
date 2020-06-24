@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.BlobBuilder;
-import system.reflection.metadata.ecma335.CustomAttributeElementTypeEncoder;
 import system.reflection.metadata.ecma335.CustomAttributeArrayTypeEncoder;
+import system.reflection.metadata.ecma335.CustomAttributeElementTypeEncoder;
 
 
 /**
@@ -126,6 +126,17 @@ public class NamedArgumentTypeEncoder extends NetObject  {
     
     // Methods section
     
+    public CustomAttributeArrayTypeEncoder SZArray() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSZArray = (JCObject)classInstance.Invoke("SZArray");
+            return new CustomAttributeArrayTypeEncoder(objSZArray);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CustomAttributeElementTypeEncoder ScalarType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -142,17 +153,6 @@ public class NamedArgumentTypeEncoder extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Object");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CustomAttributeArrayTypeEncoder SZArray() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSZArray = (JCObject)classInstance.Invoke("SZArray");
-            return new CustomAttributeArrayTypeEncoder(objSZArray);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

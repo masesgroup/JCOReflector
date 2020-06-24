@@ -135,22 +135,21 @@ public class Duration extends NetObject  {
         }
     }
 
-    public static int Compare(Duration t1, Duration t2) throws Throwable {
+    public static boolean Equals(Duration t1, Duration t2) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("Compare", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
+            return (boolean)classType.Invoke("Equals", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Duration Plus(Duration duration) throws Throwable {
+    public static int Compare(Duration t1, Duration t2) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPlus = (JCObject)classType.Invoke("Plus", duration == null ? null : duration.getJCOInstance());
-            return new Duration(objPlus);
+            return (int)classType.Invoke("Compare", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,11 +166,12 @@ public class Duration extends NetObject  {
         }
     }
 
-    public static boolean Equals(Duration t1, Duration t2) throws Throwable {
+    public static Duration Plus(Duration duration) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("Equals", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
+            JCObject objPlus = (JCObject)classType.Invoke("Plus", duration == null ? null : duration.getJCOInstance());
+            return new Duration(objPlus);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

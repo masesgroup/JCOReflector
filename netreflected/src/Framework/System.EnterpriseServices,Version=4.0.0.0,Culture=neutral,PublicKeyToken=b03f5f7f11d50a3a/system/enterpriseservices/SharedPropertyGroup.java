@@ -113,23 +113,23 @@ public class SharedPropertyGroup extends NetObject  {
     
     // Methods section
     
-    public SharedProperty PropertyByPosition(int position) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objPropertyByPosition = (JCObject)classInstance.Invoke("PropertyByPosition", position);
-            return new SharedProperty(objPropertyByPosition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SharedProperty Property(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objProperty = (JCObject)classInstance.Invoke("Property", name);
             return new SharedProperty(objProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SharedProperty PropertyByPosition(int position) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objPropertyByPosition = (JCObject)classInstance.Invoke("PropertyByPosition", position);
+            return new SharedProperty(objPropertyByPosition);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -156,26 +156,6 @@ public class ObjectContextOptions extends NetObject  {
         }
     }
 
-    public boolean getUseLegacyPreserveChangesBehavior() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("UseLegacyPreserveChangesBehavior");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setUseLegacyPreserveChangesBehavior(boolean UseLegacyPreserveChangesBehavior) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("UseLegacyPreserveChangesBehavior", UseLegacyPreserveChangesBehavior);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getUseConsistentNullReferenceBehavior() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -211,6 +191,26 @@ public class ObjectContextOptions extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseCSharpNullComparisonBehavior", UseCSharpNullComparisonBehavior);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getUseLegacyPreserveChangesBehavior() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("UseLegacyPreserveChangesBehavior");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setUseLegacyPreserveChangesBehavior(boolean UseLegacyPreserveChangesBehavior) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("UseLegacyPreserveChangesBehavior", UseLegacyPreserveChangesBehavior);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

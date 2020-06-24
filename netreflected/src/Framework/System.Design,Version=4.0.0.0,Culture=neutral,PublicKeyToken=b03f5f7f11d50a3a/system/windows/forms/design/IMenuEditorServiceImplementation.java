@@ -105,22 +105,22 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
 
     // Methods section
     
+    public boolean IsActive() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsActive");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Menu GetMenu() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetMenu = (JCObject)classInstance.Invoke("GetMenu");
             return new Menu(objGetMenu);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsActive() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsActive");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

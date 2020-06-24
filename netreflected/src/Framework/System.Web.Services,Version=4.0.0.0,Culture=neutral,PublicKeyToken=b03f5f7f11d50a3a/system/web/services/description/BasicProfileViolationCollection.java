@@ -124,11 +124,11 @@ public class BasicProfileViolationCollection extends NetObject  {
     
     // Methods section
     
-    public void Insert(int index, BasicProfileViolation violation) throws Throwable {
+    public boolean Contains(BasicProfileViolation violation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, violation == null ? null : violation.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", violation == null ? null : violation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,21 +144,11 @@ public class BasicProfileViolationCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(BasicProfileViolation violation) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", violation == null ? null : violation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(BasicProfileViolation violation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", violation == null ? null : violation.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,11 +164,21 @@ public class BasicProfileViolationCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public void Insert(int index, BasicProfileViolation violation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, violation == null ? null : violation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(BasicProfileViolation violation) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", violation == null ? null : violation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

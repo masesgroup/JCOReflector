@@ -41,8 +41,8 @@ import java.util.ArrayList;
 import system.xml.UniqueId;
 import system.DateTime;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
-import system.servicemodel.security.tokens.SecurityContextSecurityToken;
 import system.identitymodel.tokens.SecurityKey;
+import system.servicemodel.security.tokens.SecurityContextSecurityToken;
 import system.servicemodel.security.SecurityMessageProperty;
 
 
@@ -164,54 +164,11 @@ public class SecurityContextSecurityToken extends NetObject  {
     
     // Properties section
     
-    public SecurityMessageProperty getBootstrapMessageProperty() throws Throwable {
+    public boolean getIsCookieMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BootstrapMessageProperty");
-            return new SecurityMessageProperty(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBootstrapMessageProperty(SecurityMessageProperty BootstrapMessageProperty) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BootstrapMessageProperty", BootstrapMessageProperty == null ? null : BootstrapMessageProperty.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Id");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UniqueId getContextId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ContextId");
-            return new UniqueId(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UniqueId getKeyGeneration() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("KeyGeneration");
-            return new UniqueId(val);
+            return (boolean)classInstance.Get("IsCookieMode");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,11 +218,54 @@ public class SecurityContextSecurityToken extends NetObject  {
         }
     }
 
-    public boolean getIsCookieMode() throws Throwable {
+    public SecurityMessageProperty getBootstrapMessageProperty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsCookieMode");
+            JCObject val = (JCObject)classInstance.Get("BootstrapMessageProperty");
+            return new SecurityMessageProperty(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBootstrapMessageProperty(SecurityMessageProperty BootstrapMessageProperty) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("BootstrapMessageProperty", BootstrapMessageProperty == null ? null : BootstrapMessageProperty.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Id");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UniqueId getContextId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ContextId");
+            return new UniqueId(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UniqueId getKeyGeneration() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("KeyGeneration");
+            return new UniqueId(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

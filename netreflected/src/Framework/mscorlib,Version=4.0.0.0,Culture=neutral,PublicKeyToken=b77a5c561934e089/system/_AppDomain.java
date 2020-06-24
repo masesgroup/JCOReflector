@@ -37,24 +37,24 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.UInt32;
-import system.reflection.emit.AssemblyBuilder;
-import system.reflection.AssemblyName;
-import system.reflection.emit.AssemblyBuilderAccess;
 import system.security.policy.Evidence;
+import system.reflection.Assembly;
+import system.reflection.AssemblyName;
+import system.reflection.emit.AssemblyBuilder;
+import system.reflection.emit.AssemblyBuilderAccess;
 import system.security.PermissionSet;
 import system.runtime.remoting.ObjectHandle;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.globalization.CultureInfo;
-import system.reflection.Assembly;
+import system.CrossAppDomainDelegate;
+import system.UInt32;
 import system.security.policy.PolicyLevel;
+import system.security.principal.PrincipalPolicy;
 import system.security.principal.IPrincipal;
 import system.security.principal.IPrincipalImplementation;
-import system.security.principal.PrincipalPolicy;
-import system.CrossAppDomainDelegate;
-import system.EventHandler;
 import system.AssemblyLoadEventHandler;
+import system.EventHandler;
 import system.ResolveEventHandler;
 import system.UnhandledExceptionEventHandler;
 
@@ -109,43 +109,17 @@ public interface _AppDomain extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject InitializeLifetimeService() throws Throwable;
+    public int ExecuteAssembly(java.lang.String assemblyFile) throws Throwable;
+
+    public int ExecuteAssembly(java.lang.String assemblyFile, Evidence assemblySecurity) throws Throwable;
+
+    public int ExecuteAssembly(java.lang.String assemblyFile, Evidence assemblySecurity, java.lang.String[] args) throws Throwable;
+
+    public NetObject GetData(java.lang.String name) throws Throwable;
 
     public NetObject GetLifetimeService() throws Throwable;
 
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access) throws Throwable;
-
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir) throws Throwable;
-
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, Evidence evidence) throws Throwable;
-
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable;
-
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence) throws Throwable;
-
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable;
-
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable;
-
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable;
-
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions, boolean isSynchronized) throws Throwable;
-
-    public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName) throws Throwable;
-
-    public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName) throws Throwable;
-
-    public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable;
-
-    public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable;
-
-    public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes, Evidence securityAttributes) throws Throwable;
-
-    public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes, Evidence securityAttributes) throws Throwable;
-
-    public Assembly Load(AssemblyName assemblyRef) throws Throwable;
-
-    public Assembly Load(java.lang.String assemblyString) throws Throwable;
+    public NetObject InitializeLifetimeService() throws Throwable;
 
     public Assembly Load(byte[] rawAssembly) throws Throwable;
 
@@ -153,83 +127,109 @@ public interface _AppDomain extends IJCOBridgeReflected {
 
     public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore, Evidence securityEvidence) throws Throwable;
 
+    public Assembly Load(AssemblyName assemblyRef) throws Throwable;
+
     public Assembly Load(AssemblyName assemblyRef, Evidence assemblySecurity) throws Throwable;
+
+    public Assembly Load(java.lang.String assemblyString) throws Throwable;
 
     public Assembly Load(java.lang.String assemblyString, Evidence assemblySecurity) throws Throwable;
 
-    public int ExecuteAssembly(java.lang.String assemblyFile, Evidence assemblySecurity) throws Throwable;
-
-    public int ExecuteAssembly(java.lang.String assemblyFile) throws Throwable;
-
-    public int ExecuteAssembly(java.lang.String assemblyFile, Evidence assemblySecurity, java.lang.String[] args) throws Throwable;
-
     public Assembly[] GetAssemblies() throws Throwable;
+
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access) throws Throwable;
+
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable;
+
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, Evidence evidence) throws Throwable;
+
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable;
+
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir) throws Throwable;
+
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable;
+
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence) throws Throwable;
+
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable;
+
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions, boolean isSynchronized) throws Throwable;
+
+    public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName) throws Throwable;
+
+    public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes, Evidence securityAttributes) throws Throwable;
+
+    public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable;
+
+    public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName) throws Throwable;
+
+    public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes, Evidence securityAttributes) throws Throwable;
+
+    public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable;
 
     public void AppendPrivatePath(java.lang.String path) throws Throwable;
 
     public void ClearPrivatePath() throws Throwable;
 
-    public void SetShadowCopyPath(java.lang.String s) throws Throwable;
-
     public void ClearShadowCopyPath() throws Throwable;
+
+    public void DoCallBack(CrossAppDomainDelegate theDelegate) throws Throwable;
+
+    public void SetAppDomainPolicy(PolicyLevel domainPolicy) throws Throwable;
 
     public void SetCachePath(java.lang.String s) throws Throwable;
 
     public void SetData(java.lang.String name, NetObject data) throws Throwable;
 
-    public NetObject GetData(java.lang.String name) throws Throwable;
-
-    public void SetAppDomainPolicy(PolicyLevel domainPolicy) throws Throwable;
-
-    public void SetThreadPrincipal(IPrincipal principal) throws Throwable;
-
     public void SetPrincipalPolicy(PrincipalPolicy policy) throws Throwable;
 
-    public void DoCallBack(CrossAppDomainDelegate theDelegate) throws Throwable;
+    public void SetShadowCopyPath(java.lang.String s) throws Throwable;
+
+    public void SetThreadPrincipal(IPrincipal principal) throws Throwable;
 
 
     
     // Properties section
     
-    public Evidence getEvidence() throws Throwable;
+    public boolean getShadowCopyFiles() throws Throwable;
 
-    public java.lang.String getFriendlyName() throws Throwable;
+    public Evidence getEvidence() throws Throwable;
 
     public java.lang.String getBaseDirectory() throws Throwable;
 
-    public java.lang.String getRelativeSearchPath() throws Throwable;
-
-    public boolean getShadowCopyFiles() throws Throwable;
-
     public java.lang.String getDynamicDirectory() throws Throwable;
+
+    public java.lang.String getFriendlyName() throws Throwable;
+
+    public java.lang.String getRelativeSearchPath() throws Throwable;
 
 
 
     // Instance Events section
     
-    public void addDomainUnload(EventHandler handler) throws Throwable;
-
-    public void removeDomainUnload(EventHandler handler) throws Throwable;
-
     public void addAssemblyLoad(AssemblyLoadEventHandler handler) throws Throwable;
 
     public void removeAssemblyLoad(AssemblyLoadEventHandler handler) throws Throwable;
+
+    public void addDomainUnload(EventHandler handler) throws Throwable;
+
+    public void removeDomainUnload(EventHandler handler) throws Throwable;
 
     public void addProcessExit(EventHandler handler) throws Throwable;
 
     public void removeProcessExit(EventHandler handler) throws Throwable;
 
-    public void addTypeResolve(ResolveEventHandler handler) throws Throwable;
+    public void addAssemblyResolve(ResolveEventHandler handler) throws Throwable;
 
-    public void removeTypeResolve(ResolveEventHandler handler) throws Throwable;
+    public void removeAssemblyResolve(ResolveEventHandler handler) throws Throwable;
 
     public void addResourceResolve(ResolveEventHandler handler) throws Throwable;
 
     public void removeResourceResolve(ResolveEventHandler handler) throws Throwable;
 
-    public void addAssemblyResolve(ResolveEventHandler handler) throws Throwable;
+    public void addTypeResolve(ResolveEventHandler handler) throws Throwable;
 
-    public void removeAssemblyResolve(ResolveEventHandler handler) throws Throwable;
+    public void removeTypeResolve(ResolveEventHandler handler) throws Throwable;
 
     public void addUnhandledException(UnhandledExceptionEventHandler handler) throws Throwable;
 

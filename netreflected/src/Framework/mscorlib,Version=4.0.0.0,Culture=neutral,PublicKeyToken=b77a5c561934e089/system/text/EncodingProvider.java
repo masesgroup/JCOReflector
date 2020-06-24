@@ -115,11 +115,11 @@ public class EncodingProvider extends NetObject  {
     
     // Methods section
     
-    public Encoding GetEncoding(java.lang.String name, EncoderFallback encoderFallback, DecoderFallback decoderFallback) throws Throwable, system.InvalidOperationException, system.ArgumentNullException {
+    public Encoding GetEncoding(int codepage) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", name, encoderFallback == null ? null : encoderFallback.getJCOInstance(), decoderFallback == null ? null : decoderFallback.getJCOInstance());
+            JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", codepage);
             return new Encoding(objGetEncoding);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -148,11 +148,11 @@ public class EncodingProvider extends NetObject  {
         }
     }
 
-    public Encoding GetEncoding(int codepage) throws Throwable {
+    public Encoding GetEncoding(java.lang.String name, EncoderFallback encoderFallback, DecoderFallback decoderFallback) throws Throwable, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", codepage);
+            JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", name, encoderFallback == null ? null : encoderFallback.getJCOInstance(), decoderFallback == null ? null : decoderFallback.getJCOInstance());
             return new Encoding(objGetEncoding);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

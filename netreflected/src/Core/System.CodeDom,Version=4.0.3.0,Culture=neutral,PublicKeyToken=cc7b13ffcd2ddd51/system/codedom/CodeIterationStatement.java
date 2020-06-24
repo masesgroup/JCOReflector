@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.codedom.CodeStatement;
 import system.codedom.CodeExpression;
-import system.codedom.CodeStatementCollection;
-import system.codedom.CodeLinePragma;
 import system.codedom.CodeDirectiveCollection;
+import system.codedom.CodeLinePragma;
+import system.codedom.CodeStatementCollection;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 
@@ -144,22 +144,23 @@ public class CodeIterationStatement extends NetObject  {
     
     // Properties section
     
-    public CodeStatement getInitStatement() throws Throwable {
+    public CodeDirectiveCollection getEndDirectives() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("InitStatement");
-            return new CodeStatement(val);
+            JCObject val = (JCObject)classInstance.Get("EndDirectives");
+            return new CodeDirectiveCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setInitStatement(CodeStatement InitStatement) throws Throwable {
+    public CodeDirectiveCollection getStartDirectives() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("InitStatement", InitStatement == null ? null : InitStatement.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("StartDirectives");
+            return new CodeDirectiveCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,38 +187,6 @@ public class CodeIterationStatement extends NetObject  {
         }
     }
 
-    public CodeStatement getIncrementStatement() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("IncrementStatement");
-            return new CodeStatement(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIncrementStatement(CodeStatement IncrementStatement) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IncrementStatement", IncrementStatement == null ? null : IncrementStatement.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeStatementCollection getStatements() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Statements");
-            return new CodeStatementCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CodeLinePragma getLinePragma() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -239,23 +208,54 @@ public class CodeIterationStatement extends NetObject  {
         }
     }
 
-    public CodeDirectiveCollection getStartDirectives() throws Throwable {
+    public CodeStatement getIncrementStatement() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StartDirectives");
-            return new CodeDirectiveCollection(val);
+            JCObject val = (JCObject)classInstance.Get("IncrementStatement");
+            return new CodeStatement(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CodeDirectiveCollection getEndDirectives() throws Throwable {
+    public void setIncrementStatement(CodeStatement IncrementStatement) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EndDirectives");
-            return new CodeDirectiveCollection(val);
+            classInstance.Set("IncrementStatement", IncrementStatement == null ? null : IncrementStatement.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeStatement getInitStatement() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("InitStatement");
+            return new CodeStatement(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInitStatement(CodeStatement InitStatement) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InitStatement", InitStatement == null ? null : InitStatement.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeStatementCollection getStatements() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Statements");
+            return new CodeStatementCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

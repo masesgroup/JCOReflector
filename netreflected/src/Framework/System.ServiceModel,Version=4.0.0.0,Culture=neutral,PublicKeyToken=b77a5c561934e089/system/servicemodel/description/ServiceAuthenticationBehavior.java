@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.ServiceAuthenticationManager;
 import system.net.AuthenticationSchemes;
+import system.servicemodel.ServiceAuthenticationManager;
 
 
 /**
@@ -125,16 +125,6 @@ public class ServiceAuthenticationBehavior extends NetObject  {
     
     // Methods section
     
-    public boolean ShouldSerializeServiceAuthenticationManager() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ShouldSerializeServiceAuthenticationManager");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean ShouldSerializeAuthenticationSchemes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,31 +135,20 @@ public class ServiceAuthenticationBehavior extends NetObject  {
         }
     }
 
+    public boolean ShouldSerializeServiceAuthenticationManager() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ShouldSerializeServiceAuthenticationManager");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public ServiceAuthenticationManager getServiceAuthenticationManager() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ServiceAuthenticationManager");
-            return new ServiceAuthenticationManager(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setServiceAuthenticationManager(ServiceAuthenticationManager ServiceAuthenticationManager) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ServiceAuthenticationManager", ServiceAuthenticationManager == null ? null : ServiceAuthenticationManager.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AuthenticationSchemes getAuthenticationSchemes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -186,6 +165,27 @@ public class ServiceAuthenticationBehavior extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuthenticationSchemes", AuthenticationSchemes == null ? null : AuthenticationSchemes.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ServiceAuthenticationManager getServiceAuthenticationManager() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ServiceAuthenticationManager");
+            return new ServiceAuthenticationManager(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setServiceAuthenticationManager(ServiceAuthenticationManager ServiceAuthenticationManager) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ServiceAuthenticationManager", ServiceAuthenticationManager == null ? null : ServiceAuthenticationManager.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -126,21 +126,12 @@ public class XamlTypeInvoker extends NetObject  {
     
     // Methods section
     
-    public void AddToCollection(NetObject instance, NetObject item) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xaml.XamlSchemaException, system.security.SecurityException {
+    public IEnumerator GetItems(NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddToCollection", instance == null ? null : instance.getJCOInstance(), item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddToDictionary(NetObject instance, NetObject key, NetObject item) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xaml.XamlSchemaException, system.security.SecurityException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddToDictionary", instance == null ? null : instance.getJCOInstance(), key == null ? null : key.getJCOInstance(), item == null ? null : item.getJCOInstance());
+            JCObject objGetItems = (JCObject)classInstance.Invoke("GetItems", instance == null ? null : instance.getJCOInstance());
+            return new IEnumeratorImplementation(objGetItems);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,6 +148,17 @@ public class XamlTypeInvoker extends NetObject  {
         }
     }
 
+    public MethodInfo GetAddMethod(XamlType contentType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetAddMethod = (JCObject)classInstance.Invoke("GetAddMethod", contentType == null ? null : contentType.getJCOInstance());
+            return new MethodInfo(objGetAddMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MethodInfo GetEnumeratorMethod() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -168,23 +170,21 @@ public class XamlTypeInvoker extends NetObject  {
         }
     }
 
-    public IEnumerator GetItems(NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.security.SecurityException {
+    public void AddToCollection(NetObject instance, NetObject item) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xaml.XamlSchemaException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetItems = (JCObject)classInstance.Invoke("GetItems", instance == null ? null : instance.getJCOInstance());
-            return new IEnumeratorImplementation(objGetItems);
+            classInstance.Invoke("AddToCollection", instance == null ? null : instance.getJCOInstance(), item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MethodInfo GetAddMethod(XamlType contentType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.ArgumentOutOfRangeException {
+    public void AddToDictionary(NetObject instance, NetObject key, NetObject item) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xaml.XamlSchemaException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetAddMethod = (JCObject)classInstance.Invoke("GetAddMethod", contentType == null ? null : contentType.getJCOInstance());
-            return new MethodInfo(objGetAddMethod);
+            classInstance.Invoke("AddToDictionary", instance == null ? null : instance.getJCOInstance(), key == null ? null : key.getJCOInstance(), item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

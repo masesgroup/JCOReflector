@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.servicemodel.description.OperationDescription;
-import system.servicemodel.dispatcher.DispatchOperation;
-import system.servicemodel.dispatcher.ClientOperation;
 import system.servicemodel.channels.BindingParameterCollection;
+import system.servicemodel.dispatcher.ClientOperation;
+import system.servicemodel.dispatcher.DispatchOperation;
 
 
 /**
@@ -93,13 +93,13 @@ public interface IOperationBehavior extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Validate(OperationDescription operationDescription) throws Throwable;
-
-    public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable;
+    public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable;
 
     public void ApplyClientBehavior(OperationDescription operationDescription, ClientOperation clientOperation) throws Throwable;
 
-    public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable;
+    public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable;
+
+    public void Validate(OperationDescription operationDescription) throws Throwable;
 
 
     

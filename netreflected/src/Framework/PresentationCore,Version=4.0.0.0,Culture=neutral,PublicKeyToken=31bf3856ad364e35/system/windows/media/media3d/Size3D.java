@@ -126,21 +126,21 @@ public class Size3D extends NetObject  {
     
     // Methods section
     
-    public static boolean Equals(Size3D size1, Size3D size2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("Equals", size1 == null ? null : size1.getJCOInstance(), size2 == null ? null : size2.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Equals(Size3D value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean Equals(Size3D size1, Size3D size2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("Equals", size1 == null ? null : size1.getJCOInstance(), size2 == null ? null : size2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

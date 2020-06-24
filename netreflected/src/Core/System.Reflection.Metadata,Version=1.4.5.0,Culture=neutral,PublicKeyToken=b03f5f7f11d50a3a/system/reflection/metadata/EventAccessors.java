@@ -128,22 +128,22 @@ public class EventAccessors extends NetObject  {
         }
     }
 
-    public MethodDefinitionHandle getRemover() throws Throwable {
+    public MethodDefinitionHandle getRaiser() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Remover");
+            JCObject val = (JCObject)classInstance.Get("Raiser");
             return new MethodDefinitionHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MethodDefinitionHandle getRaiser() throws Throwable {
+    public MethodDefinitionHandle getRemover() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Raiser");
+            JCObject val = (JCObject)classInstance.Get("Remover");
             return new MethodDefinitionHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

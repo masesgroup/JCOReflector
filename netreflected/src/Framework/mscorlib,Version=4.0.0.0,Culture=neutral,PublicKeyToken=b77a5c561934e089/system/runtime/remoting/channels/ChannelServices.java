@@ -38,11 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.remoting.channels.IChannel;
-import system.runtime.remoting.channels.IChannelImplementation;
-import system.MarshalByRefObject;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.runtime.remoting.channels.IChannel;
+import system.runtime.remoting.channels.IChannelImplementation;
+import system.runtime.remoting.channels.IServerChannelSink;
+import system.runtime.remoting.channels.IServerChannelSinkImplementation;
+import system.runtime.remoting.channels.IServerChannelSinkProvider;
+import system.runtime.remoting.channels.IServerChannelSinkProviderImplementation;
+import system.runtime.remoting.channels.IChannelReceiver;
+import system.runtime.remoting.channels.IChannelReceiverImplementation;
 import system.runtime.remoting.channels.ServerProcessing;
 import system.runtime.remoting.channels.IServerChannelSinkStack;
 import system.runtime.remoting.channels.IServerChannelSinkStackImplementation;
@@ -52,12 +57,7 @@ import system.runtime.remoting.messaging.IMessageCtrl;
 import system.runtime.remoting.messaging.IMessageCtrlImplementation;
 import system.runtime.remoting.messaging.IMessageSink;
 import system.runtime.remoting.messaging.IMessageSinkImplementation;
-import system.runtime.remoting.channels.IServerChannelSink;
-import system.runtime.remoting.channels.IServerChannelSinkImplementation;
-import system.runtime.remoting.channels.IServerChannelSinkProvider;
-import system.runtime.remoting.channels.IServerChannelSinkProviderImplementation;
-import system.runtime.remoting.channels.IChannelReceiver;
-import system.runtime.remoting.channels.IChannelReceiverImplementation;
+import system.MarshalByRefObject;
 
 
 /**
@@ -132,21 +132,12 @@ public class ChannelServices extends NetObject  {
     
     // Methods section
     
-    public static void RegisterChannel(IChannel chnl, boolean ensureSecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.MulticastNotSupportedException {
+    public static IDictionary GetChannelSinkProperties(NetObject obj) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RegisterChannel", chnl == null ? null : chnl.getJCOInstance(), ensureSecurity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void RegisterChannel(IChannel chnl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.MulticastNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("RegisterChannel", chnl == null ? null : chnl.getJCOInstance());
+            JCObject objGetChannelSinkProperties = (JCObject)classType.Invoke("GetChannelSinkProperties", obj == null ? null : obj.getJCOInstance());
+            return new IDictionaryImplementation(objGetChannelSinkProperties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,31 +154,12 @@ public class ChannelServices extends NetObject  {
         }
     }
 
-    public static java.lang.String[] GetUrlsForObject(MarshalByRefObject obj) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
+    public static IServerChannelSink CreateServerChannelSinkChain(IServerChannelSinkProvider provider, IChannelReceiver channel) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetUrlsForObject", obj == null ? null : obj.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetUrlsForObject = 0; indexGetUrlsForObject < resultingArrayList.size(); indexGetUrlsForObject++ ) {
-				resultingArray[indexGetUrlsForObject] = (java.lang.String)resultingArrayList.get(indexGetUrlsForObject);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static IDictionary GetChannelSinkProperties(NetObject obj) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetChannelSinkProperties = (JCObject)classType.Invoke("GetChannelSinkProperties", obj == null ? null : obj.getJCOInstance());
-            return new IDictionaryImplementation(objGetChannelSinkProperties);
+            JCObject objCreateServerChannelSinkChain = (JCObject)classType.Invoke("CreateServerChannelSinkChain", provider == null ? null : provider.getJCOInstance(), channel == null ? null : channel.getJCOInstance());
+            return new IServerChannelSinkImplementation(objCreateServerChannelSinkChain);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,12 +187,40 @@ public class ChannelServices extends NetObject  {
         }
     }
 
-    public static IServerChannelSink CreateServerChannelSinkChain(IServerChannelSinkProvider provider, IChannelReceiver channel) throws Throwable {
+    public static java.lang.String[] GetUrlsForObject(MarshalByRefObject obj) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateServerChannelSinkChain = (JCObject)classType.Invoke("CreateServerChannelSinkChain", provider == null ? null : provider.getJCOInstance(), channel == null ? null : channel.getJCOInstance());
-            return new IServerChannelSinkImplementation(objCreateServerChannelSinkChain);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetUrlsForObject", obj == null ? null : obj.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetUrlsForObject = 0; indexGetUrlsForObject < resultingArrayList.size(); indexGetUrlsForObject++ ) {
+				resultingArray[indexGetUrlsForObject] = (java.lang.String)resultingArrayList.get(indexGetUrlsForObject);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RegisterChannel(IChannel chnl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RegisterChannel", chnl == null ? null : chnl.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RegisterChannel(IChannel chnl, boolean ensureSecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RegisterChannel", chnl == null ? null : chnl.getJCOInstance(), ensureSecurity);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

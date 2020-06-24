@@ -124,11 +124,12 @@ public class HostExecutionContextManager extends NetObject  {
     
     // Methods section
     
-    public void Revert(NetObject previousState) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+    public NetObject SetHostExecutionContext(HostExecutionContext hostExecutionContext) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Revert", previousState == null ? null : previousState.getJCOInstance());
+            JCObject objSetHostExecutionContext = (JCObject)classInstance.Invoke("SetHostExecutionContext", hostExecutionContext == null ? null : hostExecutionContext.getJCOInstance());
+            return new NetObject(objSetHostExecutionContext);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,12 +146,11 @@ public class HostExecutionContextManager extends NetObject  {
         }
     }
 
-    public NetObject SetHostExecutionContext(HostExecutionContext hostExecutionContext) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+    public void Revert(NetObject previousState) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSetHostExecutionContext = (JCObject)classInstance.Invoke("SetHostExecutionContext", hostExecutionContext == null ? null : hostExecutionContext.getJCOInstance());
-            return new NetObject(objSetHostExecutionContext);
+            classInstance.Invoke("Revert", previousState == null ? null : previousState.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

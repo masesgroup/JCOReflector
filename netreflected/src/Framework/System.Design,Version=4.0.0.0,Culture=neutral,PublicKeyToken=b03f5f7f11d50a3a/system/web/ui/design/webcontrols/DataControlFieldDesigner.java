@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.webcontrols.DataBoundControl;
 import system.web.ui.webcontrols.DataControlField;
 import system.web.ui.design.IDataSourceFieldSchema;
 import system.web.ui.design.IDataSourceFieldSchemaImplementation;
 import system.web.ui.webcontrols.TemplateField;
-import system.web.ui.webcontrols.DataBoundControl;
 
 
 /**
@@ -117,6 +117,26 @@ public class DataControlFieldDesigner extends NetObject  {
     
     // Methods section
     
+    public boolean IsEnabled(DataBoundControl parent) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsEnabled", parent == null ? null : parent.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetNodeText(DataControlField dataControlField) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetNodeText", dataControlField == null ? null : dataControlField.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DataControlField CreateField() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -150,45 +170,25 @@ public class DataControlFieldDesigner extends NetObject  {
         }
     }
 
-    public java.lang.String GetNodeText(DataControlField dataControlField) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetNodeText", dataControlField == null ? null : dataControlField.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsEnabled(DataBoundControl parent) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsEnabled", parent == null ? null : parent.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public java.lang.String getDefaultNodeText() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DefaultNodeText");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getUsesSchema() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("UsesSchema");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getDefaultNodeText() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("DefaultNodeText");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.common.commandtrees.DbExpression;
-import system.data.metadata.edm.TypeUsage;
-import system.data.common.commandtrees.DbVariableReferenceExpression;
 import system.data.common.commandtrees.DbGroupAggregate;
+import system.data.common.commandtrees.DbVariableReferenceExpression;
+import system.data.metadata.edm.TypeUsage;
 
 
 /**
@@ -131,54 +131,12 @@ public class DbGroupExpressionBinding extends NetObject  {
         }
     }
 
-    public java.lang.String getVariableName() throws Throwable {
+    public DbGroupAggregate getGroupAggregate() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("VariableName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeUsage getVariableType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("VariableType");
-            return new TypeUsage(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbVariableReferenceExpression getVariable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Variable");
-            return new DbVariableReferenceExpression(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getGroupVariableName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("GroupVariableName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeUsage getGroupVariableType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("GroupVariableType");
-            return new TypeUsage(val);
+            JCObject val = (JCObject)classInstance.Get("GroupAggregate");
+            return new DbGroupAggregate(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,12 +153,54 @@ public class DbGroupExpressionBinding extends NetObject  {
         }
     }
 
-    public DbGroupAggregate getGroupAggregate() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
+    public DbVariableReferenceExpression getVariable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("GroupAggregate");
-            return new DbGroupAggregate(val);
+            JCObject val = (JCObject)classInstance.Get("Variable");
+            return new DbVariableReferenceExpression(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeUsage getGroupVariableType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("GroupVariableType");
+            return new TypeUsage(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeUsage getVariableType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("VariableType");
+            return new TypeUsage(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getGroupVariableName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("GroupVariableName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getVariableName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("VariableName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

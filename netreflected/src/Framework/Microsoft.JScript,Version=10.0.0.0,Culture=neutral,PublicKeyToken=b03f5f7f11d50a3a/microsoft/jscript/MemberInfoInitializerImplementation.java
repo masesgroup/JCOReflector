@@ -105,22 +105,22 @@ public class MemberInfoInitializerImplementation extends NetObject implements Me
 
     // Methods section
     
-    public void Initialize(java.lang.String name, COMMemberInfo dispatch) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", name, dispatch == null ? null : dispatch.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public COMMemberInfo GetCOMMemberInfo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetCOMMemberInfo = (JCObject)classInstance.Invoke("GetCOMMemberInfo");
             return new COMMemberInfoImplementation(objGetCOMMemberInfo);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Initialize(java.lang.String name, COMMemberInfo dispatch) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Initialize", name, dispatch == null ? null : dispatch.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

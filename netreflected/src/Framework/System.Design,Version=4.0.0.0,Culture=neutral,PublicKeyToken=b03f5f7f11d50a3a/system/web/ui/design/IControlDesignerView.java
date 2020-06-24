@@ -110,11 +110,11 @@ public interface IControlDesignerView extends IJCOBridgeReflected {
     
     // Properties section
     
-    public DesignerRegion getContainingRegion() throws Throwable;
+    public boolean getSupportsRegions() throws Throwable;
 
     public IDesigner getNamingContainerDesigner() throws Throwable;
 
-    public boolean getSupportsRegions() throws Throwable;
+    public DesignerRegion getContainingRegion() throws Throwable;
 
 
 

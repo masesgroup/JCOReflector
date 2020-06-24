@@ -40,12 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.componentmodel.ITypeDescriptorContext;
 import system.componentmodel.ITypeDescriptorContextImplementation;
+import system.drawing.design.UITypeEditorEditStyle;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
-import system.drawing.design.UITypeEditorEditStyle;
+import system.drawing.design.PaintValueEventArgs;
 import system.drawing.Graphics;
 import system.drawing.Rectangle;
-import system.drawing.design.PaintValueEventArgs;
 
 
 /**
@@ -131,50 +131,6 @@ public class TypeBrowserEditor extends NetObject  {
     
     // Methods section
     
-    public NetObject EditValue(ITypeDescriptorContext typeDescriptorContext, IServiceProvider serviceProvider, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TypeLoadException, system.InvalidCastException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.AccessViolationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", typeDescriptorContext == null ? null : typeDescriptorContext.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance(), value == null ? null : value.getJCOInstance());
-            return new NetObject(objEditValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext typeDescriptorContext) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEditStyle = (JCObject)classInstance.Invoke("GetEditStyle", typeDescriptorContext == null ? null : typeDescriptorContext.getJCOInstance());
-            return new UITypeEditorEditStyle(objGetEditStyle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject EditValue(IServiceProvider provider, NetObject value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
-            return new NetObject(objEditValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UITypeEditorEditStyle GetEditStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEditStyle = (JCObject)classInstance.Invoke("GetEditStyle");
-            return new UITypeEditorEditStyle(objGetEditStyle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean GetPaintValueSupported() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -195,11 +151,45 @@ public class TypeBrowserEditor extends NetObject  {
         }
     }
 
-    public void PaintValue(NetObject value, Graphics canvas, Rectangle rectangle) throws Throwable, system.ArgumentNullException {
+    public UITypeEditorEditStyle GetEditStyle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("PaintValue", value == null ? null : value.getJCOInstance(), canvas == null ? null : canvas.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
+            JCObject objGetEditStyle = (JCObject)classInstance.Invoke("GetEditStyle");
+            return new UITypeEditorEditStyle(objGetEditStyle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext typeDescriptorContext) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetEditStyle = (JCObject)classInstance.Invoke("GetEditStyle", typeDescriptorContext == null ? null : typeDescriptorContext.getJCOInstance());
+            return new UITypeEditorEditStyle(objGetEditStyle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject EditValue(ITypeDescriptorContext typeDescriptorContext, IServiceProvider serviceProvider, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TypeLoadException, system.InvalidCastException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.AccessViolationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", typeDescriptorContext == null ? null : typeDescriptorContext.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return new NetObject(objEditValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject EditValue(IServiceProvider provider, NetObject value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return new NetObject(objEditValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,6 +200,16 @@ public class TypeBrowserEditor extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PaintValue", e == null ? null : e.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PaintValue(NetObject value, Graphics canvas, Rectangle rectangle) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PaintValue", value == null ? null : value.getJCOInstance(), canvas == null ? null : canvas.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

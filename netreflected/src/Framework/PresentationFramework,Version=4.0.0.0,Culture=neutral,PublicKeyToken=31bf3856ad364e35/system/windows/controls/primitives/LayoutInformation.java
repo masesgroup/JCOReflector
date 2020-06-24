@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.Rect;
-import system.windows.FrameworkElement;
 import system.windows.media.Geometry;
+import system.windows.FrameworkElement;
+import system.windows.Rect;
 import system.windows.UIElement;
 import system.windows.threading.Dispatcher;
 
@@ -117,23 +117,23 @@ public class LayoutInformation extends NetObject  {
     
     // Methods section
     
-    public static Rect GetLayoutSlot(FrameworkElement element) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetLayoutSlot = (JCObject)classType.Invoke("GetLayoutSlot", element == null ? null : element.getJCOInstance());
-            return new Rect(objGetLayoutSlot);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Geometry GetLayoutClip(FrameworkElement element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetLayoutClip = (JCObject)classType.Invoke("GetLayoutClip", element == null ? null : element.getJCOInstance());
             return new Geometry(objGetLayoutClip);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Rect GetLayoutSlot(FrameworkElement element) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetLayoutSlot = (JCObject)classType.Invoke("GetLayoutSlot", element == null ? null : element.getJCOInstance());
+            return new Rect(objGetLayoutSlot);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

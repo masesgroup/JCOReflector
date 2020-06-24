@@ -129,6 +129,17 @@ public class DataGridViewEditingControlShowingEventArgs extends NetObject  {
     
     // Properties section
     
+    public Control getControl() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Control");
+            return new Control(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DataGridViewCellStyle getCellStyle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,17 +156,6 @@ public class DataGridViewEditingControlShowingEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellStyle", CellStyle == null ? null : CellStyle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Control getControl() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Control");
-            return new Control(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -89,9 +89,9 @@ public interface IPartitionResolver extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Initialize() throws Throwable;
-
     public java.lang.String ResolvePartition(NetObject key) throws Throwable;
+
+    public void Initialize() throws Throwable;
 
 
     

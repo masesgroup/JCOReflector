@@ -160,6 +160,17 @@ public class BookmarkScope extends NetObject  {
         }
     }
 
+    public static BookmarkScope getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Default");
+            return new BookmarkScope(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,17 +187,6 @@ public class BookmarkScope extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Id", Id == null ? null : Id.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BookmarkScope getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Default");
-            return new BookmarkScope(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.ExceptionRegionKind;
 import system.reflection.metadata.EntityHandle;
+import system.reflection.metadata.ExceptionRegionKind;
 
 
 /**
@@ -118,42 +118,11 @@ public class ExceptionRegion extends NetObject  {
     
     // Properties section
     
-    public ExceptionRegionKind getKind() throws Throwable {
+    public int getFilterOffset() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Kind");
-            return new ExceptionRegionKind(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getTryOffset() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("TryOffset");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getTryLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("TryLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getHandlerOffset() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("HandlerOffset");
+            return (int)classInstance.Get("FilterOffset");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,11 +138,31 @@ public class ExceptionRegion extends NetObject  {
         }
     }
 
-    public int getFilterOffset() throws Throwable {
+    public int getHandlerOffset() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("FilterOffset");
+            return (int)classInstance.Get("HandlerOffset");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getTryLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("TryLength");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getTryOffset() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("TryOffset");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,6 +174,17 @@ public class ExceptionRegion extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("CatchType");
             return new EntityHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ExceptionRegionKind getKind() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Kind");
+            return new ExceptionRegionKind(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -91,11 +91,11 @@ public interface IDesignerLoaderService extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean Reload() throws Throwable;
+
     public void AddLoadDependency() throws Throwable;
 
     public void DependentLoadComplete(boolean successful, ICollection errorCollection) throws Throwable;
-
-    public boolean Reload() throws Throwable;
 
 
     

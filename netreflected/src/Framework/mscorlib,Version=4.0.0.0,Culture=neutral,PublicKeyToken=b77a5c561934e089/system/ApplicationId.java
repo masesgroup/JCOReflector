@@ -159,22 +159,21 @@ public class ApplicationId extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
+    public java.lang.String getCulture() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            return (java.lang.String)classInstance.Get("Culture");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Version getVersion() throws Throwable {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Version");
-            return new Version(val);
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,11 +189,12 @@ public class ApplicationId extends NetObject  {
         }
     }
 
-    public java.lang.String getCulture() throws Throwable {
+    public Version getVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Culture");
+            JCObject val = (JCObject)classInstance.Get("Version");
+            return new Version(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

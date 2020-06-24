@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.ApplicationIdentity;
 import system.ActivationContext;
+import system.ApplicationIdentity;
 import system.security.policy.EvidenceBase;
 
 
@@ -112,26 +112,6 @@ public class ActivationArguments extends NetObject  {
     // Constructors section
     
 
-    public ActivationArguments(ApplicationIdentity applicationIdentity) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(applicationIdentity == null ? null : applicationIdentity.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ActivationArguments(ApplicationIdentity applicationIdentity, java.lang.String[] activationData) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(applicationIdentity == null ? null : applicationIdentity.getJCOInstance(), activationData));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ActivationArguments(ActivationContext activationData) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -147,6 +127,26 @@ public class ActivationArguments extends NetObject  {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(activationContext == null ? null : activationContext.getJCOInstance(), activationData));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ActivationArguments(ApplicationIdentity applicationIdentity) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(applicationIdentity == null ? null : applicationIdentity.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ActivationArguments(ApplicationIdentity applicationIdentity, java.lang.String[] activationData) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(applicationIdentity == null ? null : applicationIdentity.getJCOInstance(), activationData));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,23 +171,23 @@ public class ActivationArguments extends NetObject  {
     
     // Properties section
     
-    public ApplicationIdentity getApplicationIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationIdentity");
-            return new ApplicationIdentity(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ActivationContext getActivationContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ActivationContext");
             return new ActivationContext(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ApplicationIdentity getApplicationIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ApplicationIdentity");
+            return new ApplicationIdentity(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

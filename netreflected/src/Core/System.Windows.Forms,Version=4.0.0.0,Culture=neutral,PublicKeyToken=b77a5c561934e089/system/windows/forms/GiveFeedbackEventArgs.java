@@ -128,17 +128,6 @@ public class GiveFeedbackEventArgs extends NetObject  {
     
     // Properties section
     
-    public DragDropEffects getEffect() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Effect");
-            return new DragDropEffects(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getUseDefaultCursors() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,6 +143,17 @@ public class GiveFeedbackEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseDefaultCursors", UseDefaultCursors);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DragDropEffects getEffect() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Effect");
+            return new DragDropEffects(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

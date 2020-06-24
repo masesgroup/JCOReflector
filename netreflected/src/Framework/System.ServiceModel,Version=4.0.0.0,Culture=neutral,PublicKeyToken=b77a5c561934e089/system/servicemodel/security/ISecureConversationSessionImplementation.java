@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.XmlDictionaryWriter;
 import system.xml.XmlReader;
+import system.xml.XmlDictionaryWriter;
 import system.servicemodel.EndpointIdentity;
 
 
@@ -106,21 +106,21 @@ public class ISecureConversationSessionImplementation extends NetObject implemen
 
     // Methods section
     
-    public void WriteSessionTokenIdentifier(XmlDictionaryWriter writer) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteSessionTokenIdentifier", writer == null ? null : writer.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean TryReadSessionTokenIdentifier(XmlReader reader) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("TryReadSessionTokenIdentifier", reader == null ? null : reader.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteSessionTokenIdentifier(XmlDictionaryWriter writer) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteSessionTokenIdentifier", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

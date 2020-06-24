@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.security.SecurityAlgorithmSuite;
-import system.servicemodel.EndpointAddress;
 import system.identitymodel.tokens.SecurityKeyType;
+import system.servicemodel.EndpointAddress;
+import system.servicemodel.security.SecurityAlgorithmSuite;
 
 
 /**
@@ -146,16 +146,6 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
-    public boolean ShouldSerializeNegotiateServiceCredential() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ShouldSerializeNegotiateServiceCredential");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean ShouldSerializeEstablishSecurityContext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,6 +166,16 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    public boolean ShouldSerializeNegotiateServiceCredential() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ShouldSerializeNegotiateServiceCredential");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean ShouldSerializeTokenRequestParameters() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -190,6 +190,26 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
     
     // Properties section
     
+    public boolean getEstablishSecurityContext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("EstablishSecurityContext");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEstablishSecurityContext(boolean EstablishSecurityContext) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("EstablishSecurityContext", EstablishSecurityContext);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getNegotiateServiceCredential() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -210,42 +230,43 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
-    public SecurityAlgorithmSuite getAlgorithmSuite() throws Throwable {
+    public SecurityKeyType getIssuedKeyType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AlgorithmSuite");
-            return new SecurityAlgorithmSuite(val);
+            JCObject val = (JCObject)classInstance.Get("IssuedKeyType");
+            return new SecurityKeyType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAlgorithmSuite(SecurityAlgorithmSuite AlgorithmSuite) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public void setIssuedKeyType(SecurityKeyType IssuedKeyType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("AlgorithmSuite", AlgorithmSuite == null ? null : AlgorithmSuite.getJCOInstance());
+            classInstance.Set("IssuedKeyType", IssuedKeyType == null ? null : IssuedKeyType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getEstablishSecurityContext() throws Throwable {
+    public system.servicemodel.channels.Binding getIssuerBinding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("EstablishSecurityContext");
+            JCObject val = (JCObject)classInstance.Get("IssuerBinding");
+            return new system.servicemodel.channels.Binding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEstablishSecurityContext(boolean EstablishSecurityContext) throws Throwable {
+    public void setIssuerBinding(system.servicemodel.channels.Binding IssuerBinding) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("EstablishSecurityContext", EstablishSecurityContext);
+            classInstance.Set("IssuerBinding", IssuerBinding == null ? null : IssuerBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,22 +314,22 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
-    public system.servicemodel.channels.Binding getIssuerBinding() throws Throwable {
+    public SecurityAlgorithmSuite getAlgorithmSuite() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerBinding");
-            return new system.servicemodel.channels.Binding(val);
+            JCObject val = (JCObject)classInstance.Get("AlgorithmSuite");
+            return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIssuerBinding(system.servicemodel.channels.Binding IssuerBinding) throws Throwable {
+    public void setAlgorithmSuite(SecurityAlgorithmSuite AlgorithmSuite) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IssuerBinding", IssuerBinding == null ? null : IssuerBinding.getJCOInstance());
+            classInstance.Set("AlgorithmSuite", AlgorithmSuite == null ? null : AlgorithmSuite.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,27 +350,6 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuedTokenType", IssuedTokenType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityKeyType getIssuedKeyType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("IssuedKeyType");
-            return new SecurityKeyType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIssuedKeyType(SecurityKeyType IssuedKeyType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IssuedKeyType", IssuedKeyType == null ? null : IssuedKeyType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

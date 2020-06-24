@@ -129,28 +129,6 @@ public class ImageFormat extends NetObject  {
     
     // Properties section
     
-    public Guid getGuid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Guid");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static ImageFormat getMemoryBmp() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("MemoryBmp");
-            return new ImageFormat(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static ImageFormat getBmp() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -173,11 +151,11 @@ public class ImageFormat extends NetObject  {
         }
     }
 
-    public static ImageFormat getWmf() throws Throwable {
+    public static ImageFormat getExif() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Wmf");
+            JCObject val = (JCObject)classType.Get("Exif");
             return new ImageFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -195,11 +173,33 @@ public class ImageFormat extends NetObject  {
         }
     }
 
+    public static ImageFormat getIcon() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Icon");
+            return new ImageFormat(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ImageFormat getJpeg() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject val = (JCObject)classType.Get("Jpeg");
+            return new ImageFormat(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ImageFormat getMemoryBmp() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("MemoryBmp");
             return new ImageFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,23 +228,23 @@ public class ImageFormat extends NetObject  {
         }
     }
 
-    public static ImageFormat getExif() throws Throwable {
+    public static ImageFormat getWmf() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Exif");
+            JCObject val = (JCObject)classType.Get("Wmf");
             return new ImageFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ImageFormat getIcon() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Guid getGuid() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Icon");
-            return new ImageFormat(val);
+            JCObject val = (JCObject)classInstance.Get("Guid");
+            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

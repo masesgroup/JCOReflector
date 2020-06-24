@@ -110,16 +110,6 @@ public class PageMediaSize extends NetObject  {
     // Constructors section
     
 
-    public PageMediaSize(PageMediaSizeName mediaSizeName, double width, double height) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(mediaSizeName == null ? null : mediaSizeName.getJCOInstance(), width, height));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PageMediaSize(double width, double height) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -135,6 +125,16 @@ public class PageMediaSize extends NetObject  {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(mediaSizeName == null ? null : mediaSizeName.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PageMediaSize(PageMediaSizeName mediaSizeName, double width, double height) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(mediaSizeName == null ? null : mediaSizeName.getJCOInstance(), width, height));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

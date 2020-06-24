@@ -37,14 +37,14 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.TypeCode;
 import system.SByte;
+import system.Single;
+import system.DateTime;
+import system.Decimal;
+import system.TypeCode;
 import system.UInt16;
 import system.UInt32;
 import system.UInt64;
-import system.Single;
-import system.Decimal;
-import system.DateTime;
 
 
 /**
@@ -97,39 +97,39 @@ public interface IFormatterConverter extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean ToBoolean(NetObject value) throws Throwable;
+
+    public byte ToByte(NetObject value) throws Throwable;
+
+    public char ToChar(NetObject value) throws Throwable;
+
+    public double ToDouble(NetObject value) throws Throwable;
+
+    public short ToInt16(NetObject value) throws Throwable;
+
+    public int ToInt32(NetObject value) throws Throwable;
+
+    public long ToInt64(NetObject value) throws Throwable;
+
+    public SByte ToSByte(NetObject value) throws Throwable;
+
+    public Single ToSingle(NetObject value) throws Throwable;
+
+    public DateTime ToDateTime(NetObject value) throws Throwable;
+
+    public Decimal ToDecimal(NetObject value) throws Throwable;
+
     public NetObject Convert(NetObject value, NetType type) throws Throwable;
 
     public NetObject Convert(NetObject value, TypeCode typeCode) throws Throwable;
 
-    public boolean ToBoolean(NetObject value) throws Throwable;
-
-    public char ToChar(NetObject value) throws Throwable;
-
-    public SByte ToSByte(NetObject value) throws Throwable;
-
-    public byte ToByte(NetObject value) throws Throwable;
-
-    public short ToInt16(NetObject value) throws Throwable;
+    public java.lang.String ToString(NetObject value) throws Throwable;
 
     public UInt16 ToUInt16(NetObject value) throws Throwable;
 
-    public int ToInt32(NetObject value) throws Throwable;
-
     public UInt32 ToUInt32(NetObject value) throws Throwable;
 
-    public long ToInt64(NetObject value) throws Throwable;
-
     public UInt64 ToUInt64(NetObject value) throws Throwable;
-
-    public Single ToSingle(NetObject value) throws Throwable;
-
-    public double ToDouble(NetObject value) throws Throwable;
-
-    public Decimal ToDecimal(NetObject value) throws Throwable;
-
-    public DateTime ToDateTime(NetObject value) throws Throwable;
-
-    public java.lang.String ToString(NetObject value) throws Throwable;
 
 
     

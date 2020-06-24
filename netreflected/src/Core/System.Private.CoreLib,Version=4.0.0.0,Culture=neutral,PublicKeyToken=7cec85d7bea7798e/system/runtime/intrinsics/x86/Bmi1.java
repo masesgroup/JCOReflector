@@ -114,17 +114,6 @@ public class Bmi1 extends NetObject  {
     
     // Methods section
     
-    public static UInt32 TrailingZeroCount(UInt32 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objTrailingZeroCount = (JCObject)classType.Invoke("TrailingZeroCount", value == null ? null : value.getJCOInstance());
-            return new UInt32(objTrailingZeroCount);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static UInt32 AndNot(UInt32 left, UInt32 right) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -186,6 +175,17 @@ public class Bmi1 extends NetObject  {
         try {
             JCObject objResetLowestSetBit = (JCObject)classType.Invoke("ResetLowestSetBit", value == null ? null : value.getJCOInstance());
             return new UInt32(objResetLowestSetBit);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 TrailingZeroCount(UInt32 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objTrailingZeroCount = (JCObject)classType.Invoke("TrailingZeroCount", value == null ? null : value.getJCOInstance());
+            return new UInt32(objTrailingZeroCount);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

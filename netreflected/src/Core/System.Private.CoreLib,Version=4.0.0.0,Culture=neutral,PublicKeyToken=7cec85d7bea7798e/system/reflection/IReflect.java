@@ -37,14 +37,14 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.reflection.MethodInfo;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.reflection.ParameterModifier;
-import system.reflection.FieldInfo;
-import system.reflection.PropertyInfo;
-import system.reflection.MemberInfo;
 import system.globalization.CultureInfo;
+import system.reflection.FieldInfo;
+import system.reflection.MemberInfo;
+import system.reflection.MethodInfo;
+import system.reflection.PropertyInfo;
 
 
 /**
@@ -97,27 +97,27 @@ public interface IReflect extends IJCOBridgeReflected {
 
     // Methods section
     
-    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
-
-    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
-
-    public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable;
+    public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable;
 
     public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
 
     public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable;
+
+    public MemberInfo[] GetMember(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
+
+    public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable;
+
+    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
+
+    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
+
+    public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable;
 
     public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
 
     public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
 
     public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable;
-
-    public MemberInfo[] GetMember(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
-
-    public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable;
-
-    public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable;
 
 
     

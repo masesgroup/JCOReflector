@@ -124,17 +124,6 @@ public class CodeConnectAccess extends NetObject  {
     
     // Methods section
     
-    public static CodeConnectAccess CreateOriginSchemeAccess(int allowPort) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateOriginSchemeAccess = (JCObject)classType.Invoke("CreateOriginSchemeAccess", allowPort);
-            return new CodeConnectAccess(objCreateOriginSchemeAccess);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static CodeConnectAccess CreateAnySchemeAccess(int allowPort) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -146,25 +135,36 @@ public class CodeConnectAccess extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public java.lang.String getScheme() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static CodeConnectAccess CreateOriginSchemeAccess(int allowPort) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("Scheme");
+            JCObject objCreateOriginSchemeAccess = (JCObject)classType.Invoke("CreateOriginSchemeAccess", allowPort);
+            return new CodeConnectAccess(objCreateOriginSchemeAccess);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public int getPort() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("Port");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getScheme() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Scheme");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -148,22 +148,30 @@ public class AlgorithmIdentifier extends NetObject  {
     
     // Properties section
     
-    public Oid getOid() throws Throwable {
+    public byte[] getParameters() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Oid");
-            return new Oid(val);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("Parameters");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+			for(int indexParameters = 0; indexParameters < resultingArrayList.size(); indexParameters++ ) {
+				resultingArray[indexParameters] = (byte)resultingArrayList.get(indexParameters);
+			}
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setOid(Oid Oid) throws Throwable {
+    public void setParameters(byte[] Parameters) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Oid", Oid == null ? null : Oid.getJCOInstance());
+            classInstance.Set("Parameters", Parameters);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,30 +197,22 @@ public class AlgorithmIdentifier extends NetObject  {
         }
     }
 
-    public byte[] getParameters() throws Throwable {
+    public Oid getOid() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Parameters");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-			for(int indexParameters = 0; indexParameters < resultingArrayList.size(); indexParameters++ ) {
-				resultingArray[indexParameters] = (byte)resultingArrayList.get(indexParameters);
-			}
-            return resultingArray;
+            JCObject val = (JCObject)classInstance.Get("Oid");
+            return new Oid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setParameters(byte[] Parameters) throws Throwable {
+    public void setOid(Oid Oid) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Parameters", Parameters);
+            classInstance.Set("Oid", Oid == null ? null : Oid.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

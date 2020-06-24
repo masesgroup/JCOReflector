@@ -128,32 +128,21 @@ public class WebContext extends NetObject  {
     
     // Properties section
     
-    public WebApplicationLevel getApplicationLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationLevel");
-            return new WebApplicationLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getSite() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Site");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getApplicationPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("ApplicationPath");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getLocationSubPath() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("LocationSubPath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,11 +158,22 @@ public class WebContext extends NetObject  {
         }
     }
 
-    public java.lang.String getLocationSubPath() throws Throwable {
+    public java.lang.String getSite() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("LocationSubPath");
+            return (java.lang.String)classInstance.Get("Site");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WebApplicationLevel getApplicationLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ApplicationLevel");
+            return new WebApplicationLevel(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.EntityHandle;
 import system.reflection.metadata.BlobHandle;
+import system.reflection.metadata.EntityHandle;
 
 
 /**
@@ -118,6 +118,17 @@ public class CustomAttribute extends NetObject  {
     
     // Properties section
     
+    public BlobHandle getValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException, system.InvalidCastException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Value");
+            return new BlobHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EntityHandle getConstructor() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -135,17 +146,6 @@ public class CustomAttribute extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Parent");
             return new EntityHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BlobHandle getValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException, system.InvalidCastException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Value");
-            return new BlobHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

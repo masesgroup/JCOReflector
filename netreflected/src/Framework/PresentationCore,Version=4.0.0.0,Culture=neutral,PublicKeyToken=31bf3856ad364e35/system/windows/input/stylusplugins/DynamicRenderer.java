@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.windows.input.StylusDevice;
 import system.windows.input.StylusPointCollection;
-import system.windows.media.Visual;
 import system.windows.ink.DrawingAttributes;
-import system.windows.UIElement;
+import system.windows.media.Visual;
 import system.windows.Rect;
+import system.windows.UIElement;
 
 
 /**
@@ -143,12 +143,31 @@ public class DynamicRenderer extends NetObject  {
     
     // Properties section
     
-    public Visual getRootVisual() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public boolean getEnabled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RootVisual");
-            return new Visual(val);
+            return (boolean)classInstance.Get("Enabled");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEnabled(boolean Enabled) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Enabled", Enabled);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsActiveForInput() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsActiveForInput");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,12 +194,12 @@ public class DynamicRenderer extends NetObject  {
         }
     }
 
-    public UIElement getElement() throws Throwable {
+    public Visual getRootVisual() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Element");
-            return new UIElement(val);
+            JCObject val = (JCObject)classInstance.Get("RootVisual");
+            return new Visual(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,31 +216,12 @@ public class DynamicRenderer extends NetObject  {
         }
     }
 
-    public boolean getEnabled() throws Throwable {
+    public UIElement getElement() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Enabled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEnabled(boolean Enabled) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Enabled", Enabled);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsActiveForInput() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsActiveForInput");
+            JCObject val = (JCObject)classInstance.Get("Element");
+            return new UIElement(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

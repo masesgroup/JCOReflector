@@ -38,18 +38,18 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.enterpriseservices.ThreadPoolOption;
-import system.enterpriseservices.InheritanceOption;
 import system.enterpriseservices.BindingOption;
-import system.enterpriseservices.TransactionOption;
-import system.enterpriseservices.TransactionIsolationLevel;
+import system.enterpriseservices.InheritanceOption;
 import system.enterpriseservices.ITransaction;
 import system.enterpriseservices.ITransactionImplementation;
-import system.transactions.Transaction;
-import system.enterpriseservices.SynchronizationOption;
-import system.enterpriseservices.SxsOption;
 import system.enterpriseservices.PartitionOption;
+import system.enterpriseservices.SxsOption;
+import system.enterpriseservices.SynchronizationOption;
+import system.enterpriseservices.ThreadPoolOption;
+import system.enterpriseservices.TransactionIsolationLevel;
+import system.enterpriseservices.TransactionOption;
 import system.Guid;
+import system.transactions.Transaction;
 
 
 /**
@@ -139,43 +139,81 @@ public class ServiceConfig extends NetObject  {
     
     // Properties section
     
-    public ThreadPoolOption getThreadPool() throws Throwable {
+    public boolean getCOMTIIntrinsicsEnabled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ThreadPool");
-            return new ThreadPoolOption(val);
+            return (boolean)classInstance.Get("COMTIIntrinsicsEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setThreadPool(ThreadPoolOption ThreadPool) throws Throwable {
+    public void setCOMTIIntrinsicsEnabled(boolean COMTIIntrinsicsEnabled) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ThreadPool", ThreadPool == null ? null : ThreadPool.getJCOInstance());
+            classInstance.Set("COMTIIntrinsicsEnabled", COMTIIntrinsicsEnabled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public InheritanceOption getInheritance() throws Throwable {
+    public boolean getIISIntrinsicsEnabled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Inheritance");
-            return new InheritanceOption(val);
+            return (boolean)classInstance.Get("IISIntrinsicsEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setInheritance(InheritanceOption Inheritance) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public void setIISIntrinsicsEnabled(boolean IISIntrinsicsEnabled) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Inheritance", Inheritance == null ? null : Inheritance.getJCOInstance());
+            classInstance.Set("IISIntrinsicsEnabled", IISIntrinsicsEnabled);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getTrackingEnabled() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("TrackingEnabled");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTrackingEnabled(boolean TrackingEnabled) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TrackingEnabled", TrackingEnabled);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getTransactionTimeout() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("TransactionTimeout");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTransactionTimeout(int TransactionTimeout) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TransactionTimeout", TransactionTimeout);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,103 +240,22 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
-    public TransactionOption getTransaction() throws Throwable {
+    public InheritanceOption getInheritance() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Transaction");
-            return new TransactionOption(val);
+            JCObject val = (JCObject)classInstance.Get("Inheritance");
+            return new InheritanceOption(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTransaction(TransactionOption Transaction) throws Throwable {
+    public void setInheritance(InheritanceOption Inheritance) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Transaction", Transaction == null ? null : Transaction.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TransactionIsolationLevel getIsolationLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("IsolationLevel");
-            return new TransactionIsolationLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIsolationLevel(TransactionIsolationLevel IsolationLevel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IsolationLevel", IsolationLevel == null ? null : IsolationLevel.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getTransactionTimeout() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("TransactionTimeout");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTransactionTimeout(int TransactionTimeout) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TransactionTimeout", TransactionTimeout);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getTipUrl() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("TipUrl");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTipUrl(java.lang.String TipUrl) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TipUrl", TipUrl);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getTransactionDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("TransactionDescription");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTransactionDescription(java.lang.String TransactionDescription) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TransactionDescription", TransactionDescription);
+            classInstance.Set("Inheritance", Inheritance == null ? null : Inheritance.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,22 +282,43 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
-    public Transaction getBringYourOwnSystemTransaction() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
+    public PartitionOption getPartitionOption() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BringYourOwnSystemTransaction");
-            return new Transaction(val);
+            JCObject val = (JCObject)classInstance.Get("PartitionOption");
+            return new PartitionOption(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setBringYourOwnSystemTransaction(Transaction BringYourOwnSystemTransaction) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
+    public void setPartitionOption(PartitionOption PartitionOption) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("BringYourOwnSystemTransaction", BringYourOwnSystemTransaction == null ? null : BringYourOwnSystemTransaction.getJCOInstance());
+            classInstance.Set("PartitionOption", PartitionOption == null ? null : PartitionOption.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SxsOption getSxsOption() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SxsOption");
+            return new SxsOption(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSxsOption(SxsOption SxsOption) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SxsOption", SxsOption == null ? null : SxsOption.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,122 +345,85 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
-    public boolean getIISIntrinsicsEnabled() throws Throwable {
+    public ThreadPoolOption getThreadPool() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IISIntrinsicsEnabled");
+            JCObject val = (JCObject)classInstance.Get("ThreadPool");
+            return new ThreadPoolOption(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIISIntrinsicsEnabled(boolean IISIntrinsicsEnabled) throws Throwable {
+    public void setThreadPool(ThreadPoolOption ThreadPool) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IISIntrinsicsEnabled", IISIntrinsicsEnabled);
+            classInstance.Set("ThreadPool", ThreadPool == null ? null : ThreadPool.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getCOMTIIntrinsicsEnabled() throws Throwable {
+    public TransactionIsolationLevel getIsolationLevel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("COMTIIntrinsicsEnabled");
+            JCObject val = (JCObject)classInstance.Get("IsolationLevel");
+            return new TransactionIsolationLevel(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCOMTIIntrinsicsEnabled(boolean COMTIIntrinsicsEnabled) throws Throwable {
+    public void setIsolationLevel(TransactionIsolationLevel IsolationLevel) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("COMTIIntrinsicsEnabled", COMTIIntrinsicsEnabled);
+            classInstance.Set("IsolationLevel", IsolationLevel == null ? null : IsolationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getTrackingEnabled() throws Throwable {
+    public TransactionOption getTransaction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("TrackingEnabled");
+            JCObject val = (JCObject)classInstance.Get("Transaction");
+            return new TransactionOption(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTrackingEnabled(boolean TrackingEnabled) throws Throwable {
+    public void setTransaction(TransactionOption Transaction) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("TrackingEnabled", TrackingEnabled);
+            classInstance.Set("Transaction", Transaction == null ? null : Transaction.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getTrackingAppName() throws Throwable {
+    public Guid getPartitionId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("TrackingAppName");
+            JCObject val = (JCObject)classInstance.Get("PartitionId");
+            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTrackingAppName(java.lang.String TrackingAppName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
+    public void setPartitionId(Guid PartitionId) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("TrackingAppName", TrackingAppName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getTrackingComponentName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("TrackingComponentName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTrackingComponentName(java.lang.String TrackingComponentName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TrackingComponentName", TrackingComponentName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SxsOption getSxsOption() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SxsOption");
-            return new SxsOption(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSxsOption(SxsOption SxsOption) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SxsOption", SxsOption == null ? null : SxsOption.getJCOInstance());
+            classInstance.Set("PartitionId", PartitionId == null ? null : PartitionId.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,43 +469,102 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
-    public PartitionOption getPartitionOption() throws Throwable {
+    public java.lang.String getTipUrl() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PartitionOption");
-            return new PartitionOption(val);
+            return (java.lang.String)classInstance.Get("TipUrl");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setPartitionOption(PartitionOption PartitionOption) throws Throwable {
+    public void setTipUrl(java.lang.String TipUrl) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("PartitionOption", PartitionOption == null ? null : PartitionOption.getJCOInstance());
+            classInstance.Set("TipUrl", TipUrl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Guid getPartitionId() throws Throwable {
+    public java.lang.String getTrackingAppName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PartitionId");
-            return new Guid(val);
+            return (java.lang.String)classInstance.Get("TrackingAppName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setPartitionId(Guid PartitionId) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
+    public void setTrackingAppName(java.lang.String TrackingAppName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("PartitionId", PartitionId == null ? null : PartitionId.getJCOInstance());
+            classInstance.Set("TrackingAppName", TrackingAppName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getTrackingComponentName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("TrackingComponentName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTrackingComponentName(java.lang.String TrackingComponentName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TrackingComponentName", TrackingComponentName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getTransactionDescription() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("TransactionDescription");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTransactionDescription(java.lang.String TransactionDescription) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TransactionDescription", TransactionDescription);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Transaction getBringYourOwnSystemTransaction() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("BringYourOwnSystemTransaction");
+            return new Transaction(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBringYourOwnSystemTransaction(Transaction BringYourOwnSystemTransaction) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("BringYourOwnSystemTransaction", BringYourOwnSystemTransaction == null ? null : BringYourOwnSystemTransaction.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

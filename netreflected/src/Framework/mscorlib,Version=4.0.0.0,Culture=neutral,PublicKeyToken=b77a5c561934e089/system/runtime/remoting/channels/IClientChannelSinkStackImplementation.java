@@ -110,16 +110,6 @@ public class IClientChannelSinkStackImplementation extends NetObject implements 
 
     // Methods section
     
-    public void Push(IClientChannelSink sink, NetObject state) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Push", sink == null ? null : sink.getJCOInstance(), state == null ? null : state.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject Pop(IClientChannelSink sink) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -141,6 +131,16 @@ public class IClientChannelSinkStackImplementation extends NetObject implements 
         }
     }
 
+    public void DispatchException(NetException e) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DispatchException", e == null ? null : e.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void DispatchReplyMessage(IMessage msg) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -151,11 +151,11 @@ public class IClientChannelSinkStackImplementation extends NetObject implements 
         }
     }
 
-    public void DispatchException(NetException e) throws Throwable {
+    public void Push(IClientChannelSink sink, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DispatchException", e == null ? null : e.getJCOInstance());
+            classInstance.Invoke("Push", sink == null ? null : sink.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

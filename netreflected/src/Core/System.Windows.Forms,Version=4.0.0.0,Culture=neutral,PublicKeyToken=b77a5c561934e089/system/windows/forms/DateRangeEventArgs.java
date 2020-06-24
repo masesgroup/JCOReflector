@@ -128,22 +128,22 @@ public class DateRangeEventArgs extends NetObject  {
     
     // Properties section
     
-    public DateTime getStart() throws Throwable {
+    public DateTime getEnd() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Start");
+            JCObject val = (JCObject)classInstance.Get("End");
             return new DateTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DateTime getEnd() throws Throwable {
+    public DateTime getStart() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("End");
+            JCObject val = (JCObject)classInstance.Get("Start");
             return new DateTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

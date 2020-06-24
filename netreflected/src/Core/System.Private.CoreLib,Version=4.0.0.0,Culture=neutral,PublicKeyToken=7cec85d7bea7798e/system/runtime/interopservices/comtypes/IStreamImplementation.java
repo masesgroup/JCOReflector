@@ -105,16 +105,6 @@ public class IStreamImplementation extends NetObject implements IStream {
 
     // Methods section
     
-    public void SetSize(long libNewSize) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetSize", libNewSize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Commit(int grfCommitFlags) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -125,21 +115,21 @@ public class IStreamImplementation extends NetObject implements IStream {
         }
     }
 
-    public void Revert() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Revert");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void LockRegion(long libOffset, long cb, int dwLockType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LockRegion", libOffset, cb, dwLockType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetSize(long libNewSize) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetSize", libNewSize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

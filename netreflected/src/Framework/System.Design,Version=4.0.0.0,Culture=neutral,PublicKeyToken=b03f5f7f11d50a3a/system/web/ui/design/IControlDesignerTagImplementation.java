@@ -123,6 +123,16 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
         }
     }
 
+    public java.lang.String GetOuterContent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetOuterContent");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void RemoveAttribute(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -158,16 +168,6 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDirty", dirty);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetOuterContent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetOuterContent");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

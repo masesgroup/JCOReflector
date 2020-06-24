@@ -142,33 +142,11 @@ public class ConnectionPoint extends NetObject  {
     
     // Properties section
     
-    public ActivityDesigner getAssociatedDesigner() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedDesigner");
-            return new ActivityDesigner(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getConnectionIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("ConnectionIndex");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DesignerEdges getConnectionEdge() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ConnectionEdge");
-            return new DesignerEdges(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,6 +169,28 @@ public class ConnectionPoint extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Bounds");
             return new Rectangle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ActivityDesigner getAssociatedDesigner() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AssociatedDesigner");
+            return new ActivityDesigner(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DesignerEdges getConnectionEdge() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ConnectionEdge");
+            return new DesignerEdges(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

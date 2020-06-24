@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.SByte;
 import system.UInt16;
 import system.UInt32;
 import system.UInt64;
-import system.SByte;
 
 
 /**
@@ -116,12 +116,11 @@ public class BinaryPrimitives extends NetObject  {
     
     // Methods section
     
-    public static UInt16 ReverseEndianness(UInt16 value) throws Throwable {
+    public static byte ReverseEndianness(byte value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objReverseEndianness = (JCObject)classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
-            return new UInt16(objReverseEndianness);
+            return (byte)classType.Invoke("ReverseEndianness", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,33 +146,11 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
-    public static UInt32 ReverseEndianness(UInt32 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objReverseEndianness = (JCObject)classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
-            return new UInt32(objReverseEndianness);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static long ReverseEndianness(long value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (long)classType.Invoke("ReverseEndianness", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt64 ReverseEndianness(UInt64 value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objReverseEndianness = (JCObject)classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
-            return new UInt64(objReverseEndianness);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,11 +167,34 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
-    public static byte ReverseEndianness(byte value) throws Throwable {
+    public static UInt16 ReverseEndianness(UInt16 value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (byte)classType.Invoke("ReverseEndianness", value);
+            JCObject objReverseEndianness = (JCObject)classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            return new UInt16(objReverseEndianness);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 ReverseEndianness(UInt32 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objReverseEndianness = (JCObject)classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            return new UInt32(objReverseEndianness);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 ReverseEndianness(UInt64 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objReverseEndianness = (JCObject)classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            return new UInt64(objReverseEndianness);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -129,6 +129,16 @@ public class XpsSerializationPrintTicketRequiredEventArgs extends NetObject  {
     
     // Properties section
     
+    public int getSequence() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Sequence");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PrintTicket getPrintTicket() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -156,16 +166,6 @@ public class XpsSerializationPrintTicketRequiredEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("PrintTicketLevel");
             return new PrintTicketLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getSequence() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Sequence");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

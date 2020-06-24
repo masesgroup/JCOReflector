@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.description.ServiceCredentials;
-import system.identitymodel.selectors.SecurityTokenSerializer;
-import system.identitymodel.selectors.SecurityTokenVersion;
 import system.identitymodel.selectors.SecurityTokenAuthenticator;
 import system.identitymodel.selectors.SecurityTokenRequirement;
 import system.identitymodel.selectors.SecurityTokenProvider;
+import system.identitymodel.selectors.SecurityTokenSerializer;
+import system.identitymodel.selectors.SecurityTokenVersion;
 import system.servicemodel.EndpointIdentity;
 
 
@@ -130,23 +130,23 @@ public class ServiceCredentialsSecurityTokenManager extends NetObject  {
     
     // Methods section
     
-    public SecurityTokenSerializer CreateSecurityTokenSerializer(SecurityTokenVersion version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateSecurityTokenSerializer = (JCObject)classInstance.Invoke("CreateSecurityTokenSerializer", version == null ? null : version.getJCOInstance());
-            return new SecurityTokenSerializer(objCreateSecurityTokenSerializer);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecurityTokenProvider CreateSecurityTokenProvider(SecurityTokenRequirement requirement) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateSecurityTokenProvider = (JCObject)classInstance.Invoke("CreateSecurityTokenProvider", requirement == null ? null : requirement.getJCOInstance());
             return new SecurityTokenProvider(objCreateSecurityTokenProvider);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityTokenSerializer CreateSecurityTokenSerializer(SecurityTokenVersion version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateSecurityTokenSerializer = (JCObject)classInstance.Invoke("CreateSecurityTokenSerializer", version == null ? null : version.getJCOInstance());
+            return new SecurityTokenSerializer(objCreateSecurityTokenSerializer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

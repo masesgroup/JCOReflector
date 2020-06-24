@@ -95,41 +95,41 @@ public interface ITextRangeProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public ITextRangeProvider Clone() throws Throwable;
-
     public boolean Compare(ITextRangeProvider range) throws Throwable;
-
-    public int CompareEndpoints(TextPatternRangeEndpoint endpoint, ITextRangeProvider targetRange, TextPatternRangeEndpoint targetEndpoint) throws Throwable;
-
-    public void ExpandToEnclosingUnit(TextUnit unit) throws Throwable;
-
-    public ITextRangeProvider FindAttribute(int attribute, NetObject value, boolean backward) throws Throwable;
-
-    public ITextRangeProvider FindText(java.lang.String text, boolean backward, boolean ignoreCase) throws Throwable;
-
-    public NetObject GetAttributeValue(int attribute) throws Throwable;
 
     public double[] GetBoundingRectangles() throws Throwable;
 
-    public IRawElementProviderSimple GetEnclosingElement() throws Throwable;
-
-    public java.lang.String GetText(int maxLength) throws Throwable;
+    public int CompareEndpoints(TextPatternRangeEndpoint endpoint, ITextRangeProvider targetRange, TextPatternRangeEndpoint targetEndpoint) throws Throwable;
 
     public int Move(TextUnit unit, int count) throws Throwable;
 
     public int MoveEndpointByUnit(TextPatternRangeEndpoint endpoint, TextUnit unit, int count) throws Throwable;
 
-    public void MoveEndpointByRange(TextPatternRangeEndpoint endpoint, ITextRangeProvider targetRange, TextPatternRangeEndpoint targetEndpoint) throws Throwable;
+    public NetObject GetAttributeValue(int attribute) throws Throwable;
 
-    public void Select() throws Throwable;
+    public java.lang.String GetText(int maxLength) throws Throwable;
+
+    public IRawElementProviderSimple GetEnclosingElement() throws Throwable;
+
+    public IRawElementProviderSimple[] GetChildren() throws Throwable;
+
+    public ITextRangeProvider Clone() throws Throwable;
+
+    public ITextRangeProvider FindAttribute(int attribute, NetObject value, boolean backward) throws Throwable;
+
+    public ITextRangeProvider FindText(java.lang.String text, boolean backward, boolean ignoreCase) throws Throwable;
 
     public void AddToSelection() throws Throwable;
+
+    public void ExpandToEnclosingUnit(TextUnit unit) throws Throwable;
+
+    public void MoveEndpointByRange(TextPatternRangeEndpoint endpoint, ITextRangeProvider targetRange, TextPatternRangeEndpoint targetEndpoint) throws Throwable;
 
     public void RemoveFromSelection() throws Throwable;
 
     public void ScrollIntoView(boolean alignToTop) throws Throwable;
 
-    public IRawElementProviderSimple[] GetChildren() throws Throwable;
+    public void Select() throws Throwable;
 
 
     

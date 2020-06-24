@@ -89,11 +89,11 @@ public interface INameScope extends IJCOBridgeReflected {
 
     // Methods section
     
+    public NetObject FindName(java.lang.String name) throws Throwable;
+
     public void RegisterName(java.lang.String name, NetObject scopedElement) throws Throwable;
 
     public void UnregisterName(java.lang.String name) throws Throwable;
-
-    public NetObject FindName(java.lang.String name) throws Throwable;
 
 
     

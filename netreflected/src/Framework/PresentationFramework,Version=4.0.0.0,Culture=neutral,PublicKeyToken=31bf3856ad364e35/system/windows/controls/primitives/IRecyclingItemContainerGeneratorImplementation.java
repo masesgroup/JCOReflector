@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.controls.primitives.GeneratorPosition;
-import system.windows.controls.ItemContainerGenerator;
-import system.windows.controls.Panel;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.windows.controls.primitives.GeneratorDirection;
+import system.windows.controls.ItemContainerGenerator;
+import system.windows.controls.Panel;
 import system.windows.DependencyObject;
 
 
@@ -110,22 +110,11 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
 
     // Methods section
     
-    public void Recycle(GeneratorPosition position, int count) throws Throwable {
+    public int IndexFromGeneratorPosition(GeneratorPosition position) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Recycle", position == null ? null : position.getJCOInstance(), count);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ItemContainerGenerator GetItemContainerGeneratorForPanel(Panel panel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetItemContainerGeneratorForPanel = (JCObject)classInstance.Invoke("GetItemContainerGeneratorForPanel", panel == null ? null : panel.getJCOInstance());
-            return new ItemContainerGenerator(objGetItemContainerGeneratorForPanel);
+            return (int)classInstance.Invoke("IndexFromGeneratorPosition", position == null ? null : position.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,6 +142,28 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
         }
     }
 
+    public ItemContainerGenerator GetItemContainerGeneratorForPanel(Panel panel) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetItemContainerGeneratorForPanel = (JCObject)classInstance.Invoke("GetItemContainerGeneratorForPanel", panel == null ? null : panel.getJCOInstance());
+            return new ItemContainerGenerator(objGetItemContainerGeneratorForPanel);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public GeneratorPosition GeneratorPositionFromIndex(int itemIndex) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeneratorPositionFromIndex = (JCObject)classInstance.Invoke("GeneratorPositionFromIndex", itemIndex);
+            return new GeneratorPosition(objGeneratorPositionFromIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DependencyObject GenerateNext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -174,11 +185,11 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
         }
     }
 
-    public void RemoveAll() throws Throwable {
+    public void Recycle(GeneratorPosition position, int count) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RemoveAll");
+            classInstance.Invoke("Recycle", position == null ? null : position.getJCOInstance(), count);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,22 +205,11 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
         }
     }
 
-    public GeneratorPosition GeneratorPositionFromIndex(int itemIndex) throws Throwable {
+    public void RemoveAll() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGeneratorPositionFromIndex = (JCObject)classInstance.Invoke("GeneratorPositionFromIndex", itemIndex);
-            return new GeneratorPosition(objGeneratorPositionFromIndex);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int IndexFromGeneratorPosition(GeneratorPosition position) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("IndexFromGeneratorPosition", position == null ? null : position.getJCOInstance());
+            classInstance.Invoke("RemoveAll");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

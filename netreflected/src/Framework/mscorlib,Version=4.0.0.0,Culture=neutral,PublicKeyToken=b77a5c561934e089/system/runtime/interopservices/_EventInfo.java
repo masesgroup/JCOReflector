@@ -37,10 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.UInt32;
 import system.reflection.MethodInfo;
-import system.reflection.MemberTypes;
+import system.UInt32;
 import system.reflection.EventAttributes;
+import system.reflection.MemberTypes;
 
 
 /**
@@ -93,43 +93,43 @@ public interface _EventInfo extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
+    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable;
 
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
 
-    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable;
-
-    public MethodInfo GetAddMethod(boolean nonPublic) throws Throwable;
-
-    public MethodInfo GetRemoveMethod(boolean nonPublic) throws Throwable;
-
-    public MethodInfo GetRaiseMethod(boolean nonPublic) throws Throwable;
+    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
 
     public MethodInfo GetAddMethod() throws Throwable;
 
-    public MethodInfo GetRemoveMethod() throws Throwable;
+    public MethodInfo GetAddMethod(boolean nonPublic) throws Throwable;
 
     public MethodInfo GetRaiseMethod() throws Throwable;
+
+    public MethodInfo GetRaiseMethod(boolean nonPublic) throws Throwable;
+
+    public MethodInfo GetRemoveMethod() throws Throwable;
+
+    public MethodInfo GetRemoveMethod(boolean nonPublic) throws Throwable;
 
 
     
     // Properties section
     
+    public boolean getIsMulticast() throws Throwable;
+
+    public boolean getIsSpecialName() throws Throwable;
+
+    public EventAttributes getAttributes() throws Throwable;
+
     public MemberTypes getMemberType() throws Throwable;
 
     public java.lang.String getName() throws Throwable;
 
     public NetType getDeclaringType() throws Throwable;
 
-    public NetType getReflectedType() throws Throwable;
-
-    public EventAttributes getAttributes() throws Throwable;
-
     public NetType getEventHandlerType() throws Throwable;
 
-    public boolean getIsSpecialName() throws Throwable;
-
-    public boolean getIsMulticast() throws Throwable;
+    public NetType getReflectedType() throws Throwable;
 
 
 

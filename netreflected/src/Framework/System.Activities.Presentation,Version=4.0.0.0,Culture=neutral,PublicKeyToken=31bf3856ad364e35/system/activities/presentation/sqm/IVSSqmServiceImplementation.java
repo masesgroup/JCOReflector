@@ -104,11 +104,11 @@ public class IVSSqmServiceImplementation extends NetObject implements IVSSqmServ
 
     // Methods section
     
-    public void SetDatapoint(int dataPointId, UInt32 value) throws Throwable {
+    public void AddArrayToStream(int dataPointId, UInt32[] data, int count) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetDatapoint", dataPointId, value == null ? null : value.getJCOInstance());
+            classInstance.Invoke("AddArrayToStream", dataPointId, toObjectFromArray(data), count);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -124,11 +124,11 @@ public class IVSSqmServiceImplementation extends NetObject implements IVSSqmServ
         }
     }
 
-    public void AddArrayToStream(int dataPointId, UInt32[] data, int count) throws Throwable {
+    public void SetDatapoint(int dataPointId, UInt32 value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddArrayToStream", dataPointId, toObjectFromArray(data), count);
+            classInstance.Invoke("SetDatapoint", dataPointId, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

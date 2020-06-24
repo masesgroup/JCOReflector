@@ -158,6 +158,17 @@ public class VsaItem extends NetObject  {
         }
     }
 
+    public JSVsaItemType getItemType() throws Throwable, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ItemType");
+            return new JSVsaItemType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getName() throws Throwable, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -173,17 +184,6 @@ public class VsaItem extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public JSVsaItemType getItemType() throws Throwable, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ItemType");
-            return new JSVsaItemType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

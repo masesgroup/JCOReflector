@@ -126,17 +126,6 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
 
-    public static XamlAccessLevel PrivateAccessTo(NetType type) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objPrivateAccessTo = (JCObject)classType.Invoke("PrivateAccessTo", type == null ? null : type.getJCOInstance());
-            return new XamlAccessLevel(objPrivateAccessTo);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static XamlAccessLevel AssemblyAccessTo(AssemblyName assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -153,6 +142,17 @@ public class XamlAccessLevel extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objPrivateAccessTo = (JCObject)classType.Invoke("PrivateAccessTo", assemblyQualifiedTypeName);
+            return new XamlAccessLevel(objPrivateAccessTo);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XamlAccessLevel PrivateAccessTo(NetType type) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objPrivateAccessTo = (JCObject)classType.Invoke("PrivateAccessTo", type == null ? null : type.getJCOInstance());
             return new XamlAccessLevel(objPrivateAccessTo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

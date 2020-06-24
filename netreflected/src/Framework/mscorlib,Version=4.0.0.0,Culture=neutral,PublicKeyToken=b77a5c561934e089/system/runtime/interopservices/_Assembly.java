@@ -37,18 +37,18 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.reflection.AssemblyName;
-import system.io.Stream;
 import system.io.FileStream;
-import system.reflection.ManifestResourceInfo;
-import system.runtime.serialization.SerializationInfo;
-import system.runtime.serialization.StreamingContext;
-import system.reflection.Assembly;
-import system.globalization.CultureInfo;
-import system.Version;
-import system.reflection.Module;
+import system.io.Stream;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
+import system.globalization.CultureInfo;
+import system.reflection.Assembly;
+import system.Version;
+import system.reflection.AssemblyName;
+import system.reflection.ManifestResourceInfo;
+import system.reflection.Module;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 import system.reflection.MethodInfo;
 import system.security.policy.Evidence;
 import system.reflection.ModuleResolveEventHandler;
@@ -104,21 +104,7 @@ public interface _Assembly extends IJCOBridgeReflected {
 
     // Methods section
     
-    public AssemblyName GetName() throws Throwable;
-
-    public AssemblyName GetName(boolean copiedName) throws Throwable;
-
-    public NetType GetType(java.lang.String name) throws Throwable;
-
-    public NetType GetType(java.lang.String name, boolean throwOnError) throws Throwable;
-
-    public NetType[] GetExportedTypes() throws Throwable;
-
-    public NetType[] GetTypes() throws Throwable;
-
-    public Stream GetManifestResourceStream(NetType type, java.lang.String name) throws Throwable;
-
-    public Stream GetManifestResourceStream(java.lang.String name) throws Throwable;
+    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable;
 
     public FileStream GetFile(java.lang.String name) throws Throwable;
 
@@ -126,33 +112,37 @@ public interface _Assembly extends IJCOBridgeReflected {
 
     public FileStream[] GetFiles(boolean getResourceModules) throws Throwable;
 
-    public java.lang.String[] GetManifestResourceNames() throws Throwable;
+    public Stream GetManifestResourceStream(java.lang.String name) throws Throwable;
 
-    public ManifestResourceInfo GetManifestResourceInfo(java.lang.String resourceName) throws Throwable;
-
-    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
-
-    public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
-
-    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable;
-
-    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable;
-
-    public NetType GetType(java.lang.String name, boolean throwOnError, boolean ignoreCase) throws Throwable;
-
-    public Assembly GetSatelliteAssembly(CultureInfo culture) throws Throwable;
-
-    public Assembly GetSatelliteAssembly(CultureInfo culture, Version version) throws Throwable;
-
-    public Module LoadModule(java.lang.String moduleName, byte[] rawModule) throws Throwable;
-
-    public Module LoadModule(java.lang.String moduleName, byte[] rawModule, byte[] rawSymbolStore) throws Throwable;
+    public Stream GetManifestResourceStream(NetType type, java.lang.String name) throws Throwable;
 
     public NetObject CreateInstance(java.lang.String typeName) throws Throwable;
 
     public NetObject CreateInstance(java.lang.String typeName, boolean ignoreCase) throws Throwable;
 
     public NetObject CreateInstance(java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable;
+
+    public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
+
+    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
+
+    public Assembly GetSatelliteAssembly(CultureInfo culture) throws Throwable;
+
+    public Assembly GetSatelliteAssembly(CultureInfo culture, Version version) throws Throwable;
+
+    public AssemblyName GetName() throws Throwable;
+
+    public AssemblyName GetName(boolean copiedName) throws Throwable;
+
+    public AssemblyName[] GetReferencedAssemblies() throws Throwable;
+
+    public ManifestResourceInfo GetManifestResourceInfo(java.lang.String resourceName) throws Throwable;
+
+    public Module GetModule(java.lang.String name) throws Throwable;
+
+    public Module LoadModule(java.lang.String moduleName, byte[] rawModule) throws Throwable;
+
+    public Module LoadModule(java.lang.String moduleName, byte[] rawModule, byte[] rawSymbolStore) throws Throwable;
 
     public Module[] GetLoadedModules() throws Throwable;
 
@@ -162,27 +152,37 @@ public interface _Assembly extends IJCOBridgeReflected {
 
     public Module[] GetModules(boolean getResourceModules) throws Throwable;
 
-    public Module GetModule(java.lang.String name) throws Throwable;
+    public java.lang.String[] GetManifestResourceNames() throws Throwable;
 
-    public AssemblyName[] GetReferencedAssemblies() throws Throwable;
+    public NetType GetType(java.lang.String name) throws Throwable;
+
+    public NetType GetType(java.lang.String name, boolean throwOnError) throws Throwable;
+
+    public NetType GetType(java.lang.String name, boolean throwOnError, boolean ignoreCase) throws Throwable;
+
+    public NetType[] GetExportedTypes() throws Throwable;
+
+    public NetType[] GetTypes() throws Throwable;
+
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable;
 
 
     
     // Properties section
     
+    public boolean getGlobalAssemblyCache() throws Throwable;
+
+    public MethodInfo getEntryPoint() throws Throwable;
+
+    public Evidence getEvidence() throws Throwable;
+
     public java.lang.String getCodeBase() throws Throwable;
 
     public java.lang.String getEscapedCodeBase() throws Throwable;
 
     public java.lang.String getFullName() throws Throwable;
 
-    public MethodInfo getEntryPoint() throws Throwable;
-
     public java.lang.String getLocation() throws Throwable;
-
-    public Evidence getEvidence() throws Throwable;
-
-    public boolean getGlobalAssemblyCache() throws Throwable;
 
 
 

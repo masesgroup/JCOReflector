@@ -124,6 +124,25 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObject imple
         }
     }
 
+    public int IndexOf(KeyContainerPermissionAccessEntry accessEntry) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("IndexOf", accessEntry == null ? null : accessEntry.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public KeyContainerPermissionAccessEntryEnumerator GetEnumerator() throws Throwable {
+        return new KeyContainerPermissionAccessEntryEnumerator(classInstance);
+    }
+
+	@SuppressWarnings("unchecked")
+	public java.util.Iterator<KeyContainerPermissionAccessEntry> iterator() {
+		return new KeyContainerPermissionAccessEntryEnumerator(classInstance);
+	}
+
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -134,11 +153,11 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObject imple
         }
     }
 
-    public int IndexOf(KeyContainerPermissionAccessEntry accessEntry) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public void CopyTo(KeyContainerPermissionAccessEntry[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("IndexOf", accessEntry == null ? null : accessEntry.getJCOInstance());
+            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,44 +173,25 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObject imple
         }
     }
 
-    public KeyContainerPermissionAccessEntryEnumerator GetEnumerator() throws Throwable {
-        return new KeyContainerPermissionAccessEntryEnumerator(classInstance);
-    }
-
-	@SuppressWarnings("unchecked")
-	public java.util.Iterator<KeyContainerPermissionAccessEntry> iterator() {
-		return new KeyContainerPermissionAccessEntryEnumerator(classInstance);
-	}
-
-    public void CopyTo(KeyContainerPermissionAccessEntry[] array, int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsSynchronized");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Count");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

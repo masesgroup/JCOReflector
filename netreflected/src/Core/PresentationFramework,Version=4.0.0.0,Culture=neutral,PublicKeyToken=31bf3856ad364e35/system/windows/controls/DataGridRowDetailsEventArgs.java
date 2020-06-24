@@ -129,27 +129,6 @@ public class DataGridRowDetailsEventArgs extends NetObject  {
     
     // Properties section
     
-    public FrameworkElement getDetailsElement() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DetailsElement");
-            return new FrameworkElement(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDetailsElement(FrameworkElement DetailsElement) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DetailsElement", DetailsElement == null ? null : DetailsElement.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataGridRow getRow() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,6 +145,27 @@ public class DataGridRowDetailsEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Row", Row == null ? null : Row.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FrameworkElement getDetailsElement() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DetailsElement");
+            return new FrameworkElement(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDetailsElement(FrameworkElement DetailsElement) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DetailsElement", DetailsElement == null ? null : DetailsElement.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

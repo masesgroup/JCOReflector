@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.SequencePointCollection;
 import system.reflection.metadata.MethodDefinitionHandle;
+import system.reflection.metadata.SequencePointCollection;
 import system.reflection.metadata.BlobHandle;
 import system.reflection.metadata.DocumentHandle;
 import system.reflection.metadata.StandaloneSignatureHandle;
@@ -117,23 +117,23 @@ public class MethodDebugInformation extends NetObject  {
     
     // Methods section
     
-    public SequencePointCollection GetSequencePoints() throws Throwable, system.BadImageFormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSequencePoints = (JCObject)classInstance.Invoke("GetSequencePoints");
-            return new SequencePointCollection(objGetSequencePoints);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MethodDefinitionHandle GetStateMachineKickoffMethod() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetStateMachineKickoffMethod = (JCObject)classInstance.Invoke("GetStateMachineKickoffMethod");
             return new MethodDefinitionHandle(objGetStateMachineKickoffMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SequencePointCollection GetSequencePoints() throws Throwable, system.BadImageFormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetSequencePoints = (JCObject)classInstance.Invoke("GetSequencePoints");
+            return new SequencePointCollection(objGetSequencePoints);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

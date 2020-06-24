@@ -37,10 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.windows.forms.ControlBindingsCollection;
-import system.windows.forms.BindingContext;
 import system.componentmodel.ISite;
 import system.componentmodel.ISiteImplementation;
+import system.windows.forms.BindingContext;
+import system.windows.forms.ControlBindingsCollection;
 import system.EventHandler;
 
 
@@ -100,15 +100,15 @@ public interface IBindableComponent extends IJCOBridgeReflected {
     
     // Properties section
     
-    public ControlBindingsCollection getDataBindings() throws Throwable;
+    public ISite getSite() throws Throwable;
+
+    public void setSite(ISite Site) throws Throwable;
 
     public BindingContext getBindingContext() throws Throwable;
 
     public void setBindingContext(BindingContext BindingContext) throws Throwable;
 
-    public ISite getSite() throws Throwable;
-
-    public void setSite(ISite Site) throws Throwable;
+    public ControlBindingsCollection getDataBindings() throws Throwable;
 
 
 

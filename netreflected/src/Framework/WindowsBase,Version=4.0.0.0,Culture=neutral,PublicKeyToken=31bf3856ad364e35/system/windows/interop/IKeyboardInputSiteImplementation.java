@@ -106,21 +106,21 @@ public class IKeyboardInputSiteImplementation extends NetObject implements IKeyb
 
     // Methods section
     
-    public void Unregister() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Unregister");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean OnNoMoreTabStops(TraversalRequest request) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("OnNoMoreTabStops", request == null ? null : request.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Unregister() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Unregister");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

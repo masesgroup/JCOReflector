@@ -39,13 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.webcontrols.ModelDataSource;
-import system.web.ui.DataSourceSelectArguments;
-import system.web.ui.DataSourceViewSelectCallback;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.web.ui.DataSourceViewOperationCallback;
-import system.web.ui.webcontrols.CallingDataMethodsEventHandler;
+import system.web.ui.DataSourceSelectArguments;
+import system.web.ui.DataSourceViewSelectCallback;
 import system.EventHandler;
+import system.web.ui.webcontrols.CallingDataMethodsEventHandler;
 
 
 /**
@@ -131,41 +131,11 @@ public class ModelDataSourceView extends NetObject  {
     
     // Methods section
     
-    public void UpdateProperties(java.lang.String modelTypeName, java.lang.String selectMethod, java.lang.String updateMethod, java.lang.String insertMethod, java.lang.String deleteMethod, java.lang.String dataKeyName) throws Throwable {
+    public boolean CanExecute(java.lang.String commandName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("UpdateProperties", modelTypeName, selectMethod, updateMethod, insertMethod, deleteMethod, dataKeyName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance(), callback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Insert(IDictionary values, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Insert", values == null ? null : values.getJCOInstance(), callback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Update(IDictionary keys, IDictionary values, IDictionary oldValues, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Update", keys == null ? null : keys.getJCOInstance(), values == null ? null : values.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance(), callback);
+            return (boolean)classInstance.Invoke("CanExecute", commandName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,21 +151,51 @@ public class ModelDataSourceView extends NetObject  {
         }
     }
 
-    public boolean CanExecute(java.lang.String commandName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanExecute", commandName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void ExecuteCommand(java.lang.String commandName, IDictionary keys, IDictionary values, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExecuteCommand", commandName, keys == null ? null : keys.getJCOInstance(), values == null ? null : values.getJCOInstance(), callback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Insert(IDictionary values, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Insert", values == null ? null : values.getJCOInstance(), callback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance(), callback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Update(IDictionary keys, IDictionary values, IDictionary oldValues, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Update", keys == null ? null : keys.getJCOInstance(), values == null ? null : values.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance(), callback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UpdateProperties(java.lang.String modelTypeName, java.lang.String selectMethod, java.lang.String updateMethod, java.lang.String insertMethod, java.lang.String deleteMethod, java.lang.String dataKeyName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateProperties", modelTypeName, selectMethod, updateMethod, insertMethod, deleteMethod, dataKeyName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,21 +235,21 @@ public class ModelDataSourceView extends NetObject  {
         }
     }
 
-    public boolean getCanSort() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanSort");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCanRetrieveTotalRowCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("CanRetrieveTotalRowCount");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getCanSort() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("CanSort");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,21 +265,21 @@ public class ModelDataSourceView extends NetObject  {
         }
     }
 
-    public java.lang.String getModelTypeName() throws Throwable {
+    public java.lang.String getDataKeyName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ModelTypeName");
+            return (java.lang.String)classInstance.Get("DataKeyName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setModelTypeName(java.lang.String ModelTypeName) throws Throwable {
+    public void setDataKeyName(java.lang.String DataKeyName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ModelTypeName", ModelTypeName);
+            classInstance.Set("DataKeyName", DataKeyName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,6 +325,36 @@ public class ModelDataSourceView extends NetObject  {
         }
     }
 
+    public java.lang.String getModelTypeName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ModelTypeName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setModelTypeName(java.lang.String ModelTypeName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ModelTypeName", ModelTypeName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getSelectMethod() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -365,60 +395,10 @@ public class ModelDataSourceView extends NetObject  {
         }
     }
 
-    public java.lang.String getDataKeyName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DataKeyName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDataKeyName(java.lang.String DataKeyName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DataKeyName", DataKeyName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section
     
-
-    public void addCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("CallingDataMethods", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("CallingDataMethods", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
     public void addDataSourceViewChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
@@ -435,6 +415,26 @@ public class ModelDataSourceView extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataSourceViewChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("CallingDataMethods", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("CallingDataMethods", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

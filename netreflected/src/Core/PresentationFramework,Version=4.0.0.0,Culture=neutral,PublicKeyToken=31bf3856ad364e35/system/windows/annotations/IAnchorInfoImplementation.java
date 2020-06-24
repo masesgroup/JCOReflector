@@ -109,6 +109,17 @@ public class IAnchorInfoImplementation extends NetObject implements IAnchorInfo 
     
     // Properties section
     
+    public NetObject getResolvedAnchor() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ResolvedAnchor");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Annotation getAnnotation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -126,17 +137,6 @@ public class IAnchorInfoImplementation extends NetObject implements IAnchorInfo 
         try {
             JCObject val = (JCObject)classInstance.Get("Anchor");
             return new AnnotationResource(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getResolvedAnchor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ResolvedAnchor");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

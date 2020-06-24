@@ -92,19 +92,19 @@ public interface IDesigner extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void Dispose() throws Throwable;
+
     public void DoDefaultAction() throws Throwable;
 
     public void Initialize(IComponent component) throws Throwable;
-
-    public void Dispose() throws Throwable;
 
 
     
     // Properties section
     
-    public IComponent getComponent() throws Throwable;
-
     public DesignerVerbCollection getVerbs() throws Throwable;
+
+    public IComponent getComponent() throws Throwable;
 
 
 

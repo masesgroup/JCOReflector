@@ -113,11 +113,12 @@ public class VisualDiagnostics extends NetObject  {
     
     // Methods section
     
-    public static void EnableVisualTreeChanged() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static XamlSourceInfo GetXamlSourceInfo(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("EnableVisualTreeChanged");
+            JCObject objGetXamlSourceInfo = (JCObject)classType.Invoke("GetXamlSourceInfo", obj == null ? null : obj.getJCOInstance());
+            return new XamlSourceInfo(objGetXamlSourceInfo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -133,12 +134,11 @@ public class VisualDiagnostics extends NetObject  {
         }
     }
 
-    public static XamlSourceInfo GetXamlSourceInfo(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
+    public static void EnableVisualTreeChanged() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetXamlSourceInfo = (JCObject)classType.Invoke("GetXamlSourceInfo", obj == null ? null : obj.getJCOInstance());
-            return new XamlSourceInfo(objGetXamlSourceInfo);
+            classType.Invoke("EnableVisualTreeChanged");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

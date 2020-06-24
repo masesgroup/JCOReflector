@@ -91,11 +91,11 @@ public interface IRunningObjectTable extends IJCOBridgeReflected {
 
     // Methods section
     
+    public int IsRunning(IMoniker pmkObjectName) throws Throwable;
+
     public int Register(int grfFlags, NetObject punkObject, IMoniker pmkObjectName) throws Throwable;
 
     public void Revoke(int dwRegister) throws Throwable;
-
-    public int IsRunning(IMoniker pmkObjectName) throws Throwable;
 
 
     

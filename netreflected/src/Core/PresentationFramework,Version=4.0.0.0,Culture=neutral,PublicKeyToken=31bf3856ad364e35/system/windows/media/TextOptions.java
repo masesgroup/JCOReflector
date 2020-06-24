@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.DependencyObject;
 import system.windows.media.TextFormattingMode;
-import system.windows.media.TextRenderingMode;
+import system.windows.DependencyObject;
 import system.windows.media.TextHintingMode;
+import system.windows.media.TextRenderingMode;
 
 
 /**
@@ -116,16 +116,6 @@ public class TextOptions extends NetObject  {
     
     // Methods section
     
-    public static void SetTextFormattingMode(DependencyObject element, TextFormattingMode value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SetTextFormattingMode", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static TextFormattingMode GetTextFormattingMode(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -137,11 +127,12 @@ public class TextOptions extends NetObject  {
         }
     }
 
-    public static void SetTextRenderingMode(DependencyObject element, TextRenderingMode value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static TextHintingMode GetTextHintingMode(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetTextRenderingMode", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objGetTextHintingMode = (JCObject)classType.Invoke("GetTextHintingMode", element == null ? null : element.getJCOInstance());
+            return new TextHintingMode(objGetTextHintingMode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,6 +149,16 @@ public class TextOptions extends NetObject  {
         }
     }
 
+    public static void SetTextFormattingMode(DependencyObject element, TextFormattingMode value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetTextFormattingMode", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void SetTextHintingMode(DependencyObject element, TextHintingMode value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -168,12 +169,11 @@ public class TextOptions extends NetObject  {
         }
     }
 
-    public static TextHintingMode GetTextHintingMode(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static void SetTextRenderingMode(DependencyObject element, TextRenderingMode value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetTextHintingMode = (JCObject)classType.Invoke("GetTextHintingMode", element == null ? null : element.getJCOInstance());
-            return new TextHintingMode(objGetTextHintingMode);
+            classType.Invoke("SetTextRenderingMode", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,18 +38,18 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.dynamic.GetMemberBinder;
-import system.dynamic.SetMemberBinder;
-import system.dynamic.DeleteMemberBinder;
-import system.dynamic.InvokeMemberBinder;
+import system.dynamic.BinaryOperationBinder;
 import system.dynamic.ConvertBinder;
 import system.dynamic.CreateInstanceBinder;
-import system.dynamic.InvokeBinder;
-import system.dynamic.BinaryOperationBinder;
-import system.dynamic.UnaryOperationBinder;
-import system.dynamic.GetIndexBinder;
-import system.dynamic.SetIndexBinder;
 import system.dynamic.DeleteIndexBinder;
+import system.dynamic.DeleteMemberBinder;
+import system.dynamic.GetIndexBinder;
+import system.dynamic.GetMemberBinder;
+import system.dynamic.InvokeBinder;
+import system.dynamic.InvokeMemberBinder;
+import system.dynamic.SetIndexBinder;
+import system.dynamic.SetMemberBinder;
+import system.dynamic.UnaryOperationBinder;
 import system.dynamic.DynamicMetaObject;
 import system.linq.expressions.Expression;
 
@@ -126,11 +126,11 @@ public class DynamicObject extends NetObject  {
     
     // Methods section
     
-    public boolean TrySetMember(SetMemberBinder binder, NetObject value) throws Throwable {
+    public boolean TryDeleteIndex(DeleteIndexBinder binder, NetObject[] indexes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("TrySetMember", binder == null ? null : binder.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return (boolean)classInstance.Invoke("TryDeleteIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,11 +156,11 @@ public class DynamicObject extends NetObject  {
         }
     }
 
-    public boolean TryDeleteIndex(DeleteIndexBinder binder, NetObject[] indexes) throws Throwable {
+    public boolean TrySetMember(SetMemberBinder binder, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("TryDeleteIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes));
+            return (boolean)classInstance.Invoke("TrySetMember", binder == null ? null : binder.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

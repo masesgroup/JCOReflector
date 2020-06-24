@@ -119,23 +119,23 @@ public class SupportingTokenSpecification extends NetObject  {
     
     // Properties section
     
-    public SecurityTokenAttachmentMode getSecurityTokenAttachmentMode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenAttachmentMode");
-            return new SecurityTokenAttachmentMode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecurityToken getSecurityToken() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("SecurityToken");
             return new SecurityToken(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityTokenAttachmentMode getSecurityTokenAttachmentMode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SecurityTokenAttachmentMode");
+            return new SecurityTokenAttachmentMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

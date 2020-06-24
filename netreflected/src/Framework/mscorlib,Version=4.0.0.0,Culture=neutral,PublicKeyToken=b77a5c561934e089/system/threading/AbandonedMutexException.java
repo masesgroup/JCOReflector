@@ -41,10 +41,10 @@ import java.util.ArrayList;
 import system.threading.WaitHandle;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.threading.Mutex;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.reflection.MethodBase;
+import system.threading.Mutex;
 
 /**
  * The base .NET class managing System.Threading.AbandonedMutexException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetException}.
@@ -195,12 +195,21 @@ public class AbandonedMutexException extends NetException {
     
     // Properties section
     
-    public Mutex getMutex() throws Throwable {
+    public int getHResult() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Mutex");
-            return new Mutex(val);
+            return (int)classInstance.Get("HResult");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setHResult(int HResult) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("HResult", HResult);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,21 +298,12 @@ public class AbandonedMutexException extends NetException {
         }
     }
 
-    public int getHResult() throws Throwable {
+    public Mutex getMutex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("HResult");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHResult(int HResult) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HResult", HResult);
+            JCObject val = (JCObject)classInstance.Get("Mutex");
+            return new Mutex(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.Assembly;
-import system.windows.ResourceDictionary;
 import system.Uri;
+import system.windows.ResourceDictionary;
 
 
 /**
@@ -161,27 +161,6 @@ public class ResourceDictionaryInfo extends NetObject  {
         }
     }
 
-    public ResourceDictionary getResourceDictionary() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ResourceDictionary");
-            return new ResourceDictionary(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setResourceDictionary(ResourceDictionary ResourceDictionary) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ResourceDictionary", ResourceDictionary == null ? null : ResourceDictionary.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Uri getSourceUri() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -198,6 +177,27 @@ public class ResourceDictionaryInfo extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceUri", SourceUri == null ? null : SourceUri.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ResourceDictionary getResourceDictionary() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ResourceDictionary");
+            return new ResourceDictionary(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setResourceDictionary(ResourceDictionary ResourceDictionary) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ResourceDictionary", ResourceDictionary == null ? null : ResourceDictionary.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

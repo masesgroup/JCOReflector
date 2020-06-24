@@ -94,25 +94,25 @@ public interface IVsaScriptScope extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IJSVsaItem AddItem(java.lang.String itemName, JSVsaItemType type) throws Throwable;
-
-    public IJSVsaItem GetItem(java.lang.String itemName) throws Throwable;
-
-    public void RemoveItem(java.lang.String itemName) throws Throwable;
-
-    public void RemoveItem(IJSVsaItem item) throws Throwable;
-
     public int GetItemCount() throws Throwable;
 
-    public IJSVsaItem GetItemAtIndex(int index) throws Throwable;
-
-    public void RemoveItemAtIndex(int index) throws Throwable;
-
-    public NetObject GetObject() throws Throwable;
+    public IJSVsaItem AddItem(java.lang.String itemName, JSVsaItemType type) throws Throwable;
 
     public IJSVsaItem CreateDynamicItem(java.lang.String itemName, JSVsaItemType type) throws Throwable;
 
+    public IJSVsaItem GetItem(java.lang.String itemName) throws Throwable;
+
+    public IJSVsaItem GetItemAtIndex(int index) throws Throwable;
+
+    public NetObject GetObject() throws Throwable;
+
     public NetObject GetOption(java.lang.String name) throws Throwable;
+
+    public void RemoveItem(IJSVsaItem item) throws Throwable;
+
+    public void RemoveItem(java.lang.String itemName) throws Throwable;
+
+    public void RemoveItemAtIndex(int index) throws Throwable;
 
     public void SetOption(java.lang.String name, NetObject value) throws Throwable;
 
@@ -120,15 +120,15 @@ public interface IVsaScriptScope extends IJCOBridgeReflected {
     
     // Properties section
     
+    public boolean getIsDirty() throws Throwable;
+
     public IVsaScriptScope getParent() throws Throwable;
+
+    public JSVsaItemType getItemType() throws Throwable;
 
     public java.lang.String getName() throws Throwable;
 
     public void setName(java.lang.String Name) throws Throwable;
-
-    public JSVsaItemType getItemType() throws Throwable;
-
-    public boolean getIsDirty() throws Throwable;
 
 
 

@@ -107,12 +107,22 @@ public class IValueSerializerContextImplementation extends NetObject implements 
 
     // Methods section
     
-    public ValueSerializer GetValueSerializerFor(NetType type) throws Throwable {
+    public boolean OnComponentChanging() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetValueSerializerFor = (JCObject)classInstance.Invoke("GetValueSerializerFor", type == null ? null : type.getJCOInstance());
-            return new ValueSerializer(objGetValueSerializerFor);
+            return (boolean)classInstance.Invoke("OnComponentChanging");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetService(NetType serviceType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            return new NetObject(objGetService);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -129,11 +139,12 @@ public class IValueSerializerContextImplementation extends NetObject implements 
         }
     }
 
-    public boolean OnComponentChanging() throws Throwable {
+    public ValueSerializer GetValueSerializerFor(NetType type) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("OnComponentChanging");
+            JCObject objGetValueSerializerFor = (JCObject)classInstance.Invoke("GetValueSerializerFor", type == null ? null : type.getJCOInstance());
+            return new ValueSerializer(objGetValueSerializerFor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,17 +155,6 @@ public class IValueSerializerContextImplementation extends NetObject implements 
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnComponentChanged");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetService(NetType serviceType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
-            return new NetObject(objGetService);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,23 +175,23 @@ public class IValueSerializerContextImplementation extends NetObject implements 
         }
     }
 
-    public NetObject getInstance() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Instance");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PropertyDescriptor getPropertyDescriptor() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("PropertyDescriptor");
             return new PropertyDescriptor(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject getInstance() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Instance");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

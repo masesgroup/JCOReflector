@@ -148,21 +148,21 @@ public class MailAddress extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getDisplayName() throws Throwable {
+    public java.lang.String getAddress() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            return (java.lang.String)classInstance.Get("Address");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getUser() throws Throwable {
+    public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("User");
+            return (java.lang.String)classInstance.Get("DisplayName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,11 +178,11 @@ public class MailAddress extends NetObject  {
         }
     }
 
-    public java.lang.String getAddress() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException {
+    public java.lang.String getUser() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Address");
+            return (java.lang.String)classInstance.Get("User");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

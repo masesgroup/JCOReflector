@@ -128,6 +128,17 @@ public class ModelDataMethodResult extends NetObject  {
     
     // Properties section
     
+    public OrderedDictionary getOutputParameters() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("OutputParameters");
+            return new OrderedDictionary(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject getReturnValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -144,17 +155,6 @@ public class ModelDataMethodResult extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReturnValue", ReturnValue == null ? null : ReturnValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OrderedDictionary getOutputParameters() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("OutputParameters");
-            return new OrderedDictionary(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

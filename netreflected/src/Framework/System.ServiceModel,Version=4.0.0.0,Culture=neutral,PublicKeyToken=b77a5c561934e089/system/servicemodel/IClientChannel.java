@@ -41,13 +41,13 @@ import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
 import system.TimeSpan;
-import system.Uri;
 import system.servicemodel.channels.IInputSession;
 import system.servicemodel.channels.IInputSessionImplementation;
-import system.servicemodel.EndpointAddress;
 import system.servicemodel.channels.IOutputSession;
 import system.servicemodel.channels.IOutputSessionImplementation;
 import system.servicemodel.CommunicationState;
+import system.servicemodel.EndpointAddress;
+import system.Uri;
 import system.EventHandler;
 
 
@@ -101,35 +101,35 @@ public interface IClientChannel extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void DisplayInitializationUI() throws Throwable;
-
-    public IAsyncResult BeginDisplayInitializationUI(AsyncCallback callback, NetObject state) throws Throwable;
-
-    public void EndDisplayInitializationUI(IAsyncResult result) throws Throwable;
-
-    public void Abort() throws Throwable;
-
     public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public void EndClose(IAsyncResult result) throws Throwable;
-
-    public void Open() throws Throwable;
-
-    public void Open(TimeSpan timeout) throws Throwable;
+    public IAsyncResult BeginDisplayInitializationUI(AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public void EndOpen(IAsyncResult result) throws Throwable;
+    public void Abort() throws Throwable;
 
     public void Close() throws Throwable;
 
     public void Close(TimeSpan timeout) throws Throwable;
 
+    public void DisplayInitializationUI() throws Throwable;
+
     public void Dispose() throws Throwable;
+
+    public void EndClose(IAsyncResult result) throws Throwable;
+
+    public void EndDisplayInitializationUI(IAsyncResult result) throws Throwable;
+
+    public void EndOpen(IAsyncResult result) throws Throwable;
+
+    public void Open() throws Throwable;
+
+    public void Open(TimeSpan timeout) throws Throwable;
 
 
     
@@ -139,29 +139,29 @@ public interface IClientChannel extends IJCOBridgeReflected {
 
     public void setAllowInitializationUI(boolean AllowInitializationUI) throws Throwable;
 
-    public boolean getDidInteractiveInitialization() throws Throwable;
-
-    public Uri getVia() throws Throwable;
-
     public boolean getAllowOutputBatching() throws Throwable;
 
     public void setAllowOutputBatching(boolean AllowOutputBatching) throws Throwable;
 
+    public boolean getDidInteractiveInitialization() throws Throwable;
+
     public IInputSession getInputSession() throws Throwable;
 
-    public EndpointAddress getLocalAddress() throws Throwable;
-
-    public TimeSpan getOperationTimeout() throws Throwable;
-
-    public void setOperationTimeout(TimeSpan OperationTimeout) throws Throwable;
-
     public IOutputSession getOutputSession() throws Throwable;
+
+    public CommunicationState getState() throws Throwable;
+
+    public EndpointAddress getLocalAddress() throws Throwable;
 
     public EndpointAddress getRemoteAddress() throws Throwable;
 
     public java.lang.String getSessionId() throws Throwable;
 
-    public CommunicationState getState() throws Throwable;
+    public TimeSpan getOperationTimeout() throws Throwable;
+
+    public void setOperationTimeout(TimeSpan OperationTimeout) throws Throwable;
+
+    public Uri getVia() throws Throwable;
 
 
 

@@ -41,11 +41,11 @@ import java.util.ArrayList;
 import system.reflection.AssemblyName;
 import system.reflection.metadata.CustomAttributeHandleCollection;
 import system.reflection.metadata.DeclarativeSecurityAttributeHandleCollection;
-import system.reflection.AssemblyHashAlgorithm;
-import system.Version;
 import system.reflection.AssemblyFlags;
-import system.reflection.metadata.StringHandle;
+import system.reflection.AssemblyHashAlgorithm;
 import system.reflection.metadata.BlobHandle;
+import system.reflection.metadata.StringHandle;
+import system.Version;
 
 
 /**
@@ -157,28 +157,6 @@ public class AssemblyDefinition extends NetObject  {
     
     // Properties section
     
-    public AssemblyHashAlgorithm getHashAlgorithm() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("HashAlgorithm");
-            return new AssemblyHashAlgorithm(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Version getVersion() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Version");
-            return new Version(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AssemblyFlags getFlags() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -190,12 +168,23 @@ public class AssemblyDefinition extends NetObject  {
         }
     }
 
-    public StringHandle getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public AssemblyHashAlgorithm getHashAlgorithm() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
-            return new StringHandle(val);
+            JCObject val = (JCObject)classInstance.Get("HashAlgorithm");
+            return new AssemblyHashAlgorithm(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BlobHandle getPublicKey() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PublicKey");
+            return new BlobHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,12 +201,23 @@ public class AssemblyDefinition extends NetObject  {
         }
     }
 
-    public BlobHandle getPublicKey() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public StringHandle getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PublicKey");
-            return new BlobHandle(val);
+            JCObject val = (JCObject)classInstance.Get("Name");
+            return new StringHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Version getVersion() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Version");
+            return new Version(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

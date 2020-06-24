@@ -129,22 +129,11 @@ public class FrameDimension extends NetObject  {
     
     // Properties section
     
-    public Guid getGuid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Guid");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static FrameDimension getTime() throws Throwable {
+    public static FrameDimension getPage() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Time");
+            JCObject val = (JCObject)classType.Get("Page");
             return new FrameDimension(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -162,12 +151,23 @@ public class FrameDimension extends NetObject  {
         }
     }
 
-    public static FrameDimension getPage() throws Throwable {
+    public static FrameDimension getTime() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Page");
+            JCObject val = (JCObject)classType.Get("Time");
             return new FrameDimension(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Guid getGuid() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Guid");
+            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -89,15 +89,15 @@ public interface IWorkflowDesignerStorageService extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean ContainsKey(java.lang.String key) throws Throwable;
+
+    public NetObject GetData(java.lang.String key) throws Throwable;
+
     public void AddData(java.lang.String key, NetObject value) throws Throwable;
 
     public void RemoveData(java.lang.String key) throws Throwable;
 
-    public NetObject GetData(java.lang.String key) throws Throwable;
-
     public void SetData(java.lang.String key, NetObject value) throws Throwable;
-
-    public boolean ContainsKey(java.lang.String key) throws Throwable;
 
 
     

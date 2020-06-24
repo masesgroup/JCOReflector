@@ -103,21 +103,21 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
 
     // Methods section
     
-    public int GetTypeInfoCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetTypeInfoCount");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsName(java.lang.String szNameBuf, int lHashVal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsName", szNameBuf, lHashVal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetTypeInfoCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetTypeInfoCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

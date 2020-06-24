@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.Stream;
-import system.printing.PrintTicket;
 import system.io.MemoryStream;
+import system.printing.PrintTicket;
 import system.printing.PageMediaSize;
 import system.printing.PageResolution;
 import system.componentmodel.PropertyChangedEventHandler;
@@ -139,23 +139,23 @@ public class PrintTicket extends NetObject  {
     
     // Methods section
     
-    public PrintTicket Clone() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.OverflowException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new PrintTicket(objClone);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MemoryStream GetXmlStream() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetXmlStream = (JCObject)classInstance.Invoke("GetXmlStream");
             return new MemoryStream(objGetXmlStream);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PrintTicket Clone() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.OverflowException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            return new PrintTicket(objClone);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

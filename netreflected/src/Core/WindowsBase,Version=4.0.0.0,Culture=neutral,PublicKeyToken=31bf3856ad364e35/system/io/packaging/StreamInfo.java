@@ -117,6 +117,17 @@ public class StreamInfo extends NetObject  {
     
     // Methods section
     
+    public Stream GetStream() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.io.IOException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.RankException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream");
+            return new Stream(objGetStream);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Stream GetStream(FileMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.io.IOException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -133,17 +144,6 @@ public class StreamInfo extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream", mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance());
-            return new Stream(objGetStream);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Stream GetStream() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.io.IOException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.RankException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream");
             return new Stream(objGetStream);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

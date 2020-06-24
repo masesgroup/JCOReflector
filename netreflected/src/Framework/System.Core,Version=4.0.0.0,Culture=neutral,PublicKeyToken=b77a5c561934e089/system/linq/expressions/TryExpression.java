@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.linq.expressions.TryExpression;
 import system.linq.expressions.Expression;
+import system.linq.expressions.TryExpression;
 import system.linq.expressions.ExpressionType;
 
 
@@ -152,23 +152,11 @@ public class TryExpression extends NetObject  {
     
     // Properties section
     
-    public NetType getType() throws Throwable {
+    public boolean getCanReduce() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ExpressionType getNodeType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NodeType");
-            return new ExpressionType(val);
+            return (boolean)classInstance.Get("CanReduce");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,17 +167,6 @@ public class TryExpression extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Body");
-            return new Expression(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Expression getFinally() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Finally");
             return new Expression(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,11 +184,34 @@ public class TryExpression extends NetObject  {
         }
     }
 
-    public boolean getCanReduce() throws Throwable {
+    public Expression getFinally() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CanReduce");
+            JCObject val = (JCObject)classInstance.Get("Finally");
+            return new Expression(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ExpressionType getNodeType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NodeType");
+            return new ExpressionType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType getType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Type");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

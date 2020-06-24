@@ -45,9 +45,9 @@ import system.security.accesscontrol.ObjectAceFlags;
 import system.Guid;
 import system.security.accesscontrol.GenericAce;
 import system.security.accesscontrol.AceType;
+import system.security.accesscontrol.AuditFlags;
 import system.security.accesscontrol.InheritanceFlags;
 import system.security.accesscontrol.PropagationFlags;
-import system.security.accesscontrol.AuditFlags;
 
 
 /**
@@ -133,26 +133,6 @@ public class ObjectAce extends NetObject  {
     
     // Methods section
     
-    public static int MaxOpaqueLength(boolean isCallback) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("MaxOpaqueLength", isCallback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetBinaryForm", binaryForm, offset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] GetOpaque() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -172,11 +152,11 @@ public class ObjectAce extends NetObject  {
         }
     }
 
-    public void SetOpaque(byte[] opaque) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int MaxOpaqueLength(boolean isCallback) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("SetOpaque", (Object)opaque);
+            return (int)classType.Invoke("MaxOpaqueLength", isCallback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,47 +173,85 @@ public class ObjectAce extends NetObject  {
         }
     }
 
+    public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetBinaryForm", binaryForm, offset);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetOpaque(byte[] opaque) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetOpaque", (Object)opaque);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public ObjectAceFlags getObjectAceFlags() throws Throwable {
+    public boolean getIsCallback() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectAceFlags");
-            return new ObjectAceFlags(val);
+            return (boolean)classInstance.Get("IsCallback");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setObjectAceFlags(ObjectAceFlags ObjectAceFlags) throws Throwable {
+    public boolean getIsInherited() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ObjectAceFlags", ObjectAceFlags == null ? null : ObjectAceFlags.getJCOInstance());
+            return (boolean)classInstance.Get("IsInherited");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Guid getObjectAceType() throws Throwable {
+    public int getAccessMask() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectAceType");
-            return new Guid(val);
+            return (int)classInstance.Get("AccessMask");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setObjectAceType(Guid ObjectAceType) throws Throwable {
+    public void setAccessMask(int AccessMask) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ObjectAceType", ObjectAceType == null ? null : ObjectAceType.getJCOInstance());
+            classInstance.Set("AccessMask", AccessMask);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getBinaryLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("BinaryLength");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getOpaqueLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("OpaqueLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,94 +278,22 @@ public class ObjectAce extends NetObject  {
         }
     }
 
-    public int getBinaryLength() throws Throwable {
+    public Guid getObjectAceType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("BinaryLength");
+            JCObject val = (JCObject)classInstance.Get("ObjectAceType");
+            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public AceQualifier getAceQualifier() throws Throwable {
+    public void setObjectAceType(Guid ObjectAceType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AceQualifier");
-            return new AceQualifier(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsCallback() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsCallback");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getOpaqueLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("OpaqueLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getAccessMask() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("AccessMask");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAccessMask(int AccessMask) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AccessMask", AccessMask);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityIdentifier getSecurityIdentifier() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SecurityIdentifier");
-            return new SecurityIdentifier(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSecurityIdentifier(SecurityIdentifier SecurityIdentifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SecurityIdentifier", SecurityIdentifier == null ? null : SecurityIdentifier.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AceType getAceType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AceType");
-            return new AceType(val);
+            classInstance.Set("ObjectAceType", ObjectAceType == null ? null : ObjectAceType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,11 +320,34 @@ public class ObjectAce extends NetObject  {
         }
     }
 
-    public boolean getIsInherited() throws Throwable {
+    public AceQualifier getAceQualifier() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsInherited");
+            JCObject val = (JCObject)classInstance.Get("AceQualifier");
+            return new AceQualifier(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AceType getAceType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AceType");
+            return new AceType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AuditFlags getAuditFlags() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AuditFlags");
+            return new AuditFlags(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,6 +364,27 @@ public class ObjectAce extends NetObject  {
         }
     }
 
+    public ObjectAceFlags getObjectAceFlags() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ObjectAceFlags");
+            return new ObjectAceFlags(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setObjectAceFlags(ObjectAceFlags ObjectAceFlags) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ObjectAceFlags", ObjectAceFlags == null ? null : ObjectAceFlags.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PropagationFlags getPropagationFlags() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -406,12 +396,22 @@ public class ObjectAce extends NetObject  {
         }
     }
 
-    public AuditFlags getAuditFlags() throws Throwable {
+    public SecurityIdentifier getSecurityIdentifier() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AuditFlags");
-            return new AuditFlags(val);
+            JCObject val = (JCObject)classInstance.Get("SecurityIdentifier");
+            return new SecurityIdentifier(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSecurityIdentifier(SecurityIdentifier SecurityIdentifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SecurityIdentifier", SecurityIdentifier == null ? null : SecurityIdentifier.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

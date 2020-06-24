@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import microsoft.build.framework.IEventSource;
-import microsoft.build.framework.IEventSourceImplementation;
+import microsoft.build.framework.LoggerVerbosity;
 import microsoft.build.framework.BuildErrorEventArgs;
 import microsoft.build.framework.BuildWarningEventArgs;
-import microsoft.build.framework.LoggerVerbosity;
+import microsoft.build.framework.IEventSource;
+import microsoft.build.framework.IEventSourceImplementation;
 
 
 /**
@@ -117,21 +117,11 @@ public class Logger extends NetObject  {
     
     // Methods section
     
-    public void Initialize(IEventSource eventSource) throws Throwable {
+    public boolean IsVerbosityAtLeast(LoggerVerbosity checkVerbosity) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Initialize", eventSource == null ? null : eventSource.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Shutdown() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Shutdown");
+            return (boolean)classInstance.Invoke("IsVerbosityAtLeast", checkVerbosity == null ? null : checkVerbosity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,11 +147,21 @@ public class Logger extends NetObject  {
         }
     }
 
-    public boolean IsVerbosityAtLeast(LoggerVerbosity checkVerbosity) throws Throwable {
+    public void Initialize(IEventSource eventSource) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsVerbosityAtLeast", checkVerbosity == null ? null : checkVerbosity.getJCOInstance());
+            classInstance.Invoke("Initialize", eventSource == null ? null : eventSource.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Shutdown() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Shutdown");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

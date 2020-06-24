@@ -113,21 +113,21 @@ public class AttachablePropertyServices extends NetObject  {
     
     // Methods section
     
-    public static int GetAttachedPropertyCount(NetObject instance) throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.NotSupportedException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("GetAttachedPropertyCount", instance == null ? null : instance.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean RemoveProperty(NetObject instance, AttachableMemberIdentifier name) throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.NotSupportedException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("RemoveProperty", instance == null ? null : instance.getJCOInstance(), name == null ? null : name.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int GetAttachedPropertyCount(NetObject instance) throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.NotSupportedException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetAttachedPropertyCount", instance == null ? null : instance.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

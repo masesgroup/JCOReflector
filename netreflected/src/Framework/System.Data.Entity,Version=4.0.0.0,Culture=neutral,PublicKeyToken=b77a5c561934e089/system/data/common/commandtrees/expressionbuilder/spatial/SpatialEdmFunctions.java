@@ -114,485 +114,12 @@ public class SpatialEdmFunctions extends NetObject  {
     
     // Methods section
     
-    public static DbFunctionExpression GeometryFromText(DbExpression wellKnownText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression Area(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGeometryFromText = (JCObject)classType.Invoke("GeometryFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance());
-            return new DbFunctionExpression(objGeometryFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryFromText(DbExpression wellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryFromText = (JCObject)classType.Invoke("GeometryFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryPointFromText(DbExpression pointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryPointFromText = (JCObject)classType.Invoke("GeometryPointFromText", pointWellKnownText == null ? null : pointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryPointFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryLineFromText(DbExpression lineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryLineFromText = (JCObject)classType.Invoke("GeometryLineFromText", lineWellKnownText == null ? null : lineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryLineFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryPolygonFromText(DbExpression polygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryPolygonFromText = (JCObject)classType.Invoke("GeometryPolygonFromText", polygonWellKnownText == null ? null : polygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryPolygonFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryMultiPointFromText(DbExpression multiPointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryMultiPointFromText = (JCObject)classType.Invoke("GeometryMultiPointFromText", multiPointWellKnownText == null ? null : multiPointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryMultiPointFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryMultiLineFromText(DbExpression multiLineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryMultiLineFromText = (JCObject)classType.Invoke("GeometryMultiLineFromText", multiLineWellKnownText == null ? null : multiLineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryMultiLineFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryMultiPolygonFromText(DbExpression multiPolygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryMultiPolygonFromText = (JCObject)classType.Invoke("GeometryMultiPolygonFromText", multiPolygonWellKnownText == null ? null : multiPolygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryMultiPolygonFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryCollectionFromText(DbExpression geometryCollectionWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryCollectionFromText = (JCObject)classType.Invoke("GeometryCollectionFromText", geometryCollectionWellKnownText == null ? null : geometryCollectionWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryCollectionFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryFromBinary(DbExpression wellKnownBinaryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryFromBinary = (JCObject)classType.Invoke("GeometryFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance());
-            return new DbFunctionExpression(objGeometryFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryFromBinary(DbExpression wellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryFromBinary = (JCObject)classType.Invoke("GeometryFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryPointFromBinary(DbExpression pointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryPointFromBinary = (JCObject)classType.Invoke("GeometryPointFromBinary", pointWellKnownBinaryValue == null ? null : pointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryPointFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryLineFromBinary(DbExpression lineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryLineFromBinary = (JCObject)classType.Invoke("GeometryLineFromBinary", lineWellKnownBinaryValue == null ? null : lineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryLineFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryPolygonFromBinary(DbExpression polygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryPolygonFromBinary = (JCObject)classType.Invoke("GeometryPolygonFromBinary", polygonWellKnownBinaryValue == null ? null : polygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryPolygonFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryMultiPointFromBinary(DbExpression multiPointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryMultiPointFromBinary = (JCObject)classType.Invoke("GeometryMultiPointFromBinary", multiPointWellKnownBinaryValue == null ? null : multiPointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryMultiPointFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryMultiLineFromBinary(DbExpression multiLineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryMultiLineFromBinary = (JCObject)classType.Invoke("GeometryMultiLineFromBinary", multiLineWellKnownBinaryValue == null ? null : multiLineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryMultiLineFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryMultiPolygonFromBinary(DbExpression multiPolygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryMultiPolygonFromBinary = (JCObject)classType.Invoke("GeometryMultiPolygonFromBinary", multiPolygonWellKnownBinaryValue == null ? null : multiPolygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryMultiPolygonFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryCollectionFromBinary(DbExpression geometryCollectionWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryCollectionFromBinary = (JCObject)classType.Invoke("GeometryCollectionFromBinary", geometryCollectionWellKnownBinaryValue == null ? null : geometryCollectionWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryCollectionFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryFromGml(DbExpression geometryMarkup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryFromGml = (JCObject)classType.Invoke("GeometryFromGml", geometryMarkup == null ? null : geometryMarkup.getJCOInstance());
-            return new DbFunctionExpression(objGeometryFromGml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeometryFromGml(DbExpression geometryMarkup, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeometryFromGml = (JCObject)classType.Invoke("GeometryFromGml", geometryMarkup == null ? null : geometryMarkup.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeometryFromGml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyFromText(DbExpression wellKnownText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyFromText = (JCObject)classType.Invoke("GeographyFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance());
-            return new DbFunctionExpression(objGeographyFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyFromText(DbExpression wellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyFromText = (JCObject)classType.Invoke("GeographyFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyPointFromText(DbExpression pointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyPointFromText = (JCObject)classType.Invoke("GeographyPointFromText", pointWellKnownText == null ? null : pointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyPointFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyLineFromText(DbExpression lineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyLineFromText = (JCObject)classType.Invoke("GeographyLineFromText", lineWellKnownText == null ? null : lineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyLineFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyPolygonFromText(DbExpression polygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyPolygonFromText = (JCObject)classType.Invoke("GeographyPolygonFromText", polygonWellKnownText == null ? null : polygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyPolygonFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyMultiPointFromText(DbExpression multiPointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyMultiPointFromText = (JCObject)classType.Invoke("GeographyMultiPointFromText", multiPointWellKnownText == null ? null : multiPointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyMultiPointFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyMultiLineFromText(DbExpression multiLineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyMultiLineFromText = (JCObject)classType.Invoke("GeographyMultiLineFromText", multiLineWellKnownText == null ? null : multiLineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyMultiLineFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyMultiPolygonFromText(DbExpression multiPolygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyMultiPolygonFromText = (JCObject)classType.Invoke("GeographyMultiPolygonFromText", multiPolygonWellKnownText == null ? null : multiPolygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyMultiPolygonFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyCollectionFromText(DbExpression geographyCollectionWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyCollectionFromText = (JCObject)classType.Invoke("GeographyCollectionFromText", geographyCollectionWellKnownText == null ? null : geographyCollectionWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyCollectionFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyFromBinary(DbExpression wellKnownBinaryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyFromBinary = (JCObject)classType.Invoke("GeographyFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance());
-            return new DbFunctionExpression(objGeographyFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyFromBinary(DbExpression wellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyFromBinary = (JCObject)classType.Invoke("GeographyFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyPointFromBinary(DbExpression pointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyPointFromBinary = (JCObject)classType.Invoke("GeographyPointFromBinary", pointWellKnownBinaryValue == null ? null : pointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyPointFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyLineFromBinary(DbExpression lineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyLineFromBinary = (JCObject)classType.Invoke("GeographyLineFromBinary", lineWellKnownBinaryValue == null ? null : lineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyLineFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyPolygonFromBinary(DbExpression polygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyPolygonFromBinary = (JCObject)classType.Invoke("GeographyPolygonFromBinary", polygonWellKnownBinaryValue == null ? null : polygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyPolygonFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyMultiPointFromBinary(DbExpression multiPointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyMultiPointFromBinary = (JCObject)classType.Invoke("GeographyMultiPointFromBinary", multiPointWellKnownBinaryValue == null ? null : multiPointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyMultiPointFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyMultiLineFromBinary(DbExpression multiLineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyMultiLineFromBinary = (JCObject)classType.Invoke("GeographyMultiLineFromBinary", multiLineWellKnownBinaryValue == null ? null : multiLineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyMultiLineFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyMultiPolygonFromBinary(DbExpression multiPolygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyMultiPolygonFromBinary = (JCObject)classType.Invoke("GeographyMultiPolygonFromBinary", multiPolygonWellKnownBinaryValue == null ? null : multiPolygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyMultiPolygonFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyCollectionFromBinary(DbExpression geographyCollectionWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyCollectionFromBinary = (JCObject)classType.Invoke("GeographyCollectionFromBinary", geographyCollectionWellKnownBinaryValue == null ? null : geographyCollectionWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyCollectionFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyFromGml(DbExpression geographyMarkup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyFromGml = (JCObject)classType.Invoke("GeographyFromGml", geographyMarkup == null ? null : geographyMarkup.getJCOInstance());
-            return new DbFunctionExpression(objGeographyFromGml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression GeographyFromGml(DbExpression geographyMarkup, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGeographyFromGml = (JCObject)classType.Invoke("GeographyFromGml", geographyMarkup == null ? null : geographyMarkup.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
-            return new DbFunctionExpression(objGeographyFromGml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression CoordinateSystemId(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCoordinateSystemId = (JCObject)classType.Invoke("CoordinateSystemId", spatialValue == null ? null : spatialValue.getJCOInstance());
-            return new DbFunctionExpression(objCoordinateSystemId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialTypeName(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialTypeName = (JCObject)classType.Invoke("SpatialTypeName", spatialValue == null ? null : spatialValue.getJCOInstance());
-            return new DbFunctionExpression(objSpatialTypeName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialDimension(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialDimension = (JCObject)classType.Invoke("SpatialDimension", spatialValue == null ? null : spatialValue.getJCOInstance());
-            return new DbFunctionExpression(objSpatialDimension);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialEnvelope(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialEnvelope = (JCObject)classType.Invoke("SpatialEnvelope", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbFunctionExpression(objSpatialEnvelope);
+            JCObject objArea = (JCObject)classType.Invoke("Area", spatialValue == null ? null : spatialValue.getJCOInstance());
+            return new DbFunctionExpression(objArea);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -631,155 +158,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression IsEmptySpatial(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression Centroid(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objIsEmptySpatial = (JCObject)classType.Invoke("IsEmptySpatial", spatialValue == null ? null : spatialValue.getJCOInstance());
-            return new DbFunctionExpression(objIsEmptySpatial);
+            JCObject objCentroid = (JCObject)classType.Invoke("Centroid", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbFunctionExpression(objCentroid);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DbFunctionExpression IsSimpleGeometry(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression CoordinateSystemId(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objIsSimpleGeometry = (JCObject)classType.Invoke("IsSimpleGeometry", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbFunctionExpression(objIsSimpleGeometry);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialBoundary(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialBoundary = (JCObject)classType.Invoke("SpatialBoundary", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbFunctionExpression(objSpatialBoundary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression IsValidGeometry(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objIsValidGeometry = (JCObject)classType.Invoke("IsValidGeometry", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbFunctionExpression(objIsValidGeometry);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialEquals(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialEquals = (JCObject)classType.Invoke("SpatialEquals", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
-            return new DbFunctionExpression(objSpatialEquals);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialDisjoint(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialDisjoint = (JCObject)classType.Invoke("SpatialDisjoint", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
-            return new DbFunctionExpression(objSpatialDisjoint);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialIntersects(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialIntersects = (JCObject)classType.Invoke("SpatialIntersects", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
-            return new DbFunctionExpression(objSpatialIntersects);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialTouches(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialTouches = (JCObject)classType.Invoke("SpatialTouches", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
-            return new DbFunctionExpression(objSpatialTouches);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialCrosses(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialCrosses = (JCObject)classType.Invoke("SpatialCrosses", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
-            return new DbFunctionExpression(objSpatialCrosses);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialWithin(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialWithin = (JCObject)classType.Invoke("SpatialWithin", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
-            return new DbFunctionExpression(objSpatialWithin);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialContains(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialContains = (JCObject)classType.Invoke("SpatialContains", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
-            return new DbFunctionExpression(objSpatialContains);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialOverlaps(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialOverlaps = (JCObject)classType.Invoke("SpatialOverlaps", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
-            return new DbFunctionExpression(objSpatialOverlaps);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialRelate(DbExpression geometryValue1, DbExpression geometryValue2, DbExpression intersectionPatternMatrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialRelate = (JCObject)classType.Invoke("SpatialRelate", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance(), intersectionPatternMatrix == null ? null : intersectionPatternMatrix.getJCOInstance());
-            return new DbFunctionExpression(objSpatialRelate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialBuffer(DbExpression spatialValue, DbExpression distance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialBuffer = (JCObject)classType.Invoke("SpatialBuffer", spatialValue == null ? null : spatialValue.getJCOInstance(), distance == null ? null : distance.getJCOInstance());
-            return new DbFunctionExpression(objSpatialBuffer);
+            JCObject objCoordinateSystemId = (JCObject)classType.Invoke("CoordinateSystemId", spatialValue == null ? null : spatialValue.getJCOInstance());
+            return new DbFunctionExpression(objCoordinateSystemId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -796,105 +191,6 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression SpatialConvexHull(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialConvexHull = (JCObject)classType.Invoke("SpatialConvexHull", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbFunctionExpression(objSpatialConvexHull);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialIntersection(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialIntersection = (JCObject)classType.Invoke("SpatialIntersection", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
-            return new DbFunctionExpression(objSpatialIntersection);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialUnion(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialUnion = (JCObject)classType.Invoke("SpatialUnion", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
-            return new DbFunctionExpression(objSpatialUnion);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialDifference(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialDifference = (JCObject)classType.Invoke("SpatialDifference", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
-            return new DbFunctionExpression(objSpatialDifference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialSymmetricDifference(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialSymmetricDifference = (JCObject)classType.Invoke("SpatialSymmetricDifference", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
-            return new DbFunctionExpression(objSpatialSymmetricDifference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialElementCount(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialElementCount = (JCObject)classType.Invoke("SpatialElementCount", spatialValue == null ? null : spatialValue.getJCOInstance());
-            return new DbFunctionExpression(objSpatialElementCount);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression SpatialElementAt(DbExpression spatialValue, DbExpression indexValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSpatialElementAt = (JCObject)classType.Invoke("SpatialElementAt", spatialValue == null ? null : spatialValue.getJCOInstance(), indexValue == null ? null : indexValue.getJCOInstance());
-            return new DbFunctionExpression(objSpatialElementAt);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression XCoordinate(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objXCoordinate = (JCObject)classType.Invoke("XCoordinate", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbFunctionExpression(objXCoordinate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression YCoordinate(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objYCoordinate = (JCObject)classType.Invoke("YCoordinate", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbFunctionExpression(objYCoordinate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static DbFunctionExpression Elevation(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -906,12 +202,540 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Measure(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression EndPoint(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMeasure = (JCObject)classType.Invoke("Measure", spatialValue == null ? null : spatialValue.getJCOInstance());
-            return new DbFunctionExpression(objMeasure);
+            JCObject objEndPoint = (JCObject)classType.Invoke("EndPoint", spatialValue == null ? null : spatialValue.getJCOInstance());
+            return new DbFunctionExpression(objEndPoint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression ExteriorRing(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objExteriorRing = (JCObject)classType.Invoke("ExteriorRing", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbFunctionExpression(objExteriorRing);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyCollectionFromBinary(DbExpression geographyCollectionWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyCollectionFromBinary = (JCObject)classType.Invoke("GeographyCollectionFromBinary", geographyCollectionWellKnownBinaryValue == null ? null : geographyCollectionWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyCollectionFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyCollectionFromText(DbExpression geographyCollectionWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyCollectionFromText = (JCObject)classType.Invoke("GeographyCollectionFromText", geographyCollectionWellKnownText == null ? null : geographyCollectionWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyCollectionFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyFromBinary(DbExpression wellKnownBinaryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyFromBinary = (JCObject)classType.Invoke("GeographyFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance());
+            return new DbFunctionExpression(objGeographyFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyFromBinary(DbExpression wellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyFromBinary = (JCObject)classType.Invoke("GeographyFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyFromGml(DbExpression geographyMarkup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyFromGml = (JCObject)classType.Invoke("GeographyFromGml", geographyMarkup == null ? null : geographyMarkup.getJCOInstance());
+            return new DbFunctionExpression(objGeographyFromGml);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyFromGml(DbExpression geographyMarkup, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyFromGml = (JCObject)classType.Invoke("GeographyFromGml", geographyMarkup == null ? null : geographyMarkup.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyFromGml);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyFromText(DbExpression wellKnownText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyFromText = (JCObject)classType.Invoke("GeographyFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance());
+            return new DbFunctionExpression(objGeographyFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyFromText(DbExpression wellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyFromText = (JCObject)classType.Invoke("GeographyFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyLineFromBinary(DbExpression lineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyLineFromBinary = (JCObject)classType.Invoke("GeographyLineFromBinary", lineWellKnownBinaryValue == null ? null : lineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyLineFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyLineFromText(DbExpression lineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyLineFromText = (JCObject)classType.Invoke("GeographyLineFromText", lineWellKnownText == null ? null : lineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyLineFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyMultiLineFromBinary(DbExpression multiLineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyMultiLineFromBinary = (JCObject)classType.Invoke("GeographyMultiLineFromBinary", multiLineWellKnownBinaryValue == null ? null : multiLineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyMultiLineFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyMultiLineFromText(DbExpression multiLineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyMultiLineFromText = (JCObject)classType.Invoke("GeographyMultiLineFromText", multiLineWellKnownText == null ? null : multiLineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyMultiLineFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyMultiPointFromBinary(DbExpression multiPointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyMultiPointFromBinary = (JCObject)classType.Invoke("GeographyMultiPointFromBinary", multiPointWellKnownBinaryValue == null ? null : multiPointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyMultiPointFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyMultiPointFromText(DbExpression multiPointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyMultiPointFromText = (JCObject)classType.Invoke("GeographyMultiPointFromText", multiPointWellKnownText == null ? null : multiPointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyMultiPointFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyMultiPolygonFromBinary(DbExpression multiPolygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyMultiPolygonFromBinary = (JCObject)classType.Invoke("GeographyMultiPolygonFromBinary", multiPolygonWellKnownBinaryValue == null ? null : multiPolygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyMultiPolygonFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyMultiPolygonFromText(DbExpression multiPolygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyMultiPolygonFromText = (JCObject)classType.Invoke("GeographyMultiPolygonFromText", multiPolygonWellKnownText == null ? null : multiPolygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyMultiPolygonFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyPointFromBinary(DbExpression pointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyPointFromBinary = (JCObject)classType.Invoke("GeographyPointFromBinary", pointWellKnownBinaryValue == null ? null : pointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyPointFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyPointFromText(DbExpression pointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyPointFromText = (JCObject)classType.Invoke("GeographyPointFromText", pointWellKnownText == null ? null : pointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyPointFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyPolygonFromBinary(DbExpression polygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyPolygonFromBinary = (JCObject)classType.Invoke("GeographyPolygonFromBinary", polygonWellKnownBinaryValue == null ? null : polygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyPolygonFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeographyPolygonFromText(DbExpression polygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyPolygonFromText = (JCObject)classType.Invoke("GeographyPolygonFromText", polygonWellKnownText == null ? null : polygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeographyPolygonFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryCollectionFromBinary(DbExpression geometryCollectionWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryCollectionFromBinary = (JCObject)classType.Invoke("GeometryCollectionFromBinary", geometryCollectionWellKnownBinaryValue == null ? null : geometryCollectionWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryCollectionFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryCollectionFromText(DbExpression geometryCollectionWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryCollectionFromText = (JCObject)classType.Invoke("GeometryCollectionFromText", geometryCollectionWellKnownText == null ? null : geometryCollectionWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryCollectionFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryFromBinary(DbExpression wellKnownBinaryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryFromBinary = (JCObject)classType.Invoke("GeometryFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance());
+            return new DbFunctionExpression(objGeometryFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryFromBinary(DbExpression wellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryFromBinary = (JCObject)classType.Invoke("GeometryFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryFromGml(DbExpression geometryMarkup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryFromGml = (JCObject)classType.Invoke("GeometryFromGml", geometryMarkup == null ? null : geometryMarkup.getJCOInstance());
+            return new DbFunctionExpression(objGeometryFromGml);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryFromGml(DbExpression geometryMarkup, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryFromGml = (JCObject)classType.Invoke("GeometryFromGml", geometryMarkup == null ? null : geometryMarkup.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryFromGml);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryFromText(DbExpression wellKnownText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryFromText = (JCObject)classType.Invoke("GeometryFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance());
+            return new DbFunctionExpression(objGeometryFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryFromText(DbExpression wellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryFromText = (JCObject)classType.Invoke("GeometryFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryLineFromBinary(DbExpression lineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryLineFromBinary = (JCObject)classType.Invoke("GeometryLineFromBinary", lineWellKnownBinaryValue == null ? null : lineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryLineFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryLineFromText(DbExpression lineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryLineFromText = (JCObject)classType.Invoke("GeometryLineFromText", lineWellKnownText == null ? null : lineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryLineFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryMultiLineFromBinary(DbExpression multiLineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryMultiLineFromBinary = (JCObject)classType.Invoke("GeometryMultiLineFromBinary", multiLineWellKnownBinaryValue == null ? null : multiLineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryMultiLineFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryMultiLineFromText(DbExpression multiLineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryMultiLineFromText = (JCObject)classType.Invoke("GeometryMultiLineFromText", multiLineWellKnownText == null ? null : multiLineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryMultiLineFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryMultiPointFromBinary(DbExpression multiPointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryMultiPointFromBinary = (JCObject)classType.Invoke("GeometryMultiPointFromBinary", multiPointWellKnownBinaryValue == null ? null : multiPointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryMultiPointFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryMultiPointFromText(DbExpression multiPointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryMultiPointFromText = (JCObject)classType.Invoke("GeometryMultiPointFromText", multiPointWellKnownText == null ? null : multiPointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryMultiPointFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryMultiPolygonFromBinary(DbExpression multiPolygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryMultiPolygonFromBinary = (JCObject)classType.Invoke("GeometryMultiPolygonFromBinary", multiPolygonWellKnownBinaryValue == null ? null : multiPolygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryMultiPolygonFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryMultiPolygonFromText(DbExpression multiPolygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryMultiPolygonFromText = (JCObject)classType.Invoke("GeometryMultiPolygonFromText", multiPolygonWellKnownText == null ? null : multiPolygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryMultiPolygonFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryPointFromBinary(DbExpression pointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryPointFromBinary = (JCObject)classType.Invoke("GeometryPointFromBinary", pointWellKnownBinaryValue == null ? null : pointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryPointFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryPointFromText(DbExpression pointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryPointFromText = (JCObject)classType.Invoke("GeometryPointFromText", pointWellKnownText == null ? null : pointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryPointFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryPolygonFromBinary(DbExpression polygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryPolygonFromBinary = (JCObject)classType.Invoke("GeometryPolygonFromBinary", polygonWellKnownBinaryValue == null ? null : polygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryPolygonFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression GeometryPolygonFromText(DbExpression polygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeometryPolygonFromText = (JCObject)classType.Invoke("GeometryPolygonFromText", polygonWellKnownText == null ? null : polygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            return new DbFunctionExpression(objGeometryPolygonFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression InteriorRingAt(DbExpression geometryValue, DbExpression indexValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objInteriorRingAt = (JCObject)classType.Invoke("InteriorRingAt", geometryValue == null ? null : geometryValue.getJCOInstance(), indexValue == null ? null : indexValue.getJCOInstance());
+            return new DbFunctionExpression(objInteriorRingAt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression InteriorRingCount(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objInteriorRingCount = (JCObject)classType.Invoke("InteriorRingCount", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbFunctionExpression(objInteriorRingCount);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression IsClosedSpatial(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objIsClosedSpatial = (JCObject)classType.Invoke("IsClosedSpatial", spatialValue == null ? null : spatialValue.getJCOInstance());
+            return new DbFunctionExpression(objIsClosedSpatial);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression IsEmptySpatial(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objIsEmptySpatial = (JCObject)classType.Invoke("IsEmptySpatial", spatialValue == null ? null : spatialValue.getJCOInstance());
+            return new DbFunctionExpression(objIsEmptySpatial);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression IsRing(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objIsRing = (JCObject)classType.Invoke("IsRing", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbFunctionExpression(objIsRing);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression IsSimpleGeometry(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objIsSimpleGeometry = (JCObject)classType.Invoke("IsSimpleGeometry", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbFunctionExpression(objIsSimpleGeometry);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression IsValidGeometry(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objIsValidGeometry = (JCObject)classType.Invoke("IsValidGeometry", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbFunctionExpression(objIsValidGeometry);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -939,67 +763,12 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression SpatialLength(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression Measure(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSpatialLength = (JCObject)classType.Invoke("SpatialLength", spatialValue == null ? null : spatialValue.getJCOInstance());
-            return new DbFunctionExpression(objSpatialLength);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression StartPoint(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objStartPoint = (JCObject)classType.Invoke("StartPoint", spatialValue == null ? null : spatialValue.getJCOInstance());
-            return new DbFunctionExpression(objStartPoint);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression EndPoint(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objEndPoint = (JCObject)classType.Invoke("EndPoint", spatialValue == null ? null : spatialValue.getJCOInstance());
-            return new DbFunctionExpression(objEndPoint);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression IsClosedSpatial(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objIsClosedSpatial = (JCObject)classType.Invoke("IsClosedSpatial", spatialValue == null ? null : spatialValue.getJCOInstance());
-            return new DbFunctionExpression(objIsClosedSpatial);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression IsRing(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objIsRing = (JCObject)classType.Invoke("IsRing", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbFunctionExpression(objIsRing);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression PointCount(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objPointCount = (JCObject)classType.Invoke("PointCount", spatialValue == null ? null : spatialValue.getJCOInstance());
-            return new DbFunctionExpression(objPointCount);
+            JCObject objMeasure = (JCObject)classType.Invoke("Measure", spatialValue == null ? null : spatialValue.getJCOInstance());
+            return new DbFunctionExpression(objMeasure);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1016,23 +785,12 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Area(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression PointCount(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objArea = (JCObject)classType.Invoke("Area", spatialValue == null ? null : spatialValue.getJCOInstance());
-            return new DbFunctionExpression(objArea);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DbFunctionExpression Centroid(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCentroid = (JCObject)classType.Invoke("Centroid", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbFunctionExpression(objCentroid);
+            JCObject objPointCount = (JCObject)classType.Invoke("PointCount", spatialValue == null ? null : spatialValue.getJCOInstance());
+            return new DbFunctionExpression(objPointCount);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1049,34 +807,276 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression ExteriorRing(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression SpatialBoundary(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objExteriorRing = (JCObject)classType.Invoke("ExteriorRing", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbFunctionExpression(objExteriorRing);
+            JCObject objSpatialBoundary = (JCObject)classType.Invoke("SpatialBoundary", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbFunctionExpression(objSpatialBoundary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DbFunctionExpression InteriorRingCount(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression SpatialBuffer(DbExpression spatialValue, DbExpression distance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objInteriorRingCount = (JCObject)classType.Invoke("InteriorRingCount", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbFunctionExpression(objInteriorRingCount);
+            JCObject objSpatialBuffer = (JCObject)classType.Invoke("SpatialBuffer", spatialValue == null ? null : spatialValue.getJCOInstance(), distance == null ? null : distance.getJCOInstance());
+            return new DbFunctionExpression(objSpatialBuffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DbFunctionExpression InteriorRingAt(DbExpression geometryValue, DbExpression indexValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static DbFunctionExpression SpatialContains(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objInteriorRingAt = (JCObject)classType.Invoke("InteriorRingAt", geometryValue == null ? null : geometryValue.getJCOInstance(), indexValue == null ? null : indexValue.getJCOInstance());
-            return new DbFunctionExpression(objInteriorRingAt);
+            JCObject objSpatialContains = (JCObject)classType.Invoke("SpatialContains", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            return new DbFunctionExpression(objSpatialContains);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialConvexHull(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialConvexHull = (JCObject)classType.Invoke("SpatialConvexHull", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbFunctionExpression(objSpatialConvexHull);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialCrosses(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialCrosses = (JCObject)classType.Invoke("SpatialCrosses", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            return new DbFunctionExpression(objSpatialCrosses);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialDifference(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialDifference = (JCObject)classType.Invoke("SpatialDifference", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            return new DbFunctionExpression(objSpatialDifference);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialDimension(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialDimension = (JCObject)classType.Invoke("SpatialDimension", spatialValue == null ? null : spatialValue.getJCOInstance());
+            return new DbFunctionExpression(objSpatialDimension);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialDisjoint(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialDisjoint = (JCObject)classType.Invoke("SpatialDisjoint", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            return new DbFunctionExpression(objSpatialDisjoint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialElementAt(DbExpression spatialValue, DbExpression indexValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialElementAt = (JCObject)classType.Invoke("SpatialElementAt", spatialValue == null ? null : spatialValue.getJCOInstance(), indexValue == null ? null : indexValue.getJCOInstance());
+            return new DbFunctionExpression(objSpatialElementAt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialElementCount(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialElementCount = (JCObject)classType.Invoke("SpatialElementCount", spatialValue == null ? null : spatialValue.getJCOInstance());
+            return new DbFunctionExpression(objSpatialElementCount);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialEnvelope(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialEnvelope = (JCObject)classType.Invoke("SpatialEnvelope", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbFunctionExpression(objSpatialEnvelope);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialEquals(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialEquals = (JCObject)classType.Invoke("SpatialEquals", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            return new DbFunctionExpression(objSpatialEquals);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialIntersection(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialIntersection = (JCObject)classType.Invoke("SpatialIntersection", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            return new DbFunctionExpression(objSpatialIntersection);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialIntersects(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialIntersects = (JCObject)classType.Invoke("SpatialIntersects", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            return new DbFunctionExpression(objSpatialIntersects);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialLength(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialLength = (JCObject)classType.Invoke("SpatialLength", spatialValue == null ? null : spatialValue.getJCOInstance());
+            return new DbFunctionExpression(objSpatialLength);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialOverlaps(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialOverlaps = (JCObject)classType.Invoke("SpatialOverlaps", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            return new DbFunctionExpression(objSpatialOverlaps);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialRelate(DbExpression geometryValue1, DbExpression geometryValue2, DbExpression intersectionPatternMatrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialRelate = (JCObject)classType.Invoke("SpatialRelate", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance(), intersectionPatternMatrix == null ? null : intersectionPatternMatrix.getJCOInstance());
+            return new DbFunctionExpression(objSpatialRelate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialSymmetricDifference(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialSymmetricDifference = (JCObject)classType.Invoke("SpatialSymmetricDifference", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            return new DbFunctionExpression(objSpatialSymmetricDifference);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialTouches(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialTouches = (JCObject)classType.Invoke("SpatialTouches", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            return new DbFunctionExpression(objSpatialTouches);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialTypeName(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialTypeName = (JCObject)classType.Invoke("SpatialTypeName", spatialValue == null ? null : spatialValue.getJCOInstance());
+            return new DbFunctionExpression(objSpatialTypeName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialUnion(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialUnion = (JCObject)classType.Invoke("SpatialUnion", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            return new DbFunctionExpression(objSpatialUnion);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression SpatialWithin(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSpatialWithin = (JCObject)classType.Invoke("SpatialWithin", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            return new DbFunctionExpression(objSpatialWithin);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression StartPoint(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objStartPoint = (JCObject)classType.Invoke("StartPoint", spatialValue == null ? null : spatialValue.getJCOInstance());
+            return new DbFunctionExpression(objStartPoint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression XCoordinate(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objXCoordinate = (JCObject)classType.Invoke("XCoordinate", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbFunctionExpression(objXCoordinate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbFunctionExpression YCoordinate(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objYCoordinate = (JCObject)classType.Invoke("YCoordinate", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbFunctionExpression(objYCoordinate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

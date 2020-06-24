@@ -38,16 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.peertopeer.collaboration.PeerPresenceInfo;
-import system.net.peertopeer.collaboration.PeerEndPoint;
-import system.net.peertopeer.collaboration.PeerObjectCollection;
-import system.Guid;
+import system.net.peertopeer.collaboration.Peer;
 import system.net.peertopeer.collaboration.PeerInvitationResponse;
 import system.net.peertopeer.collaboration.PeerApplication;
-import system.net.peertopeer.collaboration.Peer;
-import system.net.peertopeer.collaboration.PeerEndPointCollection;
+import system.net.peertopeer.collaboration.PeerObjectCollection;
+import system.Guid;
+import system.net.peertopeer.collaboration.PeerPresenceInfo;
+import system.net.peertopeer.collaboration.PeerEndPoint;
 import system.componentmodel.ISynchronizeInvoke;
 import system.componentmodel.ISynchronizeInvokeImplementation;
+import system.net.peertopeer.collaboration.PeerEndPointCollection;
 
 
 /**
@@ -122,34 +122,11 @@ public class Peer extends NetObject  {
     
     // Methods section
     
-    public PeerPresenceInfo GetPresenceInfo(PeerEndPoint peerEndPoint) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.net.sockets.SocketException, system.net.peertopeer.PeerToPeerException, system.collections.generic.KeyNotFoundException {
+    public boolean Equals(Peer other) throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPresenceInfo = (JCObject)classInstance.Invoke("GetPresenceInfo", peerEndPoint == null ? null : peerEndPoint.getJCOInstance());
-            return new PeerPresenceInfo(objGetPresenceInfo);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PeerObjectCollection GetObjects() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.globalization.CultureNotFoundException, system.net.peertopeer.PeerToPeerException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetObjects = (JCObject)classInstance.Invoke("GetObjects");
-            return new PeerObjectCollection(objGetObjects);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PeerObjectCollection GetObjects(Guid objectId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.globalization.CultureNotFoundException, system.net.peertopeer.PeerToPeerException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetObjects = (JCObject)classInstance.Invoke("GetObjects", objectId == null ? null : objectId.getJCOInstance());
-            return new PeerObjectCollection(objGetObjects);
+            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,41 +154,34 @@ public class Peer extends NetObject  {
         }
     }
 
-    public void InviteAsync(NetObject userToken) throws Throwable {
+    public PeerObjectCollection GetObjects() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.globalization.CultureNotFoundException, system.net.peertopeer.PeerToPeerException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InviteAsync", userToken == null ? null : userToken.getJCOInstance());
+            JCObject objGetObjects = (JCObject)classInstance.Invoke("GetObjects");
+            return new PeerObjectCollection(objGetObjects);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void InviteAsync(PeerApplication applicationToInvite, java.lang.String message, byte[] invitationData, NetObject userToken) throws Throwable {
+    public PeerObjectCollection GetObjects(Guid objectId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.globalization.CultureNotFoundException, system.net.peertopeer.PeerToPeerException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InviteAsync", applicationToInvite == null ? null : applicationToInvite.getJCOInstance(), message, invitationData, userToken == null ? null : userToken.getJCOInstance());
+            JCObject objGetObjects = (JCObject)classInstance.Invoke("GetObjects", objectId == null ? null : objectId.getJCOInstance());
+            return new PeerObjectCollection(objGetObjects);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void InviteAsyncCancel(NetObject userToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException {
+    public PeerPresenceInfo GetPresenceInfo(PeerEndPoint peerEndPoint) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.net.sockets.SocketException, system.net.peertopeer.PeerToPeerException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InviteAsyncCancel", userToken == null ? null : userToken.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Equals(Peer other) throws Throwable, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            JCObject objGetPresenceInfo = (JCObject)classInstance.Invoke("GetPresenceInfo", peerEndPoint == null ? null : peerEndPoint.getJCOInstance());
+            return new PeerPresenceInfo(objGetPresenceInfo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,21 +197,40 @@ public class Peer extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public PeerEndPointCollection getPeerEndPoints() throws Throwable, system.ObjectDisposedException {
+    public void InviteAsync(PeerApplication applicationToInvite, java.lang.String message, byte[] invitationData, NetObject userToken) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerEndPoints");
-            return new PeerEndPointCollection(val);
+            classInstance.Invoke("InviteAsync", applicationToInvite == null ? null : applicationToInvite.getJCOInstance(), message, invitationData, userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public void InviteAsync(NetObject userToken) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InviteAsync", userToken == null ? null : userToken.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InviteAsyncCancel(NetObject userToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InviteAsyncCancel", userToken == null ? null : userToken.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+
+    
+    // Properties section
+    
     public boolean getIsOnline() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.net.sockets.SocketException, system.net.peertopeer.PeerToPeerException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -268,6 +257,17 @@ public class Peer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SynchronizingObject", SynchronizingObject == null ? null : SynchronizingObject.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PeerEndPointCollection getPeerEndPoints() throws Throwable, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PeerEndPoints");
+            return new PeerEndPointCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

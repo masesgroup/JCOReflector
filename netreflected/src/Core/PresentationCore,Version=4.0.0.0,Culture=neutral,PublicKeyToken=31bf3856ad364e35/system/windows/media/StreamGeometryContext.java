@@ -116,11 +116,21 @@ public class StreamGeometryContext extends NetObject  {
     
     // Methods section
     
-    public void Close() throws Throwable {
+    public boolean CheckAccess() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Close");
+            return (boolean)classInstance.Invoke("CheckAccess");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ArcTo(Point point, Size size, double rotationAngle, boolean isLargeArc, SweepDirection sweepDirection, boolean isStroked, boolean isSmoothJoin) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ArcTo", point == null ? null : point.getJCOInstance(), size == null ? null : size.getJCOInstance(), rotationAngle, isLargeArc, sweepDirection == null ? null : sweepDirection.getJCOInstance(), isStroked, isSmoothJoin);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -131,6 +141,26 @@ public class StreamGeometryContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginFigure", startPoint == null ? null : startPoint.getJCOInstance(), isFilled, isClosed);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void BezierTo(Point point1, Point point2, Point point3, boolean isStroked, boolean isSmoothJoin) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BezierTo", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance(), point3 == null ? null : point3.getJCOInstance(), isStroked, isSmoothJoin);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Close() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,36 +181,6 @@ public class StreamGeometryContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("QuadraticBezierTo", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance(), isStroked, isSmoothJoin);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void BezierTo(Point point1, Point point2, Point point3, boolean isStroked, boolean isSmoothJoin) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("BezierTo", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance(), point3 == null ? null : point3.getJCOInstance(), isStroked, isSmoothJoin);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ArcTo(Point point, Size size, double rotationAngle, boolean isLargeArc, SweepDirection sweepDirection, boolean isStroked, boolean isSmoothJoin) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ArcTo", point == null ? null : point.getJCOInstance(), size == null ? null : size.getJCOInstance(), rotationAngle, isLargeArc, sweepDirection == null ? null : sweepDirection.getJCOInstance(), isStroked, isSmoothJoin);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean CheckAccess() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CheckAccess");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

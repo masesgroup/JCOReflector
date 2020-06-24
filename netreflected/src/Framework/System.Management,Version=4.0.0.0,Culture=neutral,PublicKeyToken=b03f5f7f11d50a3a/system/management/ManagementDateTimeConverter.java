@@ -135,22 +135,22 @@ public class ManagementDateTimeConverter extends NetObject  {
         }
     }
 
+    public static java.lang.String ToDmtfTimeInterval(TimeSpan timespan) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToDmtfTimeInterval", timespan == null ? null : timespan.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static TimeSpan ToTimeSpan(java.lang.String dmtfTimespan) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objToTimeSpan = (JCObject)classType.Invoke("ToTimeSpan", dmtfTimespan);
             return new TimeSpan(objToTimeSpan);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToDmtfTimeInterval(TimeSpan timespan) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToDmtfTimeInterval", timespan == null ? null : timespan.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

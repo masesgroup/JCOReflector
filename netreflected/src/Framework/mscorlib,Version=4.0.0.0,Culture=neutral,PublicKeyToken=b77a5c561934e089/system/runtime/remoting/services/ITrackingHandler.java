@@ -90,11 +90,11 @@ public interface ITrackingHandler extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void DisconnectedObject(NetObject obj) throws Throwable;
+
     public void MarshaledObject(NetObject obj, ObjRef or) throws Throwable;
 
     public void UnmarshaledObject(NetObject obj, ObjRef or) throws Throwable;
-
-    public void DisconnectedObject(NetObject obj) throws Throwable;
 
 
     

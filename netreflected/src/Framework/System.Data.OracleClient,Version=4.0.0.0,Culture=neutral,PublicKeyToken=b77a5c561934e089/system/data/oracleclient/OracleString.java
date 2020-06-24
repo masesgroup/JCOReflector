@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.oracleclient.OracleString;
 import system.data.oracleclient.OracleBoolean;
+import system.data.oracleclient.OracleString;
 
 
 /**
@@ -135,17 +135,6 @@ public class OracleString extends NetObject  {
         }
     }
 
-    public static OracleString Concat(OracleString x, OracleString y) throws Throwable, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objConcat = (JCObject)classType.Invoke("Concat", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new OracleString(objConcat);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static OracleBoolean Equals(OracleString x, OracleString y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -207,6 +196,17 @@ public class OracleString extends NetObject  {
         try {
             JCObject objNotEquals = (JCObject)classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
             return new OracleBoolean(objNotEquals);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static OracleString Concat(OracleString x, OracleString y) throws Throwable, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objConcat = (JCObject)classType.Invoke("Concat", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new OracleString(objConcat);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

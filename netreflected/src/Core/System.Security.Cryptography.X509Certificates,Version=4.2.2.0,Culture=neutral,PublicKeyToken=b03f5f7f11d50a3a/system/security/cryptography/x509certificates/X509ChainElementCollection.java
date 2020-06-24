@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.cryptography.x509certificates.X509ChainElement;
 import system.security.cryptography.x509certificates.X509ChainElementEnumerator;
+import system.security.cryptography.x509certificates.X509ChainElement;
 
 
 /**
@@ -114,6 +114,15 @@ public class X509ChainElementCollection extends NetObject implements Iterable<X5
     
     // Methods section
     
+    public X509ChainElementEnumerator GetEnumerator() throws Throwable {
+        return new X509ChainElementEnumerator(classInstance);
+    }
+
+	@SuppressWarnings("unchecked")
+	public java.util.Iterator<X509ChainElement> iterator() {
+		return new X509ChainElementEnumerator(classInstance);
+	}
+
     public void CopyTo(X509ChainElement[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -124,34 +133,25 @@ public class X509ChainElementCollection extends NetObject implements Iterable<X5
         }
     }
 
-    public X509ChainElementEnumerator GetEnumerator() throws Throwable {
-        return new X509ChainElementEnumerator(classInstance);
-    }
-
-	@SuppressWarnings("unchecked")
-	public java.util.Iterator<X509ChainElement> iterator() {
-		return new X509ChainElementEnumerator(classInstance);
-	}
-
 
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsSynchronized");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Count");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

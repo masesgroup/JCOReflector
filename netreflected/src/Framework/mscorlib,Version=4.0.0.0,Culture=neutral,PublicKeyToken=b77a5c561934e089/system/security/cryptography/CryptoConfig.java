@@ -123,22 +123,20 @@ public class CryptoConfig extends NetObject  {
     
     // Methods section
     
-    public static NetObject CreateFromName(java.lang.String name, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.TypeLoadException, system.ObjectDisposedException {
+    public static byte[] EncodeOID(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OverflowException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateFromName = (JCObject)classType.Invoke("CreateFromName", name, toObjectFromArray(args));
-            return new NetObject(objCreateFromName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void AddAlgorithm(NetType algorithm, java.lang.String... names) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("AddAlgorithm", algorithm == null ? null : algorithm.getJCOInstance(), names);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("EncodeOID", str);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexEncodeOID = 0; indexEncodeOID < resultingArrayList.size(); indexEncodeOID++ ) {
+				resultingArray[indexEncodeOID] = (byte)resultingArrayList.get(indexEncodeOID);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,11 +153,12 @@ public class CryptoConfig extends NetObject  {
         }
     }
 
-    public static void AddOID(java.lang.String oid, java.lang.String... names) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static NetObject CreateFromName(java.lang.String name, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.TypeLoadException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("AddOID", oid, names);
+            JCObject objCreateFromName = (JCObject)classType.Invoke("CreateFromName", name, toObjectFromArray(args));
+            return new NetObject(objCreateFromName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,20 +174,21 @@ public class CryptoConfig extends NetObject  {
         }
     }
 
-    public static byte[] EncodeOID(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OverflowException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public static void AddAlgorithm(NetType algorithm, java.lang.String... names) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("EncodeOID", str);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexEncodeOID = 0; indexEncodeOID < resultingArrayList.size(); indexEncodeOID++ ) {
-				resultingArray[indexEncodeOID] = (byte)resultingArrayList.get(indexEncodeOID);
-            }
-            return resultingArray;
+            classType.Invoke("AddAlgorithm", algorithm == null ? null : algorithm.getJCOInstance(), names);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void AddOID(java.lang.String oid, java.lang.String... names) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddOID", oid, names);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

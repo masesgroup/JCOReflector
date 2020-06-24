@@ -40,15 +40,15 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.selectors.SecurityTokenManager;
 import system.servicemodel.description.ServiceCredentials;
-import system.servicemodel.security.UserNamePasswordServiceCredential;
-import system.servicemodel.security.X509CertificateInitiatorServiceCredential;
-import system.servicemodel.security.X509CertificateRecipientServiceCredential;
-import system.servicemodel.security.WindowsServiceCredential;
+import system.identitymodel.configuration.IdentityConfiguration;
+import system.servicemodel.ExceptionMapper;
 import system.servicemodel.security.IssuedTokenServiceCredential;
 import system.servicemodel.security.PeerCredential;
 import system.servicemodel.security.SecureConversationServiceCredential;
-import system.servicemodel.ExceptionMapper;
-import system.identitymodel.configuration.IdentityConfiguration;
+import system.servicemodel.security.UserNamePasswordServiceCredential;
+import system.servicemodel.security.WindowsServiceCredential;
+import system.servicemodel.security.X509CertificateInitiatorServiceCredential;
+import system.servicemodel.security.X509CertificateRecipientServiceCredential;
 
 
 /**
@@ -160,45 +160,63 @@ public class ServiceCredentials extends NetObject  {
     
     // Properties section
     
-    public UserNamePasswordServiceCredential getUserNameAuthentication() throws Throwable {
+    public boolean getUseIdentityConfiguration() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UserNameAuthentication");
-            return new UserNamePasswordServiceCredential(val);
+            return (boolean)classInstance.Get("UseIdentityConfiguration");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public X509CertificateInitiatorServiceCredential getClientCertificate() throws Throwable {
+    public void setUseIdentityConfiguration(boolean UseIdentityConfiguration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.UriFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientCertificate");
-            return new X509CertificateInitiatorServiceCredential(val);
+            classInstance.Set("UseIdentityConfiguration", UseIdentityConfiguration);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public X509CertificateRecipientServiceCredential getServiceCertificate() throws Throwable {
+    public IdentityConfiguration getIdentityConfiguration() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceCertificate");
-            return new X509CertificateRecipientServiceCredential(val);
+            JCObject val = (JCObject)classInstance.Get("IdentityConfiguration");
+            return new IdentityConfiguration(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public WindowsServiceCredential getWindowsAuthentication() throws Throwable {
+    public void setIdentityConfiguration(IdentityConfiguration IdentityConfiguration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WindowsAuthentication");
-            return new WindowsServiceCredential(val);
+            classInstance.Set("IdentityConfiguration", IdentityConfiguration == null ? null : IdentityConfiguration.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ExceptionMapper getExceptionMapper() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ExceptionMapper");
+            return new ExceptionMapper(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setExceptionMapper(ExceptionMapper ExceptionMapper) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ExceptionMapper", ExceptionMapper == null ? null : ExceptionMapper.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,63 +255,45 @@ public class ServiceCredentials extends NetObject  {
         }
     }
 
-    public ExceptionMapper getExceptionMapper() throws Throwable {
+    public UserNamePasswordServiceCredential getUserNameAuthentication() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ExceptionMapper");
-            return new ExceptionMapper(val);
+            JCObject val = (JCObject)classInstance.Get("UserNameAuthentication");
+            return new UserNamePasswordServiceCredential(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setExceptionMapper(ExceptionMapper ExceptionMapper) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public WindowsServiceCredential getWindowsAuthentication() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ExceptionMapper", ExceptionMapper == null ? null : ExceptionMapper.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("WindowsAuthentication");
+            return new WindowsServiceCredential(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IdentityConfiguration getIdentityConfiguration() throws Throwable {
+    public X509CertificateInitiatorServiceCredential getClientCertificate() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("IdentityConfiguration");
-            return new IdentityConfiguration(val);
+            JCObject val = (JCObject)classInstance.Get("ClientCertificate");
+            return new X509CertificateInitiatorServiceCredential(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIdentityConfiguration(IdentityConfiguration IdentityConfiguration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public X509CertificateRecipientServiceCredential getServiceCertificate() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IdentityConfiguration", IdentityConfiguration == null ? null : IdentityConfiguration.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getUseIdentityConfiguration() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("UseIdentityConfiguration");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setUseIdentityConfiguration(boolean UseIdentityConfiguration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.UriFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("UseIdentityConfiguration", UseIdentityConfiguration);
+            JCObject val = (JCObject)classInstance.Get("ServiceCertificate");
+            return new X509CertificateRecipientServiceCredential(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

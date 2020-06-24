@@ -106,6 +106,66 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
 
     // Methods section
     
+    public void ActivityStatusChanged(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ActivityStatusChanged", programId == null ? null : programId.getJCOInstance(), scheduleTypeId == null ? null : scheduleTypeId.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), activityQualifiedName, hierarchicalActivityId, status == null ? null : status.getJCOInstance(), stateReaderId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AssemblyLoaded(Guid programId, java.lang.String assemblyPath, boolean fromGlobalAssemblyCache) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AssemblyLoaded", programId == null ? null : programId.getJCOInstance(), assemblyPath, fromGlobalAssemblyCache);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void BeforeActivityStatusChanged(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BeforeActivityStatusChanged", programId == null ? null : programId.getJCOInstance(), scheduleTypeId == null ? null : scheduleTypeId.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), activityQualifiedName, hierarchicalActivityId, status == null ? null : status.getJCOInstance(), stateReaderId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void BeforeHandlerInvoked(Guid programId, Guid scheduleTypeId, java.lang.String activityQualifiedName, ActivityHandlerDescriptor handlerMethod) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BeforeHandlerInvoked", programId == null ? null : programId.getJCOInstance(), scheduleTypeId == null ? null : scheduleTypeId.getJCOInstance(), activityQualifiedName, handlerMethod == null ? null : handlerMethod.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void HandlerInvoked(Guid programId, Guid instanceId, int threadId, java.lang.String activityQualifiedName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("HandlerInvoked", programId == null ? null : programId.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), threadId, activityQualifiedName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InstanceCompleted(Guid programId, Guid instanceId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InstanceCompleted", programId == null ? null : programId.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void InstanceCreated(Guid programId, Guid instanceId, Guid scheduleTypeId) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -126,46 +186,6 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
         }
     }
 
-    public void InstanceCompleted(Guid programId, Guid instanceId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("InstanceCompleted", programId == null ? null : programId.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void BeforeActivityStatusChanged(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("BeforeActivityStatusChanged", programId == null ? null : programId.getJCOInstance(), scheduleTypeId == null ? null : scheduleTypeId.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), activityQualifiedName, hierarchicalActivityId, status == null ? null : status.getJCOInstance(), stateReaderId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ActivityStatusChanged(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ActivityStatusChanged", programId == null ? null : programId.getJCOInstance(), scheduleTypeId == null ? null : scheduleTypeId.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), activityQualifiedName, hierarchicalActivityId, status == null ? null : status.getJCOInstance(), stateReaderId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetInitialActivityStatus(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetInitialActivityStatus", programId == null ? null : programId.getJCOInstance(), scheduleTypeId == null ? null : scheduleTypeId.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), activityQualifiedName, hierarchicalActivityId, status == null ? null : status.getJCOInstance(), stateReaderId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void ScheduleTypeLoaded(Guid programId, Guid scheduleTypeId, java.lang.String assemblyFullName, java.lang.String fileName, java.lang.String md5Digest, boolean isDynamic, java.lang.String scheduleNamespace, java.lang.String scheduleName, java.lang.String workflowMarkup) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,31 +196,11 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
         }
     }
 
-    public void AssemblyLoaded(Guid programId, java.lang.String assemblyPath, boolean fromGlobalAssemblyCache) throws Throwable {
+    public void SetInitialActivityStatus(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AssemblyLoaded", programId == null ? null : programId.getJCOInstance(), assemblyPath, fromGlobalAssemblyCache);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void HandlerInvoked(Guid programId, Guid instanceId, int threadId, java.lang.String activityQualifiedName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("HandlerInvoked", programId == null ? null : programId.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), threadId, activityQualifiedName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void BeforeHandlerInvoked(Guid programId, Guid scheduleTypeId, java.lang.String activityQualifiedName, ActivityHandlerDescriptor handlerMethod) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("BeforeHandlerInvoked", programId == null ? null : programId.getJCOInstance(), scheduleTypeId == null ? null : scheduleTypeId.getJCOInstance(), activityQualifiedName, handlerMethod == null ? null : handlerMethod.getJCOInstance());
+            classInstance.Invoke("SetInitialActivityStatus", programId == null ? null : programId.getJCOInstance(), scheduleTypeId == null ? null : scheduleTypeId.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), activityQualifiedName, hierarchicalActivityId, status == null ? null : status.getJCOInstance(), stateReaderId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

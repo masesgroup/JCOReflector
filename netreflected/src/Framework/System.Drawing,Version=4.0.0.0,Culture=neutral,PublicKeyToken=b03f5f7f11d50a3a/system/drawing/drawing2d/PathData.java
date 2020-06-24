@@ -128,33 +128,6 @@ public class PathData extends NetObject  {
     
     // Properties section
     
-    public PointF[] getPoints() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<PointF> resultingArrayList = new ArrayList<PointF>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Points");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new PointF(resultingObject));
-            }
-            PointF[] resultingArray = new PointF[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPoints(PointF[] Points) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Points", toObjectFromArray(Points));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] getTypes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -179,6 +152,33 @@ public class PathData extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Types", Types);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PointF[] getPoints() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<PointF> resultingArrayList = new ArrayList<PointF>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("Points");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new PointF(resultingObject));
+            }
+            PointF[] resultingArray = new PointF[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPoints(PointF[] Points) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Points", toObjectFromArray(Points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

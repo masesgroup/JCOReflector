@@ -129,23 +129,23 @@ public class SiteMapResolveEventArgs extends NetObject  {
     
     // Properties section
     
-    public SiteMapProvider getProvider() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Provider");
-            return new SiteMapProvider(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public HttpContext getContext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Context");
             return new HttpContext(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SiteMapProvider getProvider() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Provider");
+            return new SiteMapProvider(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

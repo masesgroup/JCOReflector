@@ -97,21 +97,21 @@ public interface IEventBindingService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public java.lang.String CreateUniqueMethodName(IComponent component, EventDescriptor e) throws Throwable;
-
-    public ICollection GetCompatibleMethods(EventDescriptor e) throws Throwable;
-
-    public EventDescriptor GetEvent(PropertyDescriptor property) throws Throwable;
-
-    public PropertyDescriptorCollection GetEventProperties(EventDescriptorCollection events) throws Throwable;
-
-    public PropertyDescriptor GetEventProperty(EventDescriptor e) throws Throwable;
-
     public boolean ShowCode() throws Throwable;
 
     public boolean ShowCode(int lineNumber) throws Throwable;
 
     public boolean ShowCode(IComponent component, EventDescriptor e) throws Throwable;
+
+    public ICollection GetCompatibleMethods(EventDescriptor e) throws Throwable;
+
+    public EventDescriptor GetEvent(PropertyDescriptor property) throws Throwable;
+
+    public PropertyDescriptor GetEventProperty(EventDescriptor e) throws Throwable;
+
+    public PropertyDescriptorCollection GetEventProperties(EventDescriptorCollection events) throws Throwable;
+
+    public java.lang.String CreateUniqueMethodName(IComponent component, EventDescriptor e) throws Throwable;
 
 
     

@@ -110,21 +110,21 @@ public class ResolveInfo extends NetObject  {
     // Constructors section
     
 
-    public ResolveInfo(Guid clientId, java.lang.String meshId, int maxAddresses) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(clientId == null ? null : clientId.getJCOInstance(), meshId, maxAddresses));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ResolveInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ResolveInfo(Guid clientId, java.lang.String meshId, int maxAddresses) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(clientId == null ? null : clientId.getJCOInstance(), meshId, maxAddresses));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,6 +148,16 @@ public class ResolveInfo extends NetObject  {
     
     // Properties section
     
+    public int getMaxAddresses() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("MaxAddresses");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getClientId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,16 +174,6 @@ public class ResolveInfo extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("MeshId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getMaxAddresses() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MaxAddresses");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

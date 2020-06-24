@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.workflow.runtime.tracking.WorkflowTrackingLocation;
 import system.workflow.runtime.tracking.TrackingAnnotationCollection;
+import system.workflow.runtime.tracking.WorkflowTrackingLocation;
 
 
 /**
@@ -129,6 +129,17 @@ public class WorkflowTrackPoint extends NetObject  {
     
     // Properties section
     
+    public TrackingAnnotationCollection getAnnotations() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Annotations");
+            return new TrackingAnnotationCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public WorkflowTrackingLocation getMatchingLocation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,17 +156,6 @@ public class WorkflowTrackPoint extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MatchingLocation", MatchingLocation == null ? null : MatchingLocation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TrackingAnnotationCollection getAnnotations() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Annotations");
-            return new TrackingAnnotationCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

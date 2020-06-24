@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.emit.UnmanagedMarshal;
+import system.reflection.emit.ParameterToken;
 import system.reflection.ConstructorInfo;
 import system.reflection.emit.CustomAttributeBuilder;
-import system.reflection.emit.ParameterToken;
+import system.reflection.emit.UnmanagedMarshal;
 
 
 /**
@@ -116,11 +116,12 @@ public class ParameterBuilder extends NetObject  {
     
     // Methods section
     
-    public void SetMarshal(UnmanagedMarshal unmanagedMarshal) throws Throwable, system.ArgumentNullException {
+    public ParameterToken GetToken() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetMarshal", unmanagedMarshal == null ? null : unmanagedMarshal.getJCOInstance());
+            JCObject objGetToken = (JCObject)classInstance.Invoke("GetToken");
+            return new ParameterToken(objGetToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,12 +157,11 @@ public class ParameterBuilder extends NetObject  {
         }
     }
 
-    public ParameterToken GetToken() throws Throwable {
+    public void SetMarshal(UnmanagedMarshal unmanagedMarshal) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetToken = (JCObject)classInstance.Invoke("GetToken");
-            return new ParameterToken(objGetToken);
+            classInstance.Invoke("SetMarshal", unmanagedMarshal == null ? null : unmanagedMarshal.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,41 +171,21 @@ public class ParameterBuilder extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getPosition() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Position");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getAttributes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Attributes");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsIn() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsIn");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsOptional() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsOptional");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,11 +201,31 @@ public class ParameterBuilder extends NetObject  {
         }
     }
 
-    public boolean getIsOptional() throws Throwable {
+    public int getAttributes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsOptional");
+            return (int)classInstance.Get("Attributes");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getPosition() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Position");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

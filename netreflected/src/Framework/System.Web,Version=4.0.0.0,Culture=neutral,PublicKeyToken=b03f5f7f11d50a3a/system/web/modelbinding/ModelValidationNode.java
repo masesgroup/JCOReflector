@@ -160,42 +160,21 @@ public class ModelValidationNode extends NetObject  {
     
     // Properties section
     
-    public ModelMetadata getModelMetadata() throws Throwable {
+    public boolean getSuppressValidation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelMetadata");
-            return new ModelMetadata(val);
+            return (boolean)classInstance.Get("SuppressValidation");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setModelMetadata(ModelMetadata ModelMetadata) throws Throwable {
+    public void setSuppressValidation(boolean SuppressValidation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ModelMetadata", ModelMetadata == null ? null : ModelMetadata.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getModelStateKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ModelStateKey");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setModelStateKey(java.lang.String ModelStateKey) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ModelStateKey", ModelStateKey);
+            classInstance.Set("SuppressValidation", SuppressValidation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,21 +200,42 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
-    public boolean getSuppressValidation() throws Throwable {
+    public java.lang.String getModelStateKey() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("SuppressValidation");
+            return (java.lang.String)classInstance.Get("ModelStateKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSuppressValidation(boolean SuppressValidation) throws Throwable {
+    public void setModelStateKey(java.lang.String ModelStateKey) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SuppressValidation", SuppressValidation);
+            classInstance.Set("ModelStateKey", ModelStateKey);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModelMetadata getModelMetadata() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ModelMetadata");
+            return new ModelMetadata(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setModelMetadata(ModelMetadata ModelMetadata) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ModelMetadata", ModelMetadata == null ? null : ModelMetadata.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

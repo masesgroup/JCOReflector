@@ -127,6 +127,23 @@ public class BuildResults extends NetObject  {
         }
     }
 
+    public BuildMessage[] getMessages() throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<BuildMessage> resultingArrayList = new ArrayList<BuildMessage>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("Messages");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new BuildMessage(resultingObject));
+            }
+            BuildMessage[] resultingArray = new BuildMessage[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getKeyFile() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -150,23 +167,6 @@ public class BuildResults extends NetObject  {
 			for(int indexComponentFiles = 0; indexComponentFiles < resultingArrayList.size(); indexComponentFiles++ ) {
 				resultingArray[indexComponentFiles] = (java.lang.String)resultingArrayList.get(indexComponentFiles);
 			}
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BuildMessage[] getMessages() throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<BuildMessage> resultingArrayList = new ArrayList<BuildMessage>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Messages");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new BuildMessage(resultingObject));
-            }
-            BuildMessage[] resultingArray = new BuildMessage[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

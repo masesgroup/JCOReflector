@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.workflow.componentmodel.Activity;
 import system.workflow.componentmodel.compiler.ITypeProvider;
 import system.workflow.componentmodel.compiler.ITypeProviderImplementation;
+import system.workflow.componentmodel.Activity;
 import system.codedom.CodeExpression;
 import system.workflow.activities.rules.RuleExpressionInfo;
 import system.workflow.componentmodel.compiler.ValidationErrorCollection;
@@ -115,21 +115,21 @@ public class RuleValidation extends NetObject  {
     // Constructors section
     
 
-    public RuleValidation(Activity activity, ITypeProvider typeProvider, boolean checkStaticType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(activity == null ? null : activity.getJCOInstance(), typeProvider == null ? null : typeProvider.getJCOInstance(), checkStaticType));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public RuleValidation(NetType thisType, ITypeProvider typeProvider) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(thisType == null ? null : thisType.getJCOInstance(), typeProvider == null ? null : typeProvider.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RuleValidation(Activity activity, ITypeProvider typeProvider, boolean checkStaticType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(activity == null ? null : activity.getJCOInstance(), typeProvider == null ? null : typeProvider.getJCOInstance(), checkStaticType));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,22 +149,22 @@ public class RuleValidation extends NetObject  {
         }
     }
 
-    public void PopParentExpression() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PopParentExpression");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public RuleExpressionInfo ExpressionInfo(CodeExpression expression) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objExpressionInfo = (JCObject)classInstance.Invoke("ExpressionInfo", expression == null ? null : expression.getJCOInstance());
             return new RuleExpressionInfo(objExpressionInfo);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PopParentExpression() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PopParentExpression");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

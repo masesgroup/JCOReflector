@@ -37,17 +37,17 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.reflection.emit.AssemblyBuilder;
-import system.runtime.interopservices.TypeLibImporterFlags;
-import system.runtime.interopservices.ITypeLibImporterNotifySink;
-import system.runtime.interopservices.ITypeLibImporterNotifySinkImplementation;
-import system.reflection.StrongNameKeyPair;
-import system.Version;
+import system.Guid;
 import system.reflection.Assembly;
 import system.runtime.interopservices.TypeLibExporterFlags;
 import system.runtime.interopservices.ITypeLibExporterNotifySink;
 import system.runtime.interopservices.ITypeLibExporterNotifySinkImplementation;
-import system.Guid;
+import system.reflection.emit.AssemblyBuilder;
+import system.runtime.interopservices.ITypeLibImporterNotifySink;
+import system.runtime.interopservices.ITypeLibImporterNotifySinkImplementation;
+import system.reflection.StrongNameKeyPair;
+import system.runtime.interopservices.TypeLibImporterFlags;
+import system.Version;
 
 
 /**
@@ -100,11 +100,11 @@ public interface ITypeLibConverter extends IJCOBridgeReflected {
 
     // Methods section
     
-    public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, TypeLibImporterFlags flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, java.lang.String asmNamespace, Version asmVersion) throws Throwable;
-
     public NetObject ConvertAssemblyToTypeLib(Assembly assembly, java.lang.String typeLibName, TypeLibExporterFlags flags, ITypeLibExporterNotifySink notifySink) throws Throwable;
 
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, int flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, boolean unsafeInterfaces) throws Throwable;
+
+    public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, TypeLibImporterFlags flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, java.lang.String asmNamespace, Version asmVersion) throws Throwable;
 
 
     

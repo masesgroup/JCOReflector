@@ -128,17 +128,6 @@ public class PaperSource extends NetObject  {
     
     // Properties section
     
-    public PaperSourceKind getKind() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Kind");
-            return new PaperSourceKind(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getRawKind() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,6 +143,17 @@ public class PaperSource extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RawKind", RawKind);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PaperSourceKind getKind() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Kind");
+            return new PaperSourceKind(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

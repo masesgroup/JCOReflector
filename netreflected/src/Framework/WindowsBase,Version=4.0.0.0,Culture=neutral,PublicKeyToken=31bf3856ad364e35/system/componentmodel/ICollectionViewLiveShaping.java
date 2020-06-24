@@ -93,11 +93,11 @@ public interface ICollectionViewLiveShaping extends IJCOBridgeReflected {
     
     // Properties section
     
-    public boolean getCanChangeLiveSorting() throws Throwable;
-
     public boolean getCanChangeLiveFiltering() throws Throwable;
 
     public boolean getCanChangeLiveGrouping() throws Throwable;
+
+    public boolean getCanChangeLiveSorting() throws Throwable;
 
 
 

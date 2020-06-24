@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.windows.input.Key;
 import system.windows.input.ModifierKeys;
-import system.globalization.CultureInfo;
 import system.windows.input.InputEventArgs;
+import system.globalization.CultureInfo;
 
 
 /**
@@ -147,16 +147,6 @@ public class KeyGesture extends NetObject  {
     
     // Methods section
     
-    public java.lang.String GetDisplayStringForCulture(CultureInfo culture) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetDisplayStringForCulture", culture == null ? null : culture.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Matches(NetObject targetElement, InputEventArgs inputEventArgs) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -167,16 +157,25 @@ public class KeyGesture extends NetObject  {
         }
     }
 
+    public java.lang.String GetDisplayStringForCulture(CultureInfo culture) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetDisplayStringForCulture", culture == null ? null : culture.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public ModifierKeys getModifiers() throws Throwable {
+    public java.lang.String getDisplayString() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Modifiers");
-            return new ModifierKeys(val);
+            return (java.lang.String)classInstance.Get("DisplayString");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,11 +192,12 @@ public class KeyGesture extends NetObject  {
         }
     }
 
-    public java.lang.String getDisplayString() throws Throwable {
+    public ModifierKeys getModifiers() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("DisplayString");
+            JCObject val = (JCObject)classInstance.Get("Modifiers");
+            return new ModifierKeys(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

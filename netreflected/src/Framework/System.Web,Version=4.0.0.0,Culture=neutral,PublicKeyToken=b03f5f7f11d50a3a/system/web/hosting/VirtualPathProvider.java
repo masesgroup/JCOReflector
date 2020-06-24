@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.caching.CacheDependency;
-import system.DateTime;
-import system.web.hosting.VirtualFile;
-import system.web.hosting.VirtualDirectory;
 import system.io.Stream;
 import system.runtime.remoting.ObjRef;
+import system.web.caching.CacheDependency;
+import system.DateTime;
+import system.web.hosting.VirtualDirectory;
+import system.web.hosting.VirtualFile;
 
 
 /**
@@ -118,48 +118,6 @@ public class VirtualPathProvider extends NetObject  {
     
     // Methods section
     
-    public NetObject InitializeLifetimeService() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetFileHash(java.lang.String virtualPath, IEnumerable virtualPathDependencies) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetFileHash", virtualPath, virtualPathDependencies == null ? null : virtualPathDependencies.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CacheDependency GetCacheDependency(java.lang.String virtualPath, IEnumerable virtualPathDependencies, DateTime utcStart) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCacheDependency = (JCObject)classInstance.Invoke("GetCacheDependency", virtualPath, virtualPathDependencies == null ? null : virtualPathDependencies.getJCOInstance(), utcStart == null ? null : utcStart.getJCOInstance());
-            return new CacheDependency(objGetCacheDependency);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean FileExists(java.lang.String virtualPath) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("FileExists", virtualPath);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean DirectoryExists(java.lang.String virtualDir) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -170,43 +128,11 @@ public class VirtualPathProvider extends NetObject  {
         }
     }
 
-    public VirtualFile GetFile(java.lang.String virtualPath) throws Throwable {
+    public boolean FileExists(java.lang.String virtualPath) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetFile = (JCObject)classInstance.Invoke("GetFile", virtualPath);
-            return new VirtualFile(objGetFile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public VirtualDirectory GetDirectory(java.lang.String virtualDir) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDirectory = (JCObject)classInstance.Invoke("GetDirectory", virtualDir);
-            return new VirtualDirectory(objGetDirectory);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetCacheKey(java.lang.String virtualPath) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetCacheKey", virtualPath);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String CombineVirtualPaths(java.lang.String basePath, java.lang.String relativePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("CombineVirtualPaths", basePath, relativePath);
+            return (boolean)classInstance.Invoke("FileExists", virtualPath);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,12 +160,86 @@ public class VirtualPathProvider extends NetObject  {
         }
     }
 
+    public NetObject InitializeLifetimeService() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
+            return new NetObject(objInitializeLifetimeService);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
             return new ObjRef(objCreateObjRef);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String CombineVirtualPaths(java.lang.String basePath, java.lang.String relativePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("CombineVirtualPaths", basePath, relativePath);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetCacheKey(java.lang.String virtualPath) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetCacheKey", virtualPath);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetFileHash(java.lang.String virtualPath, IEnumerable virtualPathDependencies) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetFileHash", virtualPath, virtualPathDependencies == null ? null : virtualPathDependencies.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CacheDependency GetCacheDependency(java.lang.String virtualPath, IEnumerable virtualPathDependencies, DateTime utcStart) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetCacheDependency = (JCObject)classInstance.Invoke("GetCacheDependency", virtualPath, virtualPathDependencies == null ? null : virtualPathDependencies.getJCOInstance(), utcStart == null ? null : utcStart.getJCOInstance());
+            return new CacheDependency(objGetCacheDependency);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public VirtualDirectory GetDirectory(java.lang.String virtualDir) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDirectory = (JCObject)classInstance.Invoke("GetDirectory", virtualDir);
+            return new VirtualDirectory(objGetDirectory);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public VirtualFile GetFile(java.lang.String virtualPath) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetFile = (JCObject)classInstance.Invoke("GetFile", virtualPath);
+            return new VirtualFile(objGetFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

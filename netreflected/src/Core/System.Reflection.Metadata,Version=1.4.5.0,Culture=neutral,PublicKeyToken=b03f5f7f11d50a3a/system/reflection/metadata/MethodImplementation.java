@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.CustomAttributeHandleCollection;
-import system.reflection.metadata.TypeDefinitionHandle;
 import system.reflection.metadata.EntityHandle;
+import system.reflection.metadata.TypeDefinitionHandle;
 
 
 /**
@@ -130,17 +130,6 @@ public class MethodImplementation extends NetObject  {
     
     // Properties section
     
-    public TypeDefinitionHandle getType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new TypeDefinitionHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EntityHandle getMethodBody() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -158,6 +147,17 @@ public class MethodImplementation extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("MethodDeclaration");
             return new EntityHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeDefinitionHandle getType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Type");
+            return new TypeDefinitionHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

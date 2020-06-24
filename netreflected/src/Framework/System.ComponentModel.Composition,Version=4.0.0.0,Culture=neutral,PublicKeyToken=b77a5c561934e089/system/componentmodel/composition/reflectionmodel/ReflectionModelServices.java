@@ -137,6 +137,27 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    public static boolean IsImportingParameter(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsImportingParameter", importDefinition == null ? null : importDefinition.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ContractBasedImportDefinition GetExportFactoryProductImportDefinition(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetExportFactoryProductImportDefinition = (JCObject)classType.Invoke("GetExportFactoryProductImportDefinition", importDefinition == null ? null : importDefinition.getJCOInstance());
+            return new ContractBasedImportDefinition(objGetExportFactoryProductImportDefinition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static LazyMemberInfo GetExportingMember(ExportDefinition exportDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -154,27 +175,6 @@ public class ReflectionModelServices extends NetObject  {
         try {
             JCObject objGetImportingMember = (JCObject)classType.Invoke("GetImportingMember", importDefinition == null ? null : importDefinition.getJCOInstance());
             return new LazyMemberInfo(objGetImportingMember);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsImportingParameter(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsImportingParameter", importDefinition == null ? null : importDefinition.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static ContractBasedImportDefinition GetExportFactoryProductImportDefinition(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetExportFactoryProductImportDefinition = (JCObject)classType.Invoke("GetExportFactoryProductImportDefinition", importDefinition == null ? null : importDefinition.getJCOInstance());
-            return new ContractBasedImportDefinition(objGetExportFactoryProductImportDefinition);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

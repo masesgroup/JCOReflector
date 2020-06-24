@@ -117,11 +117,11 @@ public class DataSourceDescriptor extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable {
+    public boolean getIsDesignable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            return (boolean)classInstance.Get("IsDesignable");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -138,21 +138,21 @@ public class DataSourceDescriptor extends NetObject  {
         }
     }
 
-    public java.lang.String getTypeName() throws Throwable {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("TypeName");
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsDesignable() throws Throwable {
+    public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsDesignable");
+            return (java.lang.String)classInstance.Get("TypeName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -91,8 +91,6 @@ public interface IEnumConnections extends IJCOBridgeReflected {
     
     public int Skip(int celt) throws Throwable;
 
-    public void Reset() throws Throwable;
-
 
     
     // Properties section

@@ -117,17 +117,6 @@ public class JsonSerializer extends NetObject  {
     
     // Methods section
     
-    public static NetObject Deserialize(java.lang.String json, NetType returnType, JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.collections.generic.KeyNotFoundException, system.text.json.JsonException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDeserialize = (JCObject)classType.Invoke("Deserialize", json, returnType == null ? null : returnType.getJCOInstance(), options == null ? null : options.getJCOInstance());
-            return new NetObject(objDeserialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static byte[] SerializeToUtf8Bytes(NetObject value, NetType inputType, JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.text.json.JsonException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -147,12 +136,12 @@ public class JsonSerializer extends NetObject  {
         }
     }
 
-    public static Task SerializeAsync(Stream utf8Json, NetObject value, NetType inputType, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException {
+    public static NetObject Deserialize(java.lang.String json, NetType returnType, JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.collections.generic.KeyNotFoundException, system.text.json.JsonException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSerializeAsync = (JCObject)classType.Invoke("SerializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), value == null ? null : value.getJCOInstance(), inputType == null ? null : inputType.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
-            return new Task(objSerializeAsync);
+            JCObject objDeserialize = (JCObject)classType.Invoke("Deserialize", json, returnType == null ? null : returnType.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            return new NetObject(objDeserialize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,6 +152,17 @@ public class JsonSerializer extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Invoke("Serialize", value == null ? null : value.getJCOInstance(), inputType == null ? null : inputType.getJCOInstance(), options == null ? null : options.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task SerializeAsync(Stream utf8Json, NetObject value, NetType inputType, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSerializeAsync = (JCObject)classType.Invoke("SerializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), value == null ? null : value.getJCOInstance(), inputType == null ? null : inputType.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            return new Task(objSerializeAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -92,86 +92,62 @@ public interface IExpressionEditorInstance extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Close() throws Throwable;
-
-    public void Focus() throws Throwable;
-
-    public void ClearSelection() throws Throwable;
-
-    public boolean Cut() throws Throwable;
-
-    public boolean Copy() throws Throwable;
-
-    public boolean Paste() throws Throwable;
-
-    public boolean Undo() throws Throwable;
-
-    public boolean Redo() throws Throwable;
-
-    public boolean CompleteWord() throws Throwable;
-
-    public boolean GlobalIntellisense() throws Throwable;
-
-    public boolean ParameterInfo() throws Throwable;
-
-    public boolean QuickInfo() throws Throwable;
-
-    public boolean IncreaseFilterLevel() throws Throwable;
-
-    public boolean DecreaseFilterLevel() throws Throwable;
-
-    public boolean CanCut() throws Throwable;
+    public boolean CanCompleteWord() throws Throwable;
 
     public boolean CanCopy() throws Throwable;
 
-    public boolean CanPaste() throws Throwable;
-
-    public boolean CanUndo() throws Throwable;
-
-    public boolean CanRedo() throws Throwable;
-
-    public boolean CanCompleteWord() throws Throwable;
-
-    public boolean CanGlobalIntellisense() throws Throwable;
-
-    public boolean CanParameterInfo() throws Throwable;
-
-    public boolean CanQuickInfo() throws Throwable;
-
-    public boolean CanIncreaseFilterLevel() throws Throwable;
+    public boolean CanCut() throws Throwable;
 
     public boolean CanDecreaseFilterLevel() throws Throwable;
 
+    public boolean CanGlobalIntellisense() throws Throwable;
+
+    public boolean CanIncreaseFilterLevel() throws Throwable;
+
+    public boolean CanParameterInfo() throws Throwable;
+
+    public boolean CanPaste() throws Throwable;
+
+    public boolean CanQuickInfo() throws Throwable;
+
+    public boolean CanRedo() throws Throwable;
+
+    public boolean CanUndo() throws Throwable;
+
+    public boolean CompleteWord() throws Throwable;
+
+    public boolean Copy() throws Throwable;
+
+    public boolean Cut() throws Throwable;
+
+    public boolean DecreaseFilterLevel() throws Throwable;
+
+    public boolean GlobalIntellisense() throws Throwable;
+
+    public boolean IncreaseFilterLevel() throws Throwable;
+
+    public boolean ParameterInfo() throws Throwable;
+
+    public boolean Paste() throws Throwable;
+
+    public boolean QuickInfo() throws Throwable;
+
+    public boolean Redo() throws Throwable;
+
+    public boolean Undo() throws Throwable;
+
     public java.lang.String GetCommittedText() throws Throwable;
+
+    public void ClearSelection() throws Throwable;
+
+    public void Close() throws Throwable;
+
+    public void Focus() throws Throwable;
 
 
     
     // Properties section
     
-    public Control getHostControl() throws Throwable;
-
-    public java.lang.String getText() throws Throwable;
-
-    public void setText(java.lang.String Text) throws Throwable;
-
-    public ScrollBarVisibility getVerticalScrollBarVisibility() throws Throwable;
-
-    public void setVerticalScrollBarVisibility(ScrollBarVisibility VerticalScrollBarVisibility) throws Throwable;
-
-    public ScrollBarVisibility getHorizontalScrollBarVisibility() throws Throwable;
-
-    public void setHorizontalScrollBarVisibility(ScrollBarVisibility HorizontalScrollBarVisibility) throws Throwable;
-
-    public int getMinLines() throws Throwable;
-
-    public void setMinLines(int MinLines) throws Throwable;
-
-    public int getMaxLines() throws Throwable;
-
-    public void setMaxLines(int MaxLines) throws Throwable;
-
-    public boolean getHasAggregateFocus() throws Throwable;
-
     public boolean getAcceptsReturn() throws Throwable;
 
     public void setAcceptsReturn(boolean AcceptsReturn) throws Throwable;
@@ -180,25 +156,49 @@ public interface IExpressionEditorInstance extends IJCOBridgeReflected {
 
     public void setAcceptsTab(boolean AcceptsTab) throws Throwable;
 
+    public boolean getHasAggregateFocus() throws Throwable;
+
+    public int getMaxLines() throws Throwable;
+
+    public void setMaxLines(int MaxLines) throws Throwable;
+
+    public int getMinLines() throws Throwable;
+
+    public void setMinLines(int MinLines) throws Throwable;
+
+    public java.lang.String getText() throws Throwable;
+
+    public void setText(java.lang.String Text) throws Throwable;
+
+    public Control getHostControl() throws Throwable;
+
+    public ScrollBarVisibility getHorizontalScrollBarVisibility() throws Throwable;
+
+    public void setHorizontalScrollBarVisibility(ScrollBarVisibility HorizontalScrollBarVisibility) throws Throwable;
+
+    public ScrollBarVisibility getVerticalScrollBarVisibility() throws Throwable;
+
+    public void setVerticalScrollBarVisibility(ScrollBarVisibility VerticalScrollBarVisibility) throws Throwable;
+
 
 
     // Instance Events section
     
-    public void addTextChanged(EventHandler handler) throws Throwable;
+    public void addClosing(EventHandler handler) throws Throwable;
 
-    public void removeTextChanged(EventHandler handler) throws Throwable;
-
-    public void addLostAggregateFocus(EventHandler handler) throws Throwable;
-
-    public void removeLostAggregateFocus(EventHandler handler) throws Throwable;
+    public void removeClosing(EventHandler handler) throws Throwable;
 
     public void addGotAggregateFocus(EventHandler handler) throws Throwable;
 
     public void removeGotAggregateFocus(EventHandler handler) throws Throwable;
 
-    public void addClosing(EventHandler handler) throws Throwable;
+    public void addLostAggregateFocus(EventHandler handler) throws Throwable;
 
-    public void removeClosing(EventHandler handler) throws Throwable;
+    public void removeLostAggregateFocus(EventHandler handler) throws Throwable;
+
+    public void addTextChanged(EventHandler handler) throws Throwable;
+
+    public void removeTextChanged(EventHandler handler) throws Throwable;
 
 
 }

@@ -38,17 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.TypeAttributes;
-import system.codedom.CodeTypeReferenceCollection;
-import system.codedom.CodeTypeMemberCollection;
-import system.codedom.CodeTypeParameterCollection;
-import system.codedom.MemberAttributes;
 import system.codedom.CodeAttributeDeclarationCollection;
-import system.codedom.CodeLinePragma;
 import system.codedom.CodeCommentStatementCollection;
 import system.codedom.CodeDirectiveCollection;
+import system.codedom.CodeLinePragma;
+import system.codedom.CodeTypeMemberCollection;
+import system.codedom.CodeTypeParameterCollection;
+import system.codedom.CodeTypeReferenceCollection;
+import system.codedom.MemberAttributes;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.reflection.TypeAttributes;
 import system.EventHandler;
 
 
@@ -149,38 +149,6 @@ public class CodeTypeDeclaration extends NetObject  {
     
     // Properties section
     
-    public TypeAttributes getTypeAttributes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeAttributes");
-            return new TypeAttributes(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTypeAttributes(TypeAttributes TypeAttributes) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TypeAttributes", TypeAttributes == null ? null : TypeAttributes.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeTypeReferenceCollection getBaseTypes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BaseTypes");
-            return new CodeTypeReferenceCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsClass() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -196,26 +164,6 @@ public class CodeTypeDeclaration extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsClass", IsClass);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsStruct() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsStruct");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIsStruct(boolean IsStruct) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IsStruct", IsStruct);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,64 +229,21 @@ public class CodeTypeDeclaration extends NetObject  {
         }
     }
 
-    public CodeTypeMemberCollection getMembers() throws Throwable {
+    public boolean getIsStruct() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Members");
-            return new CodeTypeMemberCollection(val);
+            return (boolean)classInstance.Get("IsStruct");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CodeTypeParameterCollection getTypeParameters() throws Throwable {
+    public void setIsStruct(boolean IsStruct) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeParameters");
-            return new CodeTypeParameterCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setName(java.lang.String Name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Name", Name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MemberAttributes getAttributes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new MemberAttributes(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAttributes(MemberAttributes Attributes) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Attributes", Attributes == null ? null : Attributes.getJCOInstance());
+            classInstance.Set("IsStruct", IsStruct);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,6 +270,39 @@ public class CodeTypeDeclaration extends NetObject  {
         }
     }
 
+    public CodeCommentStatementCollection getComments() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Comments");
+            return new CodeCommentStatementCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeDirectiveCollection getEndDirectives() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EndDirectives");
+            return new CodeDirectiveCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeDirectiveCollection getStartDirectives() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("StartDirectives");
+            return new CodeDirectiveCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CodeLinePragma getLinePragma() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -386,34 +324,55 @@ public class CodeTypeDeclaration extends NetObject  {
         }
     }
 
-    public CodeCommentStatementCollection getComments() throws Throwable {
+    public CodeTypeMemberCollection getMembers() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Comments");
-            return new CodeCommentStatementCollection(val);
+            JCObject val = (JCObject)classInstance.Get("Members");
+            return new CodeTypeMemberCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CodeDirectiveCollection getStartDirectives() throws Throwable {
+    public CodeTypeParameterCollection getTypeParameters() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StartDirectives");
-            return new CodeDirectiveCollection(val);
+            JCObject val = (JCObject)classInstance.Get("TypeParameters");
+            return new CodeTypeParameterCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CodeDirectiveCollection getEndDirectives() throws Throwable {
+    public CodeTypeReferenceCollection getBaseTypes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EndDirectives");
-            return new CodeDirectiveCollection(val);
+            JCObject val = (JCObject)classInstance.Get("BaseTypes");
+            return new CodeTypeReferenceCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MemberAttributes getAttributes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Attributes");
+            return new MemberAttributes(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAttributes(MemberAttributes Attributes) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Attributes", Attributes == null ? null : Attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,6 +384,47 @@ public class CodeTypeDeclaration extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("UserData");
             return new IDictionaryImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeAttributes getTypeAttributes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TypeAttributes");
+            return new TypeAttributes(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTypeAttributes(TypeAttributes TypeAttributes) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TypeAttributes", TypeAttributes == null ? null : TypeAttributes.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setName(java.lang.String Name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

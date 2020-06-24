@@ -94,11 +94,11 @@ public interface IInstanceContextProvider extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean IsIdle(InstanceContext instanceContext) throws Throwable;
+
     public InstanceContext GetExistingInstanceContext(Message message, IContextChannel channel) throws Throwable;
 
     public void InitializeInstanceContext(InstanceContext instanceContext, Message message, IContextChannel channel) throws Throwable;
-
-    public boolean IsIdle(InstanceContext instanceContext) throws Throwable;
 
     public void NotifyIdle(InstanceContextIdleCallback callback, InstanceContext instanceContext) throws Throwable;
 

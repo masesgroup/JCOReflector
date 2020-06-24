@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.collections.specialized.NameValueCollection;
-import system.configuration.SettingsPropertyValueCollection;
-import system.configuration.SettingsContext;
-import system.configuration.SettingsPropertyCollection;
 import system.configuration.SettingsPropertyValue;
+import system.configuration.SettingsContext;
 import system.configuration.SettingsProperty;
+import system.configuration.SettingsPropertyValueCollection;
+import system.configuration.SettingsPropertyCollection;
+import system.collections.specialized.NameValueCollection;
 
 
 /**
@@ -129,11 +129,12 @@ public class LocalFileSettingsProvider extends NetObject  {
     
     // Methods section
     
-    public void Initialize(java.lang.String name, NameValueCollection values) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public SettingsPropertyValue GetPreviousVersion(SettingsContext context, SettingsProperty property) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.TypeLoadException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Initialize", name, values == null ? null : values.getJCOInstance());
+            JCObject objGetPreviousVersion = (JCObject)classInstance.Invoke("GetPreviousVersion", context == null ? null : context.getJCOInstance(), property == null ? null : property.getJCOInstance());
+            return new SettingsPropertyValue(objGetPreviousVersion);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -150,11 +151,11 @@ public class LocalFileSettingsProvider extends NetObject  {
         }
     }
 
-    public void SetPropertyValues(SettingsContext context, SettingsPropertyValueCollection values) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.xml.XmlException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.io.FileNotFoundException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.io.PathTooLongException {
+    public void Initialize(java.lang.String name, NameValueCollection values) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetPropertyValues", context == null ? null : context.getJCOInstance(), values == null ? null : values.getJCOInstance());
+            classInstance.Invoke("Initialize", name, values == null ? null : values.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,22 +171,21 @@ public class LocalFileSettingsProvider extends NetObject  {
         }
     }
 
-    public void Upgrade(SettingsContext context, SettingsPropertyCollection properties) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.FormatException, system.OutOfMemoryException, system.security.SecurityException, system.configuration.ConfigurationException, system.xml.XmlException {
+    public void SetPropertyValues(SettingsContext context, SettingsPropertyValueCollection values) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.xml.XmlException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.io.FileNotFoundException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.io.PathTooLongException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Upgrade", context == null ? null : context.getJCOInstance(), properties == null ? null : properties.getJCOInstance());
+            classInstance.Invoke("SetPropertyValues", context == null ? null : context.getJCOInstance(), values == null ? null : values.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SettingsPropertyValue GetPreviousVersion(SettingsContext context, SettingsProperty property) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.TypeLoadException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.xml.XmlException {
+    public void Upgrade(SettingsContext context, SettingsPropertyCollection properties) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.FormatException, system.OutOfMemoryException, system.security.SecurityException, system.configuration.ConfigurationException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPreviousVersion = (JCObject)classInstance.Invoke("GetPreviousVersion", context == null ? null : context.getJCOInstance(), property == null ? null : property.getJCOInstance());
-            return new SettingsPropertyValue(objGetPreviousVersion);
+            classInstance.Invoke("Upgrade", context == null ? null : context.getJCOInstance(), properties == null ? null : properties.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,21 +215,21 @@ public class LocalFileSettingsProvider extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Description");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

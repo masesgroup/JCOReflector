@@ -39,8 +39,8 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.servicemodel.description.ServiceEndpoint;
 import system.servicemodel.channels.BindingParameterCollection;
-import system.servicemodel.dispatcher.EndpointDispatcher;
 import system.servicemodel.dispatcher.ClientRuntime;
+import system.servicemodel.dispatcher.EndpointDispatcher;
 
 
 /**
@@ -93,13 +93,13 @@ public interface IEndpointBehavior extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Validate(ServiceEndpoint endpoint) throws Throwable;
-
     public void AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable;
+
+    public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable;
 
     public void ApplyDispatchBehavior(ServiceEndpoint endpoint, EndpointDispatcher endpointDispatcher) throws Throwable;
 
-    public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable;
+    public void Validate(ServiceEndpoint endpoint) throws Throwable;
 
 
     

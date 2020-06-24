@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.metadata.edm.BuiltInTypeKind;
-import system.data.metadata.edm.AssociationSet;
 import system.data.metadata.edm.AssociationEndMember;
-import system.data.metadata.edm.EntitySet;
+import system.data.metadata.edm.AssociationSet;
+import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.Documentation;
+import system.data.metadata.edm.EntitySet;
 
 
 /**
@@ -121,12 +121,12 @@ public class AssociationSetEnd extends NetObject  {
     
     // Properties section
     
-    public BuiltInTypeKind getBuiltInTypeKind() throws Throwable {
+    public AssociationEndMember getCorrespondingAssociationEndMember() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BuiltInTypeKind");
-            return new BuiltInTypeKind(val);
+            JCObject val = (JCObject)classInstance.Get("CorrespondingAssociationEndMember");
+            return new AssociationEndMember(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,43 +143,12 @@ public class AssociationSetEnd extends NetObject  {
         }
     }
 
-    public AssociationEndMember getCorrespondingAssociationEndMember() throws Throwable {
+    public BuiltInTypeKind getBuiltInTypeKind() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CorrespondingAssociationEndMember");
-            return new AssociationEndMember(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getRole() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Role");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EntitySet getEntitySet() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EntitySet");
-            return new EntitySet(val);
+            JCObject val = (JCObject)classInstance.Get("BuiltInTypeKind");
+            return new BuiltInTypeKind(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,6 +170,37 @@ public class AssociationSetEnd extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Documentation", Documentation == null ? null : Documentation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EntitySet getEntitySet() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EntitySet");
+            return new EntitySet(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getRole() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Role");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

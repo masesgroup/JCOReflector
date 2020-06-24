@@ -116,6 +116,16 @@ public class UdpStatistics extends NetObject  {
     
     // Properties section
     
+    public int getUdpListeners() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("UdpListeners");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public long getDatagramsReceived() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -151,16 +161,6 @@ public class UdpStatistics extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (long)classInstance.Get("IncomingDatagramsWithErrors");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getUdpListeners() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("UdpListeners");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

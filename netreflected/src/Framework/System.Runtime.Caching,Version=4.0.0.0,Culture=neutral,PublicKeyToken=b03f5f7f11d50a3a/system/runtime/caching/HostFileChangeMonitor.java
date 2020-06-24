@@ -139,11 +139,21 @@ public class HostFileChangeMonitor extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getUniqueId() throws Throwable {
+    public boolean getHasChanged() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("UniqueId");
+            return (boolean)classInstance.Get("HasChanged");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsDisposed() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsDisposed");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,21 +170,11 @@ public class HostFileChangeMonitor extends NetObject  {
         }
     }
 
-    public boolean getHasChanged() throws Throwable {
+    public java.lang.String getUniqueId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HasChanged");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsDisposed() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsDisposed");
+            return (java.lang.String)classInstance.Get("UniqueId");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

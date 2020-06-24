@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.codedom.CodeExpression;
 import system.workflow.activities.rules.RuleExpressionInfo;
 import system.workflow.activities.rules.RuleValidation;
-import system.codedom.CodeExpression;
-import system.workflow.activities.rules.RuleAnalysis;
-import system.workflow.activities.rules.RulePathQualifier;
 import system.workflow.activities.rules.RuleExpressionResult;
 import system.workflow.activities.rules.RuleExecution;
+import system.workflow.activities.rules.RuleAnalysis;
+import system.workflow.activities.rules.RulePathQualifier;
 import system.text.StringBuilder;
 
 
@@ -120,48 +120,6 @@ public class RuleExpressionWalker extends NetObject  {
     
     // Methods section
     
-    public static RuleExpressionInfo Validate(RuleValidation validation, CodeExpression expression, boolean isWritten) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objValidate = (JCObject)classType.Invoke("Validate", validation == null ? null : validation.getJCOInstance(), expression == null ? null : expression.getJCOInstance(), isWritten);
-            return new RuleExpressionInfo(objValidate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void AnalyzeUsage(RuleAnalysis analysis, CodeExpression expression, boolean isRead, boolean isWritten, RulePathQualifier qualifier) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("AnalyzeUsage", analysis == null ? null : analysis.getJCOInstance(), expression == null ? null : expression.getJCOInstance(), isRead, isWritten, qualifier == null ? null : qualifier.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static RuleExpressionResult Evaluate(RuleExecution execution, CodeExpression expression) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objEvaluate = (JCObject)classType.Invoke("Evaluate", execution == null ? null : execution.getJCOInstance(), expression == null ? null : expression.getJCOInstance());
-            return new RuleExpressionResult(objEvaluate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Decompile(StringBuilder stringBuilder, CodeExpression expression, CodeExpression parentExpression) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Decompile", stringBuilder == null ? null : stringBuilder.getJCOInstance(), expression == null ? null : expression.getJCOInstance(), parentExpression == null ? null : parentExpression.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean Match(CodeExpression firstExpression, CodeExpression secondExpression) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -178,6 +136,48 @@ public class RuleExpressionWalker extends NetObject  {
         try {
             JCObject objClone = (JCObject)classType.Invoke("Clone", originalExpression == null ? null : originalExpression.getJCOInstance());
             return new CodeExpression(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static RuleExpressionInfo Validate(RuleValidation validation, CodeExpression expression, boolean isWritten) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objValidate = (JCObject)classType.Invoke("Validate", validation == null ? null : validation.getJCOInstance(), expression == null ? null : expression.getJCOInstance(), isWritten);
+            return new RuleExpressionInfo(objValidate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static RuleExpressionResult Evaluate(RuleExecution execution, CodeExpression expression) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objEvaluate = (JCObject)classType.Invoke("Evaluate", execution == null ? null : execution.getJCOInstance(), expression == null ? null : expression.getJCOInstance());
+            return new RuleExpressionResult(objEvaluate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void AnalyzeUsage(RuleAnalysis analysis, CodeExpression expression, boolean isRead, boolean isWritten, RulePathQualifier qualifier) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AnalyzeUsage", analysis == null ? null : analysis.getJCOInstance(), expression == null ? null : expression.getJCOInstance(), isRead, isWritten, qualifier == null ? null : qualifier.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Decompile(StringBuilder stringBuilder, CodeExpression expression, CodeExpression parentExpression) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Decompile", stringBuilder == null ? null : stringBuilder.getJCOInstance(), expression == null ? null : expression.getJCOInstance(), parentExpression == null ? null : parentExpression.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -129,11 +129,11 @@ public class SearchForVirtualItemEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getIsTextSearch() throws Throwable {
+    public boolean getIncludeSubItemsInSearch() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsTextSearch");
+            return (boolean)classInstance.Get("IncludeSubItemsInSearch");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,11 +149,11 @@ public class SearchForVirtualItemEventArgs extends NetObject  {
         }
     }
 
-    public boolean getIncludeSubItemsInSearch() throws Throwable {
+    public boolean getIsTextSearch() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IncludeSubItemsInSearch");
+            return (boolean)classInstance.Get("IsTextSearch");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,11 +179,11 @@ public class SearchForVirtualItemEventArgs extends NetObject  {
         }
     }
 
-    public java.lang.String getText() throws Throwable {
+    public int getStartIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            return (int)classInstance.Get("StartIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,22 +200,22 @@ public class SearchForVirtualItemEventArgs extends NetObject  {
         }
     }
 
+    public java.lang.String getText() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Text");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SearchDirectionHint getDirection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Direction");
             return new SearchDirectionHint(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getStartIndex() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("StartIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

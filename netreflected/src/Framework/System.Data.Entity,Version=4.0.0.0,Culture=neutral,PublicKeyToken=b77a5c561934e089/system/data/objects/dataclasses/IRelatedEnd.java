@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.data.objects.MergeOption;
 import system.data.objects.dataclasses.IEntityWithRelationships;
 import system.data.objects.dataclasses.IEntityWithRelationshipsImplementation;
+import system.data.objects.MergeOption;
 import system.data.metadata.edm.RelationshipSet;
 
 
@@ -93,25 +93,25 @@ public interface IRelatedEnd extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Load() throws Throwable;
+    public boolean Remove(IEntityWithRelationships entity) throws Throwable;
 
-    public void Load(MergeOption mergeOption) throws Throwable;
+    public boolean Remove(NetObject entity) throws Throwable;
+
+    public IEnumerable CreateSourceQuery() throws Throwable;
+
+    public IEnumerator GetEnumerator() throws Throwable;
 
     public void Add(IEntityWithRelationships entity) throws Throwable;
 
     public void Add(NetObject entity) throws Throwable;
 
-    public boolean Remove(IEntityWithRelationships entity) throws Throwable;
-
-    public boolean Remove(NetObject entity) throws Throwable;
-
     public void Attach(IEntityWithRelationships entity) throws Throwable;
 
     public void Attach(NetObject entity) throws Throwable;
 
-    public IEnumerable CreateSourceQuery() throws Throwable;
+    public void Load() throws Throwable;
 
-    public IEnumerator GetEnumerator() throws Throwable;
+    public void Load(MergeOption mergeOption) throws Throwable;
 
 
     
@@ -119,13 +119,13 @@ public interface IRelatedEnd extends IJCOBridgeReflected {
     
     public boolean getIsLoaded() throws Throwable;
 
+    public RelationshipSet getRelationshipSet() throws Throwable;
+
     public java.lang.String getRelationshipName() throws Throwable;
 
     public java.lang.String getSourceRoleName() throws Throwable;
 
     public java.lang.String getTargetRoleName() throws Throwable;
-
-    public RelationshipSet getRelationshipSet() throws Throwable;
 
 
 

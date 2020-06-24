@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.remoting.channels.IChannelDataStore;
-import system.runtime.remoting.channels.IChannelDataStoreImplementation;
 import system.runtime.remoting.channels.IServerChannelSink;
 import system.runtime.remoting.channels.IServerChannelSinkImplementation;
 import system.runtime.remoting.channels.IChannelReceiver;
 import system.runtime.remoting.channels.IChannelReceiverImplementation;
+import system.runtime.remoting.channels.IChannelDataStore;
+import system.runtime.remoting.channels.IChannelDataStoreImplementation;
 import system.runtime.remoting.channels.IServerChannelSinkProvider;
 import system.runtime.remoting.channels.IServerChannelSinkProviderImplementation;
 
@@ -111,22 +111,22 @@ public class IServerChannelSinkProviderImplementation extends NetObject implemen
 
     // Methods section
     
-    public void GetChannelData(IChannelDataStore channelData) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetChannelData", channelData == null ? null : channelData.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IServerChannelSink CreateSink(IChannelReceiver channel) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateSink = (JCObject)classInstance.Invoke("CreateSink", channel == null ? null : channel.getJCOInstance());
             return new IServerChannelSinkImplementation(objCreateSink);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetChannelData(IChannelDataStore channelData) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetChannelData", channelData == null ? null : channelData.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

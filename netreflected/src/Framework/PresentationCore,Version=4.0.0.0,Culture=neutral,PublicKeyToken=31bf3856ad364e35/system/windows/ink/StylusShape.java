@@ -116,16 +116,6 @@ public class StylusShape extends NetObject  {
     
     // Properties section
     
-    public double getWidth() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("Width");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public double getHeight() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -141,6 +131,16 @@ public class StylusShape extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (double)classInstance.Get("Rotation");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getWidth() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("Width");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

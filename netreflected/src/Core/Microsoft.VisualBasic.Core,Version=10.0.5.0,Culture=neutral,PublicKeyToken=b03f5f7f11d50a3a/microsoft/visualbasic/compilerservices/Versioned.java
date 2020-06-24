@@ -113,6 +113,16 @@ public class Versioned extends NetObject  {
     
     // Methods section
     
+    public static boolean IsNumeric(NetObject Expression) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsNumeric", Expression == null ? null : Expression.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static NetObject CallByName(NetObject Instance, java.lang.String MethodName, CallType UseCallType, NetObject... Arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MissingMemberException, system.InvalidCastException, system.NullReferenceException, system.RankException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -124,11 +134,11 @@ public class Versioned extends NetObject  {
         }
     }
 
-    public static boolean IsNumeric(NetObject Expression) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static java.lang.String SystemTypeName(java.lang.String VbName) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsNumeric", Expression == null ? null : Expression.getJCOInstance());
+            return (java.lang.String)classType.Invoke("SystemTypeName", VbName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -139,16 +149,6 @@ public class Versioned extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Invoke("TypeName", Expression == null ? null : Expression.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String SystemTypeName(java.lang.String VbName) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("SystemTypeName", VbName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

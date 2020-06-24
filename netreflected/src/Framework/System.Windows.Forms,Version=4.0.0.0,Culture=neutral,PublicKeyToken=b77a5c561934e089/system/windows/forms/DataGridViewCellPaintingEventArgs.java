@@ -164,45 +164,21 @@ public class DataGridViewCellPaintingEventArgs extends NetObject  {
     
     // Properties section
     
-    public DataGridViewAdvancedBorderStyle getAdvancedBorderStyle() throws Throwable {
+    public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AdvancedBorderStyle");
-            return new DataGridViewAdvancedBorderStyle(val);
+            return (boolean)classInstance.Get("Handled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Rectangle getCellBounds() throws Throwable {
+    public void setHandled(boolean Handled) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CellBounds");
-            return new Rectangle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DataGridViewCellStyle getCellStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CellStyle");
-            return new DataGridViewCellStyle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Rectangle getClipBounds() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ClipBounds");
-            return new Rectangle(val);
+            classInstance.Set("Handled", Handled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,22 +194,11 @@ public class DataGridViewCellPaintingEventArgs extends NetObject  {
         }
     }
 
-    public java.lang.String getErrorText() throws Throwable {
+    public int getRowIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ErrorText");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getFormattedValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("FormattedValue");
-            return new NetObject(val);
+            return (int)classInstance.Get("RowIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,33 +215,34 @@ public class DataGridViewCellPaintingEventArgs extends NetObject  {
         }
     }
 
-    public DataGridViewPaintParts getPaintParts() throws Throwable {
+    public Rectangle getCellBounds() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PaintParts");
-            return new DataGridViewPaintParts(val);
+            JCObject val = (JCObject)classInstance.Get("CellBounds");
+            return new Rectangle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getRowIndex() throws Throwable {
+    public Rectangle getClipBounds() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("RowIndex");
+            JCObject val = (JCObject)classInstance.Get("ClipBounds");
+            return new Rectangle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DataGridViewElementStates getState() throws Throwable {
+    public NetObject getFormattedValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
-            return new DataGridViewElementStates(val);
+            JCObject val = (JCObject)classInstance.Get("FormattedValue");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,21 +259,55 @@ public class DataGridViewCellPaintingEventArgs extends NetObject  {
         }
     }
 
-    public boolean getHandled() throws Throwable {
+    public java.lang.String getErrorText() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Handled");
+            return (java.lang.String)classInstance.Get("ErrorText");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHandled(boolean Handled) throws Throwable {
+    public DataGridViewAdvancedBorderStyle getAdvancedBorderStyle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Handled", Handled);
+            JCObject val = (JCObject)classInstance.Get("AdvancedBorderStyle");
+            return new DataGridViewAdvancedBorderStyle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataGridViewCellStyle getCellStyle() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CellStyle");
+            return new DataGridViewCellStyle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataGridViewElementStates getState() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("State");
+            return new DataGridViewElementStates(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataGridViewPaintParts getPaintParts() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PaintParts");
+            return new DataGridViewPaintParts(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

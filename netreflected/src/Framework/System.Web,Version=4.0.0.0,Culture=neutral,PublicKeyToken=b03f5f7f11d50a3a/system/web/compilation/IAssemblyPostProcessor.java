@@ -89,9 +89,9 @@ public interface IAssemblyPostProcessor extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void PostProcessAssembly(java.lang.String path) throws Throwable;
-
     public void Dispose() throws Throwable;
+
+    public void PostProcessAssembly(java.lang.String path) throws Throwable;
 
 
     

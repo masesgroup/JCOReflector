@@ -118,6 +118,16 @@ public class Documentation extends NetObject  {
     
     // Properties section
     
+    public boolean getIsEmpty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsEmpty");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BuiltInTypeKind getBuiltInTypeKind() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -129,21 +139,22 @@ public class Documentation extends NetObject  {
         }
     }
 
-    public java.lang.String getSummary() throws Throwable {
+    public Documentation getDocumentation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Summary");
+            JCObject val = (JCObject)classInstance.Get("Documentation");
+            return new Documentation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSummary(java.lang.String Summary) throws Throwable {
+    public void setDocumentation(Documentation Documentation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Summary", Summary);
+            classInstance.Set("Documentation", Documentation == null ? null : Documentation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,32 +180,21 @@ public class Documentation extends NetObject  {
         }
     }
 
-    public boolean getIsEmpty() throws Throwable {
+    public java.lang.String getSummary() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            return (java.lang.String)classInstance.Get("Summary");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Documentation getDocumentation() throws Throwable {
+    public void setSummary(java.lang.String Summary) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Documentation");
-            return new Documentation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDocumentation(Documentation Documentation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Documentation", Documentation == null ? null : Documentation.getJCOInstance());
+            classInstance.Set("Summary", Summary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.PermissionSet;
-import system.security.policy.Evidence;
-import system.security.policy.PolicyLevel;
-import system.security.PolicyLevelType;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
+import system.security.policy.Evidence;
+import system.security.PermissionSet;
+import system.security.policy.PolicyLevel;
+import system.security.PolicyLevelType;
 
 
 /**
@@ -118,28 +118,6 @@ public class SecurityManager extends NetObject  {
     
     // Methods section
     
-    public static PermissionSet GetStandardSandbox(Evidence evidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.security.XmlSyntaxException, system.NotSupportedException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetStandardSandbox = (JCObject)classType.Invoke("GetStandardSandbox", evidence == null ? null : evidence.getJCOInstance());
-            return new PermissionSet(objGetStandardSandbox);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static PolicyLevel LoadPolicyLevelFromString(java.lang.String str, PolicyLevelType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLoadPolicyLevelFromString = (JCObject)classType.Invoke("LoadPolicyLevelFromString", str, type == null ? null : type.getJCOInstance());
-            return new PolicyLevel(objLoadPolicyLevelFromString);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean CurrentThreadRequiresSecurityContextCapture() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -160,11 +138,34 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static void SavePolicyLevel(PolicyLevel level) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.policy.PolicyException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.XmlSyntaxException, system.RankException, system.NotImplementedException {
+    public static IEnumerator PolicyHierarchy() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SavePolicyLevel", level == null ? null : level.getJCOInstance());
+            JCObject objPolicyHierarchy = (JCObject)classType.Invoke("PolicyHierarchy");
+            return new IEnumeratorImplementation(objPolicyHierarchy);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerator ResolvePolicyGroups(Evidence evidence) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objResolvePolicyGroups = (JCObject)classType.Invoke("ResolvePolicyGroups", evidence == null ? null : evidence.getJCOInstance());
+            return new IEnumeratorImplementation(objResolvePolicyGroups);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PermissionSet GetStandardSandbox(Evidence evidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.security.XmlSyntaxException, system.NotSupportedException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetStandardSandbox = (JCObject)classType.Invoke("GetStandardSandbox", evidence == null ? null : evidence.getJCOInstance());
+            return new PermissionSet(objGetStandardSandbox);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,44 +204,33 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static IEnumerator ResolvePolicyGroups(Evidence evidence) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objResolvePolicyGroups = (JCObject)classType.Invoke("ResolvePolicyGroups", evidence == null ? null : evidence.getJCOInstance());
-            return new IEnumeratorImplementation(objResolvePolicyGroups);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static IEnumerator PolicyHierarchy() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objPolicyHierarchy = (JCObject)classType.Invoke("PolicyHierarchy");
-            return new IEnumeratorImplementation(objPolicyHierarchy);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void SavePolicy() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.security.policy.PolicyException, system.security.SecurityException, system.security.XmlSyntaxException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SavePolicy");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static PolicyLevel LoadPolicyLevelFromFile(java.lang.String path, PolicyLevelType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.SecurityException, system.OutOfMemoryException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objLoadPolicyLevelFromFile = (JCObject)classType.Invoke("LoadPolicyLevelFromFile", path, type == null ? null : type.getJCOInstance());
             return new PolicyLevel(objLoadPolicyLevelFromFile);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PolicyLevel LoadPolicyLevelFromString(java.lang.String str, PolicyLevelType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLoadPolicyLevelFromString = (JCObject)classType.Invoke("LoadPolicyLevelFromString", str, type == null ? null : type.getJCOInstance());
+            return new PolicyLevel(objLoadPolicyLevelFromString);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SavePolicyLevel(PolicyLevel level) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.policy.PolicyException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.XmlSyntaxException, system.RankException, system.NotImplementedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SavePolicyLevel", level == null ? null : level.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

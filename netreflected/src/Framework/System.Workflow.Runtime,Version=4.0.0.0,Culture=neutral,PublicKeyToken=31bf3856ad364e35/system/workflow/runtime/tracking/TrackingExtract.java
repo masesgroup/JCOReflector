@@ -117,17 +117,6 @@ public class TrackingExtract extends NetObject  {
     
     // Properties section
     
-    public TrackingAnnotationCollection getAnnotations() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Annotations");
-            return new TrackingAnnotationCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getMember() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -143,6 +132,17 @@ public class TrackingExtract extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Member", Member);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TrackingAnnotationCollection getAnnotations() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Annotations");
+            return new TrackingAnnotationCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -142,22 +142,21 @@ public class XamlSetTypeConverterEventArgs extends NetObject  {
     
     // Properties section
     
-    public TypeConverter getTypeConverter() throws Throwable {
+    public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeConverter");
-            return new TypeConverter(val);
+            return (boolean)classInstance.Get("Handled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTypeConverter(TypeConverter TypeConverter) throws Throwable {
+    public void setHandled(boolean Handled) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("TypeConverter", TypeConverter == null ? null : TypeConverter.getJCOInstance());
+            classInstance.Set("Handled", Handled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,6 +183,27 @@ public class XamlSetTypeConverterEventArgs extends NetObject  {
         }
     }
 
+    public TypeConverter getTypeConverter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TypeConverter");
+            return new TypeConverter(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTypeConverter(TypeConverter TypeConverter) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TypeConverter", TypeConverter == null ? null : TypeConverter.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CultureInfo getCultureInfo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -205,17 +225,6 @@ public class XamlSetTypeConverterEventArgs extends NetObject  {
         }
     }
 
-    public XamlMember getMember() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Member");
-            return new XamlMember(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -227,21 +236,12 @@ public class XamlSetTypeConverterEventArgs extends NetObject  {
         }
     }
 
-    public boolean getHandled() throws Throwable {
+    public XamlMember getMember() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Handled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHandled(boolean Handled) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Handled", Handled);
+            JCObject val = (JCObject)classInstance.Get("Member");
+            return new XamlMember(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

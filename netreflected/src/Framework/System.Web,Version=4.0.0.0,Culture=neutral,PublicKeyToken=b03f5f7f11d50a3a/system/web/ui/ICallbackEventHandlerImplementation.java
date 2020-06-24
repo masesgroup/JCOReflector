@@ -103,21 +103,21 @@ public class ICallbackEventHandlerImplementation extends NetObject implements IC
 
     // Methods section
     
-    public void RaiseCallbackEvent(java.lang.String eventArgument) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RaiseCallbackEvent", eventArgument);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String GetCallbackResult() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("GetCallbackResult");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RaiseCallbackEvent(java.lang.String eventArgument) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RaiseCallbackEvent", eventArgument);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

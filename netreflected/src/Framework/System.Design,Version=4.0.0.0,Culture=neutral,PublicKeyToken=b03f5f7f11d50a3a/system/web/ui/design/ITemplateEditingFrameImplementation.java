@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.ui.webcontrols.Style;
 import system.web.ui.design.TemplateEditingVerb;
+import system.web.ui.webcontrols.Style;
 
 
 /**
@@ -115,6 +115,16 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    public void Dispose() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Open() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -155,41 +165,10 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
-    public void Dispose() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public Style getControlStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ControlStyle");
-            return new Style(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getInitialHeight() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -230,6 +209,16 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String[] getTemplateNames() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -243,23 +232,6 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 			for(int indexTemplateNames = 0; indexTemplateNames < resultingArrayList.size(); indexTemplateNames++ ) {
 				resultingArray[indexTemplateNames] = (java.lang.String)resultingArrayList.get(indexTemplateNames);
 			}
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Style[] getTemplateStyles() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Style> resultingArrayList = new ArrayList<Style>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TemplateStyles");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new Style(resultingObject));
-            }
-            Style[] resultingArray = new Style[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,6 +254,34 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Verb", Verb == null ? null : Verb.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Style getControlStyle() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ControlStyle");
+            return new Style(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Style[] getTemplateStyles() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Style> resultingArrayList = new ArrayList<Style>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("TemplateStyles");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new Style(resultingObject));
+            }
+            Style[] resultingArray = new Style[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

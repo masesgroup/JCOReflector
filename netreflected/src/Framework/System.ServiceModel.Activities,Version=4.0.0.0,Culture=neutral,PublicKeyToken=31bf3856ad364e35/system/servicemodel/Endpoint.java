@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.EndpointAddress;
 import system.servicemodel.ServiceHostBase;
-import system.xml.linq.XName;
 import system.servicemodel.EndpointIdentity;
 import system.Uri;
+import system.xml.linq.XName;
 
 
 /**
@@ -154,26 +154,6 @@ public class Endpoint extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getBehaviorConfigurationName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("BehaviorConfigurationName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBehaviorConfigurationName(java.lang.String BehaviorConfigurationName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BehaviorConfigurationName", BehaviorConfigurationName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public system.servicemodel.channels.Binding getBinding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -190,27 +170,6 @@ public class Endpoint extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Binding", Binding == null ? null : Binding.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XName getServiceContractName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ServiceContractName");
-            return new XName(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setServiceContractName(XName ServiceContractName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ServiceContractName", ServiceContractName == null ? null : ServiceContractName.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,22 +196,21 @@ public class Endpoint extends NetObject  {
         }
     }
 
-    public Uri getListenUri() throws Throwable {
+    public java.lang.String getBehaviorConfigurationName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ListenUri");
-            return new Uri(val);
+            return (java.lang.String)classInstance.Get("BehaviorConfigurationName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setListenUri(Uri ListenUri) throws Throwable {
+    public void setBehaviorConfigurationName(java.lang.String BehaviorConfigurationName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ListenUri", ListenUri == null ? null : ListenUri.getJCOInstance());
+            classInstance.Set("BehaviorConfigurationName", BehaviorConfigurationName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,6 +252,48 @@ public class Endpoint extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddressUri", AddressUri == null ? null : AddressUri.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Uri getListenUri() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ListenUri");
+            return new Uri(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setListenUri(Uri ListenUri) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ListenUri", ListenUri == null ? null : ListenUri.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XName getServiceContractName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ServiceContractName");
+            return new XName(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setServiceContractName(XName ServiceContractName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ServiceContractName", ServiceContractName == null ? null : ServiceContractName.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

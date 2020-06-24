@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.net.security.CipherSuitesPolicy;
+import system.net.security.EncryptionPolicy;
 import system.net.security.LocalCertificateSelectionCallback;
 import system.net.security.RemoteCertificateValidationCallback;
+import system.security.authentication.SslProtocols;
 import system.security.cryptography.x509certificates.X509CertificateCollection;
 import system.security.cryptography.x509certificates.X509RevocationMode;
-import system.net.security.EncryptionPolicy;
-import system.security.authentication.SslProtocols;
-import system.net.security.CipherSuitesPolicy;
 
 
 /**
@@ -154,6 +154,48 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    public CipherSuitesPolicy getCipherSuitesPolicy() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CipherSuitesPolicy");
+            return new CipherSuitesPolicy(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCipherSuitesPolicy(CipherSuitesPolicy CipherSuitesPolicy) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CipherSuitesPolicy", CipherSuitesPolicy == null ? null : CipherSuitesPolicy.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EncryptionPolicy getEncryptionPolicy() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EncryptionPolicy");
+            return new EncryptionPolicy(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEncryptionPolicy(EncryptionPolicy EncryptionPolicy) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("EncryptionPolicy", EncryptionPolicy == null ? null : EncryptionPolicy.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public LocalCertificateSelectionCallback getLocalCertificateSelectionCallback() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -194,21 +236,22 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
-    public java.lang.String getTargetHost() throws Throwable {
+    public SslProtocols getEnabledSslProtocols() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("TargetHost");
+            JCObject val = (JCObject)classInstance.Get("EnabledSslProtocols");
+            return new SslProtocols(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTargetHost(java.lang.String TargetHost) throws Throwable {
+    public void setEnabledSslProtocols(SslProtocols EnabledSslProtocols) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("TargetHost", TargetHost);
+            classInstance.Set("EnabledSslProtocols", EnabledSslProtocols == null ? null : EnabledSslProtocols.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,64 +299,21 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
-    public EncryptionPolicy getEncryptionPolicy() throws Throwable {
+    public java.lang.String getTargetHost() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptionPolicy");
-            return new EncryptionPolicy(val);
+            return (java.lang.String)classInstance.Get("TargetHost");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEncryptionPolicy(EncryptionPolicy EncryptionPolicy) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+    public void setTargetHost(java.lang.String TargetHost) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("EncryptionPolicy", EncryptionPolicy == null ? null : EncryptionPolicy.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SslProtocols getEnabledSslProtocols() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EnabledSslProtocols");
-            return new SslProtocols(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEnabledSslProtocols(SslProtocols EnabledSslProtocols) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EnabledSslProtocols", EnabledSslProtocols == null ? null : EnabledSslProtocols.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CipherSuitesPolicy getCipherSuitesPolicy() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CipherSuitesPolicy");
-            return new CipherSuitesPolicy(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCipherSuitesPolicy(CipherSuitesPolicy CipherSuitesPolicy) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CipherSuitesPolicy", CipherSuitesPolicy == null ? null : CipherSuitesPolicy.getJCOInstance());
+            classInstance.Set("TargetHost", TargetHost);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

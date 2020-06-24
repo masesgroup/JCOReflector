@@ -43,8 +43,8 @@ import system.ActivationContext;
 import system.security.ManifestKinds;
 import system.security.cryptography.x509certificates.X509RevocationFlag;
 import system.security.cryptography.x509certificates.X509RevocationMode;
-import system.security.cryptography.x509certificates.AuthenticodeSignatureInformation;
 import system.security.cryptography.StrongNameSignatureInformation;
+import system.security.cryptography.x509certificates.AuthenticodeSignatureInformation;
 
 
 /**
@@ -156,6 +156,17 @@ public class ManifestSignatureInformation extends NetObject  {
     
     // Properties section
     
+    public StrongNameSignatureInformation getStrongNameSignature() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("StrongNameSignature");
+            return new StrongNameSignatureInformation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AuthenticodeSignatureInformation getAuthenticodeSignature() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -173,17 +184,6 @@ public class ManifestSignatureInformation extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Manifest");
             return new ManifestKinds(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StrongNameSignatureInformation getStrongNameSignature() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("StrongNameSignature");
-            return new StrongNameSignatureInformation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

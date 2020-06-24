@@ -39,13 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.webcontrols.webparts.PersonalizationScope;
-import system.web.ui.webcontrols.webparts.WebPartManager;
-import system.web.ui.webcontrols.webparts.PersonalizationState;
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
-import system.web.ui.webcontrols.webparts.PersonalizationStateInfoCollection;
 import system.web.ui.webcontrols.webparts.PersonalizationStateQuery;
 import system.DateTime;
+import system.collections.IDictionary;
+import system.collections.IDictionaryImplementation;
+import system.web.ui.webcontrols.webparts.WebPartManager;
+import system.web.ui.webcontrols.webparts.PersonalizationState;
+import system.web.ui.webcontrols.webparts.PersonalizationStateInfoCollection;
 import system.collections.specialized.NameValueCollection;
 
 
@@ -121,54 +121,11 @@ public class PersonalizationProvider extends NetObject  {
     
     // Methods section
     
-    public PersonalizationScope DetermineInitialScope(WebPartManager webPartManager, PersonalizationState loadedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.security.SecurityException, system.web.HttpParseException, system.web.HttpCompileException, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDetermineInitialScope = (JCObject)classInstance.Invoke("DetermineInitialScope", webPartManager == null ? null : webPartManager.getJCOInstance(), loadedState == null ? null : loadedState.getJCOInstance());
-            return new PersonalizationScope(objDetermineInitialScope);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary DetermineUserCapabilities(WebPartManager webPartManager) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NullReferenceException, system.security.SecurityException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDetermineUserCapabilities = (JCObject)classInstance.Invoke("DetermineUserCapabilities", webPartManager == null ? null : webPartManager.getJCOInstance());
-            return new IDictionaryImplementation(objDetermineUserCapabilities);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int GetCountOfState(PersonalizationScope scope, PersonalizationStateQuery query) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetCountOfState", scope == null ? null : scope.getJCOInstance(), query == null ? null : query.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PersonalizationState LoadPersonalizationState(WebPartManager webPartManager, boolean ignoreCurrentUser) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.web.HttpRequestValidationException, system.security.SecurityException, system.io.EndOfStreamException, system.FormatException, system.io.IOException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objLoadPersonalizationState = (JCObject)classInstance.Invoke("LoadPersonalizationState", webPartManager == null ? null : webPartManager.getJCOInstance(), ignoreCurrentUser);
-            return new PersonalizationState(objLoadPersonalizationState);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ResetPersonalizationState(WebPartManager webPartManager) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.web.HttpRequestValidationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ResetPersonalizationState", webPartManager == null ? null : webPartManager.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,11 +151,34 @@ public class PersonalizationProvider extends NetObject  {
         }
     }
 
-    public void SavePersonalizationState(PersonalizationState state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.web.HttpRequestValidationException, system.security.SecurityException, system.UnauthorizedAccessException {
+    public IDictionary DetermineUserCapabilities(WebPartManager webPartManager) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SavePersonalizationState", state == null ? null : state.getJCOInstance());
+            JCObject objDetermineUserCapabilities = (JCObject)classInstance.Invoke("DetermineUserCapabilities", webPartManager == null ? null : webPartManager.getJCOInstance());
+            return new IDictionaryImplementation(objDetermineUserCapabilities);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PersonalizationScope DetermineInitialScope(WebPartManager webPartManager, PersonalizationState loadedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.security.SecurityException, system.web.HttpParseException, system.web.HttpCompileException, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDetermineInitialScope = (JCObject)classInstance.Invoke("DetermineInitialScope", webPartManager == null ? null : webPartManager.getJCOInstance(), loadedState == null ? null : loadedState.getJCOInstance());
+            return new PersonalizationScope(objDetermineInitialScope);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PersonalizationState LoadPersonalizationState(WebPartManager webPartManager, boolean ignoreCurrentUser) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.web.HttpRequestValidationException, system.security.SecurityException, system.io.EndOfStreamException, system.FormatException, system.io.IOException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoadPersonalizationState = (JCObject)classInstance.Invoke("LoadPersonalizationState", webPartManager == null ? null : webPartManager.getJCOInstance(), ignoreCurrentUser);
+            return new PersonalizationState(objLoadPersonalizationState);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,6 +189,26 @@ public class PersonalizationProvider extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ResetPersonalizationState(WebPartManager webPartManager) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.web.HttpRequestValidationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ResetPersonalizationState", webPartManager == null ? null : webPartManager.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SavePersonalizationState(PersonalizationState state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.web.HttpRequestValidationException, system.security.SecurityException, system.UnauthorizedAccessException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SavePersonalizationState", state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,21 +238,21 @@ public class PersonalizationProvider extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Description");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

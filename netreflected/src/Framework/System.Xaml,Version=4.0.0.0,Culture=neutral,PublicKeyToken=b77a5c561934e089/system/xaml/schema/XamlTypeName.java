@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.xaml.XamlType;
-import system.xaml.schema.XamlTypeName;
 import system.xaml.IXamlNamespaceResolver;
 import system.xaml.IXamlNamespaceResolverImplementation;
 import system.xaml.INamespacePrefixLookup;
 import system.xaml.INamespacePrefixLookupImplementation;
+import system.xaml.schema.XamlTypeName;
 
 
 /**
@@ -149,22 +149,22 @@ public class XamlTypeName extends NetObject  {
     
     // Methods section
     
+    public java.lang.String ToString(INamespacePrefixLookup prefixLookup) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ToString", prefixLookup == null ? null : prefixLookup.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static XamlTypeName Parse(java.lang.String typeName, IXamlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objParse = (JCObject)classType.Invoke("Parse", typeName, namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
             return new XamlTypeName(objParse);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String ToString(INamespacePrefixLookup prefixLookup) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ToString", prefixLookup == null ? null : prefixLookup.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

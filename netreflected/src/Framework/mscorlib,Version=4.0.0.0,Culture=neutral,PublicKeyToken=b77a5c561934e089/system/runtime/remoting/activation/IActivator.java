@@ -41,9 +41,9 @@ import system.runtime.remoting.activation.IConstructionReturnMessage;
 import system.runtime.remoting.activation.IConstructionReturnMessageImplementation;
 import system.runtime.remoting.activation.IConstructionCallMessage;
 import system.runtime.remoting.activation.IConstructionCallMessageImplementation;
+import system.runtime.remoting.activation.ActivatorLevel;
 import system.runtime.remoting.activation.IActivator;
 import system.runtime.remoting.activation.IActivatorImplementation;
-import system.runtime.remoting.activation.ActivatorLevel;
 
 
 /**
@@ -102,11 +102,11 @@ public interface IActivator extends IJCOBridgeReflected {
     
     // Properties section
     
+    public ActivatorLevel getLevel() throws Throwable;
+
     public IActivator getNextActivator() throws Throwable;
 
     public void setNextActivator(IActivator NextActivator) throws Throwable;
-
-    public ActivatorLevel getLevel() throws Throwable;
 
 
 

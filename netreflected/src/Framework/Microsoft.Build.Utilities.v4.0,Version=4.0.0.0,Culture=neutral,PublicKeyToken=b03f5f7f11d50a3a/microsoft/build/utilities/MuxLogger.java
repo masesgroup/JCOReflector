@@ -128,6 +128,16 @@ public class MuxLogger extends NetObject  {
     
     // Methods section
     
+    public boolean UnregisterLoggers(int submissionId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("UnregisterLoggers", submissionId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Initialize(IEventSource eventSource) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,16 +158,6 @@ public class MuxLogger extends NetObject  {
         }
     }
 
-    public void Shutdown() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Shutdown");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void RegisterLogger(int submissionId, ILogger logger) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -168,11 +168,11 @@ public class MuxLogger extends NetObject  {
         }
     }
 
-    public boolean UnregisterLoggers(int submissionId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public void Shutdown() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("UnregisterLoggers", submissionId);
+            classInstance.Invoke("Shutdown");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

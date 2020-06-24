@@ -104,21 +104,21 @@ public class IFragmentCapableXmlDictionaryWriterImplementation extends NetObject
 
     // Methods section
     
-    public void StartFragment(Stream stream, boolean generateSelfContainedTextFragment) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("StartFragment", stream == null ? null : stream.getJCOInstance(), generateSelfContainedTextFragment);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void EndFragment() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndFragment");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void StartFragment(Stream stream, boolean generateSelfContainedTextFragment) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("StartFragment", stream == null ? null : stream.getJCOInstance(), generateSelfContainedTextFragment);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

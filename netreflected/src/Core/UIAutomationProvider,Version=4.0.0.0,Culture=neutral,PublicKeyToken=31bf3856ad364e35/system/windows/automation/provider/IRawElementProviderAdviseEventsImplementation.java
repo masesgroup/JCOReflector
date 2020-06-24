@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.automation.provider.ProviderOptions;
 import system.windows.automation.provider.IRawElementProviderSimple;
 import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
+import system.windows.automation.provider.ProviderOptions;
 
 
 /**
@@ -106,26 +106,6 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
 
     // Methods section
     
-    public void AdviseEventAdded(int eventId, int[] properties) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AdviseEventAdded", eventId, properties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AdviseEventRemoved(int eventId, int[] properties) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AdviseEventRemoved", eventId, properties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetPatternProvider(int patternId) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,27 +128,47 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
         }
     }
 
-
-    
-    // Properties section
-    
-    public ProviderOptions getProviderOptions() throws Throwable {
+    public void AdviseEventAdded(int eventId, int[] properties) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ProviderOptions");
-            return new ProviderOptions(val);
+            classInstance.Invoke("AdviseEventAdded", eventId, properties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public void AdviseEventRemoved(int eventId, int[] properties) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AdviseEventRemoved", eventId, properties);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+
+    
+    // Properties section
+    
     public IRawElementProviderSimple getHostRawElementProvider() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("HostRawElementProvider");
             return new IRawElementProviderSimpleImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ProviderOptions getProviderOptions() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ProviderOptions");
+            return new ProviderOptions(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

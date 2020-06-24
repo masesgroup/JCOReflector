@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.LocalVariableHandleCollection;
 import system.reflection.metadata.LocalConstantHandleCollection;
-import system.reflection.metadata.MethodDefinitionHandle;
+import system.reflection.metadata.LocalVariableHandleCollection;
 import system.reflection.metadata.ImportScopeHandle;
+import system.reflection.metadata.MethodDefinitionHandle;
 
 
 /**
@@ -116,17 +116,6 @@ public class LocalScope extends NetObject  {
     
     // Methods section
     
-    public LocalVariableHandleCollection GetLocalVariables() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLocalVariables = (JCObject)classInstance.Invoke("GetLocalVariables");
-            return new LocalVariableHandleCollection(objGetLocalVariables);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public LocalConstantHandleCollection GetLocalConstants() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -138,16 +127,46 @@ public class LocalScope extends NetObject  {
         }
     }
 
+    public LocalVariableHandleCollection GetLocalVariables() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetLocalVariables = (JCObject)classInstance.Invoke("GetLocalVariables");
+            return new LocalVariableHandleCollection(objGetLocalVariables);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public MethodDefinitionHandle getMethod() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public int getEndOffset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Method");
-            return new MethodDefinitionHandle(val);
+            return (int)classInstance.Get("EndOffset");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getLength() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Length");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getStartOffset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("StartOffset");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,31 +183,12 @@ public class LocalScope extends NetObject  {
         }
     }
 
-    public int getStartOffset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public MethodDefinitionHandle getMethod() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("StartOffset");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getLength() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Length");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getEndOffset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("EndOffset");
+            JCObject val = (JCObject)classInstance.Get("Method");
+            return new MethodDefinitionHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

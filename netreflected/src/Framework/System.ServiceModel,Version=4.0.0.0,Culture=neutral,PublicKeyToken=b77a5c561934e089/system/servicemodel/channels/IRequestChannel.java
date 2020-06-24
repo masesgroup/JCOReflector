@@ -37,14 +37,14 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.servicemodel.channels.Message;
-import system.TimeSpan;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
+import system.TimeSpan;
+import system.servicemodel.channels.Message;
+import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
 import system.Uri;
-import system.servicemodel.CommunicationState;
 import system.EventHandler;
 
 
@@ -98,9 +98,13 @@ public interface IRequestChannel extends IJCOBridgeReflected {
 
     // Methods section
     
-    public Message Request(Message message) throws Throwable;
+    public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable;
 
-    public Message Request(Message message, TimeSpan timeout) throws Throwable;
+    public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
+
+    public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable;
+
+    public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginRequest(Message message, AsyncCallback callback, NetObject state) throws Throwable;
 
@@ -108,37 +112,33 @@ public interface IRequestChannel extends IJCOBridgeReflected {
 
     public Message EndRequest(IAsyncResult result) throws Throwable;
 
+    public Message Request(Message message) throws Throwable;
+
+    public Message Request(Message message, TimeSpan timeout) throws Throwable;
+
     public void Abort() throws Throwable;
-
-    public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable;
-
-    public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public void EndClose(IAsyncResult result) throws Throwable;
-
-    public void Open() throws Throwable;
-
-    public void Open(TimeSpan timeout) throws Throwable;
-
-    public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable;
-
-    public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public void EndOpen(IAsyncResult result) throws Throwable;
 
     public void Close() throws Throwable;
 
     public void Close(TimeSpan timeout) throws Throwable;
 
+    public void EndClose(IAsyncResult result) throws Throwable;
+
+    public void EndOpen(IAsyncResult result) throws Throwable;
+
+    public void Open() throws Throwable;
+
+    public void Open(TimeSpan timeout) throws Throwable;
+
 
     
     // Properties section
     
+    public CommunicationState getState() throws Throwable;
+
     public EndpointAddress getRemoteAddress() throws Throwable;
 
     public Uri getVia() throws Throwable;
-
-    public CommunicationState getState() throws Throwable;
 
 
 

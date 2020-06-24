@@ -41,12 +41,12 @@ import java.util.ArrayList;
 import system.MarshalByRefObject;
 import system.runtime.serialization.StreamingContext;
 import system.runtime.serialization.SerializationInfo;
-import system.runtime.remoting.IRemotingTypeInfo;
-import system.runtime.remoting.IRemotingTypeInfoImplementation;
-import system.runtime.remoting.IEnvoyInfo;
-import system.runtime.remoting.IEnvoyInfoImplementation;
 import system.runtime.remoting.IChannelInfo;
 import system.runtime.remoting.IChannelInfoImplementation;
+import system.runtime.remoting.IEnvoyInfo;
+import system.runtime.remoting.IEnvoyInfoImplementation;
+import system.runtime.remoting.IRemotingTypeInfo;
+import system.runtime.remoting.IRemotingTypeInfoImplementation;
 
 
 /**
@@ -118,16 +118,6 @@ public class ObjRef extends NetObject  {
     // Constructors section
     
 
-    public ObjRef(MarshalByRefObject o, NetType requestedType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(o == null ? null : o.getJCOInstance(), requestedType == null ? null : requestedType.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ObjRef() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -138,16 +128,25 @@ public class ObjRef extends NetObject  {
         }
     }
 
+    public ObjRef(MarshalByRefObject o, NetType requestedType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(o == null ? null : o.getJCOInstance(), requestedType == null ? null : requestedType.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
     
-    public NetObject GetRealObject(StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException, system.runtime.remoting.RemotingException, system.OutOfMemoryException, system.InvalidCastException, system.NotImplementedException, system.NullReferenceException, system.NotSupportedException {
+    public boolean IsFromThisAppDomain() throws Throwable, system.ArgumentException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetRealObject = (JCObject)classInstance.Invoke("GetRealObject", context == null ? null : context.getJCOInstance());
-            return new NetObject(objGetRealObject);
+            return (boolean)classInstance.Invoke("IsFromThisAppDomain");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,11 +162,12 @@ public class ObjRef extends NetObject  {
         }
     }
 
-    public boolean IsFromThisAppDomain() throws Throwable, system.ArgumentException, system.NullReferenceException {
+    public NetObject GetRealObject(StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException, system.runtime.remoting.RemotingException, system.OutOfMemoryException, system.InvalidCastException, system.NotImplementedException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsFromThisAppDomain");
+            JCObject objGetRealObject = (JCObject)classInstance.Invoke("GetRealObject", context == null ? null : context.getJCOInstance());
+            return new NetObject(objGetRealObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,42 +187,22 @@ public class ObjRef extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getURI() throws Throwable {
+    public IChannelInfo getChannelInfo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("URI");
+            JCObject val = (JCObject)classInstance.Get("ChannelInfo");
+            return new IChannelInfoImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setURI(java.lang.String URI) throws Throwable {
+    public void setChannelInfo(IChannelInfo ChannelInfo) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("URI", URI);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IRemotingTypeInfo getTypeInfo() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeInfo");
-            return new IRemotingTypeInfoImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTypeInfo(IRemotingTypeInfo TypeInfo) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TypeInfo", TypeInfo == null ? null : TypeInfo.getJCOInstance());
+            classInstance.Set("ChannelInfo", ChannelInfo == null ? null : ChannelInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,22 +229,42 @@ public class ObjRef extends NetObject  {
         }
     }
 
-    public IChannelInfo getChannelInfo() throws Throwable {
+    public IRemotingTypeInfo getTypeInfo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ChannelInfo");
-            return new IChannelInfoImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("TypeInfo");
+            return new IRemotingTypeInfoImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setChannelInfo(IChannelInfo ChannelInfo) throws Throwable {
+    public void setTypeInfo(IRemotingTypeInfo TypeInfo) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ChannelInfo", ChannelInfo == null ? null : ChannelInfo.getJCOInstance());
+            classInstance.Set("TypeInfo", TypeInfo == null ? null : TypeInfo.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getURI() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("URI");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setURI(java.lang.String URI) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("URI", URI);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

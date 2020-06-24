@@ -38,29 +38,29 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.media.Visual;
 import system.windows.DependencyObject;
 import system.windows.DpiScale;
-import system.windows.media.Visual;
-import system.windows.media.Geometry;
 import system.windows.media.Brush;
-import system.windows.Vector;
-import system.windows.media.Transform;
+import system.windows.media.CacheMode;
 import system.windows.media.DoubleCollection;
 import system.windows.media.DrawingGroup;
-import system.windows.Rect;
-import system.windows.media.media3d.Rect3D;
-import system.windows.media.media3d.Visual3D;
+import system.windows.media.EdgeMode;
 import system.windows.media.effects.BitmapEffect;
 import system.windows.media.effects.BitmapEffectInput;
 import system.windows.media.effects.Effect;
-import system.windows.media.CacheMode;
-import system.windows.media.EdgeMode;
+import system.windows.media.Geometry;
 import system.windows.media.HitTestResult;
 import system.windows.Point;
+import system.windows.media.media3d.Rect3D;
+import system.windows.media.media3d.Visual3D;
+import system.windows.media.Transform;
+import system.windows.Rect;
+import system.windows.Vector;
 import system.windows.media.HitTestFilterCallback;
 import system.windows.media.HitTestResultCallback;
-import system.windows.media.HitTestParameters;
 import system.windows.media.media3d.HitTestParameters3D;
+import system.windows.media.HitTestParameters;
 
 
 /**
@@ -135,6 +135,16 @@ public class VisualTreeHelper extends NetObject  {
     
     // Methods section
     
+    public static double GetOpacity(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("GetOpacity", reference == null ? null : reference.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int GetChildrenCount(DependencyObject reference) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -156,27 +166,6 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static DpiScale GetDpi(Visual visual) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetDpi = (JCObject)classType.Invoke("GetDpi", visual == null ? null : visual.getJCOInstance());
-            return new DpiScale(objGetDpi);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void SetRootDpi(Visual visual, DpiScale dpiInfo) throws Throwable, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SetRootDpi", visual == null ? null : visual.getJCOInstance(), dpiInfo == null ? null : dpiInfo.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static DependencyObject GetParent(DependencyObject reference) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -188,22 +177,12 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static Geometry GetClip(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static DpiScale GetDpi(Visual visual) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetClip = (JCObject)classType.Invoke("GetClip", reference == null ? null : reference.getJCOInstance());
-            return new Geometry(objGetClip);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static double GetOpacity(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (double)classType.Invoke("GetOpacity", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetDpi = (JCObject)classType.Invoke("GetDpi", visual == null ? null : visual.getJCOInstance());
+            return new DpiScale(objGetDpi);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,23 +199,12 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static Vector GetOffset(Visual reference) throws Throwable, system.ArgumentNullException {
+    public static CacheMode GetCacheMode(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetOffset = (JCObject)classType.Invoke("GetOffset", reference == null ? null : reference.getJCOInstance());
-            return new Vector(objGetOffset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Transform GetTransform(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetTransform = (JCObject)classType.Invoke("GetTransform", reference == null ? null : reference.getJCOInstance());
-            return new Transform(objGetTransform);
+            JCObject objGetCacheMode = (JCObject)classType.Invoke("GetCacheMode", reference == null ? null : reference.getJCOInstance());
+            return new CacheMode(objGetCacheMode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,45 +243,12 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static Rect GetContentBounds(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
+    public static EdgeMode GetEdgeMode(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetContentBounds = (JCObject)classType.Invoke("GetContentBounds", reference == null ? null : reference.getJCOInstance());
-            return new Rect(objGetContentBounds);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Rect3D GetContentBounds(Visual3D reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetContentBounds = (JCObject)classType.Invoke("GetContentBounds", reference == null ? null : reference.getJCOInstance());
-            return new Rect3D(objGetContentBounds);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Rect GetDescendantBounds(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetDescendantBounds = (JCObject)classType.Invoke("GetDescendantBounds", reference == null ? null : reference.getJCOInstance());
-            return new Rect(objGetDescendantBounds);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Rect3D GetDescendantBounds(Visual3D reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetDescendantBounds = (JCObject)classType.Invoke("GetDescendantBounds", reference == null ? null : reference.getJCOInstance());
-            return new Rect3D(objGetDescendantBounds);
+            JCObject objGetEdgeMode = (JCObject)classType.Invoke("GetEdgeMode", reference == null ? null : reference.getJCOInstance());
+            return new EdgeMode(objGetEdgeMode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,23 +287,12 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static CacheMode GetCacheMode(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static Geometry GetClip(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetCacheMode = (JCObject)classType.Invoke("GetCacheMode", reference == null ? null : reference.getJCOInstance());
-            return new CacheMode(objGetCacheMode);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static EdgeMode GetEdgeMode(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetEdgeMode = (JCObject)classType.Invoke("GetEdgeMode", reference == null ? null : reference.getJCOInstance());
-            return new EdgeMode(objGetEdgeMode);
+            JCObject objGetClip = (JCObject)classType.Invoke("GetClip", reference == null ? null : reference.getJCOInstance());
+            return new Geometry(objGetClip);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,11 +309,67 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static void HitTest(Visual reference, HitTestFilterCallback filterCallback, HitTestResultCallback resultCallback, HitTestParameters hitTestParameters) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
+    public static Rect3D GetContentBounds(Visual3D reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("HitTest", reference == null ? null : reference.getJCOInstance(), filterCallback, resultCallback, hitTestParameters == null ? null : hitTestParameters.getJCOInstance());
+            JCObject objGetContentBounds = (JCObject)classType.Invoke("GetContentBounds", reference == null ? null : reference.getJCOInstance());
+            return new Rect3D(objGetContentBounds);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Rect3D GetDescendantBounds(Visual3D reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetDescendantBounds = (JCObject)classType.Invoke("GetDescendantBounds", reference == null ? null : reference.getJCOInstance());
+            return new Rect3D(objGetDescendantBounds);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Transform GetTransform(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetTransform = (JCObject)classType.Invoke("GetTransform", reference == null ? null : reference.getJCOInstance());
+            return new Transform(objGetTransform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Rect GetContentBounds(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetContentBounds = (JCObject)classType.Invoke("GetContentBounds", reference == null ? null : reference.getJCOInstance());
+            return new Rect(objGetContentBounds);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Rect GetDescendantBounds(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetDescendantBounds = (JCObject)classType.Invoke("GetDescendantBounds", reference == null ? null : reference.getJCOInstance());
+            return new Rect(objGetDescendantBounds);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector GetOffset(Visual reference) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetOffset = (JCObject)classType.Invoke("GetOffset", reference == null ? null : reference.getJCOInstance());
+            return new Vector(objGetOffset);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,6 +380,26 @@ public class VisualTreeHelper extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("HitTest", reference == null ? null : reference.getJCOInstance(), filterCallback, resultCallback, hitTestParameters == null ? null : hitTestParameters.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void HitTest(Visual reference, HitTestFilterCallback filterCallback, HitTestResultCallback resultCallback, HitTestParameters hitTestParameters) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("HitTest", reference == null ? null : reference.getJCOInstance(), filterCallback, resultCallback, hitTestParameters == null ? null : hitTestParameters.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetRootDpi(Visual visual, DpiScale dpiInfo) throws Throwable, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetRootDpi", visual == null ? null : visual.getJCOInstance(), dpiInfo == null ? null : dpiInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

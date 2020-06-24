@@ -40,15 +40,15 @@ import java.util.ArrayList;
 // Import section
 import system.windows.documents.ContentPosition;
 import system.windows.documents.DocumentPage;
-import system.windows.Size;
 import system.windows.documents.IDocumentPaginatorSource;
 import system.windows.documents.IDocumentPaginatorSourceImplementation;
-import system.windows.documents.GetPageNumberCompletedEventHandler;
-import system.EventHandler;
-import system.windows.documents.PaginationProgressEventHandler;
-import system.windows.documents.GetPageCompletedEventHandler;
+import system.windows.Size;
 import system.componentmodel.AsyncCompletedEventHandler;
+import system.EventHandler;
+import system.windows.documents.GetPageCompletedEventHandler;
+import system.windows.documents.GetPageNumberCompletedEventHandler;
 import system.windows.documents.PagesChangedEventHandler;
+import system.windows.documents.PaginationProgressEventHandler;
 
 
 /**
@@ -123,42 +123,11 @@ public class DynamicDocumentPaginator extends NetObject  {
     
     // Methods section
     
-    public void GetPageNumberAsync(ContentPosition contentPosition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetPageNumberAsync", contentPosition == null ? null : contentPosition.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void GetPageNumberAsync(ContentPosition contentPosition, NetObject userState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetPageNumberAsync", contentPosition == null ? null : contentPosition.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int GetPageNumber(ContentPosition contentPosition) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetPageNumber", contentPosition == null ? null : contentPosition.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ContentPosition GetPagePosition(DocumentPage page) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetPagePosition = (JCObject)classInstance.Invoke("GetPagePosition", page == null ? null : page.getJCOInstance());
-            return new ContentPosition(objGetPagePosition);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,21 +144,33 @@ public class DynamicDocumentPaginator extends NetObject  {
         }
     }
 
-    public void GetPageAsync(int pageNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public ContentPosition GetPagePosition(DocumentPage page) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetPageAsync", pageNumber);
+            JCObject objGetPagePosition = (JCObject)classInstance.Invoke("GetPagePosition", page == null ? null : page.getJCOInstance());
+            return new ContentPosition(objGetPagePosition);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void GetPageAsync(int pageNumber, NetObject userState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public DocumentPage GetPage(int pageNumber) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetPageAsync", pageNumber, userState == null ? null : userState.getJCOInstance());
+            JCObject objGetPage = (JCObject)classInstance.Invoke("GetPage", pageNumber);
+            return new DocumentPage(objGetPage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CancelAsync(NetObject userState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CancelAsync", userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,22 +206,41 @@ public class DynamicDocumentPaginator extends NetObject  {
         }
     }
 
-    public void CancelAsync(NetObject userState) throws Throwable {
+    public void GetPageAsync(int pageNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CancelAsync", userState == null ? null : userState.getJCOInstance());
+            classInstance.Invoke("GetPageAsync", pageNumber);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DocumentPage GetPage(int pageNumber) throws Throwable {
+    public void GetPageAsync(int pageNumber, NetObject userState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPage = (JCObject)classInstance.Invoke("GetPage", pageNumber);
-            return new DocumentPage(objGetPage);
+            classInstance.Invoke("GetPageAsync", pageNumber, userState == null ? null : userState.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetPageNumberAsync(ContentPosition contentPosition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetPageNumberAsync", contentPosition == null ? null : contentPosition.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetPageNumberAsync(ContentPosition contentPosition, NetObject userState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetPageNumberAsync", contentPosition == null ? null : contentPosition.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,6 +290,17 @@ public class DynamicDocumentPaginator extends NetObject  {
         }
     }
 
+    public IDocumentPaginatorSource getSource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Source");
+            return new IDocumentPaginatorSourceImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Size getPageSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -311,37 +322,26 @@ public class DynamicDocumentPaginator extends NetObject  {
         }
     }
 
-    public IDocumentPaginatorSource getSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Source");
-            return new IDocumentPaginatorSourceImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section
     
 
-    public void addGetPageNumberCompleted(GetPageNumberCompletedEventHandler handler) throws Throwable {
+    public void addComputePageCountCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("GetPageNumberCompleted", handler);
+            classInstance.RegisterEventListener("ComputePageCountCompleted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeGetPageNumberCompleted(GetPageNumberCompletedEventHandler handler) throws Throwable {
+    public void removeComputePageCountCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("GetPageNumberCompleted", handler);
+            classInstance.UnregisterEventListener("ComputePageCountCompleted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,26 +367,6 @@ public class DynamicDocumentPaginator extends NetObject  {
         }
     }
 
-    public void addPaginationProgress(PaginationProgressEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("PaginationProgress", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removePaginationProgress(PaginationProgressEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("PaginationProgress", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void addGetPageCompleted(GetPageCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -407,21 +387,21 @@ public class DynamicDocumentPaginator extends NetObject  {
         }
     }
 
-    public void addComputePageCountCompleted(AsyncCompletedEventHandler handler) throws Throwable {
+    public void addGetPageNumberCompleted(GetPageNumberCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("ComputePageCountCompleted", handler);
+            classInstance.RegisterEventListener("GetPageNumberCompleted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeComputePageCountCompleted(AsyncCompletedEventHandler handler) throws Throwable {
+    public void removeGetPageNumberCompleted(GetPageNumberCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("ComputePageCountCompleted", handler);
+            classInstance.UnregisterEventListener("GetPageNumberCompleted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,6 +422,26 @@ public class DynamicDocumentPaginator extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PagesChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addPaginationProgress(PaginationProgressEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("PaginationProgress", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removePaginationProgress(PaginationProgressEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("PaginationProgress", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

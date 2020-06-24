@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.caching.CacheEntryChangeMonitor;
-import system.DateTimeOffset;
 import system.runtime.caching.CacheItem;
 import system.runtime.caching.CacheItemPolicy;
-import system.runtime.caching.DefaultCacheCapabilities;
+import system.DateTimeOffset;
+import system.runtime.caching.CacheEntryChangeMonitor;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
+import system.runtime.caching.DefaultCacheCapabilities;
 
 
 /**
@@ -119,11 +119,11 @@ public class ObjectCache extends NetObject  {
     
     // Methods section
     
-    public boolean Contains(java.lang.String key, java.lang.String regionName) throws Throwable {
+    public boolean Add(CacheItem item, CacheItemPolicy policy) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", key, regionName);
+            return (boolean)classInstance.Invoke("Add", item == null ? null : item.getJCOInstance(), policy == null ? null : policy.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -139,21 +139,31 @@ public class ObjectCache extends NetObject  {
         }
     }
 
-    public boolean Add(CacheItem item, CacheItemPolicy policy) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Add", item == null ? null : item.getJCOInstance(), policy == null ? null : policy.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Add(java.lang.String key, NetObject value, CacheItemPolicy policy, java.lang.String regionName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Add", key, value == null ? null : value.getJCOInstance(), policy == null ? null : policy.getJCOInstance(), regionName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Contains(java.lang.String key, java.lang.String regionName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Contains", key, regionName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long GetCount(java.lang.String regionName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("GetCount", regionName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,17 +175,6 @@ public class ObjectCache extends NetObject  {
         try {
             JCObject objAddOrGetExisting = (JCObject)classInstance.Invoke("AddOrGetExisting", key, value == null ? null : value.getJCOInstance(), absoluteExpiration == null ? null : absoluteExpiration.getJCOInstance(), regionName);
             return new NetObject(objAddOrGetExisting);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CacheItem AddOrGetExisting(CacheItem value, CacheItemPolicy policy) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddOrGetExisting = (JCObject)classInstance.Invoke("AddOrGetExisting", value == null ? null : value.getJCOInstance(), policy == null ? null : policy.getJCOInstance());
-            return new CacheItem(objAddOrGetExisting);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,22 +202,34 @@ public class ObjectCache extends NetObject  {
         }
     }
 
+    public NetObject Remove(java.lang.String key, java.lang.String regionName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objRemove = (JCObject)classInstance.Invoke("Remove", key, regionName);
+            return new NetObject(objRemove);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CacheItem AddOrGetExisting(CacheItem value, CacheItemPolicy policy) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddOrGetExisting = (JCObject)classInstance.Invoke("AddOrGetExisting", value == null ? null : value.getJCOInstance(), policy == null ? null : policy.getJCOInstance());
+            return new CacheItem(objAddOrGetExisting);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CacheItem GetCacheItem(java.lang.String key, java.lang.String regionName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetCacheItem = (JCObject)classInstance.Invoke("GetCacheItem", key, regionName);
             return new CacheItem(objGetCacheItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Set(java.lang.String key, NetObject value, DateTimeOffset absoluteExpiration, java.lang.String regionName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Set", key, value == null ? null : value.getJCOInstance(), absoluteExpiration == null ? null : absoluteExpiration.getJCOInstance(), regionName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,6 +245,16 @@ public class ObjectCache extends NetObject  {
         }
     }
 
+    public void Set(java.lang.String key, NetObject value, DateTimeOffset absoluteExpiration, java.lang.String regionName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Set", key, value == null ? null : value.getJCOInstance(), absoluteExpiration == null ? null : absoluteExpiration.getJCOInstance(), regionName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Set(java.lang.String key, NetObject value, CacheItemPolicy policy, java.lang.String regionName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -244,52 +265,10 @@ public class ObjectCache extends NetObject  {
         }
     }
 
-    public NetObject Remove(java.lang.String key, java.lang.String regionName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRemove = (JCObject)classInstance.Invoke("Remove", key, regionName);
-            return new NetObject(objRemove);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public long GetCount(java.lang.String regionName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Invoke("GetCount", regionName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public DefaultCacheCapabilities getDefaultCacheCapabilities() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DefaultCacheCapabilities");
-            return new DefaultCacheCapabilities(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static IServiceProvider getHost() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -306,6 +285,27 @@ public class ObjectCache extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Set("Host", Host == null ? null : Host.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DefaultCacheCapabilities getDefaultCacheCapabilities() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DefaultCacheCapabilities");
+            return new DefaultCacheCapabilities(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

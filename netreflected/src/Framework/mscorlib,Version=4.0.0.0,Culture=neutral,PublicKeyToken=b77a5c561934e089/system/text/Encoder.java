@@ -114,16 +114,6 @@ public class Encoder extends NetObject  {
     
     // Methods section
     
-    public void Reset() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Reset");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int GetByteCount(char[] chars, int index, int count, boolean flush) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

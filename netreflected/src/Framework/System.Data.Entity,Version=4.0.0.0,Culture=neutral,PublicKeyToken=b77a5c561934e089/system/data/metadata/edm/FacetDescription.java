@@ -117,11 +117,21 @@ public class FacetDescription extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getFacetName() throws Throwable {
+    public boolean getIsConstant() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("FacetName");
+            return (boolean)classInstance.Get("IsConstant");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsRequired() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsRequired");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,21 +159,11 @@ public class FacetDescription extends NetObject  {
         }
     }
 
-    public boolean getIsConstant() throws Throwable {
+    public java.lang.String getFacetName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsConstant");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsRequired() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsRequired");
+            return (java.lang.String)classInstance.Get("FacetName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

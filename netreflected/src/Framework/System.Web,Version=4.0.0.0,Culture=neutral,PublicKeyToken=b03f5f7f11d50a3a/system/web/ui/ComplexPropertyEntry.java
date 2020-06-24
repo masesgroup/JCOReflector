@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.ui.ControlBuilder;
 import system.reflection.PropertyInfo;
+import system.web.ui.ControlBuilder;
 
 
 /**
@@ -148,22 +148,22 @@ public class ComplexPropertyEntry extends NetObject  {
         }
     }
 
-    public ControlBuilder getBuilder() throws Throwable {
+    public PropertyInfo getPropertyInfo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Builder");
-            return new ControlBuilder(val);
+            JCObject val = (JCObject)classInstance.Get("PropertyInfo");
+            return new PropertyInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setBuilder(ControlBuilder Builder) throws Throwable {
+    public void setPropertyInfo(PropertyInfo PropertyInfo) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Builder", Builder == null ? null : Builder.getJCOInstance());
+            classInstance.Set("PropertyInfo", PropertyInfo == null ? null : PropertyInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,27 +189,6 @@ public class ComplexPropertyEntry extends NetObject  {
         }
     }
 
-    public PropertyInfo getPropertyInfo() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PropertyInfo");
-            return new PropertyInfo(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPropertyInfo(PropertyInfo PropertyInfo) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PropertyInfo", PropertyInfo == null ? null : PropertyInfo.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -225,6 +204,17 @@ public class ComplexPropertyEntry extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType getDeclaringType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DeclaringType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,12 +241,22 @@ public class ComplexPropertyEntry extends NetObject  {
         }
     }
 
-    public NetType getDeclaringType() throws Throwable {
+    public ControlBuilder getBuilder() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DeclaringType");
-            return new NetType(val);
+            JCObject val = (JCObject)classInstance.Get("Builder");
+            return new ControlBuilder(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBuilder(ControlBuilder Builder) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Builder", Builder == null ? null : Builder.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

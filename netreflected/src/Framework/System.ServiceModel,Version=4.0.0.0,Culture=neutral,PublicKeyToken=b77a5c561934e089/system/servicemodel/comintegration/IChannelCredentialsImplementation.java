@@ -103,21 +103,11 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
 
     // Methods section
     
-    public void SetWindowsCredential(java.lang.String domain, java.lang.String userName, java.lang.String password, int impersonationLevel, boolean allowNtlm) throws Throwable {
+    public void SetClientCertificateFromFile(java.lang.String fileName, java.lang.String password, java.lang.String keyStorageFlags) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetWindowsCredential", domain, userName, password, impersonationLevel, allowNtlm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetUserNameCredential(java.lang.String userName, java.lang.String password) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetUserNameCredential", userName, password);
+            classInstance.Invoke("SetClientCertificateFromFile", fileName, password, keyStorageFlags);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,11 +133,11 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
         }
     }
 
-    public void SetClientCertificateFromFile(java.lang.String fileName, java.lang.String password, java.lang.String keyStorageFlags) throws Throwable {
+    public void SetDefaultServiceCertificateFromFile(java.lang.String fileName, java.lang.String password, java.lang.String keyStorageFlags) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetClientCertificateFromFile", fileName, password, keyStorageFlags);
+            classInstance.Invoke("SetDefaultServiceCertificateFromFile", fileName, password, keyStorageFlags);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,11 +163,11 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
         }
     }
 
-    public void SetDefaultServiceCertificateFromFile(java.lang.String fileName, java.lang.String password, java.lang.String keyStorageFlags) throws Throwable {
+    public void SetIssuedToken(java.lang.String localIssuerAddres, java.lang.String localIssuerBindingType, java.lang.String localIssuerBinding) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetDefaultServiceCertificateFromFile", fileName, password, keyStorageFlags);
+            classInstance.Invoke("SetIssuedToken", localIssuerAddres, localIssuerBindingType, localIssuerBinding);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,11 +183,21 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
         }
     }
 
-    public void SetIssuedToken(java.lang.String localIssuerAddres, java.lang.String localIssuerBindingType, java.lang.String localIssuerBinding) throws Throwable {
+    public void SetUserNameCredential(java.lang.String userName, java.lang.String password) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetIssuedToken", localIssuerAddres, localIssuerBindingType, localIssuerBinding);
+            classInstance.Invoke("SetUserNameCredential", userName, password);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetWindowsCredential(java.lang.String domain, java.lang.String userName, java.lang.String password, int impersonationLevel, boolean allowNtlm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetWindowsCredential", domain, userName, password, impersonationLevel, allowNtlm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

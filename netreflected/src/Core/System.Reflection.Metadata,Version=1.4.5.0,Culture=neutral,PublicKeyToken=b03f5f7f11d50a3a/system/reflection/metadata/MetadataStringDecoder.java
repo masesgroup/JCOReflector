@@ -129,23 +129,23 @@ public class MetadataStringDecoder extends NetObject  {
     
     // Properties section
     
-    public Encoding getEncoding() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Encoding");
-            return new Encoding(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static MetadataStringDecoder getDefaultUTF8() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject val = (JCObject)classType.Get("DefaultUTF8");
             return new MetadataStringDecoder(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Encoding getEncoding() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Encoding");
+            return new Encoding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

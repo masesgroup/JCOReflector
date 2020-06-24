@@ -116,21 +116,11 @@ public class PageImageableArea extends NetObject  {
     
     // Properties section
     
-    public double getOriginWidth() throws Throwable {
+    public double getExtentHeight() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("OriginWidth");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getOriginHeight() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("OriginHeight");
+            return (double)classInstance.Get("ExtentHeight");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -146,11 +136,21 @@ public class PageImageableArea extends NetObject  {
         }
     }
 
-    public double getExtentHeight() throws Throwable {
+    public double getOriginHeight() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("ExtentHeight");
+            return (double)classInstance.Get("OriginHeight");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getOriginWidth() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("OriginWidth");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

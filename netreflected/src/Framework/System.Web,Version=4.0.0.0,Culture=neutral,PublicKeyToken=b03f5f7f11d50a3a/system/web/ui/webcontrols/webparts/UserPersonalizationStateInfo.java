@@ -128,11 +128,11 @@ public class UserPersonalizationStateInfo extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getUsername() throws Throwable {
+    public int getSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Username");
+            return (int)classInstance.Get("Size");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,16 +149,6 @@ public class UserPersonalizationStateInfo extends NetObject  {
         }
     }
 
-    public java.lang.String getPath() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Path");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DateTime getLastUpdatedDate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -170,11 +160,21 @@ public class UserPersonalizationStateInfo extends NetObject  {
         }
     }
 
-    public int getSize() throws Throwable {
+    public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Size");
+            return (java.lang.String)classInstance.Get("Path");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getUsername() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Username");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

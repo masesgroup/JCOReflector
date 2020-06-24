@@ -37,23 +37,23 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.io.Stream;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
+import system.runtime.remoting.channels.ITransportHeaders;
+import system.runtime.remoting.channels.ITransportHeadersImplementation;
 import system.runtime.remoting.messaging.IMessageCtrl;
 import system.runtime.remoting.messaging.IMessageCtrlImplementation;
 import system.runtime.remoting.messaging.IMessageSink;
 import system.runtime.remoting.messaging.IMessageSinkImplementation;
-import system.runtime.remoting.channels.ITransportHeaders;
-import system.runtime.remoting.channels.ITransportHeadersImplementation;
-import system.io.Stream;
 import system.runtime.remoting.channels.IClientChannelSinkStack;
 import system.runtime.remoting.channels.IClientChannelSinkStackImplementation;
 import system.runtime.remoting.channels.IClientResponseChannelSinkStack;
 import system.runtime.remoting.channels.IClientResponseChannelSinkStackImplementation;
-import system.runtime.remoting.channels.IClientChannelSink;
-import system.runtime.remoting.channels.IClientChannelSinkImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.runtime.remoting.channels.IClientChannelSink;
+import system.runtime.remoting.channels.IClientChannelSinkImplementation;
 
 
 /**
@@ -106,6 +106,8 @@ public interface IClientFormatterSink extends IJCOBridgeReflected {
 
     // Methods section
     
+    public Stream GetRequestStream(IMessage msg, ITransportHeaders headers) throws Throwable;
+
     public IMessage SyncProcessMessage(IMessage msg) throws Throwable;
 
     public IMessageCtrl AsyncProcessMessage(IMessage msg, IMessageSink replySink) throws Throwable;
@@ -114,17 +116,15 @@ public interface IClientFormatterSink extends IJCOBridgeReflected {
 
     public void AsyncProcessResponse(IClientResponseChannelSinkStack sinkStack, NetObject state, ITransportHeaders headers, Stream stream) throws Throwable;
 
-    public Stream GetRequestStream(IMessage msg, ITransportHeaders headers) throws Throwable;
-
 
     
     // Properties section
     
-    public IMessageSink getNextSink() throws Throwable;
+    public IDictionary getProperties() throws Throwable;
 
     public IClientChannelSink getNextChannelSink() throws Throwable;
 
-    public IDictionary getProperties() throws Throwable;
+    public IMessageSink getNextSink() throws Throwable;
 
 
 

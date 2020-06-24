@@ -89,13 +89,13 @@ public interface IConfigMapPath extends IJCOBridgeReflected {
 
     // Methods section
     
+    public java.lang.String GetAppPathForPath(java.lang.String siteID, java.lang.String path) throws Throwable;
+
     public java.lang.String GetMachineConfigFilename() throws Throwable;
 
     public java.lang.String GetRootWebConfigFilename() throws Throwable;
 
     public java.lang.String MapPath(java.lang.String siteID, java.lang.String path) throws Throwable;
-
-    public java.lang.String GetAppPathForPath(java.lang.String siteID, java.lang.String path) throws Throwable;
 
 
     

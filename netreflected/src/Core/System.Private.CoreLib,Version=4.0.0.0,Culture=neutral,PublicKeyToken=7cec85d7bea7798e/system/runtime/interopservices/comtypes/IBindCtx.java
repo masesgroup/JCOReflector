@@ -89,15 +89,15 @@ public interface IBindCtx extends IJCOBridgeReflected {
 
     // Methods section
     
+    public int RevokeObjectParam(java.lang.String pszKey) throws Throwable;
+
     public void RegisterObjectBound(NetObject punk) throws Throwable;
-
-    public void RevokeObjectBound(NetObject punk) throws Throwable;
-
-    public void ReleaseBoundObjects() throws Throwable;
 
     public void RegisterObjectParam(java.lang.String pszKey, NetObject punk) throws Throwable;
 
-    public int RevokeObjectParam(java.lang.String pszKey) throws Throwable;
+    public void ReleaseBoundObjects() throws Throwable;
+
+    public void RevokeObjectBound(NetObject punk) throws Throwable;
 
 
     

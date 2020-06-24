@@ -115,21 +115,21 @@ public class IPphManagerImplementation extends NetObject implements IPphManager 
         }
     }
 
-    public void StopProcessProtocolListenerChannel(java.lang.String protocolId, int listenerChannelId, boolean immediate) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("StopProcessProtocolListenerChannel", protocolId, listenerChannelId, immediate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void StopProcessProtocol(java.lang.String protocolId, boolean immediate) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopProcessProtocol", protocolId, immediate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void StopProcessProtocolListenerChannel(java.lang.String protocolId, int listenerChannelId, boolean immediate) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("StopProcessProtocolListenerChannel", protocolId, listenerChannelId, immediate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

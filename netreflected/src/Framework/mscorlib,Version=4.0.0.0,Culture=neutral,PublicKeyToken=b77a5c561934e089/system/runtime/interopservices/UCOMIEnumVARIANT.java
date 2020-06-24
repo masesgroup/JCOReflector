@@ -91,9 +91,9 @@ public interface UCOMIEnumVARIANT extends IJCOBridgeReflected {
     
     public int Next(int celt, int rgvar, int pceltFetched) throws Throwable;
 
-    public int Skip(int celt) throws Throwable;
-
     public int Reset() throws Throwable;
+
+    public int Skip(int celt) throws Throwable;
 
     public void Clone(int ppenum) throws Throwable;
 

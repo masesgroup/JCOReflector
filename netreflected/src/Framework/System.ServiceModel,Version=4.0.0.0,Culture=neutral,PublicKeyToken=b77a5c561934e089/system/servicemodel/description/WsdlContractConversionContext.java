@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.services.description.Operation;
-import system.servicemodel.description.OperationDescription;
-import system.web.services.description.OperationMessage;
-import system.servicemodel.description.MessageDescription;
-import system.web.services.description.OperationFault;
 import system.servicemodel.description.FaultDescription;
+import system.web.services.description.OperationFault;
+import system.servicemodel.description.MessageDescription;
+import system.web.services.description.OperationMessage;
+import system.servicemodel.description.OperationDescription;
+import system.web.services.description.Operation;
 import system.servicemodel.description.ContractDescription;
 import system.web.services.description.PortType;
 
@@ -120,45 +120,12 @@ public class WsdlContractConversionContext extends NetObject  {
     
     // Methods section
     
-    public Operation GetOperation(OperationDescription operation) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
+    public FaultDescription GetFaultDescription(OperationFault operationFault) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetOperation = (JCObject)classInstance.Invoke("GetOperation", operation == null ? null : operation.getJCOInstance());
-            return new Operation(objGetOperation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OperationMessage GetOperationMessage(MessageDescription message) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetOperationMessage = (JCObject)classInstance.Invoke("GetOperationMessage", message == null ? null : message.getJCOInstance());
-            return new OperationMessage(objGetOperationMessage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OperationFault GetOperationFault(FaultDescription fault) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetOperationFault = (JCObject)classInstance.Invoke("GetOperationFault", fault == null ? null : fault.getJCOInstance());
-            return new OperationFault(objGetOperationFault);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OperationDescription GetOperationDescription(Operation operation) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetOperationDescription = (JCObject)classInstance.Invoke("GetOperationDescription", operation == null ? null : operation.getJCOInstance());
-            return new OperationDescription(objGetOperationDescription);
+            JCObject objGetFaultDescription = (JCObject)classInstance.Invoke("GetFaultDescription", operationFault == null ? null : operationFault.getJCOInstance());
+            return new FaultDescription(objGetFaultDescription);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,12 +142,45 @@ public class WsdlContractConversionContext extends NetObject  {
         }
     }
 
-    public FaultDescription GetFaultDescription(OperationFault operationFault) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
+    public OperationDescription GetOperationDescription(Operation operation) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetFaultDescription = (JCObject)classInstance.Invoke("GetFaultDescription", operationFault == null ? null : operationFault.getJCOInstance());
-            return new FaultDescription(objGetFaultDescription);
+            JCObject objGetOperationDescription = (JCObject)classInstance.Invoke("GetOperationDescription", operation == null ? null : operation.getJCOInstance());
+            return new OperationDescription(objGetOperationDescription);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Operation GetOperation(OperationDescription operation) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetOperation = (JCObject)classInstance.Invoke("GetOperation", operation == null ? null : operation.getJCOInstance());
+            return new Operation(objGetOperation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public OperationFault GetOperationFault(FaultDescription fault) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetOperationFault = (JCObject)classInstance.Invoke("GetOperationFault", fault == null ? null : fault.getJCOInstance());
+            return new OperationFault(objGetOperationFault);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public OperationMessage GetOperationMessage(MessageDescription message) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetOperationMessage = (JCObject)classInstance.Invoke("GetOperationMessage", message == null ? null : message.getJCOInstance());
+            return new OperationMessage(objGetOperationMessage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

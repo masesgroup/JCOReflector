@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.printing.PrintTicket;
-import system.printing.PrintTicketScope;
 import system.printing.interop.BaseDevModeType;
+import system.printing.PrintTicketScope;
 
 
 /**
@@ -126,28 +126,6 @@ public class PrintTicketConverter extends NetObject  {
     
     // Methods section
     
-    public PrintTicket ConvertDevModeToPrintTicket(byte[] devMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", (Object)devMode);
-            return new PrintTicket(objConvertDevModeToPrintTicket);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PrintTicket ConvertDevModeToPrintTicket(byte[] devMode, PrintTicketScope scope) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", devMode, scope == null ? null : scope.getJCOInstance());
-            return new PrintTicket(objConvertDevModeToPrintTicket);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] ConvertPrintTicketToDevMode(PrintTicket printTicket, BaseDevModeType baseType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -181,6 +159,28 @@ public class PrintTicketConverter extends NetObject  {
 				resultingArray[indexConvertPrintTicketToDevMode] = (byte)resultingArrayList.get(indexConvertPrintTicketToDevMode);
             }
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PrintTicket ConvertDevModeToPrintTicket(byte[] devMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", (Object)devMode);
+            return new PrintTicket(objConvertDevModeToPrintTicket);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PrintTicket ConvertDevModeToPrintTicket(byte[] devMode, PrintTicketScope scope) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", devMode, scope == null ? null : scope.getJCOInstance());
+            return new PrintTicket(objConvertDevModeToPrintTicket);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

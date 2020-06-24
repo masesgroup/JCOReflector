@@ -89,9 +89,9 @@ public interface IDataSourceProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject GetSelectedDataSource() throws Throwable;
-
     public IEnumerable GetResolvedSelectedDataSource() throws Throwable;
+
+    public NetObject GetSelectedDataSource() throws Throwable;
 
 
     

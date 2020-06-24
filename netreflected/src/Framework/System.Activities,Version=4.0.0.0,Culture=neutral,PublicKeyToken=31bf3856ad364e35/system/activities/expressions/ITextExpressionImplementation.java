@@ -119,6 +119,16 @@ public class ITextExpressionImplementation extends NetObject implements ITextExp
     
     // Properties section
     
+    public boolean getRequiresCompilation() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("RequiresCompilation");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getExpressionText() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -134,16 +144,6 @@ public class ITextExpressionImplementation extends NetObject implements ITextExp
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Language");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getRequiresCompilation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("RequiresCompilation");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -175,21 +175,21 @@ public class SignatureDescription extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getKeyAlgorithm() throws Throwable {
+    public java.lang.String getDeformatterAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("KeyAlgorithm");
+            return (java.lang.String)classInstance.Get("DeformatterAlgorithm");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setKeyAlgorithm(java.lang.String KeyAlgorithm) throws Throwable {
+    public void setDeformatterAlgorithm(java.lang.String DeformatterAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("KeyAlgorithm", KeyAlgorithm);
+            classInstance.Set("DeformatterAlgorithm", DeformatterAlgorithm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,21 +235,21 @@ public class SignatureDescription extends NetObject  {
         }
     }
 
-    public java.lang.String getDeformatterAlgorithm() throws Throwable {
+    public java.lang.String getKeyAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("DeformatterAlgorithm");
+            return (java.lang.String)classInstance.Get("KeyAlgorithm");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDeformatterAlgorithm(java.lang.String DeformatterAlgorithm) throws Throwable {
+    public void setKeyAlgorithm(java.lang.String KeyAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("DeformatterAlgorithm", DeformatterAlgorithm);
+            classInstance.Set("KeyAlgorithm", KeyAlgorithm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

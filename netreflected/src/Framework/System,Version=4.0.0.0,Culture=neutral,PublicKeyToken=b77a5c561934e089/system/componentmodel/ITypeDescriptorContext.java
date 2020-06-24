@@ -94,9 +94,9 @@ public interface ITypeDescriptorContext extends IJCOBridgeReflected {
     
     public boolean OnComponentChanging() throws Throwable;
 
-    public void OnComponentChanged() throws Throwable;
-
     public NetObject GetService(NetType serviceType) throws Throwable;
+
+    public void OnComponentChanged() throws Throwable;
 
 
     
@@ -104,9 +104,9 @@ public interface ITypeDescriptorContext extends IJCOBridgeReflected {
     
     public IContainer getContainer() throws Throwable;
 
-    public NetObject getInstance() throws Throwable;
-
     public PropertyDescriptor getPropertyDescriptor() throws Throwable;
+
+    public NetObject getInstance() throws Throwable;
 
 
 

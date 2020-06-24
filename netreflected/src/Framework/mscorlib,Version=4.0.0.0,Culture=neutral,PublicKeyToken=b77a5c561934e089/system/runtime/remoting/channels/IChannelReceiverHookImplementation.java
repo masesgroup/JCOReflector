@@ -119,16 +119,6 @@ public class IChannelReceiverHookImplementation extends NetObject implements ICh
     
     // Properties section
     
-    public java.lang.String getChannelScheme() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ChannelScheme");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getWantsToListen() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,6 +135,16 @@ public class IChannelReceiverHookImplementation extends NetObject implements ICh
         try {
             JCObject val = (JCObject)classInstance.Get("ChannelSinkChain");
             return new IServerChannelSinkImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getChannelScheme() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ChannelScheme");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

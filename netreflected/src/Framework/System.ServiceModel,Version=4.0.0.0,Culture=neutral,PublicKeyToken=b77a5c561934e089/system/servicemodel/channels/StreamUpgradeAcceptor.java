@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.io.Stream;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.io.Stream;
 import system.AsyncCallback;
 
 
@@ -116,17 +116,6 @@ public class StreamUpgradeAcceptor extends NetObject  {
     
     // Methods section
     
-    public Stream AcceptUpgrade(Stream stream) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAcceptUpgrade = (JCObject)classInstance.Invoke("AcceptUpgrade", stream == null ? null : stream.getJCOInstance());
-            return new Stream(objAcceptUpgrade);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean CanUpgrade(java.lang.String contentType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -143,6 +132,17 @@ public class StreamUpgradeAcceptor extends NetObject  {
         try {
             JCObject objBeginAcceptUpgrade = (JCObject)classInstance.Invoke("BeginAcceptUpgrade", stream == null ? null : stream.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
             return new IAsyncResultImplementation(objBeginAcceptUpgrade);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Stream AcceptUpgrade(Stream stream) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAcceptUpgrade = (JCObject)classInstance.Invoke("AcceptUpgrade", stream == null ? null : stream.getJCOInstance());
+            return new Stream(objAcceptUpgrade);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

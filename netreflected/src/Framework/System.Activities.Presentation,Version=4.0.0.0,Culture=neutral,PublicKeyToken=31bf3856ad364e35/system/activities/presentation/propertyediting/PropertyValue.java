@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.presentation.propertyediting.PropertyEntry;
-import system.activities.presentation.propertyediting.PropertyValueSource;
 import system.activities.presentation.propertyediting.PropertyEntryCollection;
 import system.activities.presentation.propertyediting.PropertyValueCollection;
+import system.activities.presentation.propertyediting.PropertyValueSource;
 import system.componentmodel.PropertyChangedEventHandler;
 import system.EventHandler;
 
@@ -132,23 +132,31 @@ public class PropertyValue extends NetObject  {
     
     // Properties section
     
-    public PropertyEntry getParentProperty() throws Throwable {
+    public boolean getCanConvertFromString() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentProperty");
-            return new PropertyEntry(val);
+            return (boolean)classInstance.Get("CanConvertFromString");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PropertyValueSource getSource() throws Throwable {
+    public boolean getHasSubProperties() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Source");
-            return new PropertyValueSource(val);
+            return (boolean)classInstance.Get("HasSubProperties");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsCollection() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsCollection");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,11 +182,45 @@ public class PropertyValue extends NetObject  {
         }
     }
 
-    public boolean getCanConvertFromString() throws Throwable {
+    public PropertyEntry getParentProperty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CanConvertFromString");
+            JCObject val = (JCObject)classInstance.Get("ParentProperty");
+            return new PropertyEntry(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyEntryCollection getSubProperties() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SubProperties");
+            return new PropertyEntryCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyValueCollection getCollection() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Collection");
+            return new PropertyValueCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyValueSource getSource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Source");
+            return new PropertyValueSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,48 +262,6 @@ public class PropertyValue extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StringValue", StringValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getHasSubProperties() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("HasSubProperties");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyEntryCollection getSubProperties() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SubProperties");
-            return new PropertyEntryCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsCollection() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsCollection");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyValueCollection getCollection() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Collection");
-            return new PropertyValueCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

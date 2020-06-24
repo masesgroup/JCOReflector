@@ -38,15 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.io.Stream;
 import system.io.packaging.EncryptedPackageEnvelope;
 import system.security.rightsmanagement.PublishLicense;
 import system.security.rightsmanagement.CryptoProvider;
-import system.io.Stream;
 import system.io.FileAccess;
 import system.io.FileShare;
 import system.io.packaging.Package;
-import system.io.packaging.RightsManagementInformation;
 import system.io.packaging.PackageProperties;
+import system.io.packaging.RightsManagementInformation;
 import system.io.packaging.StorageInfo;
 
 
@@ -122,12 +122,21 @@ public class EncryptedPackageEnvelope extends NetObject  {
     
     // Methods section
     
-    public static EncryptedPackageEnvelope Create(java.lang.String envelopeFileName, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.io.IOException, system.io.FileNotFoundException, system.io.FileFormatException, system.RankException, system.io.InvalidDataException, system.xml.XmlException {
+    public static boolean IsEncryptedPackageEnvelope(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.io.FileFormatException, system.OutOfMemoryException, system.SystemException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", envelopeFileName, publishLicense == null ? null : publishLicense.getJCOInstance(), cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
-            return new EncryptedPackageEnvelope(objCreate);
+            return (boolean)classType.Invoke("IsEncryptedPackageEnvelope", stream == null ? null : stream.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean IsEncryptedPackageEnvelope(java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.security.SecurityException, system.io.FileNotFoundException, system.io.FileFormatException, system.OutOfMemoryException, system.SystemException, system.UnauthorizedAccessException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsEncryptedPackageEnvelope", fileName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,12 +153,12 @@ public class EncryptedPackageEnvelope extends NetObject  {
         }
     }
 
-    public static EncryptedPackageEnvelope CreateFromPackage(java.lang.String envelopeFileName, Stream packageStream, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.io.IOException, system.io.FileNotFoundException, system.io.FileFormatException, system.RankException, system.io.InvalidDataException, system.xml.XmlException {
+    public static EncryptedPackageEnvelope Create(java.lang.String envelopeFileName, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.io.IOException, system.io.FileNotFoundException, system.io.FileFormatException, system.RankException, system.io.InvalidDataException, system.xml.XmlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateFromPackage = (JCObject)classType.Invoke("CreateFromPackage", envelopeFileName, packageStream == null ? null : packageStream.getJCOInstance(), publishLicense == null ? null : publishLicense.getJCOInstance(), cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
-            return new EncryptedPackageEnvelope(objCreateFromPackage);
+            JCObject objCreate = (JCObject)classType.Invoke("Create", envelopeFileName, publishLicense == null ? null : publishLicense.getJCOInstance(), cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
+            return new EncryptedPackageEnvelope(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,6 +170,28 @@ public class EncryptedPackageEnvelope extends NetObject  {
         try {
             JCObject objCreateFromPackage = (JCObject)classType.Invoke("CreateFromPackage", envelopeStream == null ? null : envelopeStream.getJCOInstance(), packageStream == null ? null : packageStream.getJCOInstance(), publishLicense == null ? null : publishLicense.getJCOInstance(), cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
             return new EncryptedPackageEnvelope(objCreateFromPackage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static EncryptedPackageEnvelope CreateFromPackage(java.lang.String envelopeFileName, Stream packageStream, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.io.IOException, system.io.FileNotFoundException, system.io.FileFormatException, system.RankException, system.io.InvalidDataException, system.xml.XmlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateFromPackage = (JCObject)classType.Invoke("CreateFromPackage", envelopeFileName, packageStream == null ? null : packageStream.getJCOInstance(), publishLicense == null ? null : publishLicense.getJCOInstance(), cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
+            return new EncryptedPackageEnvelope(objCreateFromPackage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static EncryptedPackageEnvelope Open(Stream envelopeStream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.SecurityException, system.io.IOException, system.io.FileFormatException, system.io.DirectoryNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objOpen = (JCObject)classType.Invoke("Open", envelopeStream == null ? null : envelopeStream.getJCOInstance());
+            return new EncryptedPackageEnvelope(objOpen);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,42 +230,12 @@ public class EncryptedPackageEnvelope extends NetObject  {
         }
     }
 
-    public static EncryptedPackageEnvelope Open(Stream envelopeStream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.SecurityException, system.io.IOException, system.io.FileFormatException, system.io.DirectoryNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", envelopeStream == null ? null : envelopeStream.getJCOInstance());
-            return new EncryptedPackageEnvelope(objOpen);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsEncryptedPackageEnvelope(java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.security.SecurityException, system.io.FileNotFoundException, system.io.FileFormatException, system.OutOfMemoryException, system.SystemException, system.UnauthorizedAccessException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsEncryptedPackageEnvelope", fileName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsEncryptedPackageEnvelope(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.io.FileFormatException, system.OutOfMemoryException, system.SystemException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsEncryptedPackageEnvelope", stream == null ? null : stream.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Flush() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.io.IOException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException {
+    public Package GetPackage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.io.FileFormatException, system.NotSupportedException, system.io.InvalidDataException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Flush");
+            JCObject objGetPackage = (JCObject)classInstance.Invoke("GetPackage");
+            return new Package(objGetPackage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,12 +261,11 @@ public class EncryptedPackageEnvelope extends NetObject  {
         }
     }
 
-    public Package GetPackage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.io.FileFormatException, system.NotSupportedException, system.io.InvalidDataException, system.xml.XmlException {
+    public void Flush() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.io.IOException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPackage = (JCObject)classInstance.Invoke("GetPackage");
-            return new Package(objGetPackage);
+            classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,12 +275,12 @@ public class EncryptedPackageEnvelope extends NetObject  {
     
     // Properties section
     
-    public RightsManagementInformation getRightsManagementInformation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException {
+    public FileAccess getFileOpenAccess() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RightsManagementInformation");
-            return new RightsManagementInformation(val);
+            JCObject val = (JCObject)classInstance.Get("FileOpenAccess");
+            return new FileAccess(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,12 +297,12 @@ public class EncryptedPackageEnvelope extends NetObject  {
         }
     }
 
-    public FileAccess getFileOpenAccess() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException {
+    public RightsManagementInformation getRightsManagementInformation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("FileOpenAccess");
-            return new FileAccess(val);
+            JCObject val = (JCObject)classInstance.Get("RightsManagementInformation");
+            return new RightsManagementInformation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

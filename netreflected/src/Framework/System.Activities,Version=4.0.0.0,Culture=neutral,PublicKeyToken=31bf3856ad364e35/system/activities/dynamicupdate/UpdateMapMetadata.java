@@ -114,21 +114,11 @@ public class UpdateMapMetadata extends NetObject  {
     
     // Methods section
     
-    public void AddMatch(Activity updatedChild, Activity originalChild) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public boolean IsReferenceToImportedChild(Activity childActivity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddMatch", updatedChild == null ? null : updatedChild.getJCOInstance(), originalChild == null ? null : originalChild.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddMatch(Variable updatedVariable, Variable originalVariable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddMatch", updatedVariable == null ? null : updatedVariable.getJCOInstance(), originalVariable == null ? null : originalVariable.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsReferenceToImportedChild", childActivity == null ? null : childActivity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,11 +146,21 @@ public class UpdateMapMetadata extends NetObject  {
         }
     }
 
-    public boolean IsReferenceToImportedChild(Activity childActivity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void AddMatch(Activity updatedChild, Activity originalChild) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsReferenceToImportedChild", childActivity == null ? null : childActivity.getJCOInstance());
+            classInstance.Invoke("AddMatch", updatedChild == null ? null : updatedChild.getJCOInstance(), originalChild == null ? null : originalChild.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddMatch(Variable updatedVariable, Variable originalVariable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddMatch", updatedVariable == null ? null : updatedVariable.getJCOInstance(), originalVariable == null ? null : originalVariable.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

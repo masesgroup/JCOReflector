@@ -101,9 +101,9 @@ public interface IRepeatInfoUser extends IJCOBridgeReflected {
     
     // Properties section
     
-    public boolean getHasHeader() throws Throwable;
-
     public boolean getHasFooter() throws Throwable;
+
+    public boolean getHasHeader() throws Throwable;
 
     public boolean getHasSeparators() throws Throwable;
 

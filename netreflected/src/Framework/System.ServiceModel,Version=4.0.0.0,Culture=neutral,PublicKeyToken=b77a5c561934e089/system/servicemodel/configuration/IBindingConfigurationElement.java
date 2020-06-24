@@ -96,9 +96,9 @@ public interface IBindingConfigurationElement extends IJCOBridgeReflected {
     
     // Properties section
     
-    public TimeSpan getCloseTimeout() throws Throwable;
-
     public java.lang.String getName() throws Throwable;
+
+    public TimeSpan getCloseTimeout() throws Throwable;
 
     public TimeSpan getOpenTimeout() throws Throwable;
 

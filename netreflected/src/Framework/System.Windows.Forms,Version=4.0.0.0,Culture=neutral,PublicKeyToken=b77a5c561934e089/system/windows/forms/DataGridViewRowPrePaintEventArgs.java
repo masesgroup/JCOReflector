@@ -193,54 +193,21 @@ public class DataGridViewRowPrePaintEventArgs extends NetObject  {
     
     // Properties section
     
-    public Rectangle getClipBounds() throws Throwable {
+    public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ClipBounds");
-            return new Rectangle(val);
+            return (boolean)classInstance.Get("Handled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setClipBounds(Rectangle ClipBounds) throws Throwable {
+    public void setHandled(boolean Handled) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ClipBounds", ClipBounds == null ? null : ClipBounds.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getErrorText() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ErrorText");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Graphics getGraphics() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
-            return new Graphics(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DataGridViewCellStyle getInheritedRowStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InheritedRowStyle");
-            return new DataGridViewCellStyle(val);
+            classInstance.Set("Handled", Handled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,22 +233,43 @@ public class DataGridViewRowPrePaintEventArgs extends NetObject  {
         }
     }
 
-    public DataGridViewPaintParts getPaintParts() throws Throwable {
+    public int getRowIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PaintParts");
-            return new DataGridViewPaintParts(val);
+            return (int)classInstance.Get("RowIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setPaintParts(DataGridViewPaintParts PaintParts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public Graphics getGraphics() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("PaintParts", PaintParts == null ? null : PaintParts.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("Graphics");
+            return new Graphics(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Rectangle getClipBounds() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ClipBounds");
+            return new Rectangle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setClipBounds(Rectangle ClipBounds) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ClipBounds", ClipBounds == null ? null : ClipBounds.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,11 +286,22 @@ public class DataGridViewRowPrePaintEventArgs extends NetObject  {
         }
     }
 
-    public int getRowIndex() throws Throwable {
+    public java.lang.String getErrorText() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("RowIndex");
+            return (java.lang.String)classInstance.Get("ErrorText");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataGridViewCellStyle getInheritedRowStyle() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("InheritedRowStyle");
+            return new DataGridViewCellStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,21 +318,22 @@ public class DataGridViewRowPrePaintEventArgs extends NetObject  {
         }
     }
 
-    public boolean getHandled() throws Throwable {
+    public DataGridViewPaintParts getPaintParts() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Handled");
+            JCObject val = (JCObject)classInstance.Get("PaintParts");
+            return new DataGridViewPaintParts(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHandled(boolean Handled) throws Throwable {
+    public void setPaintParts(DataGridViewPaintParts PaintParts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Handled", Handled);
+            classInstance.Set("PaintParts", PaintParts == null ? null : PaintParts.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

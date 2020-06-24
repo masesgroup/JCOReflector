@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.principal.TokenImpersonationLevel;
 import system.net.NetworkCredential;
+import system.security.principal.TokenImpersonationLevel;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.identitymodel.tokens.SecurityKey;
 import system.DateTime;
@@ -114,21 +114,21 @@ public class SspiSecurityToken extends NetObject  {
     // Constructors section
     
 
-    public SspiSecurityToken(TokenImpersonationLevel impersonationLevel, boolean allowNtlm, NetworkCredential networkCredential) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(impersonationLevel == null ? null : impersonationLevel.getJCOInstance(), allowNtlm, networkCredential == null ? null : networkCredential.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SspiSecurityToken(NetworkCredential networkCredential, boolean extractGroupsForWindowsAccounts, boolean allowUnauthenticatedCallers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(networkCredential == null ? null : networkCredential.getJCOInstance(), extractGroupsForWindowsAccounts, allowUnauthenticatedCallers));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SspiSecurityToken(TokenImpersonationLevel impersonationLevel, boolean allowNtlm, NetworkCredential networkCredential) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(impersonationLevel == null ? null : impersonationLevel.getJCOInstance(), allowNtlm, networkCredential == null ? null : networkCredential.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,11 +163,31 @@ public class SspiSecurityToken extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public boolean getAllowNtlm() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            return (boolean)classInstance.Get("AllowNtlm");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getAllowUnauthenticatedCallers() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("AllowUnauthenticatedCallers");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getExtractGroupsForWindowsAccounts() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("ExtractGroupsForWindowsAccounts");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,11 +215,12 @@ public class SspiSecurityToken extends NetObject  {
         }
     }
 
-    public boolean getAllowUnauthenticatedCallers() throws Throwable {
+    public NetworkCredential getNetworkCredential() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("AllowUnauthenticatedCallers");
+            JCObject val = (JCObject)classInstance.Get("NetworkCredential");
+            return new NetworkCredential(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,32 +237,11 @@ public class SspiSecurityToken extends NetObject  {
         }
     }
 
-    public boolean getAllowNtlm() throws Throwable {
+    public java.lang.String getId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("AllowNtlm");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetworkCredential getNetworkCredential() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NetworkCredential");
-            return new NetworkCredential(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getExtractGroupsForWindowsAccounts() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ExtractGroupsForWindowsAccounts");
+            return (java.lang.String)classInstance.Get("Id");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

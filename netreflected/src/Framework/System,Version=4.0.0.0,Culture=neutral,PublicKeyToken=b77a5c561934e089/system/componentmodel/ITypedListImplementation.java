@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.PropertyDescriptorCollection;
+import system.componentmodel.PropertyDescriptor;
 
 
 /**
@@ -105,22 +105,22 @@ public class ITypedListImplementation extends NetObject implements ITypedList {
 
     // Methods section
     
-    public java.lang.String GetListName(PropertyDescriptor[] listAccessors) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetListName", (Object)toObjectFromArray(listAccessors));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetItemProperties = (JCObject)classInstance.Invoke("GetItemProperties", (Object)toObjectFromArray(listAccessors));
             return new PropertyDescriptorCollection(objGetItemProperties);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetListName(PropertyDescriptor[] listAccessors) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetListName", (Object)toObjectFromArray(listAccessors));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

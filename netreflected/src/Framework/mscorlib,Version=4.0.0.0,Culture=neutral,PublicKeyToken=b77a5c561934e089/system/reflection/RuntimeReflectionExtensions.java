@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.PropertyInfo;
 import system.reflection.EventInfo;
-import system.reflection.MethodInfo;
 import system.reflection.FieldInfo;
 import system.reflection.InterfaceMapping;
 import system.reflection.TypeInfo;
+import system.reflection.MethodInfo;
+import system.reflection.PropertyInfo;
 
 
 /**
@@ -118,34 +118,12 @@ public class RuntimeReflectionExtensions extends NetObject  {
     
     // Methods section
     
-    public static PropertyInfo GetRuntimeProperty(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetRuntimeProperty = (JCObject)classType.Invoke("GetRuntimeProperty", type == null ? null : type.getJCOInstance(), name);
-            return new PropertyInfo(objGetRuntimeProperty);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static EventInfo GetRuntimeEvent(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetRuntimeEvent = (JCObject)classType.Invoke("GetRuntimeEvent", type == null ? null : type.getJCOInstance(), name);
             return new EventInfo(objGetRuntimeEvent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MethodInfo GetRuntimeMethod(NetType type, java.lang.String name, NetType[] parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetRuntimeMethod = (JCObject)classType.Invoke("GetRuntimeMethod", type == null ? null : type.getJCOInstance(), name, toObjectFromArray(parameters));
-            return new MethodInfo(objGetRuntimeMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,6 +140,17 @@ public class RuntimeReflectionExtensions extends NetObject  {
         }
     }
 
+    public static InterfaceMapping GetRuntimeInterfaceMap(TypeInfo typeInfo, NetType interfaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetRuntimeInterfaceMap = (JCObject)classType.Invoke("GetRuntimeInterfaceMap", typeInfo == null ? null : typeInfo.getJCOInstance(), interfaceType == null ? null : interfaceType.getJCOInstance());
+            return new InterfaceMapping(objGetRuntimeInterfaceMap);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static MethodInfo GetRuntimeBaseDefinition(MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -173,12 +162,23 @@ public class RuntimeReflectionExtensions extends NetObject  {
         }
     }
 
-    public static InterfaceMapping GetRuntimeInterfaceMap(TypeInfo typeInfo, NetType interfaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
+    public static MethodInfo GetRuntimeMethod(NetType type, java.lang.String name, NetType[] parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetRuntimeInterfaceMap = (JCObject)classType.Invoke("GetRuntimeInterfaceMap", typeInfo == null ? null : typeInfo.getJCOInstance(), interfaceType == null ? null : interfaceType.getJCOInstance());
-            return new InterfaceMapping(objGetRuntimeInterfaceMap);
+            JCObject objGetRuntimeMethod = (JCObject)classType.Invoke("GetRuntimeMethod", type == null ? null : type.getJCOInstance(), name, toObjectFromArray(parameters));
+            return new MethodInfo(objGetRuntimeMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PropertyInfo GetRuntimeProperty(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetRuntimeProperty = (JCObject)classType.Invoke("GetRuntimeProperty", type == null ? null : type.getJCOInstance(), name);
+            return new PropertyInfo(objGetRuntimeProperty);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

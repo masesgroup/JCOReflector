@@ -104,21 +104,21 @@ public class ICriticalNotifyCompletionImplementation extends NetObject implement
 
     // Methods section
     
-    public void UnsafeOnCompleted(Action continuation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UnsafeOnCompleted", continuation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void OnCompleted(Action continuation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnCompleted", continuation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UnsafeOnCompleted(Action continuation) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UnsafeOnCompleted", continuation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

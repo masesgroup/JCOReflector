@@ -124,12 +124,11 @@ public class CatalogReflectionContextAttribute extends NetObject  {
     
     // Methods section
     
-    public ReflectionContext CreateReflectionContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException {
+    public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateReflectionContext = (JCObject)classInstance.Invoke("CreateReflectionContext");
-            return new ReflectionContext(objCreateReflectionContext);
+            return (boolean)classInstance.Invoke("IsDefaultAttribute");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,11 +144,12 @@ public class CatalogReflectionContextAttribute extends NetObject  {
         }
     }
 
-    public boolean IsDefaultAttribute() throws Throwable {
+    public ReflectionContext CreateReflectionContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            JCObject objCreateReflectionContext = (JCObject)classInstance.Invoke("CreateReflectionContext");
+            return new ReflectionContext(objCreateReflectionContext);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

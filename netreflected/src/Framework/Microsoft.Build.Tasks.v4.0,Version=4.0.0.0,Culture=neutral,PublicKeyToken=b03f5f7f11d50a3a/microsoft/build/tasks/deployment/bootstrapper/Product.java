@@ -140,11 +140,12 @@ public class Product extends NetObject  {
         }
     }
 
-    public java.lang.String getProductCode() throws Throwable {
+    public ProductCollection getIncludes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ProductCode");
+            JCObject val = (JCObject)classInstance.Get("Includes");
+            return new ProductCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,12 +161,11 @@ public class Product extends NetObject  {
         }
     }
 
-    public ProductCollection getIncludes() throws Throwable {
+    public java.lang.String getProductCode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Includes");
-            return new ProductCollection(val);
+            return (java.lang.String)classInstance.Get("ProductCode");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

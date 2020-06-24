@@ -37,15 +37,15 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.data.DataTable;
 import system.data.DataSet;
+import system.data.DataTable;
 import system.data.SchemaType;
 import system.data.IDataParameter;
 import system.data.IDataParameterImplementation;
-import system.data.MissingMappingAction;
-import system.data.MissingSchemaAction;
 import system.data.ITableMappingCollection;
 import system.data.ITableMappingCollectionImplementation;
+import system.data.MissingMappingAction;
+import system.data.MissingSchemaAction;
 
 
 /**
@@ -98,18 +98,20 @@ public interface IDataAdapter extends IJCOBridgeReflected {
 
     // Methods section
     
-    public DataTable[] FillSchema(DataSet dataSet, SchemaType schemaType) throws Throwable;
-
     public int Fill(DataSet dataSet) throws Throwable;
 
-    public IDataParameter[] GetFillParameters() throws Throwable;
-
     public int Update(DataSet dataSet) throws Throwable;
+
+    public DataTable[] FillSchema(DataSet dataSet, SchemaType schemaType) throws Throwable;
+
+    public IDataParameter[] GetFillParameters() throws Throwable;
 
 
     
     // Properties section
     
+    public ITableMappingCollection getTableMappings() throws Throwable;
+
     public MissingMappingAction getMissingMappingAction() throws Throwable;
 
     public void setMissingMappingAction(MissingMappingAction MissingMappingAction) throws Throwable;
@@ -117,8 +119,6 @@ public interface IDataAdapter extends IJCOBridgeReflected {
     public MissingSchemaAction getMissingSchemaAction() throws Throwable;
 
     public void setMissingSchemaAction(MissingSchemaAction MissingSchemaAction) throws Throwable;
-
-    public ITableMappingCollection getTableMappings() throws Throwable;
 
 
 

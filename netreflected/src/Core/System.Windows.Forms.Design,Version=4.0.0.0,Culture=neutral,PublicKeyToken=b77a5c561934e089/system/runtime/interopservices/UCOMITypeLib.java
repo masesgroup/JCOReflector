@@ -89,9 +89,9 @@ public interface UCOMITypeLib extends IJCOBridgeReflected {
 
     // Methods section
     
-    public int GetTypeInfoCount() throws Throwable;
-
     public boolean IsName(java.lang.String szNameBuf, int lHashVal) throws Throwable;
+
+    public int GetTypeInfoCount() throws Throwable;
 
 
     

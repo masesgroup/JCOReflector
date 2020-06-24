@@ -91,11 +91,11 @@ public interface UCOMIBindCtx extends IJCOBridgeReflected {
     
     public void RegisterObjectBound(NetObject punk) throws Throwable;
 
-    public void RevokeObjectBound(NetObject punk) throws Throwable;
+    public void RegisterObjectParam(java.lang.String pszKey, NetObject punk) throws Throwable;
 
     public void ReleaseBoundObjects() throws Throwable;
 
-    public void RegisterObjectParam(java.lang.String pszKey, NetObject punk) throws Throwable;
+    public void RevokeObjectBound(NetObject punk) throws Throwable;
 
     public void RevokeObjectParam(java.lang.String pszKey) throws Throwable;
 

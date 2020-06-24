@@ -141,22 +141,21 @@ public class WorkflowTrackingRecord extends NetObject  {
     
     // Properties section
     
-    public TrackingWorkflowEvent getTrackingWorkflowEvent() throws Throwable {
+    public int getEventOrder() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TrackingWorkflowEvent");
-            return new TrackingWorkflowEvent(val);
+            return (int)classInstance.Get("EventOrder");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTrackingWorkflowEvent(TrackingWorkflowEvent TrackingWorkflowEvent) throws Throwable {
+    public void setEventOrder(int EventOrder) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("TrackingWorkflowEvent", TrackingWorkflowEvent == null ? null : TrackingWorkflowEvent.getJCOInstance());
+            classInstance.Set("EventOrder", EventOrder);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,26 +177,6 @@ public class WorkflowTrackingRecord extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EventDateTime", EventDateTime == null ? null : EventDateTime.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getEventOrder() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("EventOrder");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEventOrder(int EventOrder) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EventOrder", EventOrder);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,6 +209,27 @@ public class WorkflowTrackingRecord extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Annotations");
             return new TrackingAnnotationCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TrackingWorkflowEvent getTrackingWorkflowEvent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TrackingWorkflowEvent");
+            return new TrackingWorkflowEvent(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTrackingWorkflowEvent(TrackingWorkflowEvent TrackingWorkflowEvent) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TrackingWorkflowEvent", TrackingWorkflowEvent == null ? null : TrackingWorkflowEvent.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

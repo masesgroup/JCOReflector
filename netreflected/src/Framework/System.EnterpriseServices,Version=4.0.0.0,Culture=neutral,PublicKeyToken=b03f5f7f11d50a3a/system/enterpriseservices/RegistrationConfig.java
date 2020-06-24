@@ -128,26 +128,6 @@ public class RegistrationConfig extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getAssemblyFile() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("AssemblyFile");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAssemblyFile(java.lang.String AssemblyFile) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AssemblyFile", AssemblyFile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public InstallationFlags getInstallationFlags() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -189,21 +169,41 @@ public class RegistrationConfig extends NetObject  {
         }
     }
 
-    public java.lang.String getTypeLibrary() throws Throwable {
+    public java.lang.String getApplicationRootDirectory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("TypeLibrary");
+            return (java.lang.String)classInstance.Get("ApplicationRootDirectory");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTypeLibrary(java.lang.String TypeLibrary) throws Throwable {
+    public void setApplicationRootDirectory(java.lang.String ApplicationRootDirectory) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("TypeLibrary", TypeLibrary);
+            classInstance.Set("ApplicationRootDirectory", ApplicationRootDirectory);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getAssemblyFile() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("AssemblyFile");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAssemblyFile(java.lang.String AssemblyFile) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AssemblyFile", AssemblyFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,21 +229,21 @@ public class RegistrationConfig extends NetObject  {
         }
     }
 
-    public java.lang.String getApplicationRootDirectory() throws Throwable {
+    public java.lang.String getTypeLibrary() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ApplicationRootDirectory");
+            return (java.lang.String)classInstance.Get("TypeLibrary");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setApplicationRootDirectory(java.lang.String ApplicationRootDirectory) throws Throwable {
+    public void setTypeLibrary(java.lang.String TypeLibrary) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ApplicationRootDirectory", ApplicationRootDirectory);
+            classInstance.Set("TypeLibrary", TypeLibrary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -90,9 +90,9 @@ public interface ISecurityEncodable extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void FromXml(SecurityElement e) throws Throwable;
-
     public SecurityElement ToXml() throws Throwable;
+
+    public void FromXml(SecurityElement e) throws Throwable;
 
 
     

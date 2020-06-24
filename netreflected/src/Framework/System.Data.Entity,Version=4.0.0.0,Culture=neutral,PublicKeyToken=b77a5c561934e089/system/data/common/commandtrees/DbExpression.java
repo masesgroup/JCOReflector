@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.common.commandtrees.DbExpressionVisitor;
 import system.data.common.commandtrees.DbExpression;
 import system.data.spatial.DbGeography;
 import system.data.spatial.DbGeometry;
-import system.data.metadata.edm.TypeUsage;
+import system.data.common.commandtrees.DbExpressionVisitor;
 import system.data.common.commandtrees.DbExpressionKind;
+import system.data.metadata.edm.TypeUsage;
 
 
 /**
@@ -118,16 +118,6 @@ public class DbExpression extends NetObject  {
     
     // Methods section
     
-    public void Accept(DbExpressionVisitor visitor) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Accept", visitor == null ? null : visitor.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static DbExpression FromBinary(byte[] value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -172,27 +162,37 @@ public class DbExpression extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public TypeUsage getResultType() throws Throwable {
+    public void Accept(DbExpressionVisitor visitor) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ResultType");
-            return new TypeUsage(val);
+            classInstance.Invoke("Accept", visitor == null ? null : visitor.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public DbExpressionKind getExpressionKind() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ExpressionKind");
             return new DbExpressionKind(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeUsage getResultType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ResultType");
+            return new TypeUsage(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

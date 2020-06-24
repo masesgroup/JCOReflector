@@ -114,22 +114,22 @@ public class XName extends NetObject  {
     
     // Methods section
     
-    public static XName Get(java.lang.String localName, java.lang.String namespaceName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static XName Get(java.lang.String expandedName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGet = (JCObject)classType.Invoke("Get", localName, namespaceName);
+            JCObject objGet = (JCObject)classType.Invoke("Get", expandedName);
             return new XName(objGet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static XName Get(java.lang.String expandedName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException {
+    public static XName Get(java.lang.String localName, java.lang.String namespaceName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGet = (JCObject)classType.Invoke("Get", expandedName);
+            JCObject objGet = (JCObject)classType.Invoke("Get", localName, namespaceName);
             return new XName(objGet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -150,22 +150,22 @@ public class XName extends NetObject  {
         }
     }
 
+    public java.lang.String getNamespaceName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("NamespaceName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XNamespace getNamespace() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Namespace");
             return new XNamespace(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getNamespaceName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("NamespaceName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -116,21 +116,21 @@ public class IPGlobalStatistics extends NetObject  {
     
     // Properties section
     
-    public int getDefaultTtl() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("DefaultTtl");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getForwardingEnabled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("ForwardingEnabled");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getDefaultTtl() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("DefaultTtl");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,6 +151,16 @@ public class IPGlobalStatistics extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("NumberOfIPAddresses");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getNumberOfRoutes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("NumberOfRoutes");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,16 +331,6 @@ public class IPGlobalStatistics extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (long)classInstance.Get("ReceivedPacketsWithUnknownProtocol");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getNumberOfRoutes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("NumberOfRoutes");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

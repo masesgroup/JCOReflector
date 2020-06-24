@@ -89,9 +89,9 @@ public interface IProcessHostSupportFunctions extends IJCOBridgeReflected {
 
     // Methods section
     
-    public java.lang.String GetRootWebConfigFilename() throws Throwable;
-
     public java.lang.String GetAppHostConfigFilename() throws Throwable;
+
+    public java.lang.String GetRootWebConfigFilename() throws Throwable;
 
 
     

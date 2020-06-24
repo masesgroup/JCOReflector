@@ -129,22 +129,22 @@ public class AsyncContentLoadedEventArgs extends NetObject  {
     
     // Properties section
     
+    public double getPercentComplete() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("PercentComplete");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AsyncContentLoadedState getAsyncContentLoadedState() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("AsyncContentLoadedState");
             return new AsyncContentLoadedState(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getPercentComplete() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("PercentComplete");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -161,99 +161,11 @@ public class Cursors extends NetObject  {
         }
     }
 
-    public static Cursor getIBeam() throws Throwable {
+    public static Cursor getHand() throws Throwable, system.NotImplementedException, system.OverflowException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("IBeam");
-            return new Cursor(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Cursor getNo() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("No");
-            return new Cursor(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Cursor getSizeAll() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("SizeAll");
-            return new Cursor(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Cursor getSizeNESW() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("SizeNESW");
-            return new Cursor(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Cursor getSizeNS() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("SizeNS");
-            return new Cursor(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Cursor getSizeNWSE() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("SizeNWSE");
-            return new Cursor(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Cursor getSizeWE() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("SizeWE");
-            return new Cursor(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Cursor getUpArrow() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("UpArrow");
-            return new Cursor(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Cursor getWaitCursor() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("WaitCursor");
+            JCObject val = (JCObject)classType.Get("Hand");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,11 +194,22 @@ public class Cursors extends NetObject  {
         }
     }
 
-    public static Cursor getVSplit() throws Throwable, system.NotImplementedException, system.OverflowException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static Cursor getIBeam() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("VSplit");
+            JCObject val = (JCObject)classType.Get("IBeam");
+            return new Cursor(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Cursor getNo() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("No");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -414,11 +337,88 @@ public class Cursors extends NetObject  {
         }
     }
 
-    public static Cursor getHand() throws Throwable, system.NotImplementedException, system.OverflowException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static Cursor getSizeAll() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Hand");
+            JCObject val = (JCObject)classType.Get("SizeAll");
+            return new Cursor(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Cursor getSizeNESW() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("SizeNESW");
+            return new Cursor(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Cursor getSizeNS() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("SizeNS");
+            return new Cursor(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Cursor getSizeNWSE() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("SizeNWSE");
+            return new Cursor(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Cursor getSizeWE() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("SizeWE");
+            return new Cursor(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Cursor getUpArrow() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("UpArrow");
+            return new Cursor(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Cursor getVSplit() throws Throwable, system.NotImplementedException, system.OverflowException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("VSplit");
+            return new Cursor(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Cursor getWaitCursor() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("WaitCursor");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

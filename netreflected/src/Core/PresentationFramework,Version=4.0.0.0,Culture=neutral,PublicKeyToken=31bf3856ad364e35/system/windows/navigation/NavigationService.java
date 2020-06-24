@@ -38,17 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Uri;
+import system.windows.navigation.JournalEntry;
 import system.windows.navigation.NavigationService;
 import system.windows.DependencyObject;
 import system.windows.navigation.CustomContentState;
-import system.windows.navigation.JournalEntry;
-import system.Uri;
-import system.windows.navigation.NavigationFailedEventHandler;
-import system.windows.navigation.NavigatingCancelEventHandler;
-import system.windows.navigation.NavigatedEventHandler;
-import system.windows.navigation.NavigationProgressEventHandler;
-import system.windows.navigation.LoadCompletedEventHandler;
 import system.windows.navigation.FragmentNavigationEventHandler;
+import system.windows.navigation.LoadCompletedEventHandler;
+import system.windows.navigation.NavigatedEventHandler;
+import system.windows.navigation.NavigatingCancelEventHandler;
+import system.windows.navigation.NavigationFailedEventHandler;
+import system.windows.navigation.NavigationProgressEventHandler;
 import system.windows.navigation.NavigationStoppedEventHandler;
 
 
@@ -124,33 +124,21 @@ public class NavigationService extends NetObject  {
     
     // Methods section
     
-    public static NavigationService GetNavigationService(DependencyObject dependencyObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean Navigate(NetObject root) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.UriFormatException, system.RankException, system.SystemException, system.MulticastNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetNavigationService = (JCObject)classType.Invoke("GetNavigationService", dependencyObject == null ? null : dependencyObject.getJCOInstance());
-            return new NavigationService(objGetNavigationService);
+            return (boolean)classInstance.Invoke("Navigate", root == null ? null : root.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void AddBackEntry(CustomContentState state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.io.IOException, system.SystemException, system.NotSupportedException, system.IndexOutOfRangeException, system.UriFormatException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
+    public boolean Navigate(NetObject root, NetObject navigationState) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.UriFormatException, system.RankException, system.SystemException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.OverflowException, system.TimeoutException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddBackEntry", state == null ? null : state.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public JournalEntry RemoveBackEntry() throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRemoveBackEntry = (JCObject)classInstance.Invoke("RemoveBackEntry");
-            return new JournalEntry(objRemoveBackEntry);
+            return (boolean)classInstance.Invoke("Navigate", root == null ? null : root.getJCOInstance(), navigationState == null ? null : navigationState.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,16 +149,6 @@ public class NavigationService extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Navigate", source == null ? null : source.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Navigate(NetObject root) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.UriFormatException, system.RankException, system.SystemException, system.MulticastNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Navigate", root == null ? null : root.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,21 +174,33 @@ public class NavigationService extends NetObject  {
         }
     }
 
-    public boolean Navigate(NetObject root, NetObject navigationState) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.UriFormatException, system.RankException, system.SystemException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.OverflowException, system.TimeoutException {
+    public JournalEntry RemoveBackEntry() throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Navigate", root == null ? null : root.getJCOInstance(), navigationState == null ? null : navigationState.getJCOInstance());
+            JCObject objRemoveBackEntry = (JCObject)classInstance.Invoke("RemoveBackEntry");
+            return new JournalEntry(objRemoveBackEntry);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void GoForward() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.RankException, system.NotSupportedException {
+    public static NavigationService GetNavigationService(DependencyObject dependencyObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetNavigationService = (JCObject)classType.Invoke("GetNavigationService", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            return new NavigationService(objGetNavigationService);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddBackEntry(CustomContentState state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.io.IOException, system.SystemException, system.NotSupportedException, system.IndexOutOfRangeException, system.UriFormatException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GoForward");
+            classInstance.Invoke("AddBackEntry", state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,11 +216,11 @@ public class NavigationService extends NetObject  {
         }
     }
 
-    public void StopLoading() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.InvalidCastException, system.UriFormatException, system.FormatException, system.RankException {
+    public void GoForward() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.RankException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("StopLoading");
+            classInstance.Invoke("GoForward");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,37 +236,35 @@ public class NavigationService extends NetObject  {
         }
     }
 
+    public void StopLoading() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.InvalidCastException, system.UriFormatException, system.FormatException, system.RankException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("StopLoading");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public Uri getSource() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
+    public boolean getCanGoBack() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Source");
-            return new Uri(val);
+            return (boolean)classInstance.Get("CanGoBack");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSource(Uri Source) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.UriFormatException, system.OutOfMemoryException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.RankException, system.SystemException, system.MulticastNotSupportedException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException {
+    public boolean getCanGoForward() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Source", Source == null ? null : Source.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Uri getCurrentSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CurrentSource");
-            return new Uri(val);
+            return (boolean)classInstance.Get("CanGoForward");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,21 +291,33 @@ public class NavigationService extends NetObject  {
         }
     }
 
-    public boolean getCanGoForward() throws Throwable, system.ArgumentOutOfRangeException {
+    public Uri getCurrentSource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CanGoForward");
+            JCObject val = (JCObject)classInstance.Get("CurrentSource");
+            return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getCanGoBack() throws Throwable, system.ArgumentOutOfRangeException {
+    public Uri getSource() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CanGoBack");
+            JCObject val = (JCObject)classInstance.Get("Source");
+            return new Uri(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSource(Uri Source) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.UriFormatException, system.OutOfMemoryException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.RankException, system.SystemException, system.MulticastNotSupportedException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Source", Source == null ? null : Source.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,81 +328,21 @@ public class NavigationService extends NetObject  {
     // Instance Events section
     
 
-    public void addNavigationFailed(NavigationFailedEventHandler handler) throws Throwable {
+    public void addFragmentNavigation(FragmentNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("NavigationFailed", handler);
+            classInstance.RegisterEventListener("FragmentNavigation", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeNavigationFailed(NavigationFailedEventHandler handler) throws Throwable {
+    public void removeFragmentNavigation(FragmentNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("NavigationFailed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addNavigating(NavigatingCancelEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Navigating", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeNavigating(NavigatingCancelEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Navigating", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addNavigated(NavigatedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Navigated", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeNavigated(NavigatedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Navigated", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addNavigationProgress(NavigationProgressEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("NavigationProgress", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeNavigationProgress(NavigationProgressEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("NavigationProgress", handler);
+            classInstance.UnregisterEventListener("FragmentNavigation", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,21 +368,81 @@ public class NavigationService extends NetObject  {
         }
     }
 
-    public void addFragmentNavigation(FragmentNavigationEventHandler handler) throws Throwable {
+    public void addNavigated(NavigatedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("FragmentNavigation", handler);
+            classInstance.RegisterEventListener("Navigated", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeFragmentNavigation(FragmentNavigationEventHandler handler) throws Throwable {
+    public void removeNavigated(NavigatedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("FragmentNavigation", handler);
+            classInstance.UnregisterEventListener("Navigated", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addNavigating(NavigatingCancelEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Navigating", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeNavigating(NavigatingCancelEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Navigating", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addNavigationFailed(NavigationFailedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("NavigationFailed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeNavigationFailed(NavigationFailedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("NavigationFailed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addNavigationProgress(NavigationProgressEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("NavigationProgress", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeNavigationProgress(NavigationProgressEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("NavigationProgress", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -127,41 +127,21 @@ public class JumpTask extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getTitle() throws Throwable {
+    public int getIconResourceIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Title");
+            return (int)classInstance.Get("IconResourceIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTitle(java.lang.String Title) throws Throwable {
+    public void setIconResourceIndex(int IconResourceIndex) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Title", Title);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDescription(java.lang.String Description) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Description", Description);
+            classInstance.Set("IconResourceIndex", IconResourceIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,21 +187,41 @@ public class JumpTask extends NetObject  {
         }
     }
 
-    public java.lang.String getWorkingDirectory() throws Throwable {
+    public java.lang.String getCustomCategory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("WorkingDirectory");
+            return (java.lang.String)classInstance.Get("CustomCategory");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setWorkingDirectory(java.lang.String WorkingDirectory) throws Throwable {
+    public void setCustomCategory(java.lang.String CustomCategory) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("WorkingDirectory", WorkingDirectory);
+            classInstance.Set("CustomCategory", CustomCategory);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getDescription() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Description");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDescription(java.lang.String Description) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,41 +247,41 @@ public class JumpTask extends NetObject  {
         }
     }
 
-    public int getIconResourceIndex() throws Throwable {
+    public java.lang.String getTitle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("IconResourceIndex");
+            return (java.lang.String)classInstance.Get("Title");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIconResourceIndex(int IconResourceIndex) throws Throwable {
+    public void setTitle(java.lang.String Title) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IconResourceIndex", IconResourceIndex);
+            classInstance.Set("Title", Title);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getCustomCategory() throws Throwable {
+    public java.lang.String getWorkingDirectory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("CustomCategory");
+            return (java.lang.String)classInstance.Get("WorkingDirectory");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCustomCategory(java.lang.String CustomCategory) throws Throwable {
+    public void setWorkingDirectory(java.lang.String WorkingDirectory) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("CustomCategory", CustomCategory);
+            classInstance.Set("WorkingDirectory", WorkingDirectory);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

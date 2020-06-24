@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.SecurityZone;
-import system.security.policy.Zone;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
 import system.security.policy.Evidence;
 import system.security.policy.EvidenceBase;
+import system.security.policy.Zone;
 
 
 /**
@@ -129,12 +129,12 @@ public class Zone extends NetObject  {
     
     // Methods section
     
-    public static Zone CreateFromUrl(java.lang.String url) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetObject Copy() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateFromUrl = (JCObject)classType.Invoke("CreateFromUrl", url);
-            return new Zone(objCreateFromUrl);
+            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            return new NetObject(objCopy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,12 +162,12 @@ public class Zone extends NetObject  {
         }
     }
 
-    public NetObject Copy() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Zone CreateFromUrl(java.lang.String url) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
-            return new NetObject(objCopy);
+            JCObject objCreateFromUrl = (JCObject)classType.Invoke("CreateFromUrl", url);
+            return new Zone(objCreateFromUrl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

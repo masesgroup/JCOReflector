@@ -117,6 +117,26 @@ public class XmlNodeEventArgs extends NetObject  {
     
     // Properties section
     
+    public int getLineNumber() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("LineNumber");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getLinePosition() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("LinePosition");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject getObjectBeingDeserialized() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -128,12 +148,11 @@ public class XmlNodeEventArgs extends NetObject  {
         }
     }
 
-    public XmlNodeType getNodeType() throws Throwable {
+    public java.lang.String getLocalName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NodeType");
-            return new XmlNodeType(val);
+            return (java.lang.String)classInstance.Get("LocalName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,16 +163,6 @@ public class XmlNodeEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getLocalName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("LocalName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,21 +188,12 @@ public class XmlNodeEventArgs extends NetObject  {
         }
     }
 
-    public int getLineNumber() throws Throwable {
+    public XmlNodeType getNodeType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("LineNumber");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getLinePosition() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("LinePosition");
+            JCObject val = (JCObject)classInstance.Get("NodeType");
+            return new XmlNodeType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

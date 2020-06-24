@@ -127,12 +127,11 @@ public class KeyContainerPermissionAttribute extends NetObject  {
     
     // Methods section
     
-    public IPermission CreatePermission() throws Throwable {
+    public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
-            return new IPermissionImplementation(objCreatePermission);
+            return (boolean)classInstance.Invoke("IsDefaultAttribute");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,11 +147,12 @@ public class KeyContainerPermissionAttribute extends NetObject  {
         }
     }
 
-    public boolean IsDefaultAttribute() throws Throwable {
+    public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            return new IPermissionImplementation(objCreatePermission);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,41 +162,41 @@ public class KeyContainerPermissionAttribute extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getKeyStore() throws Throwable {
+    public boolean getUnrestricted() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("KeyStore");
+            return (boolean)classInstance.Get("Unrestricted");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setKeyStore(java.lang.String KeyStore) throws Throwable {
+    public void setUnrestricted(boolean Unrestricted) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("KeyStore", KeyStore);
+            classInstance.Set("Unrestricted", Unrestricted);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getProviderName() throws Throwable {
+    public int getKeySpec() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ProviderName");
+            return (int)classInstance.Get("KeySpec");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setProviderName(java.lang.String ProviderName) throws Throwable {
+    public void setKeySpec(int KeySpec) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ProviderName", ProviderName);
+            classInstance.Set("KeySpec", KeySpec);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,41 +222,12 @@ public class KeyContainerPermissionAttribute extends NetObject  {
         }
     }
 
-    public java.lang.String getKeyContainerName() throws Throwable {
+    public NetObject getTypeId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("KeyContainerName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setKeyContainerName(java.lang.String KeyContainerName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("KeyContainerName", KeyContainerName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getKeySpec() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("KeySpec");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setKeySpec(int KeySpec) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("KeySpec", KeySpec);
+            JCObject val = (JCObject)classInstance.Get("TypeId");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,32 +275,61 @@ public class KeyContainerPermissionAttribute extends NetObject  {
         }
     }
 
-    public boolean getUnrestricted() throws Throwable {
+    public java.lang.String getKeyContainerName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Unrestricted");
+            return (java.lang.String)classInstance.Get("KeyContainerName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUnrestricted(boolean Unrestricted) throws Throwable {
+    public void setKeyContainerName(java.lang.String KeyContainerName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Unrestricted", Unrestricted);
+            classInstance.Set("KeyContainerName", KeyContainerName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject getTypeId() throws Throwable {
+    public java.lang.String getKeyStore() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
+            return (java.lang.String)classInstance.Get("KeyStore");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setKeyStore(java.lang.String KeyStore) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("KeyStore", KeyStore);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getProviderName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ProviderName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setProviderName(java.lang.String ProviderName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ProviderName", ProviderName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

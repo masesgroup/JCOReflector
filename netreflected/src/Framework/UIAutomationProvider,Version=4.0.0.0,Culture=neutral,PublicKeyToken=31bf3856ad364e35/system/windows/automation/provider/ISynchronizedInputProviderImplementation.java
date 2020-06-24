@@ -104,21 +104,21 @@ public class ISynchronizedInputProviderImplementation extends NetObject implemen
 
     // Methods section
     
-    public void StartListening(SynchronizedInputType inputType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("StartListening", inputType == null ? null : inputType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Cancel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void StartListening(SynchronizedInputType inputType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("StartListening", inputType == null ? null : inputType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

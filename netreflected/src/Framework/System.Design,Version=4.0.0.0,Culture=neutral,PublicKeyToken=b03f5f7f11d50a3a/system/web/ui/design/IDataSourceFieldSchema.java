@@ -93,25 +93,25 @@ public interface IDataSourceFieldSchema extends IJCOBridgeReflected {
     
     // Properties section
     
-    public NetType getDataType() throws Throwable;
-
     public boolean getIdentity() throws Throwable;
 
     public boolean getIsReadOnly() throws Throwable;
 
     public boolean getIsUnique() throws Throwable;
 
-    public int getLength() throws Throwable;
-
-    public java.lang.String getName() throws Throwable;
-
     public boolean getNullable() throws Throwable;
-
-    public int getPrecision() throws Throwable;
 
     public boolean getPrimaryKey() throws Throwable;
 
+    public int getLength() throws Throwable;
+
+    public int getPrecision() throws Throwable;
+
     public int getScale() throws Throwable;
+
+    public java.lang.String getName() throws Throwable;
+
+    public NetType getDataType() throws Throwable;
 
 
 

@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.IListSource;
+import system.componentmodel.IListSourceImplementation;
 import system.data.DataTable;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.componentmodel.PropertyDescriptorCollection;
-import system.componentmodel.IListSource;
-import system.componentmodel.IListSourceImplementation;
 
 
 /**
@@ -118,6 +118,72 @@ public class DesignTimeData extends NetObject  {
     
     // Methods section
     
+    public static IEnumerable GetDataMember(IListSource dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetDataMember = (JCObject)classType.Invoke("GetDataMember", dataSource == null ? null : dataSource.getJCOInstance(), dataMember);
+            return new IEnumerableImplementation(objGetDataMember);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable GetDesignTimeDataSource(DataTable dataTable, int minimumRows) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.InvalidTimeZoneException, system.OverflowException, system.data.DataException, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetDesignTimeDataSource = (JCObject)classType.Invoke("GetDesignTimeDataSource", dataTable == null ? null : dataTable.getJCOInstance(), minimumRows);
+            return new IEnumerableImplementation(objGetDesignTimeDataSource);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable GetSelectedDataSource(IComponent component, java.lang.String dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetSelectedDataSource = (JCObject)classType.Invoke("GetSelectedDataSource", component == null ? null : component.getJCOInstance(), dataSource, dataMember);
+            return new IEnumerableImplementation(objGetSelectedDataSource);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PropertyDescriptorCollection GetDataFields(IEnumerable dataSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetDataFields = (JCObject)classType.Invoke("GetDataFields", dataSource == null ? null : dataSource.getJCOInstance());
+            return new PropertyDescriptorCollection(objGetDataFields);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DataTable CreateDummyDataBoundDataTable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateDummyDataBoundDataTable = (JCObject)classType.Invoke("CreateDummyDataBoundDataTable");
+            return new DataTable(objCreateDummyDataBoundDataTable);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DataTable CreateDummyDataTable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateDummyDataTable = (JCObject)classType.Invoke("CreateDummyDataTable");
+            return new DataTable(objCreateDummyDataTable);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DataTable CreateSampleDataTable(IEnumerable referenceData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.data.DataException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -151,50 +217,6 @@ public class DesignTimeData extends NetObject  {
         }
     }
 
-    public static IEnumerable GetSelectedDataSource(IComponent component, java.lang.String dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetSelectedDataSource = (JCObject)classType.Invoke("GetSelectedDataSource", component == null ? null : component.getJCOInstance(), dataSource, dataMember);
-            return new IEnumerableImplementation(objGetSelectedDataSource);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DataTable CreateDummyDataTable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateDummyDataTable = (JCObject)classType.Invoke("CreateDummyDataTable");
-            return new DataTable(objCreateDummyDataTable);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DataTable CreateDummyDataBoundDataTable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateDummyDataBoundDataTable = (JCObject)classType.Invoke("CreateDummyDataBoundDataTable");
-            return new DataTable(objCreateDummyDataBoundDataTable);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static PropertyDescriptorCollection GetDataFields(IEnumerable dataSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetDataFields = (JCObject)classType.Invoke("GetDataFields", dataSource == null ? null : dataSource.getJCOInstance());
-            return new PropertyDescriptorCollection(objGetDataFields);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static java.lang.String[] GetDataMembers(NetObject dataSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.RankException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -209,28 +231,6 @@ public class DesignTimeData extends NetObject  {
 				resultingArray[indexGetDataMembers] = (java.lang.String)resultingArrayList.get(indexGetDataMembers);
             }
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static IEnumerable GetDataMember(IListSource dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetDataMember = (JCObject)classType.Invoke("GetDataMember", dataSource == null ? null : dataSource.getJCOInstance(), dataMember);
-            return new IEnumerableImplementation(objGetDataMember);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static IEnumerable GetDesignTimeDataSource(DataTable dataTable, int minimumRows) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.InvalidTimeZoneException, system.OverflowException, system.data.DataException, system.MulticastNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetDesignTimeDataSource = (JCObject)classType.Invoke("GetDesignTimeDataSource", dataTable == null ? null : dataTable.getJCOInstance(), minimumRows);
-            return new IEnumerableImplementation(objGetDesignTimeDataSource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

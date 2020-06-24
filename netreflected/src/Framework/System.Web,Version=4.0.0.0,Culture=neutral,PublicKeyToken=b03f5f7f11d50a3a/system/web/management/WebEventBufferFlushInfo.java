@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.management.WebBaseEventCollection;
 import system.DateTime;
 import system.web.management.EventNotificationType;
+import system.web.management.WebBaseEventCollection;
 
 
 /**
@@ -119,28 +119,6 @@ public class WebEventBufferFlushInfo extends NetObject  {
     
     // Properties section
     
-    public WebBaseEventCollection getEvents() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Events");
-            return new WebBaseEventCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getLastNotificationUtc() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LastNotificationUtc");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getEventsDiscardedSinceLastNotification() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -171,12 +149,34 @@ public class WebEventBufferFlushInfo extends NetObject  {
         }
     }
 
+    public DateTime getLastNotificationUtc() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("LastNotificationUtc");
+            return new DateTime(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EventNotificationType getNotificationType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("NotificationType");
             return new EventNotificationType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WebBaseEventCollection getEvents() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Events");
+            return new WebBaseEventCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

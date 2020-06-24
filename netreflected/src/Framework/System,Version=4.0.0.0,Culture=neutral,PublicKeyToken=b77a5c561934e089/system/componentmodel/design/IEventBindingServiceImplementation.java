@@ -111,11 +111,31 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
 
     // Methods section
     
-    public java.lang.String CreateUniqueMethodName(IComponent component, EventDescriptor e) throws Throwable {
+    public boolean ShowCode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("CreateUniqueMethodName", component == null ? null : component.getJCOInstance(), e == null ? null : e.getJCOInstance());
+            return (boolean)classInstance.Invoke("ShowCode");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean ShowCode(int lineNumber) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ShowCode", lineNumber);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean ShowCode(IComponent component, EventDescriptor e) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ShowCode", component == null ? null : component.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,17 +163,6 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
         }
     }
 
-    public PropertyDescriptorCollection GetEventProperties(EventDescriptorCollection events) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEventProperties = (JCObject)classInstance.Invoke("GetEventProperties", events == null ? null : events.getJCOInstance());
-            return new PropertyDescriptorCollection(objGetEventProperties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PropertyDescriptor GetEventProperty(EventDescriptor e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -165,31 +174,22 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
         }
     }
 
-    public boolean ShowCode() throws Throwable {
+    public PropertyDescriptorCollection GetEventProperties(EventDescriptorCollection events) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("ShowCode");
+            JCObject objGetEventProperties = (JCObject)classInstance.Invoke("GetEventProperties", events == null ? null : events.getJCOInstance());
+            return new PropertyDescriptorCollection(objGetEventProperties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean ShowCode(int lineNumber) throws Throwable {
+    public java.lang.String CreateUniqueMethodName(IComponent component, EventDescriptor e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("ShowCode", lineNumber);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean ShowCode(IComponent component, EventDescriptor e) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ShowCode", component == null ? null : component.getJCOInstance(), e == null ? null : e.getJCOInstance());
+            return (java.lang.String)classInstance.Invoke("CreateUniqueMethodName", component == null ? null : component.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

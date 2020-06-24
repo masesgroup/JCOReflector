@@ -103,21 +103,21 @@ public class IRevertibleChangeTrackingImplementation extends NetObject implement
 
     // Methods section
     
-    public void RejectChanges() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RejectChanges");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AcceptChanges() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AcceptChanges");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RejectChanges() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RejectChanges");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

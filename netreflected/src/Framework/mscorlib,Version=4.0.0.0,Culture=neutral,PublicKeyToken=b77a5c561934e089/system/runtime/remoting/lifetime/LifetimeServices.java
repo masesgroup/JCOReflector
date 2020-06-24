@@ -128,6 +128,27 @@ public class LifetimeServices extends NetObject  {
     
     // Properties section
     
+    public static TimeSpan getLeaseManagerPollTime() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("LeaseManagerPollTime");
+            return new TimeSpan(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void setLeaseManagerPollTime(TimeSpan LeaseManagerPollTime) throws Throwable, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Set("LeaseManagerPollTime", LeaseManagerPollTime == null ? null : LeaseManagerPollTime.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static TimeSpan getLeaseTime() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -186,27 +207,6 @@ public class LifetimeServices extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Set("SponsorshipTimeout", SponsorshipTimeout == null ? null : SponsorshipTimeout.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TimeSpan getLeaseManagerPollTime() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("LeaseManagerPollTime");
-            return new TimeSpan(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void setLeaseManagerPollTime(TimeSpan LeaseManagerPollTime) throws Throwable, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Set("LeaseManagerPollTime", LeaseManagerPollTime == null ? null : LeaseManagerPollTime.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

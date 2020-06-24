@@ -39,13 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.threading.CancellationToken;
-import system.threading.tasks.TaskScheduler;
 import system.threading.tasks.TaskCreationOptions;
 import system.threading.tasks.TaskContinuationOptions;
+import system.threading.tasks.TaskScheduler;
 import system.threading.tasks.Task;
-import system.Action;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.Action;
 
 
 /**
@@ -137,11 +137,11 @@ public class TaskFactory extends NetObject  {
         }
     }
 
-    public TaskFactory(TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public TaskFactory(CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(scheduler == null ? null : scheduler.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(cancellationToken == null ? null : cancellationToken.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance(), continuationOptions == null ? null : continuationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,11 +157,11 @@ public class TaskFactory extends NetObject  {
         }
     }
 
-    public TaskFactory(CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public TaskFactory(TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(cancellationToken == null ? null : cancellationToken.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance(), continuationOptions == null ? null : continuationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(scheduler == null ? null : scheduler.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,22 +193,22 @@ public class TaskFactory extends NetObject  {
         }
     }
 
-    public Task StartNew(Action action, TaskCreationOptions creationOptions) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public Task StartNew(Action action, CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objStartNew = (JCObject)classInstance.Invoke("StartNew", action, creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objStartNew = (JCObject)classInstance.Invoke("StartNew", action, cancellationToken == null ? null : cancellationToken.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
             return new Task(objStartNew);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Task StartNew(Action action, CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public Task StartNew(Action action, TaskCreationOptions creationOptions) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objStartNew = (JCObject)classInstance.Invoke("StartNew", action, cancellationToken == null ? null : cancellationToken.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objStartNew = (JCObject)classInstance.Invoke("StartNew", action, creationOptions == null ? null : creationOptions.getJCOInstance());
             return new Task(objStartNew);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -230,12 +230,12 @@ public class TaskFactory extends NetObject  {
         }
     }
 
-    public TaskScheduler getScheduler() throws Throwable {
+    public TaskContinuationOptions getContinuationOptions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Scheduler");
-            return new TaskScheduler(val);
+            JCObject val = (JCObject)classInstance.Get("ContinuationOptions");
+            return new TaskContinuationOptions(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,12 +252,12 @@ public class TaskFactory extends NetObject  {
         }
     }
 
-    public TaskContinuationOptions getContinuationOptions() throws Throwable {
+    public TaskScheduler getScheduler() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ContinuationOptions");
-            return new TaskContinuationOptions(val);
+            JCObject val = (JCObject)classInstance.Get("Scheduler");
+            return new TaskScheduler(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

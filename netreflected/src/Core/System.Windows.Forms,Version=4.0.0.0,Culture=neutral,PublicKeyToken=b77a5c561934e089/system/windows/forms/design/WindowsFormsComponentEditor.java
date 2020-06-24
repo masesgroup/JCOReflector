@@ -126,16 +126,6 @@ public class WindowsFormsComponentEditor extends NetObject  {
         }
     }
 
-    public boolean EditComponent(NetObject component, IWin32Window owner) throws Throwable, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("EditComponent", component == null ? null : component.getJCOInstance(), owner == null ? null : owner.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean EditComponent(ITypeDescriptorContext context, NetObject component, IWin32Window owner) throws Throwable, system.ArgumentNullException, system.FormatException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -151,6 +141,16 @@ public class WindowsFormsComponentEditor extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("EditComponent", component == null ? null : component.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean EditComponent(NetObject component, IWin32Window owner) throws Throwable, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("EditComponent", component == null ? null : component.getJCOInstance(), owner == null ? null : owner.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -126,12 +126,11 @@ public class UserProfileAttribute extends NetObject  {
     
     // Methods section
     
-    public IValueProvider GetValueProvider(ModelBindingExecutionContext modelBindingExecutionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
+    public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetValueProvider = (JCObject)classInstance.Invoke("GetValueProvider", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance());
-            return new IValueProviderImplementation(objGetValueProvider);
+            return (boolean)classInstance.Invoke("IsDefaultAttribute");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,11 +146,12 @@ public class UserProfileAttribute extends NetObject  {
         }
     }
 
-    public boolean IsDefaultAttribute() throws Throwable {
+    public IValueProvider GetValueProvider(ModelBindingExecutionContext modelBindingExecutionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            JCObject objGetValueProvider = (JCObject)classInstance.Invoke("GetValueProvider", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance());
+            return new IValueProviderImplementation(objGetValueProvider);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

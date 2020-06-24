@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Single;
 import system.Decimal;
+import system.Single;
 import system.Array;
 
 
@@ -115,6 +115,16 @@ public class FlowControl extends NetObject  {
     
     // Methods section
     
+    public static boolean ForNextCheckDec(Decimal count, Decimal limit, Decimal StepValue) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ForNextCheckDec", count == null ? null : count.getJCOInstance(), limit == null ? null : limit.getJCOInstance(), StepValue == null ? null : StepValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static boolean ForNextCheckR4(Single count, Single limit, Single StepValue) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -130,16 +140,6 @@ public class FlowControl extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("ForNextCheckR8", count, limit, StepValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ForNextCheckDec(Decimal count, Decimal limit, Decimal StepValue) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ForNextCheckDec", count == null ? null : count.getJCOInstance(), limit == null ? null : limit.getJCOInstance(), StepValue == null ? null : StepValue.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -129,12 +129,12 @@ public class AutomationPropertyChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public AutomationProperty getProperty() throws Throwable {
+    public NetObject getNewValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Property");
-            return new AutomationProperty(val);
+            JCObject val = (JCObject)classInstance.Get("NewValue");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,23 +151,23 @@ public class AutomationPropertyChangedEventArgs extends NetObject  {
         }
     }
 
-    public NetObject getNewValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NewValue");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AutomationEvent getEventId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("EventId");
             return new AutomationEvent(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AutomationProperty getProperty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Property");
+            return new AutomationProperty(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

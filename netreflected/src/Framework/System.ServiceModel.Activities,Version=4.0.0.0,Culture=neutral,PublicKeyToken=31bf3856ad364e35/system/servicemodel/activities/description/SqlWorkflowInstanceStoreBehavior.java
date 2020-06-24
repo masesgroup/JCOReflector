@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.ServiceDescription;
 import system.servicemodel.ServiceHostBase;
-import system.activities.durableinstancing.InstanceEncodingOption;
 import system.activities.durableinstancing.InstanceCompletionAction;
+import system.activities.durableinstancing.InstanceEncodingOption;
 import system.activities.durableinstancing.InstanceLockedExceptionAction;
 import system.TimeSpan;
 
@@ -163,22 +163,21 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
     
     // Properties section
     
-    public InstanceEncodingOption getInstanceEncodingOption() throws Throwable {
+    public int getMaxConnectionRetries() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceEncodingOption");
-            return new InstanceEncodingOption(val);
+            return (int)classInstance.Get("MaxConnectionRetries");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setInstanceEncodingOption(InstanceEncodingOption InstanceEncodingOption) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public void setMaxConnectionRetries(int MaxConnectionRetries) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("InstanceEncodingOption", InstanceEncodingOption == null ? null : InstanceEncodingOption.getJCOInstance());
+            classInstance.Set("MaxConnectionRetries", MaxConnectionRetries);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,6 +199,27 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceCompletionAction", InstanceCompletionAction == null ? null : InstanceCompletionAction.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InstanceEncodingOption getInstanceEncodingOption() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("InstanceEncodingOption");
+            return new InstanceEncodingOption(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInstanceEncodingOption(InstanceEncodingOption InstanceEncodingOption) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InstanceEncodingOption", InstanceEncodingOption == null ? null : InstanceEncodingOption.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,26 +303,6 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RunnableInstancesDetectionPeriod", RunnableInstancesDetectionPeriod == null ? null : RunnableInstancesDetectionPeriod.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getMaxConnectionRetries() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MaxConnectionRetries");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMaxConnectionRetries(int MaxConnectionRetries) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MaxConnectionRetries", MaxConnectionRetries);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

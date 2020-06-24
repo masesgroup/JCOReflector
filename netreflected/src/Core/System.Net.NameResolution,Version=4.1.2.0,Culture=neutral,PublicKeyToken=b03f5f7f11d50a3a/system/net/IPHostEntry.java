@@ -128,6 +128,33 @@ public class IPHostEntry extends NetObject  {
     
     // Properties section
     
+    public IPAddress[] getAddressList() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<IPAddress> resultingArrayList = new ArrayList<IPAddress>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("AddressList");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new IPAddress(resultingObject));
+            }
+            IPAddress[] resultingArray = new IPAddress[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAddressList(IPAddress[] AddressList) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AddressList", toObjectFromArray(AddressList));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getHostName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -172,33 +199,6 @@ public class IPHostEntry extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Aliases", Aliases);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IPAddress[] getAddressList() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<IPAddress> resultingArrayList = new ArrayList<IPAddress>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AddressList");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new IPAddress(resultingObject));
-            }
-            IPAddress[] resultingArray = new IPAddress[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAddressList(IPAddress[] AddressList) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AddressList", toObjectFromArray(AddressList));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -40,15 +40,15 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.tokens.SamlSubject;
 import system.identitymodel.tokens.SamlAccessDecision;
+import system.identitymodel.policy.IAuthorizationPolicy;
+import system.identitymodel.policy.IAuthorizationPolicyImplementation;
+import system.identitymodel.claims.ClaimSet;
+import system.identitymodel.selectors.SamlSecurityTokenAuthenticator;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.identitymodel.selectors.SecurityTokenResolver;
 import system.xml.XmlDictionaryWriter;
-import system.identitymodel.policy.IAuthorizationPolicy;
-import system.identitymodel.policy.IAuthorizationPolicyImplementation;
-import system.identitymodel.claims.ClaimSet;
-import system.identitymodel.selectors.SamlSecurityTokenAuthenticator;
 import system.identitymodel.tokens.SamlEvidence;
 
 
@@ -135,6 +135,17 @@ public class SamlAuthorizationDecisionStatement extends NetObject  {
     
     // Methods section
     
+    public IAuthorizationPolicy CreatePolicy(ClaimSet issuer, SamlSecurityTokenAuthenticator samlAuthenticator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreatePolicy = (JCObject)classInstance.Invoke("CreatePolicy", issuer == null ? null : issuer.getJCOInstance(), samlAuthenticator == null ? null : samlAuthenticator.getJCOInstance());
+            return new IAuthorizationPolicyImplementation(objCreatePolicy);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void MakeReadOnly() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -165,21 +176,20 @@ public class SamlAuthorizationDecisionStatement extends NetObject  {
         }
     }
 
-    public IAuthorizationPolicy CreatePolicy(ClaimSet issuer, SamlSecurityTokenAuthenticator samlAuthenticator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+
+    
+    // Properties section
+    
+    public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreatePolicy = (JCObject)classInstance.Invoke("CreatePolicy", issuer == null ? null : issuer.getJCOInstance(), samlAuthenticator == null ? null : samlAuthenticator.getJCOInstance());
-            return new IAuthorizationPolicyImplementation(objCreatePolicy);
+            return (boolean)classInstance.Get("IsReadOnly");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-
-    
-    // Properties section
-    
     public SamlAccessDecision getAccessDecision() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -222,36 +232,6 @@ public class SamlAuthorizationDecisionStatement extends NetObject  {
         }
     }
 
-    public java.lang.String getResource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Resource");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setResource(java.lang.String Resource) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Resource", Resource);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsReadOnly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsReadOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SamlSubject getSamlSubject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -278,6 +258,26 @@ public class SamlAuthorizationDecisionStatement extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Get("ClaimType");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getResource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Resource");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setResource(java.lang.String Resource) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Resource", Resource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

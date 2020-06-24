@@ -141,23 +141,23 @@ public class ViewEventArgs extends NetObject  {
         }
     }
 
-    public ViewEvent getEventType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EventType");
-            return new ViewEvent(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DesignerRegion getRegion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Region");
             return new DesignerRegion(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ViewEvent getEventType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EventType");
+            return new ViewEvent(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

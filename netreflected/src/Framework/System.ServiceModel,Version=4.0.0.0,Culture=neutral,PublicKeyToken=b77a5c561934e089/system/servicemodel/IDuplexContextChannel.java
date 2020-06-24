@@ -39,15 +39,15 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
-import system.TimeSpan;
 import system.AsyncCallback;
-import system.servicemodel.InstanceContext;
+import system.TimeSpan;
 import system.servicemodel.channels.IInputSession;
 import system.servicemodel.channels.IInputSessionImplementation;
-import system.servicemodel.EndpointAddress;
 import system.servicemodel.channels.IOutputSession;
 import system.servicemodel.channels.IOutputSessionImplementation;
 import system.servicemodel.CommunicationState;
+import system.servicemodel.EndpointAddress;
+import system.servicemodel.InstanceContext;
 import system.EventHandler;
 
 
@@ -101,65 +101,65 @@ public interface IDuplexContextChannel extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IAsyncResult BeginCloseOutputSession(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public void EndCloseOutputSession(IAsyncResult result) throws Throwable;
-
-    public void CloseOutputSession(TimeSpan timeout) throws Throwable;
-
-    public void Abort() throws Throwable;
-
     public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public void EndClose(IAsyncResult result) throws Throwable;
-
-    public void Open() throws Throwable;
-
-    public void Open(TimeSpan timeout) throws Throwable;
+    public IAsyncResult BeginCloseOutputSession(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public void EndOpen(IAsyncResult result) throws Throwable;
+    public void Abort() throws Throwable;
 
     public void Close() throws Throwable;
 
     public void Close(TimeSpan timeout) throws Throwable;
 
+    public void CloseOutputSession(TimeSpan timeout) throws Throwable;
+
+    public void EndClose(IAsyncResult result) throws Throwable;
+
+    public void EndCloseOutputSession(IAsyncResult result) throws Throwable;
+
+    public void EndOpen(IAsyncResult result) throws Throwable;
+
+    public void Open() throws Throwable;
+
+    public void Open(TimeSpan timeout) throws Throwable;
+
 
     
     // Properties section
     
+    public boolean getAllowOutputBatching() throws Throwable;
+
+    public void setAllowOutputBatching(boolean AllowOutputBatching) throws Throwable;
+
     public boolean getAutomaticInputSessionShutdown() throws Throwable;
 
     public void setAutomaticInputSessionShutdown(boolean AutomaticInputSessionShutdown) throws Throwable;
+
+    public IInputSession getInputSession() throws Throwable;
+
+    public IOutputSession getOutputSession() throws Throwable;
+
+    public CommunicationState getState() throws Throwable;
+
+    public EndpointAddress getLocalAddress() throws Throwable;
+
+    public EndpointAddress getRemoteAddress() throws Throwable;
 
     public InstanceContext getCallbackInstance() throws Throwable;
 
     public void setCallbackInstance(InstanceContext CallbackInstance) throws Throwable;
 
-    public boolean getAllowOutputBatching() throws Throwable;
-
-    public void setAllowOutputBatching(boolean AllowOutputBatching) throws Throwable;
-
-    public IInputSession getInputSession() throws Throwable;
-
-    public EndpointAddress getLocalAddress() throws Throwable;
+    public java.lang.String getSessionId() throws Throwable;
 
     public TimeSpan getOperationTimeout() throws Throwable;
 
     public void setOperationTimeout(TimeSpan OperationTimeout) throws Throwable;
-
-    public IOutputSession getOutputSession() throws Throwable;
-
-    public EndpointAddress getRemoteAddress() throws Throwable;
-
-    public java.lang.String getSessionId() throws Throwable;
-
-    public CommunicationState getState() throws Throwable;
 
 
 

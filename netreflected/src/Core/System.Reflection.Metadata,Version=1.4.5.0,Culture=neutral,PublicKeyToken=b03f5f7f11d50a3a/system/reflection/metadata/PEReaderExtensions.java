@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.MethodBodyBlock;
-import system.reflection.portableexecutable.PEReader;
 import system.reflection.metadata.MetadataReader;
+import system.reflection.portableexecutable.PEReader;
 import system.reflection.metadata.MetadataReaderOptions;
 import system.reflection.metadata.MetadataStringDecoder;
+import system.reflection.metadata.MethodBodyBlock;
 
 
 /**
@@ -117,17 +117,6 @@ public class PEReaderExtensions extends NetObject  {
     
     // Methods section
     
-    public static MethodBodyBlock GetMethodBody(PEReader peReader, int relativeVirtualAddress) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.BadImageFormatException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetMethodBody = (JCObject)classType.Invoke("GetMethodBody", peReader == null ? null : peReader.getJCOInstance(), relativeVirtualAddress);
-            return new MethodBodyBlock(objGetMethodBody);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static MetadataReader GetMetadataReader(PEReader peReader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -156,6 +145,17 @@ public class PEReaderExtensions extends NetObject  {
         try {
             JCObject objGetMetadataReader = (JCObject)classType.Invoke("GetMetadataReader", peReader == null ? null : peReader.getJCOInstance(), options == null ? null : options.getJCOInstance(), utf8Decoder == null ? null : utf8Decoder.getJCOInstance());
             return new MetadataReader(objGetMetadataReader);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MethodBodyBlock GetMethodBody(PEReader peReader, int relativeVirtualAddress) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.BadImageFormatException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetMethodBody = (JCObject)classType.Invoke("GetMethodBody", peReader == null ? null : peReader.getJCOInstance(), relativeVirtualAddress);
+            return new MethodBodyBlock(objGetMethodBody);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

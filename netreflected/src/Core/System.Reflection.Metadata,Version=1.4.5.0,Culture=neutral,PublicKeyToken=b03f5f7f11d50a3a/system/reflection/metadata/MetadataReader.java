@@ -38,103 +38,103 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.FieldDefinition;
-import system.reflection.metadata.FieldDefinitionHandle;
-import system.reflection.metadata.PropertyDefinition;
-import system.reflection.metadata.PropertyDefinitionHandle;
+import system.reflection.metadata.BlobHandle;
+import system.Guid;
+import system.reflection.metadata.GuidHandle;
+import system.reflection.metadata.AssemblyDefinition;
+import system.reflection.metadata.AssemblyFile;
+import system.reflection.metadata.AssemblyFileHandle;
+import system.reflection.metadata.AssemblyReference;
+import system.reflection.metadata.AssemblyReferenceHandle;
+import system.reflection.metadata.BlobReader;
+import system.reflection.metadata.StringHandle;
+import system.reflection.metadata.Constant;
+import system.reflection.metadata.ConstantHandle;
+import system.reflection.metadata.CustomAttribute;
+import system.reflection.metadata.CustomAttributeHandle;
+import system.reflection.metadata.CustomAttributeHandleCollection;
+import system.reflection.metadata.EntityHandle;
+import system.reflection.metadata.CustomDebugInformation;
+import system.reflection.metadata.CustomDebugInformationHandle;
+import system.reflection.metadata.CustomDebugInformationHandleCollection;
+import system.reflection.metadata.DeclarativeSecurityAttribute;
+import system.reflection.metadata.DeclarativeSecurityAttributeHandle;
+import system.reflection.metadata.Document;
+import system.reflection.metadata.DocumentHandle;
 import system.reflection.metadata.EventDefinition;
 import system.reflection.metadata.EventDefinitionHandle;
-import system.reflection.metadata.MethodImplementation;
-import system.reflection.metadata.MethodImplementationHandle;
-import system.reflection.metadata.MemberReference;
-import system.reflection.metadata.MemberReferenceHandle;
-import system.reflection.metadata.MethodSpecification;
-import system.reflection.metadata.MethodSpecificationHandle;
-import system.reflection.metadata.Parameter;
-import system.reflection.metadata.ParameterHandle;
+import system.reflection.metadata.ExportedType;
+import system.reflection.metadata.ExportedTypeHandle;
+import system.reflection.metadata.FieldDefinition;
+import system.reflection.metadata.FieldDefinitionHandle;
 import system.reflection.metadata.GenericParameter;
 import system.reflection.metadata.GenericParameterHandle;
 import system.reflection.metadata.GenericParameterConstraint;
 import system.reflection.metadata.GenericParameterConstraintHandle;
-import system.reflection.metadata.ManifestResource;
-import system.reflection.metadata.ManifestResourceHandle;
-import system.reflection.metadata.AssemblyFile;
-import system.reflection.metadata.AssemblyFileHandle;
-import system.reflection.metadata.StandaloneSignature;
-import system.reflection.metadata.StandaloneSignatureHandle;
-import system.reflection.metadata.TypeSpecification;
-import system.reflection.metadata.TypeSpecificationHandle;
-import system.reflection.metadata.ModuleReference;
-import system.reflection.metadata.ModuleReferenceHandle;
-import system.reflection.metadata.InterfaceImplementation;
-import system.reflection.metadata.InterfaceImplementationHandle;
-import system.reflection.metadata.DocumentNameBlobHandle;
-import system.reflection.metadata.Document;
-import system.reflection.metadata.DocumentHandle;
-import system.reflection.metadata.MethodDebugInformation;
-import system.reflection.metadata.MethodDebugInformationHandle;
-import system.reflection.metadata.MethodDefinitionHandle;
-import system.reflection.metadata.LocalScope;
-import system.reflection.metadata.LocalScopeHandle;
-import system.reflection.metadata.LocalVariable;
-import system.reflection.metadata.LocalVariableHandle;
-import system.reflection.metadata.LocalConstant;
-import system.reflection.metadata.LocalConstantHandle;
 import system.reflection.metadata.ImportScope;
 import system.reflection.metadata.ImportScopeHandle;
-import system.reflection.metadata.CustomDebugInformation;
-import system.reflection.metadata.CustomDebugInformationHandle;
-import system.reflection.metadata.CustomDebugInformationHandleCollection;
-import system.reflection.metadata.EntityHandle;
+import system.reflection.metadata.InterfaceImplementation;
+import system.reflection.metadata.InterfaceImplementationHandle;
+import system.reflection.metadata.LocalConstant;
+import system.reflection.metadata.LocalConstantHandle;
+import system.reflection.metadata.LocalScope;
+import system.reflection.metadata.LocalScopeHandle;
 import system.reflection.metadata.LocalScopeHandleCollection;
-import system.reflection.metadata.AssemblyDefinition;
-import system.reflection.metadata.StringHandle;
-import system.reflection.metadata.NamespaceDefinitionHandle;
-import system.reflection.metadata.BlobHandle;
-import system.reflection.metadata.BlobReader;
-import system.reflection.metadata.UserStringHandle;
-import system.Guid;
-import system.reflection.metadata.GuidHandle;
+import system.reflection.metadata.MethodDebugInformationHandle;
+import system.reflection.metadata.MethodDefinitionHandle;
+import system.reflection.metadata.LocalVariable;
+import system.reflection.metadata.LocalVariableHandle;
+import system.reflection.metadata.ManifestResource;
+import system.reflection.metadata.ManifestResourceHandle;
+import system.reflection.metadata.MemberReference;
+import system.reflection.metadata.MemberReferenceHandle;
+import system.reflection.metadata.MethodDebugInformation;
+import system.reflection.metadata.MethodDefinition;
+import system.reflection.metadata.MethodImplementation;
+import system.reflection.metadata.MethodImplementationHandle;
+import system.reflection.metadata.MethodSpecification;
+import system.reflection.metadata.MethodSpecificationHandle;
 import system.reflection.metadata.ModuleDefinition;
-import system.reflection.metadata.AssemblyReference;
-import system.reflection.metadata.AssemblyReferenceHandle;
+import system.reflection.metadata.ModuleReference;
+import system.reflection.metadata.ModuleReferenceHandle;
+import system.reflection.metadata.NamespaceDefinition;
+import system.reflection.metadata.NamespaceDefinitionHandle;
+import system.reflection.metadata.Parameter;
+import system.reflection.metadata.ParameterHandle;
+import system.reflection.metadata.PropertyDefinition;
+import system.reflection.metadata.PropertyDefinitionHandle;
+import system.reflection.metadata.StandaloneSignature;
+import system.reflection.metadata.StandaloneSignatureHandle;
 import system.reflection.metadata.TypeDefinition;
 import system.reflection.metadata.TypeDefinitionHandle;
-import system.reflection.metadata.NamespaceDefinition;
 import system.reflection.metadata.TypeReference;
 import system.reflection.metadata.TypeReferenceHandle;
-import system.reflection.metadata.ExportedType;
-import system.reflection.metadata.ExportedTypeHandle;
-import system.reflection.metadata.CustomAttributeHandleCollection;
-import system.reflection.metadata.CustomAttribute;
-import system.reflection.metadata.CustomAttributeHandle;
-import system.reflection.metadata.DeclarativeSecurityAttribute;
-import system.reflection.metadata.DeclarativeSecurityAttributeHandle;
-import system.reflection.metadata.Constant;
-import system.reflection.metadata.ConstantHandle;
-import system.reflection.metadata.MethodDefinition;
-import system.reflection.metadata.MetadataReaderOptions;
+import system.reflection.metadata.TypeSpecification;
+import system.reflection.metadata.TypeSpecificationHandle;
+import system.reflection.metadata.DocumentNameBlobHandle;
+import system.reflection.metadata.UserStringHandle;
+import system.reflection.metadata.AssemblyFileHandleCollection;
+import system.reflection.metadata.AssemblyReferenceHandleCollection;
 import system.reflection.metadata.DebugMetadataHeader;
+import system.reflection.metadata.DeclarativeSecurityAttributeHandleCollection;
+import system.reflection.metadata.DocumentHandleCollection;
+import system.reflection.metadata.EventDefinitionHandleCollection;
+import system.reflection.metadata.ExportedTypeHandleCollection;
+import system.reflection.metadata.FieldDefinitionHandleCollection;
+import system.reflection.metadata.ImportScopeCollection;
+import system.reflection.metadata.LocalConstantHandleCollection;
+import system.reflection.metadata.LocalVariableHandleCollection;
+import system.reflection.metadata.ManifestResourceHandleCollection;
+import system.reflection.metadata.MemberReferenceHandleCollection;
 import system.reflection.metadata.MetadataKind;
+import system.reflection.metadata.MetadataReaderOptions;
 import system.reflection.metadata.MetadataStringComparer;
 import system.reflection.metadata.MetadataStringDecoder;
-import system.reflection.metadata.AssemblyReferenceHandleCollection;
+import system.reflection.metadata.MethodDebugInformationHandleCollection;
+import system.reflection.metadata.MethodDefinitionHandleCollection;
+import system.reflection.metadata.PropertyDefinitionHandleCollection;
 import system.reflection.metadata.TypeDefinitionHandleCollection;
 import system.reflection.metadata.TypeReferenceHandleCollection;
-import system.reflection.metadata.DeclarativeSecurityAttributeHandleCollection;
-import system.reflection.metadata.MemberReferenceHandleCollection;
-import system.reflection.metadata.ManifestResourceHandleCollection;
-import system.reflection.metadata.AssemblyFileHandleCollection;
-import system.reflection.metadata.ExportedTypeHandleCollection;
-import system.reflection.metadata.MethodDefinitionHandleCollection;
-import system.reflection.metadata.FieldDefinitionHandleCollection;
-import system.reflection.metadata.EventDefinitionHandleCollection;
-import system.reflection.metadata.PropertyDefinitionHandleCollection;
-import system.reflection.metadata.DocumentHandleCollection;
-import system.reflection.metadata.MethodDebugInformationHandleCollection;
-import system.reflection.metadata.LocalVariableHandleCollection;
-import system.reflection.metadata.LocalConstantHandleCollection;
-import system.reflection.metadata.ImportScopeCollection;
 
 
 /**
@@ -210,297 +210,31 @@ public class MetadataReader extends NetObject  {
     
     // Methods section
     
-    public FieldDefinition GetFieldDefinition(FieldDefinitionHandle handle) throws Throwable, system.BadImageFormatException, system.ArgumentException, system.InvalidCastException {
+    public byte[] GetBlobBytes(BlobHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetFieldDefinition = (JCObject)classInstance.Invoke("GetFieldDefinition", handle == null ? null : handle.getJCOInstance());
-            return new FieldDefinition(objGetFieldDefinition);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetBlobBytes", handle == null ? null : handle.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexGetBlobBytes = 0; indexGetBlobBytes < resultingArrayList.size(); indexGetBlobBytes++ ) {
+				resultingArray[indexGetBlobBytes] = (byte)resultingArrayList.get(indexGetBlobBytes);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PropertyDefinition GetPropertyDefinition(PropertyDefinitionHandle handle) throws Throwable {
+    public Guid GetGuid(GuidHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPropertyDefinition = (JCObject)classInstance.Invoke("GetPropertyDefinition", handle == null ? null : handle.getJCOInstance());
-            return new PropertyDefinition(objGetPropertyDefinition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EventDefinition GetEventDefinition(EventDefinitionHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEventDefinition = (JCObject)classInstance.Invoke("GetEventDefinition", handle == null ? null : handle.getJCOInstance());
-            return new EventDefinition(objGetEventDefinition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodImplementation GetMethodImplementation(MethodImplementationHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMethodImplementation = (JCObject)classInstance.Invoke("GetMethodImplementation", handle == null ? null : handle.getJCOInstance());
-            return new MethodImplementation(objGetMethodImplementation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MemberReference GetMemberReference(MemberReferenceHandle handle) throws Throwable, system.BadImageFormatException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMemberReference = (JCObject)classInstance.Invoke("GetMemberReference", handle == null ? null : handle.getJCOInstance());
-            return new MemberReference(objGetMemberReference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodSpecification GetMethodSpecification(MethodSpecificationHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMethodSpecification = (JCObject)classInstance.Invoke("GetMethodSpecification", handle == null ? null : handle.getJCOInstance());
-            return new MethodSpecification(objGetMethodSpecification);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Parameter GetParameter(ParameterHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetParameter = (JCObject)classInstance.Invoke("GetParameter", handle == null ? null : handle.getJCOInstance());
-            return new Parameter(objGetParameter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public GenericParameter GetGenericParameter(GenericParameterHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetGenericParameter = (JCObject)classInstance.Invoke("GetGenericParameter", handle == null ? null : handle.getJCOInstance());
-            return new GenericParameter(objGetGenericParameter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public GenericParameterConstraint GetGenericParameterConstraint(GenericParameterConstraintHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetGenericParameterConstraint = (JCObject)classInstance.Invoke("GetGenericParameterConstraint", handle == null ? null : handle.getJCOInstance());
-            return new GenericParameterConstraint(objGetGenericParameterConstraint);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManifestResource GetManifestResource(ManifestResourceHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetManifestResource = (JCObject)classInstance.Invoke("GetManifestResource", handle == null ? null : handle.getJCOInstance());
-            return new ManifestResource(objGetManifestResource);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AssemblyFile GetAssemblyFile(AssemblyFileHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetAssemblyFile = (JCObject)classInstance.Invoke("GetAssemblyFile", handle == null ? null : handle.getJCOInstance());
-            return new AssemblyFile(objGetAssemblyFile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StandaloneSignature GetStandaloneSignature(StandaloneSignatureHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetStandaloneSignature = (JCObject)classInstance.Invoke("GetStandaloneSignature", handle == null ? null : handle.getJCOInstance());
-            return new StandaloneSignature(objGetStandaloneSignature);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeSpecification GetTypeSpecification(TypeSpecificationHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetTypeSpecification = (JCObject)classInstance.Invoke("GetTypeSpecification", handle == null ? null : handle.getJCOInstance());
-            return new TypeSpecification(objGetTypeSpecification);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModuleReference GetModuleReference(ModuleReferenceHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetModuleReference = (JCObject)classInstance.Invoke("GetModuleReference", handle == null ? null : handle.getJCOInstance());
-            return new ModuleReference(objGetModuleReference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public InterfaceImplementation GetInterfaceImplementation(InterfaceImplementationHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetInterfaceImplementation = (JCObject)classInstance.Invoke("GetInterfaceImplementation", handle == null ? null : handle.getJCOInstance());
-            return new InterfaceImplementation(objGetInterfaceImplementation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetString(DocumentNameBlobHandle handle) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.BadImageFormatException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetString", handle == null ? null : handle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Document GetDocument(DocumentHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDocument = (JCObject)classInstance.Invoke("GetDocument", handle == null ? null : handle.getJCOInstance());
-            return new Document(objGetDocument);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodDebugInformation GetMethodDebugInformation(MethodDebugInformationHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMethodDebugInformation = (JCObject)classInstance.Invoke("GetMethodDebugInformation", handle == null ? null : handle.getJCOInstance());
-            return new MethodDebugInformation(objGetMethodDebugInformation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodDebugInformation GetMethodDebugInformation(MethodDefinitionHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMethodDebugInformation = (JCObject)classInstance.Invoke("GetMethodDebugInformation", handle == null ? null : handle.getJCOInstance());
-            return new MethodDebugInformation(objGetMethodDebugInformation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LocalScope GetLocalScope(LocalScopeHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLocalScope = (JCObject)classInstance.Invoke("GetLocalScope", handle == null ? null : handle.getJCOInstance());
-            return new LocalScope(objGetLocalScope);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LocalVariable GetLocalVariable(LocalVariableHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLocalVariable = (JCObject)classInstance.Invoke("GetLocalVariable", handle == null ? null : handle.getJCOInstance());
-            return new LocalVariable(objGetLocalVariable);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LocalConstant GetLocalConstant(LocalConstantHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLocalConstant = (JCObject)classInstance.Invoke("GetLocalConstant", handle == null ? null : handle.getJCOInstance());
-            return new LocalConstant(objGetLocalConstant);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ImportScope GetImportScope(ImportScopeHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetImportScope = (JCObject)classInstance.Invoke("GetImportScope", handle == null ? null : handle.getJCOInstance());
-            return new ImportScope(objGetImportScope);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CustomDebugInformation GetCustomDebugInformation(CustomDebugInformationHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCustomDebugInformation = (JCObject)classInstance.Invoke("GetCustomDebugInformation", handle == null ? null : handle.getJCOInstance());
-            return new CustomDebugInformation(objGetCustomDebugInformation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CustomDebugInformationHandleCollection GetCustomDebugInformation(EntityHandle handle) throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCustomDebugInformation = (JCObject)classInstance.Invoke("GetCustomDebugInformation", handle == null ? null : handle.getJCOInstance());
-            return new CustomDebugInformationHandleCollection(objGetCustomDebugInformation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LocalScopeHandleCollection GetLocalScopes(MethodDefinitionHandle handle) throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLocalScopes = (JCObject)classInstance.Invoke("GetLocalScopes", handle == null ? null : handle.getJCOInstance());
-            return new LocalScopeHandleCollection(objGetLocalScopes);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LocalScopeHandleCollection GetLocalScopes(MethodDebugInformationHandle handle) throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLocalScopes = (JCObject)classInstance.Invoke("GetLocalScopes", handle == null ? null : handle.getJCOInstance());
-            return new LocalScopeHandleCollection(objGetLocalScopes);
+            JCObject objGetGuid = (JCObject)classInstance.Invoke("GetGuid", handle == null ? null : handle.getJCOInstance());
+            return new Guid(objGetGuid);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -517,40 +251,23 @@ public class MetadataReader extends NetObject  {
         }
     }
 
-    public java.lang.String GetString(StringHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
+    public AssemblyFile GetAssemblyFile(AssemblyFileHandle handle) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetAssemblyFile = (JCObject)classInstance.Invoke("GetAssemblyFile", handle == null ? null : handle.getJCOInstance());
+            return new AssemblyFile(objGetAssemblyFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String GetString(NamespaceDefinitionHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
+    public AssemblyReference GetAssemblyReference(AssemblyReferenceHandle handle) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", handle == null ? null : handle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] GetBlobBytes(BlobHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetBlobBytes", handle == null ? null : handle.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexGetBlobBytes = 0; indexGetBlobBytes < resultingArrayList.size(); indexGetBlobBytes++ ) {
-				resultingArray[indexGetBlobBytes] = (byte)resultingArrayList.get(indexGetBlobBytes);
-            }
-            return resultingArray;
+            JCObject objGetAssemblyReference = (JCObject)classInstance.Invoke("GetAssemblyReference", handle == null ? null : handle.getJCOInstance());
+            return new AssemblyReference(objGetAssemblyReference);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,110 +295,12 @@ public class MetadataReader extends NetObject  {
         }
     }
 
-    public java.lang.String GetUserString(UserStringHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
+    public Constant GetConstant(ConstantHandle handle) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetUserString", handle == null ? null : handle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Guid GetGuid(GuidHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetGuid = (JCObject)classInstance.Invoke("GetGuid", handle == null ? null : handle.getJCOInstance());
-            return new Guid(objGetGuid);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModuleDefinition GetModuleDefinition() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetModuleDefinition = (JCObject)classInstance.Invoke("GetModuleDefinition");
-            return new ModuleDefinition(objGetModuleDefinition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AssemblyReference GetAssemblyReference(AssemblyReferenceHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetAssemblyReference = (JCObject)classInstance.Invoke("GetAssemblyReference", handle == null ? null : handle.getJCOInstance());
-            return new AssemblyReference(objGetAssemblyReference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeDefinition GetTypeDefinition(TypeDefinitionHandle handle) throws Throwable, system.BadImageFormatException, system.ArgumentException, system.InvalidCastException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetTypeDefinition = (JCObject)classInstance.Invoke("GetTypeDefinition", handle == null ? null : handle.getJCOInstance());
-            return new TypeDefinition(objGetTypeDefinition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NamespaceDefinition GetNamespaceDefinitionRoot() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.InvalidCastException, system.BadImageFormatException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetNamespaceDefinitionRoot = (JCObject)classInstance.Invoke("GetNamespaceDefinitionRoot");
-            return new NamespaceDefinition(objGetNamespaceDefinitionRoot);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NamespaceDefinition GetNamespaceDefinition(NamespaceDefinitionHandle handle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.InvalidCastException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetNamespaceDefinition = (JCObject)classInstance.Invoke("GetNamespaceDefinition", handle == null ? null : handle.getJCOInstance());
-            return new NamespaceDefinition(objGetNamespaceDefinition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeReference GetTypeReference(TypeReferenceHandle handle) throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetTypeReference = (JCObject)classInstance.Invoke("GetTypeReference", handle == null ? null : handle.getJCOInstance());
-            return new TypeReference(objGetTypeReference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ExportedType GetExportedType(ExportedTypeHandle handle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetExportedType = (JCObject)classInstance.Invoke("GetExportedType", handle == null ? null : handle.getJCOInstance());
-            return new ExportedType(objGetExportedType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CustomAttributeHandleCollection GetCustomAttributes(EntityHandle handle) throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes", handle == null ? null : handle.getJCOInstance());
-            return new CustomAttributeHandleCollection(objGetCustomAttributes);
+            JCObject objGetConstant = (JCObject)classInstance.Invoke("GetConstant", handle == null ? null : handle.getJCOInstance());
+            return new Constant(objGetConstant);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -698,6 +317,39 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    public CustomAttributeHandleCollection GetCustomAttributes(EntityHandle handle) throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes", handle == null ? null : handle.getJCOInstance());
+            return new CustomAttributeHandleCollection(objGetCustomAttributes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CustomDebugInformation GetCustomDebugInformation(CustomDebugInformationHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetCustomDebugInformation = (JCObject)classInstance.Invoke("GetCustomDebugInformation", handle == null ? null : handle.getJCOInstance());
+            return new CustomDebugInformation(objGetCustomDebugInformation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CustomDebugInformationHandleCollection GetCustomDebugInformation(EntityHandle handle) throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetCustomDebugInformation = (JCObject)classInstance.Invoke("GetCustomDebugInformation", handle == null ? null : handle.getJCOInstance());
+            return new CustomDebugInformationHandleCollection(objGetCustomDebugInformation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DeclarativeSecurityAttribute GetDeclarativeSecurityAttribute(DeclarativeSecurityAttributeHandle handle) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -709,12 +361,188 @@ public class MetadataReader extends NetObject  {
         }
     }
 
-    public Constant GetConstant(ConstantHandle handle) throws Throwable {
+    public Document GetDocument(DocumentHandle handle) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetConstant = (JCObject)classInstance.Invoke("GetConstant", handle == null ? null : handle.getJCOInstance());
-            return new Constant(objGetConstant);
+            JCObject objGetDocument = (JCObject)classInstance.Invoke("GetDocument", handle == null ? null : handle.getJCOInstance());
+            return new Document(objGetDocument);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventDefinition GetEventDefinition(EventDefinitionHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetEventDefinition = (JCObject)classInstance.Invoke("GetEventDefinition", handle == null ? null : handle.getJCOInstance());
+            return new EventDefinition(objGetEventDefinition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ExportedType GetExportedType(ExportedTypeHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetExportedType = (JCObject)classInstance.Invoke("GetExportedType", handle == null ? null : handle.getJCOInstance());
+            return new ExportedType(objGetExportedType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FieldDefinition GetFieldDefinition(FieldDefinitionHandle handle) throws Throwable, system.BadImageFormatException, system.ArgumentException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetFieldDefinition = (JCObject)classInstance.Invoke("GetFieldDefinition", handle == null ? null : handle.getJCOInstance());
+            return new FieldDefinition(objGetFieldDefinition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public GenericParameter GetGenericParameter(GenericParameterHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetGenericParameter = (JCObject)classInstance.Invoke("GetGenericParameter", handle == null ? null : handle.getJCOInstance());
+            return new GenericParameter(objGetGenericParameter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public GenericParameterConstraint GetGenericParameterConstraint(GenericParameterConstraintHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetGenericParameterConstraint = (JCObject)classInstance.Invoke("GetGenericParameterConstraint", handle == null ? null : handle.getJCOInstance());
+            return new GenericParameterConstraint(objGetGenericParameterConstraint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImportScope GetImportScope(ImportScopeHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetImportScope = (JCObject)classInstance.Invoke("GetImportScope", handle == null ? null : handle.getJCOInstance());
+            return new ImportScope(objGetImportScope);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InterfaceImplementation GetInterfaceImplementation(InterfaceImplementationHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetInterfaceImplementation = (JCObject)classInstance.Invoke("GetInterfaceImplementation", handle == null ? null : handle.getJCOInstance());
+            return new InterfaceImplementation(objGetInterfaceImplementation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LocalConstant GetLocalConstant(LocalConstantHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetLocalConstant = (JCObject)classInstance.Invoke("GetLocalConstant", handle == null ? null : handle.getJCOInstance());
+            return new LocalConstant(objGetLocalConstant);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LocalScope GetLocalScope(LocalScopeHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetLocalScope = (JCObject)classInstance.Invoke("GetLocalScope", handle == null ? null : handle.getJCOInstance());
+            return new LocalScope(objGetLocalScope);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LocalScopeHandleCollection GetLocalScopes(MethodDebugInformationHandle handle) throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetLocalScopes = (JCObject)classInstance.Invoke("GetLocalScopes", handle == null ? null : handle.getJCOInstance());
+            return new LocalScopeHandleCollection(objGetLocalScopes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LocalScopeHandleCollection GetLocalScopes(MethodDefinitionHandle handle) throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetLocalScopes = (JCObject)classInstance.Invoke("GetLocalScopes", handle == null ? null : handle.getJCOInstance());
+            return new LocalScopeHandleCollection(objGetLocalScopes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LocalVariable GetLocalVariable(LocalVariableHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetLocalVariable = (JCObject)classInstance.Invoke("GetLocalVariable", handle == null ? null : handle.getJCOInstance());
+            return new LocalVariable(objGetLocalVariable);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ManifestResource GetManifestResource(ManifestResourceHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetManifestResource = (JCObject)classInstance.Invoke("GetManifestResource", handle == null ? null : handle.getJCOInstance());
+            return new ManifestResource(objGetManifestResource);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MemberReference GetMemberReference(MemberReferenceHandle handle) throws Throwable, system.BadImageFormatException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetMemberReference = (JCObject)classInstance.Invoke("GetMemberReference", handle == null ? null : handle.getJCOInstance());
+            return new MemberReference(objGetMemberReference);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodDebugInformation GetMethodDebugInformation(MethodDebugInformationHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetMethodDebugInformation = (JCObject)classInstance.Invoke("GetMethodDebugInformation", handle == null ? null : handle.getJCOInstance());
+            return new MethodDebugInformation(objGetMethodDebugInformation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodDebugInformation GetMethodDebugInformation(MethodDefinitionHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetMethodDebugInformation = (JCObject)classInstance.Invoke("GetMethodDebugInformation", handle == null ? null : handle.getJCOInstance());
+            return new MethodDebugInformation(objGetMethodDebugInformation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -731,85 +559,182 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    public MethodImplementation GetMethodImplementation(MethodImplementationHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetMethodImplementation = (JCObject)classInstance.Invoke("GetMethodImplementation", handle == null ? null : handle.getJCOInstance());
+            return new MethodImplementation(objGetMethodImplementation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodSpecification GetMethodSpecification(MethodSpecificationHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetMethodSpecification = (JCObject)classInstance.Invoke("GetMethodSpecification", handle == null ? null : handle.getJCOInstance());
+            return new MethodSpecification(objGetMethodSpecification);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModuleDefinition GetModuleDefinition() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetModuleDefinition = (JCObject)classInstance.Invoke("GetModuleDefinition");
+            return new ModuleDefinition(objGetModuleDefinition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModuleReference GetModuleReference(ModuleReferenceHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetModuleReference = (JCObject)classInstance.Invoke("GetModuleReference", handle == null ? null : handle.getJCOInstance());
+            return new ModuleReference(objGetModuleReference);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NamespaceDefinition GetNamespaceDefinition(NamespaceDefinitionHandle handle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.InvalidCastException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetNamespaceDefinition = (JCObject)classInstance.Invoke("GetNamespaceDefinition", handle == null ? null : handle.getJCOInstance());
+            return new NamespaceDefinition(objGetNamespaceDefinition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NamespaceDefinition GetNamespaceDefinitionRoot() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.InvalidCastException, system.BadImageFormatException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetNamespaceDefinitionRoot = (JCObject)classInstance.Invoke("GetNamespaceDefinitionRoot");
+            return new NamespaceDefinition(objGetNamespaceDefinitionRoot);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Parameter GetParameter(ParameterHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetParameter = (JCObject)classInstance.Invoke("GetParameter", handle == null ? null : handle.getJCOInstance());
+            return new Parameter(objGetParameter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyDefinition GetPropertyDefinition(PropertyDefinitionHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetPropertyDefinition = (JCObject)classInstance.Invoke("GetPropertyDefinition", handle == null ? null : handle.getJCOInstance());
+            return new PropertyDefinition(objGetPropertyDefinition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StandaloneSignature GetStandaloneSignature(StandaloneSignatureHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetStandaloneSignature = (JCObject)classInstance.Invoke("GetStandaloneSignature", handle == null ? null : handle.getJCOInstance());
+            return new StandaloneSignature(objGetStandaloneSignature);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeDefinition GetTypeDefinition(TypeDefinitionHandle handle) throws Throwable, system.BadImageFormatException, system.ArgumentException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetTypeDefinition = (JCObject)classInstance.Invoke("GetTypeDefinition", handle == null ? null : handle.getJCOInstance());
+            return new TypeDefinition(objGetTypeDefinition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeReference GetTypeReference(TypeReferenceHandle handle) throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetTypeReference = (JCObject)classInstance.Invoke("GetTypeReference", handle == null ? null : handle.getJCOInstance());
+            return new TypeReference(objGetTypeReference);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeSpecification GetTypeSpecification(TypeSpecificationHandle handle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetTypeSpecification = (JCObject)classInstance.Invoke("GetTypeSpecification", handle == null ? null : handle.getJCOInstance());
+            return new TypeSpecification(objGetTypeSpecification);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetString(DocumentNameBlobHandle handle) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.BadImageFormatException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetString", handle == null ? null : handle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetString(NamespaceDefinitionHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetString", handle == null ? null : handle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetString(StringHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetString", handle == null ? null : handle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetUserString(UserStringHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetUserString", handle == null ? null : handle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public int getMetadataLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MetadataLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MetadataReaderOptions getOptions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Options");
-            return new MetadataReaderOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getMetadataVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("MetadataVersion");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DebugMetadataHeader getDebugMetadataHeader() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DebugMetadataHeader");
-            return new DebugMetadataHeader(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MetadataKind getMetadataKind() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MetadataKind");
-            return new MetadataKind(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MetadataStringComparer getStringComparer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("StringComparer");
-            return new MetadataStringComparer(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MetadataStringDecoder getUTF8Decoder() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UTF8Decoder");
-            return new MetadataStringDecoder(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsAssembly() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -820,78 +745,11 @@ public class MetadataReader extends NetObject  {
         }
     }
 
-    public AssemblyReferenceHandleCollection getAssemblyReferences() throws Throwable {
+    public int getMetadataLength() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyReferences");
-            return new AssemblyReferenceHandleCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeDefinitionHandleCollection getTypeDefinitions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeDefinitions");
-            return new TypeDefinitionHandleCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeReferenceHandleCollection getTypeReferences() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeReferences");
-            return new TypeReferenceHandleCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CustomAttributeHandleCollection getCustomAttributes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CustomAttributes");
-            return new CustomAttributeHandleCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DeclarativeSecurityAttributeHandleCollection getDeclarativeSecurityAttributes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DeclarativeSecurityAttributes");
-            return new DeclarativeSecurityAttributeHandleCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MemberReferenceHandleCollection getMemberReferences() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MemberReferences");
-            return new MemberReferenceHandleCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManifestResourceHandleCollection getManifestResources() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ManifestResources");
-            return new ManifestResourceHandleCollection(val);
+            return (int)classInstance.Get("MetadataLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -908,56 +766,56 @@ public class MetadataReader extends NetObject  {
         }
     }
 
-    public ExportedTypeHandleCollection getExportedTypes() throws Throwable {
+    public AssemblyReferenceHandleCollection getAssemblyReferences() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ExportedTypes");
-            return new ExportedTypeHandleCollection(val);
+            JCObject val = (JCObject)classInstance.Get("AssemblyReferences");
+            return new AssemblyReferenceHandleCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MethodDefinitionHandleCollection getMethodDefinitions() throws Throwable {
+    public CustomAttributeHandleCollection getCustomAttributes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodDefinitions");
-            return new MethodDefinitionHandleCollection(val);
+            JCObject val = (JCObject)classInstance.Get("CustomAttributes");
+            return new CustomAttributeHandleCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public FieldDefinitionHandleCollection getFieldDefinitions() throws Throwable {
+    public CustomDebugInformationHandleCollection getCustomDebugInformation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("FieldDefinitions");
-            return new FieldDefinitionHandleCollection(val);
+            JCObject val = (JCObject)classInstance.Get("CustomDebugInformation");
+            return new CustomDebugInformationHandleCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public EventDefinitionHandleCollection getEventDefinitions() throws Throwable {
+    public DebugMetadataHeader getDebugMetadataHeader() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EventDefinitions");
-            return new EventDefinitionHandleCollection(val);
+            JCObject val = (JCObject)classInstance.Get("DebugMetadataHeader");
+            return new DebugMetadataHeader(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PropertyDefinitionHandleCollection getPropertyDefinitions() throws Throwable {
+    public DeclarativeSecurityAttributeHandleCollection getDeclarativeSecurityAttributes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyDefinitions");
-            return new PropertyDefinitionHandleCollection(val);
+            JCObject val = (JCObject)classInstance.Get("DeclarativeSecurityAttributes");
+            return new DeclarativeSecurityAttributeHandleCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -974,12 +832,56 @@ public class MetadataReader extends NetObject  {
         }
     }
 
-    public MethodDebugInformationHandleCollection getMethodDebugInformation() throws Throwable {
+    public EventDefinitionHandleCollection getEventDefinitions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodDebugInformation");
-            return new MethodDebugInformationHandleCollection(val);
+            JCObject val = (JCObject)classInstance.Get("EventDefinitions");
+            return new EventDefinitionHandleCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ExportedTypeHandleCollection getExportedTypes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ExportedTypes");
+            return new ExportedTypeHandleCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FieldDefinitionHandleCollection getFieldDefinitions() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("FieldDefinitions");
+            return new FieldDefinitionHandleCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImportScopeCollection getImportScopes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ImportScopes");
+            return new ImportScopeCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LocalConstantHandleCollection getLocalConstants() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("LocalConstants");
+            return new LocalConstantHandleCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1007,34 +909,132 @@ public class MetadataReader extends NetObject  {
         }
     }
 
-    public LocalConstantHandleCollection getLocalConstants() throws Throwable, system.BadImageFormatException {
+    public ManifestResourceHandleCollection getManifestResources() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalConstants");
-            return new LocalConstantHandleCollection(val);
+            JCObject val = (JCObject)classInstance.Get("ManifestResources");
+            return new ManifestResourceHandleCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ImportScopeCollection getImportScopes() throws Throwable {
+    public MemberReferenceHandleCollection getMemberReferences() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ImportScopes");
-            return new ImportScopeCollection(val);
+            JCObject val = (JCObject)classInstance.Get("MemberReferences");
+            return new MemberReferenceHandleCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CustomDebugInformationHandleCollection getCustomDebugInformation() throws Throwable {
+    public MetadataKind getMetadataKind() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomDebugInformation");
-            return new CustomDebugInformationHandleCollection(val);
+            JCObject val = (JCObject)classInstance.Get("MetadataKind");
+            return new MetadataKind(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MetadataReaderOptions getOptions() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Options");
+            return new MetadataReaderOptions(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MetadataStringComparer getStringComparer() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("StringComparer");
+            return new MetadataStringComparer(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MetadataStringDecoder getUTF8Decoder() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("UTF8Decoder");
+            return new MetadataStringDecoder(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodDebugInformationHandleCollection getMethodDebugInformation() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MethodDebugInformation");
+            return new MethodDebugInformationHandleCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodDefinitionHandleCollection getMethodDefinitions() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MethodDefinitions");
+            return new MethodDefinitionHandleCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyDefinitionHandleCollection getPropertyDefinitions() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PropertyDefinitions");
+            return new PropertyDefinitionHandleCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeDefinitionHandleCollection getTypeDefinitions() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TypeDefinitions");
+            return new TypeDefinitionHandleCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeReferenceHandleCollection getTypeReferences() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TypeReferences");
+            return new TypeReferenceHandleCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getMetadataVersion() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("MetadataVersion");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

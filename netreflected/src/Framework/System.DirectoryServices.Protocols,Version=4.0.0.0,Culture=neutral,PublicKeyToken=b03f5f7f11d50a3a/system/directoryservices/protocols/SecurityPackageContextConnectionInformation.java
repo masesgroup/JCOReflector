@@ -119,28 +119,6 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
     
     // Properties section
     
-    public SecurityProtocol getProtocol() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Protocol");
-            return new SecurityProtocol(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CipherAlgorithmType getAlgorithmIdentifier() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AlgorithmIdentifier");
-            return new CipherAlgorithmType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getCipherStrength() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -151,12 +129,11 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
         }
     }
 
-    public HashAlgorithmType getHash() throws Throwable {
+    public int getExchangeStrength() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Hash");
-            return new HashAlgorithmType(val);
+            return (int)classInstance.Get("ExchangeStrength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,11 +159,34 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
         }
     }
 
-    public int getExchangeStrength() throws Throwable {
+    public SecurityProtocol getProtocol() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("ExchangeStrength");
+            JCObject val = (JCObject)classInstance.Get("Protocol");
+            return new SecurityProtocol(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CipherAlgorithmType getAlgorithmIdentifier() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AlgorithmIdentifier");
+            return new CipherAlgorithmType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HashAlgorithmType getHash() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Hash");
+            return new HashAlgorithmType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

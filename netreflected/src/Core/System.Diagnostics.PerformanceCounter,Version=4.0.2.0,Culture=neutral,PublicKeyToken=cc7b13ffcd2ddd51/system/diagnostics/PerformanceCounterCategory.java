@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.diagnostics.PerformanceCounterCategory;
-import system.diagnostics.PerformanceCounterCategoryType;
-import system.diagnostics.CounterCreationDataCollection;
-import system.diagnostics.PerformanceCounter;
 import system.diagnostics.InstanceDataCollectionCollection;
+import system.diagnostics.PerformanceCounter;
+import system.diagnostics.PerformanceCounterCategory;
+import system.diagnostics.CounterCreationDataCollection;
+import system.diagnostics.PerformanceCounterCategoryType;
 
 
 /**
@@ -178,60 +178,6 @@ public class PerformanceCounterCategory extends NetObject  {
         }
     }
 
-    public static PerformanceCounterCategory Create(java.lang.String categoryName, java.lang.String categoryHelp, java.lang.String counterName, java.lang.String counterHelp) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.runtime.serialization.SerializationException, system.threading.AbandonedMutexException, system.ApplicationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", categoryName, categoryHelp, counterName, counterHelp);
-            return new PerformanceCounterCategory(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static PerformanceCounterCategory Create(java.lang.String categoryName, java.lang.String categoryHelp, PerformanceCounterCategoryType categoryType, java.lang.String counterName, java.lang.String counterHelp) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.runtime.serialization.SerializationException, system.threading.AbandonedMutexException, system.ApplicationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", categoryName, categoryHelp, categoryType == null ? null : categoryType.getJCOInstance(), counterName, counterHelp);
-            return new PerformanceCounterCategory(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static PerformanceCounterCategory Create(java.lang.String categoryName, java.lang.String categoryHelp, CounterCreationDataCollection counterData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.runtime.serialization.SerializationException, system.componentmodel.InvalidEnumArgumentException, system.threading.AbandonedMutexException, system.ApplicationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", categoryName, categoryHelp, counterData == null ? null : counterData.getJCOInstance());
-            return new PerformanceCounterCategory(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static PerformanceCounterCategory Create(java.lang.String categoryName, java.lang.String categoryHelp, PerformanceCounterCategoryType categoryType, CounterCreationDataCollection counterData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.runtime.serialization.SerializationException, system.componentmodel.InvalidEnumArgumentException, system.threading.AbandonedMutexException, system.ApplicationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", categoryName, categoryHelp, categoryType == null ? null : categoryType.getJCOInstance(), counterData == null ? null : counterData.getJCOInstance());
-            return new PerformanceCounterCategory(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Delete(java.lang.String categoryName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Delete", categoryName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean Exists(java.lang.String categoryName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -247,6 +193,47 @@ public class PerformanceCounterCategory extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("Exists", categoryName, machineName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean InstanceExists(java.lang.String instanceName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.FormatException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("InstanceExists", instanceName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean InstanceExists(java.lang.String instanceName, java.lang.String categoryName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("InstanceExists", instanceName, categoryName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean InstanceExists(java.lang.String instanceName, java.lang.String categoryName, java.lang.String machineName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("InstanceExists", instanceName, categoryName, machineName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InstanceDataCollectionCollection ReadCategory() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objReadCategory = (JCObject)classInstance.Invoke("ReadCategory");
+            return new InstanceDataCollectionCollection(objReadCategory);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,6 +268,50 @@ public class PerformanceCounterCategory extends NetObject  {
             PerformanceCounter[] resultingArray = new PerformanceCounter[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PerformanceCounterCategory Create(java.lang.String categoryName, java.lang.String categoryHelp, CounterCreationDataCollection counterData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.runtime.serialization.SerializationException, system.componentmodel.InvalidEnumArgumentException, system.threading.AbandonedMutexException, system.ApplicationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", categoryName, categoryHelp, counterData == null ? null : counterData.getJCOInstance());
+            return new PerformanceCounterCategory(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PerformanceCounterCategory Create(java.lang.String categoryName, java.lang.String categoryHelp, PerformanceCounterCategoryType categoryType, CounterCreationDataCollection counterData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.runtime.serialization.SerializationException, system.componentmodel.InvalidEnumArgumentException, system.threading.AbandonedMutexException, system.ApplicationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", categoryName, categoryHelp, categoryType == null ? null : categoryType.getJCOInstance(), counterData == null ? null : counterData.getJCOInstance());
+            return new PerformanceCounterCategory(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PerformanceCounterCategory Create(java.lang.String categoryName, java.lang.String categoryHelp, PerformanceCounterCategoryType categoryType, java.lang.String counterName, java.lang.String counterHelp) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.runtime.serialization.SerializationException, system.threading.AbandonedMutexException, system.ApplicationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", categoryName, categoryHelp, categoryType == null ? null : categoryType.getJCOInstance(), counterName, counterHelp);
+            return new PerformanceCounterCategory(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PerformanceCounterCategory Create(java.lang.String categoryName, java.lang.String categoryHelp, java.lang.String counterName, java.lang.String counterHelp) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.runtime.serialization.SerializationException, system.threading.AbandonedMutexException, system.ApplicationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", categoryName, categoryHelp, counterName, counterHelp);
+            return new PerformanceCounterCategory(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,42 +370,11 @@ public class PerformanceCounterCategory extends NetObject  {
         }
     }
 
-    public boolean InstanceExists(java.lang.String instanceName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.FormatException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("InstanceExists", instanceName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean InstanceExists(java.lang.String instanceName, java.lang.String categoryName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
+    public static void Delete(java.lang.String categoryName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("InstanceExists", instanceName, categoryName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean InstanceExists(java.lang.String instanceName, java.lang.String categoryName, java.lang.String machineName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("InstanceExists", instanceName, categoryName, machineName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public InstanceDataCollectionCollection ReadCategory() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objReadCategory = (JCObject)classInstance.Invoke("ReadCategory");
-            return new InstanceDataCollectionCollection(objReadCategory);
+            classType.Invoke("Delete", categoryName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,21 +384,12 @@ public class PerformanceCounterCategory extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getCategoryName() throws Throwable {
+    public PerformanceCounterCategoryType getCategoryType() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("CategoryName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCategoryName(java.lang.String CategoryName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CategoryName", CategoryName);
+            JCObject val = (JCObject)classInstance.Get("CategoryType");
+            return new PerformanceCounterCategoryType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,12 +405,21 @@ public class PerformanceCounterCategory extends NetObject  {
         }
     }
 
-    public PerformanceCounterCategoryType getCategoryType() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.security.SecurityException {
+    public java.lang.String getCategoryName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CategoryType");
-            return new PerformanceCounterCategoryType(val);
+            return (java.lang.String)classInstance.Get("CategoryName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCategoryName(java.lang.String CategoryName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CategoryName", CategoryName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

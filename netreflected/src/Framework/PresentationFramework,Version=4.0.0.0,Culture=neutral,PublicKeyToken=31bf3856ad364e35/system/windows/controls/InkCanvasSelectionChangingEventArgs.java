@@ -113,22 +113,22 @@ public class InkCanvasSelectionChangingEventArgs extends NetObject  {
     
     // Methods section
     
-    public void SetSelectedStrokes(StrokeCollection selectedStrokes) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetSelectedStrokes", selectedStrokes == null ? null : selectedStrokes.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public StrokeCollection GetSelectedStrokes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetSelectedStrokes = (JCObject)classInstance.Invoke("GetSelectedStrokes");
             return new StrokeCollection(objGetSelectedStrokes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetSelectedStrokes(StrokeCollection selectedStrokes) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetSelectedStrokes", selectedStrokes == null ? null : selectedStrokes.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

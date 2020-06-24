@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.HttpContext;
+import system.web.HttpStaticObjectsCollection;
 import system.web.sessionstate.IHttpSessionState;
 import system.web.sessionstate.IHttpSessionStateImplementation;
 import system.EventArgs;
-import system.web.HttpContext;
-import system.web.HttpStaticObjectsCollection;
 import system.runtime.serialization.ISurrogateSelector;
 import system.runtime.serialization.ISurrogateSelectorImplementation;
 
@@ -119,22 +119,21 @@ public class SessionStateUtility extends NetObject  {
     
     // Methods section
     
-    public static void RaiseSessionEnd(IHttpSessionState session, NetObject eventSource, EventArgs eventArgs) throws Throwable, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.web.HttpException, system.ArgumentOutOfRangeException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.threading.ThreadStateException, system.OutOfMemoryException, system.threading.AbandonedMutexException {
+    public static boolean IsSessionStateReadOnly(HttpContext context) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RaiseSessionEnd", session == null ? null : session.getJCOInstance(), eventSource == null ? null : eventSource.getJCOInstance(), eventArgs == null ? null : eventArgs.getJCOInstance());
+            return (boolean)classType.Invoke("IsSessionStateReadOnly", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static IHttpSessionState GetHttpSessionStateFromContext(HttpContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
+    public static boolean IsSessionStateRequired(HttpContext context) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetHttpSessionStateFromContext = (JCObject)classType.Invoke("GetHttpSessionStateFromContext", context == null ? null : context.getJCOInstance());
-            return new IHttpSessionStateImplementation(objGetHttpSessionStateFromContext);
+            return (boolean)classType.Invoke("IsSessionStateRequired", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,21 +150,12 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
-    public static boolean IsSessionStateRequired(HttpContext context) throws Throwable {
+    public static IHttpSessionState GetHttpSessionStateFromContext(HttpContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsSessionStateRequired", context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsSessionStateReadOnly(HttpContext context) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsSessionStateReadOnly", context == null ? null : context.getJCOInstance());
+            JCObject objGetHttpSessionStateFromContext = (JCObject)classType.Invoke("GetHttpSessionStateFromContext", context == null ? null : context.getJCOInstance());
+            return new IHttpSessionStateImplementation(objGetHttpSessionStateFromContext);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,6 +166,16 @@ public class SessionStateUtility extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddHttpSessionStateToContext", context == null ? null : context.getJCOInstance(), container == null ? null : container.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RaiseSessionEnd(IHttpSessionState session, NetObject eventSource, EventArgs eventArgs) throws Throwable, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.web.HttpException, system.ArgumentOutOfRangeException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.threading.ThreadStateException, system.OutOfMemoryException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RaiseSessionEnd", session == null ? null : session.getJCOInstance(), eventSource == null ? null : eventSource.getJCOInstance(), eventArgs == null ? null : eventArgs.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

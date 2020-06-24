@@ -115,26 +115,6 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
         }
     }
 
-    public void RemoveAttribute(java.lang.String attribute, boolean ignoreCase) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveAttribute", attribute, ignoreCase);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetAttribute(java.lang.String attribute, NetObject value, boolean ignoreCase) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetAttribute", attribute, value == null ? null : value.getJCOInstance(), ignoreCase);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetStyleAttribute(java.lang.String attribute, boolean designTimeOnly, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -146,11 +126,31 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
         }
     }
 
+    public void RemoveAttribute(java.lang.String attribute, boolean ignoreCase) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveAttribute", attribute, ignoreCase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void RemoveStyleAttribute(java.lang.String attribute, boolean designTimeOnly, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveStyleAttribute", attribute, designTimeOnly, ignoreCase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetAttribute(java.lang.String attribute, NetObject value, boolean ignoreCase) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetAttribute", attribute, value == null ? null : value.getJCOInstance(), ignoreCase);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,6 +170,17 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
     
     // Properties section
     
+    public NetObject getDesignTimeElement() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DesignTimeElement");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public HtmlControlDesigner getDesigner() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -186,17 +197,6 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Designer", Designer == null ? null : Designer.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getDesignTimeElement() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DesignTimeElement");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

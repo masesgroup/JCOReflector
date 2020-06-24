@@ -92,9 +92,9 @@ public interface IKeyboardInputSite extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Unregister() throws Throwable;
-
     public boolean OnNoMoreTabStops(TraversalRequest request) throws Throwable;
+
+    public void Unregister() throws Throwable;
 
 
     

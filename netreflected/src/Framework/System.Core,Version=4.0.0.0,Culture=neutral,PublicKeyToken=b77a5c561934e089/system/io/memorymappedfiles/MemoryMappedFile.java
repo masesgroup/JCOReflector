@@ -39,15 +39,15 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.memorymappedfiles.MemoryMappedFile;
-import system.io.memorymappedfiles.MemoryMappedFileRights;
-import system.io.HandleInheritability;
-import system.io.FileMode;
-import system.io.memorymappedfiles.MemoryMappedFileAccess;
 import system.io.FileStream;
+import system.io.memorymappedfiles.MemoryMappedFileAccess;
+import system.io.HandleInheritability;
 import system.io.memorymappedfiles.MemoryMappedFileSecurity;
+import system.io.FileMode;
 import system.io.memorymappedfiles.MemoryMappedFileOptions;
-import system.io.memorymappedfiles.MemoryMappedViewStream;
+import system.io.memorymappedfiles.MemoryMappedFileRights;
 import system.io.memorymappedfiles.MemoryMappedViewAccessor;
+import system.io.memorymappedfiles.MemoryMappedViewStream;
 import microsoft.win32.safehandles.SafeMemoryMappedFileHandle;
 
 
@@ -123,34 +123,23 @@ public class MemoryMappedFile extends NetObject  {
     
     // Methods section
     
-    public static MemoryMappedFile OpenExisting(java.lang.String mapName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static MemoryMappedFile CreateFromFile(FileStream fileStream, java.lang.String mapName, long capacity, MemoryMappedFileAccess access, HandleInheritability inheritability, boolean leaveOpen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objOpenExisting = (JCObject)classType.Invoke("OpenExisting", mapName);
-            return new MemoryMappedFile(objOpenExisting);
+            JCObject objCreateFromFile = (JCObject)classType.Invoke("CreateFromFile", fileStream == null ? null : fileStream.getJCOInstance(), mapName, capacity, access == null ? null : access.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), leaveOpen);
+            return new MemoryMappedFile(objCreateFromFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static MemoryMappedFile OpenExisting(java.lang.String mapName, MemoryMappedFileRights desiredAccessRights) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static MemoryMappedFile CreateFromFile(FileStream fileStream, java.lang.String mapName, long capacity, MemoryMappedFileAccess access, MemoryMappedFileSecurity memoryMappedFileSecurity, HandleInheritability inheritability, boolean leaveOpen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.FileNotFoundException, system.FormatException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objOpenExisting = (JCObject)classType.Invoke("OpenExisting", mapName, desiredAccessRights == null ? null : desiredAccessRights.getJCOInstance());
-            return new MemoryMappedFile(objOpenExisting);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MemoryMappedFile OpenExisting(java.lang.String mapName, MemoryMappedFileRights desiredAccessRights, HandleInheritability inheritability) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.FileNotFoundException, system.FormatException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objOpenExisting = (JCObject)classType.Invoke("OpenExisting", mapName, desiredAccessRights == null ? null : desiredAccessRights.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance());
-            return new MemoryMappedFile(objOpenExisting);
+            JCObject objCreateFromFile = (JCObject)classType.Invoke("CreateFromFile", fileStream == null ? null : fileStream.getJCOInstance(), mapName, capacity, access == null ? null : access.getJCOInstance(), memoryMappedFileSecurity == null ? null : memoryMappedFileSecurity.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), leaveOpen);
+            return new MemoryMappedFile(objCreateFromFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,28 +194,6 @@ public class MemoryMappedFile extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateFromFile = (JCObject)classType.Invoke("CreateFromFile", path, mode == null ? null : mode.getJCOInstance(), mapName, capacity, access == null ? null : access.getJCOInstance());
-            return new MemoryMappedFile(objCreateFromFile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MemoryMappedFile CreateFromFile(FileStream fileStream, java.lang.String mapName, long capacity, MemoryMappedFileAccess access, HandleInheritability inheritability, boolean leaveOpen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.collections.generic.KeyNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateFromFile = (JCObject)classType.Invoke("CreateFromFile", fileStream == null ? null : fileStream.getJCOInstance(), mapName, capacity, access == null ? null : access.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), leaveOpen);
-            return new MemoryMappedFile(objCreateFromFile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MemoryMappedFile CreateFromFile(FileStream fileStream, java.lang.String mapName, long capacity, MemoryMappedFileAccess access, MemoryMappedFileSecurity memoryMappedFileSecurity, HandleInheritability inheritability, boolean leaveOpen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.FileNotFoundException, system.FormatException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.collections.generic.KeyNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateFromFile = (JCObject)classType.Invoke("CreateFromFile", fileStream == null ? null : fileStream.getJCOInstance(), mapName, capacity, access == null ? null : access.getJCOInstance(), memoryMappedFileSecurity == null ? null : memoryMappedFileSecurity.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), leaveOpen);
             return new MemoryMappedFile(objCreateFromFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -321,34 +288,45 @@ public class MemoryMappedFile extends NetObject  {
         }
     }
 
-    public MemoryMappedViewStream CreateViewStream() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MemoryMappedFile OpenExisting(java.lang.String mapName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateViewStream = (JCObject)classInstance.Invoke("CreateViewStream");
-            return new MemoryMappedViewStream(objCreateViewStream);
+            JCObject objOpenExisting = (JCObject)classType.Invoke("OpenExisting", mapName);
+            return new MemoryMappedFile(objOpenExisting);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MemoryMappedViewStream CreateViewStream(long offset, long size) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MemoryMappedFile OpenExisting(java.lang.String mapName, MemoryMappedFileRights desiredAccessRights) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateViewStream = (JCObject)classInstance.Invoke("CreateViewStream", offset, size);
-            return new MemoryMappedViewStream(objCreateViewStream);
+            JCObject objOpenExisting = (JCObject)classType.Invoke("OpenExisting", mapName, desiredAccessRights == null ? null : desiredAccessRights.getJCOInstance());
+            return new MemoryMappedFile(objOpenExisting);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MemoryMappedViewStream CreateViewStream(long offset, long size, MemoryMappedFileAccess access) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.FormatException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static MemoryMappedFile OpenExisting(java.lang.String mapName, MemoryMappedFileRights desiredAccessRights, HandleInheritability inheritability) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.FileNotFoundException, system.FormatException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objOpenExisting = (JCObject)classType.Invoke("OpenExisting", mapName, desiredAccessRights == null ? null : desiredAccessRights.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance());
+            return new MemoryMappedFile(objOpenExisting);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MemoryMappedFileSecurity GetAccessControl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.SystemException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateViewStream = (JCObject)classInstance.Invoke("CreateViewStream", offset, size, access == null ? null : access.getJCOInstance());
-            return new MemoryMappedViewStream(objCreateViewStream);
+            JCObject objGetAccessControl = (JCObject)classInstance.Invoke("GetAccessControl");
+            return new MemoryMappedFileSecurity(objGetAccessControl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,22 +365,44 @@ public class MemoryMappedFile extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable, system.ArgumentNullException {
+    public MemoryMappedViewStream CreateViewStream() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Dispose");
+            JCObject objCreateViewStream = (JCObject)classInstance.Invoke("CreateViewStream");
+            return new MemoryMappedViewStream(objCreateViewStream);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MemoryMappedFileSecurity GetAccessControl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.SystemException, system.OverflowException {
+    public MemoryMappedViewStream CreateViewStream(long offset, long size) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetAccessControl = (JCObject)classInstance.Invoke("GetAccessControl");
-            return new MemoryMappedFileSecurity(objGetAccessControl);
+            JCObject objCreateViewStream = (JCObject)classInstance.Invoke("CreateViewStream", offset, size);
+            return new MemoryMappedViewStream(objCreateViewStream);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MemoryMappedViewStream CreateViewStream(long offset, long size, MemoryMappedFileAccess access) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.FormatException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateViewStream = (JCObject)classInstance.Invoke("CreateViewStream", offset, size, access == null ? null : access.getJCOInstance());
+            return new MemoryMappedViewStream(objCreateViewStream);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

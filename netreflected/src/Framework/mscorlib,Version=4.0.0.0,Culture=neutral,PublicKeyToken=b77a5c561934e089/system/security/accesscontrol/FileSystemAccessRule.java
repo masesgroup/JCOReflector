@@ -124,21 +124,21 @@ public class FileSystemAccessRule extends NetObject  {
         }
     }
 
-    public FileSystemAccessRule(java.lang.String identity, FileSystemRights fileSystemRights, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(identity, fileSystemRights == null ? null : fileSystemRights.getJCOInstance(), type == null ? null : type.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FileSystemAccessRule(IdentityReference identity, FileSystemRights fileSystemRights, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), fileSystemRights == null ? null : fileSystemRights.getJCOInstance(), inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), type == null ? null : type.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FileSystemAccessRule(java.lang.String identity, FileSystemRights fileSystemRights, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(identity, fileSystemRights == null ? null : fileSystemRights.getJCOInstance(), type == null ? null : type.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,12 +162,11 @@ public class FileSystemAccessRule extends NetObject  {
     
     // Properties section
     
-    public FileSystemRights getFileSystemRights() throws Throwable {
+    public boolean getIsInherited() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("FileSystemRights");
-            return new FileSystemRights(val);
+            return (boolean)classInstance.Get("IsInherited");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,22 +183,12 @@ public class FileSystemAccessRule extends NetObject  {
         }
     }
 
-    public IdentityReference getIdentityReference() throws Throwable {
+    public FileSystemRights getFileSystemRights() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("IdentityReference");
-            return new IdentityReference(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsInherited() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsInherited");
+            JCObject val = (JCObject)classInstance.Get("FileSystemRights");
+            return new FileSystemRights(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,6 +211,17 @@ public class FileSystemAccessRule extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("PropagationFlags");
             return new PropagationFlags(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IdentityReference getIdentityReference() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("IdentityReference");
+            return new IdentityReference(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

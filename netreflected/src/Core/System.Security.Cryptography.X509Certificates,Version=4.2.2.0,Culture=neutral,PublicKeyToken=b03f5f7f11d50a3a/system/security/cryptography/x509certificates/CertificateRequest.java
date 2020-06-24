@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.x509certificates.X500DistinguishedName;
 import system.security.cryptography.ECDsa;
 import system.security.cryptography.HashAlgorithmName;
-import system.security.cryptography.x509certificates.X500DistinguishedName;
 import system.security.cryptography.RSA;
 import system.security.cryptography.RSASignaturePadding;
 import system.security.cryptography.x509certificates.PublicKey;
@@ -118,31 +118,11 @@ public class CertificateRequest extends NetObject  {
     // Constructors section
     
 
-    public CertificateRequest(java.lang.String subjectName, ECDsa key, HashAlgorithmName hashAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(subjectName, key == null ? null : key.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CertificateRequest(X500DistinguishedName subjectName, ECDsa key, HashAlgorithmName hashAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(subjectName == null ? null : subjectName.getJCOInstance(), key == null ? null : key.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CertificateRequest(java.lang.String subjectName, RSA key, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(subjectName, key == null ? null : key.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), padding == null ? null : padding.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,6 +143,26 @@ public class CertificateRequest extends NetObject  {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(subjectName == null ? null : subjectName.getJCOInstance(), publicKey == null ? null : publicKey.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CertificateRequest(java.lang.String subjectName, ECDsa key, HashAlgorithmName hashAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(subjectName, key == null ? null : key.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CertificateRequest(java.lang.String subjectName, RSA key, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(subjectName, key == null ? null : key.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), padding == null ? null : padding.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,12 +210,12 @@ public class CertificateRequest extends NetObject  {
         }
     }
 
-    public X509Certificate2 CreateSelfSigned(DateTimeOffset notBefore, DateTimeOffset notAfter) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException, system.io.IOException {
+    public X509Certificate2 Create(X500DistinguishedName issuerName, X509SignatureGenerator generator, DateTimeOffset notBefore, DateTimeOffset notAfter, byte[] serialNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.DivideByZeroException, system.runtime.serialization.SerializationException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateSelfSigned = (JCObject)classInstance.Invoke("CreateSelfSigned", notBefore == null ? null : notBefore.getJCOInstance(), notAfter == null ? null : notAfter.getJCOInstance());
-            return new X509Certificate2(objCreateSelfSigned);
+            JCObject objCreate = (JCObject)classInstance.Invoke("Create", issuerName == null ? null : issuerName.getJCOInstance(), generator == null ? null : generator.getJCOInstance(), notBefore == null ? null : notBefore.getJCOInstance(), notAfter == null ? null : notAfter.getJCOInstance(), serialNumber);
+            return new X509Certificate2(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,12 +232,12 @@ public class CertificateRequest extends NetObject  {
         }
     }
 
-    public X509Certificate2 Create(X500DistinguishedName issuerName, X509SignatureGenerator generator, DateTimeOffset notBefore, DateTimeOffset notAfter, byte[] serialNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.DivideByZeroException, system.runtime.serialization.SerializationException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public X509Certificate2 CreateSelfSigned(DateTimeOffset notBefore, DateTimeOffset notAfter) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", issuerName == null ? null : issuerName.getJCOInstance(), generator == null ? null : generator.getJCOInstance(), notBefore == null ? null : notBefore.getJCOInstance(), notAfter == null ? null : notAfter.getJCOInstance(), serialNumber);
-            return new X509Certificate2(objCreate);
+            JCObject objCreateSelfSigned = (JCObject)classInstance.Invoke("CreateSelfSigned", notBefore == null ? null : notBefore.getJCOInstance(), notAfter == null ? null : notAfter.getJCOInstance());
+            return new X509Certificate2(objCreateSelfSigned);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,12 +247,12 @@ public class CertificateRequest extends NetObject  {
     
     // Properties section
     
-    public X500DistinguishedName getSubjectName() throws Throwable {
+    public HashAlgorithmName getHashAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SubjectName");
-            return new X500DistinguishedName(val);
+            JCObject val = (JCObject)classInstance.Get("HashAlgorithm");
+            return new HashAlgorithmName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,12 +269,12 @@ public class CertificateRequest extends NetObject  {
         }
     }
 
-    public HashAlgorithmName getHashAlgorithm() throws Throwable {
+    public X500DistinguishedName getSubjectName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("HashAlgorithm");
-            return new HashAlgorithmName(val);
+            JCObject val = (JCObject)classInstance.Get("SubjectName");
+            return new X500DistinguishedName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

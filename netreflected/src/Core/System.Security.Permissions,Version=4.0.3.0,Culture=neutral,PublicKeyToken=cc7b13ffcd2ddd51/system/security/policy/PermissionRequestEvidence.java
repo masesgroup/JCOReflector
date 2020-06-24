@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.PermissionSet;
-import system.security.policy.PermissionRequestEvidence;
 import system.security.policy.EvidenceBase;
+import system.security.policy.PermissionRequestEvidence;
 
 
 /**
@@ -126,23 +126,23 @@ public class PermissionRequestEvidence extends NetObject  {
     
     // Methods section
     
-    public PermissionRequestEvidence Copy() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
-            return new PermissionRequestEvidence(objCopy);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EvidenceBase Clone() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objClone = (JCObject)classInstance.Invoke("Clone");
             return new EvidenceBase(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PermissionRequestEvidence Copy() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            return new PermissionRequestEvidence(objCopy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

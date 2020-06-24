@@ -110,21 +110,21 @@ public class RemovedConditionAction extends NetObject  {
     // Constructors section
     
 
-    public RemovedConditionAction(RuleCondition removedConditionDefinition) throws Throwable, system.ArgumentNullException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(removedConditionDefinition == null ? null : removedConditionDefinition.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public RemovedConditionAction() throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RemovedConditionAction(RuleCondition removedConditionDefinition) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(removedConditionDefinition == null ? null : removedConditionDefinition.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

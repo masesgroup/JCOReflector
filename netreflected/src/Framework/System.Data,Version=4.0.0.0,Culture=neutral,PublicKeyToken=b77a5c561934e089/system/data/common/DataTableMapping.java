@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.common.DataColumnMapping;
+import system.data.MissingMappingAction;
 import system.data.DataColumn;
 import system.data.DataTable;
-import system.data.MissingMappingAction;
 import system.data.MissingSchemaAction;
 import system.data.DataSet;
 import system.runtime.remoting.ObjRef;
@@ -151,23 +151,23 @@ public class DataTableMapping extends NetObject  {
     
     // Methods section
     
-    public DataColumn GetDataColumn(java.lang.String sourceColumn, NetType dataType, DataTable dataTable, MissingMappingAction mappingAction, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDataColumn = (JCObject)classInstance.Invoke("GetDataColumn", sourceColumn, dataType == null ? null : dataType.getJCOInstance(), dataTable == null ? null : dataTable.getJCOInstance(), mappingAction == null ? null : mappingAction.getJCOInstance(), schemaAction == null ? null : schemaAction.getJCOInstance());
-            return new DataColumn(objGetDataColumn);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataColumnMapping GetColumnMappingBySchemaAction(java.lang.String sourceColumn, MissingMappingAction mappingAction) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetColumnMappingBySchemaAction = (JCObject)classInstance.Invoke("GetColumnMappingBySchemaAction", sourceColumn, mappingAction == null ? null : mappingAction.getJCOInstance());
             return new DataColumnMapping(objGetColumnMappingBySchemaAction);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataColumn GetDataColumn(java.lang.String sourceColumn, NetType dataType, DataTable dataTable, MissingMappingAction mappingAction, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDataColumn = (JCObject)classInstance.Invoke("GetDataColumn", sourceColumn, dataType == null ? null : dataType.getJCOInstance(), dataTable == null ? null : dataTable.getJCOInstance(), mappingAction == null ? null : mappingAction.getJCOInstance(), schemaAction == null ? null : schemaAction.getJCOInstance());
+            return new DataColumn(objGetDataColumn);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

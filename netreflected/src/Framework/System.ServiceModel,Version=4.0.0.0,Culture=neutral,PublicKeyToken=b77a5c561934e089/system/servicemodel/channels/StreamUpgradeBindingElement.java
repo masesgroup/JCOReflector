@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.channels.BindingElement;
 import system.servicemodel.channels.StreamUpgradeProvider;
 import system.servicemodel.channels.BindingContext;
-import system.servicemodel.channels.BindingElement;
 
 
 /**
@@ -115,6 +115,17 @@ public class StreamUpgradeBindingElement extends NetObject  {
     
     // Methods section
     
+    public BindingElement Clone() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            return new BindingElement(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public StreamUpgradeProvider BuildClientStreamUpgradeProvider(BindingContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -132,17 +143,6 @@ public class StreamUpgradeBindingElement extends NetObject  {
         try {
             JCObject objBuildServerStreamUpgradeProvider = (JCObject)classInstance.Invoke("BuildServerStreamUpgradeProvider", context == null ? null : context.getJCOInstance());
             return new StreamUpgradeProvider(objBuildServerStreamUpgradeProvider);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BindingElement Clone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new BindingElement(objClone);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

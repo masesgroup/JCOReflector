@@ -108,35 +108,6 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
     
     // Properties section
     
-    public java.lang.String[] getParamNames() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ParamNames");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-			for(int indexParamNames = 0; indexParamNames < resultingArrayList.size(); indexParamNames++ ) {
-				resultingArray[indexParamNames] = (java.lang.String)resultingArrayList.get(indexParamNames);
-			}
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setParamNames(java.lang.String[] ParamNames) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ParamNames", ParamNames);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject[] getParamValues() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,16 +135,16 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
-    public NetType[] getParamTypes() throws Throwable {
+    public Header[] getHeaders() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ParamTypes");
+            ArrayList<Header> resultingArrayList = new ArrayList<Header>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("Headers");
             for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetType(resultingObject));
+			    resultingArrayList.add(new Header(resultingObject));
             }
-            NetType[] resultingArray = new NetType[resultingArrayList.size()];
+            Header[] resultingArray = new Header[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -181,11 +152,11 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
-    public void setParamTypes(NetType[] ParamTypes) throws Throwable {
+    public void setHeaders(Header[] Headers) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ParamTypes", toObjectFromArray(ParamTypes));
+            classInstance.Set("Headers", toObjectFromArray(Headers));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,16 +202,45 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
-    public Header[] getHeaders() throws Throwable {
+    public java.lang.String[] getParamNames() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Header> resultingArrayList = new ArrayList<Header>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Headers");
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("ParamNames");
             for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new Header(resultingObject));
+			    resultingArrayList.add(resultingObject);
             }
-            Header[] resultingArray = new Header[resultingArrayList.size()];
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+			for(int indexParamNames = 0; indexParamNames < resultingArrayList.size(); indexParamNames++ ) {
+				resultingArray[indexParamNames] = (java.lang.String)resultingArrayList.get(indexParamNames);
+			}
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setParamNames(java.lang.String[] ParamNames) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ParamNames", ParamNames);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType[] getParamTypes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("ParamTypes");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new NetType(resultingObject));
+            }
+            NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -248,11 +248,11 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
-    public void setHeaders(Header[] Headers) throws Throwable {
+    public void setParamTypes(NetType[] ParamTypes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Headers", toObjectFromArray(Headers));
+            classInstance.Set("ParamTypes", toObjectFromArray(ParamTypes));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

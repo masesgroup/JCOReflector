@@ -140,6 +140,25 @@ public class ApplicationId extends NetObject  {
     
     // Properties section
     
+    public byte[] getPublicKeyToken() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("PublicKeyToken");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+			for(int indexPublicKeyToken = 0; indexPublicKeyToken < resultingArrayList.size(); indexPublicKeyToken++ ) {
+				resultingArray[indexPublicKeyToken] = (byte)resultingArrayList.get(indexPublicKeyToken);
+			}
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getCulture() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,25 +195,6 @@ public class ApplicationId extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Version");
             return new Version(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] getPublicKeyToken() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("PublicKeyToken");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-			for(int indexPublicKeyToken = 0; indexPublicKeyToken < resultingArrayList.size(); indexPublicKeyToken++ ) {
-				resultingArray[indexPublicKeyToken] = (byte)resultingArrayList.get(indexPublicKeyToken);
-			}
-            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

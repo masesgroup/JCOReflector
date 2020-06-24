@@ -94,11 +94,11 @@ public interface IGeneratedTask extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void SetPropertyValue(TaskPropertyInfo property, NetObject value) throws Throwable;
+    public boolean Execute() throws Throwable;
 
     public NetObject GetPropertyValue(TaskPropertyInfo property) throws Throwable;
 
-    public boolean Execute() throws Throwable;
+    public void SetPropertyValue(TaskPropertyInfo property, NetObject value) throws Throwable;
 
 
     

@@ -41,10 +41,10 @@ import java.util.ArrayList;
 import system.threading.tasks.Task;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.threading.CancellationToken;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.reflection.MethodBase;
+import system.threading.CancellationToken;
 
 /**
  * The base .NET class managing System.Threading.Tasks.TaskCanceledException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetException}.
@@ -175,23 +175,21 @@ public class TaskCanceledException extends NetException {
     
     // Properties section
     
-    public Task getTask() throws Throwable {
+    public int getHResult() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Task");
-            return new Task(val);
+            return (int)classInstance.Get("HResult");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CancellationToken getCancellationToken() throws Throwable {
+    public void setHResult(int HResult) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CancellationToken");
-            return new CancellationToken(val);
+            classInstance.Set("HResult", HResult);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,21 +268,23 @@ public class TaskCanceledException extends NetException {
         }
     }
 
-    public int getHResult() throws Throwable {
+    public CancellationToken getCancellationToken() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("HResult");
+            JCObject val = (JCObject)classInstance.Get("CancellationToken");
+            return new CancellationToken(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHResult(int HResult) throws Throwable {
+    public Task getTask() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("HResult", HResult);
+            JCObject val = (JCObject)classInstance.Get("Task");
+            return new Task(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

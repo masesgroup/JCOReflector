@@ -39,9 +39,9 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.xps.packaging.IXpsFixedPageWriter;
 import system.windows.xps.packaging.IXpsFixedPageWriterImplementation;
+import system.windows.xps.packaging.XpsStructure;
 import system.windows.xps.packaging.XpsThumbnail;
 import system.windows.xps.packaging.XpsImageType;
-import system.windows.xps.packaging.XpsStructure;
 import system.printing.PrintTicket;
 import system.Uri;
 
@@ -98,21 +98,21 @@ public interface IXpsFixedDocumentWriter extends IJCOBridgeReflected {
     
     public IXpsFixedPageWriter AddFixedPage() throws Throwable;
 
+    public XpsStructure AddDocumentStructure() throws Throwable;
+
     public XpsThumbnail AddThumbnail(XpsImageType imageType) throws Throwable;
 
     public void Commit() throws Throwable;
-
-    public XpsStructure AddDocumentStructure() throws Throwable;
 
 
     
     // Properties section
     
+    public int getDocumentNumber() throws Throwable;
+
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable;
 
     public Uri getUri() throws Throwable;
-
-    public int getDocumentNumber() throws Throwable;
 
 
 

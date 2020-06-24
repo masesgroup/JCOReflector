@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.CustomAttributeHandleCollection;
-import system.reflection.TypeAttributes;
-import system.reflection.metadata.StringHandle;
-import system.reflection.metadata.NamespaceDefinitionHandle;
 import system.reflection.metadata.EntityHandle;
+import system.reflection.metadata.NamespaceDefinitionHandle;
+import system.reflection.metadata.StringHandle;
+import system.reflection.TypeAttributes;
 
 
 /**
@@ -132,22 +132,33 @@ public class ExportedType extends NetObject  {
     
     // Properties section
     
-    public TypeAttributes getAttributes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new TypeAttributes(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsForwarder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsForwarder");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EntityHandle getImplementation() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Implementation");
+            return new EntityHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NamespaceDefinitionHandle getNamespaceDefinition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NamespaceDefinition");
+            return new NamespaceDefinitionHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,23 +186,12 @@ public class ExportedType extends NetObject  {
         }
     }
 
-    public NamespaceDefinitionHandle getNamespaceDefinition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public TypeAttributes getAttributes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NamespaceDefinition");
-            return new NamespaceDefinitionHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EntityHandle getImplementation() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Implementation");
-            return new EntityHandle(val);
+            JCObject val = (JCObject)classInstance.Get("Attributes");
+            return new TypeAttributes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

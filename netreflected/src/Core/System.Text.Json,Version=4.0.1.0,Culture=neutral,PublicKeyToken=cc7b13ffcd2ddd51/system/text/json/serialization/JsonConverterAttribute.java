@@ -124,12 +124,11 @@ public class JsonConverterAttribute extends NetObject  {
     
     // Methods section
     
-    public JsonConverter CreateConverter(NetType typeToConvert) throws Throwable {
+    public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateConverter = (JCObject)classInstance.Invoke("CreateConverter", typeToConvert == null ? null : typeToConvert.getJCOInstance());
-            return new JsonConverter(objCreateConverter);
+            return (boolean)classInstance.Invoke("IsDefaultAttribute");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,11 +144,12 @@ public class JsonConverterAttribute extends NetObject  {
         }
     }
 
-    public boolean IsDefaultAttribute() throws Throwable {
+    public JsonConverter CreateConverter(NetType typeToConvert) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            JCObject objCreateConverter = (JCObject)classInstance.Invoke("CreateConverter", typeToConvert == null ? null : typeToConvert.getJCOInstance());
+            return new JsonConverter(objCreateConverter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,6 +159,17 @@ public class JsonConverterAttribute extends NetObject  {
     
     // Properties section
     
+    public NetObject getTypeId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TypeId");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetType getConverterType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -175,17 +186,6 @@ public class JsonConverterAttribute extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConverterType", ConverterType == null ? null : ConverterType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

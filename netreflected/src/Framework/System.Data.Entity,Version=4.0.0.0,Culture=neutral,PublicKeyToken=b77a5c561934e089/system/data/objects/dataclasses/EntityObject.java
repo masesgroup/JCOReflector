@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.EntityState;
 import system.data.EntityKey;
+import system.data.EntityState;
 import system.componentmodel.PropertyChangedEventHandler;
 import system.componentmodel.PropertyChangingEventHandler;
 
@@ -120,17 +120,6 @@ public class EntityObject extends NetObject  {
     
     // Properties section
     
-    public EntityState getEntityState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EntityState");
-            return new EntityState(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EntityKey getEntityKey() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -147,6 +136,17 @@ public class EntityObject extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntityKey", EntityKey == null ? null : EntityKey.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EntityState getEntityState() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EntityState");
+            return new EntityState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

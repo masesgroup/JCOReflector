@@ -128,6 +128,26 @@ public class SqlDataSourceStatusEventArgs extends NetObject  {
     
     // Properties section
     
+    public boolean getExceptionHandled() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("ExceptionHandled");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setExceptionHandled(boolean ExceptionHandled) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ExceptionHandled", ExceptionHandled);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int getAffectedRows() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -155,26 +175,6 @@ public class SqlDataSourceStatusEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Exception");
             return new NetException(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getExceptionHandled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ExceptionHandled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setExceptionHandled(boolean ExceptionHandled) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ExceptionHandled", ExceptionHandled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

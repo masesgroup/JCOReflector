@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.servicemodel.channels.Message;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.servicemodel.channels.Message;
 import system.AsyncCallback;
 
 
@@ -93,11 +93,11 @@ public interface IMetadataExchange extends IJCOBridgeReflected {
 
     // Methods section
     
-    public Message Get(Message request) throws Throwable;
-
     public IAsyncResult BeginGet(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
     public Message EndGet(IAsyncResult result) throws Throwable;
+
+    public Message Get(Message request) throws Throwable;
 
 
     

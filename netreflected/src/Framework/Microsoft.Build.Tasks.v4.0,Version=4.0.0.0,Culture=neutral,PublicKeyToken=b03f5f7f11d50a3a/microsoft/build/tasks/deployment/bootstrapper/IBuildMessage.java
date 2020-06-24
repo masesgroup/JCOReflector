@@ -94,13 +94,13 @@ public interface IBuildMessage extends IJCOBridgeReflected {
     
     // Properties section
     
-    public BuildMessageSeverity getSeverity() throws Throwable;
+    public int getHelpId() throws Throwable;
 
-    public java.lang.String getMessage() throws Throwable;
+    public BuildMessageSeverity getSeverity() throws Throwable;
 
     public java.lang.String getHelpKeyword() throws Throwable;
 
-    public int getHelpId() throws Throwable;
+    public java.lang.String getMessage() throws Throwable;
 
 
 

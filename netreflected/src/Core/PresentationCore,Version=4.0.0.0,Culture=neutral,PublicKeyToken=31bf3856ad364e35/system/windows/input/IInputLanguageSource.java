@@ -98,11 +98,11 @@ public interface IInputLanguageSource extends IJCOBridgeReflected {
     
     // Properties section
     
+    public IEnumerable getInputLanguageList() throws Throwable;
+
     public CultureInfo getCurrentInputLanguage() throws Throwable;
 
     public void setCurrentInputLanguage(CultureInfo CurrentInputLanguage) throws Throwable;
-
-    public IEnumerable getInputLanguageList() throws Throwable;
 
 
 

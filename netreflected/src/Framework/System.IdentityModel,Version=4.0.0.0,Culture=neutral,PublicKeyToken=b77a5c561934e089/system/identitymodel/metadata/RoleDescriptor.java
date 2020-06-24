@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Uri;
-import system.identitymodel.metadata.Organization;
 import system.DateTime;
+import system.identitymodel.metadata.Organization;
+import system.Uri;
 
 
 /**
@@ -119,22 +119,22 @@ public class RoleDescriptor extends NetObject  {
     
     // Properties section
     
-    public Uri getErrorUrl() throws Throwable {
+    public DateTime getValidUntil() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ErrorUrl");
-            return new Uri(val);
+            JCObject val = (JCObject)classInstance.Get("ValidUntil");
+            return new DateTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setErrorUrl(Uri ErrorUrl) throws Throwable {
+    public void setValidUntil(DateTime ValidUntil) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ErrorUrl", ErrorUrl == null ? null : ErrorUrl.getJCOInstance());
+            classInstance.Set("ValidUntil", ValidUntil == null ? null : ValidUntil.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,22 +161,22 @@ public class RoleDescriptor extends NetObject  {
         }
     }
 
-    public DateTime getValidUntil() throws Throwable {
+    public Uri getErrorUrl() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidUntil");
-            return new DateTime(val);
+            JCObject val = (JCObject)classInstance.Get("ErrorUrl");
+            return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setValidUntil(DateTime ValidUntil) throws Throwable {
+    public void setErrorUrl(Uri ErrorUrl) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ValidUntil", ValidUntil == null ? null : ValidUntil.getJCOInstance());
+            classInstance.Set("ErrorUrl", ErrorUrl == null ? null : ErrorUrl.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

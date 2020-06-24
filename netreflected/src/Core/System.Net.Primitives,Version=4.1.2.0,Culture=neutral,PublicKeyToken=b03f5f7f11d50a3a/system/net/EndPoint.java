@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.SocketAddress;
 import system.net.EndPoint;
+import system.net.SocketAddress;
 import system.net.sockets.AddressFamily;
 
 
@@ -115,23 +115,23 @@ public class EndPoint extends NetObject  {
     
     // Methods section
     
-    public SocketAddress Serialize() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSerialize = (JCObject)classInstance.Invoke("Serialize");
-            return new SocketAddress(objSerialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EndPoint Create(SocketAddress socketAddress) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreate = (JCObject)classInstance.Invoke("Create", socketAddress == null ? null : socketAddress.getJCOInstance());
             return new EndPoint(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SocketAddress Serialize() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSerialize = (JCObject)classInstance.Invoke("Serialize");
+            return new SocketAddress(objSerialize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

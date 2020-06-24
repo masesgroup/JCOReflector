@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import microsoft.build.tasks.hosting.IVbcHostObjectFreeThreaded;
-import microsoft.build.tasks.hosting.IVbcHostObjectFreeThreadedImplementation;
 import microsoft.build.framework.ITaskItem;
 import microsoft.build.framework.ITaskItemImplementation;
+import microsoft.build.tasks.hosting.IVbcHostObjectFreeThreaded;
+import microsoft.build.tasks.hosting.IVbcHostObjectFreeThreadedImplementation;
 
 
 /**
@@ -107,122 +107,11 @@ public class IVbcHostObject5Implementation extends NetObject implements IVbcHost
 
     // Methods section
     
-    public IVbcHostObjectFreeThreaded GetFreeThreadedHostObject() throws Throwable {
+    public boolean Compile() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetFreeThreadedHostObject = (JCObject)classInstance.Invoke("GetFreeThreadedHostObject");
-            return new IVbcHostObjectFreeThreadedImplementation(objGetFreeThreadedHostObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SetPlatformWith32BitPreference(java.lang.String platformWith32BitPreference) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SetPlatformWith32BitPreference", platformWith32BitPreference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SetHighEntropyVA(boolean highEntropyVA) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SetHighEntropyVA", highEntropyVA);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SetSubsystemVersion(java.lang.String subsystemVersion) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SetSubsystemVersion", subsystemVersion);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int EndCompile(boolean buildSuccess) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("EndCompile", buildSuccess);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SetVBRuntime(java.lang.String VBRuntime) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SetVBRuntime", VBRuntime);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SetLanguageVersion(java.lang.String languageVersion) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SetLanguageVersion", languageVersion);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SetOptionInfer(boolean optionInfer) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SetOptionInfer", optionInfer);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SetModuleAssemblyName(java.lang.String moduleAssemblyName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SetModuleAssemblyName", moduleAssemblyName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SetWin32Manifest", win32Manifest);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void BeginInitialization() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("BeginInitialization");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void EndInitialization() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("EndInitialization");
+            return (boolean)classInstance.Invoke("Compile");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,6 +122,16 @@ public class IVbcHostObject5Implementation extends NetObject implements IVbcHost
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsDesignTime");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsUpToDate() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsUpToDate");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,6 +227,16 @@ public class IVbcHostObject5Implementation extends NetObject implements IVbcHost
         }
     }
 
+    public boolean SetErrorReport(java.lang.String errorReport) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetErrorReport", errorReport);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean SetFileAlignment(int fileAlignment) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -343,6 +252,16 @@ public class IVbcHostObject5Implementation extends NetObject implements IVbcHost
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("SetGenerateDocumentation", generateDocumentation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean SetHighEntropyVA(boolean highEntropyVA) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetHighEntropyVA", highEntropyVA);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,6 +297,16 @@ public class IVbcHostObject5Implementation extends NetObject implements IVbcHost
         }
     }
 
+    public boolean SetLanguageVersion(java.lang.String languageVersion) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetLanguageVersion", languageVersion);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean SetLinkResources(ITaskItem[] linkResources) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -393,6 +322,16 @@ public class IVbcHostObject5Implementation extends NetObject implements IVbcHost
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("SetMainEntryPoint", mainEntryPoint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean SetModuleAssemblyName(java.lang.String moduleAssemblyName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetModuleAssemblyName", moduleAssemblyName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,6 +397,16 @@ public class IVbcHostObject5Implementation extends NetObject implements IVbcHost
         }
     }
 
+    public boolean SetOptionInfer(boolean optionInfer) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetOptionInfer", optionInfer);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean SetOptionStrict(boolean optionStrict) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -483,6 +432,26 @@ public class IVbcHostObject5Implementation extends NetObject implements IVbcHost
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("SetOutputAssembly", outputAssembly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean SetPlatform(java.lang.String platform) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetPlatform", platform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean SetPlatformWith32BitPreference(java.lang.String platformWith32BitPreference) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetPlatformWith32BitPreference", platformWith32BitPreference);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,6 +527,16 @@ public class IVbcHostObject5Implementation extends NetObject implements IVbcHost
         }
     }
 
+    public boolean SetSubsystemVersion(java.lang.String subsystemVersion) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetSubsystemVersion", subsystemVersion);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean SetTargetCompactFramework(boolean targetCompactFramework) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -583,6 +562,16 @@ public class IVbcHostObject5Implementation extends NetObject implements IVbcHost
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("SetTreatWarningsAsErrors", treatWarningsAsErrors);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean SetVBRuntime(java.lang.String VBRuntime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetVBRuntime", VBRuntime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,6 +607,16 @@ public class IVbcHostObject5Implementation extends NetObject implements IVbcHost
         }
     }
 
+    public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetWin32Manifest", win32Manifest);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean SetWin32Resource(java.lang.String win32Resource) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -628,41 +627,42 @@ public class IVbcHostObject5Implementation extends NetObject implements IVbcHost
         }
     }
 
-    public boolean IsUpToDate() throws Throwable {
+    public int EndCompile(boolean buildSuccess) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsUpToDate");
+            return (int)classInstance.Invoke("EndCompile", buildSuccess);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean Compile() throws Throwable {
+    public IVbcHostObjectFreeThreaded GetFreeThreadedHostObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Compile");
+            JCObject objGetFreeThreadedHostObject = (JCObject)classInstance.Invoke("GetFreeThreadedHostObject");
+            return new IVbcHostObjectFreeThreadedImplementation(objGetFreeThreadedHostObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean SetErrorReport(java.lang.String errorReport) throws Throwable {
+    public void BeginInitialization() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetErrorReport", errorReport);
+            classInstance.Invoke("BeginInitialization");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean SetPlatform(java.lang.String platform) throws Throwable {
+    public void EndInitialization() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetPlatform", platform);
+            classInstance.Invoke("EndInitialization");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

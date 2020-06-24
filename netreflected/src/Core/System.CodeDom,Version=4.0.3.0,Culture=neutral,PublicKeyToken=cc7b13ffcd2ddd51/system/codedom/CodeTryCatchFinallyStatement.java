@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.codedom.CodeStatement;
 import system.codedom.CodeCatchClause;
-import system.codedom.CodeStatementCollection;
 import system.codedom.CodeCatchClauseCollection;
-import system.codedom.CodeLinePragma;
 import system.codedom.CodeDirectiveCollection;
+import system.codedom.CodeLinePragma;
+import system.codedom.CodeStatementCollection;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 
@@ -155,17 +155,6 @@ public class CodeTryCatchFinallyStatement extends NetObject  {
     
     // Properties section
     
-    public CodeStatementCollection getTryStatements() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TryStatements");
-            return new CodeStatementCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CodeCatchClauseCollection getCatchClauses() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -177,12 +166,23 @@ public class CodeTryCatchFinallyStatement extends NetObject  {
         }
     }
 
-    public CodeStatementCollection getFinallyStatements() throws Throwable {
+    public CodeDirectiveCollection getEndDirectives() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("FinallyStatements");
-            return new CodeStatementCollection(val);
+            JCObject val = (JCObject)classInstance.Get("EndDirectives");
+            return new CodeDirectiveCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeDirectiveCollection getStartDirectives() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("StartDirectives");
+            return new CodeDirectiveCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,23 +209,23 @@ public class CodeTryCatchFinallyStatement extends NetObject  {
         }
     }
 
-    public CodeDirectiveCollection getStartDirectives() throws Throwable {
+    public CodeStatementCollection getFinallyStatements() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StartDirectives");
-            return new CodeDirectiveCollection(val);
+            JCObject val = (JCObject)classInstance.Get("FinallyStatements");
+            return new CodeStatementCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CodeDirectiveCollection getEndDirectives() throws Throwable {
+    public CodeStatementCollection getTryStatements() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EndDirectives");
-            return new CodeDirectiveCollection(val);
+            JCObject val = (JCObject)classInstance.Get("TryStatements");
+            return new CodeStatementCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.enterpriseservices.ServiceConfig;
 import system.enterpriseservices.TransactionStatus;
+import system.enterpriseservices.ServiceConfig;
 
 
 /**
@@ -114,22 +114,22 @@ public class ServiceDomain extends NetObject  {
     
     // Methods section
     
-    public static void Enter(ServiceConfig cfg) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Enter", cfg == null ? null : cfg.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static TransactionStatus Leave() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objLeave = (JCObject)classType.Invoke("Leave");
             return new TransactionStatus(objLeave);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Enter(ServiceConfig cfg) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Enter", cfg == null ? null : cfg.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

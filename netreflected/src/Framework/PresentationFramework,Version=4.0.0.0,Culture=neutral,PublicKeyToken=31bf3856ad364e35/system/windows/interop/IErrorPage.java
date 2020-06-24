@@ -95,37 +95,37 @@ public interface IErrorPage extends IJCOBridgeReflected {
     
     // Properties section
     
-    public Uri getDeploymentPath() throws Throwable;
+    public boolean getErrorFlag() throws Throwable;
 
-    public void setDeploymentPath(Uri DeploymentPath) throws Throwable;
-
-    public java.lang.String getErrorTitle() throws Throwable;
-
-    public void setErrorTitle(java.lang.String ErrorTitle) throws Throwable;
+    public void setErrorFlag(boolean ErrorFlag) throws Throwable;
 
     public java.lang.String getErrorText() throws Throwable;
 
     public void setErrorText(java.lang.String ErrorText) throws Throwable;
 
-    public boolean getErrorFlag() throws Throwable;
+    public java.lang.String getErrorTitle() throws Throwable;
 
-    public void setErrorFlag(boolean ErrorFlag) throws Throwable;
+    public void setErrorTitle(java.lang.String ErrorTitle) throws Throwable;
 
     public java.lang.String getLogFilePath() throws Throwable;
 
     public void setLogFilePath(java.lang.String LogFilePath) throws Throwable;
 
+    public Uri getDeploymentPath() throws Throwable;
+
+    public void setDeploymentPath(Uri DeploymentPath) throws Throwable;
+
     public Uri getSupportUri() throws Throwable;
 
     public void setSupportUri(Uri SupportUri) throws Throwable;
 
-    public DispatcherOperationCallback getRefreshCallback() throws Throwable;
-
-    public void setRefreshCallback(DispatcherOperationCallback RefreshCallback) throws Throwable;
-
     public DispatcherOperationCallback getGetWinFxCallback() throws Throwable;
 
     public void setGetWinFxCallback(DispatcherOperationCallback GetWinFxCallback) throws Throwable;
+
+    public DispatcherOperationCallback getRefreshCallback() throws Throwable;
+
+    public void setRefreshCallback(DispatcherOperationCallback RefreshCallback) throws Throwable;
 
 
 

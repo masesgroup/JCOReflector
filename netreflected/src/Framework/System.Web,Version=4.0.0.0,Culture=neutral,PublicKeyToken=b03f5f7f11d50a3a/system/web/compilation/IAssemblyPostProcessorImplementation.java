@@ -103,21 +103,21 @@ public class IAssemblyPostProcessorImplementation extends NetObject implements I
 
     // Methods section
     
-    public void PostProcessAssembly(java.lang.String path) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PostProcessAssembly", path);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PostProcessAssembly(java.lang.String path) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PostProcessAssembly", path);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

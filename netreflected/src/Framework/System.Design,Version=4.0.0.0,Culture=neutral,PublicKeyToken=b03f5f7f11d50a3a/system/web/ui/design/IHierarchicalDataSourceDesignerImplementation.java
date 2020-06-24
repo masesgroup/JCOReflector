@@ -105,22 +105,22 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
 
     // Methods section
     
-    public void Configure() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Configure");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DesignerHierarchicalDataSourceView GetView(java.lang.String viewPath) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetView = (JCObject)classInstance.Invoke("GetView", viewPath);
             return new DesignerHierarchicalDataSourceView(objGetView);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Configure() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Configure");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

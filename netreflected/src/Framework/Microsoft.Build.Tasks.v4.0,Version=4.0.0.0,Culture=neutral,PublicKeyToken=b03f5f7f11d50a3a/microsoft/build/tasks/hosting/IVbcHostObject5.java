@@ -37,10 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import microsoft.build.tasks.hosting.IVbcHostObjectFreeThreaded;
-import microsoft.build.tasks.hosting.IVbcHostObjectFreeThreadedImplementation;
 import microsoft.build.framework.ITaskItem;
 import microsoft.build.framework.ITaskItemImplementation;
+import microsoft.build.tasks.hosting.IVbcHostObjectFreeThreaded;
+import microsoft.build.tasks.hosting.IVbcHostObjectFreeThreadedImplementation;
 
 
 /**
@@ -93,31 +93,11 @@ public interface IVbcHostObject5 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IVbcHostObjectFreeThreaded GetFreeThreadedHostObject() throws Throwable;
-
-    public boolean SetPlatformWith32BitPreference(java.lang.String platformWith32BitPreference) throws Throwable;
-
-    public boolean SetHighEntropyVA(boolean highEntropyVA) throws Throwable;
-
-    public boolean SetSubsystemVersion(java.lang.String subsystemVersion) throws Throwable;
-
-    public int EndCompile(boolean buildSuccess) throws Throwable;
-
-    public boolean SetVBRuntime(java.lang.String VBRuntime) throws Throwable;
-
-    public boolean SetLanguageVersion(java.lang.String languageVersion) throws Throwable;
-
-    public boolean SetOptionInfer(boolean optionInfer) throws Throwable;
-
-    public boolean SetModuleAssemblyName(java.lang.String moduleAssemblyName) throws Throwable;
-
-    public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable;
-
-    public void BeginInitialization() throws Throwable;
-
-    public void EndInitialization() throws Throwable;
+    public boolean Compile() throws Throwable;
 
     public boolean IsDesignTime() throws Throwable;
+
+    public boolean IsUpToDate() throws Throwable;
 
     public boolean SetAdditionalLibPaths(java.lang.String[] additionalLibPaths) throws Throwable;
 
@@ -137,9 +117,13 @@ public interface IVbcHostObject5 extends IJCOBridgeReflected {
 
     public boolean SetDocumentationFile(java.lang.String documentationFile) throws Throwable;
 
+    public boolean SetErrorReport(java.lang.String errorReport) throws Throwable;
+
     public boolean SetFileAlignment(int fileAlignment) throws Throwable;
 
     public boolean SetGenerateDocumentation(boolean generateDocumentation) throws Throwable;
+
+    public boolean SetHighEntropyVA(boolean highEntropyVA) throws Throwable;
 
     public boolean SetImports(ITaskItem[] importsList) throws Throwable;
 
@@ -147,9 +131,13 @@ public interface IVbcHostObject5 extends IJCOBridgeReflected {
 
     public boolean SetKeyFile(java.lang.String keyFile) throws Throwable;
 
+    public boolean SetLanguageVersion(java.lang.String languageVersion) throws Throwable;
+
     public boolean SetLinkResources(ITaskItem[] linkResources) throws Throwable;
 
     public boolean SetMainEntryPoint(java.lang.String mainEntryPoint) throws Throwable;
+
+    public boolean SetModuleAssemblyName(java.lang.String moduleAssemblyName) throws Throwable;
 
     public boolean SetNoConfig(boolean noConfig) throws Throwable;
 
@@ -163,11 +151,17 @@ public interface IVbcHostObject5 extends IJCOBridgeReflected {
 
     public boolean SetOptionExplicit(boolean optionExplicit) throws Throwable;
 
+    public boolean SetOptionInfer(boolean optionInfer) throws Throwable;
+
     public boolean SetOptionStrict(boolean optionStrict) throws Throwable;
 
     public boolean SetOptionStrictType(java.lang.String optionStrictType) throws Throwable;
 
     public boolean SetOutputAssembly(java.lang.String outputAssembly) throws Throwable;
+
+    public boolean SetPlatform(java.lang.String platform) throws Throwable;
+
+    public boolean SetPlatformWith32BitPreference(java.lang.String platformWith32BitPreference) throws Throwable;
 
     public boolean SetReferences(ITaskItem[] references) throws Throwable;
 
@@ -183,11 +177,15 @@ public interface IVbcHostObject5 extends IJCOBridgeReflected {
 
     public boolean SetSources(ITaskItem[] sources) throws Throwable;
 
+    public boolean SetSubsystemVersion(java.lang.String subsystemVersion) throws Throwable;
+
     public boolean SetTargetCompactFramework(boolean targetCompactFramework) throws Throwable;
 
     public boolean SetTargetType(java.lang.String targetType) throws Throwable;
 
     public boolean SetTreatWarningsAsErrors(boolean treatWarningsAsErrors) throws Throwable;
+
+    public boolean SetVBRuntime(java.lang.String VBRuntime) throws Throwable;
 
     public boolean SetWarningsAsErrors(java.lang.String warningsAsErrors) throws Throwable;
 
@@ -195,15 +193,17 @@ public interface IVbcHostObject5 extends IJCOBridgeReflected {
 
     public boolean SetWin32Icon(java.lang.String win32Icon) throws Throwable;
 
+    public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable;
+
     public boolean SetWin32Resource(java.lang.String win32Resource) throws Throwable;
 
-    public boolean IsUpToDate() throws Throwable;
+    public int EndCompile(boolean buildSuccess) throws Throwable;
 
-    public boolean Compile() throws Throwable;
+    public IVbcHostObjectFreeThreaded GetFreeThreadedHostObject() throws Throwable;
 
-    public boolean SetErrorReport(java.lang.String errorReport) throws Throwable;
+    public void BeginInitialization() throws Throwable;
 
-    public boolean SetPlatform(java.lang.String platform) throws Throwable;
+    public void EndInitialization() throws Throwable;
 
 
     

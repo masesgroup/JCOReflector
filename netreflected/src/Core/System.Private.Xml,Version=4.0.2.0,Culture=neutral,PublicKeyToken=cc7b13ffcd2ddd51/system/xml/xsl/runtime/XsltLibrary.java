@@ -114,16 +114,6 @@ public class XsltLibrary extends NetObject  {
     
     // Methods section
     
-    public int CheckScriptNamespace(java.lang.String nsUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("CheckScriptNamespace", nsUri);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean ElementAvailable(XmlQualifiedName name) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -144,11 +134,11 @@ public class XsltLibrary extends NetObject  {
         }
     }
 
-    public int RegisterDecimalFormat(XmlQualifiedName name, java.lang.String infinitySymbol, java.lang.String nanSymbol, java.lang.String characters) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
+    public boolean IsSameNodeSort(XPathNavigator nav1, XPathNavigator nav2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("RegisterDecimalFormat", name == null ? null : name.getJCOInstance(), infinitySymbol, nanSymbol, characters);
+            return (boolean)classInstance.Invoke("IsSameNodeSort", nav1 == null ? null : nav1.getJCOInstance(), nav2 == null ? null : nav2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,21 +154,11 @@ public class XsltLibrary extends NetObject  {
         }
     }
 
-    public java.lang.String FormatNumberStatic(double value, double decimalFormatterIndex) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
+    public int CheckScriptNamespace(java.lang.String nsUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("FormatNumberStatic", value, decimalFormatterIndex);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String FormatNumberDynamic(double value, java.lang.String formatPicture, XmlQualifiedName decimalFormatName, java.lang.String errorMessageName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("FormatNumberDynamic", value, formatPicture, decimalFormatName == null ? null : decimalFormatName.getJCOInstance(), errorMessageName);
+            return (int)classInstance.Invoke("CheckScriptNamespace", nsUri);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,11 +174,31 @@ public class XsltLibrary extends NetObject  {
         }
     }
 
-    public boolean IsSameNodeSort(XPathNavigator nav1, XPathNavigator nav2) throws Throwable {
+    public int RegisterDecimalFormat(XmlQualifiedName name, java.lang.String infinitySymbol, java.lang.String nanSymbol, java.lang.String characters) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsSameNodeSort", nav1 == null ? null : nav1.getJCOInstance(), nav2 == null ? null : nav2.getJCOInstance());
+            return (int)classInstance.Invoke("RegisterDecimalFormat", name == null ? null : name.getJCOInstance(), infinitySymbol, nanSymbol, characters);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String FormatNumberDynamic(double value, java.lang.String formatPicture, XmlQualifiedName decimalFormatName, java.lang.String errorMessageName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("FormatNumberDynamic", value, formatPicture, decimalFormatName == null ? null : decimalFormatName.getJCOInstance(), errorMessageName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String FormatNumberStatic(double value, double decimalFormatterIndex) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("FormatNumberStatic", value, decimalFormatterIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

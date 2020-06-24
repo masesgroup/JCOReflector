@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.x509certificates.StoreLocation;
 import system.security.cryptography.x509certificates.StoreName;
 import system.security.cryptography.x509certificates.X509FindType;
-import system.identitymodel.tokens.SecurityToken;
-import system.TimeSpan;
+import system.security.cryptography.x509certificates.X509Certificate2;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.TimeSpan;
+import system.identitymodel.tokens.SecurityToken;
 import system.AsyncCallback;
 
 
@@ -118,16 +118,6 @@ public class X509SecurityTokenProvider extends NetObject  {
     // Constructors section
     
 
-    public X509SecurityTokenProvider(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.AccessViolationException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(certificate == null ? null : certificate.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public X509SecurityTokenProvider(StoreLocation storeLocation, StoreName storeName, X509FindType findType, NetObject findValue) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.ApplicationException, system.identitymodel.tokens.SecurityTokenException {
         try {
             // add reference to assemblyName.dll file
@@ -138,26 +128,26 @@ public class X509SecurityTokenProvider extends NetObject  {
         }
     }
 
-
-    
-    // Methods section
-    
-    public void Dispose() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public X509SecurityTokenProvider(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.AccessViolationException {
         try {
-            classInstance.Invoke("Dispose");
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(certificate == null ? null : certificate.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SecurityToken GetToken(TimeSpan timeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+
+    
+    // Methods section
+    
+    public IAsyncResult BeginCancelToken(TimeSpan timeout, SecurityToken token, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetToken = (JCObject)classInstance.Invoke("GetToken", timeout == null ? null : timeout.getJCOInstance());
-            return new SecurityToken(objGetToken);
+            JCObject objBeginCancelToken = (JCObject)classInstance.Invoke("BeginCancelToken", timeout == null ? null : timeout.getJCOInstance(), token == null ? null : token.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginCancelToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,34 +164,23 @@ public class X509SecurityTokenProvider extends NetObject  {
         }
     }
 
-    public SecurityToken EndGetToken(IAsyncResult result) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEndGetToken = (JCObject)classInstance.Invoke("EndGetToken", result == null ? null : result.getJCOInstance());
-            return new SecurityToken(objEndGetToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityToken RenewToken(TimeSpan timeout, SecurityToken tokenToBeRenewed) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRenewToken = (JCObject)classInstance.Invoke("RenewToken", timeout == null ? null : timeout.getJCOInstance(), tokenToBeRenewed == null ? null : tokenToBeRenewed.getJCOInstance());
-            return new SecurityToken(objRenewToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IAsyncResult BeginRenewToken(TimeSpan timeout, SecurityToken tokenToBeRenewed, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objBeginRenewToken = (JCObject)classInstance.Invoke("BeginRenewToken", timeout == null ? null : timeout.getJCOInstance(), tokenToBeRenewed == null ? null : tokenToBeRenewed.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
             return new IAsyncResultImplementation(objBeginRenewToken);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityToken EndGetToken(IAsyncResult result) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEndGetToken = (JCObject)classInstance.Invoke("EndGetToken", result == null ? null : result.getJCOInstance());
+            return new SecurityToken(objEndGetToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,6 +197,28 @@ public class X509SecurityTokenProvider extends NetObject  {
         }
     }
 
+    public SecurityToken GetToken(TimeSpan timeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetToken = (JCObject)classInstance.Invoke("GetToken", timeout == null ? null : timeout.getJCOInstance());
+            return new SecurityToken(objGetToken);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityToken RenewToken(TimeSpan timeout, SecurityToken tokenToBeRenewed) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objRenewToken = (JCObject)classInstance.Invoke("RenewToken", timeout == null ? null : timeout.getJCOInstance(), tokenToBeRenewed == null ? null : tokenToBeRenewed.getJCOInstance());
+            return new SecurityToken(objRenewToken);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void CancelToken(TimeSpan timeout, SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -228,12 +229,11 @@ public class X509SecurityTokenProvider extends NetObject  {
         }
     }
 
-    public IAsyncResult BeginCancelToken(TimeSpan timeout, SecurityToken token, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginCancelToken = (JCObject)classInstance.Invoke("BeginCancelToken", timeout == null ? null : timeout.getJCOInstance(), token == null ? null : token.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginCancelToken);
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,12 +253,11 @@ public class X509SecurityTokenProvider extends NetObject  {
     
     // Properties section
     
-    public X509Certificate2 getCertificate() throws Throwable {
+    public boolean getSupportsTokenCancellation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Certificate");
-            return new X509Certificate2(val);
+            return (boolean)classInstance.Get("SupportsTokenCancellation");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,11 +273,12 @@ public class X509SecurityTokenProvider extends NetObject  {
         }
     }
 
-    public boolean getSupportsTokenCancellation() throws Throwable {
+    public X509Certificate2 getCertificate() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("SupportsTokenCancellation");
+            JCObject val = (JCObject)classInstance.Get("Certificate");
+            return new X509Certificate2(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

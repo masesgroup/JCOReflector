@@ -134,16 +134,6 @@ public class FromBase64Transform extends NetObject  {
     
     // Methods section
     
-    public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("TransformBlock", inputBuffer, inputOffset, inputCount, outputBuffer, outputOffset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -163,11 +153,11 @@ public class FromBase64Transform extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable, system.ArgumentNullException {
+    public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Dispose");
+            return (int)classInstance.Invoke("TransformBlock", inputBuffer, inputOffset, inputCount, outputBuffer, outputOffset);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,25 +173,25 @@ public class FromBase64Transform extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public int getInputBlockSize() throws Throwable {
+    public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("InputBlockSize");
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getOutputBlockSize() throws Throwable {
+
+    
+    // Properties section
+    
+    public boolean getCanReuseTransform() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("OutputBlockSize");
+            return (boolean)classInstance.Get("CanReuseTransform");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,11 +207,21 @@ public class FromBase64Transform extends NetObject  {
         }
     }
 
-    public boolean getCanReuseTransform() throws Throwable {
+    public int getInputBlockSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CanReuseTransform");
+            return (int)classInstance.Get("InputBlockSize");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getOutputBlockSize() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("OutputBlockSize");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.Guid;
 import system.diagnostics.performancedata.CounterSetInstanceType;
-import system.diagnostics.performancedata.CounterType;
 import system.diagnostics.performancedata.CounterSetInstance;
+import system.diagnostics.performancedata.CounterType;
 
 
 /**
@@ -127,11 +127,12 @@ public class CounterSet extends NetObject  {
     
     // Methods section
     
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public CounterSetInstance CreateCounterSetInstance(java.lang.String instanceName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.InsufficientMemoryException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Dispose");
+            JCObject objCreateCounterSetInstance = (JCObject)classInstance.Invoke("CreateCounterSetInstance", instanceName);
+            return new CounterSetInstance(objCreateCounterSetInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,12 +158,11 @@ public class CounterSet extends NetObject  {
         }
     }
 
-    public CounterSetInstance CreateCounterSetInstance(java.lang.String instanceName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.InsufficientMemoryException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
+    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateCounterSetInstance = (JCObject)classInstance.Invoke("CreateCounterSetInstance", instanceName);
-            return new CounterSetInstance(objCreateCounterSetInstance);
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

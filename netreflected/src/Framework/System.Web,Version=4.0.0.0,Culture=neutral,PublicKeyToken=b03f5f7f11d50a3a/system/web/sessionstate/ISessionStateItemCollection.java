@@ -90,13 +90,13 @@ public interface ISessionStateItemCollection extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Remove(java.lang.String name) throws Throwable;
-
-    public void RemoveAt(int index) throws Throwable;
-
     public void Clear() throws Throwable;
 
     public void CopyTo(Array array, int index) throws Throwable;
+
+    public void Remove(java.lang.String name) throws Throwable;
+
+    public void RemoveAt(int index) throws Throwable;
 
 
     
@@ -106,11 +106,11 @@ public interface ISessionStateItemCollection extends IJCOBridgeReflected {
 
     public void setDirty(boolean Dirty) throws Throwable;
 
+    public boolean getIsSynchronized() throws Throwable;
+
     public int getCount() throws Throwable;
 
     public NetObject getSyncRoot() throws Throwable;
-
-    public boolean getIsSynchronized() throws Throwable;
 
 
 

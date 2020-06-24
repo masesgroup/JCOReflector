@@ -38,46 +38,46 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.EntityHandle;
-import system.reflection.metadata.Handle;
-import system.reflection.metadata.MetadataReader;
+import system.reflection.metadata.HandleKind;
 import system.reflection.metadata.BlobHandle;
 import system.reflection.metadata.GuidHandle;
-import system.reflection.metadata.UserStringHandle;
+import system.reflection.metadata.Handle;
+import system.reflection.metadata.MetadataReader;
 import system.reflection.metadata.StringHandle;
-import system.reflection.metadata.HandleKind;
+import system.reflection.metadata.UserStringHandle;
+import system.reflection.metadata.EntityHandle;
+import system.reflection.metadata.AssemblyFileHandle;
+import system.reflection.metadata.AssemblyReferenceHandle;
+import system.reflection.metadata.ConstantHandle;
+import system.reflection.metadata.CustomAttributeHandle;
+import system.reflection.metadata.CustomDebugInformationHandle;
+import system.reflection.metadata.DeclarativeSecurityAttributeHandle;
+import system.reflection.metadata.DocumentHandle;
+import system.reflection.metadata.DocumentNameBlobHandle;
 import system.reflection.metadata.ecma335.TableIndex;
+import system.reflection.metadata.EventDefinitionHandle;
+import system.reflection.metadata.ExportedTypeHandle;
+import system.reflection.metadata.FieldDefinitionHandle;
+import system.reflection.metadata.GenericParameterConstraintHandle;
+import system.reflection.metadata.GenericParameterHandle;
+import system.reflection.metadata.ImportScopeHandle;
+import system.reflection.metadata.InterfaceImplementationHandle;
+import system.reflection.metadata.LocalConstantHandle;
+import system.reflection.metadata.LocalScopeHandle;
+import system.reflection.metadata.LocalVariableHandle;
+import system.reflection.metadata.ManifestResourceHandle;
+import system.reflection.metadata.MemberReferenceHandle;
+import system.reflection.metadata.MethodDebugInformationHandle;
 import system.reflection.metadata.MethodDefinitionHandle;
 import system.reflection.metadata.MethodImplementationHandle;
 import system.reflection.metadata.MethodSpecificationHandle;
-import system.reflection.metadata.TypeDefinitionHandle;
-import system.reflection.metadata.ExportedTypeHandle;
-import system.reflection.metadata.TypeReferenceHandle;
-import system.reflection.metadata.TypeSpecificationHandle;
-import system.reflection.metadata.InterfaceImplementationHandle;
-import system.reflection.metadata.MemberReferenceHandle;
-import system.reflection.metadata.FieldDefinitionHandle;
-import system.reflection.metadata.EventDefinitionHandle;
+import system.reflection.metadata.ModuleReferenceHandle;
+import system.reflection.metadata.ParameterHandle;
 import system.reflection.metadata.PropertyDefinitionHandle;
 import system.reflection.metadata.StandaloneSignatureHandle;
-import system.reflection.metadata.ParameterHandle;
-import system.reflection.metadata.GenericParameterHandle;
-import system.reflection.metadata.GenericParameterConstraintHandle;
-import system.reflection.metadata.ModuleReferenceHandle;
-import system.reflection.metadata.AssemblyReferenceHandle;
-import system.reflection.metadata.CustomAttributeHandle;
-import system.reflection.metadata.DeclarativeSecurityAttributeHandle;
-import system.reflection.metadata.ConstantHandle;
-import system.reflection.metadata.ManifestResourceHandle;
-import system.reflection.metadata.AssemblyFileHandle;
-import system.reflection.metadata.DocumentHandle;
-import system.reflection.metadata.MethodDebugInformationHandle;
-import system.reflection.metadata.LocalScopeHandle;
-import system.reflection.metadata.LocalVariableHandle;
-import system.reflection.metadata.LocalConstantHandle;
-import system.reflection.metadata.ImportScopeHandle;
-import system.reflection.metadata.CustomDebugInformationHandle;
-import system.reflection.metadata.DocumentNameBlobHandle;
+import system.reflection.metadata.TypeDefinitionHandle;
+import system.reflection.metadata.TypeReferenceHandle;
+import system.reflection.metadata.TypeSpecificationHandle;
 
 
 /**
@@ -152,21 +152,71 @@ public class MetadataTokens extends NetObject  {
     
     // Methods section
     
-    public static int GetToken(EntityHandle handle) throws Throwable {
+    public static int GetHeapOffset(BlobHandle handle) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("GetToken", handle == null ? null : handle.getJCOInstance());
+            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int GetToken(Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static int GetHeapOffset(GuidHandle handle) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("GetToken", handle == null ? null : handle.getJCOInstance());
+            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int GetHeapOffset(Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int GetHeapOffset(MetadataReader reader, Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetHeapOffset", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int GetHeapOffset(StringHandle handle) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int GetHeapOffset(UserStringHandle handle) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int GetRowNumber(EntityHandle handle) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetRowNumber", handle == null ? null : handle.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,11 +232,21 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetHeapOffset(MetadataReader reader, Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.NotSupportedException {
+    public static int GetToken(EntityHandle handle) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("GetHeapOffset", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            return (int)classType.Invoke("GetToken", handle == null ? null : handle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int GetToken(Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetToken", handle == null ? null : handle.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,72 +272,100 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetRowNumber(EntityHandle handle) throws Throwable {
+    public static AssemblyFileHandle AssemblyFileHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("GetRowNumber", handle == null ? null : handle.getJCOInstance());
+            JCObject objAssemblyFileHandle = (JCObject)classType.Invoke("AssemblyFileHandle", rowNumber);
+            return new AssemblyFileHandle(objAssemblyFileHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int GetHeapOffset(Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static AssemblyReferenceHandle AssemblyReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            JCObject objAssemblyReferenceHandle = (JCObject)classType.Invoke("AssemblyReferenceHandle", rowNumber);
+            return new AssemblyReferenceHandle(objAssemblyReferenceHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int GetHeapOffset(BlobHandle handle) throws Throwable {
+    public static BlobHandle BlobHandle(int offset) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            JCObject objBlobHandle = (JCObject)classType.Invoke("BlobHandle", offset);
+            return new BlobHandle(objBlobHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int GetHeapOffset(GuidHandle handle) throws Throwable {
+    public static ConstantHandle ConstantHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            JCObject objConstantHandle = (JCObject)classType.Invoke("ConstantHandle", rowNumber);
+            return new ConstantHandle(objConstantHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int GetHeapOffset(UserStringHandle handle) throws Throwable {
+    public static CustomAttributeHandle CustomAttributeHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            JCObject objCustomAttributeHandle = (JCObject)classType.Invoke("CustomAttributeHandle", rowNumber);
+            return new CustomAttributeHandle(objCustomAttributeHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int GetHeapOffset(StringHandle handle) throws Throwable {
+    public static CustomDebugInformationHandle CustomDebugInformationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            JCObject objCustomDebugInformationHandle = (JCObject)classType.Invoke("CustomDebugInformationHandle", rowNumber);
+            return new CustomDebugInformationHandle(objCustomDebugInformationHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Handle Handle(int token) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static DeclarativeSecurityAttributeHandle DeclarativeSecurityAttributeHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objHandle = (JCObject)classType.Invoke("Handle", token);
-            return new Handle(objHandle);
+            JCObject objDeclarativeSecurityAttributeHandle = (JCObject)classType.Invoke("DeclarativeSecurityAttributeHandle", rowNumber);
+            return new DeclarativeSecurityAttributeHandle(objDeclarativeSecurityAttributeHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DocumentHandle DocumentHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDocumentHandle = (JCObject)classType.Invoke("DocumentHandle", rowNumber);
+            return new DocumentHandle(objDocumentHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DocumentNameBlobHandle DocumentNameBlobHandle(int offset) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDocumentNameBlobHandle = (JCObject)classType.Invoke("DocumentNameBlobHandle", offset);
+            return new DocumentNameBlobHandle(objDocumentNameBlobHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,6 +404,171 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    public static EventDefinitionHandle EventDefinitionHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objEventDefinitionHandle = (JCObject)classType.Invoke("EventDefinitionHandle", rowNumber);
+            return new EventDefinitionHandle(objEventDefinitionHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ExportedTypeHandle ExportedTypeHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objExportedTypeHandle = (JCObject)classType.Invoke("ExportedTypeHandle", rowNumber);
+            return new ExportedTypeHandle(objExportedTypeHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static FieldDefinitionHandle FieldDefinitionHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFieldDefinitionHandle = (JCObject)classType.Invoke("FieldDefinitionHandle", rowNumber);
+            return new FieldDefinitionHandle(objFieldDefinitionHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static GenericParameterConstraintHandle GenericParameterConstraintHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGenericParameterConstraintHandle = (JCObject)classType.Invoke("GenericParameterConstraintHandle", rowNumber);
+            return new GenericParameterConstraintHandle(objGenericParameterConstraintHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static GenericParameterHandle GenericParameterHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGenericParameterHandle = (JCObject)classType.Invoke("GenericParameterHandle", rowNumber);
+            return new GenericParameterHandle(objGenericParameterHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static GuidHandle GuidHandle(int offset) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGuidHandle = (JCObject)classType.Invoke("GuidHandle", offset);
+            return new GuidHandle(objGuidHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Handle Handle(int token) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objHandle = (JCObject)classType.Invoke("Handle", token);
+            return new Handle(objHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ImportScopeHandle ImportScopeHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objImportScopeHandle = (JCObject)classType.Invoke("ImportScopeHandle", rowNumber);
+            return new ImportScopeHandle(objImportScopeHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static InterfaceImplementationHandle InterfaceImplementationHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objInterfaceImplementationHandle = (JCObject)classType.Invoke("InterfaceImplementationHandle", rowNumber);
+            return new InterfaceImplementationHandle(objInterfaceImplementationHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static LocalConstantHandle LocalConstantHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLocalConstantHandle = (JCObject)classType.Invoke("LocalConstantHandle", rowNumber);
+            return new LocalConstantHandle(objLocalConstantHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static LocalScopeHandle LocalScopeHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLocalScopeHandle = (JCObject)classType.Invoke("LocalScopeHandle", rowNumber);
+            return new LocalScopeHandle(objLocalScopeHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static LocalVariableHandle LocalVariableHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLocalVariableHandle = (JCObject)classType.Invoke("LocalVariableHandle", rowNumber);
+            return new LocalVariableHandle(objLocalVariableHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ManifestResourceHandle ManifestResourceHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objManifestResourceHandle = (JCObject)classType.Invoke("ManifestResourceHandle", rowNumber);
+            return new ManifestResourceHandle(objManifestResourceHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MemberReferenceHandle MemberReferenceHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMemberReferenceHandle = (JCObject)classType.Invoke("MemberReferenceHandle", rowNumber);
+            return new MemberReferenceHandle(objMemberReferenceHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MethodDebugInformationHandle MethodDebugInformationHandle(int rowNumber) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMethodDebugInformationHandle = (JCObject)classType.Invoke("MethodDebugInformationHandle", rowNumber);
+            return new MethodDebugInformationHandle(objMethodDebugInformationHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static MethodDefinitionHandle MethodDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -349,89 +602,23 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static TypeDefinitionHandle TypeDefinitionHandle(int rowNumber) throws Throwable {
+    public static ModuleReferenceHandle ModuleReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objTypeDefinitionHandle = (JCObject)classType.Invoke("TypeDefinitionHandle", rowNumber);
-            return new TypeDefinitionHandle(objTypeDefinitionHandle);
+            JCObject objModuleReferenceHandle = (JCObject)classType.Invoke("ModuleReferenceHandle", rowNumber);
+            return new ModuleReferenceHandle(objModuleReferenceHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ExportedTypeHandle ExportedTypeHandle(int rowNumber) throws Throwable {
+    public static ParameterHandle ParameterHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objExportedTypeHandle = (JCObject)classType.Invoke("ExportedTypeHandle", rowNumber);
-            return new ExportedTypeHandle(objExportedTypeHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TypeReferenceHandle TypeReferenceHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objTypeReferenceHandle = (JCObject)classType.Invoke("TypeReferenceHandle", rowNumber);
-            return new TypeReferenceHandle(objTypeReferenceHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TypeSpecificationHandle TypeSpecificationHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objTypeSpecificationHandle = (JCObject)classType.Invoke("TypeSpecificationHandle", rowNumber);
-            return new TypeSpecificationHandle(objTypeSpecificationHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static InterfaceImplementationHandle InterfaceImplementationHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objInterfaceImplementationHandle = (JCObject)classType.Invoke("InterfaceImplementationHandle", rowNumber);
-            return new InterfaceImplementationHandle(objInterfaceImplementationHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MemberReferenceHandle MemberReferenceHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMemberReferenceHandle = (JCObject)classType.Invoke("MemberReferenceHandle", rowNumber);
-            return new MemberReferenceHandle(objMemberReferenceHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static FieldDefinitionHandle FieldDefinitionHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFieldDefinitionHandle = (JCObject)classType.Invoke("FieldDefinitionHandle", rowNumber);
-            return new FieldDefinitionHandle(objFieldDefinitionHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static EventDefinitionHandle EventDefinitionHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objEventDefinitionHandle = (JCObject)classType.Invoke("EventDefinitionHandle", rowNumber);
-            return new EventDefinitionHandle(objEventDefinitionHandle);
+            JCObject objParameterHandle = (JCObject)classType.Invoke("ParameterHandle", rowNumber);
+            return new ParameterHandle(objParameterHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,204 +646,6 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static ParameterHandle ParameterHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objParameterHandle = (JCObject)classType.Invoke("ParameterHandle", rowNumber);
-            return new ParameterHandle(objParameterHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static GenericParameterHandle GenericParameterHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGenericParameterHandle = (JCObject)classType.Invoke("GenericParameterHandle", rowNumber);
-            return new GenericParameterHandle(objGenericParameterHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static GenericParameterConstraintHandle GenericParameterConstraintHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGenericParameterConstraintHandle = (JCObject)classType.Invoke("GenericParameterConstraintHandle", rowNumber);
-            return new GenericParameterConstraintHandle(objGenericParameterConstraintHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static ModuleReferenceHandle ModuleReferenceHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objModuleReferenceHandle = (JCObject)classType.Invoke("ModuleReferenceHandle", rowNumber);
-            return new ModuleReferenceHandle(objModuleReferenceHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static AssemblyReferenceHandle AssemblyReferenceHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAssemblyReferenceHandle = (JCObject)classType.Invoke("AssemblyReferenceHandle", rowNumber);
-            return new AssemblyReferenceHandle(objAssemblyReferenceHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static CustomAttributeHandle CustomAttributeHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCustomAttributeHandle = (JCObject)classType.Invoke("CustomAttributeHandle", rowNumber);
-            return new CustomAttributeHandle(objCustomAttributeHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DeclarativeSecurityAttributeHandle DeclarativeSecurityAttributeHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDeclarativeSecurityAttributeHandle = (JCObject)classType.Invoke("DeclarativeSecurityAttributeHandle", rowNumber);
-            return new DeclarativeSecurityAttributeHandle(objDeclarativeSecurityAttributeHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static ConstantHandle ConstantHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objConstantHandle = (JCObject)classType.Invoke("ConstantHandle", rowNumber);
-            return new ConstantHandle(objConstantHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static ManifestResourceHandle ManifestResourceHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objManifestResourceHandle = (JCObject)classType.Invoke("ManifestResourceHandle", rowNumber);
-            return new ManifestResourceHandle(objManifestResourceHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static AssemblyFileHandle AssemblyFileHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAssemblyFileHandle = (JCObject)classType.Invoke("AssemblyFileHandle", rowNumber);
-            return new AssemblyFileHandle(objAssemblyFileHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DocumentHandle DocumentHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDocumentHandle = (JCObject)classType.Invoke("DocumentHandle", rowNumber);
-            return new DocumentHandle(objDocumentHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MethodDebugInformationHandle MethodDebugInformationHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMethodDebugInformationHandle = (JCObject)classType.Invoke("MethodDebugInformationHandle", rowNumber);
-            return new MethodDebugInformationHandle(objMethodDebugInformationHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static LocalScopeHandle LocalScopeHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLocalScopeHandle = (JCObject)classType.Invoke("LocalScopeHandle", rowNumber);
-            return new LocalScopeHandle(objLocalScopeHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static LocalVariableHandle LocalVariableHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLocalVariableHandle = (JCObject)classType.Invoke("LocalVariableHandle", rowNumber);
-            return new LocalVariableHandle(objLocalVariableHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static LocalConstantHandle LocalConstantHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLocalConstantHandle = (JCObject)classType.Invoke("LocalConstantHandle", rowNumber);
-            return new LocalConstantHandle(objLocalConstantHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static ImportScopeHandle ImportScopeHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objImportScopeHandle = (JCObject)classType.Invoke("ImportScopeHandle", rowNumber);
-            return new ImportScopeHandle(objImportScopeHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static CustomDebugInformationHandle CustomDebugInformationHandle(int rowNumber) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCustomDebugInformationHandle = (JCObject)classType.Invoke("CustomDebugInformationHandle", rowNumber);
-            return new CustomDebugInformationHandle(objCustomDebugInformationHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UserStringHandle UserStringHandle(int offset) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objUserStringHandle = (JCObject)classType.Invoke("UserStringHandle", offset);
-            return new UserStringHandle(objUserStringHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static StringHandle StringHandle(int offset) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -668,34 +657,45 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static BlobHandle BlobHandle(int offset) throws Throwable {
+    public static TypeDefinitionHandle TypeDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objBlobHandle = (JCObject)classType.Invoke("BlobHandle", offset);
-            return new BlobHandle(objBlobHandle);
+            JCObject objTypeDefinitionHandle = (JCObject)classType.Invoke("TypeDefinitionHandle", rowNumber);
+            return new TypeDefinitionHandle(objTypeDefinitionHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static GuidHandle GuidHandle(int offset) throws Throwable {
+    public static TypeReferenceHandle TypeReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGuidHandle = (JCObject)classType.Invoke("GuidHandle", offset);
-            return new GuidHandle(objGuidHandle);
+            JCObject objTypeReferenceHandle = (JCObject)classType.Invoke("TypeReferenceHandle", rowNumber);
+            return new TypeReferenceHandle(objTypeReferenceHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DocumentNameBlobHandle DocumentNameBlobHandle(int offset) throws Throwable {
+    public static TypeSpecificationHandle TypeSpecificationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objDocumentNameBlobHandle = (JCObject)classType.Invoke("DocumentNameBlobHandle", offset);
-            return new DocumentNameBlobHandle(objDocumentNameBlobHandle);
+            JCObject objTypeSpecificationHandle = (JCObject)classType.Invoke("TypeSpecificationHandle", rowNumber);
+            return new TypeSpecificationHandle(objTypeSpecificationHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UserStringHandle UserStringHandle(int offset) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objUserStringHandle = (JCObject)classType.Invoke("UserStringHandle", offset);
+            return new UserStringHandle(objUserStringHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

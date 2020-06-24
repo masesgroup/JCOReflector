@@ -38,16 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.xps.packaging.XpsResource;
+import system.windows.xps.packaging.XpsColorContext;
 import system.Uri;
 import system.windows.xps.packaging.XpsFont;
-import system.windows.xps.packaging.XpsColorContext;
-import system.windows.xps.packaging.XpsResourceDictionary;
 import system.windows.xps.packaging.XpsImage;
+import system.windows.xps.packaging.XpsResource;
+import system.windows.xps.packaging.XpsResourceDictionary;
 import system.windows.xps.packaging.XpsStructure;
 import system.printing.PrintTicket;
-import system.xml.XmlReader;
 import system.windows.xps.packaging.XpsThumbnail;
+import system.xml.XmlReader;
 
 
 /**
@@ -113,12 +113,12 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
 
     // Methods section
     
-    public XpsResource GetResource(Uri resourceUri) throws Throwable {
+    public XpsColorContext GetColorContext(Uri uri) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetResource = (JCObject)classInstance.Invoke("GetResource", resourceUri == null ? null : resourceUri.getJCOInstance());
-            return new XpsResource(objGetResource);
+            JCObject objGetColorContext = (JCObject)classInstance.Invoke("GetColorContext", uri == null ? null : uri.getJCOInstance());
+            return new XpsColorContext(objGetColorContext);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -135,12 +135,23 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
-    public XpsColorContext GetColorContext(Uri uri) throws Throwable {
+    public XpsImage GetImage(Uri uri) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetColorContext = (JCObject)classInstance.Invoke("GetColorContext", uri == null ? null : uri.getJCOInstance());
-            return new XpsColorContext(objGetColorContext);
+            JCObject objGetImage = (JCObject)classInstance.Invoke("GetImage", uri == null ? null : uri.getJCOInstance());
+            return new XpsImage(objGetImage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XpsResource GetResource(Uri resourceUri) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetResource = (JCObject)classInstance.Invoke("GetResource", resourceUri == null ? null : resourceUri.getJCOInstance());
+            return new XpsResource(objGetResource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,17 +163,6 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         try {
             JCObject objGetResourceDictionary = (JCObject)classInstance.Invoke("GetResourceDictionary", uri == null ? null : uri.getJCOInstance());
             return new XpsResourceDictionary(objGetResourceDictionary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XpsImage GetImage(Uri uri) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetImage = (JCObject)classInstance.Invoke("GetImage", uri == null ? null : uri.getJCOInstance());
-            return new XpsImage(objGetImage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,6 +183,16 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
     
     // Properties section
     
+    public int getPageNumber() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("PageNumber");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PrintTicket getPrintTicket() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -205,22 +215,12 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
-    public XmlReader getXmlReader() throws Throwable {
+    public XpsStructure getStoryFragment() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlReader");
-            return new XmlReader(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getPageNumber() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("PageNumber");
+            JCObject val = (JCObject)classInstance.Get("StoryFragment");
+            return new XpsStructure(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,12 +237,12 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
-    public XpsStructure getStoryFragment() throws Throwable {
+    public XmlReader getXmlReader() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StoryFragment");
-            return new XpsStructure(val);
+            JCObject val = (JCObject)classInstance.Get("XmlReader");
+            return new XmlReader(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

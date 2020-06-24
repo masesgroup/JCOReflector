@@ -149,27 +149,6 @@ public class DataGridColumnReorderingEventArgs extends NetObject  {
         }
     }
 
-    public Control getDropLocationIndicator() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DropLocationIndicator");
-            return new Control(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDropLocationIndicator(Control DropLocationIndicator) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DropLocationIndicator", DropLocationIndicator == null ? null : DropLocationIndicator.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Control getDragIndicator() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -186,6 +165,27 @@ public class DataGridColumnReorderingEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DragIndicator", DragIndicator == null ? null : DragIndicator.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Control getDropLocationIndicator() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DropLocationIndicator");
+            return new Control(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDropLocationIndicator(Control DropLocationIndicator) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DropLocationIndicator", DropLocationIndicator == null ? null : DropLocationIndicator.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

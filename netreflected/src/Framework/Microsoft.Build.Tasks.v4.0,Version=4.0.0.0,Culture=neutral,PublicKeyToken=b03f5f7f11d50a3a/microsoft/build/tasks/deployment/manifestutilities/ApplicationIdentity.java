@@ -110,21 +110,21 @@ public class ApplicationIdentity extends NetObject  {
     // Constructors section
     
 
-    public ApplicationIdentity(java.lang.String url, java.lang.String deployManifestPath, java.lang.String applicationManifestPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(url, deployManifestPath, applicationManifestPath));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ApplicationIdentity(java.lang.String url, AssemblyIdentity deployManifestIdentity, AssemblyIdentity applicationManifestIdentity) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(url, deployManifestIdentity == null ? null : deployManifestIdentity.getJCOInstance(), applicationManifestIdentity == null ? null : applicationManifestIdentity.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ApplicationIdentity(java.lang.String url, java.lang.String deployManifestPath, java.lang.String applicationManifestPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(url, deployManifestPath, applicationManifestPath));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

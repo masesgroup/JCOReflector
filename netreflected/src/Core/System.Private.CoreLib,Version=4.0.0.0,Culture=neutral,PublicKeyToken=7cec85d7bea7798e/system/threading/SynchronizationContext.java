@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.threading.SendOrPostCallback;
 import system.threading.SynchronizationContext;
+import system.threading.SendOrPostCallback;
 
 
 /**
@@ -125,16 +125,6 @@ public class SynchronizationContext extends NetObject  {
     
     // Methods section
     
-    public void Post(SendOrPostCallback d, NetObject state) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.InvalidOperationException, system.threading.SynchronizationLockException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Post", d, state == null ? null : state.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsWaitNotificationRequired() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,21 +135,12 @@ public class SynchronizationContext extends NetObject  {
         }
     }
 
-    public void Send(SendOrPostCallback d, NetObject state) throws Throwable {
+    public SynchronizationContext CreateCopy() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Send", d, state == null ? null : state.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void OperationStarted() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("OperationStarted");
+            JCObject objCreateCopy = (JCObject)classInstance.Invoke("CreateCopy");
+            return new SynchronizationContext(objCreateCopy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,22 +156,41 @@ public class SynchronizationContext extends NetObject  {
         }
     }
 
-    public static void SetSynchronizationContext(SynchronizationContext syncContext) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void OperationStarted() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Invoke("SetSynchronizationContext", syncContext == null ? null : syncContext.getJCOInstance());
+            classInstance.Invoke("OperationStarted");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SynchronizationContext CreateCopy() throws Throwable {
+    public void Post(SendOrPostCallback d, NetObject state) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.InvalidOperationException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateCopy = (JCObject)classInstance.Invoke("CreateCopy");
-            return new SynchronizationContext(objCreateCopy);
+            classInstance.Invoke("Post", d, state == null ? null : state.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Send(SendOrPostCallback d, NetObject state) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Send", d, state == null ? null : state.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetSynchronizationContext(SynchronizationContext syncContext) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetSynchronizationContext", syncContext == null ? null : syncContext.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

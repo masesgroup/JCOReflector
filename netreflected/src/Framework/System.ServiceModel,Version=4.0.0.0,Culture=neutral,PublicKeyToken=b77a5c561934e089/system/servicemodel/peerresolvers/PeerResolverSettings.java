@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.peerresolvers.PeerResolverMode;
-import system.servicemodel.peerresolvers.PeerReferralPolicy;
 import system.servicemodel.peerresolvers.PeerCustomResolverSettings;
+import system.servicemodel.peerresolvers.PeerReferralPolicy;
+import system.servicemodel.peerresolvers.PeerResolverMode;
 
 
 /**
@@ -130,22 +130,12 @@ public class PeerResolverSettings extends NetObject  {
     
     // Properties section
     
-    public PeerResolverMode getMode() throws Throwable {
+    public PeerCustomResolverSettings getCustom() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
-            return new PeerResolverMode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMode(PeerResolverMode Mode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("Custom");
+            return new PeerCustomResolverSettings(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,12 +162,22 @@ public class PeerResolverSettings extends NetObject  {
         }
     }
 
-    public PeerCustomResolverSettings getCustom() throws Throwable {
+    public PeerResolverMode getMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Custom");
-            return new PeerCustomResolverSettings(val);
+            JCObject val = (JCObject)classInstance.Get("Mode");
+            return new PeerResolverMode(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMode(PeerResolverMode Mode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

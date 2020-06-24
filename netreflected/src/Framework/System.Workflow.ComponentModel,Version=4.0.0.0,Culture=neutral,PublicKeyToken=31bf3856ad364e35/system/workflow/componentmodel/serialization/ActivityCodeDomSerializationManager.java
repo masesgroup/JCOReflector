@@ -46,8 +46,8 @@ import system.componentmodel.design.serialization.IDesignerSerializationProvider
 import system.componentmodel.design.serialization.IDesignerSerializationProviderImplementation;
 import system.componentmodel.design.serialization.ContextStack;
 import system.componentmodel.PropertyDescriptorCollection;
-import system.EventHandler;
 import system.componentmodel.design.serialization.ResolveNameEventHandler;
+import system.EventHandler;
 
 
 /**
@@ -133,26 +133,6 @@ public class ActivityCodeDomSerializationManager extends NetObject  {
     
     // Methods section
     
-    public void SetName(NetObject instance, java.lang.String name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetName", instance == null ? null : instance.getJCOInstance(), name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetName(NetObject value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetName", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject CreateInstance(NetType type, ICollection arguments, java.lang.String name, boolean addToContainer) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,12 +144,12 @@ public class ActivityCodeDomSerializationManager extends NetObject  {
         }
     }
 
-    public NetObject GetService(NetType serviceType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public NetObject GetInstance(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
-            return new NetObject(objGetService);
+            JCObject objGetInstance = (JCObject)classInstance.Invoke("GetInstance", name);
+            return new NetObject(objGetInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,12 +166,33 @@ public class ActivityCodeDomSerializationManager extends NetObject  {
         }
     }
 
-    public NetObject GetInstance(java.lang.String name) throws Throwable {
+    public NetObject GetService(NetType serviceType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetInstance = (JCObject)classInstance.Invoke("GetInstance", name);
-            return new NetObject(objGetInstance);
+            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            return new NetObject(objGetService);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetName(NetObject value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetName", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType GetType(java.lang.String typeName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", typeName);
+            return new NetType(objGetType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,12 +228,11 @@ public class ActivityCodeDomSerializationManager extends NetObject  {
         }
     }
 
-    public NetType GetType(java.lang.String typeName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public void SetName(NetObject instance, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", typeName);
-            return new NetType(objGetType);
+            classInstance.Invoke("SetName", instance == null ? null : instance.getJCOInstance(), name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,26 +269,6 @@ public class ActivityCodeDomSerializationManager extends NetObject  {
     // Instance Events section
     
 
-    public void addSerializationComplete(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("SerializationComplete", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeSerializationComplete(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("SerializationComplete", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void addResolveName(ResolveNameEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -304,6 +284,26 @@ public class ActivityCodeDomSerializationManager extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ResolveName", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addSerializationComplete(EventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("SerializationComplete", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeSerializationComplete(EventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("SerializationComplete", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

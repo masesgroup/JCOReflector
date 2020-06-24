@@ -141,12 +141,23 @@ public class WebPartConnectionsEventArgs extends NetObject  {
     
     // Properties section
     
-    public WebPartConnection getConnection() throws Throwable {
+    public ConsumerConnectionPoint getConsumerConnectionPoint() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Connection");
-            return new WebPartConnection(val);
+            JCObject val = (JCObject)classInstance.Get("ConsumerConnectionPoint");
+            return new ConsumerConnectionPoint(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ProviderConnectionPoint getProviderConnectionPoint() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ProviderConnectionPoint");
+            return new ProviderConnectionPoint(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,17 +174,6 @@ public class WebPartConnectionsEventArgs extends NetObject  {
         }
     }
 
-    public ConsumerConnectionPoint getConsumerConnectionPoint() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ConsumerConnectionPoint");
-            return new ConsumerConnectionPoint(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public WebPart getProvider() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -185,12 +185,12 @@ public class WebPartConnectionsEventArgs extends NetObject  {
         }
     }
 
-    public ProviderConnectionPoint getProviderConnectionPoint() throws Throwable {
+    public WebPartConnection getConnection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ProviderConnectionPoint");
-            return new ProviderConnectionPoint(val);
+            JCObject val = (JCObject)classInstance.Get("Connection");
+            return new WebPartConnection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

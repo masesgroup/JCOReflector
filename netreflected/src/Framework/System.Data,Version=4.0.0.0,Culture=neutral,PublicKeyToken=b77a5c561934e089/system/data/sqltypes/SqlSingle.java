@@ -42,12 +42,12 @@ import system.Single;
 import system.data.sqltypes.SqlSingle;
 import system.data.sqltypes.SqlBoolean;
 import system.data.sqltypes.SqlByte;
+import system.data.sqltypes.SqlDecimal;
 import system.data.sqltypes.SqlDouble;
 import system.data.sqltypes.SqlInt16;
 import system.data.sqltypes.SqlInt32;
 import system.data.sqltypes.SqlInt64;
 import system.data.sqltypes.SqlMoney;
-import system.data.sqltypes.SqlDecimal;
 import system.data.sqltypes.SqlString;
 import system.xml.XmlQualifiedName;
 import system.xml.schema.XmlSchemaSet;
@@ -122,16 +122,6 @@ public class SqlSingle extends NetObject  {
     // Constructors section
     
 
-    public SqlSingle(Single value) throws Throwable, system.OverflowException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(value == null ? null : value.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SqlSingle(double value) throws Throwable, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -142,60 +132,35 @@ public class SqlSingle extends NetObject  {
         }
     }
 
+    public SqlSingle(Single value) throws Throwable, system.OverflowException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(value == null ? null : value.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
     
-    public static SqlSingle Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int CompareTo(SqlSingle value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
-            return new SqlSingle(objParse);
+            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SqlSingle Add(SqlSingle x, SqlSingle y) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int CompareTo(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new SqlSingle(objAdd);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SqlSingle Subtract(SqlSingle x, SqlSingle y) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new SqlSingle(objSubtract);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SqlSingle Multiply(SqlSingle x, SqlSingle y) throws Throwable, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new SqlSingle(objMultiply);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SqlSingle Divide(SqlSingle x, SqlSingle y) throws Throwable, system.DivideByZeroException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDivide = (JCObject)classType.Invoke("Divide", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new SqlSingle(objDivide);
+            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,12 +177,23 @@ public class SqlSingle extends NetObject  {
         }
     }
 
-    public static SqlBoolean NotEquals(SqlSingle x, SqlSingle y) throws Throwable {
+    public static SqlBoolean GreaterThan(SqlSingle x, SqlSingle y) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNotEquals = (JCObject)classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new SqlBoolean(objNotEquals);
+            JCObject objGreaterThan = (JCObject)classType.Invoke("GreaterThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new SqlBoolean(objGreaterThan);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SqlBoolean GreaterThanOrEqual(SqlSingle x, SqlSingle y) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGreaterThanOrEqual = (JCObject)classType.Invoke("GreaterThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new SqlBoolean(objGreaterThanOrEqual);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,17 +210,6 @@ public class SqlSingle extends NetObject  {
         }
     }
 
-    public static SqlBoolean GreaterThan(SqlSingle x, SqlSingle y) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGreaterThan = (JCObject)classType.Invoke("GreaterThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new SqlBoolean(objGreaterThan);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static SqlBoolean LessThanOrEqual(SqlSingle x, SqlSingle y) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -256,12 +221,12 @@ public class SqlSingle extends NetObject  {
         }
     }
 
-    public static SqlBoolean GreaterThanOrEqual(SqlSingle x, SqlSingle y) throws Throwable {
+    public static SqlBoolean NotEquals(SqlSingle x, SqlSingle y) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGreaterThanOrEqual = (JCObject)classType.Invoke("GreaterThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new SqlBoolean(objGreaterThanOrEqual);
+            JCObject objNotEquals = (JCObject)classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new SqlBoolean(objNotEquals);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,6 +249,17 @@ public class SqlSingle extends NetObject  {
         try {
             JCObject objToSqlByte = (JCObject)classInstance.Invoke("ToSqlByte");
             return new SqlByte(objToSqlByte);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlDecimal ToSqlDecimal() throws Throwable, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.DivideByZeroException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objToSqlDecimal = (JCObject)classInstance.Invoke("ToSqlDecimal");
+            return new SqlDecimal(objToSqlDecimal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,12 +320,56 @@ public class SqlSingle extends NetObject  {
         }
     }
 
-    public SqlDecimal ToSqlDecimal() throws Throwable, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.DivideByZeroException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static SqlSingle Add(SqlSingle x, SqlSingle y) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToSqlDecimal = (JCObject)classInstance.Invoke("ToSqlDecimal");
-            return new SqlDecimal(objToSqlDecimal);
+            JCObject objAdd = (JCObject)classType.Invoke("Add", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new SqlSingle(objAdd);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SqlSingle Divide(SqlSingle x, SqlSingle y) throws Throwable, system.DivideByZeroException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDivide = (JCObject)classType.Invoke("Divide", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new SqlSingle(objDivide);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SqlSingle Multiply(SqlSingle x, SqlSingle y) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new SqlSingle(objMultiply);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SqlSingle Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            return new SqlSingle(objParse);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SqlSingle Subtract(SqlSingle x, SqlSingle y) throws Throwable, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new SqlSingle(objSubtract);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,26 +381,6 @@ public class SqlSingle extends NetObject  {
         try {
             JCObject objToSqlString = (JCObject)classInstance.Invoke("ToSqlString");
             return new SqlString(objToSqlString);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int CompareTo(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int CompareTo(SqlSingle value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.xaml.XamlObjectWriterSettings;
+import system.Uri;
 import system.windows.markup.INameScope;
 import system.windows.markup.INameScopeImplementation;
-import system.Uri;
 import system.xaml.permissions.XamlAccessLevel;
 
 
@@ -142,27 +142,6 @@ public class XamlObjectWriterSettings extends NetObject  {
     
     // Properties section
     
-    public NetObject getRootObjectInstance() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RootObjectInstance");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRootObjectInstance(NetObject RootObjectInstance) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RootObjectInstance", RootObjectInstance == null ? null : RootObjectInstance.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIgnoreCanConvert() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -178,87 +157,6 @@ public class XamlObjectWriterSettings extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreCanConvert", IgnoreCanConvert);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public INameScope getExternalNameScope() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExternalNameScope");
-            return new INameScopeImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setExternalNameScope(INameScope ExternalNameScope) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ExternalNameScope", ExternalNameScope == null ? null : ExternalNameScope.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getSkipDuplicatePropertyCheck() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SkipDuplicatePropertyCheck");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSkipDuplicatePropertyCheck(boolean SkipDuplicatePropertyCheck) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SkipDuplicatePropertyCheck", SkipDuplicatePropertyCheck);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getRegisterNamesOnExternalNamescope() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("RegisterNamesOnExternalNamescope");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRegisterNamesOnExternalNamescope(boolean RegisterNamesOnExternalNamescope) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RegisterNamesOnExternalNamescope", RegisterNamesOnExternalNamescope);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getSkipProvideValueOnRoot() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SkipProvideValueOnRoot");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSkipProvideValueOnRoot(boolean SkipProvideValueOnRoot) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SkipProvideValueOnRoot", SkipProvideValueOnRoot);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,6 +182,87 @@ public class XamlObjectWriterSettings extends NetObject  {
         }
     }
 
+    public boolean getRegisterNamesOnExternalNamescope() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("RegisterNamesOnExternalNamescope");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRegisterNamesOnExternalNamescope(boolean RegisterNamesOnExternalNamescope) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RegisterNamesOnExternalNamescope", RegisterNamesOnExternalNamescope);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getSkipDuplicatePropertyCheck() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("SkipDuplicatePropertyCheck");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSkipDuplicatePropertyCheck(boolean SkipDuplicatePropertyCheck) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SkipDuplicatePropertyCheck", SkipDuplicatePropertyCheck);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getSkipProvideValueOnRoot() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("SkipProvideValueOnRoot");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSkipProvideValueOnRoot(boolean SkipProvideValueOnRoot) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SkipProvideValueOnRoot", SkipProvideValueOnRoot);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject getRootObjectInstance() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RootObjectInstance");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRootObjectInstance(NetObject RootObjectInstance) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RootObjectInstance", RootObjectInstance == null ? null : RootObjectInstance.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Uri getSourceBamlUri() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -300,6 +279,27 @@ public class XamlObjectWriterSettings extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceBamlUri", SourceBamlUri == null ? null : SourceBamlUri.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public INameScope getExternalNameScope() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ExternalNameScope");
+            return new INameScopeImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setExternalNameScope(INameScope ExternalNameScope) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ExternalNameScope", ExternalNameScope == null ? null : ExternalNameScope.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

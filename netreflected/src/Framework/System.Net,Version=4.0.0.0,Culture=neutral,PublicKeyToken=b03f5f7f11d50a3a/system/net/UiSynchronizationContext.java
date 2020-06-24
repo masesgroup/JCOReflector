@@ -117,6 +117,26 @@ public class UiSynchronizationContext extends NetObject  {
     
     // Properties section
     
+    public static int getManagedUiThreadId() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Get("ManagedUiThreadId");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void setManagedUiThreadId(int ManagedUiThreadId) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Set("ManagedUiThreadId", ManagedUiThreadId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static SynchronizationContext getCurrent() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -133,26 +153,6 @@ public class UiSynchronizationContext extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Set("Current", Current == null ? null : Current.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int getManagedUiThreadId() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Get("ManagedUiThreadId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void setManagedUiThreadId(int ManagedUiThreadId) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Set("ManagedUiThreadId", ManagedUiThreadId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -139,26 +139,6 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
     
     // Properties section
     
-    public int getMaxStringContentLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MaxStringContentLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMaxStringContentLength(int MaxStringContentLength) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MaxStringContentLength", MaxStringContentLength);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getMaxArrayLength() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -239,12 +219,21 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
         }
     }
 
-    public XmlDictionaryReaderQuotaTypes getModifiedQuotas() throws Throwable {
+    public int getMaxStringContentLength() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ModifiedQuotas");
-            return new XmlDictionaryReaderQuotaTypes(val);
+            return (int)classInstance.Get("MaxStringContentLength");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMaxStringContentLength(int MaxStringContentLength) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MaxStringContentLength", MaxStringContentLength);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,6 +245,17 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
         try {
             JCObject val = (JCObject)classType.Get("Max");
             return new XmlDictionaryReaderQuotas(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlDictionaryReaderQuotaTypes getModifiedQuotas() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ModifiedQuotas");
+            return new XmlDictionaryReaderQuotaTypes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

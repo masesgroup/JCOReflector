@@ -124,11 +124,11 @@ public class AttachedProperty extends NetObject  {
         }
     }
 
-    public void SetValue(ModelItem modelItem, NetObject value) throws Throwable {
+    public void NotifyPropertyChanged(ModelItem modelItem) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetValue", modelItem == null ? null : modelItem.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            classInstance.Invoke("NotifyPropertyChanged", modelItem == null ? null : modelItem.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,11 +144,11 @@ public class AttachedProperty extends NetObject  {
         }
     }
 
-    public void NotifyPropertyChanged(ModelItem modelItem) throws Throwable {
+    public void SetValue(ModelItem modelItem, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("NotifyPropertyChanged", modelItem == null ? null : modelItem.getJCOInstance());
+            classInstance.Invoke("SetValue", modelItem == null ? null : modelItem.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,27 +158,6 @@ public class AttachedProperty extends NetObject  {
     
     // Properties section
     
-    public NetType getType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsReadOnly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsReadOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsBrowsable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -194,6 +173,16 @@ public class AttachedProperty extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsBrowsable", IsBrowsable);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsReadOnly() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsReadOnly");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,6 +224,17 @@ public class AttachedProperty extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OwnerType", OwnerType == null ? null : OwnerType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType getType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Type");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

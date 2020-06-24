@@ -139,17 +139,6 @@ public class RoutedEvent extends NetObject  {
         }
     }
 
-    public RoutingStrategy getRoutingStrategy() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RoutingStrategy");
-            return new RoutingStrategy(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetType getHandlerType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -167,6 +156,17 @@ public class RoutedEvent extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("OwnerType");
             return new NetType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RoutingStrategy getRoutingStrategy() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RoutingStrategy");
+            return new RoutingStrategy(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

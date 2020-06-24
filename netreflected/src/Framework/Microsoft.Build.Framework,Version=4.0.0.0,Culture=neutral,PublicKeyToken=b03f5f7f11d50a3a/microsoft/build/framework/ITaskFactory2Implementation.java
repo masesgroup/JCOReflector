@@ -108,6 +108,17 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
 
     // Methods section
     
+    public ITask CreateTask(IBuildEngine taskFactoryLoggingHost) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateTask = (JCObject)classInstance.Invoke("CreateTask", taskFactoryLoggingHost == null ? null : taskFactoryLoggingHost.getJCOInstance());
+            return new ITaskImplementation(objCreateTask);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TaskPropertyInfo[] GetTaskParameters() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -120,17 +131,6 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
             TaskPropertyInfo[] resultingArray = new TaskPropertyInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITask CreateTask(IBuildEngine taskFactoryLoggingHost) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateTask = (JCObject)classInstance.Invoke("CreateTask", taskFactoryLoggingHost == null ? null : taskFactoryLoggingHost.getJCOInstance());
-            return new ITaskImplementation(objCreateTask);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

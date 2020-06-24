@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.channels.MessageEncoderFactory;
 import system.servicemodel.channels.BindingElement;
+import system.servicemodel.channels.MessageEncoderFactory;
 import system.servicemodel.channels.MessageVersion;
 
 
@@ -115,23 +115,23 @@ public class MessageEncodingBindingElement extends NetObject  {
     
     // Methods section
     
-    public MessageEncoderFactory CreateMessageEncoderFactory() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateMessageEncoderFactory = (JCObject)classInstance.Invoke("CreateMessageEncoderFactory");
-            return new MessageEncoderFactory(objCreateMessageEncoderFactory);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public BindingElement Clone() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objClone = (JCObject)classInstance.Invoke("Clone");
             return new BindingElement(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MessageEncoderFactory CreateMessageEncoderFactory() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateMessageEncoderFactory = (JCObject)classInstance.Invoke("CreateMessageEncoderFactory");
+            return new MessageEncoderFactory(objCreateMessageEncoderFactory);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

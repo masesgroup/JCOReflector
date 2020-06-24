@@ -127,11 +127,11 @@ public class TextEmbeddedObjectMetrics extends NetObject  {
     
     // Properties section
     
-    public double getWidth() throws Throwable {
+    public double getBaseline() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("Width");
+            return (double)classInstance.Get("Baseline");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,11 +147,11 @@ public class TextEmbeddedObjectMetrics extends NetObject  {
         }
     }
 
-    public double getBaseline() throws Throwable {
+    public double getWidth() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("Baseline");
+            return (double)classInstance.Get("Width");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

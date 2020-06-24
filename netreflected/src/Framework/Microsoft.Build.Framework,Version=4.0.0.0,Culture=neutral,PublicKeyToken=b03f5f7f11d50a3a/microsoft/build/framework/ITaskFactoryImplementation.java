@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import microsoft.build.framework.TaskPropertyInfo;
 import microsoft.build.framework.ITask;
 import microsoft.build.framework.ITaskImplementation;
 import microsoft.build.framework.IBuildEngine;
 import microsoft.build.framework.IBuildEngineImplementation;
+import microsoft.build.framework.TaskPropertyInfo;
 
 
 /**
@@ -108,6 +108,17 @@ public class ITaskFactoryImplementation extends NetObject implements ITaskFactor
 
     // Methods section
     
+    public ITask CreateTask(IBuildEngine taskFactoryLoggingHost) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateTask = (JCObject)classInstance.Invoke("CreateTask", taskFactoryLoggingHost == null ? null : taskFactoryLoggingHost.getJCOInstance());
+            return new ITaskImplementation(objCreateTask);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TaskPropertyInfo[] GetTaskParameters() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -120,17 +131,6 @@ public class ITaskFactoryImplementation extends NetObject implements ITaskFactor
             TaskPropertyInfo[] resultingArray = new TaskPropertyInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITask CreateTask(IBuildEngine taskFactoryLoggingHost) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateTask = (JCObject)classInstance.Invoke("CreateTask", taskFactoryLoggingHost == null ? null : taskFactoryLoggingHost.getJCOInstance());
-            return new ITaskImplementation(objCreateTask);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

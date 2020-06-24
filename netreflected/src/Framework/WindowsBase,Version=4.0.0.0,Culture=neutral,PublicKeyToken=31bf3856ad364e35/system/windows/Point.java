@@ -128,16 +128,6 @@ public class Point extends NetObject  {
     
     // Methods section
     
-    public static boolean Equals(Point point1, Point point2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("Equals", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Equals(Point value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,12 +138,11 @@ public class Point extends NetObject  {
         }
     }
 
-    public static Point Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
+    public static boolean Equals(Point point1, Point point2) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", source);
-            return new Point(objParse);
+            return (boolean)classType.Invoke("Equals", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,22 +158,34 @@ public class Point extends NetObject  {
         }
     }
 
-    public void Offset(double offsetX, double offsetY) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Offset", offsetX, offsetY);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Point Add(Point point, Vector vector) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objAdd = (JCObject)classType.Invoke("Add", point == null ? null : point.getJCOInstance(), vector == null ? null : vector.getJCOInstance());
             return new Point(objAdd);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Point Multiply(Point point, Matrix matrix) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", point == null ? null : point.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            return new Point(objMultiply);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Point Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objParse = (JCObject)classType.Invoke("Parse", source);
+            return new Point(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,12 +213,11 @@ public class Point extends NetObject  {
         }
     }
 
-    public static Point Multiply(Point point, Matrix matrix) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void Offset(double offsetX, double offsetY) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", point == null ? null : point.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
-            return new Point(objMultiply);
+            classInstance.Invoke("Offset", offsetX, offsetY);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

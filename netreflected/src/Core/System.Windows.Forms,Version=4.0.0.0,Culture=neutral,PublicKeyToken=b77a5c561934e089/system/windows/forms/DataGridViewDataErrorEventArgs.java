@@ -128,23 +128,21 @@ public class DataGridViewDataErrorEventArgs extends NetObject  {
     
     // Properties section
     
-    public DataGridViewDataErrorContexts getContext() throws Throwable {
+    public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
-            return new DataGridViewDataErrorContexts(val);
+            return (boolean)classInstance.Get("Cancel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetException getException() throws Throwable {
+    public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Exception");
-            return new NetException(val);
+            classInstance.Set("Cancel", Cancel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,21 +188,23 @@ public class DataGridViewDataErrorEventArgs extends NetObject  {
         }
     }
 
-    public boolean getCancel() throws Throwable {
+    public NetException getException() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Cancel");
+            JCObject val = (JCObject)classInstance.Get("Exception");
+            return new NetException(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCancel(boolean Cancel) throws Throwable {
+    public DataGridViewDataErrorContexts getContext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Cancel", Cancel);
+            JCObject val = (JCObject)classInstance.Get("Context");
+            return new DataGridViewDataErrorContexts(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -138,6 +138,17 @@ public class ItemCheckEventArgs extends NetObject  {
         }
     }
 
+    public CheckState getCurrentValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CurrentValue");
+            return new CheckState(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CheckState getNewValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,17 +165,6 @@ public class ItemCheckEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewValue", NewValue == null ? null : NewValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CheckState getCurrentValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CurrentValue");
-            return new CheckState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

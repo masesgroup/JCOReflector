@@ -105,11 +105,11 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
 
     // Methods section
     
-    public java.lang.String GetSiteName() throws Throwable {
+    public java.lang.String GetPhysicalPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetSiteName");
+            return (java.lang.String)classInstance.Invoke("GetPhysicalPath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -125,21 +125,21 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
         }
     }
 
-    public java.lang.String GetVirtualPath() throws Throwable {
+    public java.lang.String GetSiteName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetVirtualPath");
+            return (java.lang.String)classInstance.Invoke("GetSiteName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String GetPhysicalPath() throws Throwable {
+    public java.lang.String GetVirtualPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetPhysicalPath");
+            return (java.lang.String)classInstance.Invoke("GetVirtualPath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

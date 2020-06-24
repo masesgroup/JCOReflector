@@ -126,12 +126,11 @@ public class ServiceNameCollection extends NetObject  {
     
     // Methods section
     
-    public ServiceNameCollection Merge(java.lang.String serviceName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException {
+    public boolean Contains(java.lang.String searchServiceName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objMerge = (JCObject)classInstance.Invoke("Merge", serviceName);
-            return new ServiceNameCollection(objMerge);
+            return (boolean)classInstance.Invoke("Contains", searchServiceName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,11 +147,12 @@ public class ServiceNameCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(java.lang.String searchServiceName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException {
+    public ServiceNameCollection Merge(java.lang.String serviceName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", searchServiceName);
+            JCObject objMerge = (JCObject)classInstance.Invoke("Merge", serviceName);
+            return new ServiceNameCollection(objMerge);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

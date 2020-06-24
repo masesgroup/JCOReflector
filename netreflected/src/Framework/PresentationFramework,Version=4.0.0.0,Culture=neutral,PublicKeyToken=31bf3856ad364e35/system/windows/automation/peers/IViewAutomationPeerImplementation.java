@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.automation.peers.AutomationControlType;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.peers.AutomationControlType;
 import system.windows.automation.peers.ItemAutomationPeer;
 import system.collections.specialized.NotifyCollectionChangedEventArgs;
 
@@ -107,23 +107,23 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
 
     // Methods section
     
-    public AutomationControlType GetAutomationControlType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetAutomationControlType = (JCObject)classInstance.Invoke("GetAutomationControlType");
-            return new AutomationControlType(objGetAutomationControlType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetPattern = (JCObject)classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
             return new NetObject(objGetPattern);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AutomationControlType GetAutomationControlType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetAutomationControlType = (JCObject)classInstance.Invoke("GetAutomationControlType");
+            return new AutomationControlType(objGetAutomationControlType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

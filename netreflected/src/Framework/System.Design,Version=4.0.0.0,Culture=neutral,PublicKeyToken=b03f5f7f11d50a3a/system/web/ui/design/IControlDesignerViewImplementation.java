@@ -165,12 +165,11 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
     
     // Properties section
     
-    public DesignerRegion getContainingRegion() throws Throwable {
+    public boolean getSupportsRegions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ContainingRegion");
-            return new DesignerRegion(val);
+            return (boolean)classInstance.Get("SupportsRegions");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,11 +186,12 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
         }
     }
 
-    public boolean getSupportsRegions() throws Throwable {
+    public DesignerRegion getContainingRegion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("SupportsRegions");
+            JCObject val = (JCObject)classInstance.Get("ContainingRegion");
+            return new DesignerRegion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

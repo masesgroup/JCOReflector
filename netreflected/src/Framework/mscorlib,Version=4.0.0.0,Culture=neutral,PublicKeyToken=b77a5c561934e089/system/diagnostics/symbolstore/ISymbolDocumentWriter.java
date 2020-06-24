@@ -90,9 +90,9 @@ public interface ISymbolDocumentWriter extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void SetSource(byte[] source) throws Throwable;
-
     public void SetCheckSum(Guid algorithmId, byte[] checkSum) throws Throwable;
+
+    public void SetSource(byte[] source) throws Throwable;
 
 
     

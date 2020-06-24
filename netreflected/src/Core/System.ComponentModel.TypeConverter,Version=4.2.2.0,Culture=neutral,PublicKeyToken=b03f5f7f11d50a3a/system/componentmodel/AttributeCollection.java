@@ -126,17 +126,6 @@ public class AttributeCollection extends NetObject  {
     
     // Methods section
     
-    public static AttributeCollection FromExisting(AttributeCollection existing, Attribute... newAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFromExisting = (JCObject)classType.Invoke("FromExisting", existing == null ? null : existing.getJCOInstance(), toObjectFromArray(newAttributes));
-            return new AttributeCollection(objFromExisting);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Contains(Attribute attribute) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -172,6 +161,17 @@ public class AttributeCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Matches", (Object)toObjectFromArray(attributes));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static AttributeCollection FromExisting(AttributeCollection existing, Attribute... newAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromExisting = (JCObject)classType.Invoke("FromExisting", existing == null ? null : existing.getJCOInstance(), toObjectFromArray(newAttributes));
+            return new AttributeCollection(objFromExisting);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

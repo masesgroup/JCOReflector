@@ -121,6 +121,16 @@ public class ListChangedEventArgs extends NetObject  {
         }
     }
 
+    public ListChangedEventArgs(ListChangedType listChangedType, int newIndex, int oldIndex) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(listChangedType == null ? null : listChangedType.getJCOInstance(), newIndex, oldIndex));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ListChangedEventArgs(ListChangedType listChangedType, int newIndex, PropertyDescriptor propDesc) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -141,16 +151,6 @@ public class ListChangedEventArgs extends NetObject  {
         }
     }
 
-    public ListChangedEventArgs(ListChangedType listChangedType, int newIndex, int oldIndex) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(listChangedType == null ? null : listChangedType.getJCOInstance(), newIndex, oldIndex));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Methods section
@@ -159,17 +159,6 @@ public class ListChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public ListChangedType getListChangedType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ListChangedType");
-            return new ListChangedType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getNewIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -185,6 +174,17 @@ public class ListChangedEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("OldIndex");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ListChangedType getListChangedType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ListChangedType");
+            return new ListChangedType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

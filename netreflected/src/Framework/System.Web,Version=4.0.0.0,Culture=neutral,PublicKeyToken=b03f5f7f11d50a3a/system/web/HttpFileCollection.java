@@ -116,12 +116,11 @@ public class HttpFileCollection extends NetObject  {
     
     // Methods section
     
-    public HttpPostedFile Get(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public java.lang.String GetKey(int index) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGet = (JCObject)classInstance.Invoke("Get", name);
-            return new HttpPostedFile(objGet);
+            return (java.lang.String)classInstance.Invoke("GetKey", index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -138,11 +137,12 @@ public class HttpFileCollection extends NetObject  {
         }
     }
 
-    public java.lang.String GetKey(int index) throws Throwable, system.ArgumentOutOfRangeException {
+    public HttpPostedFile Get(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetKey", index);
+            JCObject objGet = (JCObject)classInstance.Invoke("Get", name);
+            return new HttpPostedFile(objGet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,6 +182,16 @@ public class HttpFileCollection extends NetObject  {
     
     // Properties section
     
+    public int getCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Count");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String[] getAllKeys() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -196,16 +206,6 @@ public class HttpFileCollection extends NetObject  {
 				resultingArray[indexAllKeys] = (java.lang.String)resultingArrayList.get(indexAllKeys);
 			}
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

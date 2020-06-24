@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.io.isolatedstorage.IsolatedStorageFile;
 import system.io.isolatedstorage.IsolatedStorageScope;
-import system.security.policy.Evidence;
 import system.DateTimeOffset;
+import system.io.isolatedstorage.IsolatedStorageFile;
+import system.security.policy.Evidence;
 import system.io.isolatedstorage.IsolatedStorageFileStream;
 import system.io.FileMode;
 import system.io.FileAccess;
@@ -122,67 +122,75 @@ public class IsolatedStorageFile extends NetObject  {
     
     // Methods section
     
-    public static IsolatedStorageFile GetUserStoreForDomain() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean DirectoryExists(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetUserStoreForDomain = (JCObject)classType.Invoke("GetUserStoreForDomain");
-            return new IsolatedStorageFile(objGetUserStoreForDomain);
+            return (boolean)classInstance.Invoke("DirectoryExists", path);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static IsolatedStorageFile GetUserStoreForAssembly() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean FileExists(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetUserStoreForAssembly = (JCObject)classType.Invoke("GetUserStoreForAssembly");
-            return new IsolatedStorageFile(objGetUserStoreForAssembly);
+            return (boolean)classInstance.Invoke("FileExists", path);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static IsolatedStorageFile GetUserStoreForApplication() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean IncreaseQuotaTo(long newQuotaSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetUserStoreForApplication = (JCObject)classType.Invoke("GetUserStoreForApplication");
-            return new IsolatedStorageFile(objGetUserStoreForApplication);
+            return (boolean)classInstance.Invoke("IncreaseQuotaTo", newQuotaSize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static IsolatedStorageFile GetUserStoreForSite() throws Throwable, system.NotSupportedException {
+    public static IEnumerator GetEnumerator(IsolatedStorageScope scope) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetUserStoreForSite = (JCObject)classType.Invoke("GetUserStoreForSite");
-            return new IsolatedStorageFile(objGetUserStoreForSite);
+            JCObject objGetEnumerator = (JCObject)classType.Invoke("GetEnumerator", scope == null ? null : scope.getJCOInstance());
+            return new IEnumeratorImplementation(objGetEnumerator);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static IsolatedStorageFile GetMachineStoreForDomain() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DateTimeOffset GetCreationTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetMachineStoreForDomain = (JCObject)classType.Invoke("GetMachineStoreForDomain");
-            return new IsolatedStorageFile(objGetMachineStoreForDomain);
+            JCObject objGetCreationTime = (JCObject)classInstance.Invoke("GetCreationTime", path);
+            return new DateTimeOffset(objGetCreationTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static IsolatedStorageFile GetMachineStoreForAssembly() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DateTimeOffset GetLastAccessTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetMachineStoreForAssembly = (JCObject)classType.Invoke("GetMachineStoreForAssembly");
-            return new IsolatedStorageFile(objGetMachineStoreForAssembly);
+            JCObject objGetLastAccessTime = (JCObject)classInstance.Invoke("GetLastAccessTime", path);
+            return new DateTimeOffset(objGetLastAccessTime);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DateTimeOffset GetLastWriteTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetLastWriteTime = (JCObject)classInstance.Invoke("GetLastWriteTime", path);
+            return new DateTimeOffset(objGetLastWriteTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,11 +207,33 @@ public class IsolatedStorageFile extends NetObject  {
         }
     }
 
-    public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType domainEvidenceType, NetType assemblyEvidenceType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
+    public static IsolatedStorageFile GetMachineStoreForAssembly() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetStore = (JCObject)classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), domainEvidenceType == null ? null : domainEvidenceType.getJCOInstance(), assemblyEvidenceType == null ? null : assemblyEvidenceType.getJCOInstance());
+            JCObject objGetMachineStoreForAssembly = (JCObject)classType.Invoke("GetMachineStoreForAssembly");
+            return new IsolatedStorageFile(objGetMachineStoreForAssembly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IsolatedStorageFile GetMachineStoreForDomain() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetMachineStoreForDomain = (JCObject)classType.Invoke("GetMachineStoreForDomain");
+            return new IsolatedStorageFile(objGetMachineStoreForDomain);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject applicationIdentity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetStore = (JCObject)classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), applicationIdentity == null ? null : applicationIdentity.getJCOInstance());
             return new IsolatedStorageFile(objGetStore);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -243,224 +273,133 @@ public class IsolatedStorageFile extends NetObject  {
         }
     }
 
-    public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject applicationIdentity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
+    public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType domainEvidenceType, NetType assemblyEvidenceType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetStore = (JCObject)classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), applicationIdentity == null ? null : applicationIdentity.getJCOInstance());
+            JCObject objGetStore = (JCObject)classType.Invoke("GetStore", scope == null ? null : scope.getJCOInstance(), domainEvidenceType == null ? null : domainEvidenceType.getJCOInstance(), assemblyEvidenceType == null ? null : assemblyEvidenceType.getJCOInstance());
             return new IsolatedStorageFile(objGetStore);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean IncreaseQuotaTo(long newQuotaSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IncreaseQuotaTo", newQuotaSize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove() throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.io.IOException, system.io.isolatedstorage.IsolatedStorageException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.ApplicationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Remove(IsolatedStorageScope scope) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.ApplicationException {
+    public static IsolatedStorageFile GetUserStoreForApplication() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Remove", scope == null ? null : scope.getJCOInstance());
+            JCObject objGetUserStoreForApplication = (JCObject)classType.Invoke("GetUserStoreForApplication");
+            return new IsolatedStorageFile(objGetUserStoreForApplication);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static IEnumerator GetEnumerator(IsolatedStorageScope scope) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException {
+    public static IsolatedStorageFile GetUserStoreForAssembly() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetEnumerator = (JCObject)classType.Invoke("GetEnumerator", scope == null ? null : scope.getJCOInstance());
-            return new IEnumeratorImplementation(objGetEnumerator);
+            JCObject objGetUserStoreForAssembly = (JCObject)classType.Invoke("GetUserStoreForAssembly");
+            return new IsolatedStorageFile(objGetUserStoreForAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void DeleteFile(java.lang.String file) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IsolatedStorageFile GetUserStoreForDomain() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("DeleteFile", file);
+            JCObject objGetUserStoreForDomain = (JCObject)classType.Invoke("GetUserStoreForDomain");
+            return new IsolatedStorageFile(objGetUserStoreForDomain);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean FileExists(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IsolatedStorageFile GetUserStoreForSite() throws Throwable, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Invoke("FileExists", path);
+            JCObject objGetUserStoreForSite = (JCObject)classType.Invoke("GetUserStoreForSite");
+            return new IsolatedStorageFile(objGetUserStoreForSite);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean DirectoryExists(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException {
+    public IsolatedStorageFileStream CreateFile(java.lang.String path) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("DirectoryExists", path);
+            JCObject objCreateFile = (JCObject)classInstance.Invoke("CreateFile", path);
+            return new IsolatedStorageFileStream(objCreateFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void CreateDirectory(java.lang.String dir) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException, system.ObjectDisposedException {
+    public IsolatedStorageFileStream OpenFile(java.lang.String path, FileMode mode) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CreateDirectory", dir);
+            JCObject objOpenFile = (JCObject)classInstance.Invoke("OpenFile", path, mode == null ? null : mode.getJCOInstance());
+            return new IsolatedStorageFileStream(objOpenFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DateTimeOffset GetCreationTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.OverflowException {
+    public IsolatedStorageFileStream OpenFile(java.lang.String path, FileMode mode, FileAccess access) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetCreationTime = (JCObject)classInstance.Invoke("GetCreationTime", path);
-            return new DateTimeOffset(objGetCreationTime);
+            JCObject objOpenFile = (JCObject)classInstance.Invoke("OpenFile", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance());
+            return new IsolatedStorageFileStream(objOpenFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DateTimeOffset GetLastAccessTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.OverflowException {
+    public IsolatedStorageFileStream OpenFile(java.lang.String path, FileMode mode, FileAccess access, FileShare share) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetLastAccessTime = (JCObject)classInstance.Invoke("GetLastAccessTime", path);
-            return new DateTimeOffset(objGetLastAccessTime);
+            JCObject objOpenFile = (JCObject)classInstance.Invoke("OpenFile", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance());
+            return new IsolatedStorageFileStream(objOpenFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DateTimeOffset GetLastWriteTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.OverflowException {
+    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetLastWriteTime = (JCObject)classInstance.Invoke("GetLastWriteTime", path);
-            return new DateTimeOffset(objGetLastWriteTime);
+            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
+            return new NetObject(objGetLifetimeService);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
+    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CopyFile", sourceFileName, destinationFileName);
+            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
+            return new NetObject(objInitializeLifetimeService);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException {
+    public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CopyFile", sourceFileName, destinationFileName, overwrite);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("MoveFile", sourceFileName, destinationFileName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("MoveDirectory", sourceDirectoryName, destinationDirectoryName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DeleteDirectory(java.lang.String dir) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DeleteDirectory", dir);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String[] GetFileNames() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileNames");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetFileNames = 0; indexGetFileNames < resultingArrayList.size(); indexGetFileNames++ ) {
-				resultingArray[indexGetFileNames] = (java.lang.String)resultingArrayList.get(indexGetFileNames);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String[] GetFileNames(java.lang.String searchPattern) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileNames", searchPattern);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetFileNames = 0; indexGetFileNames < resultingArrayList.size(); indexGetFileNames++ ) {
-				resultingArray[indexGetFileNames] = (java.lang.String)resultingArrayList.get(indexGetFileNames);
-            }
-            return resultingArray;
+            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
+            return new ObjRef(objCreateObjRef);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -504,45 +443,39 @@ public class IsolatedStorageFile extends NetObject  {
         }
     }
 
-    public IsolatedStorageFileStream OpenFile(java.lang.String path, FileMode mode) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException {
+    public java.lang.String[] GetFileNames() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objOpenFile = (JCObject)classInstance.Invoke("OpenFile", path, mode == null ? null : mode.getJCOInstance());
-            return new IsolatedStorageFileStream(objOpenFile);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileNames");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetFileNames = 0; indexGetFileNames < resultingArrayList.size(); indexGetFileNames++ ) {
+				resultingArray[indexGetFileNames] = (java.lang.String)resultingArrayList.get(indexGetFileNames);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IsolatedStorageFileStream OpenFile(java.lang.String path, FileMode mode, FileAccess access) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException {
+    public java.lang.String[] GetFileNames(java.lang.String searchPattern) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objOpenFile = (JCObject)classInstance.Invoke("OpenFile", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance());
-            return new IsolatedStorageFileStream(objOpenFile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IsolatedStorageFileStream OpenFile(java.lang.String path, FileMode mode, FileAccess access, FileShare share) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objOpenFile = (JCObject)classInstance.Invoke("OpenFile", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance());
-            return new IsolatedStorageFileStream(objOpenFile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IsolatedStorageFileStream CreateFile(java.lang.String path) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateFile = (JCObject)classInstance.Invoke("CreateFile", path);
-            return new IsolatedStorageFileStream(objCreateFile);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileNames", searchPattern);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetFileNames = 0; indexGetFileNames < resultingArrayList.size(); indexGetFileNames++ ) {
+				resultingArray[indexGetFileNames] = (java.lang.String)resultingArrayList.get(indexGetFileNames);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,34 +491,101 @@ public class IsolatedStorageFile extends NetObject  {
         }
     }
 
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
+            classInstance.Invoke("CopyFile", sourceFileName, destinationFileName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
+            classInstance.Invoke("CopyFile", sourceFileName, destinationFileName, overwrite);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public void CreateDirectory(java.lang.String dir) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
-            return new ObjRef(objCreateObjRef);
+            classInstance.Invoke("CreateDirectory", dir);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DeleteDirectory(java.lang.String dir) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DeleteDirectory", dir);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DeleteFile(java.lang.String file) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DeleteFile", file);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("MoveDirectory", sourceDirectoryName, destinationDirectoryName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("MoveFile", sourceFileName, destinationFileName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove() throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.io.IOException, system.io.isolatedstorage.IsolatedStorageException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.ApplicationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Remove(IsolatedStorageScope scope) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.ApplicationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Remove", scope == null ? null : scope.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,22 +595,11 @@ public class IsolatedStorageFile extends NetObject  {
     
     // Properties section
     
-    public long getUsedSize() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsEnabled() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classInstance.Get("UsedSize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UInt64 getCurrentSize() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CurrentSize");
-            return new UInt64(val);
+            return (boolean)classType.Get("IsEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -646,23 +635,22 @@ public class IsolatedStorageFile extends NetObject  {
         }
     }
 
-    public UInt64 getMaximumSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public long getUsedSize() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MaximumSize");
-            return new UInt64(val);
+            return (long)classInstance.Get("UsedSize");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject getDomainIdentity() throws Throwable, system.InvalidOperationException {
+    public IsolatedStorageScope getScope() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DomainIdentity");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("Scope");
+            return new IsolatedStorageScope(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -690,22 +678,34 @@ public class IsolatedStorageFile extends NetObject  {
         }
     }
 
-    public IsolatedStorageScope getScope() throws Throwable {
+    public NetObject getDomainIdentity() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Scope");
-            return new IsolatedStorageScope(val);
+            JCObject val = (JCObject)classInstance.Get("DomainIdentity");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getIsEnabled() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public UInt64 getCurrentSize() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsEnabled");
+            JCObject val = (JCObject)classInstance.Get("CurrentSize");
+            return new UInt64(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UInt64 getMaximumSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MaximumSize");
+            return new UInt64(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

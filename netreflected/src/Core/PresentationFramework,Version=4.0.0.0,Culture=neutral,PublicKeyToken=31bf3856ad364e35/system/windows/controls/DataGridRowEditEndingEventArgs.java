@@ -149,23 +149,23 @@ public class DataGridRowEditEndingEventArgs extends NetObject  {
         }
     }
 
-    public DataGridRow getRow() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Row");
-            return new DataGridRow(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataGridEditAction getEditAction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("EditAction");
             return new DataGridEditAction(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataGridRow getRow() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Row");
+            return new DataGridRow(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

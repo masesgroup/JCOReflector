@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.threading.tasks.Task;
 import system.DateTime;
+import system.threading.tasks.Task;
 import system.collections.specialized.NameValueCollection;
 
 
@@ -115,23 +115,12 @@ public class OutputCacheProviderAsync extends NetObject  {
     
     // Methods section
     
-    public Task SetAsync(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
+    public NetObject Add(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSetAsync = (JCObject)classInstance.Invoke("SetAsync", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
-            return new Task(objSetAsync);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Task RemoveAsync(java.lang.String key) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRemoveAsync = (JCObject)classInstance.Invoke("RemoveAsync", key);
-            return new Task(objRemoveAsync);
+            JCObject objAdd = (JCObject)classInstance.Invoke("Add", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
+            return new NetObject(objAdd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,32 +137,23 @@ public class OutputCacheProviderAsync extends NetObject  {
         }
     }
 
-    public NetObject Add(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
+    public Task RemoveAsync(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
-            return new NetObject(objAdd);
+            JCObject objRemoveAsync = (JCObject)classInstance.Invoke("RemoveAsync", key);
+            return new Task(objRemoveAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Set(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
+    public Task SetAsync(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Set", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(java.lang.String key) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", key);
+            JCObject objSetAsync = (JCObject)classInstance.Invoke("SetAsync", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
+            return new Task(objSetAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,25 +169,45 @@ public class OutputCacheProviderAsync extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public java.lang.String getName() throws Throwable {
+    public void Remove(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            classInstance.Invoke("Remove", key);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public void Set(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Set", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+
+    
+    // Properties section
+    
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Description");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

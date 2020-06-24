@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.ui.design.IDataSourceViewSchema;
-import system.web.ui.design.IDataSourceViewSchemaImplementation;
 import system.web.ui.design.IDataSourceFieldSchema;
 import system.web.ui.design.IDataSourceFieldSchemaImplementation;
+import system.web.ui.design.IDataSourceViewSchema;
+import system.web.ui.design.IDataSourceViewSchemaImplementation;
 
 
 /**
@@ -107,23 +107,6 @@ public class IDataSourceViewSchemaImplementation extends NetObject implements ID
 
     // Methods section
     
-    public IDataSourceViewSchema[] GetChildren() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<IDataSourceViewSchema> resultingArrayList = new ArrayList<IDataSourceViewSchema>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildren");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new IDataSourceViewSchemaImplementation(resultingObject));
-            }
-            IDataSourceViewSchema[] resultingArray = new IDataSourceViewSchema[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IDataSourceFieldSchema[] GetFields() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -134,6 +117,23 @@ public class IDataSourceViewSchemaImplementation extends NetObject implements ID
 			    resultingArrayList.add(new IDataSourceFieldSchemaImplementation(resultingObject));
             }
             IDataSourceFieldSchema[] resultingArray = new IDataSourceFieldSchema[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDataSourceViewSchema[] GetChildren() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<IDataSourceViewSchema> resultingArrayList = new ArrayList<IDataSourceViewSchema>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildren");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new IDataSourceViewSchemaImplementation(resultingObject));
+            }
+            IDataSourceViewSchema[] resultingArray = new IDataSourceViewSchema[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (JCNativeException jcne) {

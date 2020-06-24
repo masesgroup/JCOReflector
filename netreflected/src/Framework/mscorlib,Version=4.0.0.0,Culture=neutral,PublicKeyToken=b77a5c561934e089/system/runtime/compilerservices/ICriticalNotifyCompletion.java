@@ -90,9 +90,9 @@ public interface ICriticalNotifyCompletion extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void UnsafeOnCompleted(Action continuation) throws Throwable;
-
     public void OnCompleted(Action continuation) throws Throwable;
+
+    public void UnsafeOnCompleted(Action continuation) throws Throwable;
 
 
     

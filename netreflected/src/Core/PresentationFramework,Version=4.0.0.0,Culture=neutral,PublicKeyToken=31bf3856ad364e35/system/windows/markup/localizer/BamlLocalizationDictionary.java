@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.markup.localizer.BamlLocalizableResourceKey;
-import system.windows.markup.localizer.BamlLocalizableResource;
 import system.windows.markup.localizer.BamlLocalizationDictionaryEnumerator;
+import system.windows.markup.localizer.BamlLocalizableResource;
 import system.collections.DictionaryEntry;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
@@ -129,6 +129,25 @@ public class BamlLocalizationDictionary extends NetObject implements Iterable<Di
     
     // Methods section
     
+    public boolean Contains(BamlLocalizableResourceKey key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Contains", key == null ? null : key.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BamlLocalizationDictionaryEnumerator GetEnumerator() throws Throwable {
+        return new BamlLocalizationDictionaryEnumerator(classInstance);
+    }
+
+	@SuppressWarnings("unchecked")
+	public java.util.Iterator<DictionaryEntry> iterator() {
+		return new BamlLocalizationDictionaryEnumerator(classInstance);
+	}
+
     public void Add(BamlLocalizableResourceKey key, BamlLocalizableResource value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -149,40 +168,21 @@ public class BamlLocalizationDictionary extends NetObject implements Iterable<Di
         }
     }
 
-    public void Remove(BamlLocalizableResourceKey key) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", key == null ? null : key.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Contains(BamlLocalizableResourceKey key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Contains", key == null ? null : key.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BamlLocalizationDictionaryEnumerator GetEnumerator() throws Throwable {
-        return new BamlLocalizationDictionaryEnumerator(classInstance);
-    }
-
-	@SuppressWarnings("unchecked")
-	public java.util.Iterator<DictionaryEntry> iterator() {
-		return new BamlLocalizationDictionaryEnumerator(classInstance);
-	}
-
     public void CopyTo(DictionaryEntry[] array, int arrayIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), arrayIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(BamlLocalizableResourceKey key) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,12 +212,11 @@ public class BamlLocalizationDictionary extends NetObject implements Iterable<Di
         }
     }
 
-    public BamlLocalizableResourceKey getRootElementKey() throws Throwable {
+    public int getCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RootElementKey");
-            return new BamlLocalizableResourceKey(val);
+            return (int)classInstance.Get("Count");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,11 +244,12 @@ public class BamlLocalizationDictionary extends NetObject implements Iterable<Di
         }
     }
 
-    public int getCount() throws Throwable {
+    public BamlLocalizableResourceKey getRootElementKey() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Count");
+            JCObject val = (JCObject)classInstance.Get("RootElementKey");
+            return new BamlLocalizableResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

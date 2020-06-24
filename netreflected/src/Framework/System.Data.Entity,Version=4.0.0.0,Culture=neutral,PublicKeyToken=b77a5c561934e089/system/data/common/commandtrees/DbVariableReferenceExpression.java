@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.common.commandtrees.DbExpressionVisitor;
-import system.data.metadata.edm.TypeUsage;
 import system.data.common.commandtrees.DbExpressionKind;
+import system.data.metadata.edm.TypeUsage;
 
 
 /**
@@ -129,11 +129,12 @@ public class DbVariableReferenceExpression extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getVariableName() throws Throwable {
+    public DbExpressionKind getExpressionKind() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("VariableName");
+            JCObject val = (JCObject)classInstance.Get("ExpressionKind");
+            return new DbExpressionKind(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -150,12 +151,11 @@ public class DbVariableReferenceExpression extends NetObject  {
         }
     }
 
-    public DbExpressionKind getExpressionKind() throws Throwable {
+    public java.lang.String getVariableName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpressionKind");
-            return new DbExpressionKind(val);
+            return (java.lang.String)classInstance.Get("VariableName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

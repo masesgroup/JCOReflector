@@ -125,12 +125,11 @@ public class SecurityTokenHandlerCollectionManager extends NetObject  {
     
     // Methods section
     
-    public static SecurityTokenHandlerCollectionManager CreateEmptySecurityTokenHandlerCollectionManager() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean ContainsKey(java.lang.String usage) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateEmptySecurityTokenHandlerCollectionManager = (JCObject)classType.Invoke("CreateEmptySecurityTokenHandlerCollectionManager");
-            return new SecurityTokenHandlerCollectionManager(objCreateEmptySecurityTokenHandlerCollectionManager);
+            return (boolean)classInstance.Invoke("ContainsKey", usage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,11 +146,12 @@ public class SecurityTokenHandlerCollectionManager extends NetObject  {
         }
     }
 
-    public boolean ContainsKey(java.lang.String usage) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static SecurityTokenHandlerCollectionManager CreateEmptySecurityTokenHandlerCollectionManager() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Invoke("ContainsKey", usage);
+            JCObject objCreateEmptySecurityTokenHandlerCollectionManager = (JCObject)classType.Invoke("CreateEmptySecurityTokenHandlerCollectionManager");
+            return new SecurityTokenHandlerCollectionManager(objCreateEmptySecurityTokenHandlerCollectionManager);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

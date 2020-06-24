@@ -95,21 +95,21 @@ public interface IJSVsaError extends IJCOBridgeReflected {
     
     // Properties section
     
+    public int getEndColumn() throws Throwable;
+
     public int getLine() throws Throwable;
 
+    public int getNumber() throws Throwable;
+
     public int getSeverity() throws Throwable;
+
+    public int getStartColumn() throws Throwable;
+
+    public IJSVsaItem getSourceItem() throws Throwable;
 
     public java.lang.String getDescription() throws Throwable;
 
     public java.lang.String getLineText() throws Throwable;
-
-    public IJSVsaItem getSourceItem() throws Throwable;
-
-    public int getEndColumn() throws Throwable;
-
-    public int getStartColumn() throws Throwable;
-
-    public int getNumber() throws Throwable;
 
     public java.lang.String getSourceMoniker() throws Throwable;
 

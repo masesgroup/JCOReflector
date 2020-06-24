@@ -136,22 +136,11 @@ public class QueryStringAttribute extends NetObject  {
     
     // Methods section
     
-    public IValueProvider GetValueProvider(ModelBindingExecutionContext modelBindingExecutionContext) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
+    public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetValueProvider = (JCObject)classInstance.Invoke("GetValueProvider", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance());
-            return new IValueProviderImplementation(objGetValueProvider);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetModelName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetModelName");
+            return (boolean)classInstance.Invoke("IsDefaultAttribute");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,11 +156,22 @@ public class QueryStringAttribute extends NetObject  {
         }
     }
 
-    public boolean IsDefaultAttribute() throws Throwable {
+    public java.lang.String GetModelName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            return (java.lang.String)classInstance.Invoke("GetModelName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IValueProvider GetValueProvider(ModelBindingExecutionContext modelBindingExecutionContext) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetValueProvider = (JCObject)classInstance.Invoke("GetValueProvider", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance());
+            return new IValueProviderImplementation(objGetValueProvider);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,26 +181,6 @@ public class QueryStringAttribute extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Key");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setKey(java.lang.String Key) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Key", Key);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getValidateInput() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -227,6 +207,26 @@ public class QueryStringAttribute extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("TypeId");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Key");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setKey(java.lang.String Key) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Key", Key);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

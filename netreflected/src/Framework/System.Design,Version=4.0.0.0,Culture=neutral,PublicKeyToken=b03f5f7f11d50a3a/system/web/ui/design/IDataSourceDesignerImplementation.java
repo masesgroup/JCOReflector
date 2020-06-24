@@ -105,11 +105,20 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
 
     // Methods section
     
-    public void Configure() throws Throwable {
+    public java.lang.String[] GetViewNames() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Configure");
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetViewNames");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetViewNames = 0; indexGetViewNames < resultingArrayList.size(); indexGetViewNames++ ) {
+				resultingArray[indexGetViewNames] = (java.lang.String)resultingArrayList.get(indexGetViewNames);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -126,20 +135,11 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
         }
     }
 
-    public java.lang.String[] GetViewNames() throws Throwable {
+    public void Configure() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetViewNames");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetViewNames = 0; indexGetViewNames < resultingArrayList.size(); indexGetViewNames++ ) {
-				resultingArray[indexGetViewNames] = (java.lang.String)resultingArrayList.get(indexGetViewNames);
-            }
-            return resultingArray;
+            classInstance.Invoke("Configure");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -139,22 +139,22 @@ public class TransactionProtocol extends NetObject  {
         }
     }
 
-    public static TransactionProtocol getWSAtomicTransactionOctober2004() throws Throwable {
+    public static TransactionProtocol getWSAtomicTransaction11() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSAtomicTransactionOctober2004");
+            JCObject val = (JCObject)classType.Get("WSAtomicTransaction11");
             return new TransactionProtocol(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TransactionProtocol getWSAtomicTransaction11() throws Throwable {
+    public static TransactionProtocol getWSAtomicTransactionOctober2004() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSAtomicTransaction11");
+            JCObject val = (JCObject)classType.Get("WSAtomicTransactionOctober2004");
             return new TransactionProtocol(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

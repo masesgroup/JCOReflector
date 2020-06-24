@@ -116,31 +116,21 @@ public class SecurityTokenTypes extends NetObject  {
     
     // Properties section
     
-    public static java.lang.String getUserName() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Get("UserName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String getX509Certificate() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Get("X509Certificate");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static java.lang.String getKerberos() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Get("Kerberos");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String getRsa() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Get("Rsa");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,11 +146,21 @@ public class SecurityTokenTypes extends NetObject  {
         }
     }
 
-    public static java.lang.String getRsa() throws Throwable {
+    public static java.lang.String getUserName() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Get("Rsa");
+            return (java.lang.String)classType.Get("UserName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String getX509Certificate() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Get("X509Certificate");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

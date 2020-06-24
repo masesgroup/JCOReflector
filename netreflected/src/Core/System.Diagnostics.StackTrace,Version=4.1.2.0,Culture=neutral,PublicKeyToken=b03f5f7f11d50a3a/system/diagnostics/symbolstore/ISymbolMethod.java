@@ -39,12 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.diagnostics.symbolstore.ISymbolDocument;
 import system.diagnostics.symbolstore.ISymbolDocumentImplementation;
+import system.diagnostics.symbolstore.ISymbolNamespace;
+import system.diagnostics.symbolstore.ISymbolNamespaceImplementation;
 import system.diagnostics.symbolstore.ISymbolScope;
 import system.diagnostics.symbolstore.ISymbolScopeImplementation;
 import system.diagnostics.symbolstore.ISymbolVariable;
 import system.diagnostics.symbolstore.ISymbolVariableImplementation;
-import system.diagnostics.symbolstore.ISymbolNamespace;
-import system.diagnostics.symbolstore.ISymbolNamespaceImplementation;
 import system.diagnostics.symbolstore.SymbolToken;
 
 
@@ -98,29 +98,29 @@ public interface ISymbolMethod extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void GetSequencePoints(int[] offsets, ISymbolDocument[] documents, int[] lines, int[] columns, int[] endLines, int[] endColumns) throws Throwable;
-
-    public ISymbolScope GetScope(int offset) throws Throwable;
+    public boolean GetSourceStartEnd(ISymbolDocument[] docs, int[] lines, int[] columns) throws Throwable;
 
     public int GetOffset(ISymbolDocument document, int line, int column) throws Throwable;
 
     public int[] GetRanges(ISymbolDocument document, int line, int column) throws Throwable;
 
-    public ISymbolVariable[] GetParameters() throws Throwable;
-
     public ISymbolNamespace GetNamespace() throws Throwable;
 
-    public boolean GetSourceStartEnd(ISymbolDocument[] docs, int[] lines, int[] columns) throws Throwable;
+    public ISymbolScope GetScope(int offset) throws Throwable;
+
+    public ISymbolVariable[] GetParameters() throws Throwable;
+
+    public void GetSequencePoints(int[] offsets, ISymbolDocument[] documents, int[] lines, int[] columns, int[] endLines, int[] endColumns) throws Throwable;
 
 
     
     // Properties section
     
-    public SymbolToken getToken() throws Throwable;
-
     public int getSequencePointCount() throws Throwable;
 
     public ISymbolScope getRootScope() throws Throwable;
+
+    public SymbolToken getToken() throws Throwable;
 
 
 

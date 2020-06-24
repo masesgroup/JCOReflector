@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.description.MessagePartDescriptionCollection;
 import system.servicemodel.description.MessagePartDescription;
+import system.servicemodel.description.MessagePartDescriptionCollection;
 
 
 /**
@@ -129,17 +129,6 @@ public class MessageBodyDescription extends NetObject  {
     
     // Properties section
     
-    public MessagePartDescriptionCollection getParts() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parts");
-            return new MessagePartDescriptionCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MessagePartDescription getReturnValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -156,6 +145,17 @@ public class MessageBodyDescription extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReturnValue", ReturnValue == null ? null : ReturnValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MessagePartDescriptionCollection getParts() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Parts");
+            return new MessagePartDescriptionCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

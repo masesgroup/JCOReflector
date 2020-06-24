@@ -103,23 +103,23 @@ public class IDataSourceProviderImplementation extends NetObject implements IDat
 
     // Methods section
     
-    public NetObject GetSelectedDataSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSelectedDataSource = (JCObject)classInstance.Invoke("GetSelectedDataSource");
-            return new NetObject(objGetSelectedDataSource);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IEnumerable GetResolvedSelectedDataSource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetResolvedSelectedDataSource = (JCObject)classInstance.Invoke("GetResolvedSelectedDataSource");
             return new IEnumerableImplementation(objGetResolvedSelectedDataSource);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetSelectedDataSource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetSelectedDataSource = (JCObject)classInstance.Invoke("GetSelectedDataSource");
+            return new NetObject(objGetSelectedDataSource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

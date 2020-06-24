@@ -37,14 +37,14 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.UInt32;
 import system.TypedReference;
+import system.UInt32;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.globalization.CultureInfo;
+import system.reflection.FieldAttributes;
 import system.reflection.MemberTypes;
 import system.RuntimeFieldHandle;
-import system.reflection.FieldAttributes;
 
 
 /**
@@ -97,53 +97,33 @@ public interface _FieldInfo extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
-
-    public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
-
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable;
 
     public NetObject GetValue(NetObject obj) throws Throwable;
 
     public NetObject GetValueDirect(TypedReference obj) throws Throwable;
 
+    public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
+
+    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
+
+    public void SetValue(NetObject obj, NetObject value) throws Throwable;
+
     public void SetValue(NetObject obj, NetObject value, BindingFlags invokeAttr, Binder binder, CultureInfo culture) throws Throwable;
 
     public void SetValueDirect(TypedReference obj, NetObject value) throws Throwable;
-
-    public void SetValue(NetObject obj, NetObject value) throws Throwable;
 
 
     
     // Properties section
     
-    public MemberTypes getMemberType() throws Throwable;
-
-    public java.lang.String getName() throws Throwable;
-
-    public NetType getDeclaringType() throws Throwable;
-
-    public NetType getReflectedType() throws Throwable;
-
-    public NetType getFieldType() throws Throwable;
-
-    public RuntimeFieldHandle getFieldHandle() throws Throwable;
-
-    public FieldAttributes getAttributes() throws Throwable;
-
-    public boolean getIsPublic() throws Throwable;
-
-    public boolean getIsPrivate() throws Throwable;
+    public boolean getIsAssembly() throws Throwable;
 
     public boolean getIsFamily() throws Throwable;
-
-    public boolean getIsAssembly() throws Throwable;
 
     public boolean getIsFamilyAndAssembly() throws Throwable;
 
     public boolean getIsFamilyOrAssembly() throws Throwable;
-
-    public boolean getIsStatic() throws Throwable;
 
     public boolean getIsInitOnly() throws Throwable;
 
@@ -151,9 +131,29 @@ public interface _FieldInfo extends IJCOBridgeReflected {
 
     public boolean getIsNotSerialized() throws Throwable;
 
+    public boolean getIsPinvokeImpl() throws Throwable;
+
+    public boolean getIsPrivate() throws Throwable;
+
+    public boolean getIsPublic() throws Throwable;
+
     public boolean getIsSpecialName() throws Throwable;
 
-    public boolean getIsPinvokeImpl() throws Throwable;
+    public boolean getIsStatic() throws Throwable;
+
+    public FieldAttributes getAttributes() throws Throwable;
+
+    public MemberTypes getMemberType() throws Throwable;
+
+    public RuntimeFieldHandle getFieldHandle() throws Throwable;
+
+    public java.lang.String getName() throws Throwable;
+
+    public NetType getDeclaringType() throws Throwable;
+
+    public NetType getFieldType() throws Throwable;
+
+    public NetType getReflectedType() throws Throwable;
 
 
 

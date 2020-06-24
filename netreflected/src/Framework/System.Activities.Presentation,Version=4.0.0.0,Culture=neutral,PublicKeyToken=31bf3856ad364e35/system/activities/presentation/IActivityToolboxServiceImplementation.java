@@ -113,21 +113,21 @@ public class IActivityToolboxServiceImplementation extends NetObject implements 
         }
     }
 
-    public void RemoveCategory(java.lang.String categoryName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveCategory", categoryName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AddItem(java.lang.String qualifiedTypeName, java.lang.String categoryName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddItem", qualifiedTypeName, categoryName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveCategory(java.lang.String categoryName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveCategory", categoryName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

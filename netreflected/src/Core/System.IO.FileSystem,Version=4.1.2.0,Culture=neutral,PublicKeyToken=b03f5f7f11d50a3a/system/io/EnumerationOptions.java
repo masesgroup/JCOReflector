@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.FileAttributes;
-import system.io.MatchType;
 import system.io.MatchCasing;
+import system.io.MatchType;
 
 
 /**
@@ -130,6 +130,26 @@ public class EnumerationOptions extends NetObject  {
     
     // Properties section
     
+    public boolean getIgnoreInaccessible() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IgnoreInaccessible");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIgnoreInaccessible(boolean IgnoreInaccessible) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IgnoreInaccessible", IgnoreInaccessible);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getRecurseSubdirectories() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -150,21 +170,21 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
-    public boolean getIgnoreInaccessible() throws Throwable {
+    public boolean getReturnSpecialDirectories() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IgnoreInaccessible");
+            return (boolean)classInstance.Get("ReturnSpecialDirectories");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIgnoreInaccessible(boolean IgnoreInaccessible) throws Throwable {
+    public void setReturnSpecialDirectories(boolean ReturnSpecialDirectories) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IgnoreInaccessible", IgnoreInaccessible);
+            classInstance.Set("ReturnSpecialDirectories", ReturnSpecialDirectories);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,27 +231,6 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
-    public MatchType getMatchType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MatchType");
-            return new MatchType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMatchType(MatchType MatchType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MatchType", MatchType == null ? null : MatchType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MatchCasing getMatchCasing() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -253,21 +252,22 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
-    public boolean getReturnSpecialDirectories() throws Throwable {
+    public MatchType getMatchType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("ReturnSpecialDirectories");
+            JCObject val = (JCObject)classInstance.Get("MatchType");
+            return new MatchType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setReturnSpecialDirectories(boolean ReturnSpecialDirectories) throws Throwable {
+    public void setMatchType(MatchType MatchType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ReturnSpecialDirectories", ReturnSpecialDirectories);
+            classInstance.Set("MatchType", MatchType == null ? null : MatchType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.sockets.AddressFamily;
-import system.net.SocketAddress;
 import system.net.EndPoint;
+import system.net.SocketAddress;
 
 
 /**
@@ -136,17 +136,6 @@ public class DnsEndPoint extends NetObject  {
     
     // Methods section
     
-    public SocketAddress Serialize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSerialize = (JCObject)classInstance.Invoke("Serialize");
-            return new SocketAddress(objSerialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EndPoint Create(SocketAddress socketAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -158,15 +147,26 @@ public class DnsEndPoint extends NetObject  {
         }
     }
 
+    public SocketAddress Serialize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSerialize = (JCObject)classInstance.Invoke("Serialize");
+            return new SocketAddress(objSerialize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public java.lang.String getHost() throws Throwable {
+    public int getPort() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Host");
+            return (int)classInstance.Get("Port");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,11 +183,11 @@ public class DnsEndPoint extends NetObject  {
         }
     }
 
-    public int getPort() throws Throwable {
+    public java.lang.String getHost() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Port");
+            return (java.lang.String)classInstance.Get("Host");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

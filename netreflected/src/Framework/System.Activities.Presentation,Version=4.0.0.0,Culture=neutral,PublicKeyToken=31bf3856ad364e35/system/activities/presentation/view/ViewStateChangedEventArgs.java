@@ -139,16 +139,6 @@ public class ViewStateChangedEventArgs extends NetObject  {
         }
     }
 
-    public java.lang.String getKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Key");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject getNewValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,6 +156,16 @@ public class ViewStateChangedEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("OldValue");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Key");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

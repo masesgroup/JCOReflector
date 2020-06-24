@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.activities.rules.RuleValidation;
-import system.workflow.activities.rules.RuleExecution;
 import system.workflow.activities.rules.RuleAction;
+import system.workflow.activities.rules.RuleExecution;
 
 
 /**
@@ -136,22 +136,22 @@ public class RuleHaltAction extends NetObject  {
         }
     }
 
-    public void Execute(RuleExecution context) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Execute", context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public RuleAction Clone() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objClone = (JCObject)classInstance.Invoke("Clone");
             return new RuleAction(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Execute(RuleExecution context) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Execute", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

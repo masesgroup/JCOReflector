@@ -136,22 +136,22 @@ public class ManifestReader extends NetObject  {
         }
     }
 
-    public static Manifest ReadManifest(java.lang.String manifestType, java.lang.String path, boolean preserveStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException, system.NotImplementedException, system.xml.XmlException, system.TypeLoadException, system.io.FileNotFoundException, system.MissingMethodException, system.xml.xpath.XPathException {
+    public static Manifest ReadManifest(java.lang.String manifestType, Stream input, boolean preserveStream) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.xsl.XsltException, system.TypeLoadException, system.threading.ThreadAbortException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException, system.MissingMethodException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objReadManifest = (JCObject)classType.Invoke("ReadManifest", manifestType, path, preserveStream);
+            JCObject objReadManifest = (JCObject)classType.Invoke("ReadManifest", manifestType, input == null ? null : input.getJCOInstance(), preserveStream);
             return new Manifest(objReadManifest);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Manifest ReadManifest(java.lang.String manifestType, Stream input, boolean preserveStream) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.xsl.XsltException, system.TypeLoadException, system.threading.ThreadAbortException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException, system.MissingMethodException, system.xml.xpath.XPathException {
+    public static Manifest ReadManifest(java.lang.String manifestType, java.lang.String path, boolean preserveStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException, system.NotImplementedException, system.xml.XmlException, system.TypeLoadException, system.io.FileNotFoundException, system.MissingMethodException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objReadManifest = (JCObject)classType.Invoke("ReadManifest", manifestType, input == null ? null : input.getJCOInstance(), preserveStream);
+            JCObject objReadManifest = (JCObject)classType.Invoke("ReadManifest", manifestType, path, preserveStream);
             return new Manifest(objReadManifest);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

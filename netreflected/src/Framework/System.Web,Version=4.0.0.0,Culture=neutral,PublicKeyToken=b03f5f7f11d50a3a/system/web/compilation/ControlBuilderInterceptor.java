@@ -39,12 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.ControlBuilder;
-import system.web.ui.TemplateParser;
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
 import system.codedom.CodeCompileUnit;
 import system.codedom.CodeTypeDeclaration;
 import system.codedom.CodeMemberMethod;
+import system.collections.IDictionary;
+import system.collections.IDictionaryImplementation;
+import system.web.ui.TemplateParser;
 
 
 /**
@@ -119,21 +119,21 @@ public class ControlBuilderInterceptor extends NetObject  {
     
     // Methods section
     
-    public void PreControlBuilderInit(ControlBuilder controlBuilder, TemplateParser parser, ControlBuilder parentBuilder, NetType type, java.lang.String tagName, java.lang.String id, IDictionary attributes, IDictionary additionalState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PreControlBuilderInit", controlBuilder == null ? null : controlBuilder.getJCOInstance(), parser == null ? null : parser.getJCOInstance(), parentBuilder == null ? null : parentBuilder.getJCOInstance(), type == null ? null : type.getJCOInstance(), tagName, id, attributes == null ? null : attributes.getJCOInstance(), additionalState == null ? null : additionalState.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void OnProcessGeneratedCode(ControlBuilder controlBuilder, CodeCompileUnit codeCompileUnit, CodeTypeDeclaration baseType, CodeTypeDeclaration derivedType, CodeMemberMethod buildMethod, CodeMemberMethod dataBindingMethod, IDictionary additionalState) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnProcessGeneratedCode", controlBuilder == null ? null : controlBuilder.getJCOInstance(), codeCompileUnit == null ? null : codeCompileUnit.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), derivedType == null ? null : derivedType.getJCOInstance(), buildMethod == null ? null : buildMethod.getJCOInstance(), dataBindingMethod == null ? null : dataBindingMethod.getJCOInstance(), additionalState == null ? null : additionalState.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PreControlBuilderInit(ControlBuilder controlBuilder, TemplateParser parser, ControlBuilder parentBuilder, NetType type, java.lang.String tagName, java.lang.String id, IDictionary attributes, IDictionary additionalState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PreControlBuilderInit", controlBuilder == null ? null : controlBuilder.getJCOInstance(), parser == null ? null : parser.getJCOInstance(), parentBuilder == null ? null : parentBuilder.getJCOInstance(), type == null ? null : type.getJCOInstance(), tagName, id, attributes == null ? null : attributes.getJCOInstance(), additionalState == null ? null : additionalState.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

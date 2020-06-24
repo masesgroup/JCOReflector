@@ -41,29 +41,29 @@ import java.util.ArrayList;
 import system.data.SqlDbType;
 import system.data.sqlclient.SortOrder;
 import system.data.sqltypes.SqlCompareOptions;
+import microsoft.sqlserver.server.SqlMetaData;
 import system.Single;
-import system.DateTime;
-import system.Guid;
+import system.data.sqltypes.SqlBinary;
 import system.data.sqltypes.SqlBoolean;
 import system.data.sqltypes.SqlByte;
+import system.data.sqltypes.SqlBytes;
+import system.data.sqltypes.SqlChars;
+import system.data.sqltypes.SqlDateTime;
+import system.data.sqltypes.SqlDecimal;
+import system.data.sqltypes.SqlDouble;
+import system.data.sqltypes.SqlGuid;
 import system.data.sqltypes.SqlInt16;
 import system.data.sqltypes.SqlInt32;
 import system.data.sqltypes.SqlInt64;
+import system.data.sqltypes.SqlMoney;
 import system.data.sqltypes.SqlSingle;
-import system.data.sqltypes.SqlDouble;
-import system.data.sqltypes.SqlDateTime;
 import system.data.sqltypes.SqlString;
-import system.data.sqltypes.SqlGuid;
 import system.data.sqltypes.SqlXml;
-import system.TimeSpan;
+import system.DateTime;
 import system.DateTimeOffset;
 import system.Decimal;
-import system.data.sqltypes.SqlMoney;
-import system.data.sqltypes.SqlDecimal;
-import system.data.sqltypes.SqlBinary;
-import system.data.sqltypes.SqlChars;
-import system.data.sqltypes.SqlBytes;
-import microsoft.sqlserver.server.SqlMetaData;
+import system.Guid;
+import system.TimeSpan;
 import system.data.DbType;
 
 
@@ -156,6 +156,26 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    public SqlMetaData(java.lang.String name, SqlDbType dbType, byte precision, byte scale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), precision, scale));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlMetaData(java.lang.String name, SqlDbType dbType, byte precision, byte scale, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), precision, scale, useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +191,66 @@ public class SqlMetaData extends NetObject  {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, byte precision, byte scale, long locale, SqlCompareOptions compareOptions, NetType userDefinedType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, microsoft.sqlserver.server.InvalidUdtException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, precision, scale, locale, compareOptions == null ? null : compareOptions.getJCOInstance(), userDefinedType == null ? null : userDefinedType.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, byte precision, byte scale, long localeId, SqlCompareOptions compareOptions, NetType userDefinedType, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.sqlserver.server.InvalidUdtException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, precision, scale, localeId, compareOptions == null ? null : compareOptions.getJCOInstance(), userDefinedType == null ? null : userDefinedType.getJCOInstance(), useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, long locale, SqlCompareOptions compareOptions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, locale, compareOptions == null ? null : compareOptions.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, long locale, SqlCompareOptions compareOptions, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, locale, compareOptions == null ? null : compareOptions.getJCOInstance(), useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlMetaData(java.lang.String name, SqlDbType dbType, java.lang.String database, java.lang.String owningSchema, java.lang.String objectName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), database, owningSchema, objectName));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlMetaData(java.lang.String name, SqlDbType dbType, java.lang.String database, java.lang.String owningSchema, java.lang.String objectName, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), database, owningSchema, objectName, useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,90 +286,88 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
-    public SqlMetaData(java.lang.String name, SqlDbType dbType, byte precision, byte scale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), precision, scale));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlMetaData(java.lang.String name, SqlDbType dbType, byte precision, byte scale, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), precision, scale, useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, long locale, SqlCompareOptions compareOptions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, locale, compareOptions == null ? null : compareOptions.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, long locale, SqlCompareOptions compareOptions, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, locale, compareOptions == null ? null : compareOptions.getJCOInstance(), useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlMetaData(java.lang.String name, SqlDbType dbType, java.lang.String database, java.lang.String owningSchema, java.lang.String objectName, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), database, owningSchema, objectName, useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, byte precision, byte scale, long locale, SqlCompareOptions compareOptions, NetType userDefinedType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, microsoft.sqlserver.server.InvalidUdtException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, precision, scale, locale, compareOptions == null ? null : compareOptions.getJCOInstance(), userDefinedType == null ? null : userDefinedType.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, byte precision, byte scale, long localeId, SqlCompareOptions compareOptions, NetType userDefinedType, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.sqlserver.server.InvalidUdtException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, precision, scale, localeId, compareOptions == null ? null : compareOptions.getJCOInstance(), userDefinedType == null ? null : userDefinedType.getJCOInstance(), useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlMetaData(java.lang.String name, SqlDbType dbType, java.lang.String database, java.lang.String owningSchema, java.lang.String objectName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), database, owningSchema, objectName));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Methods section
     
+    public boolean Adjust(boolean value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Adjust", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte Adjust(byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (byte)classInstance.Invoke("Adjust", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] Adjust(byte[] value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Adjust", (Object)value);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexAdjust = 0; indexAdjust < resultingArrayList.size(); indexAdjust++ ) {
+				resultingArray[indexAdjust] = (byte)resultingArrayList.get(indexAdjust);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public char Adjust(char value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (char)classInstance.Invoke("Adjust", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public char[] Adjust(char[] value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Adjust", (Object)value);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            char[] resultingArray = new char[resultingArrayList.size()];
+            for(int indexAdjust = 0; indexAdjust < resultingArrayList.size(); indexAdjust++ ) {
+				resultingArray[indexAdjust] = (char)resultingArrayList.get(indexAdjust);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double Adjust(double value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Invoke("Adjust", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public short Adjust(short value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -320,6 +398,17 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    public static SqlMetaData InferFromValue(NetObject value, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objInferFromValue = (JCObject)classType.Invoke("InferFromValue", value == null ? null : value.getJCOInstance(), name);
+            return new SqlMetaData(objInferFromValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Single Adjust(Single value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -331,43 +420,12 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
-    public double Adjust(double value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Invoke("Adjust", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String Adjust(java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("Adjust", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime Adjust(DateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public SqlBinary Adjust(SqlBinary value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
-            return new DateTime(objAdjust);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Guid Adjust(Guid value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
-            return new Guid(objAdjust);
+            return new SqlBinary(objAdjust);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,6 +448,72 @@ public class SqlMetaData extends NetObject  {
         try {
             JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
             return new SqlByte(objAdjust);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlBytes Adjust(SqlBytes value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlTypeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            return new SqlBytes(objAdjust);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlChars Adjust(SqlChars value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlTypeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            return new SqlChars(objAdjust);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlDateTime Adjust(SqlDateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            return new SqlDateTime(objAdjust);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlDecimal Adjust(SqlDecimal value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            return new SqlDecimal(objAdjust);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlDouble Adjust(SqlDouble value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            return new SqlDouble(objAdjust);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlGuid Adjust(SqlGuid value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            return new SqlGuid(objAdjust);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,34 +552,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    public SqlMoney Adjust(SqlMoney value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            return new SqlMoney(objAdjust);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SqlSingle Adjust(SqlSingle value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
             return new SqlSingle(objAdjust);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlDouble Adjust(SqlDouble value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
-            return new SqlDouble(objAdjust);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlDateTime Adjust(SqlDateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
-            return new SqlDateTime(objAdjust);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,17 +585,6 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
-    public SqlGuid Adjust(SqlGuid value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
-            return new SqlGuid(objAdjust);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SqlXml Adjust(SqlXml value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -494,12 +596,12 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
-    public TimeSpan Adjust(TimeSpan value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public DateTime Adjust(DateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
-            return new TimeSpan(objAdjust);
+            return new DateTime(objAdjust);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,36 +618,6 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
-    public boolean Adjust(boolean value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Adjust", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte Adjust(byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (byte)classInstance.Invoke("Adjust", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public char Adjust(char value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (char)classInstance.Invoke("Adjust", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Decimal Adjust(Decimal value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -557,56 +629,12 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
-    public SqlMoney Adjust(SqlMoney value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException {
+    public Guid Adjust(Guid value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
-            return new SqlMoney(objAdjust);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlDecimal Adjust(SqlDecimal value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
-            return new SqlDecimal(objAdjust);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlBinary Adjust(SqlBinary value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
-            return new SqlBinary(objAdjust);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlChars Adjust(SqlChars value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlTypeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
-            return new SqlChars(objAdjust);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlBytes Adjust(SqlBytes value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlTypeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
-            return new SqlBytes(objAdjust);
+            return new Guid(objAdjust);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -623,50 +651,22 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
-    public static SqlMetaData InferFromValue(NetObject value, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String Adjust(java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInferFromValue = (JCObject)classType.Invoke("InferFromValue", value == null ? null : value.getJCOInstance(), name);
-            return new SqlMetaData(objInferFromValue);
+            return (java.lang.String)classInstance.Invoke("Adjust", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public byte[] Adjust(byte[] value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public TimeSpan Adjust(TimeSpan value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Adjust", (Object)value);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexAdjust = 0; indexAdjust < resultingArrayList.size(); indexAdjust++ ) {
-				resultingArray[indexAdjust] = (byte)resultingArrayList.get(indexAdjust);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public char[] Adjust(char[] value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Adjust", (Object)value);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            char[] resultingArray = new char[resultingArrayList.size()];
-            for(int indexAdjust = 0; indexAdjust < resultingArrayList.size(); indexAdjust++ ) {
-				resultingArray[indexAdjust] = (char)resultingArrayList.get(indexAdjust);
-            }
-            return resultingArray;
+            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            return new TimeSpan(objAdjust);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -676,28 +676,6 @@ public class SqlMetaData extends NetObject  {
     
     // Properties section
     
-    public SqlCompareOptions getCompareOptions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CompareOptions");
-            return new SqlCompareOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbType getDbType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DbType");
-            return new DbType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsUniqueKey() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -708,31 +686,11 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
-    public long getLocaleId() throws Throwable {
+    public boolean getUseServerDefault() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Get("LocaleId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public long getMaxLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("MaxLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
+            return (boolean)classInstance.Get("UseServerDefault");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -758,22 +716,63 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    public int getSortOrdinal() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("SortOrdinal");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long getLocaleId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Get("LocaleId");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static long getMax() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (long)classType.Get("Max");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long getMaxLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Get("MaxLength");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbType getDbType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DbType");
+            return new DbType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SortOrder getSortOrder() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("SortOrder");
             return new SortOrder(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getSortOrdinal() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("SortOrdinal");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -790,12 +789,22 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
-    public NetType getType() throws Throwable {
+    public SqlCompareOptions getCompareOptions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new NetType(val);
+            JCObject val = (JCObject)classInstance.Get("CompareOptions");
+            return new SqlCompareOptions(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -806,16 +815,6 @@ public class SqlMetaData extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("TypeName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getUseServerDefault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("UseServerDefault");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -851,11 +850,12 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
-    public static long getMax() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetType getType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classType.Get("Max");
+            JCObject val = (JCObject)classInstance.Get("Type");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

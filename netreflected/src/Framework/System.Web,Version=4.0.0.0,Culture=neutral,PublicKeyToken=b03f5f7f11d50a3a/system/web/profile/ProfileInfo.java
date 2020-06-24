@@ -128,11 +128,21 @@ public class ProfileInfo extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getUserName() throws Throwable {
+    public boolean getIsAnonymous() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("UserName");
+            return (boolean)classInstance.Get("IsAnonymous");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getSize() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Size");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,21 +170,11 @@ public class ProfileInfo extends NetObject  {
         }
     }
 
-    public boolean getIsAnonymous() throws Throwable {
+    public java.lang.String getUserName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsAnonymous");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Size");
+            return (java.lang.String)classInstance.Get("UserName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,22 +160,22 @@ public class EndpointAddressMessageFilter extends NetObject  {
     
     // Properties section
     
+    public boolean getIncludeHostNameInComparison() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IncludeHostNameInComparison");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EndpointAddress getAddress() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Address");
             return new EndpointAddress(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIncludeHostNameInComparison() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IncludeHostNameInComparison");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

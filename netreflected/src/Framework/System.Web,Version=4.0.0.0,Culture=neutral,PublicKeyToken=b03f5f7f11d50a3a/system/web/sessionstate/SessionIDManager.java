@@ -134,11 +134,11 @@ public class SessionIDManager extends NetObject  {
         }
     }
 
-    public java.lang.String Encode(java.lang.String id) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException {
+    public java.lang.String CreateSessionID(HttpContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("Encode", id);
+            return (java.lang.String)classInstance.Invoke("CreateSessionID", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,11 +154,11 @@ public class SessionIDManager extends NetObject  {
         }
     }
 
-    public java.lang.String CreateSessionID(HttpContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException {
+    public java.lang.String Encode(java.lang.String id) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("CreateSessionID", context == null ? null : context.getJCOInstance());
+            return (java.lang.String)classInstance.Invoke("Encode", id);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,6 +169,16 @@ public class SessionIDManager extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("GetSessionID", context == null ? null : context.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Initialize() throws Throwable, system.OverflowException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

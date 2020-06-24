@@ -91,13 +91,13 @@ public interface IAdviseSink extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void OnViewChange(int aspect, int index) throws Throwable;
+    public void OnClose() throws Throwable;
 
     public void OnRename(IMoniker moniker) throws Throwable;
 
     public void OnSave() throws Throwable;
 
-    public void OnClose() throws Throwable;
+    public void OnViewChange(int aspect, int index) throws Throwable;
 
 
     

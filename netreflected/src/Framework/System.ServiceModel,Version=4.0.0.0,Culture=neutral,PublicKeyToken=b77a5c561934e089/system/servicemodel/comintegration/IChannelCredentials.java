@@ -89,25 +89,25 @@ public interface IChannelCredentials extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void SetWindowsCredential(java.lang.String domain, java.lang.String userName, java.lang.String password, int impersonationLevel, boolean allowNtlm) throws Throwable;
-
-    public void SetUserNameCredential(java.lang.String userName, java.lang.String password) throws Throwable;
+    public void SetClientCertificateFromFile(java.lang.String fileName, java.lang.String password, java.lang.String keyStorageFlags) throws Throwable;
 
     public void SetClientCertificateFromStore(java.lang.String storeLocation, java.lang.String storeName, java.lang.String findType, NetObject findValue) throws Throwable;
 
     public void SetClientCertificateFromStoreByName(java.lang.String subjectName, java.lang.String storeLocation, java.lang.String storeName) throws Throwable;
 
-    public void SetClientCertificateFromFile(java.lang.String fileName, java.lang.String password, java.lang.String keyStorageFlags) throws Throwable;
+    public void SetDefaultServiceCertificateFromFile(java.lang.String fileName, java.lang.String password, java.lang.String keyStorageFlags) throws Throwable;
 
     public void SetDefaultServiceCertificateFromStore(java.lang.String storeLocation, java.lang.String storeName, java.lang.String findType, NetObject findValue) throws Throwable;
 
     public void SetDefaultServiceCertificateFromStoreByName(java.lang.String subjectName, java.lang.String storeLocation, java.lang.String storeName) throws Throwable;
 
-    public void SetDefaultServiceCertificateFromFile(java.lang.String fileName, java.lang.String password, java.lang.String keyStorageFlags) throws Throwable;
+    public void SetIssuedToken(java.lang.String localIssuerAddres, java.lang.String localIssuerBindingType, java.lang.String localIssuerBinding) throws Throwable;
 
     public void SetServiceCertificateAuthentication(java.lang.String storeLocation, java.lang.String revocationMode, java.lang.String certificationValidationMode) throws Throwable;
 
-    public void SetIssuedToken(java.lang.String localIssuerAddres, java.lang.String localIssuerBindingType, java.lang.String localIssuerBinding) throws Throwable;
+    public void SetUserNameCredential(java.lang.String userName, java.lang.String password) throws Throwable;
+
+    public void SetWindowsCredential(java.lang.String domain, java.lang.String userName, java.lang.String password, int impersonationLevel, boolean allowNtlm) throws Throwable;
 
 
     

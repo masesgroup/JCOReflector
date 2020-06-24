@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.presentation.EditingContext;
-import system.activities.presentation.WorkflowViewElement;
 import system.activities.presentation.model.ModelItem;
 import system.windows.DependencyObject;
+import system.activities.presentation.WorkflowViewElement;
 
 
 /**
@@ -127,23 +127,23 @@ public class WorkflowViewService extends NetObject  {
     
     // Methods section
     
-    public WorkflowViewElement GetViewElement(ModelItem modelItem) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetViewElement = (JCObject)classInstance.Invoke("GetViewElement", modelItem == null ? null : modelItem.getJCOInstance());
-            return new WorkflowViewElement(objGetViewElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ModelItem GetModel(DependencyObject view) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetModel = (JCObject)classInstance.Invoke("GetModel", view == null ? null : view.getJCOInstance());
             return new ModelItem(objGetModel);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WorkflowViewElement GetViewElement(ModelItem modelItem) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetViewElement = (JCObject)classInstance.Invoke("GetViewElement", modelItem == null ? null : modelItem.getJCOInstance());
+            return new WorkflowViewElement(objGetViewElement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

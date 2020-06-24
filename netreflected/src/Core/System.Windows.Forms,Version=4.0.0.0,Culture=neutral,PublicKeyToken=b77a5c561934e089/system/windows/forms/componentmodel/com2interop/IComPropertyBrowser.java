@@ -91,9 +91,9 @@ public interface IComPropertyBrowser extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void DropDownDone() throws Throwable;
-
     public boolean EnsurePendingChangesCommitted() throws Throwable;
+
+    public void DropDownDone() throws Throwable;
 
     public void HandleF4() throws Throwable;
 

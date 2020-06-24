@@ -137,11 +137,11 @@ public class WebApplicationInformation extends NetObject  {
         }
     }
 
-    public java.lang.String getTrustLevel() throws Throwable {
+    public java.lang.String getApplicationPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("TrustLevel");
+            return (java.lang.String)classInstance.Get("ApplicationPath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,21 +157,21 @@ public class WebApplicationInformation extends NetObject  {
         }
     }
 
-    public java.lang.String getApplicationPath() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ApplicationPath");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getMachineName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("MachineName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getTrustLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("TrustLevel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

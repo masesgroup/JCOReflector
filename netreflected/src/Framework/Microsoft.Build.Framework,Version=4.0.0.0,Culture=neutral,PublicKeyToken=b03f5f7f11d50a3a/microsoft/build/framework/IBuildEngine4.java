@@ -37,14 +37,14 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import microsoft.build.framework.RegisteredTaskObjectLifetime;
-import microsoft.build.framework.BuildEngineResult;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
-import microsoft.build.framework.BuildErrorEventArgs;
-import microsoft.build.framework.BuildWarningEventArgs;
-import microsoft.build.framework.BuildMessageEventArgs;
+import microsoft.build.framework.BuildEngineResult;
+import microsoft.build.framework.RegisteredTaskObjectLifetime;
 import microsoft.build.framework.CustomBuildEventArgs;
+import microsoft.build.framework.BuildErrorEventArgs;
+import microsoft.build.framework.BuildMessageEventArgs;
+import microsoft.build.framework.BuildWarningEventArgs;
 
 
 /**
@@ -97,37 +97,41 @@ public interface IBuildEngine4 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void RegisterTaskObject(NetObject key, NetObject obj, RegisteredTaskObjectLifetime lifetime, boolean allowEarlyCollection) throws Throwable;
-
-    public NetObject GetRegisteredTaskObject(NetObject key, RegisteredTaskObjectLifetime lifetime) throws Throwable;
-
-    public NetObject UnregisterTaskObject(NetObject key, RegisteredTaskObjectLifetime lifetime) throws Throwable;
+    public boolean BuildProjectFile(java.lang.String projectFileName, java.lang.String[] targetNames, IDictionary globalProperties, IDictionary targetOutputs) throws Throwable;
 
     public boolean BuildProjectFile(java.lang.String projectFileName, java.lang.String[] targetNames, IDictionary globalProperties, IDictionary targetOutputs, java.lang.String toolsVersion) throws Throwable;
 
     public boolean BuildProjectFilesInParallel(java.lang.String[] projectFileNames, java.lang.String[] targetNames, IDictionary[] globalProperties, IDictionary[] targetOutputsPerProject, java.lang.String[] toolsVersion, boolean useResultsCache, boolean unloadProjectsOnCompletion) throws Throwable;
 
-    public void LogErrorEvent(BuildErrorEventArgs e) throws Throwable;
+    public NetObject GetRegisteredTaskObject(NetObject key, RegisteredTaskObjectLifetime lifetime) throws Throwable;
 
-    public void LogWarningEvent(BuildWarningEventArgs e) throws Throwable;
-
-    public void LogMessageEvent(BuildMessageEventArgs e) throws Throwable;
+    public NetObject UnregisterTaskObject(NetObject key, RegisteredTaskObjectLifetime lifetime) throws Throwable;
 
     public void LogCustomEvent(CustomBuildEventArgs e) throws Throwable;
 
-    public boolean BuildProjectFile(java.lang.String projectFileName, java.lang.String[] targetNames, IDictionary globalProperties, IDictionary targetOutputs) throws Throwable;
+    public void LogErrorEvent(BuildErrorEventArgs e) throws Throwable;
+
+    public void LogMessageEvent(BuildMessageEventArgs e) throws Throwable;
+
+    public void LogWarningEvent(BuildWarningEventArgs e) throws Throwable;
+
+    public void Reacquire() throws Throwable;
+
+    public void RegisterTaskObject(NetObject key, NetObject obj, RegisteredTaskObjectLifetime lifetime, boolean allowEarlyCollection) throws Throwable;
+
+    public void Yield() throws Throwable;
 
 
     
     // Properties section
     
-    public boolean getIsRunningMultipleNodes() throws Throwable;
-
     public boolean getContinueOnError() throws Throwable;
 
-    public int getLineNumberOfTaskNode() throws Throwable;
+    public boolean getIsRunningMultipleNodes() throws Throwable;
 
     public int getColumnNumberOfTaskNode() throws Throwable;
+
+    public int getLineNumberOfTaskNode() throws Throwable;
 
     public java.lang.String getProjectFileOfTaskNode() throws Throwable;
 

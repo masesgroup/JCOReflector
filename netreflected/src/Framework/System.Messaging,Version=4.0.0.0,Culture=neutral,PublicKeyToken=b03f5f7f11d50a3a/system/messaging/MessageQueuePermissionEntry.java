@@ -138,6 +138,17 @@ public class MessageQueuePermissionEntry extends NetObject  {
     
     // Properties section
     
+    public MessageQueuePermissionAccess getPermissionAccess() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PermissionAccess");
+            return new MessageQueuePermissionAccess(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getCategory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -173,17 +184,6 @@ public class MessageQueuePermissionEntry extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Path");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MessageQueuePermissionAccess getPermissionAccess() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PermissionAccess");
-            return new MessageQueuePermissionAccess(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

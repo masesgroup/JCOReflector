@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.channels.Message;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.servicemodel.channels.Message;
 import system.AsyncCallback;
 
 
@@ -107,17 +107,6 @@ public class IMetadataExchangeImplementation extends NetObject implements IMetad
 
     // Methods section
     
-    public Message Get(Message request) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGet = (JCObject)classInstance.Invoke("Get", request == null ? null : request.getJCOInstance());
-            return new Message(objGet);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IAsyncResult BeginGet(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -135,6 +124,17 @@ public class IMetadataExchangeImplementation extends NetObject implements IMetad
         try {
             JCObject objEndGet = (JCObject)classInstance.Invoke("EndGet", result == null ? null : result.getJCOInstance());
             return new Message(objEndGet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message Get(Message request) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGet = (JCObject)classInstance.Invoke("Get", request == null ? null : request.getJCOInstance());
+            return new Message(objGet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

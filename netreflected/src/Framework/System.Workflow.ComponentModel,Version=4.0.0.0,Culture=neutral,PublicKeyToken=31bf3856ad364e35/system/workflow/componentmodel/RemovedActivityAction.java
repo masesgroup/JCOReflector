@@ -159,6 +159,26 @@ public class RemovedActivityAction extends NetObject  {
         }
     }
 
+    public java.lang.String getOwnerActivityDottedPath() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("OwnerActivityDottedPath");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setOwnerActivityDottedPath(java.lang.String OwnerActivityDottedPath) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("OwnerActivityDottedPath", OwnerActivityDottedPath);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Activity getOriginalRemovedActivity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -175,26 +195,6 @@ public class RemovedActivityAction extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginalRemovedActivity", OriginalRemovedActivity == null ? null : OriginalRemovedActivity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getOwnerActivityDottedPath() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("OwnerActivityDottedPath");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOwnerActivityDottedPath(java.lang.String OwnerActivityDottedPath) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("OwnerActivityDottedPath", OwnerActivityDottedPath);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

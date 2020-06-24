@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.channels.MessageBuffer;
 import system.servicemodel.channels.Message;
+import system.servicemodel.channels.MessageBuffer;
 
 
 /**
@@ -114,21 +114,21 @@ public class MessageFilter extends NetObject  {
     
     // Methods section
     
-    public boolean Match(MessageBuffer buffer) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", buffer == null ? null : buffer.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Match(Message message) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Match", message == null ? null : message.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Match(MessageBuffer buffer) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Match", buffer == null ? null : buffer.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

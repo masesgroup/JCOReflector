@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.componentmodel.design.data.DesignerDataSchemaClass;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
-import system.componentmodel.design.data.DesignerDataSchemaClass;
 
 
 /**
@@ -92,9 +92,9 @@ public interface IDesignerDataSchema extends IJCOBridgeReflected {
 
     // Methods section
     
-    public ICollection GetSchemaItems(DesignerDataSchemaClass schemaClass) throws Throwable;
-
     public boolean SupportsSchemaClass(DesignerDataSchemaClass schemaClass) throws Throwable;
+
+    public ICollection GetSchemaItems(DesignerDataSchemaClass schemaClass) throws Throwable;
 
 
     

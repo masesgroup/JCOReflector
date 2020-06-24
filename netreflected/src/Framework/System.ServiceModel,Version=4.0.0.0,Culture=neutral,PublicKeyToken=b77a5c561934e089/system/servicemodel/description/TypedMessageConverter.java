@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.description.TypedMessageConverter;
-import system.servicemodel.XmlSerializerFormatAttribute;
-import system.servicemodel.DataContractFormatAttribute;
 import system.servicemodel.channels.Message;
 import system.servicemodel.channels.MessageVersion;
+import system.servicemodel.description.TypedMessageConverter;
+import system.servicemodel.DataContractFormatAttribute;
+import system.servicemodel.XmlSerializerFormatAttribute;
 
 
 /**
@@ -117,67 +117,12 @@ public class TypedMessageConverter extends NetObject  {
     
     // Methods section
     
-    public static TypedMessageConverter Create(NetType messageContract, java.lang.String action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetObject FromMessage(Message message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action);
-            return new TypedMessageConverter(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, defaultNamespace);
-            return new TypedMessageConverter(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, XmlSerializerFormatAttribute formatterAttribute) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
-            return new TypedMessageConverter(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, DataContractFormatAttribute formatterAttribute) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
-            return new TypedMessageConverter(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, java.lang.String defaultNamespace, XmlSerializerFormatAttribute formatterAttribute) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, defaultNamespace, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
-            return new TypedMessageConverter(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, java.lang.String defaultNamespace, DataContractFormatAttribute formatterAttribute) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, defaultNamespace, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
-            return new TypedMessageConverter(objCreate);
+            JCObject objFromMessage = (JCObject)classInstance.Invoke("FromMessage", message == null ? null : message.getJCOInstance());
+            return new NetObject(objFromMessage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,12 +150,67 @@ public class TypedMessageConverter extends NetObject  {
         }
     }
 
-    public NetObject FromMessage(Message message) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TypedMessageConverter Create(NetType messageContract, java.lang.String action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromMessage = (JCObject)classInstance.Invoke("FromMessage", message == null ? null : message.getJCOInstance());
-            return new NetObject(objFromMessage);
+            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action);
+            return new TypedMessageConverter(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, DataContractFormatAttribute formatterAttribute) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
+            return new TypedMessageConverter(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, XmlSerializerFormatAttribute formatterAttribute) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
+            return new TypedMessageConverter(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, defaultNamespace);
+            return new TypedMessageConverter(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, java.lang.String defaultNamespace, DataContractFormatAttribute formatterAttribute) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, defaultNamespace, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
+            return new TypedMessageConverter(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, java.lang.String defaultNamespace, XmlSerializerFormatAttribute formatterAttribute) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, defaultNamespace, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
+            return new TypedMessageConverter(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

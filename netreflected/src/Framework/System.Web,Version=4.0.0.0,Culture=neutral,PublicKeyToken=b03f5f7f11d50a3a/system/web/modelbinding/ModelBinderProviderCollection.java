@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.modelbinding.ModelBinderProvider;
 import system.web.modelbinding.IModelBinder;
 import system.web.modelbinding.IModelBinderImplementation;
 import system.web.modelbinding.ModelBindingExecutionContext;
 import system.web.modelbinding.ModelBindingContext;
-import system.web.modelbinding.ModelBinderProvider;
 
 
 /**
@@ -128,31 +128,31 @@ public class ModelBinderProviderCollection extends NetObject  {
     
     // Methods section
     
-    public void RegisterBinderForGenericType(NetType modelType, IModelBinder modelBinder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+    public boolean Contains(ModelBinderProvider item) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RegisterBinderForGenericType", modelType == null ? null : modelType.getJCOInstance(), modelBinder == null ? null : modelBinder.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void RegisterBinderForGenericType(NetType modelType, NetType modelBinderType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+    public boolean Remove(ModelBinderProvider item) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RegisterBinderForGenericType", modelType == null ? null : modelType.getJCOInstance(), modelBinderType == null ? null : modelBinderType.getJCOInstance());
+            return (boolean)classInstance.Invoke("Remove", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void RegisterBinderForType(NetType modelType, IModelBinder modelBinder) throws Throwable, system.ArgumentNullException {
+    public int IndexOf(ModelBinderProvider item) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RegisterBinderForType", modelType == null ? null : modelType.getJCOInstance(), modelBinder == null ? null : modelBinder.getJCOInstance());
+            return (int)classInstance.Invoke("IndexOf", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,31 +199,41 @@ public class ModelBinderProviderCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(ModelBinderProvider item) throws Throwable {
+    public void Insert(int index, ModelBinderProvider item) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", item == null ? null : item.getJCOInstance());
+            classInstance.Invoke("Insert", index, item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int IndexOf(ModelBinderProvider item) throws Throwable {
+    public void RegisterBinderForGenericType(NetType modelType, NetType modelBinderType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("IndexOf", item == null ? null : item.getJCOInstance());
+            classInstance.Invoke("RegisterBinderForGenericType", modelType == null ? null : modelType.getJCOInstance(), modelBinderType == null ? null : modelBinderType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean Remove(ModelBinderProvider item) throws Throwable, system.NotSupportedException {
+    public void RegisterBinderForGenericType(NetType modelType, IModelBinder modelBinder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Remove", item == null ? null : item.getJCOInstance());
+            classInstance.Invoke("RegisterBinderForGenericType", modelType == null ? null : modelType.getJCOInstance(), modelBinder == null ? null : modelBinder.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RegisterBinderForType(NetType modelType, IModelBinder modelBinder) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterBinderForType", modelType == null ? null : modelType.getJCOInstance(), modelBinder == null ? null : modelBinder.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,16 +244,6 @@ public class ModelBinderProviderCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Insert(int index, ModelBinderProvider item) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Insert", index, item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -116,16 +116,6 @@ public class ProgressEventArgs extends NetObject  {
     
     // Properties section
     
-    public int getUpperBound() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("UpperBound");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getCurrent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,11 +126,11 @@ public class ProgressEventArgs extends NetObject  {
         }
     }
 
-    public java.lang.String getMessage() throws Throwable {
+    public int getUpperBound() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            return (int)classInstance.Get("UpperBound");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,6 +142,16 @@ public class ProgressEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Context");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getMessage() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Message");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

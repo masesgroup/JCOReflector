@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.metadata.edm.BuiltInTypeKind;
-import system.data.metadata.edm.RelationshipType;
+import system.data.metadata.edm.Documentation;
 import system.data.metadata.edm.RelationshipEndMember;
+import system.data.metadata.edm.RelationshipType;
 import system.data.metadata.edm.StructuralType;
 import system.data.metadata.edm.TypeUsage;
-import system.data.metadata.edm.Documentation;
 
 
 /**
@@ -133,43 +133,22 @@ public class NavigationProperty extends NetObject  {
         }
     }
 
-    public RelationshipType getRelationshipType() throws Throwable {
+    public Documentation getDocumentation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RelationshipType");
-            return new RelationshipType(val);
+            JCObject val = (JCObject)classInstance.Get("Documentation");
+            return new Documentation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRelationshipType(RelationshipType RelationshipType) throws Throwable {
+    public void setDocumentation(Documentation Documentation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("RelationshipType", RelationshipType == null ? null : RelationshipType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public RelationshipEndMember getToEndMember() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ToEndMember");
-            return new RelationshipEndMember(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setToEndMember(RelationshipEndMember ToEndMember) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ToEndMember", ToEndMember == null ? null : ToEndMember.getJCOInstance());
+            classInstance.Set("Documentation", Documentation == null ? null : Documentation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,11 +175,43 @@ public class NavigationProperty extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
+    public RelationshipEndMember getToEndMember() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            JCObject val = (JCObject)classInstance.Get("ToEndMember");
+            return new RelationshipEndMember(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setToEndMember(RelationshipEndMember ToEndMember) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ToEndMember", ToEndMember == null ? null : ToEndMember.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RelationshipType getRelationshipType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RelationshipType");
+            return new RelationshipType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRelationshipType(RelationshipType RelationshipType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RelationshipType", RelationshipType == null ? null : RelationshipType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,22 +239,11 @@ public class NavigationProperty extends NetObject  {
         }
     }
 
-    public Documentation getDocumentation() throws Throwable {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Documentation");
-            return new Documentation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDocumentation(Documentation Documentation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Documentation", Documentation == null ? null : Documentation.getJCOInstance());
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

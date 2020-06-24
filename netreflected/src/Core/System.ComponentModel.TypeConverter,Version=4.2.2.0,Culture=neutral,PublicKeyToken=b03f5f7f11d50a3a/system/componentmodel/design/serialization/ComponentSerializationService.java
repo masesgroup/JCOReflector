@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.design.serialization.SerializationStore;
-import system.io.Stream;
-import system.componentmodel.MemberDescriptor;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.componentmodel.design.serialization.SerializationStore;
 import system.componentmodel.IContainer;
 import system.componentmodel.IContainerImplementation;
+import system.io.Stream;
+import system.componentmodel.MemberDescriptor;
 
 
 /**
@@ -119,6 +119,28 @@ public class ComponentSerializationService extends NetObject  {
     
     // Methods section
     
+    public ICollection Deserialize(SerializationStore store) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", store == null ? null : store.getJCOInstance());
+            return new ICollectionImplementation(objDeserialize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection Deserialize(SerializationStore store, IContainer container) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance());
+            return new ICollectionImplementation(objDeserialize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SerializationStore CreateStore() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,6 +158,36 @@ public class ComponentSerializationService extends NetObject  {
         try {
             JCObject objLoadStore = (JCObject)classInstance.Invoke("LoadStore", stream == null ? null : stream.getJCOInstance());
             return new SerializationStore(objLoadStore);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DeserializeTo(SerializationStore store, IContainer container) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DeserializeTo", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DeserializeTo(SerializationStore store, IContainer container, boolean validateRecycledTypes) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DeserializeTo", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance(), validateRecycledTypes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DeserializeTo(SerializationStore store, IContainer container, boolean validateRecycledTypes, boolean applyDefaults) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DeserializeTo", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance(), validateRecycledTypes, applyDefaults);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,58 +228,6 @@ public class ComponentSerializationService extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SerializeMemberAbsolute", store == null ? null : store.getJCOInstance(), owningObject == null ? null : owningObject.getJCOInstance(), member == null ? null : member.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ICollection Deserialize(SerializationStore store) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", store == null ? null : store.getJCOInstance());
-            return new ICollectionImplementation(objDeserialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ICollection Deserialize(SerializationStore store, IContainer container) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance());
-            return new ICollectionImplementation(objDeserialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DeserializeTo(SerializationStore store, IContainer container, boolean validateRecycledTypes, boolean applyDefaults) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DeserializeTo", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance(), validateRecycledTypes, applyDefaults);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DeserializeTo(SerializationStore store, IContainer container) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DeserializeTo", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DeserializeTo(SerializationStore store, IContainer container, boolean validateRecycledTypes) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DeserializeTo", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance(), validateRecycledTypes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

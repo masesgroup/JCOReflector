@@ -117,6 +117,17 @@ public class FontStyles extends NetObject  {
     
     // Properties section
     
+    public static FontStyle getItalic() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Italic");
+            return new FontStyle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static FontStyle getNormal() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -133,17 +144,6 @@ public class FontStyles extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject val = (JCObject)classType.Get("Oblique");
-            return new FontStyle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static FontStyle getItalic() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Italic");
             return new FontStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

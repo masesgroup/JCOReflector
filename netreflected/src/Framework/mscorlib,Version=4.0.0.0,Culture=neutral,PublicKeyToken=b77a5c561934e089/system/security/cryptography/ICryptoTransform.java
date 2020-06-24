@@ -89,9 +89,9 @@ public interface ICryptoTransform extends IJCOBridgeReflected {
 
     // Methods section
     
-    public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) throws Throwable;
-
     public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) throws Throwable;
+
+    public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) throws Throwable;
 
     public void Dispose() throws Throwable;
 
@@ -99,13 +99,13 @@ public interface ICryptoTransform extends IJCOBridgeReflected {
     
     // Properties section
     
-    public int getInputBlockSize() throws Throwable;
-
-    public int getOutputBlockSize() throws Throwable;
+    public boolean getCanReuseTransform() throws Throwable;
 
     public boolean getCanTransformMultipleBlocks() throws Throwable;
 
-    public boolean getCanReuseTransform() throws Throwable;
+    public int getInputBlockSize() throws Throwable;
+
+    public int getOutputBlockSize() throws Throwable;
 
 
 

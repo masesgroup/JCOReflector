@@ -94,17 +94,17 @@ public interface IRegistrationServices extends IJCOBridgeReflected {
     
     public boolean RegisterAssembly(Assembly assembly, AssemblyRegistrationFlags flags) throws Throwable;
 
-    public boolean UnregisterAssembly(Assembly assembly) throws Throwable;
-
-    public NetType[] GetRegistrableTypesInAssembly(Assembly assembly) throws Throwable;
-
-    public java.lang.String GetProgIdForType(NetType type) throws Throwable;
-
-    public Guid GetManagedCategoryGuid() throws Throwable;
+    public boolean TypeRepresentsComType(NetType type) throws Throwable;
 
     public boolean TypeRequiresRegistration(NetType type) throws Throwable;
 
-    public boolean TypeRepresentsComType(NetType type) throws Throwable;
+    public boolean UnregisterAssembly(Assembly assembly) throws Throwable;
+
+    public Guid GetManagedCategoryGuid() throws Throwable;
+
+    public java.lang.String GetProgIdForType(NetType type) throws Throwable;
+
+    public NetType[] GetRegistrableTypesInAssembly(Assembly assembly) throws Throwable;
 
 
     

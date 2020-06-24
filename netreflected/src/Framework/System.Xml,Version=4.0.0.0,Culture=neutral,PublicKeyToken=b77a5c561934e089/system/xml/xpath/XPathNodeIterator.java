@@ -114,6 +114,16 @@ public class XPathNodeIterator extends NetObject  {
     
     // Methods section
     
+    public boolean MoveNext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("MoveNext");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XPathNodeIterator Clone() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -125,26 +135,15 @@ public class XPathNodeIterator extends NetObject  {
         }
     }
 
-    public boolean MoveNext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("MoveNext");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public XPathNavigator getCurrent() throws Throwable {
+    public int getCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Current");
-            return new XPathNavigator(val);
+            return (int)classInstance.Get("Count");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,11 +159,12 @@ public class XPathNodeIterator extends NetObject  {
         }
     }
 
-    public int getCount() throws Throwable {
+    public XPathNavigator getCurrent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Count");
+            JCObject val = (JCObject)classInstance.Get("Current");
+            return new XPathNavigator(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

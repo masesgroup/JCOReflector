@@ -117,11 +117,11 @@ public class PersonalizationStateInfo extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getPath() throws Throwable {
+    public int getSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            return (int)classInstance.Get("Size");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -138,11 +138,11 @@ public class PersonalizationStateInfo extends NetObject  {
         }
     }
 
-    public int getSize() throws Throwable {
+    public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Size");
+            return (java.lang.String)classInstance.Get("Path");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

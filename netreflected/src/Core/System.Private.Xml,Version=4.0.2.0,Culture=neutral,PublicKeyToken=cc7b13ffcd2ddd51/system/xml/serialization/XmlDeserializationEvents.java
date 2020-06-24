@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.serialization.XmlNodeEventHandler;
+import system.xml.serialization.UnreferencedObjectEventHandler;
 import system.xml.serialization.XmlAttributeEventHandler;
 import system.xml.serialization.XmlElementEventHandler;
-import system.xml.serialization.UnreferencedObjectEventHandler;
+import system.xml.serialization.XmlNodeEventHandler;
 
 
 /**
@@ -120,21 +120,21 @@ public class XmlDeserializationEvents extends NetObject  {
     
     // Properties section
     
-    public XmlNodeEventHandler getOnUnknownNode() throws Throwable {
+    public UnreferencedObjectEventHandler getOnUnreferencedObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (XmlNodeEventHandler)classInstance.Get("OnUnknownNode");
+            return (UnreferencedObjectEventHandler)classInstance.Get("OnUnreferencedObject");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setOnUnknownNode(XmlNodeEventHandler OnUnknownNode) throws Throwable {
+    public void setOnUnreferencedObject(UnreferencedObjectEventHandler OnUnreferencedObject) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("OnUnknownNode", OnUnknownNode);
+            classInstance.Set("OnUnreferencedObject", OnUnreferencedObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,21 +180,21 @@ public class XmlDeserializationEvents extends NetObject  {
         }
     }
 
-    public UnreferencedObjectEventHandler getOnUnreferencedObject() throws Throwable {
+    public XmlNodeEventHandler getOnUnknownNode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (UnreferencedObjectEventHandler)classInstance.Get("OnUnreferencedObject");
+            return (XmlNodeEventHandler)classInstance.Get("OnUnknownNode");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setOnUnreferencedObject(UnreferencedObjectEventHandler OnUnreferencedObject) throws Throwable {
+    public void setOnUnknownNode(XmlNodeEventHandler OnUnknownNode) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("OnUnreferencedObject", OnUnreferencedObject);
+            classInstance.Set("OnUnknownNode", OnUnknownNode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

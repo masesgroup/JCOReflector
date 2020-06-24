@@ -38,34 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import microsoft.jscript.vsa.IJSVsaEngine;
-import microsoft.jscript.vsa.IJSVsaEngineImplementation;
-import system.AppDomain;
+import microsoft.jscript.ArrayConstructor;
 import microsoft.jscript.GlobalScope;
 import system.RuntimeTypeHandle;
-import system.reflection.Assembly;
-import microsoft.jscript.vsa.IJSVsaItem;
-import microsoft.jscript.vsa.IJSVsaItemImplementation;
-import system.reflection.Module;
-import microsoft.jscript.ArrayConstructor;
+import microsoft.jscript.IVsaScriptScope;
+import microsoft.jscript.IVsaScriptScopeImplementation;
 import microsoft.jscript.ObjectConstructor;
 import microsoft.jscript.RegExpConstructor;
 import microsoft.jscript.ScriptObject;
-import microsoft.jscript.IMessageReceiver;
-import microsoft.jscript.IMessageReceiverImplementation;
+import microsoft.jscript.vsa.IJSVsaEngine;
+import microsoft.jscript.vsa.IJSVsaEngineImplementation;
+import system.AppDomain;
+import microsoft.jscript.vsa.IJSVsaItem;
+import microsoft.jscript.vsa.IJSVsaItemImplementation;
 import microsoft.jscript.vsa.VsaEngine;
-import microsoft.jscript.IVsaScriptScope;
-import microsoft.jscript.IVsaScriptScopeImplementation;
+import system.reflection.Assembly;
+import system.reflection.Module;
 import microsoft.jscript.vsa.IJSVsaSite;
 import microsoft.jscript.vsa.IJSVsaSiteImplementation;
 import microsoft.jscript.vsa.IJSVsaPersistSite;
 import microsoft.jscript.vsa.IJSVsaPersistSiteImplementation;
+import microsoft.jscript.IMessageReceiver;
+import microsoft.jscript.IMessageReceiverImplementation;
 import microsoft.jscript.LenientGlobalObject;
+import microsoft.jscript.vsa.IJSVsaItems;
+import microsoft.jscript.vsa.IJSVsaItemsImplementation;
 import system._AppDomain;
 import system._AppDomainImplementation;
 import system.security.policy.Evidence;
-import microsoft.jscript.vsa.IJSVsaItems;
-import microsoft.jscript.vsa.IJSVsaItemsImplementation;
 
 
 /**
@@ -161,12 +161,11 @@ public class VsaEngine extends NetObject  {
     
     // Methods section
     
-    public IJSVsaEngine Clone(AppDomain domain) throws Throwable, system.NotImplementedException {
+    public boolean Compile() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone", domain == null ? null : domain.getJCOInstance());
-            return new IJSVsaEngineImplementation(objClone);
+            return (boolean)classInstance.Invoke("Compile");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,11 +181,43 @@ public class VsaEngine extends NetObject  {
         }
     }
 
-    public void ConnectEvents() throws Throwable {
+    public boolean IsValidIdentifier(java.lang.String ident) throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, microsoft.jscript.EndOfFile, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException, system.FormatException, system.OverflowException, system.ArithmeticException, microsoft.jscript.JScriptException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ConnectEvents");
+            return (boolean)classInstance.Invoke("IsValidIdentifier", ident);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetItemCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetItemCount");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ArrayConstructor GetOriginalArrayConstructor() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetOriginalArrayConstructor = (JCObject)classInstance.Invoke("GetOriginalArrayConstructor");
+            return new ArrayConstructor(objGetOriginalArrayConstructor);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static GlobalScope CreateEngineAndGetGlobalScope(boolean fast, java.lang.String[] assemblyNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateEngineAndGetGlobalScope = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScope", fast, assemblyNames);
+            return new GlobalScope(objCreateEngineAndGetGlobalScope);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,54 +234,12 @@ public class VsaEngine extends NetObject  {
         }
     }
 
-    public void DisconnectEvents() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static GlobalScope CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace(boolean fast, java.lang.String[] assemblyNames, RuntimeTypeHandle callingTypeHandle, java.lang.String rootNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("DisconnectEvents");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Assembly GetAssembly() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetAssembly = (JCObject)classInstance.Invoke("GetAssembly");
-            return new Assembly(objGetAssembly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IJSVsaItem GetItem(java.lang.String itemName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", itemName);
-            return new IJSVsaItemImplementation(objGetItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IJSVsaItem GetItemAtIndex(int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetItemAtIndex = (JCObject)classInstance.Invoke("GetItemAtIndex", index);
-            return new IJSVsaItemImplementation(objGetItemAtIndex);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetItemCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetItemCount");
+            JCObject objCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace", fast, assemblyNames, callingTypeHandle == null ? null : callingTypeHandle.getJCOInstance(), rootNamespace);
+            return new GlobalScope(objCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,23 +256,12 @@ public class VsaEngine extends NetObject  {
         }
     }
 
-    public Module GetModule() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, microsoft.jscript.EndOfFile, system.TypeLoadException {
+    public IVsaScriptScope GetGlobalScope() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetModule = (JCObject)classInstance.Invoke("GetModule");
-            return new Module(objGetModule);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ArrayConstructor GetOriginalArrayConstructor() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetOriginalArrayConstructor = (JCObject)classInstance.Invoke("GetOriginalArrayConstructor");
-            return new ArrayConstructor(objGetOriginalArrayConstructor);
+            JCObject objGetGlobalScope = (JCObject)classInstance.Invoke("GetGlobalScope");
+            return new IVsaScriptScopeImplementation(objGetGlobalScope);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,6 +289,166 @@ public class VsaEngine extends NetObject  {
         }
     }
 
+    public ScriptObject PopScriptObject() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objPopScriptObject = (JCObject)classInstance.Invoke("PopScriptObject");
+            return new ScriptObject(objPopScriptObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ScriptObject ScriptObjectStackTop() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objScriptObjectStackTop = (JCObject)classInstance.Invoke("ScriptObjectStackTop");
+            return new ScriptObject(objScriptObjectStackTop);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IJSVsaEngine Clone(AppDomain domain) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objClone = (JCObject)classInstance.Invoke("Clone", domain == null ? null : domain.getJCOInstance());
+            return new IJSVsaEngineImplementation(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IJSVsaItem GetItem(java.lang.String itemName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", itemName);
+            return new IJSVsaItemImplementation(objGetItem);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IJSVsaItem GetItemAtIndex(int index) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetItemAtIndex = (JCObject)classInstance.Invoke("GetItemAtIndex", index);
+            return new IJSVsaItemImplementation(objGetItemAtIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static VsaEngine CreateEngine() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateEngine = (JCObject)classType.Invoke("CreateEngine");
+            return new VsaEngine(objCreateEngine);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static VsaEngine CreateEngineWithType(RuntimeTypeHandle callingTypeHandle) throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateEngineWithType = (JCObject)classType.Invoke("CreateEngineWithType", callingTypeHandle == null ? null : callingTypeHandle.getJCOInstance());
+            return new VsaEngine(objCreateEngineWithType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetOption(java.lang.String name) throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetOption = (JCObject)classInstance.Invoke("GetOption", name);
+            return new NetObject(objGetOption);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly GetAssembly() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetAssembly = (JCObject)classInstance.Invoke("GetAssembly");
+            return new Assembly(objGetAssembly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Module GetModule() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, microsoft.jscript.EndOfFile, system.TypeLoadException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetModule = (JCObject)classInstance.Invoke("GetModule");
+            return new Module(objGetModule);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Close() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Close");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ConnectEvents() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ConnectEvents");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DisconnectEvents() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DisconnectEvents");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InitNew() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InitNew");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InitVsaEngine(java.lang.String rootMoniker, IJSVsaSite site) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InitVsaEngine", rootMoniker, site == null ? null : site.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Interrupt() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -321,22 +459,11 @@ public class VsaEngine extends NetObject  {
         }
     }
 
-    public boolean IsValidIdentifier(java.lang.String ident) throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, microsoft.jscript.EndOfFile, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException, system.FormatException, system.OverflowException, system.ArithmeticException, microsoft.jscript.JScriptException {
+    public void LoadSourceState(IJSVsaPersistSite site) throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsValidIdentifier", ident);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ScriptObject PopScriptObject() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objPopScriptObject = (JCObject)classInstance.Invoke("PopScriptObject");
-            return new ScriptObject(objPopScriptObject);
+            classInstance.Invoke("LoadSourceState", site == null ? null : site.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,188 +509,11 @@ public class VsaEngine extends NetObject  {
         }
     }
 
-    public void RunEmpty() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RunEmpty");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Run(AppDomain domain) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Run", domain == null ? null : domain.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ScriptObject ScriptObjectStackTop() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objScriptObjectStackTop = (JCObject)classInstance.Invoke("ScriptObjectStackTop");
-            return new ScriptObject(objScriptObjectStackTop);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetOutputStream(IMessageReceiver output) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetOutputStream", output == null ? null : output.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static GlobalScope CreateEngineAndGetGlobalScope(boolean fast, java.lang.String[] assemblyNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateEngineAndGetGlobalScope = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScope", fast, assemblyNames);
-            return new GlobalScope(objCreateEngineAndGetGlobalScope);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static GlobalScope CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace(boolean fast, java.lang.String[] assemblyNames, RuntimeTypeHandle callingTypeHandle, java.lang.String rootNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace", fast, assemblyNames, callingTypeHandle == null ? null : callingTypeHandle.getJCOInstance(), rootNamespace);
-            return new GlobalScope(objCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static VsaEngine CreateEngine() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateEngine = (JCObject)classType.Invoke("CreateEngine");
-            return new VsaEngine(objCreateEngine);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static VsaEngine CreateEngineWithType(RuntimeTypeHandle callingTypeHandle) throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateEngineWithType = (JCObject)classType.Invoke("CreateEngineWithType", callingTypeHandle == null ? null : callingTypeHandle.getJCOInstance());
-            return new VsaEngine(objCreateEngineWithType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IVsaScriptScope GetGlobalScope() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetGlobalScope = (JCObject)classInstance.Invoke("GetGlobalScope");
-            return new IVsaScriptScopeImplementation(objGetGlobalScope);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void InitVsaEngine(java.lang.String rootMoniker, IJSVsaSite site) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("InitVsaEngine", rootMoniker, site == null ? null : site.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Close() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Close");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Compile() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Compile");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetOption(java.lang.String name) throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetOption = (JCObject)classInstance.Invoke("GetOption", name);
-            return new NetObject(objGetOption);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void InitNew() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("InitNew");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LoadSourceState(IJSVsaPersistSite site) throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LoadSourceState", site == null ? null : site.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void RevokeCache() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MemberAccessException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RevokeCache");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetOption(java.lang.String name, NetObject value) throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetOption", name, value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SaveSourceState(IJSVsaPersistSite site) throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SaveSourceState", site == null ? null : site.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -579,94 +529,60 @@ public class VsaEngine extends NetObject  {
         }
     }
 
+    public void Run(AppDomain domain) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Run", domain == null ? null : domain.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RunEmpty() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RunEmpty");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SaveSourceState(IJSVsaPersistSite site) throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SaveSourceState", site == null ? null : site.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetOption(java.lang.String name, NetObject value) throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetOption", name, value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetOutputStream(IMessageReceiver output) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetOutputStream", output == null ? null : output.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public LenientGlobalObject getLenientGlobalObject() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LenientGlobalObject");
-            return new LenientGlobalObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public _AppDomain getAppDomain() throws Throwable, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AppDomain");
-            return new _AppDomainImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAppDomain(_AppDomain AppDomain) throws Throwable, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AppDomain", AppDomain == null ? null : AppDomain.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Evidence getEvidence() throws Throwable, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Evidence");
-            return new Evidence(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEvidence(Evidence Evidence) throws Throwable, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Evidence", Evidence == null ? null : Evidence.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getApplicationBase() throws Throwable, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ApplicationBase");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setApplicationBase(java.lang.String ApplicationBase) throws Throwable, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ApplicationBase", ApplicationBase);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Assembly getAssembly() throws Throwable, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Assembly");
-            return new Assembly(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getGenerateDebugInfo() throws Throwable, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -727,27 +643,6 @@ public class VsaEngine extends NetObject  {
         }
     }
 
-    public IJSVsaItems getItems() throws Throwable, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Items");
-            return new IJSVsaItemsImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getLanguage() throws Throwable, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Language");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getLCID() throws Throwable, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -763,6 +658,132 @@ public class VsaEngine extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LCID", LCID);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LenientGlobalObject getLenientGlobalObject() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("LenientGlobalObject");
+            return new LenientGlobalObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IJSVsaItems getItems() throws Throwable, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Items");
+            return new IJSVsaItemsImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IJSVsaSite getSite() throws Throwable, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Site");
+            return new IJSVsaSiteImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSite(IJSVsaSite Site) throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public _AppDomain getAppDomain() throws Throwable, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AppDomain");
+            return new _AppDomainImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAppDomain(_AppDomain AppDomain) throws Throwable, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AppDomain", AppDomain == null ? null : AppDomain.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly getAssembly() throws Throwable, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Assembly");
+            return new Assembly(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Evidence getEvidence() throws Throwable, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Evidence");
+            return new Evidence(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEvidence(Evidence Evidence) throws Throwable, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Evidence", Evidence == null ? null : Evidence.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getApplicationBase() throws Throwable, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ApplicationBase");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setApplicationBase(java.lang.String ApplicationBase) throws Throwable, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ApplicationBase", ApplicationBase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getLanguage() throws Throwable, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Language");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -823,27 +844,6 @@ public class VsaEngine extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootNamespace", RootNamespace);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IJSVsaSite getSite() throws Throwable, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Site");
-            return new IJSVsaSiteImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSite(IJSVsaSite Site) throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

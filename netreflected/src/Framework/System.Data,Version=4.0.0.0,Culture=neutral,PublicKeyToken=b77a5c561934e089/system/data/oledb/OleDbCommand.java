@@ -40,18 +40,20 @@ import java.util.ArrayList;
 // Import section
 import system.data.oledb.OleDbConnection;
 import system.data.oledb.OleDbTransaction;
-import system.data.oledb.OleDbCommand;
-import system.data.oledb.OleDbParameter;
-import system.data.oledb.OleDbDataReader;
+import system.data.common.DbDataReader;
 import system.data.CommandBehavior;
+import system.data.common.DbParameter;
+import system.data.oledb.OleDbCommand;
 import system.runtime.remoting.ObjRef;
-import system.data.CommandType;
-import system.data.oledb.OleDbParameterCollection;
-import system.data.UpdateRowSource;
-import system.componentmodel.ISite;
-import system.componentmodel.ISiteImplementation;
 import system.componentmodel.IContainer;
 import system.componentmodel.IContainerImplementation;
+import system.componentmodel.ISite;
+import system.componentmodel.ISiteImplementation;
+import system.data.CommandType;
+import system.data.common.DbConnection;
+import system.data.common.DbParameterCollection;
+import system.data.common.DbTransaction;
+import system.data.UpdateRowSource;
 import system.EventHandler;
 
 
@@ -168,21 +170,44 @@ public class OleDbCommand extends NetObject  {
     
     // Methods section
     
-    public void ResetCommandTimeout() throws Throwable {
+    public int ExecuteNonQuery() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.AccessViolationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.data.oledb.OleDbException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ResetCommandTimeout");
+            return (int)classInstance.Invoke("ExecuteNonQuery");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Cancel() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.AccessViolationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public DbDataReader ExecuteReader() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Cancel");
+            JCObject objExecuteReader = (JCObject)classInstance.Invoke("ExecuteReader");
+            return new DbDataReader(objExecuteReader);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbDataReader ExecuteReader(CommandBehavior behavior) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objExecuteReader = (JCObject)classInstance.Invoke("ExecuteReader", behavior == null ? null : behavior.getJCOInstance());
+            return new DbDataReader(objExecuteReader);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbParameter CreateParameter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateParameter = (JCObject)classInstance.Invoke("CreateParameter");
+            return new DbParameter(objCreateParameter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,65 +224,12 @@ public class OleDbCommand extends NetObject  {
         }
     }
 
-    public OleDbParameter CreateParameter() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateParameter = (JCObject)classInstance.Invoke("CreateParameter");
-            return new OleDbParameter(objCreateParameter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OleDbDataReader ExecuteReader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.InvalidCastException, system.AccessViolationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.data.oledb.OleDbException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objExecuteReader = (JCObject)classInstance.Invoke("ExecuteReader");
-            return new OleDbDataReader(objExecuteReader);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OleDbDataReader ExecuteReader(CommandBehavior behavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.AccessViolationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.data.oledb.OleDbException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objExecuteReader = (JCObject)classInstance.Invoke("ExecuteReader", behavior == null ? null : behavior.getJCOInstance());
-            return new OleDbDataReader(objExecuteReader);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int ExecuteNonQuery() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.AccessViolationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.data.oledb.OleDbException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("ExecuteNonQuery");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject ExecuteScalar() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.AccessViolationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.data.oledb.OleDbException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objExecuteScalar = (JCObject)classInstance.Invoke("ExecuteScalar");
             return new NetObject(objExecuteScalar);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Prepare() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.AccessViolationException, system.OutOfMemoryException, system.OverflowException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Prepare");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,21 +272,21 @@ public class OleDbCommand extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getCommandText() throws Throwable {
+    public boolean getDesignTimeVisible() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("CommandText");
+            return (boolean)classInstance.Get("DesignTimeVisible");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCommandText(java.lang.String CommandText) throws Throwable {
+    public void setDesignTimeVisible(boolean DesignTimeVisible) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("CommandText", CommandText);
+            classInstance.Set("DesignTimeVisible", DesignTimeVisible);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,6 +307,38 @@ public class OleDbCommand extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandTimeout", CommandTimeout);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IContainer getContainer() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Container");
+            return new IContainerImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ISite getSite() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Site");
+            return new ISiteImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSite(ISite Site) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,18 +365,18 @@ public class OleDbCommand extends NetObject  {
         }
     }
 
-    public OleDbConnection getConnection() throws Throwable {
+    public DbConnection getConnection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Connection");
-            return new OleDbConnection(val);
+            return new DbConnection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setConnection(OleDbConnection Connection) throws Throwable, system.ArgumentException, system.AccessViolationException {
+    public void setConnection(DbConnection Connection) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -382,49 +386,29 @@ public class OleDbCommand extends NetObject  {
         }
     }
 
-    public boolean getDesignTimeVisible() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("DesignTimeVisible");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDesignTimeVisible(boolean DesignTimeVisible) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DesignTimeVisible", DesignTimeVisible);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OleDbParameterCollection getParameters() throws Throwable {
+    public DbParameterCollection getParameters() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Parameters");
-            return new OleDbParameterCollection(val);
+            return new DbParameterCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public OleDbTransaction getTransaction() throws Throwable {
+    public DbTransaction getTransaction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Transaction");
-            return new OleDbTransaction(val);
+            return new DbTransaction(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTransaction(OleDbTransaction Transaction) throws Throwable {
+    public void setTransaction(DbTransaction Transaction) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -455,33 +439,21 @@ public class OleDbCommand extends NetObject  {
         }
     }
 
-    public ISite getSite() throws Throwable {
+    public java.lang.String getCommandText() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Site");
-            return new ISiteImplementation(val);
+            return (java.lang.String)classInstance.Get("CommandText");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSite(ISite Site) throws Throwable {
+    public void setCommandText(java.lang.String CommandText) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IContainer getContainer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Container");
-            return new IContainerImplementation(val);
+            classInstance.Set("CommandText", CommandText);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

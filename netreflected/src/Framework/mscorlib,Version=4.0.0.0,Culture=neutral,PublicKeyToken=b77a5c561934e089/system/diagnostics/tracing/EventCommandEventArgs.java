@@ -113,21 +113,21 @@ public class EventCommandEventArgs extends NetObject  {
     
     // Methods section
     
-    public boolean EnableEvent(int eventId) throws Throwable, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("EnableEvent", eventId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean DisableEvent(int eventId) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("DisableEvent", eventId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean EnableEvent(int eventId) throws Throwable, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("EnableEvent", eventId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

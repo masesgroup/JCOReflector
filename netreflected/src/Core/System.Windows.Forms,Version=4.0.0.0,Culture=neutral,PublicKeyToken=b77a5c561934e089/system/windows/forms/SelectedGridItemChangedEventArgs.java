@@ -128,22 +128,22 @@ public class SelectedGridItemChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public GridItem getOldSelection() throws Throwable {
+    public GridItem getNewSelection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OldSelection");
+            JCObject val = (JCObject)classInstance.Get("NewSelection");
             return new GridItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public GridItem getNewSelection() throws Throwable {
+    public GridItem getOldSelection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NewSelection");
+            JCObject val = (JCObject)classInstance.Get("OldSelection");
             return new GridItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

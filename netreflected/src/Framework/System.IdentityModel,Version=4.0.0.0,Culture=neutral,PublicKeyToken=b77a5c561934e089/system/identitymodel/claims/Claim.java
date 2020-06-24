@@ -129,23 +129,23 @@ public class Claim extends NetObject  {
     
     // Methods section
     
-    public static Claim CreateDnsClaim(java.lang.String dns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateDnsClaim = (JCObject)classType.Invoke("CreateDnsClaim", dns);
-            return new Claim(objCreateDnsClaim);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Claim CreateDenyOnlyWindowsSidClaim(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateDenyOnlyWindowsSidClaim = (JCObject)classType.Invoke("CreateDenyOnlyWindowsSidClaim", sid == null ? null : sid.getJCOInstance());
             return new Claim(objCreateDenyOnlyWindowsSidClaim);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Claim CreateDnsClaim(java.lang.String dns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateDnsClaim = (JCObject)classType.Invoke("CreateDnsClaim", dns);
+            return new Claim(objCreateDnsClaim);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,6 +265,17 @@ public class Claim extends NetObject  {
     
     // Properties section
     
+    public static Claim getSystem() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("System");
+            return new Claim(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject getResource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -291,17 +302,6 @@ public class Claim extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Right");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Claim getSystem() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("System");
-            return new Claim(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

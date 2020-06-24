@@ -92,15 +92,19 @@ public interface ISymbolDocument extends IJCOBridgeReflected {
     
     public byte[] GetCheckSum() throws Throwable;
 
-    public int FindClosestLine(int line) throws Throwable;
-
     public byte[] GetSourceRange(int startLine, int startColumn, int endLine, int endColumn) throws Throwable;
+
+    public int FindClosestLine(int line) throws Throwable;
 
 
     
     // Properties section
     
-    public java.lang.String getURL() throws Throwable;
+    public boolean getHasEmbeddedSource() throws Throwable;
+
+    public int getSourceLength() throws Throwable;
+
+    public Guid getCheckSumAlgorithmId() throws Throwable;
 
     public Guid getDocumentType() throws Throwable;
 
@@ -108,11 +112,7 @@ public interface ISymbolDocument extends IJCOBridgeReflected {
 
     public Guid getLanguageVendor() throws Throwable;
 
-    public Guid getCheckSumAlgorithmId() throws Throwable;
-
-    public boolean getHasEmbeddedSource() throws Throwable;
-
-    public int getSourceLength() throws Throwable;
+    public java.lang.String getURL() throws Throwable;
 
 
 

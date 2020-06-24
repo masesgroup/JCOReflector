@@ -154,12 +154,12 @@ public class BindingContext extends NetObject  {
     
     // Properties section
     
-    public CustomBinding getBinding() throws Throwable {
+    public BindingElementCollection getRemainingBindingElements() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
-            return new CustomBinding(val);
+            JCObject val = (JCObject)classInstance.Get("RemainingBindingElements");
+            return new BindingElementCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,22 +176,12 @@ public class BindingContext extends NetObject  {
         }
     }
 
-    public Uri getListenUriBaseAddress() throws Throwable {
+    public CustomBinding getBinding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ListenUriBaseAddress");
-            return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setListenUriBaseAddress(Uri ListenUriBaseAddress) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ListenUriBaseAddress", ListenUriBaseAddress == null ? null : ListenUriBaseAddress.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("Binding");
+            return new CustomBinding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,12 +228,22 @@ public class BindingContext extends NetObject  {
         }
     }
 
-    public BindingElementCollection getRemainingBindingElements() throws Throwable {
+    public Uri getListenUriBaseAddress() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RemainingBindingElements");
-            return new BindingElementCollection(val);
+            JCObject val = (JCObject)classInstance.Get("ListenUriBaseAddress");
+            return new Uri(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setListenUriBaseAddress(Uri ListenUriBaseAddress) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ListenUriBaseAddress", ListenUriBaseAddress == null ? null : ListenUriBaseAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

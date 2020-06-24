@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.common.DbProviderFactory;
-import system.data.DataRow;
 import system.data.common.DbConnection;
+import system.data.DataRow;
 import system.data.DataTable;
 
 
@@ -116,11 +116,21 @@ public class DbProviderFactories extends NetObject  {
     
     // Methods section
     
-    public static DbProviderFactory GetFactory(java.lang.String providerInvariantName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException {
+    public static boolean UnregisterFactory(java.lang.String providerInvariantName) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetFactory = (JCObject)classType.Invoke("GetFactory", providerInvariantName);
+            return (boolean)classType.Invoke("UnregisterFactory", providerInvariantName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbProviderFactory GetFactory(DbConnection connection) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetFactory = (JCObject)classType.Invoke("GetFactory", connection == null ? null : connection.getJCOInstance());
             return new DbProviderFactory(objGetFactory);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -138,11 +148,11 @@ public class DbProviderFactories extends NetObject  {
         }
     }
 
-    public static DbProviderFactory GetFactory(DbConnection connection) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
+    public static DbProviderFactory GetFactory(java.lang.String providerInvariantName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetFactory = (JCObject)classType.Invoke("GetFactory", connection == null ? null : connection.getJCOInstance());
+            JCObject objGetFactory = (JCObject)classType.Invoke("GetFactory", providerInvariantName);
             return new DbProviderFactory(objGetFactory);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -155,6 +165,16 @@ public class DbProviderFactories extends NetObject  {
         try {
             JCObject objGetFactoryClasses = (JCObject)classType.Invoke("GetFactoryClasses");
             return new DataTable(objGetFactoryClasses);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RegisterFactory(java.lang.String providerInvariantName, DbProviderFactory factory) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RegisterFactory", providerInvariantName, factory == null ? null : factory.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,26 +195,6 @@ public class DbProviderFactories extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterFactory", providerInvariantName, providerFactoryClass == null ? null : providerFactoryClass.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void RegisterFactory(java.lang.String providerInvariantName, DbProviderFactory factory) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("RegisterFactory", providerInvariantName, factory == null ? null : factory.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean UnregisterFactory(java.lang.String providerInvariantName) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("UnregisterFactory", providerInvariantName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

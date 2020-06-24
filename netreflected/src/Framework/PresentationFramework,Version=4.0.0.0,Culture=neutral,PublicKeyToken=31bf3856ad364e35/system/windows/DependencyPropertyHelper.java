@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.ValueSource;
 import system.windows.DependencyObject;
 import system.windows.DependencyProperty;
+import system.windows.ValueSource;
 
 
 /**
@@ -115,22 +115,22 @@ public class DependencyPropertyHelper extends NetObject  {
     
     // Methods section
     
+    public static boolean IsTemplatedValueDynamic(DependencyObject elementInTemplate, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsTemplatedValueDynamic", elementInTemplate == null ? null : elementInTemplate.getJCOInstance(), dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ValueSource GetValueSource(DependencyObject dependencyObject, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetValueSource = (JCObject)classType.Invoke("GetValueSource", dependencyObject == null ? null : dependencyObject.getJCOInstance(), dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
             return new ValueSource(objGetValueSource);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsTemplatedValueDynamic(DependencyObject elementInTemplate, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsTemplatedValueDynamic", elementInTemplate == null ? null : elementInTemplate.getJCOInstance(), dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,11 +160,11 @@ public class MethodBodyBlock extends NetObject  {
     
     // Properties section
     
-    public int getSize() throws Throwable {
+    public boolean getLocalVariablesInitialized() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Size");
+            return (boolean)classInstance.Get("LocalVariablesInitialized");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,11 +180,11 @@ public class MethodBodyBlock extends NetObject  {
         }
     }
 
-    public boolean getLocalVariablesInitialized() throws Throwable {
+    public int getSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("LocalVariablesInitialized");
+            return (int)classInstance.Get("Size");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

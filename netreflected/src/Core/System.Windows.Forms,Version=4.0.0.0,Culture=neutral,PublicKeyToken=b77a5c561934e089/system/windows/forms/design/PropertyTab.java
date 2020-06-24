@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.PropertyDescriptorCollection;
-import system.Attribute;
 import system.componentmodel.ITypeDescriptorContext;
 import system.componentmodel.ITypeDescriptorContextImplementation;
+import system.Attribute;
 import system.drawing.Bitmap;
 
 
@@ -128,22 +128,23 @@ public class PropertyTab extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PropertyDescriptor GetDefaultProperty(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetDefaultProperty = (JCObject)classInstance.Invoke("GetDefaultProperty", component == null ? null : component.getJCOInstance());
             return new PropertyDescriptor(objGetDefaultProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyDescriptorCollection GetProperties(ITypeDescriptorContext context, NetObject component, Attribute[] attributes) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", context == null ? null : context.getJCOInstance(), component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
+            return new PropertyDescriptorCollection(objGetProperties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,12 +172,11 @@ public class PropertyTab extends NetObject  {
         }
     }
 
-    public PropertyDescriptorCollection GetProperties(ITypeDescriptorContext context, NetObject component, Attribute[] attributes) throws Throwable {
+    public void Dispose() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", context == null ? null : context.getJCOInstance(), component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
-            return new PropertyDescriptorCollection(objGetProperties);
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,21 +224,21 @@ public class PropertyTab extends NetObject  {
         }
     }
 
-    public java.lang.String getTabName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("TabName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getHelpKeyword() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("HelpKeyword");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getTabName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("TabName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

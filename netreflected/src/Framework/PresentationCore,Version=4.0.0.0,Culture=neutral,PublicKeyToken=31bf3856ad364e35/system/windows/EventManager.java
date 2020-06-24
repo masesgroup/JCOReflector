@@ -114,6 +114,17 @@ public class EventManager extends NetObject  {
     
     // Methods section
     
+    public static RoutedEvent RegisterRoutedEvent(java.lang.String name, RoutingStrategy routingStrategy, NetType handlerType, NetType ownerType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRegisterRoutedEvent = (JCObject)classType.Invoke("RegisterRoutedEvent", name, routingStrategy == null ? null : routingStrategy.getJCOInstance(), handlerType == null ? null : handlerType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance());
+            return new RoutedEvent(objRegisterRoutedEvent);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static RoutedEvent[] GetRoutedEvents() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -143,17 +154,6 @@ public class EventManager extends NetObject  {
             RoutedEvent[] resultingArray = new RoutedEvent[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static RoutedEvent RegisterRoutedEvent(java.lang.String name, RoutingStrategy routingStrategy, NetType handlerType, NetType ownerType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRegisterRoutedEvent = (JCObject)classType.Invoke("RegisterRoutedEvent", name, routingStrategy == null ? null : routingStrategy.getJCOInstance(), handlerType == null ? null : handlerType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance());
-            return new RoutedEvent(objRegisterRoutedEvent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

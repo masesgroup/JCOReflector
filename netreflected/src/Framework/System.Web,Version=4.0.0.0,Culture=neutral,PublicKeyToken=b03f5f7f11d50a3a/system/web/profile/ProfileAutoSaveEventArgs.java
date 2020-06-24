@@ -128,17 +128,6 @@ public class ProfileAutoSaveEventArgs extends NetObject  {
     
     // Properties section
     
-    public HttpContext getContext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Context");
-            return new HttpContext(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getContinueWithProfileAutoSave() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,6 +143,17 @@ public class ProfileAutoSaveEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContinueWithProfileAutoSave", ContinueWithProfileAutoSave);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HttpContext getContext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Context");
+            return new HttpContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

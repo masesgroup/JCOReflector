@@ -124,12 +124,11 @@ public class SequencePosition extends NetObject  {
     
     // Methods section
     
-    public NetObject GetObject() throws Throwable {
+    public boolean Equals(SequencePosition other) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetObject = (JCObject)classInstance.Invoke("GetObject");
-            return new NetObject(objGetObject);
+            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,11 +144,12 @@ public class SequencePosition extends NetObject  {
         }
     }
 
-    public boolean Equals(SequencePosition other) throws Throwable {
+    public NetObject GetObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            JCObject objGetObject = (JCObject)classInstance.Invoke("GetObject");
+            return new NetObject(objGetObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

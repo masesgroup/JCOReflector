@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Guid;
 import system.DateTime;
+import system.Guid;
 
 
 /**
@@ -118,11 +118,22 @@ public class ReplicationCursor extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getPartitionName() throws Throwable {
+    public long getUpToDatenessUsn() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("PartitionName");
+            return (long)classInstance.Get("UpToDatenessUsn");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DateTime getLastSuccessfulSyncTime() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("LastSuccessfulSyncTime");
+            return new DateTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -139,11 +150,11 @@ public class ReplicationCursor extends NetObject  {
         }
     }
 
-    public long getUpToDatenessUsn() throws Throwable {
+    public java.lang.String getPartitionName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Get("UpToDatenessUsn");
+            return (java.lang.String)classInstance.Get("PartitionName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,17 +165,6 @@ public class ReplicationCursor extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("SourceServer");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getLastSuccessfulSyncTime() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LastSuccessfulSyncTime");
-            return new DateTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

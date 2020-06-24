@@ -112,6 +112,66 @@ public class Operators extends NetObject  {
     
     // Methods section
     
+    public static boolean ConditionalCompareObjectEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ConditionalCompareObjectEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ConditionalCompareObjectGreater(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ConditionalCompareObjectGreater", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ConditionalCompareObjectGreaterEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ConditionalCompareObjectGreaterEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ConditionalCompareObjectLess(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ConditionalCompareObjectLess", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ConditionalCompareObjectLessEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ConditionalCompareObjectLessEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ConditionalCompareObjectNotEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ConditionalCompareObjectNotEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int CompareString(java.lang.String Left, java.lang.String Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -133,23 +193,89 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject SubtractObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+    public static NetObject AndObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSubtractObject = (JCObject)classType.Invoke("SubtractObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
-            return new NetObject(objSubtractObject);
+            JCObject objAndObject = (JCObject)classType.Invoke("AndObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            return new NetObject(objAndObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject MultiplyObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+    public static NetObject CompareObjectEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMultiplyObject = (JCObject)classType.Invoke("MultiplyObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
-            return new NetObject(objMultiplyObject);
+            JCObject objCompareObjectEqual = (JCObject)classType.Invoke("CompareObjectEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            return new NetObject(objCompareObjectEqual);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject CompareObjectGreater(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCompareObjectGreater = (JCObject)classType.Invoke("CompareObjectGreater", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            return new NetObject(objCompareObjectGreater);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject CompareObjectGreaterEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCompareObjectGreaterEqual = (JCObject)classType.Invoke("CompareObjectGreaterEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            return new NetObject(objCompareObjectGreaterEqual);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject CompareObjectLess(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCompareObjectLess = (JCObject)classType.Invoke("CompareObjectLess", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            return new NetObject(objCompareObjectLess);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject CompareObjectLessEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCompareObjectLessEqual = (JCObject)classType.Invoke("CompareObjectLessEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            return new NetObject(objCompareObjectLessEqual);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject CompareObjectNotEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCompareObjectNotEqual = (JCObject)classType.Invoke("CompareObjectNotEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            return new NetObject(objCompareObjectNotEqual);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject ConcatenateObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.ArrayTypeMismatchException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objConcatenateObject = (JCObject)classType.Invoke("ConcatenateObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            return new NetObject(objConcatenateObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,12 +303,12 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject ModObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.DivideByZeroException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+    public static NetObject FallbackInvokeUserDefinedOperator(NetObject vbOp, NetObject[] arguments) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.OverflowException, system.InvalidOperationException, system.IndexOutOfRangeException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objModObject = (JCObject)classType.Invoke("ModObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
-            return new NetObject(objModObject);
+            JCObject objFallbackInvokeUserDefinedOperator = (JCObject)classType.Invoke("FallbackInvokeUserDefinedOperator", vbOp == null ? null : vbOp.getJCOInstance(), toObjectFromArray(arguments));
+            return new NetObject(objFallbackInvokeUserDefinedOperator);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,171 +336,23 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject RightShiftObject(NetObject Operand, NetObject Amount) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.OverflowException {
+    public static NetObject ModObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.DivideByZeroException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRightShiftObject = (JCObject)classType.Invoke("RightShiftObject", Operand == null ? null : Operand.getJCOInstance(), Amount == null ? null : Amount.getJCOInstance());
-            return new NetObject(objRightShiftObject);
+            JCObject objModObject = (JCObject)classType.Invoke("ModObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            return new NetObject(objModObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject ConcatenateObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.ArrayTypeMismatchException, system.OverflowException {
+    public static NetObject MultiplyObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objConcatenateObject = (JCObject)classType.Invoke("ConcatenateObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
-            return new NetObject(objConcatenateObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject FallbackInvokeUserDefinedOperator(NetObject vbOp, NetObject[] arguments) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.OverflowException, system.InvalidOperationException, system.IndexOutOfRangeException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFallbackInvokeUserDefinedOperator = (JCObject)classType.Invoke("FallbackInvokeUserDefinedOperator", vbOp == null ? null : vbOp.getJCOInstance(), toObjectFromArray(arguments));
-            return new NetObject(objFallbackInvokeUserDefinedOperator);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject CompareObjectEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCompareObjectEqual = (JCObject)classType.Invoke("CompareObjectEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
-            return new NetObject(objCompareObjectEqual);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ConditionalCompareObjectEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ConditionalCompareObjectEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject CompareObjectNotEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCompareObjectNotEqual = (JCObject)classType.Invoke("CompareObjectNotEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
-            return new NetObject(objCompareObjectNotEqual);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ConditionalCompareObjectNotEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ConditionalCompareObjectNotEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject CompareObjectLess(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCompareObjectLess = (JCObject)classType.Invoke("CompareObjectLess", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
-            return new NetObject(objCompareObjectLess);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ConditionalCompareObjectLess(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ConditionalCompareObjectLess", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject CompareObjectLessEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCompareObjectLessEqual = (JCObject)classType.Invoke("CompareObjectLessEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
-            return new NetObject(objCompareObjectLessEqual);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ConditionalCompareObjectLessEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ConditionalCompareObjectLessEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject CompareObjectGreaterEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCompareObjectGreaterEqual = (JCObject)classType.Invoke("CompareObjectGreaterEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
-            return new NetObject(objCompareObjectGreaterEqual);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ConditionalCompareObjectGreaterEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ConditionalCompareObjectGreaterEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject CompareObjectGreater(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCompareObjectGreater = (JCObject)classType.Invoke("CompareObjectGreater", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
-            return new NetObject(objCompareObjectGreater);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean ConditionalCompareObjectGreater(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("ConditionalCompareObjectGreater", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject PlusObject(NetObject Operand) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objPlusObject = (JCObject)classType.Invoke("PlusObject", Operand == null ? null : Operand.getJCOInstance());
-            return new NetObject(objPlusObject);
+            JCObject objMultiplyObject = (JCObject)classType.Invoke("MultiplyObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            return new NetObject(objMultiplyObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,23 +380,45 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject AndObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAndObject = (JCObject)classType.Invoke("AndObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
-            return new NetObject(objAndObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static NetObject OrObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objOrObject = (JCObject)classType.Invoke("OrObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
             return new NetObject(objOrObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject PlusObject(NetObject Operand) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objPlusObject = (JCObject)classType.Invoke("PlusObject", Operand == null ? null : Operand.getJCOInstance());
+            return new NetObject(objPlusObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject RightShiftObject(NetObject Operand, NetObject Amount) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRightShiftObject = (JCObject)classType.Invoke("RightShiftObject", Operand == null ? null : Operand.getJCOInstance(), Amount == null ? null : Amount.getJCOInstance());
+            return new NetObject(objRightShiftObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject SubtractObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.NotSupportedException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSubtractObject = (JCObject)classType.Invoke("SubtractObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            return new NetObject(objSubtractObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.xsl.runtime.XmlCollation;
-import system.Decimal;
 import system.DateTime;
+import system.Decimal;
 import system.Array;
 
 
@@ -116,11 +116,11 @@ public class XmlSortKeyAccumulator extends NetObject  {
     
     // Methods section
     
-    public void AddStringSortKey(XmlCollation collation, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
+    public void AddDateTimeSortKey(XmlCollation collation, DateTime value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddStringSortKey", collation == null ? null : collation.getJCOInstance(), value);
+            classInstance.Invoke("AddDateTimeSortKey", collation == null ? null : collation.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -131,6 +131,26 @@ public class XmlSortKeyAccumulator extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddDecimalSortKey", collation == null ? null : collation.getJCOInstance(), value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddDoubleSortKey(XmlCollation collation, double value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddDoubleSortKey", collation == null ? null : collation.getJCOInstance(), value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddEmptySortKey(XmlCollation collation) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddEmptySortKey", collation == null ? null : collation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,31 +176,11 @@ public class XmlSortKeyAccumulator extends NetObject  {
         }
     }
 
-    public void AddDoubleSortKey(XmlCollation collation, double value) throws Throwable {
+    public void AddStringSortKey(XmlCollation collation, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddDoubleSortKey", collation == null ? null : collation.getJCOInstance(), value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddDateTimeSortKey(XmlCollation collation, DateTime value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddDateTimeSortKey", collation == null ? null : collation.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddEmptySortKey(XmlCollation collation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddEmptySortKey", collation == null ? null : collation.getJCOInstance());
+            classInstance.Invoke("AddStringSortKey", collation == null ? null : collation.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

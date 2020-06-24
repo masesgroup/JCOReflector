@@ -131,21 +131,23 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
     
     // Properties section
     
-    public java.lang.String getMessage() throws Throwable {
+    public NetException getInnerException() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            JCObject val = (JCObject)classInstance.Get("InnerException");
+            return new NetException(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getStackTrace() throws Throwable {
+    public MethodBase getTargetSite() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("StackTrace");
+            JCObject val = (JCObject)classInstance.Get("TargetSite");
+            return new MethodBase(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,6 +173,16 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
         }
     }
 
+    public java.lang.String getMessage() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Message");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getSource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -191,23 +203,11 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
         }
     }
 
-    public NetException getInnerException() throws Throwable {
+    public java.lang.String getStackTrace() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("InnerException");
-            return new NetException(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodBase getTargetSite() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TargetSite");
-            return new MethodBase(val);
+            return (java.lang.String)classInstance.Get("StackTrace");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

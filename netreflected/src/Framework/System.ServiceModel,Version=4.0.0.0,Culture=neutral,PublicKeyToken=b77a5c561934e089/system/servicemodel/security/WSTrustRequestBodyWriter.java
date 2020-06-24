@@ -41,9 +41,9 @@ import java.util.ArrayList;
 import system.identitymodel.protocols.wstrust.RequestSecurityToken;
 import system.identitymodel.protocols.wstrust.WSTrustRequestSerializer;
 import system.identitymodel.protocols.wstrust.WSTrustSerializationContext;
-import system.xml.XmlDictionaryWriter;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.xml.XmlDictionaryWriter;
 import system.AsyncCallback;
 import system.servicemodel.channels.BodyWriter;
 
@@ -131,22 +131,23 @@ public class WSTrustRequestBodyWriter extends NetObject  {
     
     // Methods section
     
-    public void WriteBodyContents(XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteBodyContents", writer == null ? null : writer.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IAsyncResult BeginWriteBodyContents(XmlDictionaryWriter writer, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objBeginWriteBodyContents = (JCObject)classInstance.Invoke("BeginWriteBodyContents", writer == null ? null : writer.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
             return new IAsyncResultImplementation(objBeginWriteBodyContents);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BodyWriter CreateBufferedCopy(int maxBufferSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateBufferedCopy = (JCObject)classInstance.Invoke("CreateBufferedCopy", maxBufferSize);
+            return new BodyWriter(objCreateBufferedCopy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,12 +163,11 @@ public class WSTrustRequestBodyWriter extends NetObject  {
         }
     }
 
-    public BodyWriter CreateBufferedCopy(int maxBufferSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public void WriteBodyContents(XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateBufferedCopy = (JCObject)classInstance.Invoke("CreateBufferedCopy", maxBufferSize);
-            return new BodyWriter(objCreateBufferedCopy);
+            classInstance.Invoke("WriteBodyContents", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

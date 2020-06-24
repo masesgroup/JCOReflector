@@ -192,23 +192,22 @@ public class DrawListViewItemEventArgs extends NetObject  {
         }
     }
 
+    public int getItemIndex() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("ItemIndex");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Graphics getGraphics() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Graphics");
             return new Graphics(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ListViewItem getItem() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Item");
-            return new ListViewItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,11 +224,12 @@ public class DrawListViewItemEventArgs extends NetObject  {
         }
     }
 
-    public int getItemIndex() throws Throwable {
+    public ListViewItem getItem() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("ItemIndex");
+            JCObject val = (JCObject)classInstance.Get("Item");
+            return new ListViewItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

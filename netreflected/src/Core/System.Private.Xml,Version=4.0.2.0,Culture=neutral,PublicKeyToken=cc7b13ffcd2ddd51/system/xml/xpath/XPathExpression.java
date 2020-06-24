@@ -41,12 +41,12 @@ import java.util.ArrayList;
 import system.xml.xpath.XPathExpression;
 import system.xml.IXmlNamespaceResolver;
 import system.xml.IXmlNamespaceResolverImplementation;
-import system.xml.XmlNamespaceManager;
 import system.collections.IComparer;
 import system.collections.IComparerImplementation;
 import system.xml.xpath.XmlSortOrder;
 import system.xml.xpath.XmlCaseOrder;
 import system.xml.xpath.XmlDataType;
+import system.xml.XmlNamespaceManager;
 import system.xml.xpath.XPathResultType;
 
 
@@ -122,6 +122,17 @@ public class XPathExpression extends NetObject  {
     
     // Methods section
     
+    public XPathExpression Clone() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            return new XPathExpression(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static XPathExpression Compile(java.lang.String xpath) throws Throwable, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -139,26 +150,6 @@ public class XPathExpression extends NetObject  {
         try {
             JCObject objCompile = (JCObject)classType.Invoke("Compile", xpath, nsResolver == null ? null : nsResolver.getJCOInstance());
             return new XPathExpression(objCompile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetContext(IXmlNamespaceResolver nsResolver) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetContext", nsResolver == null ? null : nsResolver.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetContext(XmlNamespaceManager nsManager) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetContext", nsManager == null ? null : nsManager.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,12 +175,21 @@ public class XPathExpression extends NetObject  {
         }
     }
 
-    public XPathExpression Clone() throws Throwable {
+    public void SetContext(IXmlNamespaceResolver nsResolver) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new XPathExpression(objClone);
+            classInstance.Invoke("SetContext", nsResolver == null ? null : nsResolver.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetContext(XmlNamespaceManager nsManager) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetContext", nsManager == null ? null : nsManager.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

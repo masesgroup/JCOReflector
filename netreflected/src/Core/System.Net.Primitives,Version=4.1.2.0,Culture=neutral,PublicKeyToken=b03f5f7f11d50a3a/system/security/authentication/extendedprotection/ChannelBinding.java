@@ -116,11 +116,11 @@ public class ChannelBinding extends NetObject  {
     
     // Properties section
     
-    public int getSize() throws Throwable {
+    public boolean getIsClosed() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Size");
+            return (boolean)classInstance.Get("IsClosed");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -136,11 +136,11 @@ public class ChannelBinding extends NetObject  {
         }
     }
 
-    public boolean getIsClosed() throws Throwable {
+    public int getSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsClosed");
+            return (int)classInstance.Get("Size");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

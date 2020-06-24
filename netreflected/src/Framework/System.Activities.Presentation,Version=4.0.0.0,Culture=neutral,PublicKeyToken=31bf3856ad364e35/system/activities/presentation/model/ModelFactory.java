@@ -115,11 +115,11 @@ public class ModelFactory extends NetObject  {
     
     // Methods section
     
-    public static ModelItem CreateItem(EditingContext context, NetType itemType, NetObject... arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException {
+    public static ModelItem CreateItem(EditingContext context, NetObject item) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateItem = (JCObject)classType.Invoke("CreateItem", context == null ? null : context.getJCOInstance(), itemType == null ? null : itemType.getJCOInstance(), toObjectFromArray(arguments));
+            JCObject objCreateItem = (JCObject)classType.Invoke("CreateItem", context == null ? null : context.getJCOInstance(), item == null ? null : item.getJCOInstance());
             return new ModelItem(objCreateItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -137,11 +137,11 @@ public class ModelFactory extends NetObject  {
         }
     }
 
-    public static ModelItem CreateItem(EditingContext context, NetObject item) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static ModelItem CreateItem(EditingContext context, NetType itemType, NetObject... arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateItem = (JCObject)classType.Invoke("CreateItem", context == null ? null : context.getJCOInstance(), item == null ? null : item.getJCOInstance());
+            JCObject objCreateItem = (JCObject)classType.Invoke("CreateItem", context == null ? null : context.getJCOInstance(), itemType == null ? null : itemType.getJCOInstance(), toObjectFromArray(arguments));
             return new ModelItem(objCreateItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.TimeSpan;
 import system.runtime.remoting.lifetime.ISponsor;
 import system.runtime.remoting.lifetime.ISponsorImplementation;
-import system.TimeSpan;
 import system.runtime.remoting.lifetime.LeaseState;
 
 
@@ -107,11 +107,12 @@ public class ILeaseImplementation extends NetObject implements ILease {
 
     // Methods section
     
-    public void Register(ISponsor obj, TimeSpan renewalTime) throws Throwable {
+    public TimeSpan Renew(TimeSpan renewalTime) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Register", obj == null ? null : obj.getJCOInstance(), renewalTime == null ? null : renewalTime.getJCOInstance());
+            JCObject objRenew = (JCObject)classInstance.Invoke("Renew", renewalTime == null ? null : renewalTime.getJCOInstance());
+            return new TimeSpan(objRenew);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -127,6 +128,16 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
 
+    public void Register(ISponsor obj, TimeSpan renewalTime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Register", obj == null ? null : obj.getJCOInstance(), renewalTime == null ? null : renewalTime.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Unregister(ISponsor obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -137,21 +148,53 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
 
-    public TimeSpan Renew(TimeSpan renewalTime) throws Throwable {
+
+    
+    // Properties section
+    
+    public LeaseState getCurrentState() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objRenew = (JCObject)classInstance.Invoke("Renew", renewalTime == null ? null : renewalTime.getJCOInstance());
-            return new TimeSpan(objRenew);
+            JCObject val = (JCObject)classInstance.Get("CurrentState");
+            return new LeaseState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public TimeSpan getCurrentLeaseTime() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CurrentLeaseTime");
+            return new TimeSpan(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
-    
-    // Properties section
-    
+    public TimeSpan getInitialLeaseTime() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("InitialLeaseTime");
+            return new TimeSpan(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInitialLeaseTime(TimeSpan InitialLeaseTime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InitialLeaseTime", InitialLeaseTime == null ? null : InitialLeaseTime.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TimeSpan getRenewOnCallTime() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -189,49 +232,6 @@ public class ILeaseImplementation extends NetObject implements ILease {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SponsorshipTimeout", SponsorshipTimeout == null ? null : SponsorshipTimeout.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TimeSpan getInitialLeaseTime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InitialLeaseTime");
-            return new TimeSpan(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInitialLeaseTime(TimeSpan InitialLeaseTime) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InitialLeaseTime", InitialLeaseTime == null ? null : InitialLeaseTime.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TimeSpan getCurrentLeaseTime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CurrentLeaseTime");
-            return new TimeSpan(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LeaseState getCurrentState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CurrentState");
-            return new LeaseState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

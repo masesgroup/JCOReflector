@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.Control;
 import system.web.ui.design.ITemplateEditingFrame;
 import system.web.ui.design.ITemplateEditingFrameImplementation;
 import system.web.ui.design.TemplatedControlDesigner;
 import system.web.ui.webcontrols.Style;
-import system.web.ui.Control;
 
 
 /**
@@ -108,6 +108,16 @@ public class ITemplateEditingServiceImplementation extends NetObject implements 
 
     // Methods section
     
+    public java.lang.String GetContainingTemplateName(Control control) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetContainingTemplateName", control == null ? null : control.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner designer, java.lang.String frameName, java.lang.String[] templateNames) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -125,16 +135,6 @@ public class ITemplateEditingServiceImplementation extends NetObject implements 
         try {
             JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", designer == null ? null : designer.getJCOInstance(), frameName, templateNames, controlStyle == null ? null : controlStyle.getJCOInstance(), toObjectFromArray(templateStyles));
             return new ITemplateEditingFrameImplementation(objCreateFrame);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetContainingTemplateName(Control control) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetContainingTemplateName", control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.TypeDefinitionHandle;
-import system.reflection.metadata.ConstantHandle;
 import system.reflection.metadata.BlobHandle;
+import system.reflection.metadata.ConstantHandle;
 import system.reflection.metadata.CustomAttributeHandleCollection;
-import system.reflection.metadata.StringHandle;
+import system.reflection.metadata.TypeDefinitionHandle;
 import system.reflection.FieldAttributes;
+import system.reflection.metadata.StringHandle;
 
 
 /**
@@ -118,23 +118,11 @@ public class FieldDefinition extends NetObject  {
     
     // Methods section
     
-    public TypeDefinitionHandle GetDeclaringType() throws Throwable, system.BadImageFormatException {
+    public int GetOffset() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetDeclaringType = (JCObject)classInstance.Invoke("GetDeclaringType");
-            return new TypeDefinitionHandle(objGetDeclaringType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ConstantHandle GetDefaultValue() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDefaultValue = (JCObject)classInstance.Invoke("GetDefaultValue");
-            return new ConstantHandle(objGetDefaultValue);
+            return (int)classInstance.Invoke("GetOffset");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,16 +133,6 @@ public class FieldDefinition extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetRelativeVirtualAddress");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetOffset() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetOffset");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,6 +149,17 @@ public class FieldDefinition extends NetObject  {
         }
     }
 
+    public ConstantHandle GetDefaultValue() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDefaultValue = (JCObject)classInstance.Invoke("GetDefaultValue");
+            return new ConstantHandle(objGetDefaultValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CustomAttributeHandleCollection GetCustomAttributes() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -182,21 +171,21 @@ public class FieldDefinition extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public StringHandle getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public TypeDefinitionHandle GetDeclaringType() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
-            return new StringHandle(val);
+            JCObject objGetDeclaringType = (JCObject)classInstance.Invoke("GetDeclaringType");
+            return new TypeDefinitionHandle(objGetDeclaringType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public FieldAttributes getAttributes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -214,6 +203,17 @@ public class FieldDefinition extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Signature");
             return new BlobHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StringHandle getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Name");
+            return new StringHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.identitymodel.protocols.wstrust.RequestSecurityTokenResponse;
 import system.xml.XmlReader;
+import system.identitymodel.protocols.wstrust.RequestSecurityTokenResponse;
 import system.identitymodel.protocols.wstrust.WSTrustSerializationContext;
 import system.xml.XmlWriter;
 
@@ -116,6 +116,27 @@ public class WSTrustResponseSerializer extends NetObject  {
     
     // Methods section
     
+    public boolean CanRead(XmlReader reader) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("CanRead", reader == null ? null : reader.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RequestSecurityTokenResponse CreateInstance() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance");
+            return new RequestSecurityTokenResponse(objCreateInstance);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public RequestSecurityTokenResponse ReadXml(XmlReader reader, WSTrustSerializationContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -132,6 +153,16 @@ public class WSTrustResponseSerializer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadXmlElement", reader == null ? null : reader.getJCOInstance(), requestSecurityTokenResponse == null ? null : requestSecurityTokenResponse.getJCOInstance(), context == null ? null : context.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Validate(RequestSecurityTokenResponse requestSecurityTokenResponse) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Validate", requestSecurityTokenResponse == null ? null : requestSecurityTokenResponse.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,37 +193,6 @@ public class WSTrustResponseSerializer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXmlElement", writer == null ? null : writer.getJCOInstance(), elementName, elementValue == null ? null : elementValue.getJCOInstance(), requestSecurityTokenResponse == null ? null : requestSecurityTokenResponse.getJCOInstance(), context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public RequestSecurityTokenResponse CreateInstance() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance");
-            return new RequestSecurityTokenResponse(objCreateInstance);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Validate(RequestSecurityTokenResponse requestSecurityTokenResponse) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Validate", requestSecurityTokenResponse == null ? null : requestSecurityTokenResponse.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean CanRead(XmlReader reader) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanRead", reader == null ? null : reader.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -123,6 +123,16 @@ public class DeploymentServiceCom extends NetObject  {
     
     // Methods section
     
+    public void ActivateApplicationExtension(java.lang.String textualSubId, java.lang.String deploymentProviderUrl, java.lang.String targetAssociatedFile) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.UriFormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.deployment.application.DeploymentException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ActivateApplicationExtension", textualSubId, deploymentProviderUrl, targetAssociatedFile);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ActivateDeployment(java.lang.String deploymentLocation, boolean isShortcut) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.UriFormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.deployment.application.DeploymentException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -143,31 +153,21 @@ public class DeploymentServiceCom extends NetObject  {
         }
     }
 
-    public void ActivateApplicationExtension(java.lang.String textualSubId, java.lang.String deploymentProviderUrl, java.lang.String targetAssociatedFile) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.UriFormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.deployment.application.DeploymentException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ActivateApplicationExtension", textualSubId, deploymentProviderUrl, targetAssociatedFile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void MaintainSubscription(java.lang.String textualSubId) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.deployment.application.DeploymentException, system.PlatformNotSupportedException, system.io.PathTooLongException, system.reflection.AmbiguousMatchException, system.deployment.application.InvalidDeploymentException, system.UriFormatException, system.RankException, system.componentmodel.InvalidAsynchronousStateException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.OverflowException, system.io.FileNotFoundException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("MaintainSubscription", textualSubId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void CheckForDeploymentUpdate(java.lang.String textualSubId) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.deployment.application.DeploymentException, system.PlatformNotSupportedException, system.io.PathTooLongException, system.reflection.AmbiguousMatchException, system.deployment.application.InvalidDeploymentException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CheckForDeploymentUpdate", textualSubId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CleanOnlineAppCache() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.PlatformNotSupportedException, system.io.PathTooLongException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.OutOfMemoryException, system.UnauthorizedAccessException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CleanOnlineAppCache");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,11 +183,11 @@ public class DeploymentServiceCom extends NetObject  {
         }
     }
 
-    public void CleanOnlineAppCache() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.PlatformNotSupportedException, system.io.PathTooLongException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.OutOfMemoryException, system.UnauthorizedAccessException {
+    public void MaintainSubscription(java.lang.String textualSubId) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.deployment.application.DeploymentException, system.PlatformNotSupportedException, system.io.PathTooLongException, system.reflection.AmbiguousMatchException, system.deployment.application.InvalidDeploymentException, system.UriFormatException, system.RankException, system.componentmodel.InvalidAsynchronousStateException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.OverflowException, system.io.FileNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CleanOnlineAppCache");
+            classInstance.Invoke("MaintainSubscription", textualSubId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

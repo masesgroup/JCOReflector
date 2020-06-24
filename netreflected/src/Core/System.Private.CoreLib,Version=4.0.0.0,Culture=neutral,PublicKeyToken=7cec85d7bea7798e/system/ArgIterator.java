@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.RuntimeArgumentHandle;
-import system.TypedReference;
 import system.RuntimeTypeHandle;
+import system.TypedReference;
 
 
 /**
@@ -126,6 +126,27 @@ public class ArgIterator extends NetObject  {
     
     // Methods section
     
+    public int GetRemainingCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetRemainingCount");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RuntimeTypeHandle GetNextArgType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetNextArgType = (JCObject)classInstance.Invoke("GetNextArgType");
+            return new RuntimeTypeHandle(objGetNextArgType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TypedReference GetNextArg() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -153,27 +174,6 @@ public class ArgIterator extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("End");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetRemainingCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetRemainingCount");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public RuntimeTypeHandle GetNextArgType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetNextArgType = (JCObject)classInstance.Invoke("GetNextArgType");
-            return new RuntimeTypeHandle(objGetNextArgType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

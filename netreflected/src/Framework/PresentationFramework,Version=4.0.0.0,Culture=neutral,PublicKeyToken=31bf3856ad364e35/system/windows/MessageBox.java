@@ -117,44 +117,11 @@ public class MessageBox extends NetObject  {
     
     // Methods section
     
-    public static MessageBoxResult Show(java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult, MessageBoxOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public static MessageBoxResult Show(java.lang.String messageBoxText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", messageBoxText, caption, button == null ? null : button.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultResult == null ? null : defaultResult.getJCOInstance(), options == null ? null : options.getJCOInstance());
-            return new MessageBoxResult(objShow);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MessageBoxResult Show(java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", messageBoxText, caption, button == null ? null : button.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultResult == null ? null : defaultResult.getJCOInstance());
-            return new MessageBoxResult(objShow);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MessageBoxResult Show(java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button, MessageBoxImage icon) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", messageBoxText, caption, button == null ? null : button.getJCOInstance(), icon == null ? null : icon.getJCOInstance());
-            return new MessageBoxResult(objShow);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MessageBoxResult Show(java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", messageBoxText, caption, button == null ? null : button.getJCOInstance());
+            JCObject objShow = (JCObject)classType.Invoke("Show", messageBoxText);
             return new MessageBoxResult(objShow);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -172,55 +139,55 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static MessageBoxResult Show(java.lang.String messageBoxText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public static MessageBoxResult Show(java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", messageBoxText);
+            JCObject objShow = (JCObject)classType.Invoke("Show", messageBoxText, caption, button == null ? null : button.getJCOInstance());
             return new MessageBoxResult(objShow);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static MessageBoxResult Show(Window owner, java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult, MessageBoxOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException {
+    public static MessageBoxResult Show(java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button, MessageBoxImage icon) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), messageBoxText, caption, button == null ? null : button.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultResult == null ? null : defaultResult.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objShow = (JCObject)classType.Invoke("Show", messageBoxText, caption, button == null ? null : button.getJCOInstance(), icon == null ? null : icon.getJCOInstance());
             return new MessageBoxResult(objShow);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static MessageBoxResult Show(Window owner, java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException {
+    public static MessageBoxResult Show(java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), messageBoxText, caption, button == null ? null : button.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultResult == null ? null : defaultResult.getJCOInstance());
+            JCObject objShow = (JCObject)classType.Invoke("Show", messageBoxText, caption, button == null ? null : button.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultResult == null ? null : defaultResult.getJCOInstance());
             return new MessageBoxResult(objShow);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static MessageBoxResult Show(Window owner, java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button, MessageBoxImage icon) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException {
+    public static MessageBoxResult Show(java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult, MessageBoxOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), messageBoxText, caption, button == null ? null : button.getJCOInstance(), icon == null ? null : icon.getJCOInstance());
+            JCObject objShow = (JCObject)classType.Invoke("Show", messageBoxText, caption, button == null ? null : button.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultResult == null ? null : defaultResult.getJCOInstance(), options == null ? null : options.getJCOInstance());
             return new MessageBoxResult(objShow);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static MessageBoxResult Show(Window owner, java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException {
+    public static MessageBoxResult Show(Window owner, java.lang.String messageBoxText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), messageBoxText, caption, button == null ? null : button.getJCOInstance());
+            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), messageBoxText);
             return new MessageBoxResult(objShow);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -238,11 +205,44 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static MessageBoxResult Show(Window owner, java.lang.String messageBoxText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException {
+    public static MessageBoxResult Show(Window owner, java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), messageBoxText);
+            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), messageBoxText, caption, button == null ? null : button.getJCOInstance());
+            return new MessageBoxResult(objShow);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MessageBoxResult Show(Window owner, java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button, MessageBoxImage icon) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), messageBoxText, caption, button == null ? null : button.getJCOInstance(), icon == null ? null : icon.getJCOInstance());
+            return new MessageBoxResult(objShow);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MessageBoxResult Show(Window owner, java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), messageBoxText, caption, button == null ? null : button.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultResult == null ? null : defaultResult.getJCOInstance());
+            return new MessageBoxResult(objShow);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MessageBoxResult Show(Window owner, java.lang.String messageBoxText, java.lang.String caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult, MessageBoxOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objShow = (JCObject)classType.Invoke("Show", owner == null ? null : owner.getJCOInstance(), messageBoxText, caption, button == null ? null : button.getJCOInstance(), icon == null ? null : icon.getJCOInstance(), defaultResult == null ? null : defaultResult.getJCOInstance(), options == null ? null : options.getJCOInstance());
             return new MessageBoxResult(objShow);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

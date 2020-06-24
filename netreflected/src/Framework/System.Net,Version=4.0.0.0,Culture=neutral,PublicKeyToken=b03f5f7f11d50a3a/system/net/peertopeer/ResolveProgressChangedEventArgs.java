@@ -128,22 +128,22 @@ public class ResolveProgressChangedEventArgs extends NetObject  {
     
     // Properties section
     
+    public int getProgressPercentage() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("ProgressPercentage");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PeerNameRecord getPeerNameRecord() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("PeerNameRecord");
             return new PeerNameRecord(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getProgressPercentage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("ProgressPercentage");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

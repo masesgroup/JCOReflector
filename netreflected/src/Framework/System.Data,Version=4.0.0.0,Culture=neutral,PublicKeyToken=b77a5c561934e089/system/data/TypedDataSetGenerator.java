@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.DataSet;
-import system.codedom.CodeNamespace;
 import system.codedom.compiler.ICodeGenerator;
 import system.codedom.compiler.ICodeGeneratorImplementation;
+import system.data.DataSet;
+import system.codedom.CodeNamespace;
 
 
 /**
@@ -127,21 +127,21 @@ public class TypedDataSetGenerator extends NetObject  {
     
     // Methods section
     
-    public static void Generate(DataSet dataSet, CodeNamespace codeNamespace, ICodeGenerator codeGen) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.FormatException, system.data.DataException, system.OutOfMemoryException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.InvalidCastException, system.data.TypedDataSetGeneratorException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Generate", dataSet == null ? null : dataSet.getJCOInstance(), codeNamespace == null ? null : codeNamespace.getJCOInstance(), codeGen == null ? null : codeGen.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static java.lang.String GenerateIdName(java.lang.String name, ICodeGenerator codeGen) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Invoke("GenerateIdName", name, codeGen == null ? null : codeGen.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Generate(DataSet dataSet, CodeNamespace codeNamespace, ICodeGenerator codeGen) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.FormatException, system.data.DataException, system.OutOfMemoryException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.InvalidCastException, system.data.TypedDataSetGeneratorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Generate", dataSet == null ? null : dataSet.getJCOInstance(), codeNamespace == null ? null : codeNamespace.getJCOInstance(), codeGen == null ? null : codeGen.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

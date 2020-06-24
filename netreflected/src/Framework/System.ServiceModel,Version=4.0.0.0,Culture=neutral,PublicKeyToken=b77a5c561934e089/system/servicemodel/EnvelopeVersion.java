@@ -136,16 +136,6 @@ public class EnvelopeVersion extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getNextDestinationActorValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("NextDestinationActorValue");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static EnvelopeVersion getNone() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -174,6 +164,16 @@ public class EnvelopeVersion extends NetObject  {
         try {
             JCObject val = (JCObject)classType.Get("Soap12");
             return new EnvelopeVersion(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getNextDestinationActorValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("NextDestinationActorValue");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

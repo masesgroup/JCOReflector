@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.GenericParameterConstraintHandleCollection;
 import system.reflection.metadata.CustomAttributeHandleCollection;
-import system.reflection.metadata.EntityHandle;
+import system.reflection.metadata.GenericParameterConstraintHandleCollection;
 import system.reflection.GenericParameterAttributes;
+import system.reflection.metadata.EntityHandle;
 import system.reflection.metadata.StringHandle;
 
 
@@ -117,17 +117,6 @@ public class GenericParameter extends NetObject  {
     
     // Methods section
     
-    public GenericParameterConstraintHandleCollection GetConstraints() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetConstraints = (JCObject)classInstance.Invoke("GetConstraints");
-            return new GenericParameterConstraintHandleCollection(objGetConstraints);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CustomAttributeHandleCollection GetCustomAttributes() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -139,16 +128,26 @@ public class GenericParameter extends NetObject  {
         }
     }
 
+    public GenericParameterConstraintHandleCollection GetConstraints() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetConstraints = (JCObject)classInstance.Invoke("GetConstraints");
+            return new GenericParameterConstraintHandleCollection(objGetConstraints);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public EntityHandle getParent() throws Throwable, system.BadImageFormatException {
+    public int getIndex() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new EntityHandle(val);
+            return (int)classInstance.Get("Index");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,11 +164,12 @@ public class GenericParameter extends NetObject  {
         }
     }
 
-    public int getIndex() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
+    public EntityHandle getParent() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Index");
+            JCObject val = (JCObject)classInstance.Get("Parent");
+            return new EntityHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

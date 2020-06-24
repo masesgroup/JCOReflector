@@ -139,43 +139,21 @@ public class CardSpacePolicyElement extends NetObject  {
         }
     }
 
-    public XmlElement getTarget() throws Throwable {
+    public int getPolicyNoticeVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Target");
-            return new XmlElement(val);
+            return (int)classInstance.Get("PolicyNoticeVersion");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTarget(XmlElement Target) throws Throwable {
+    public void setPolicyNoticeVersion(int PolicyNoticeVersion) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Target", Target == null ? null : Target.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlElement getIssuer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Issuer");
-            return new XmlElement(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIssuer(XmlElement Issuer) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Issuer", Issuer == null ? null : Issuer.getJCOInstance());
+            classInstance.Set("PolicyNoticeVersion", PolicyNoticeVersion);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,21 +180,43 @@ public class CardSpacePolicyElement extends NetObject  {
         }
     }
 
-    public int getPolicyNoticeVersion() throws Throwable {
+    public XmlElement getIssuer() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("PolicyNoticeVersion");
+            JCObject val = (JCObject)classInstance.Get("Issuer");
+            return new XmlElement(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setPolicyNoticeVersion(int PolicyNoticeVersion) throws Throwable {
+    public void setIssuer(XmlElement Issuer) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("PolicyNoticeVersion", PolicyNoticeVersion);
+            classInstance.Set("Issuer", Issuer == null ? null : Issuer.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlElement getTarget() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Target");
+            return new XmlElement(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTarget(XmlElement Target) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Target", Target == null ? null : Target.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

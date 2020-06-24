@@ -118,16 +118,6 @@ public class X509CertificateRecipientClientCredential extends NetObject  {
     
     // Methods section
     
-    public void SetDefaultCertificate(java.lang.String subjectName, StoreLocation storeLocation, StoreName storeName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.AccessViolationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetDefaultCertificate", subjectName, storeLocation == null ? null : storeLocation.getJCOInstance(), storeName == null ? null : storeName.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void SetDefaultCertificate(StoreLocation storeLocation, StoreName storeName, X509FindType findType, NetObject findValue) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -138,11 +128,11 @@ public class X509CertificateRecipientClientCredential extends NetObject  {
         }
     }
 
-    public void SetScopedCertificate(java.lang.String subjectName, StoreLocation storeLocation, StoreName storeName, Uri targetService) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.AccessViolationException {
+    public void SetDefaultCertificate(java.lang.String subjectName, StoreLocation storeLocation, StoreName storeName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetScopedCertificate", subjectName, storeLocation == null ? null : storeLocation.getJCOInstance(), storeName == null ? null : storeName.getJCOInstance(), targetService == null ? null : targetService.getJCOInstance());
+            classInstance.Invoke("SetDefaultCertificate", subjectName, storeLocation == null ? null : storeLocation.getJCOInstance(), storeName == null ? null : storeName.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,6 +143,16 @@ public class X509CertificateRecipientClientCredential extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetScopedCertificate", storeLocation == null ? null : storeLocation.getJCOInstance(), storeName == null ? null : storeName.getJCOInstance(), findType == null ? null : findType.getJCOInstance(), findValue == null ? null : findValue.getJCOInstance(), targetService == null ? null : targetService.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetScopedCertificate(java.lang.String subjectName, StoreLocation storeLocation, StoreName storeName, Uri targetService) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.AccessViolationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetScopedCertificate", subjectName, storeLocation == null ? null : storeLocation.getJCOInstance(), storeName == null ? null : storeName.getJCOInstance(), targetService == null ? null : targetService.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

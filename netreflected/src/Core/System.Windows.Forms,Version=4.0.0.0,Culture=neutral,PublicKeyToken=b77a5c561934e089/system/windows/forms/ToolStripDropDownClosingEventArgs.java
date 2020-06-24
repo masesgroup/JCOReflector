@@ -128,17 +128,6 @@ public class ToolStripDropDownClosingEventArgs extends NetObject  {
     
     // Properties section
     
-    public ToolStripDropDownCloseReason getCloseReason() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CloseReason");
-            return new ToolStripDropDownCloseReason(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,6 +143,17 @@ public class ToolStripDropDownClosingEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Cancel", Cancel);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ToolStripDropDownCloseReason getCloseReason() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CloseReason");
+            return new ToolStripDropDownCloseReason(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

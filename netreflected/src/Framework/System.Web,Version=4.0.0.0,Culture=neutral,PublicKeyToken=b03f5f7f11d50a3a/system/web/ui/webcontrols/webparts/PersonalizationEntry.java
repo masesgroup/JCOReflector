@@ -138,22 +138,21 @@ public class PersonalizationEntry extends NetObject  {
     
     // Properties section
     
-    public PersonalizationScope getScope() throws Throwable {
+    public boolean getIsSensitive() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Scope");
-            return new PersonalizationScope(val);
+            return (boolean)classInstance.Get("IsSensitive");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setScope(PersonalizationScope Scope) throws Throwable, system.ArgumentOutOfRangeException {
+    public void setIsSensitive(boolean IsSensitive) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Scope", Scope == null ? null : Scope.getJCOInstance());
+            classInstance.Set("IsSensitive", IsSensitive);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,21 +179,22 @@ public class PersonalizationEntry extends NetObject  {
         }
     }
 
-    public boolean getIsSensitive() throws Throwable {
+    public PersonalizationScope getScope() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsSensitive");
+            JCObject val = (JCObject)classInstance.Get("Scope");
+            return new PersonalizationScope(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIsSensitive(boolean IsSensitive) throws Throwable {
+    public void setScope(PersonalizationScope Scope) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IsSensitive", IsSensitive);
+            classInstance.Set("Scope", Scope == null ? null : Scope.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

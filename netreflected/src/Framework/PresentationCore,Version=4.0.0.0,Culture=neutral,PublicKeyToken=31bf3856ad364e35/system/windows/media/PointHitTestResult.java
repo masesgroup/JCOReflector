@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.media.Visual;
 import system.windows.Point;
+import system.windows.DependencyObject;
 
 
 /**
@@ -129,23 +130,23 @@ public class PointHitTestResult extends NetObject  {
     
     // Properties section
     
+    public DependencyObject getVisualHit() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("VisualHit");
+            return new DependencyObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Point getPointHit() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("PointHit");
             return new Point(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Visual getVisualHit() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("VisualHit");
-            return new Visual(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

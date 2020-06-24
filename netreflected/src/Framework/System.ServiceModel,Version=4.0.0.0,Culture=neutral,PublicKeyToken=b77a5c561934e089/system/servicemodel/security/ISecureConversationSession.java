@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.xml.XmlDictionaryWriter;
 import system.xml.XmlReader;
+import system.xml.XmlDictionaryWriter;
 import system.servicemodel.EndpointIdentity;
 
 
@@ -92,9 +92,9 @@ public interface ISecureConversationSession extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void WriteSessionTokenIdentifier(XmlDictionaryWriter writer) throws Throwable;
-
     public boolean TryReadSessionTokenIdentifier(XmlReader reader) throws Throwable;
+
+    public void WriteSessionTokenIdentifier(XmlDictionaryWriter writer) throws Throwable;
 
 
     

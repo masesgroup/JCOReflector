@@ -127,11 +127,11 @@ public class TypeLayout extends NetObject  {
     
     // Properties section
     
-    public int getSize() throws Throwable {
+    public boolean getIsDefault() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Size");
+            return (boolean)classInstance.Get("IsDefault");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,11 +147,11 @@ public class TypeLayout extends NetObject  {
         }
     }
 
-    public boolean getIsDefault() throws Throwable {
+    public int getSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsDefault");
+            return (int)classInstance.Get("Size");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

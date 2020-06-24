@@ -42,8 +42,8 @@ import system.runtime.serialization.ISurrogateSelector;
 import system.runtime.serialization.ISurrogateSelectorImplementation;
 import system.runtime.serialization.StreamingContext;
 import system.io.Stream;
-import system.runtime.serialization.formatters.FormatterTypeStyle;
 import system.runtime.serialization.formatters.FormatterAssemblyStyle;
+import system.runtime.serialization.formatters.FormatterTypeStyle;
 import system.runtime.serialization.formatters.TypeFilterLevel;
 import system.runtime.serialization.SerializationBinder;
 
@@ -166,27 +166,6 @@ public class BinaryFormatter extends NetObject  {
     
     // Properties section
     
-    public FormatterTypeStyle getTypeFormat() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeFormat");
-            return new FormatterTypeStyle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTypeFormat(FormatterTypeStyle TypeFormat) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TypeFormat", TypeFormat == null ? null : TypeFormat.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FormatterAssemblyStyle getAssemblyFormat() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -203,6 +182,27 @@ public class BinaryFormatter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyFormat", AssemblyFormat == null ? null : AssemblyFormat.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FormatterTypeStyle getTypeFormat() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TypeFormat");
+            return new FormatterTypeStyle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTypeFormat(FormatterTypeStyle TypeFormat) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TypeFormat", TypeFormat == null ? null : TypeFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

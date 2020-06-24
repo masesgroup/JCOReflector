@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xaml.AmbientPropertyValue;
 import system.xaml.XamlType;
+import system.xaml.AmbientPropertyValue;
 
 
 /**

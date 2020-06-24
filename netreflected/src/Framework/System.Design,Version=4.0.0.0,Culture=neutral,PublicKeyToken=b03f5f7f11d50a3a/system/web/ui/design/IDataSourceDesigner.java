@@ -91,11 +91,11 @@ public interface IDataSourceDesigner extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Configure() throws Throwable;
+    public java.lang.String[] GetViewNames() throws Throwable;
 
     public DesignerDataSourceView GetView(java.lang.String viewName) throws Throwable;
 
-    public java.lang.String[] GetViewNames() throws Throwable;
+    public void Configure() throws Throwable;
 
     public void RefreshSchema(boolean preferSilent) throws Throwable;
 

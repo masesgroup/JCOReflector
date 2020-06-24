@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.printing.PrintTicket;
 import system.printing.ConflictStatus;
+import system.printing.PrintTicket;
 
 
 /**
@@ -118,23 +118,23 @@ public class ValidationResult extends NetObject  {
     
     // Properties section
     
-    public PrintTicket getValidatedPrintTicket() throws Throwable, system.ArgumentNullException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.xml.schema.XmlSchemaException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValidatedPrintTicket");
-            return new PrintTicket(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ConflictStatus getConflictStatus() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ConflictStatus");
             return new ConflictStatus(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PrintTicket getValidatedPrintTicket() throws Throwable, system.ArgumentNullException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.xml.schema.XmlSchemaException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ValidatedPrintTicket");
+            return new PrintTicket(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

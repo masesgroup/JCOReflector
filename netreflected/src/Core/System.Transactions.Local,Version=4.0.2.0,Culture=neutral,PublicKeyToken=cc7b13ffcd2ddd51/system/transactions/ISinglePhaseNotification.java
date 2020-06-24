@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.transactions.SinglePhaseEnlistment;
-import system.transactions.PreparingEnlistment;
 import system.transactions.Enlistment;
+import system.transactions.PreparingEnlistment;
+import system.transactions.SinglePhaseEnlistment;
 
 
 /**
@@ -92,15 +92,15 @@ public interface ISinglePhaseNotification extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void SinglePhaseCommit(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable;
+    public void Commit(Enlistment enlistment) throws Throwable;
+
+    public void InDoubt(Enlistment enlistment) throws Throwable;
 
     public void Prepare(PreparingEnlistment preparingEnlistment) throws Throwable;
 
-    public void Commit(Enlistment enlistment) throws Throwable;
-
     public void Rollback(Enlistment enlistment) throws Throwable;
 
-    public void InDoubt(Enlistment enlistment) throws Throwable;
+    public void SinglePhaseCommit(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable;
 
 
     

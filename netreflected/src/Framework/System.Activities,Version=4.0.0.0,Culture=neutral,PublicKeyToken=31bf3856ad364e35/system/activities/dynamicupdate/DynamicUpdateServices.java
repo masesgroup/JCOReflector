@@ -137,6 +137,17 @@ public class DynamicUpdateServices extends NetObject  {
         }
     }
 
+    public static DynamicUpdateMap GetImplementationMap(Activity targetActivity) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetImplementationMap = (JCObject)classType.Invoke("GetImplementationMap", targetActivity == null ? null : targetActivity.getJCOInstance());
+            return new DynamicUpdateMap(objGetImplementationMap);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void PrepareForUpdate(Activity workflowDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlObjectReaderException, system.NotSupportedException, system.xaml.XamlSchemaException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.xaml.XamlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -152,17 +163,6 @@ public class DynamicUpdateServices extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PrepareForUpdate", activityDefinitionToBeUpdated == null ? null : activityDefinitionToBeUpdated.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DynamicUpdateMap GetImplementationMap(Activity targetActivity) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetImplementationMap = (JCObject)classType.Invoke("GetImplementationMap", targetActivity == null ? null : targetActivity.getJCOInstance());
-            return new DynamicUpdateMap(objGetImplementationMap);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

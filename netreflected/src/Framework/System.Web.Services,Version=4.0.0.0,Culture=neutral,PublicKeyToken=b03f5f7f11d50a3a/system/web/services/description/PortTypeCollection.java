@@ -113,21 +113,21 @@ public class PortTypeCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(PortType portType) throws Throwable {
+    public boolean Contains(PortType portType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", portType == null ? null : portType.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", portType == null ? null : portType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, PortType portType) throws Throwable {
+    public int Add(PortType portType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, portType == null ? null : portType.getJCOInstance());
+            return (int)classInstance.Invoke("Add", portType == null ? null : portType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,21 +143,11 @@ public class PortTypeCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(PortType portType) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", portType == null ? null : portType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(PortType portType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", portType == null ? null : portType.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,11 +163,21 @@ public class PortTypeCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public void Insert(int index, PortType portType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, portType == null ? null : portType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(PortType portType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", portType == null ? null : portType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

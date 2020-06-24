@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.HttpContext;
 import system.io.TextWriter;
+import system.web.HttpContext;
 
 
 /**
@@ -114,6 +114,26 @@ public class RenderTraceListener extends NetObject  {
     
     // Methods section
     
+    public void BeginRendering(TextWriter writer, NetObject renderedObject) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BeginRendering", writer == null ? null : writer.getJCOInstance(), renderedObject == null ? null : renderedObject.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndRendering(TextWriter writer, NetObject renderedObject) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndRendering", writer == null ? null : writer.getJCOInstance(), renderedObject == null ? null : renderedObject.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Initialize(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -139,26 +159,6 @@ public class RenderTraceListener extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShareTraceData", source == null ? null : source.getJCOInstance(), destination == null ? null : destination.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void BeginRendering(TextWriter writer, NetObject renderedObject) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("BeginRendering", writer == null ? null : writer.getJCOInstance(), renderedObject == null ? null : renderedObject.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void EndRendering(TextWriter writer, NetObject renderedObject) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("EndRendering", writer == null ? null : writer.getJCOInstance(), renderedObject == null ? null : renderedObject.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

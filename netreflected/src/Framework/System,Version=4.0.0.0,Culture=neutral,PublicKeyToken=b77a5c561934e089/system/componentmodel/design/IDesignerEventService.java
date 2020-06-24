@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.componentmodel.design.DesignerCollection;
 import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
-import system.componentmodel.design.DesignerCollection;
 import system.componentmodel.design.ActiveDesignerEventHandler;
 import system.componentmodel.design.DesignerEventHandler;
 import system.EventHandler;
@@ -99,9 +99,9 @@ public interface IDesignerEventService extends IJCOBridgeReflected {
     
     // Properties section
     
-    public IDesignerHost getActiveDesigner() throws Throwable;
-
     public DesignerCollection getDesigners() throws Throwable;
+
+    public IDesignerHost getActiveDesigner() throws Throwable;
 
 
 

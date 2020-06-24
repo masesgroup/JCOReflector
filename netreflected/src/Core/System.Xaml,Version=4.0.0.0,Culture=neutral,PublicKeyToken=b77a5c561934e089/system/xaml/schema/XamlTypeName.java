@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.xaml.XamlType;
-import system.xaml.schema.XamlTypeName;
 import system.xaml.IXamlNamespaceResolver;
 import system.xaml.IXamlNamespaceResolverImplementation;
 import system.xaml.INamespacePrefixLookup;
 import system.xaml.INamespacePrefixLookupImplementation;
+import system.xaml.schema.XamlTypeName;
 
 
 /**
@@ -115,6 +115,16 @@ public class XamlTypeName extends NetObject  {
     // Constructors section
     
 
+    public XamlTypeName() throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XamlTypeName(java.lang.String xamlNamespace, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -135,36 +145,26 @@ public class XamlTypeName extends NetObject  {
         }
     }
 
-    public XamlTypeName() throws Throwable {
+
+    
+    // Methods section
+    
+    public java.lang.String ToString(INamespacePrefixLookup prefixLookup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject());
+            return (java.lang.String)classInstance.Invoke("ToString", prefixLookup == null ? null : prefixLookup.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-
-    
-    // Methods section
-    
     public static XamlTypeName Parse(java.lang.String typeName, IXamlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objParse = (JCObject)classType.Invoke("Parse", typeName, namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
             return new XamlTypeName(objParse);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String ToString(INamespacePrefixLookup prefixLookup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ToString", prefixLookup == null ? null : prefixLookup.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

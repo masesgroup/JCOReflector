@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.markup.localizer.ElementLocalizability;
 import system.windows.LocalizabilityAttribute;
+import system.windows.markup.localizer.ElementLocalizability;
 
 
 /**
@@ -114,12 +114,21 @@ public class BamlLocalizabilityResolver extends NetObject  {
     
     // Methods section
     
-    public ElementLocalizability GetElementLocalizability(java.lang.String assembly, java.lang.String className) throws Throwable {
+    public java.lang.String ResolveAssemblyFromClass(java.lang.String className) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetElementLocalizability = (JCObject)classInstance.Invoke("GetElementLocalizability", assembly, className);
-            return new ElementLocalizability(objGetElementLocalizability);
+            return (java.lang.String)classInstance.Invoke("ResolveAssemblyFromClass", className);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ResolveFormattingTagToClass(java.lang.String formattingTag) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ResolveFormattingTagToClass", formattingTag);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -136,21 +145,12 @@ public class BamlLocalizabilityResolver extends NetObject  {
         }
     }
 
-    public java.lang.String ResolveFormattingTagToClass(java.lang.String formattingTag) throws Throwable {
+    public ElementLocalizability GetElementLocalizability(java.lang.String assembly, java.lang.String className) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("ResolveFormattingTagToClass", formattingTag);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String ResolveAssemblyFromClass(java.lang.String className) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ResolveAssemblyFromClass", className);
+            JCObject objGetElementLocalizability = (JCObject)classInstance.Invoke("GetElementLocalizability", assembly, className);
+            return new ElementLocalizability(objGetElementLocalizability);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

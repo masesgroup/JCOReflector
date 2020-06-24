@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.RuntimeMethodHandle;
 import system.reflection.emit.DynamicMethod;
-import system.RuntimeTypeHandle;
 import system.RuntimeFieldHandle;
+import system.RuntimeTypeHandle;
+import system.RuntimeMethodHandle;
 
 
 /**
@@ -116,41 +116,11 @@ public class DynamicILInfo extends NetObject  {
     
     // Methods section
     
-    public void SetCode(byte[] code, int maxStackSize) throws Throwable {
+    public int GetTokenFor(byte[] signature) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetCode", code, maxStackSize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetExceptions(byte[] exceptions) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetExceptions", (Object)exceptions);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetLocalSignature(byte[] localSignature) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetLocalSignature", (Object)localSignature);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetTokenFor(RuntimeMethodHandle method) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance());
+            return (int)classInstance.Invoke("GetTokenFor", (Object)signature);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,16 +131,6 @@ public class DynamicILInfo extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetTokenFor(RuntimeMethodHandle method, RuntimeTypeHandle contextType) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance(), contextType == null ? null : contextType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,6 +156,26 @@ public class DynamicILInfo extends NetObject  {
         }
     }
 
+    public int GetTokenFor(RuntimeMethodHandle method) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetTokenFor(RuntimeMethodHandle method, RuntimeTypeHandle contextType) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance(), contextType == null ? null : contextType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int GetTokenFor(RuntimeTypeHandle type) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -216,11 +196,31 @@ public class DynamicILInfo extends NetObject  {
         }
     }
 
-    public int GetTokenFor(byte[] signature) throws Throwable, system.ArgumentOutOfRangeException {
+    public void SetCode(byte[] code, int maxStackSize) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetTokenFor", (Object)signature);
+            classInstance.Invoke("SetCode", code, maxStackSize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetExceptions(byte[] exceptions) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetExceptions", (Object)exceptions);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetLocalSignature(byte[] localSignature) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetLocalSignature", (Object)localSignature);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

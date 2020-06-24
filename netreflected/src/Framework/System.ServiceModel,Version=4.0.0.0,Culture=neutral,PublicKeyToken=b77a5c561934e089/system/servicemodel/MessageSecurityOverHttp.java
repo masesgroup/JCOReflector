@@ -159,6 +159,26 @@ public class MessageSecurityOverHttp extends NetObject  {
     
     // Properties section
     
+    public boolean getNegotiateServiceCredential() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("NegotiateServiceCredential");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setNegotiateServiceCredential(boolean NegotiateServiceCredential) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("NegotiateServiceCredential", NegotiateServiceCredential);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MessageCredentialType getClientCredentialType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -175,26 +195,6 @@ public class MessageSecurityOverHttp extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientCredentialType", ClientCredentialType == null ? null : ClientCredentialType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getNegotiateServiceCredential() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("NegotiateServiceCredential");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setNegotiateServiceCredential(boolean NegotiateServiceCredential) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("NegotiateServiceCredential", NegotiateServiceCredential);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

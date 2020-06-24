@@ -125,17 +125,6 @@ public class SoapServerType extends NetObject  {
     
     // Methods section
     
-    public SoapServerMethod GetMethod(NetObject key) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", key == null ? null : key.getJCOInstance());
-            return new SoapServerMethod(objGetMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SoapServerMethod GetDuplicateMethod(NetObject key) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -147,20 +136,21 @@ public class SoapServerType extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public java.lang.String getServiceNamespace() throws Throwable {
+    public SoapServerMethod GetMethod(NetObject key) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ServiceNamespace");
+            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", key == null ? null : key.getJCOInstance());
+            return new SoapServerMethod(objGetMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public boolean getServiceDefaultIsEncoded() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,6 +166,16 @@ public class SoapServerType extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("ServiceRoutingOnSoapAction");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getServiceNamespace() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ServiceNamespace");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -124,16 +124,6 @@ public class Instrumentation extends NetObject  {
     
     // Methods section
     
-    public static void RegisterAssembly(Assembly assemblyToRegister) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.management.ManagementException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.AccessViolationException, system.resources.MissingManifestResourceException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("RegisterAssembly", assemblyToRegister == null ? null : assemblyToRegister.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean IsAssemblyRegistered(Assembly assemblyToRegister) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.management.ManagementException, system.reflection.AmbiguousMatchException, system.resources.MissingManifestResourceException, system.io.IOException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -159,6 +149,16 @@ public class Instrumentation extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Publish", instanceData == null ? null : instanceData.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RegisterAssembly(Assembly assemblyToRegister) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.management.ManagementException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.AccessViolationException, system.resources.MissingManifestResourceException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RegisterAssembly", assemblyToRegister == null ? null : assemblyToRegister.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

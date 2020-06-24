@@ -98,27 +98,27 @@ public interface IDictionary extends IJCOBridgeReflected {
 
     public void Clear() throws Throwable;
 
-    public void Remove(NetObject key) throws Throwable;
-
     public void CopyTo(Array array, int index) throws Throwable;
+
+    public void Remove(NetObject key) throws Throwable;
 
 
     
     // Properties section
     
+    public boolean getIsFixedSize() throws Throwable;
+
+    public boolean getIsReadOnly() throws Throwable;
+
+    public boolean getIsSynchronized() throws Throwable;
+
+    public int getCount() throws Throwable;
+
     public ICollection getKeys() throws Throwable;
 
     public ICollection getValues() throws Throwable;
 
-    public boolean getIsReadOnly() throws Throwable;
-
-    public boolean getIsFixedSize() throws Throwable;
-
-    public int getCount() throws Throwable;
-
     public NetObject getSyncRoot() throws Throwable;
-
-    public boolean getIsSynchronized() throws Throwable;
 
 
 

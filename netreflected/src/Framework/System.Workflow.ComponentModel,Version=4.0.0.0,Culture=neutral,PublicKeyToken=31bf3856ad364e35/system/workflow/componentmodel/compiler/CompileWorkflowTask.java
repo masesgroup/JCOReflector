@@ -38,8 +38,6 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import microsoft.build.framework.ITaskItem;
-import microsoft.build.framework.ITaskItemImplementation;
 import microsoft.build.framework.IBuildEngine;
 import microsoft.build.framework.IBuildEngineImplementation;
 import microsoft.build.framework.IBuildEngine2;
@@ -48,6 +46,10 @@ import microsoft.build.framework.IBuildEngine3;
 import microsoft.build.framework.IBuildEngine3Implementation;
 import microsoft.build.framework.IBuildEngine4;
 import microsoft.build.framework.IBuildEngine4Implementation;
+import microsoft.build.framework.ITaskHost;
+import microsoft.build.framework.ITaskHostImplementation;
+import microsoft.build.framework.ITaskItem;
+import microsoft.build.framework.ITaskItemImplementation;
 import microsoft.build.utilities.TaskLoggingHelper;
 
 
@@ -148,112 +150,127 @@ public class CompileWorkflowTask extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getProjectDirectory() throws Throwable {
+    public boolean getBuildingProject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ProjectDirectory");
+            return (boolean)classInstance.Get("BuildingProject");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setProjectDirectory(java.lang.String ProjectDirectory) throws Throwable {
+    public void setBuildingProject(boolean BuildingProject) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ProjectDirectory", ProjectDirectory);
+            classInstance.Set("BuildingProject", BuildingProject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getProjectExtension() throws Throwable {
+    public boolean getDelaySign() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ProjectExtension");
+            return (boolean)classInstance.Get("DelaySign");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setProjectExtension(java.lang.String ProjectExtension) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public void setDelaySign(boolean DelaySign) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ProjectExtension", ProjectExtension);
+            classInstance.Set("DelaySign", DelaySign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getRootNamespace() throws Throwable {
+    public IBuildEngine getBuildEngine() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("RootNamespace");
+            JCObject val = (JCObject)classInstance.Get("BuildEngine");
+            return new IBuildEngineImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRootNamespace(java.lang.String RootNamespace) throws Throwable {
+    public void setBuildEngine(IBuildEngine BuildEngine) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("RootNamespace", RootNamespace);
+            classInstance.Set("BuildEngine", BuildEngine == null ? null : BuildEngine.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getAssemblyName() throws Throwable {
+    public IBuildEngine2 getBuildEngine2() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("AssemblyName");
+            JCObject val = (JCObject)classInstance.Get("BuildEngine2");
+            return new IBuildEngine2Implementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAssemblyName(java.lang.String AssemblyName) throws Throwable {
+    public IBuildEngine3 getBuildEngine3() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("AssemblyName", AssemblyName);
+            JCObject val = (JCObject)classInstance.Get("BuildEngine3");
+            return new IBuildEngine3Implementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getImports() throws Throwable {
+    public IBuildEngine4 getBuildEngine4() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Imports");
+            JCObject val = (JCObject)classInstance.Get("BuildEngine4");
+            return new IBuildEngine4Implementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setImports(java.lang.String Imports) throws Throwable {
+    public ITaskHost getHostObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Imports", Imports);
+            JCObject val = (JCObject)classInstance.Get("HostObject");
+            return new ITaskHostImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ITaskItem[] getWorkflowMarkupFiles() throws Throwable {
+    public void setHostObject(ITaskHost HostObject) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("HostObject", HostObject == null ? null : HostObject.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ITaskItem[] getCompilationOptions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("WorkflowMarkupFiles");
+            JCObject resultingObjects = (JCObject)classInstance.Get("CompilationOptions");
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
@@ -265,11 +282,28 @@ public class CompileWorkflowTask extends NetObject  {
         }
     }
 
-    public void setWorkflowMarkupFiles(ITaskItem[] WorkflowMarkupFiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+    public void setCompilationOptions(ITaskItem[] CompilationOptions) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("WorkflowMarkupFiles", toObjectFromArray(WorkflowMarkupFiles));
+            classInstance.Set("CompilationOptions", toObjectFromArray(CompilationOptions));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ITaskItem[] getOutputFiles() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("OutputFiles");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
+            }
+            ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,12 +390,12 @@ public class CompileWorkflowTask extends NetObject  {
         }
     }
 
-    public ITaskItem[] getCompilationOptions() throws Throwable {
+    public ITaskItem[] getWorkflowMarkupFiles() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("CompilationOptions");
+            JCObject resultingObjects = (JCObject)classInstance.Get("WorkflowMarkupFiles");
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
@@ -373,51 +407,72 @@ public class CompileWorkflowTask extends NetObject  {
         }
     }
 
-    public void setCompilationOptions(ITaskItem[] CompilationOptions) throws Throwable {
+    public void setWorkflowMarkupFiles(ITaskItem[] WorkflowMarkupFiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("CompilationOptions", toObjectFromArray(CompilationOptions));
+            classInstance.Set("WorkflowMarkupFiles", toObjectFromArray(WorkflowMarkupFiles));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getDelaySign() throws Throwable {
+    public TaskLoggingHelper getLog() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("DelaySign");
+            JCObject val = (JCObject)classInstance.Get("Log");
+            return new TaskLoggingHelper(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDelaySign(boolean DelaySign) throws Throwable {
+    public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("DelaySign", DelaySign);
+            return (java.lang.String)classInstance.Get("AssemblyName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getTargetFramework() throws Throwable {
+    public void setAssemblyName(java.lang.String AssemblyName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("TargetFramework");
+            classInstance.Set("AssemblyName", AssemblyName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTargetFramework(java.lang.String TargetFramework) throws Throwable {
+    public java.lang.String getImports() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("TargetFramework", TargetFramework);
+            return (java.lang.String)classInstance.Get("Imports");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setImports(java.lang.String Imports) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Imports", Imports);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getKeepTemporaryFiles() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("KeepTemporaryFiles");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,59 +518,81 @@ public class CompileWorkflowTask extends NetObject  {
         }
     }
 
-    public NetObject getHostObject() throws Throwable {
+    public java.lang.String getProjectDirectory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("HostObject");
-            return new NetObject(val);
+            return (java.lang.String)classInstance.Get("ProjectDirectory");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getBuildingProject() throws Throwable {
+    public void setProjectDirectory(java.lang.String ProjectDirectory) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("BuildingProject");
+            classInstance.Set("ProjectDirectory", ProjectDirectory);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setBuildingProject(boolean BuildingProject) throws Throwable {
+    public java.lang.String getProjectExtension() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("BuildingProject", BuildingProject);
+            return (java.lang.String)classInstance.Get("ProjectExtension");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ITaskItem[] getOutputFiles() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
+    public void setProjectExtension(java.lang.String ProjectExtension) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("OutputFiles");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
-            }
-            ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            classInstance.Set("ProjectExtension", ProjectExtension);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getKeepTemporaryFiles() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public java.lang.String getRootNamespace() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("KeepTemporaryFiles");
+            return (java.lang.String)classInstance.Get("RootNamespace");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRootNamespace(java.lang.String RootNamespace) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RootNamespace", RootNamespace);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getTargetFramework() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("TargetFramework");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTargetFramework(java.lang.String TargetFramework) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TargetFramework", TargetFramework);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,71 +612,6 @@ public class CompileWorkflowTask extends NetObject  {
 				resultingArray[indexTemporaryFiles] = (java.lang.String)resultingArrayList.get(indexTemporaryFiles);
 			}
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IBuildEngine getBuildEngine() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine");
-            return new IBuildEngineImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBuildEngine(IBuildEngine BuildEngine) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BuildEngine", BuildEngine == null ? null : BuildEngine.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IBuildEngine2 getBuildEngine2() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine2");
-            return new IBuildEngine2Implementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IBuildEngine3 getBuildEngine3() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine3");
-            return new IBuildEngine3Implementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IBuildEngine4 getBuildEngine4() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine4");
-            return new IBuildEngine4Implementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TaskLoggingHelper getLog() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Log");
-            return new TaskLoggingHelper(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

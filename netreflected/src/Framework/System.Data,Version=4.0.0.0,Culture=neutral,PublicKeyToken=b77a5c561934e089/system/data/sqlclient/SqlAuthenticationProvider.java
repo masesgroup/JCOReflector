@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.sqlclient.SqlAuthenticationProvider;
 import system.data.sqlclient.SqlAuthenticationMethod;
+import system.data.sqlclient.SqlAuthenticationProvider;
 
 
 /**
@@ -114,12 +114,11 @@ public class SqlAuthenticationProvider extends NetObject  {
     
     // Methods section
     
-    public static SqlAuthenticationProvider GetProvider(SqlAuthenticationMethod authenticationMethod) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean IsSupported(SqlAuthenticationMethod authenticationMethod) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetProvider = (JCObject)classType.Invoke("GetProvider", authenticationMethod == null ? null : authenticationMethod.getJCOInstance());
-            return new SqlAuthenticationProvider(objGetProvider);
+            return (boolean)classInstance.Invoke("IsSupported", authenticationMethod == null ? null : authenticationMethod.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -130,6 +129,17 @@ public class SqlAuthenticationProvider extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("SetProvider", authenticationMethod == null ? null : authenticationMethod.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SqlAuthenticationProvider GetProvider(SqlAuthenticationMethod authenticationMethod) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetProvider = (JCObject)classType.Invoke("GetProvider", authenticationMethod == null ? null : authenticationMethod.getJCOInstance());
+            return new SqlAuthenticationProvider(objGetProvider);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -150,16 +160,6 @@ public class SqlAuthenticationProvider extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeforeUnload", authenticationMethod == null ? null : authenticationMethod.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsSupported(SqlAuthenticationMethod authenticationMethod) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsSupported", authenticationMethod == null ? null : authenticationMethod.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -129,12 +129,32 @@ public class XmlNodeChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public XmlNodeChangedAction getAction() throws Throwable {
+    public java.lang.String getNewValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Action");
-            return new XmlNodeChangedAction(val);
+            return (java.lang.String)classInstance.Get("NewValue");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getOldValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("OldValue");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlNode getNewParent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NewParent");
+            return new XmlNode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,32 +182,12 @@ public class XmlNodeChangedEventArgs extends NetObject  {
         }
     }
 
-    public XmlNode getNewParent() throws Throwable {
+    public XmlNodeChangedAction getAction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NewParent");
-            return new XmlNode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getOldValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("OldValue");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getNewValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("NewValue");
+            JCObject val = (JCObject)classInstance.Get("Action");
+            return new XmlNodeChangedAction(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

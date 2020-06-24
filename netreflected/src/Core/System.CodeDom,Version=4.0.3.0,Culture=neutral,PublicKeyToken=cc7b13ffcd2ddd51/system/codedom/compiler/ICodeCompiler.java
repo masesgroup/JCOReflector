@@ -94,13 +94,13 @@ public interface ICodeCompiler extends IJCOBridgeReflected {
     
     public CompilerResults CompileAssemblyFromDom(CompilerParameters options, CodeCompileUnit compilationUnit) throws Throwable;
 
-    public CompilerResults CompileAssemblyFromFile(CompilerParameters options, java.lang.String fileName) throws Throwable;
-
-    public CompilerResults CompileAssemblyFromSource(CompilerParameters options, java.lang.String source) throws Throwable;
-
     public CompilerResults CompileAssemblyFromDomBatch(CompilerParameters options, CodeCompileUnit[] compilationUnits) throws Throwable;
 
+    public CompilerResults CompileAssemblyFromFile(CompilerParameters options, java.lang.String fileName) throws Throwable;
+
     public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters options, java.lang.String[] fileNames) throws Throwable;
+
+    public CompilerResults CompileAssemblyFromSource(CompilerParameters options, java.lang.String source) throws Throwable;
 
     public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters options, java.lang.String[] sources) throws Throwable;
 

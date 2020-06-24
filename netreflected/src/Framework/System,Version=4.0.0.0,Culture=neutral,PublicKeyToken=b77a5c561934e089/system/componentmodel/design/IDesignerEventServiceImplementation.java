@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.DesignerCollection;
 import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
-import system.componentmodel.design.DesignerCollection;
 import system.componentmodel.design.ActiveDesignerEventHandler;
 import system.componentmodel.design.DesignerEventHandler;
 import system.EventHandler;
@@ -113,23 +113,23 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
     
     // Properties section
     
-    public IDesignerHost getActiveDesigner() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ActiveDesigner");
-            return new IDesignerHostImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DesignerCollection getDesigners() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Designers");
             return new DesignerCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDesignerHost getActiveDesigner() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ActiveDesigner");
+            return new IDesignerHostImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

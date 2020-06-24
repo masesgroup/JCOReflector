@@ -89,9 +89,9 @@ public interface IStateManager extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void LoadViewState(NetObject state) throws Throwable;
-
     public NetObject SaveViewState() throws Throwable;
+
+    public void LoadViewState(NetObject state) throws Throwable;
 
     public void TrackViewState() throws Throwable;
 

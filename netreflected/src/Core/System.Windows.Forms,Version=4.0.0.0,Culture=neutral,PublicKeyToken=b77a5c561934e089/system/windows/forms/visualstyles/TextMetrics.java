@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.forms.visualstyles.TextMetricsPitchAndFamilyValues;
 import system.windows.forms.visualstyles.TextMetricsCharacterSet;
+import system.windows.forms.visualstyles.TextMetricsPitchAndFamilyValues;
 
 
 /**
@@ -118,221 +118,101 @@ public class TextMetrics extends NetObject  {
     
     // Properties section
     
-    public int getHeight() throws Throwable {
+    public boolean getItalic() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Height");
+            return (boolean)classInstance.Get("Italic");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHeight(int Height) throws Throwable {
+    public void setItalic(boolean Italic) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Height", Height);
+            classInstance.Set("Italic", Italic);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getAscent() throws Throwable {
+    public boolean getStruckOut() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Ascent");
+            return (boolean)classInstance.Get("StruckOut");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAscent(int Ascent) throws Throwable {
+    public void setStruckOut(boolean StruckOut) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Ascent", Ascent);
+            classInstance.Set("StruckOut", StruckOut);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getDescent() throws Throwable {
+    public boolean getUnderlined() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Descent");
+            return (boolean)classInstance.Get("Underlined");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDescent(int Descent) throws Throwable {
+    public void setUnderlined(boolean Underlined) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Descent", Descent);
+            classInstance.Set("Underlined", Underlined);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getInternalLeading() throws Throwable {
+    public char getBreakChar() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("InternalLeading");
+            return (char)classInstance.Get("BreakChar");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setInternalLeading(int InternalLeading) throws Throwable {
+    public void setBreakChar(char BreakChar) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("InternalLeading", InternalLeading);
+            classInstance.Set("BreakChar", BreakChar);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getExternalLeading() throws Throwable {
+    public char getDefaultChar() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("ExternalLeading");
+            return (char)classInstance.Get("DefaultChar");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setExternalLeading(int ExternalLeading) throws Throwable {
+    public void setDefaultChar(char DefaultChar) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ExternalLeading", ExternalLeading);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getAverageCharWidth() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("AverageCharWidth");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAverageCharWidth(int AverageCharWidth) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AverageCharWidth", AverageCharWidth);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getMaxCharWidth() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MaxCharWidth");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMaxCharWidth(int MaxCharWidth) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MaxCharWidth", MaxCharWidth);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getWeight() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Weight");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setWeight(int Weight) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Weight", Weight);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getOverhang() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Overhang");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOverhang(int Overhang) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Overhang", Overhang);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getDigitizedAspectX() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("DigitizedAspectX");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDigitizedAspectX(int DigitizedAspectX) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DigitizedAspectX", DigitizedAspectX);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getDigitizedAspectY() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("DigitizedAspectY");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDigitizedAspectY(int DigitizedAspectY) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DigitizedAspectY", DigitizedAspectY);
+            classInstance.Set("DefaultChar", DefaultChar);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,122 +258,221 @@ public class TextMetrics extends NetObject  {
         }
     }
 
-    public char getDefaultChar() throws Throwable {
+    public int getAscent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (char)classInstance.Get("DefaultChar");
+            return (int)classInstance.Get("Ascent");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDefaultChar(char DefaultChar) throws Throwable {
+    public void setAscent(int Ascent) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("DefaultChar", DefaultChar);
+            classInstance.Set("Ascent", Ascent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public char getBreakChar() throws Throwable {
+    public int getAverageCharWidth() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (char)classInstance.Get("BreakChar");
+            return (int)classInstance.Get("AverageCharWidth");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setBreakChar(char BreakChar) throws Throwable {
+    public void setAverageCharWidth(int AverageCharWidth) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("BreakChar", BreakChar);
+            classInstance.Set("AverageCharWidth", AverageCharWidth);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getItalic() throws Throwable {
+    public int getDescent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Italic");
+            return (int)classInstance.Get("Descent");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setItalic(boolean Italic) throws Throwable {
+    public void setDescent(int Descent) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Italic", Italic);
+            classInstance.Set("Descent", Descent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getUnderlined() throws Throwable {
+    public int getDigitizedAspectX() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Underlined");
+            return (int)classInstance.Get("DigitizedAspectX");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUnderlined(boolean Underlined) throws Throwable {
+    public void setDigitizedAspectX(int DigitizedAspectX) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Underlined", Underlined);
+            classInstance.Set("DigitizedAspectX", DigitizedAspectX);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getStruckOut() throws Throwable {
+    public int getDigitizedAspectY() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("StruckOut");
+            return (int)classInstance.Get("DigitizedAspectY");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setStruckOut(boolean StruckOut) throws Throwable {
+    public void setDigitizedAspectY(int DigitizedAspectY) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("StruckOut", StruckOut);
+            classInstance.Set("DigitizedAspectY", DigitizedAspectY);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TextMetricsPitchAndFamilyValues getPitchAndFamily() throws Throwable {
+    public int getExternalLeading() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PitchAndFamily");
-            return new TextMetricsPitchAndFamilyValues(val);
+            return (int)classInstance.Get("ExternalLeading");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setPitchAndFamily(TextMetricsPitchAndFamilyValues PitchAndFamily) throws Throwable {
+    public void setExternalLeading(int ExternalLeading) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("PitchAndFamily", PitchAndFamily == null ? null : PitchAndFamily.getJCOInstance());
+            classInstance.Set("ExternalLeading", ExternalLeading);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getHeight() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Height");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setHeight(int Height) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Height", Height);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getInternalLeading() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("InternalLeading");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInternalLeading(int InternalLeading) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InternalLeading", InternalLeading);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getMaxCharWidth() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("MaxCharWidth");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMaxCharWidth(int MaxCharWidth) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MaxCharWidth", MaxCharWidth);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getOverhang() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Overhang");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setOverhang(int Overhang) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Overhang", Overhang);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getWeight() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Weight");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setWeight(int Weight) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Weight", Weight);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,6 +494,27 @@ public class TextMetrics extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CharSet", CharSet == null ? null : CharSet.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TextMetricsPitchAndFamilyValues getPitchAndFamily() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PitchAndFamily");
+            return new TextMetricsPitchAndFamilyValues(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPitchAndFamily(TextMetricsPitchAndFamilyValues PitchAndFamily) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PitchAndFamily", PitchAndFamily == null ? null : PitchAndFamily.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

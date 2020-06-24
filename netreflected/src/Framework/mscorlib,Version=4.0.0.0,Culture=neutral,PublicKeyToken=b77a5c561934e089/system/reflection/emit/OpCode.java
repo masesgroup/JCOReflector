@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.emit.OpCode;
-import system.reflection.emit.OperandType;
 import system.reflection.emit.FlowControl;
 import system.reflection.emit.OpCodeType;
+import system.reflection.emit.OperandType;
 import system.reflection.emit.StackBehaviour;
 
 
@@ -131,12 +131,21 @@ public class OpCode extends NetObject  {
     
     // Properties section
     
-    public OperandType getOperandType() throws Throwable {
+    public short getValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OperandType");
-            return new OperandType(val);
+            return (short)classInstance.Get("Value");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getSize() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Size");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,6 +173,17 @@ public class OpCode extends NetObject  {
         }
     }
 
+    public OperandType getOperandType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("OperandType");
+            return new OperandType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public StackBehaviour getStackBehaviourPop() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -181,26 +201,6 @@ public class OpCode extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("StackBehaviourPush");
             return new StackBehaviour(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Size");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public short getValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (short)classInstance.Get("Value");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

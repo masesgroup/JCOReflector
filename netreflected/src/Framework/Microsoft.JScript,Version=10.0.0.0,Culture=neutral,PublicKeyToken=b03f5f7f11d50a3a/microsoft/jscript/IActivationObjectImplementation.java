@@ -105,17 +105,6 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
 
     // Methods section
     
-    public NetObject GetDefaultThisObject() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDefaultThisObject = (JCObject)classInstance.Invoke("GetDefaultThisObject");
-            return new NetObject(objGetDefaultThisObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public GlobalScope GetGlobalScope() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -127,12 +116,12 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
         }
     }
 
-    public FieldInfo GetLocalField(java.lang.String name) throws Throwable {
+    public NetObject GetDefaultThisObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetLocalField = (JCObject)classInstance.Invoke("GetLocalField", name);
-            return new FieldInfo(objGetLocalField);
+            JCObject objGetDefaultThisObject = (JCObject)classInstance.Invoke("GetDefaultThisObject");
+            return new NetObject(objGetDefaultThisObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,6 +144,17 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
         try {
             JCObject objGetField = (JCObject)classInstance.Invoke("GetField", name, lexLevel);
             return new FieldInfo(objGetField);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FieldInfo GetLocalField(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetLocalField = (JCObject)classInstance.Invoke("GetLocalField", name);
+            return new FieldInfo(objGetLocalField);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

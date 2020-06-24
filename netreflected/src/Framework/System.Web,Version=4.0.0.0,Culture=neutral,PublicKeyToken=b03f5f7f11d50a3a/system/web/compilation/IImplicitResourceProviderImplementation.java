@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.compilation.ImplicitResourceKey;
-import system.globalization.CultureInfo;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.web.compilation.ImplicitResourceKey;
+import system.globalization.CultureInfo;
 
 
 /**
@@ -107,23 +107,23 @@ public class IImplicitResourceProviderImplementation extends NetObject implement
 
     // Methods section
     
-    public NetObject GetObject(ImplicitResourceKey key, CultureInfo culture) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetObject = (JCObject)classInstance.Invoke("GetObject", key == null ? null : key.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
-            return new NetObject(objGetObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ICollection GetImplicitResourceKeys(java.lang.String keyPrefix) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetImplicitResourceKeys = (JCObject)classInstance.Invoke("GetImplicitResourceKeys", keyPrefix);
             return new ICollectionImplementation(objGetImplicitResourceKeys);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetObject(ImplicitResourceKey key, CultureInfo culture) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetObject = (JCObject)classInstance.Invoke("GetObject", key == null ? null : key.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            return new NetObject(objGetObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

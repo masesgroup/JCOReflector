@@ -40,12 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.diagnostics.symbolstore.ISymbolDocument;
 import system.diagnostics.symbolstore.ISymbolDocumentImplementation;
+import system.diagnostics.symbolstore.ISymbolNamespace;
+import system.diagnostics.symbolstore.ISymbolNamespaceImplementation;
 import system.diagnostics.symbolstore.ISymbolScope;
 import system.diagnostics.symbolstore.ISymbolScopeImplementation;
 import system.diagnostics.symbolstore.ISymbolVariable;
 import system.diagnostics.symbolstore.ISymbolVariableImplementation;
-import system.diagnostics.symbolstore.ISymbolNamespace;
-import system.diagnostics.symbolstore.ISymbolNamespaceImplementation;
 import system.diagnostics.symbolstore.SymbolToken;
 
 
@@ -112,22 +112,11 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
 
     // Methods section
     
-    public void GetSequencePoints(int[] offsets, ISymbolDocument[] documents, int[] lines, int[] columns, int[] endLines, int[] endColumns) throws Throwable {
+    public boolean GetSourceStartEnd(ISymbolDocument[] docs, int[] lines, int[] columns) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetSequencePoints", offsets, toObjectFromArray(documents), lines, columns, endLines, endColumns);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ISymbolScope GetScope(int offset) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetScope = (JCObject)classInstance.Invoke("GetScope", offset);
-            return new ISymbolScopeImplementation(objGetScope);
+            return (boolean)classInstance.Invoke("GetSourceStartEnd", toObjectFromArray(docs), lines, columns);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,6 +151,28 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
+    public ISymbolNamespace GetNamespace() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetNamespace = (JCObject)classInstance.Invoke("GetNamespace");
+            return new ISymbolNamespaceImplementation(objGetNamespace);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ISymbolScope GetScope(int offset) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetScope = (JCObject)classInstance.Invoke("GetScope", offset);
+            return new ISymbolScopeImplementation(objGetScope);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ISymbolVariable[] GetParameters() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -179,22 +190,11 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
-    public ISymbolNamespace GetNamespace() throws Throwable {
+    public void GetSequencePoints(int[] offsets, ISymbolDocument[] documents, int[] lines, int[] columns, int[] endLines, int[] endColumns) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetNamespace = (JCObject)classInstance.Invoke("GetNamespace");
-            return new ISymbolNamespaceImplementation(objGetNamespace);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean GetSourceStartEnd(ISymbolDocument[] docs, int[] lines, int[] columns) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetSourceStartEnd", toObjectFromArray(docs), lines, columns);
+            classInstance.Invoke("GetSequencePoints", offsets, toObjectFromArray(documents), lines, columns, endLines, endColumns);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,17 +204,6 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
     
     // Properties section
     
-    public SymbolToken getToken() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Token");
-            return new SymbolToken(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getSequencePointCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -231,6 +220,17 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         try {
             JCObject val = (JCObject)classInstance.Get("RootScope");
             return new ISymbolScopeImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SymbolToken getToken() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Token");
+            return new SymbolToken(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

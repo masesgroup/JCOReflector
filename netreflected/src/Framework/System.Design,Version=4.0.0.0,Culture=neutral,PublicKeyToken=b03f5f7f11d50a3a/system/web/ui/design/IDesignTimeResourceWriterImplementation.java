@@ -113,7 +113,7 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
         }
     }
 
-    public void AddResource(java.lang.String name, java.lang.String value) throws Throwable {
+    public void AddResource(java.lang.String name, byte[] value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -133,7 +133,7 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
         }
     }
 
-    public void AddResource(java.lang.String name, byte[] value) throws Throwable {
+    public void AddResource(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -153,21 +153,21 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
         }
     }
 
-    public void Generate() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Generate");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Generate() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Generate");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

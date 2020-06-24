@@ -109,21 +109,21 @@ public class RefreshEventArgs extends NetObject  {
     // Constructors section
     
 
-    public RefreshEventArgs(NetType typeChanged) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(typeChanged == null ? null : typeChanged.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public RefreshEventArgs(NetObject componentChanged) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(componentChanged == null ? null : componentChanged.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RefreshEventArgs(NetType typeChanged) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(typeChanged == null ? null : typeChanged.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

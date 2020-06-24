@@ -37,10 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.web.ui.design.IDataSourceViewSchema;
-import system.web.ui.design.IDataSourceViewSchemaImplementation;
 import system.web.ui.design.IDataSourceFieldSchema;
 import system.web.ui.design.IDataSourceFieldSchemaImplementation;
+import system.web.ui.design.IDataSourceViewSchema;
+import system.web.ui.design.IDataSourceViewSchemaImplementation;
 
 
 /**
@@ -93,9 +93,9 @@ public interface IDataSourceViewSchema extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IDataSourceViewSchema[] GetChildren() throws Throwable;
-
     public IDataSourceFieldSchema[] GetFields() throws Throwable;
+
+    public IDataSourceViewSchema[] GetChildren() throws Throwable;
 
 
     

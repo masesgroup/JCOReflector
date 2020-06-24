@@ -114,21 +114,11 @@ public class OperationContractGenerationContext extends NetObject  {
     // Constructors section
     
 
-    public OperationContractGenerationContext(ServiceContractGenerator serviceContractGenerator, ServiceContractGenerationContext contract, OperationDescription operation, CodeTypeDeclaration declaringType, CodeMemberMethod syncMethod, CodeMemberMethod beginMethod, CodeMemberMethod endMethod, CodeMemberMethod taskMethod) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public OperationContractGenerationContext(ServiceContractGenerator serviceContractGenerator, ServiceContractGenerationContext contract, OperationDescription operation, CodeTypeDeclaration declaringType, CodeMemberMethod method) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(serviceContractGenerator == null ? null : serviceContractGenerator.getJCOInstance(), contract == null ? null : contract.getJCOInstance(), operation == null ? null : operation.getJCOInstance(), declaringType == null ? null : declaringType.getJCOInstance(), syncMethod == null ? null : syncMethod.getJCOInstance(), beginMethod == null ? null : beginMethod.getJCOInstance(), endMethod == null ? null : endMethod.getJCOInstance(), taskMethod == null ? null : taskMethod.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OperationContractGenerationContext(ServiceContractGenerator serviceContractGenerator, ServiceContractGenerationContext contract, OperationDescription operation, CodeTypeDeclaration declaringType, CodeMemberMethod syncMethod, CodeMemberMethod beginMethod, CodeMemberMethod endMethod) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(serviceContractGenerator == null ? null : serviceContractGenerator.getJCOInstance(), contract == null ? null : contract.getJCOInstance(), operation == null ? null : operation.getJCOInstance(), declaringType == null ? null : declaringType.getJCOInstance(), syncMethod == null ? null : syncMethod.getJCOInstance(), beginMethod == null ? null : beginMethod.getJCOInstance(), endMethod == null ? null : endMethod.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(serviceContractGenerator == null ? null : serviceContractGenerator.getJCOInstance(), contract == null ? null : contract.getJCOInstance(), operation == null ? null : operation.getJCOInstance(), declaringType == null ? null : declaringType.getJCOInstance(), method == null ? null : method.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,11 +134,21 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
-    public OperationContractGenerationContext(ServiceContractGenerator serviceContractGenerator, ServiceContractGenerationContext contract, OperationDescription operation, CodeTypeDeclaration declaringType, CodeMemberMethod method) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public OperationContractGenerationContext(ServiceContractGenerator serviceContractGenerator, ServiceContractGenerationContext contract, OperationDescription operation, CodeTypeDeclaration declaringType, CodeMemberMethod syncMethod, CodeMemberMethod beginMethod, CodeMemberMethod endMethod) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(serviceContractGenerator == null ? null : serviceContractGenerator.getJCOInstance(), contract == null ? null : contract.getJCOInstance(), operation == null ? null : operation.getJCOInstance(), declaringType == null ? null : declaringType.getJCOInstance(), method == null ? null : method.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(serviceContractGenerator == null ? null : serviceContractGenerator.getJCOInstance(), contract == null ? null : contract.getJCOInstance(), operation == null ? null : operation.getJCOInstance(), declaringType == null ? null : declaringType.getJCOInstance(), syncMethod == null ? null : syncMethod.getJCOInstance(), beginMethod == null ? null : beginMethod.getJCOInstance(), endMethod == null ? null : endMethod.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public OperationContractGenerationContext(ServiceContractGenerator serviceContractGenerator, ServiceContractGenerationContext contract, OperationDescription operation, CodeTypeDeclaration declaringType, CodeMemberMethod syncMethod, CodeMemberMethod beginMethod, CodeMemberMethod endMethod, CodeMemberMethod taskMethod) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(serviceContractGenerator == null ? null : serviceContractGenerator.getJCOInstance(), contract == null ? null : contract.getJCOInstance(), operation == null ? null : operation.getJCOInstance(), declaringType == null ? null : declaringType.getJCOInstance(), syncMethod == null ? null : syncMethod.getJCOInstance(), beginMethod == null ? null : beginMethod.getJCOInstance(), endMethod == null ? null : endMethod.getJCOInstance(), taskMethod == null ? null : taskMethod.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,23 +162,21 @@ public class OperationContractGenerationContext extends NetObject  {
     
     // Properties section
     
-    public ServiceContractGenerationContext getContract() throws Throwable {
+    public boolean getIsAsync() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Contract");
-            return new ServiceContractGenerationContext(val);
+            return (boolean)classInstance.Get("IsAsync");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CodeTypeDeclaration getDeclaringType() throws Throwable {
+    public boolean getIsTask() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DeclaringType");
-            return new CodeTypeDeclaration(val);
+            return (boolean)classInstance.Get("IsTask");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,17 +204,6 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
-    public CodeMemberMethod getTaskMethod() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TaskMethod");
-            return new CodeMemberMethod(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CodeMemberMethod getSyncMethod() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -228,21 +215,23 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
-    public boolean getIsAsync() throws Throwable {
+    public CodeMemberMethod getTaskMethod() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsAsync");
+            JCObject val = (JCObject)classInstance.Get("TaskMethod");
+            return new CodeMemberMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsTask() throws Throwable {
+    public CodeTypeDeclaration getDeclaringType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsTask");
+            JCObject val = (JCObject)classInstance.Get("DeclaringType");
+            return new CodeTypeDeclaration(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,6 +243,17 @@ public class OperationContractGenerationContext extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Operation");
             return new OperationDescription(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ServiceContractGenerationContext getContract() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Contract");
+            return new ServiceContractGenerationContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

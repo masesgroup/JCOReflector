@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.ContractDescription;
 import system.servicemodel.description.ServiceEndpoint;
-import system.servicemodel.dispatcher.DispatchRuntime;
-import system.servicemodel.dispatcher.ClientRuntime;
 import system.servicemodel.channels.BindingParameterCollection;
+import system.servicemodel.dispatcher.ClientRuntime;
+import system.servicemodel.dispatcher.DispatchRuntime;
 
 
 /**
@@ -108,21 +108,11 @@ public class IContractBehaviorImplementation extends NetObject implements IContr
 
     // Methods section
     
-    public void Validate(ContractDescription contractDescription, ServiceEndpoint endpoint) throws Throwable {
+    public void AddBindingParameters(ContractDescription contractDescription, ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Validate", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ApplyDispatchBehavior", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance(), dispatchRuntime == null ? null : dispatchRuntime.getJCOInstance());
+            classInstance.Invoke("AddBindingParameters", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance(), bindingParameters == null ? null : bindingParameters.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -138,11 +128,21 @@ public class IContractBehaviorImplementation extends NetObject implements IContr
         }
     }
 
-    public void AddBindingParameters(ContractDescription contractDescription, ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
+    public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddBindingParameters", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance(), bindingParameters == null ? null : bindingParameters.getJCOInstance());
+            classInstance.Invoke("ApplyDispatchBehavior", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance(), dispatchRuntime == null ? null : dispatchRuntime.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Validate(ContractDescription contractDescription, ServiceEndpoint endpoint) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Validate", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

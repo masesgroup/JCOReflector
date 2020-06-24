@@ -117,22 +117,21 @@ public class JsonDocumentOptions extends NetObject  {
     
     // Properties section
     
-    public JsonCommentHandling getCommentHandling() throws Throwable {
+    public boolean getAllowTrailingCommas() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CommentHandling");
-            return new JsonCommentHandling(val);
+            return (boolean)classInstance.Get("AllowTrailingCommas");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCommentHandling(JsonCommentHandling CommentHandling) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+    public void setAllowTrailingCommas(boolean AllowTrailingCommas) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("CommentHandling", CommentHandling == null ? null : CommentHandling.getJCOInstance());
+            classInstance.Set("AllowTrailingCommas", AllowTrailingCommas);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,21 +157,22 @@ public class JsonDocumentOptions extends NetObject  {
         }
     }
 
-    public boolean getAllowTrailingCommas() throws Throwable {
+    public JsonCommentHandling getCommentHandling() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("AllowTrailingCommas");
+            JCObject val = (JCObject)classInstance.Get("CommentHandling");
+            return new JsonCommentHandling(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAllowTrailingCommas(boolean AllowTrailingCommas) throws Throwable {
+    public void setCommentHandling(JsonCommentHandling CommentHandling) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("AllowTrailingCommas", AllowTrailingCommas);
+            classInstance.Set("CommentHandling", CommentHandling == null ? null : CommentHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

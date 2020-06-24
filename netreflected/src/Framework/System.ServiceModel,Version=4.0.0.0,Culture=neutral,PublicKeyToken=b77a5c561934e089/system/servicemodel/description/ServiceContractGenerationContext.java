@@ -140,17 +140,6 @@ public class ServiceContractGenerationContext extends NetObject  {
     
     // Properties section
     
-    public ContractDescription getContract() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Contract");
-            return new ContractDescription(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CodeTypeDeclaration getContractType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -168,6 +157,17 @@ public class ServiceContractGenerationContext extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("DuplexCallbackType");
             return new CodeTypeDeclaration(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ContractDescription getContract() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Contract");
+            return new ContractDescription(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

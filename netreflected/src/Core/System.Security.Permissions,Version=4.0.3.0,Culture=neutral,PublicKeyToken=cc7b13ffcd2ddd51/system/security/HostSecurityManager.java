@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.policy.ApplicationTrust;
+import system.security.PermissionSet;
 import system.security.policy.Evidence;
+import system.security.policy.ApplicationTrust;
 import system.security.policy.TrustManagerContext;
 import system.reflection.Assembly;
-import system.security.PermissionSet;
 import system.security.policy.EvidenceBase;
-import system.security.policy.PolicyLevel;
 import system.security.HostSecurityManagerOptions;
+import system.security.policy.PolicyLevel;
 
 
 /**
@@ -131,6 +131,17 @@ public class HostSecurityManager extends NetObject  {
     
     // Methods section
     
+    public PermissionSet ResolvePolicy(Evidence evidence) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolvePolicy = (JCObject)classInstance.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance());
+            return new PermissionSet(objResolvePolicy);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ApplicationTrust DetermineApplicationTrust(Evidence applicationEvidence, Evidence activatorEvidence, TrustManagerContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -159,17 +170,6 @@ public class HostSecurityManager extends NetObject  {
         try {
             JCObject objProvideAssemblyEvidence = (JCObject)classInstance.Invoke("ProvideAssemblyEvidence", loadedAssembly == null ? null : loadedAssembly.getJCOInstance(), inputEvidence == null ? null : inputEvidence.getJCOInstance());
             return new Evidence(objProvideAssemblyEvidence);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PermissionSet ResolvePolicy(Evidence evidence) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolvePolicy = (JCObject)classInstance.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance());
-            return new PermissionSet(objResolvePolicy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,23 +235,23 @@ public class HostSecurityManager extends NetObject  {
     
     // Properties section
     
-    public PolicyLevel getDomainPolicy() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DomainPolicy");
-            return new PolicyLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public HostSecurityManagerOptions getFlags() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Flags");
             return new HostSecurityManagerOptions(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PolicyLevel getDomainPolicy() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DomainPolicy");
+            return new PolicyLevel(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

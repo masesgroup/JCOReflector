@@ -37,13 +37,13 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.data.DataTable;
-import system.Guid;
 import system.Single;
-import system.Decimal;
-import system.DateTime;
+import system.data.DataTable;
 import system.data.IDataReader;
 import system.data.IDataReaderImplementation;
+import system.DateTime;
+import system.Decimal;
+import system.Guid;
 
 
 /**
@@ -96,71 +96,71 @@ public interface IDataReader extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Close() throws Throwable;
-
-    public boolean Read() throws Throwable;
-
-    public DataTable GetSchemaTable() throws Throwable;
-
-    public boolean NextResult() throws Throwable;
-
-    public void Dispose() throws Throwable;
-
-    public java.lang.String GetString(int i) throws Throwable;
+    public boolean GetBoolean(int i) throws Throwable;
 
     public boolean IsDBNull(int i) throws Throwable;
 
-    public java.lang.String GetName(int i) throws Throwable;
+    public boolean NextResult() throws Throwable;
 
-    public java.lang.String GetDataTypeName(int i) throws Throwable;
-
-    public NetType GetFieldType(int i) throws Throwable;
-
-    public NetObject GetValue(int i) throws Throwable;
-
-    public int GetValues(NetObject[] values) throws Throwable;
-
-    public int GetOrdinal(java.lang.String name) throws Throwable;
-
-    public boolean GetBoolean(int i) throws Throwable;
+    public boolean Read() throws Throwable;
 
     public byte GetByte(int i) throws Throwable;
 
-    public long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) throws Throwable;
-
     public char GetChar(int i) throws Throwable;
 
-    public long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) throws Throwable;
-
-    public Guid GetGuid(int i) throws Throwable;
+    public double GetDouble(int i) throws Throwable;
 
     public short GetInt16(int i) throws Throwable;
 
     public int GetInt32(int i) throws Throwable;
 
+    public int GetOrdinal(java.lang.String name) throws Throwable;
+
+    public int GetValues(NetObject[] values) throws Throwable;
+
+    public long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) throws Throwable;
+
+    public long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) throws Throwable;
+
     public long GetInt64(int i) throws Throwable;
 
     public Single GetFloat(int i) throws Throwable;
 
-    public double GetDouble(int i) throws Throwable;
+    public DataTable GetSchemaTable() throws Throwable;
 
-    public Decimal GetDecimal(int i) throws Throwable;
+    public IDataReader GetData(int i) throws Throwable;
 
     public DateTime GetDateTime(int i) throws Throwable;
 
-    public IDataReader GetData(int i) throws Throwable;
+    public Decimal GetDecimal(int i) throws Throwable;
+
+    public Guid GetGuid(int i) throws Throwable;
+
+    public NetObject GetValue(int i) throws Throwable;
+
+    public java.lang.String GetDataTypeName(int i) throws Throwable;
+
+    public java.lang.String GetName(int i) throws Throwable;
+
+    public java.lang.String GetString(int i) throws Throwable;
+
+    public NetType GetFieldType(int i) throws Throwable;
+
+    public void Close() throws Throwable;
+
+    public void Dispose() throws Throwable;
 
 
     
     // Properties section
     
-    public int getDepth() throws Throwable;
-
     public boolean getIsClosed() throws Throwable;
 
-    public int getRecordsAffected() throws Throwable;
+    public int getDepth() throws Throwable;
 
     public int getFieldCount() throws Throwable;
+
+    public int getRecordsAffected() throws Throwable;
 
 
 

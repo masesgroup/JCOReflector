@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Decimal;
 import system.data.oracleclient.OracleNumber;
+import system.Decimal;
 import system.data.oracleclient.OracleBoolean;
 
 
@@ -112,16 +112,6 @@ public class OracleNumber extends NetObject  {
     // Constructors section
     
 
-    public OracleNumber(Decimal decValue) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(decValue == null ? null : decValue.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public OracleNumber(double dblValue) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +152,16 @@ public class OracleNumber extends NetObject  {
         }
     }
 
+    public OracleNumber(Decimal decValue) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(decValue == null ? null : decValue.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -171,6 +171,72 @@ public class OracleNumber extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("CompareTo", obj == null ? null : obj.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static OracleBoolean Equals(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objEquals = (JCObject)classType.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new OracleBoolean(objEquals);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static OracleBoolean GreaterThan(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGreaterThan = (JCObject)classType.Invoke("GreaterThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new OracleBoolean(objGreaterThan);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static OracleBoolean GreaterThanOrEqual(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGreaterThanOrEqual = (JCObject)classType.Invoke("GreaterThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new OracleBoolean(objGreaterThanOrEqual);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static OracleBoolean LessThan(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLessThan = (JCObject)classType.Invoke("LessThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new OracleBoolean(objLessThan);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static OracleBoolean LessThanOrEqual(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLessThanOrEqual = (JCObject)classType.Invoke("LessThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new OracleBoolean(objLessThanOrEqual);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static OracleBoolean NotEquals(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objNotEquals = (JCObject)classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return new OracleBoolean(objNotEquals);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,17 +352,6 @@ public class OracleNumber extends NetObject  {
         }
     }
 
-    public static OracleBoolean Equals(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objEquals = (JCObject)classType.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new OracleBoolean(objEquals);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static OracleNumber Exp(OracleNumber p) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -314,50 +369,6 @@ public class OracleNumber extends NetObject  {
         try {
             JCObject objFloor = (JCObject)classType.Invoke("Floor", n == null ? null : n.getJCOInstance());
             return new OracleNumber(objFloor);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static OracleBoolean GreaterThan(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGreaterThan = (JCObject)classType.Invoke("GreaterThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new OracleBoolean(objGreaterThan);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static OracleBoolean GreaterThanOrEqual(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGreaterThanOrEqual = (JCObject)classType.Invoke("GreaterThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new OracleBoolean(objGreaterThanOrEqual);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static OracleBoolean LessThan(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLessThan = (JCObject)classType.Invoke("LessThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new OracleBoolean(objLessThan);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static OracleBoolean LessThanOrEqual(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLessThanOrEqual = (JCObject)classType.Invoke("LessThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new OracleBoolean(objLessThanOrEqual);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,12 +473,12 @@ public class OracleNumber extends NetObject  {
         }
     }
 
-    public static OracleBoolean NotEquals(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+    public static OracleNumber Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNotEquals = (JCObject)classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
-            return new OracleBoolean(objNotEquals);
+            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            return new OracleNumber(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -600,17 +611,6 @@ public class OracleNumber extends NetObject  {
         try {
             JCObject objTruncate = (JCObject)classType.Invoke("Truncate", n == null ? null : n.getJCOInstance(), position);
             return new OracleNumber(objTruncate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static OracleNumber Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
-            return new OracleNumber(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

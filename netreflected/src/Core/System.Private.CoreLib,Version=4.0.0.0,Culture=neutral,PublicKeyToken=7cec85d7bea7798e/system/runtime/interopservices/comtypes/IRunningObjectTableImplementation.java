@@ -105,6 +105,16 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
 
     // Methods section
     
+    public int IsRunning(IMoniker pmkObjectName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("IsRunning", pmkObjectName == null ? null : pmkObjectName.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int Register(int grfFlags, NetObject punkObject, IMoniker pmkObjectName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -120,16 +130,6 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Revoke", dwRegister);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int IsRunning(IMoniker pmkObjectName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("IsRunning", pmkObjectName == null ? null : pmkObjectName.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -129,12 +129,12 @@ public class DataListCommandEventArgs extends NetObject  {
     
     // Properties section
     
-    public DataListItem getItem() throws Throwable {
+    public NetObject getCommandArgument() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Item");
-            return new DataListItem(val);
+            JCObject val = (JCObject)classInstance.Get("CommandArgument");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,12 +161,12 @@ public class DataListCommandEventArgs extends NetObject  {
         }
     }
 
-    public NetObject getCommandArgument() throws Throwable {
+    public DataListItem getItem() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandArgument");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("Item");
+            return new DataListItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

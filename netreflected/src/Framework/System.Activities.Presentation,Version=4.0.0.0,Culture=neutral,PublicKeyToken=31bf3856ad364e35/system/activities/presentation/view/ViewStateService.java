@@ -114,6 +114,16 @@ public class ViewStateService extends NetObject  {
     
     // Methods section
     
+    public boolean RemoveViewState(ModelItem modelItem, java.lang.String key) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("RemoveViewState", modelItem == null ? null : modelItem.getJCOInstance(), key);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject RetrieveViewState(ModelItem modelItem, java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,16 +155,6 @@ public class ViewStateService extends NetObject  {
         }
     }
 
-    public boolean RemoveViewState(ModelItem modelItem, java.lang.String key) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("RemoveViewState", modelItem == null ? null : modelItem.getJCOInstance(), key);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -163,26 +163,6 @@ public class ViewStateService extends NetObject  {
 
     // Instance Events section
     
-
-    public void addViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("ViewStateChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("ViewStateChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
     public void addUndoableViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
@@ -199,6 +179,26 @@ public class ViewStateService extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UndoableViewStateChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ViewStateChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ViewStateChanged", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

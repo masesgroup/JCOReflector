@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.Assembly;
-import system.io.TextWriter;
-import system.web.compilation.BuildProvider;
-import system.codedom.CodeCompileUnit;
 import system.io.Stream;
+import system.web.compilation.BuildProvider;
+import system.io.TextWriter;
+import system.reflection.Assembly;
+import system.codedom.CodeCompileUnit;
 import system.codedom.compiler.CodeDomProvider;
 
 
@@ -118,11 +118,12 @@ public class AssemblyBuilder extends NetObject  {
     
     // Methods section
     
-    public void AddAssemblyReference(Assembly a) throws Throwable {
+    public Stream CreateEmbeddedResource(BuildProvider buildProvider, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddAssemblyReference", a == null ? null : a.getJCOInstance());
+            JCObject objCreateEmbeddedResource = (JCObject)classInstance.Invoke("CreateEmbeddedResource", buildProvider == null ? null : buildProvider.getJCOInstance(), name);
+            return new Stream(objCreateEmbeddedResource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -134,6 +135,26 @@ public class AssemblyBuilder extends NetObject  {
         try {
             JCObject objCreateCodeFile = (JCObject)classInstance.Invoke("CreateCodeFile", buildProvider == null ? null : buildProvider.getJCOInstance());
             return new TextWriter(objCreateCodeFile);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetTempFilePhysicalPath(java.lang.String extension) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.AccessViolationException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetTempFilePhysicalPath", extension);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddAssemblyReference(Assembly a) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddAssemblyReference", a == null ? null : a.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,27 +175,6 @@ public class AssemblyBuilder extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateTypeFactory", typeName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Stream CreateEmbeddedResource(BuildProvider buildProvider, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.security.SecurityException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateEmbeddedResource = (JCObject)classInstance.Invoke("CreateEmbeddedResource", buildProvider == null ? null : buildProvider.getJCOInstance(), name);
-            return new Stream(objCreateEmbeddedResource);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetTempFilePhysicalPath(java.lang.String extension) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.AccessViolationException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetTempFilePhysicalPath", extension);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

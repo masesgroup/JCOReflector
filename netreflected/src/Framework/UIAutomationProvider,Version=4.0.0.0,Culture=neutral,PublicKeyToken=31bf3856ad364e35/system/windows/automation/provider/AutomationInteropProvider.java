@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.windows.automation.provider.IRawElementProviderSimple;
 import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
-import system.windows.automation.AutomationPropertyChangedEventArgs;
 import system.windows.automation.AutomationEvent;
 import system.windows.automation.AutomationEventArgs;
+import system.windows.automation.AutomationPropertyChangedEventArgs;
 import system.windows.automation.StructureChangedEventArgs;
 
 
@@ -118,21 +118,21 @@ public class AutomationInteropProvider extends NetObject  {
     
     // Methods section
     
-    public static void RaiseAutomationPropertyChangedEvent(IRawElementProviderSimple element, AutomationPropertyChangedEventArgs e) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("RaiseAutomationPropertyChangedEvent", element == null ? null : element.getJCOInstance(), e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void RaiseAutomationEvent(AutomationEvent eventId, IRawElementProviderSimple provider, AutomationEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RaiseAutomationEvent", eventId == null ? null : eventId.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), e == null ? null : e.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RaiseAutomationPropertyChangedEvent(IRawElementProviderSimple element, AutomationPropertyChangedEventArgs e) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RaiseAutomationPropertyChangedEvent", element == null ? null : element.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

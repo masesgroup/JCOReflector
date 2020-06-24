@@ -91,9 +91,9 @@ public interface IDynamicMessageSink extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void ProcessMessageStart(IMessage reqMsg, boolean bCliSide, boolean bAsync) throws Throwable;
-
     public void ProcessMessageFinish(IMessage replyMsg, boolean bCliSide, boolean bAsync) throws Throwable;
+
+    public void ProcessMessageStart(IMessage reqMsg, boolean bCliSide, boolean bAsync) throws Throwable;
 
 
     

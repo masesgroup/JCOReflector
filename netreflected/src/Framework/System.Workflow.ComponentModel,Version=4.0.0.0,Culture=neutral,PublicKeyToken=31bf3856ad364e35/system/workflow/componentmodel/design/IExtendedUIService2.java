@@ -91,9 +91,9 @@ public interface IExtendedUIService2 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public long GetTargetFrameworkVersion() throws Throwable;
-
     public boolean IsSupportedType(NetType type) throws Throwable;
+
+    public long GetTargetFrameworkVersion() throws Throwable;
 
     public Assembly GetReflectionAssembly(AssemblyName assemblyName) throws Throwable;
 

@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.SecurityZone;
-import system.security.policy.Zone;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
 import system.security.policy.Evidence;
 import system.security.policy.EvidenceBase;
+import system.security.policy.Zone;
 
 
 /**
@@ -140,17 +140,6 @@ public class Zone extends NetObject  {
         }
     }
 
-    public static Zone CreateFromUrl(java.lang.String url) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateFromUrl = (JCObject)classType.Invoke("CreateFromUrl", url);
-            return new Zone(objCreateFromUrl);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IPermission CreateIdentityPermission(Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -168,6 +157,17 @@ public class Zone extends NetObject  {
         try {
             JCObject objClone = (JCObject)classInstance.Invoke("Clone");
             return new EvidenceBase(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Zone CreateFromUrl(java.lang.String url) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateFromUrl = (JCObject)classType.Invoke("CreateFromUrl", url);
+            return new Zone(objCreateFromUrl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

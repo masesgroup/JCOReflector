@@ -153,22 +153,22 @@ public class TemplateBindingExtension extends NetObject  {
     
     // Properties section
     
-    public DependencyProperty getProperty() throws Throwable {
+    public NetObject getConverterParameter() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Property");
-            return new DependencyProperty(val);
+            JCObject val = (JCObject)classInstance.Get("ConverterParameter");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setProperty(DependencyProperty Property) throws Throwable, system.ArgumentNullException {
+    public void setConverterParameter(NetObject ConverterParameter) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Property", Property == null ? null : Property.getJCOInstance());
+            classInstance.Set("ConverterParameter", ConverterParameter == null ? null : ConverterParameter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,22 +195,22 @@ public class TemplateBindingExtension extends NetObject  {
         }
     }
 
-    public NetObject getConverterParameter() throws Throwable {
+    public DependencyProperty getProperty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ConverterParameter");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("Property");
+            return new DependencyProperty(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setConverterParameter(NetObject ConverterParameter) throws Throwable {
+    public void setProperty(DependencyProperty Property) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ConverterParameter", ConverterParameter == null ? null : ConverterParameter.getJCOInstance());
+            classInstance.Set("Property", Property == null ? null : Property.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

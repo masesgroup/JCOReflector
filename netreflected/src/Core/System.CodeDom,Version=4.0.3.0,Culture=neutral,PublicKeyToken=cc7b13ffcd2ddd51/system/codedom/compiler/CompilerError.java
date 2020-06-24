@@ -137,21 +137,21 @@ public class CompilerError extends NetObject  {
     
     // Properties section
     
-    public int getLine() throws Throwable {
+    public boolean getIsWarning() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Line");
+            return (boolean)classInstance.Get("IsWarning");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setLine(int Line) throws Throwable {
+    public void setIsWarning(boolean IsWarning) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Line", Line);
+            classInstance.Set("IsWarning", IsWarning);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,6 +172,26 @@ public class CompilerError extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Column", Column);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getLine() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Line");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setLine(int Line) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Line", Line);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,26 +232,6 @@ public class CompilerError extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorText", ErrorText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsWarning() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsWarning");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIsWarning(boolean IsWarning) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IsWarning", IsWarning);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -149,17 +149,6 @@ public class CharacterBufferRange extends NetObject  {
     
     // Properties section
     
-    public CharacterBufferReference getCharacterBufferReference() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CharacterBufferReference");
-            return new CharacterBufferReference(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getLength() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,6 +165,17 @@ public class CharacterBufferRange extends NetObject  {
         try {
             JCObject val = (JCObject)classType.Get("Empty");
             return new CharacterBufferRange(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CharacterBufferReference getCharacterBufferReference() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CharacterBufferReference");
+            return new CharacterBufferReference(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

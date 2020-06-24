@@ -114,6 +114,17 @@ public class DependencyProperty extends NetObject  {
     
     // Methods section
     
+    public static DependencyProperty FromName(java.lang.String propertyName, NetType ownerType) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromName = (JCObject)classType.Invoke("FromName", propertyName, ownerType == null ? null : ownerType.getJCOInstance());
+            return new DependencyProperty(objFromName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DependencyProperty Register(java.lang.String name, NetType propertyType, NetType ownerType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -169,31 +180,10 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public static DependencyProperty FromName(java.lang.String propertyName, NetType ownerType) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFromName = (JCObject)classType.Invoke("FromName", propertyName, ownerType == null ? null : ownerType.getJCOInstance());
-            return new DependencyProperty(objFromName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getIsEvent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsEvent");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsAttached() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -204,22 +194,21 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
+    public boolean getIsEvent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            return (boolean)classInstance.Get("IsEvent");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType getPropertyType() throws Throwable {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyType");
-            return new NetType(val);
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,12 +225,12 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public PropertyMetadata getDefaultMetadata() throws Throwable {
+    public NetType getPropertyType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultMetadata");
-            return new PropertyMetadata(val);
+            JCObject val = (JCObject)classInstance.Get("PropertyType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,6 +242,17 @@ public class DependencyProperty extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ValidatorType");
             return new NetType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyMetadata getDefaultMetadata() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DefaultMetadata");
+            return new PropertyMetadata(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

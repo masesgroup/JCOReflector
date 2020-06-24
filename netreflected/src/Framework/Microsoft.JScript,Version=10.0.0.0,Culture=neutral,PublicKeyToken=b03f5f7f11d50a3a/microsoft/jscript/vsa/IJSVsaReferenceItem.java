@@ -98,6 +98,10 @@ public interface IJSVsaReferenceItem extends IJCOBridgeReflected {
     
     // Properties section
     
+    public boolean getIsDirty() throws Throwable;
+
+    public JSVsaItemType getItemType() throws Throwable;
+
     public java.lang.String getAssemblyName() throws Throwable;
 
     public void setAssemblyName(java.lang.String AssemblyName) throws Throwable;
@@ -105,10 +109,6 @@ public interface IJSVsaReferenceItem extends IJCOBridgeReflected {
     public java.lang.String getName() throws Throwable;
 
     public void setName(java.lang.String Name) throws Throwable;
-
-    public JSVsaItemType getItemType() throws Throwable;
-
-    public boolean getIsDirty() throws Throwable;
 
 
 

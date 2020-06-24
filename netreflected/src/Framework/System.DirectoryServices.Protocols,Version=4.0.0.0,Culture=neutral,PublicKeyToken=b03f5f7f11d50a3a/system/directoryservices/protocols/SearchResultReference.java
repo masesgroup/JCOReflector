@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Uri;
 import system.directoryservices.protocols.DirectoryControl;
+import system.Uri;
 
 
 /**
@@ -118,23 +118,6 @@ public class SearchResultReference extends NetObject  {
     
     // Properties section
     
-    public Uri[] getReference() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.security.SecurityException, system.MemberAccessException, system.InvalidOperationException, system.NullReferenceException, system.UriFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Uri> resultingArrayList = new ArrayList<Uri>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Reference");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new Uri(resultingObject));
-            }
-            Uri[] resultingArray = new Uri[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DirectoryControl[] getControls() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.FormatException, system.OutOfMemoryException, system.directoryservices.protocols.BerConversionException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,6 +128,23 @@ public class SearchResultReference extends NetObject  {
 			    resultingArrayList.add(new DirectoryControl(resultingObject));
             }
             DirectoryControl[] resultingArray = new DirectoryControl[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Uri[] getReference() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.security.SecurityException, system.MemberAccessException, system.InvalidOperationException, system.NullReferenceException, system.UriFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Uri> resultingArrayList = new ArrayList<Uri>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("Reference");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new Uri(resultingObject));
+            }
+            Uri[] resultingArray = new Uri[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (JCNativeException jcne) {

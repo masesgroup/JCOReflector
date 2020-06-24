@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.runtime.tracking.ActivityTrackingLocationCollection;
-import system.workflow.runtime.tracking.TrackingAnnotationCollection;
 import system.workflow.runtime.tracking.ExtractCollection;
+import system.workflow.runtime.tracking.TrackingAnnotationCollection;
 
 
 /**
@@ -130,17 +130,6 @@ public class ActivityTrackPoint extends NetObject  {
     
     // Properties section
     
-    public ActivityTrackingLocationCollection getMatchingLocations() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MatchingLocations");
-            return new ActivityTrackingLocationCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ActivityTrackingLocationCollection getExcludedLocations() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -152,12 +141,12 @@ public class ActivityTrackPoint extends NetObject  {
         }
     }
 
-    public TrackingAnnotationCollection getAnnotations() throws Throwable {
+    public ActivityTrackingLocationCollection getMatchingLocations() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Annotations");
-            return new TrackingAnnotationCollection(val);
+            JCObject val = (JCObject)classInstance.Get("MatchingLocations");
+            return new ActivityTrackingLocationCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,6 +158,17 @@ public class ActivityTrackPoint extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Extracts");
             return new ExtractCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TrackingAnnotationCollection getAnnotations() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Annotations");
+            return new TrackingAnnotationCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

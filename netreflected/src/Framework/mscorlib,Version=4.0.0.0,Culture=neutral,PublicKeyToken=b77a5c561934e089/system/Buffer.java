@@ -113,16 +113,6 @@ public class Buffer extends NetObject  {
     
     // Methods section
     
-    public static void BlockCopy(Array src, int srcOffset, Array dst, int dstOffset, int count) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("BlockCopy", src == null ? null : src.getJCOInstance(), srcOffset, dst == null ? null : dst.getJCOInstance(), dstOffset, count);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static byte GetByte(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -133,21 +123,31 @@ public class Buffer extends NetObject  {
         }
     }
 
-    public static void SetByte(Array array, int index, byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SetByte", array == null ? null : array.getJCOInstance(), index, value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static int ByteLength(Array array) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (int)classType.Invoke("ByteLength", array == null ? null : array.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void BlockCopy(Array src, int srcOffset, Array dst, int dstOffset, int count) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("BlockCopy", src == null ? null : src.getJCOInstance(), srcOffset, dst == null ? null : dst.getJCOInstance(), dstOffset, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetByte(Array array, int index, byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetByte", array == null ? null : array.getJCOInstance(), index, value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -103,21 +103,21 @@ public class IProcessHostSupportFunctionsImplementation extends NetObject implem
 
     // Methods section
     
-    public java.lang.String GetRootWebConfigFilename() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetRootWebConfigFilename");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String GetAppHostConfigFilename() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("GetAppHostConfigFilename");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetRootWebConfigFilename() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetRootWebConfigFilename");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

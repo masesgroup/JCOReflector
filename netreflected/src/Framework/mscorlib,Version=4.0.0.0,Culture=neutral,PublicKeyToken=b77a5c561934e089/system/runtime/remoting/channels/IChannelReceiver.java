@@ -99,9 +99,9 @@ public interface IChannelReceiver extends IJCOBridgeReflected {
     
     // Properties section
     
-    public NetObject getChannelData() throws Throwable;
-
     public int getChannelPriority() throws Throwable;
+
+    public NetObject getChannelData() throws Throwable;
 
     public java.lang.String getChannelName() throws Throwable;
 

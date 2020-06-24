@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.reflection.Assembly;
 import system.reflection.AssemblyName;
 import system.runtime.versioning.FrameworkName;
-import system.reflection.Assembly;
 
 
 /**
@@ -106,22 +106,22 @@ public class IDesignTimeAssemblyLoaderImplementation extends NetObject implement
 
     // Methods section
     
-    public java.lang.String GetTargetAssemblyPath(AssemblyName runtimeOrTargetAssemblyName, java.lang.String suggestedAssemblyPath, FrameworkName targetFramework) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetTargetAssemblyPath", runtimeOrTargetAssemblyName == null ? null : runtimeOrTargetAssemblyName.getJCOInstance(), suggestedAssemblyPath, targetFramework == null ? null : targetFramework.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Assembly LoadRuntimeAssembly(AssemblyName targetAssemblyName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objLoadRuntimeAssembly = (JCObject)classInstance.Invoke("LoadRuntimeAssembly", targetAssemblyName == null ? null : targetAssemblyName.getJCOInstance());
             return new Assembly(objLoadRuntimeAssembly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetTargetAssemblyPath(AssemblyName runtimeOrTargetAssemblyName, java.lang.String suggestedAssemblyPath, FrameworkName targetFramework) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetTargetAssemblyPath", runtimeOrTargetAssemblyName == null ? null : runtimeOrTargetAssemblyName.getJCOInstance(), suggestedAssemblyPath, targetFramework == null ? null : targetFramework.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

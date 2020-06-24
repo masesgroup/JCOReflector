@@ -41,12 +41,12 @@ import java.util.ArrayList;
 import system.xml.XmlNamespaceManager;
 import system.xml.xsl.XsltContext;
 import system.xml.XmlReader;
-import system.xml.schema.XmlSchemaType;
-import system.xml.schema.XmlSchemaSet;
 import system.servicemodel.channels.Message;
 import system.servicemodel.channels.MessageBuffer;
-import system.xml.xpath.XPathNavigator;
 import system.servicemodel.dispatcher.SeekableXPathNavigator;
+import system.xml.xpath.XPathNavigator;
+import system.xml.schema.XmlSchemaType;
+import system.xml.schema.XmlSchemaSet;
 import system.xml.XmlWriter;
 
 
@@ -193,17 +193,6 @@ public class XPathMessageFilter extends NetObject  {
     
     // Methods section
     
-    public static XmlSchemaType StaticGetSchema(XmlSchemaSet schemas) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.RankException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.xml.XmlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objStaticGetSchema = (JCObject)classType.Invoke("StaticGetSchema", schemas == null ? null : schemas.getJCOInstance());
-            return new XmlSchemaType(objStaticGetSchema);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Match(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -224,6 +213,16 @@ public class XPathMessageFilter extends NetObject  {
         }
     }
 
+    public boolean Match(SeekableXPathNavigator navigator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.xpath.XPathException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Match", navigator == null ? null : navigator.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean Match(XPathNavigator navigator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.xpath.XPathException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -234,11 +233,12 @@ public class XPathMessageFilter extends NetObject  {
         }
     }
 
-    public boolean Match(SeekableXPathNavigator navigator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.xpath.XPathException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static XmlSchemaType StaticGetSchema(XmlSchemaSet schemas) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.RankException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.xml.XmlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Invoke("Match", navigator == null ? null : navigator.getJCOInstance());
+            JCObject objStaticGetSchema = (JCObject)classType.Invoke("StaticGetSchema", schemas == null ? null : schemas.getJCOInstance());
+            return new XmlSchemaType(objStaticGetSchema);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,17 +268,6 @@ public class XPathMessageFilter extends NetObject  {
     
     // Properties section
     
-    public XmlNamespaceManager getNamespaces() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Namespaces");
-            return new XmlNamespaceManager(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getNodeQuota() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -304,6 +293,17 @@ public class XPathMessageFilter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("XPath");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlNamespaceManager getNamespaces() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Namespaces");
+            return new XmlNamespaceManager(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

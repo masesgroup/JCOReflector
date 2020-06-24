@@ -94,15 +94,15 @@ public interface ISecurityCapabilities extends IJCOBridgeReflected {
     
     // Properties section
     
-    public ProtectionLevel getSupportedRequestProtectionLevel() throws Throwable;
-
-    public ProtectionLevel getSupportedResponseProtectionLevel() throws Throwable;
-
     public boolean getSupportsClientAuthentication() throws Throwable;
 
     public boolean getSupportsClientWindowsIdentity() throws Throwable;
 
     public boolean getSupportsServerAuthentication() throws Throwable;
+
+    public ProtectionLevel getSupportedRequestProtectionLevel() throws Throwable;
+
+    public ProtectionLevel getSupportedResponseProtectionLevel() throws Throwable;
 
 
 

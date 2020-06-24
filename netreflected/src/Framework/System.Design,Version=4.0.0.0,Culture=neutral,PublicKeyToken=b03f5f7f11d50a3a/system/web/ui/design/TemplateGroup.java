@@ -169,17 +169,6 @@ public class TemplateGroup extends NetObject  {
         }
     }
 
-    public Style getGroupStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("GroupStyle");
-            return new Style(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TemplateDefinition[] getTemplates() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -192,6 +181,17 @@ public class TemplateGroup extends NetObject  {
             TemplateDefinition[] resultingArray = new TemplateDefinition[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Style getGroupStyle() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("GroupStyle");
+            return new Style(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

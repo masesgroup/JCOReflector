@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.diagnostics.Activity;
 import system.IDisposable;
 import system.IDisposableImplementation;
-import system.diagnostics.Activity;
 
 
 /**
@@ -156,21 +156,12 @@ public class DiagnosticListener extends NetObject  {
         }
     }
 
-    public void Write(java.lang.String name, NetObject value) throws Throwable {
+    public Activity StartActivity(Activity activity, NetObject args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", name, value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void OnActivityImport(Activity activity, NetObject payload) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("OnActivityImport", activity == null ? null : activity.getJCOInstance(), payload == null ? null : payload.getJCOInstance());
+            JCObject objStartActivity = (JCObject)classInstance.Invoke("StartActivity", activity == null ? null : activity.getJCOInstance(), args == null ? null : args.getJCOInstance());
+            return new Activity(objStartActivity);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,12 +177,11 @@ public class DiagnosticListener extends NetObject  {
         }
     }
 
-    public Activity StartActivity(Activity activity, NetObject args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+    public void OnActivityImport(Activity activity, NetObject payload) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objStartActivity = (JCObject)classInstance.Invoke("StartActivity", activity == null ? null : activity.getJCOInstance(), args == null ? null : args.getJCOInstance());
-            return new Activity(objStartActivity);
+            classInstance.Invoke("OnActivityImport", activity == null ? null : activity.getJCOInstance(), payload == null ? null : payload.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,6 +192,16 @@ public class DiagnosticListener extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopActivity", activity == null ? null : activity.getJCOInstance(), args == null ? null : args.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Write(java.lang.String name, NetObject value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

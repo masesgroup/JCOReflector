@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.presentation.propertyediting.PropertyEntry;
-import system.windows.Size;
 import system.componentmodel.EditorAttribute;
 import system.activities.presentation.propertyediting.CategoryEditor;
+import system.windows.Size;
 import system.windows.DataTemplate;
 
 
@@ -127,17 +127,6 @@ public class CategoryEditor extends NetObject  {
         }
     }
 
-    public NetObject GetImage(Size desiredSize) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetImage = (JCObject)classInstance.Invoke("GetImage", desiredSize == null ? null : desiredSize.getJCOInstance());
-            return new NetObject(objGetImage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static EditorAttribute CreateEditorAttribute(CategoryEditor editor) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -155,6 +144,17 @@ public class CategoryEditor extends NetObject  {
         try {
             JCObject objCreateEditorAttribute = (JCObject)classType.Invoke("CreateEditorAttribute", categoryEditorType == null ? null : categoryEditorType.getJCOInstance());
             return new EditorAttribute(objCreateEditorAttribute);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetImage(Size desiredSize) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetImage = (JCObject)classInstance.Invoke("GetImage", desiredSize == null ? null : desiredSize.getJCOInstance());
+            return new NetObject(objGetImage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

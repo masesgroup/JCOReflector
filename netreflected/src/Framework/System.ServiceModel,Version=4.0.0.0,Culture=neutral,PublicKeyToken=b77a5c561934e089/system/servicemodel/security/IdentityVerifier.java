@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.security.IdentityVerifier;
 import system.servicemodel.EndpointIdentity;
 import system.identitymodel.policy.AuthorizationContext;
 import system.servicemodel.EndpointAddress;
+import system.servicemodel.security.IdentityVerifier;
 
 
 /**
@@ -116,22 +116,22 @@ public class IdentityVerifier extends NetObject  {
     
     // Methods section
     
+    public boolean CheckAccess(EndpointIdentity identity, AuthorizationContext authContext) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("CheckAccess", identity == null ? null : identity.getJCOInstance(), authContext == null ? null : authContext.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static IdentityVerifier CreateDefault() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateDefault = (JCObject)classType.Invoke("CreateDefault");
             return new IdentityVerifier(objCreateDefault);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean CheckAccess(EndpointIdentity identity, AuthorizationContext authContext) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CheckAccess", identity == null ? null : identity.getJCOInstance(), authContext == null ? null : authContext.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

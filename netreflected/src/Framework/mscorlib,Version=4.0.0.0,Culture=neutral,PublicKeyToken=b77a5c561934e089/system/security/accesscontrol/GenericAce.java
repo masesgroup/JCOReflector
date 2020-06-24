@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.accesscontrol.GenericAce;
-import system.security.accesscontrol.AceType;
 import system.security.accesscontrol.AceFlags;
+import system.security.accesscontrol.AceType;
+import system.security.accesscontrol.AuditFlags;
 import system.security.accesscontrol.InheritanceFlags;
 import system.security.accesscontrol.PropagationFlags;
-import system.security.accesscontrol.AuditFlags;
 
 
 /**
@@ -118,23 +118,23 @@ public class GenericAce extends NetObject  {
     
     // Methods section
     
-    public static GenericAce CreateFromBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.SystemException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateFromBinaryForm = (JCObject)classType.Invoke("CreateFromBinaryForm", binaryForm, offset);
-            return new GenericAce(objCreateFromBinaryForm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public GenericAce Copy() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.SystemException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
             return new GenericAce(objCopy);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static GenericAce CreateFromBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.SystemException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateFromBinaryForm = (JCObject)classType.Invoke("CreateFromBinaryForm", binaryForm, offset);
+            return new GenericAce(objCreateFromBinaryForm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,12 +154,21 @@ public class GenericAce extends NetObject  {
     
     // Properties section
     
-    public AceType getAceType() throws Throwable {
+    public boolean getIsInherited() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AceType");
-            return new AceType(val);
+            return (boolean)classInstance.Get("IsInherited");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getBinaryLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("BinaryLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,11 +195,23 @@ public class GenericAce extends NetObject  {
         }
     }
 
-    public boolean getIsInherited() throws Throwable {
+    public AceType getAceType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsInherited");
+            JCObject val = (JCObject)classInstance.Get("AceType");
+            return new AceType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AuditFlags getAuditFlags() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AuditFlags");
+            return new AuditFlags(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,27 +234,6 @@ public class GenericAce extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("PropagationFlags");
             return new PropagationFlags(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AuditFlags getAuditFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AuditFlags");
-            return new AuditFlags(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getBinaryLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("BinaryLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

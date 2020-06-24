@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.XmlNameTable;
+import system.xml.schema.XmlSchemaDatatype;
 import system.xml.IXmlNamespaceResolver;
 import system.xml.IXmlNamespaceResolverImplementation;
-import system.xml.schema.XmlSchemaDatatype;
-import system.xml.XmlTokenizedType;
+import system.xml.XmlNameTable;
 import system.xml.schema.XmlSchemaDatatypeVariety;
 import system.xml.schema.XmlTypeCode;
+import system.xml.XmlTokenizedType;
 
 
 /**
@@ -119,12 +119,11 @@ public class XmlSchemaDatatype extends NetObject  {
     
     // Methods section
     
-    public NetObject ParseValue(java.lang.String s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr) throws Throwable {
+    public boolean IsDerivedFrom(XmlSchemaDatatype datatype) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objParseValue = (JCObject)classInstance.Invoke("ParseValue", s, nameTable == null ? null : nameTable.getJCOInstance(), nsmgr == null ? null : nsmgr.getJCOInstance());
-            return new NetObject(objParseValue);
+            return (boolean)classInstance.Invoke("IsDerivedFrom", datatype == null ? null : datatype.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,11 +151,12 @@ public class XmlSchemaDatatype extends NetObject  {
         }
     }
 
-    public boolean IsDerivedFrom(XmlSchemaDatatype datatype) throws Throwable {
+    public NetObject ParseValue(java.lang.String s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDerivedFrom", datatype == null ? null : datatype.getJCOInstance());
+            JCObject objParseValue = (JCObject)classInstance.Invoke("ParseValue", s, nameTable == null ? null : nameTable.getJCOInstance(), nsmgr == null ? null : nsmgr.getJCOInstance());
+            return new NetObject(objParseValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,17 +172,6 @@ public class XmlSchemaDatatype extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ValueType");
             return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlTokenizedType getTokenizedType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TokenizedType");
-            return new XmlTokenizedType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,6 +194,17 @@ public class XmlSchemaDatatype extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("TypeCode");
             return new XmlTypeCode(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlTokenizedType getTokenizedType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TokenizedType");
+            return new XmlTokenizedType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

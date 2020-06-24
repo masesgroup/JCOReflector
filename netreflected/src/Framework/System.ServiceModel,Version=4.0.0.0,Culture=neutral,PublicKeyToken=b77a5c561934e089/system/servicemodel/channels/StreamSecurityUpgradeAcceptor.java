@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.security.SecurityMessageProperty;
-import system.io.Stream;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.io.Stream;
 import system.AsyncCallback;
+import system.servicemodel.security.SecurityMessageProperty;
 
 
 /**
@@ -117,28 +117,6 @@ public class StreamSecurityUpgradeAcceptor extends NetObject  {
     
     // Methods section
     
-    public SecurityMessageProperty GetRemoteSecurity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRemoteSecurity = (JCObject)classInstance.Invoke("GetRemoteSecurity");
-            return new SecurityMessageProperty(objGetRemoteSecurity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Stream AcceptUpgrade(Stream stream) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAcceptUpgrade = (JCObject)classInstance.Invoke("AcceptUpgrade", stream == null ? null : stream.getJCOInstance());
-            return new Stream(objAcceptUpgrade);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean CanUpgrade(java.lang.String contentType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -160,12 +138,34 @@ public class StreamSecurityUpgradeAcceptor extends NetObject  {
         }
     }
 
+    public Stream AcceptUpgrade(Stream stream) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAcceptUpgrade = (JCObject)classInstance.Invoke("AcceptUpgrade", stream == null ? null : stream.getJCOInstance());
+            return new Stream(objAcceptUpgrade);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Stream EndAcceptUpgrade(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objEndAcceptUpgrade = (JCObject)classInstance.Invoke("EndAcceptUpgrade", result == null ? null : result.getJCOInstance());
             return new Stream(objEndAcceptUpgrade);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityMessageProperty GetRemoteSecurity() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetRemoteSecurity = (JCObject)classInstance.Invoke("GetRemoteSecurity");
+            return new SecurityMessageProperty(objGetRemoteSecurity);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

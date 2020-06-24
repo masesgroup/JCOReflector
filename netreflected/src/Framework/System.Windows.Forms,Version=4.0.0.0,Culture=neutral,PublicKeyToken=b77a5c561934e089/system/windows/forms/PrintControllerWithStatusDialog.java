@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.drawing.printing.PrintController;
-import system.drawing.printing.PrintDocument;
-import system.drawing.printing.PrintEventArgs;
 import system.drawing.Graphics;
+import system.drawing.printing.PrintDocument;
 import system.drawing.printing.PrintPageEventArgs;
+import system.drawing.printing.PrintEventArgs;
 
 
 /**
@@ -138,16 +138,6 @@ public class PrintControllerWithStatusDialog extends NetObject  {
     
     // Methods section
     
-    public void OnStartPrint(PrintDocument document, PrintEventArgs e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.componentmodel.Win32Exception, system.AccessViolationException, system.IndexOutOfRangeException, system.drawing.printing.InvalidPrinterException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("OnStartPrint", document == null ? null : document.getJCOInstance(), e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Graphics OnStartPage(PrintDocument document, PrintPageEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.componentmodel.InvalidEnumArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -174,6 +164,16 @@ public class PrintControllerWithStatusDialog extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnEndPrint", document == null ? null : document.getJCOInstance(), e == null ? null : e.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void OnStartPrint(PrintDocument document, PrintEventArgs e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.componentmodel.Win32Exception, system.AccessViolationException, system.IndexOutOfRangeException, system.drawing.printing.InvalidPrinterException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("OnStartPrint", document == null ? null : document.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -150,11 +150,11 @@ public class HierarchicalVirtualizationItemDesiredSizes extends NetObject  {
         }
     }
 
-    public Size getLogicalSizeInViewport() throws Throwable {
+    public Size getLogicalSizeAfterViewport() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("LogicalSizeInViewport");
+            JCObject val = (JCObject)classInstance.Get("LogicalSizeAfterViewport");
             return new Size(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -172,11 +172,11 @@ public class HierarchicalVirtualizationItemDesiredSizes extends NetObject  {
         }
     }
 
-    public Size getLogicalSizeAfterViewport() throws Throwable {
+    public Size getLogicalSizeInViewport() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("LogicalSizeAfterViewport");
+            JCObject val = (JCObject)classInstance.Get("LogicalSizeInViewport");
             return new Size(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,11 +194,11 @@ public class HierarchicalVirtualizationItemDesiredSizes extends NetObject  {
         }
     }
 
-    public Size getPixelSizeInViewport() throws Throwable {
+    public Size getPixelSizeAfterViewport() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PixelSizeInViewport");
+            JCObject val = (JCObject)classInstance.Get("PixelSizeAfterViewport");
             return new Size(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -216,11 +216,11 @@ public class HierarchicalVirtualizationItemDesiredSizes extends NetObject  {
         }
     }
 
-    public Size getPixelSizeAfterViewport() throws Throwable {
+    public Size getPixelSizeInViewport() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PixelSizeAfterViewport");
+            JCObject val = (JCObject)classInstance.Get("PixelSizeInViewport");
             return new Size(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

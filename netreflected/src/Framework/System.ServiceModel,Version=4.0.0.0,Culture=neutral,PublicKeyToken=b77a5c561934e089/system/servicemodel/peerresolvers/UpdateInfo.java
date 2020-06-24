@@ -111,21 +111,21 @@ public class UpdateInfo extends NetObject  {
     // Constructors section
     
 
-    public UpdateInfo(Guid registrationId, Guid client, java.lang.String meshId, PeerNodeAddress address) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(registrationId == null ? null : registrationId.getJCOInstance(), client == null ? null : client.getJCOInstance(), meshId, address == null ? null : address.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public UpdateInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UpdateInfo(Guid registrationId, Guid client, java.lang.String meshId, PeerNodeAddress address) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(registrationId == null ? null : registrationId.getJCOInstance(), client == null ? null : client.getJCOInstance(), meshId, address == null ? null : address.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,22 +171,22 @@ public class UpdateInfo extends NetObject  {
         }
     }
 
-    public java.lang.String getMeshId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("MeshId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PeerNodeAddress getNodeAddress() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("NodeAddress");
             return new PeerNodeAddress(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getMeshId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("MeshId");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

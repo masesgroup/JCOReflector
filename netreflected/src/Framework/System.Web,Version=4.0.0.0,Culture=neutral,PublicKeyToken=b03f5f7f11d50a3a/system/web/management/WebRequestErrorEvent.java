@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.management.WebEventFormatter;
-import system.web.management.WebRequestInformation;
-import system.web.management.WebThreadInformation;
-import system.web.management.WebProcessInformation;
 import system.DateTime;
 import system.Guid;
+import system.web.management.WebProcessInformation;
+import system.web.management.WebRequestInformation;
+import system.web.management.WebThreadInformation;
 
 
 /**
@@ -118,6 +118,16 @@ public class WebRequestErrorEvent extends NetObject  {
     
     // Methods section
     
+    public java.lang.String ToString(boolean includeAppInfo, boolean includeCustomEventDetails) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ToString", includeAppInfo, includeCustomEventDetails);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void FormatCustomEventDetails(WebEventFormatter formatter) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -138,59 +148,45 @@ public class WebRequestErrorEvent extends NetObject  {
         }
     }
 
-    public java.lang.String ToString(boolean includeAppInfo, boolean includeCustomEventDetails) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ToString", includeAppInfo, includeCustomEventDetails);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public WebRequestInformation getRequestInformation() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException {
+    public int getEventCode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestInformation");
-            return new WebRequestInformation(val);
+            return (int)classInstance.Get("EventCode");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public WebThreadInformation getThreadInformation() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public int getEventDetailCode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ThreadInformation");
-            return new WebThreadInformation(val);
+            return (int)classInstance.Get("EventDetailCode");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetException getErrorException() throws Throwable {
+    public long getEventOccurrence() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ErrorException");
-            return new NetException(val);
+            return (long)classInstance.Get("EventOccurrence");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public WebProcessInformation getProcessInformation() throws Throwable {
+    public long getEventSequence() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ProcessInformation");
-            return new WebProcessInformation(val);
+            return (long)classInstance.Get("EventSequence");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,11 +214,23 @@ public class WebRequestErrorEvent extends NetObject  {
         }
     }
 
-    public java.lang.String getMessage() throws Throwable {
+    public NetException getErrorException() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            JCObject val = (JCObject)classInstance.Get("ErrorException");
+            return new NetException(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Guid getEventID() throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EventID");
+            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,52 +247,44 @@ public class WebRequestErrorEvent extends NetObject  {
         }
     }
 
-    public long getEventSequence() throws Throwable {
+    public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Get("EventSequence");
+            return (java.lang.String)classInstance.Get("Message");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public long getEventOccurrence() throws Throwable {
+    public WebProcessInformation getProcessInformation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Get("EventOccurrence");
+            JCObject val = (JCObject)classInstance.Get("ProcessInformation");
+            return new WebProcessInformation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getEventCode() throws Throwable {
+    public WebRequestInformation getRequestInformation() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("EventCode");
+            JCObject val = (JCObject)classInstance.Get("RequestInformation");
+            return new WebRequestInformation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getEventDetailCode() throws Throwable {
+    public WebThreadInformation getThreadInformation() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("EventDetailCode");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Guid getEventID() throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EventID");
-            return new Guid(val);
+            JCObject val = (JCObject)classInstance.Get("ThreadInformation");
+            return new WebThreadInformation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

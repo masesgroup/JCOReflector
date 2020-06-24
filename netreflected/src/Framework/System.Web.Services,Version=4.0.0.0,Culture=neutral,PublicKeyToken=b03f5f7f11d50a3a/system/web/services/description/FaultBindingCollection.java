@@ -113,21 +113,21 @@ public class FaultBindingCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(FaultBinding bindingOperationFault) throws Throwable {
+    public boolean Contains(FaultBinding bindingOperationFault) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", bindingOperationFault == null ? null : bindingOperationFault.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", bindingOperationFault == null ? null : bindingOperationFault.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, FaultBinding bindingOperationFault) throws Throwable {
+    public int Add(FaultBinding bindingOperationFault) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, bindingOperationFault == null ? null : bindingOperationFault.getJCOInstance());
+            return (int)classInstance.Invoke("Add", bindingOperationFault == null ? null : bindingOperationFault.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,21 +143,11 @@ public class FaultBindingCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(FaultBinding bindingOperationFault) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", bindingOperationFault == null ? null : bindingOperationFault.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(FaultBinding bindingOperationFault) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", bindingOperationFault == null ? null : bindingOperationFault.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,11 +163,21 @@ public class FaultBindingCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public void Insert(int index, FaultBinding bindingOperationFault) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, bindingOperationFault == null ? null : bindingOperationFault.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(FaultBinding bindingOperationFault) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", bindingOperationFault == null ? null : bindingOperationFault.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

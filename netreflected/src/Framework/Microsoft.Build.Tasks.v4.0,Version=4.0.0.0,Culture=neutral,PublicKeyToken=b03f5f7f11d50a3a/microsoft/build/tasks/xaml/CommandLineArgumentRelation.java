@@ -127,21 +127,21 @@ public class CommandLineArgumentRelation extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getSeparator() throws Throwable {
+    public boolean getRequired() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Separator");
+            return (boolean)classInstance.Get("Required");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSeparator(java.lang.String Separator) throws Throwable {
+    public void setRequired(boolean Required) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Separator", Separator);
+            classInstance.Set("Required", Required);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,6 +167,26 @@ public class CommandLineArgumentRelation extends NetObject  {
         }
     }
 
+    public java.lang.String getSeparator() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Separator");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSeparator(java.lang.String Separator) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Separator", Separator);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -182,26 +202,6 @@ public class CommandLineArgumentRelation extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getRequired() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Required");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRequired(boolean Required) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Required", Required);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -115,26 +115,6 @@ public class FileIOPermission extends NetObject  {
     // Constructors section
     
 
-    public FileIOPermission(FileIOPermissionAccess access, java.lang.String path) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(access == null ? null : access.getJCOInstance(), path));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FileIOPermission(FileIOPermissionAccess access, java.lang.String[] pathList) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(access == null ? null : access.getJCOInstance(), pathList));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FileIOPermission(FileIOPermissionAccess access, AccessControlActions actions, java.lang.String path) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +135,26 @@ public class FileIOPermission extends NetObject  {
         }
     }
 
+    public FileIOPermission(FileIOPermissionAccess access, java.lang.String path) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(access == null ? null : access.getJCOInstance(), path));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FileIOPermission(FileIOPermissionAccess access, java.lang.String[] pathList) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(access == null ? null : access.getJCOInstance(), pathList));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public FileIOPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,21 +169,21 @@ public class FileIOPermission extends NetObject  {
     
     // Methods section
     
-    public void AddPathList(FileIOPermissionAccess access, java.lang.String path) throws Throwable {
+    public boolean IsSubsetOf(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddPathList", access == null ? null : access.getJCOInstance(), path);
+            return (boolean)classInstance.Invoke("IsSubsetOf", target == null ? null : target.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void AddPathList(FileIOPermissionAccess access, java.lang.String[] pathList) throws Throwable {
+    public boolean IsUnrestricted() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddPathList", access == null ? null : access.getJCOInstance(), pathList);
+            return (boolean)classInstance.Invoke("IsUnrestricted");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,11 +200,34 @@ public class FileIOPermission extends NetObject  {
         }
     }
 
-    public void FromXml(SecurityElement esd) throws Throwable {
+    public IPermission Intersect(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("FromXml", esd == null ? null : esd.getJCOInstance());
+            JCObject objIntersect = (JCObject)classInstance.Invoke("Intersect", target == null ? null : target.getJCOInstance());
+            return new IPermissionImplementation(objIntersect);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IPermission Union(IPermission other) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objUnion = (JCObject)classInstance.Invoke("Union", other == null ? null : other.getJCOInstance());
+            return new IPermissionImplementation(objUnion);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityElement ToXml() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
+            return new SecurityElement(objToXml);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,74 +252,21 @@ public class FileIOPermission extends NetObject  {
         }
     }
 
-    public IPermission Intersect(IPermission target) throws Throwable {
+    public void AddPathList(FileIOPermissionAccess access, java.lang.String path) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objIntersect = (JCObject)classInstance.Invoke("Intersect", target == null ? null : target.getJCOInstance());
-            return new IPermissionImplementation(objIntersect);
+            classInstance.Invoke("AddPathList", access == null ? null : access.getJCOInstance(), path);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean IsSubsetOf(IPermission target) throws Throwable {
+    public void AddPathList(FileIOPermissionAccess access, java.lang.String[] pathList) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsSubsetOf", target == null ? null : target.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsUnrestricted() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsUnrestricted");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetPathList(FileIOPermissionAccess access, java.lang.String path) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetPathList", access == null ? null : access.getJCOInstance(), path);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetPathList(FileIOPermissionAccess access, java.lang.String[] pathList) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetPathList", access == null ? null : access.getJCOInstance(), pathList);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityElement ToXml() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
-            return new SecurityElement(objToXml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IPermission Union(IPermission other) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objUnion = (JCObject)classInstance.Invoke("Union", other == null ? null : other.getJCOInstance());
-            return new IPermissionImplementation(objUnion);
+            classInstance.Invoke("AddPathList", access == null ? null : access.getJCOInstance(), pathList);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,11 +302,41 @@ public class FileIOPermission extends NetObject  {
         }
     }
 
+    public void FromXml(SecurityElement esd) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("FromXml", esd == null ? null : esd.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void PermitOnly() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PermitOnly");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetPathList(FileIOPermissionAccess access, java.lang.String path) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetPathList", access == null ? null : access.getJCOInstance(), path);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetPathList(FileIOPermissionAccess access, java.lang.String[] pathList) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetPathList", access == null ? null : access.getJCOInstance(), pathList);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

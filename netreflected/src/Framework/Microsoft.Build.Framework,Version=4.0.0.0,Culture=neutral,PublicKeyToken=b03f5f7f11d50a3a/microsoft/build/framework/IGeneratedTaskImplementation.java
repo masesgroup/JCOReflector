@@ -108,11 +108,11 @@ public class IGeneratedTaskImplementation extends NetObject implements IGenerate
 
     // Methods section
     
-    public void SetPropertyValue(TaskPropertyInfo property, NetObject value) throws Throwable {
+    public boolean Execute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetPropertyValue", property == null ? null : property.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return (boolean)classInstance.Invoke("Execute");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -129,11 +129,11 @@ public class IGeneratedTaskImplementation extends NetObject implements IGenerate
         }
     }
 
-    public boolean Execute() throws Throwable {
+    public void SetPropertyValue(TaskPropertyInfo property, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            classInstance.Invoke("SetPropertyValue", property == null ? null : property.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

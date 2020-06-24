@@ -114,22 +114,22 @@ public class ComposablePart extends NetObject  {
     
     // Methods section
     
-    public void Activate() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Activate");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetExportedValue(ExportDefinition definition) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetExportedValue = (JCObject)classInstance.Invoke("GetExportedValue", definition == null ? null : definition.getJCOInstance());
             return new NetObject(objGetExportedValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Activate() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Activate");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

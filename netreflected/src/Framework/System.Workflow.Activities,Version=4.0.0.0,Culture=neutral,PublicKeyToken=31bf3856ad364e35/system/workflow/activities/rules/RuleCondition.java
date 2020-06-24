@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.workflow.activities.rules.RuleValidation;
 import system.workflow.activities.rules.RuleExecution;
+import system.workflow.activities.rules.RuleValidation;
 import system.workflow.activities.rules.RuleCondition;
 
 
@@ -115,21 +115,21 @@ public class RuleCondition extends NetObject  {
     
     // Methods section
     
-    public boolean Validate(RuleValidation validation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Validate", validation == null ? null : validation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Evaluate(RuleExecution execution) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Evaluate", execution == null ? null : execution.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Validate(RuleValidation validation) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Validate", validation == null ? null : validation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -141,6 +141,16 @@ public class RuleCondition extends NetObject  {
         try {
             JCObject objClone = (JCObject)classInstance.Invoke("Clone");
             return new RuleCondition(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void OnRuntimeInitialized() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("OnRuntimeInitialized");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

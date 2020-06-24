@@ -105,16 +105,6 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     // Methods section
     
-    public void DeleteBreakpoint(SourceLocation sourceLocation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DeleteBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SourceLocation GetExactLocation(SourceLocation approximateLocation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -126,21 +116,11 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
-    public void InsertBreakpoint(SourceLocation sourceLocation, BreakpointTypes breakpointType) throws Throwable {
+    public void DeleteBreakpoint(SourceLocation sourceLocation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InsertBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance(), breakpointType == null ? null : breakpointType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void UpdateBreakpoint(SourceLocation sourceLocation, BreakpointTypes breakpointType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UpdateBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance(), breakpointType == null ? null : breakpointType.getJCOInstance());
+            classInstance.Invoke("DeleteBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,10 +136,80 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    public void InsertBreakpoint(SourceLocation sourceLocation, BreakpointTypes breakpointType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InsertBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance(), breakpointType == null ? null : breakpointType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ResetBreakpoints() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ResetBreakpoints");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UpdateBreakpoint(SourceLocation sourceLocation, BreakpointTypes breakpointType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance(), breakpointType == null ? null : breakpointType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public boolean getHideSourceFileName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("HideSourceFileName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setHideSourceFileName(boolean HideSourceFileName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("HideSourceFileName", HideSourceFileName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsDebugging() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsDebugging");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIsDebugging(boolean IsDebugging) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IsDebugging", IsDebugging);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SourceLocation getCurrentContext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -197,46 +247,6 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentLocation", CurrentLocation == null ? null : CurrentLocation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsDebugging() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsDebugging");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIsDebugging(boolean IsDebugging) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IsDebugging", IsDebugging);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getHideSourceFileName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("HideSourceFileName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHideSourceFileName(boolean HideSourceFileName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HideSourceFileName", HideSourceFileName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

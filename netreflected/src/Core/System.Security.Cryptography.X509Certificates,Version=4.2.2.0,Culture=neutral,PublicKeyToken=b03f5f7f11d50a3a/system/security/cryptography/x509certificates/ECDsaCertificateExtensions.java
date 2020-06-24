@@ -114,23 +114,23 @@ public class ECDsaCertificateExtensions extends NetObject  {
     
     // Methods section
     
-    public static ECDsa GetECDsaPublicKey(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetECDsaPublicKey = (JCObject)classType.Invoke("GetECDsaPublicKey", certificate == null ? null : certificate.getJCOInstance());
-            return new ECDsa(objGetECDsaPublicKey);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static ECDsa GetECDsaPrivateKey(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetECDsaPrivateKey = (JCObject)classType.Invoke("GetECDsaPrivateKey", certificate == null ? null : certificate.getJCOInstance());
             return new ECDsa(objGetECDsaPrivateKey);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ECDsa GetECDsaPublicKey(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetECDsaPublicKey = (JCObject)classType.Invoke("GetECDsaPublicKey", certificate == null ? null : certificate.getJCOInstance());
+            return new ECDsa(objGetECDsaPublicKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

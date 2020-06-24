@@ -129,11 +129,21 @@ public class ImportDefinition extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getContractName() throws Throwable {
+    public boolean getIsPrerequisite() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ContractName");
+            return (boolean)classInstance.Get("IsPrerequisite");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsRecomposable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsRecomposable");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -150,21 +160,11 @@ public class ImportDefinition extends NetObject  {
         }
     }
 
-    public boolean getIsPrerequisite() throws Throwable {
+    public java.lang.String getContractName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsPrerequisite");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsRecomposable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsRecomposable");
+            return (java.lang.String)classInstance.Get("ContractName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

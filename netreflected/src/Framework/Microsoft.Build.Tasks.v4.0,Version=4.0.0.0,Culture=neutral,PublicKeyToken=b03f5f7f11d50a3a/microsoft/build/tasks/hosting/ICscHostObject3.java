@@ -91,21 +91,19 @@ public interface ICscHostObject3 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean SetApplicationConfiguration(java.lang.String applicationConfiguration) throws Throwable;
-
-    public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable;
+    public boolean Compile() throws Throwable;
 
     public boolean IsDesignTime() throws Throwable;
 
-    public boolean Compile() throws Throwable;
-
-    public void BeginInitialization() throws Throwable;
+    public boolean IsUpToDate() throws Throwable;
 
     public boolean SetAdditionalLibPaths(java.lang.String[] additionalLibPaths) throws Throwable;
 
     public boolean SetAddModules(java.lang.String[] addModules) throws Throwable;
 
     public boolean SetAllowUnsafeBlocks(boolean allowUnsafeBlocks) throws Throwable;
+
+    public boolean SetApplicationConfiguration(java.lang.String applicationConfiguration) throws Throwable;
 
     public boolean SetBaseAddress(java.lang.String baseAddress) throws Throwable;
 
@@ -151,9 +149,9 @@ public interface ICscHostObject3 extends IJCOBridgeReflected {
 
     public boolean SetOutputAssembly(java.lang.String outputAssembly) throws Throwable;
 
-    public boolean SetPlatform(java.lang.String platform) throws Throwable;
-
     public boolean SetPdbFile(java.lang.String pdbFile) throws Throwable;
+
+    public boolean SetPlatform(java.lang.String platform) throws Throwable;
 
     public boolean SetReferences(ITaskItem[] references) throws Throwable;
 
@@ -175,9 +173,11 @@ public interface ICscHostObject3 extends IJCOBridgeReflected {
 
     public boolean SetWin32Icon(java.lang.String win32Icon) throws Throwable;
 
+    public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable;
+
     public boolean SetWin32Resource(java.lang.String win32Resource) throws Throwable;
 
-    public boolean IsUpToDate() throws Throwable;
+    public void BeginInitialization() throws Throwable;
 
 
     

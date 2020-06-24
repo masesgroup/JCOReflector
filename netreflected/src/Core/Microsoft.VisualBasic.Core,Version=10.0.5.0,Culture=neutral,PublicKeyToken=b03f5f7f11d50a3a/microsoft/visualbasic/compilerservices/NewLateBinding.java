@@ -113,58 +113,6 @@ public class NewLateBinding extends NetObject  {
     
     // Methods section
     
-    public static NetObject LateCall(NetObject Instance, NetType Type, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames, NetType[] TypeArguments, boolean[] CopyBack, boolean IgnoreReturn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MissingMemberException, system.InvalidCastException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLateCall = (JCObject)classType.Invoke("LateCall", Instance == null ? null : Instance.getJCOInstance(), Type == null ? null : Type.getJCOInstance(), MemberName, toObjectFromArray(Arguments), ArgumentNames, toObjectFromArray(TypeArguments), CopyBack, IgnoreReturn);
-            return new NetObject(objLateCall);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject LateGet(NetObject Instance, NetType Type, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames, NetType[] TypeArguments, boolean[] CopyBack) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MissingMemberException, system.NullReferenceException, system.RankException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLateGet = (JCObject)classType.Invoke("LateGet", Instance == null ? null : Instance.getJCOInstance(), Type == null ? null : Type.getJCOInstance(), MemberName, toObjectFromArray(Arguments), ArgumentNames, toObjectFromArray(TypeArguments), CopyBack);
-            return new NetObject(objLateGet);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void LateSet(NetObject Instance, NetType Type, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames, NetType[] TypeArguments, boolean OptimisticSet, boolean RValueBase, CallType CallType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MissingMemberException, system.NullReferenceException, system.InvalidCastException, system.OverflowException, system.RankException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("LateSet", Instance == null ? null : Instance.getJCOInstance(), Type == null ? null : Type.getJCOInstance(), MemberName, toObjectFromArray(Arguments), ArgumentNames, toObjectFromArray(TypeArguments), OptimisticSet, RValueBase, CallType == null ? null : CallType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void LateIndexSetComplex(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean OptimisticSet, boolean RValueBase) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.InvalidCastException, system.OverflowException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("LateIndexSetComplex", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames, OptimisticSet, RValueBase);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void LateIndexSet(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.InvalidCastException, system.OverflowException, system.NullReferenceException, system.MissingMemberException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("LateIndexSet", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static NetObject FallbackCall(NetObject Instance, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean IgnoreReturn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MissingMemberException, system.InvalidCastException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -176,23 +124,12 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
-    public static NetObject LateCallInvokeDefault(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean ReportErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.RankException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException {
+    public static NetObject FallbackGet(NetObject Instance, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MissingMemberException, system.NullReferenceException, system.RankException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLateCallInvokeDefault = (JCObject)classType.Invoke("LateCallInvokeDefault", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames, ReportErrors);
-            return new NetObject(objLateCallInvokeDefault);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject LateGetInvokeDefault(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean ReportErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.RankException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLateGetInvokeDefault = (JCObject)classType.Invoke("LateGetInvokeDefault", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames, ReportErrors);
-            return new NetObject(objLateGetInvokeDefault);
+            JCObject objFallbackGet = (JCObject)classType.Invoke("FallbackGet", Instance == null ? null : Instance.getJCOInstance(), MemberName, toObjectFromArray(Arguments), ArgumentNames);
+            return new NetObject(objFallbackGet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,33 +157,56 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
+    public static NetObject LateCall(NetObject Instance, NetType Type, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames, NetType[] TypeArguments, boolean[] CopyBack, boolean IgnoreReturn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MissingMemberException, system.InvalidCastException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLateCall = (JCObject)classType.Invoke("LateCall", Instance == null ? null : Instance.getJCOInstance(), Type == null ? null : Type.getJCOInstance(), MemberName, toObjectFromArray(Arguments), ArgumentNames, toObjectFromArray(TypeArguments), CopyBack, IgnoreReturn);
+            return new NetObject(objLateCall);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject LateCallInvokeDefault(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean ReportErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.RankException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLateCallInvokeDefault = (JCObject)classType.Invoke("LateCallInvokeDefault", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames, ReportErrors);
+            return new NetObject(objLateCallInvokeDefault);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject LateGet(NetObject Instance, NetType Type, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames, NetType[] TypeArguments, boolean[] CopyBack) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MissingMemberException, system.NullReferenceException, system.RankException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLateGet = (JCObject)classType.Invoke("LateGet", Instance == null ? null : Instance.getJCOInstance(), Type == null ? null : Type.getJCOInstance(), MemberName, toObjectFromArray(Arguments), ArgumentNames, toObjectFromArray(TypeArguments), CopyBack);
+            return new NetObject(objLateGet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject LateGetInvokeDefault(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean ReportErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.RankException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLateGetInvokeDefault = (JCObject)classType.Invoke("LateGetInvokeDefault", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames, ReportErrors);
+            return new NetObject(objLateGetInvokeDefault);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static NetObject LateIndexGet(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.RankException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objLateIndexGet = (JCObject)classType.Invoke("LateIndexGet", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames);
             return new NetObject(objLateIndexGet);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject FallbackGet(NetObject Instance, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MissingMemberException, system.NullReferenceException, system.RankException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFallbackGet = (JCObject)classType.Invoke("FallbackGet", Instance == null ? null : Instance.getJCOInstance(), MemberName, toObjectFromArray(Arguments), ArgumentNames);
-            return new NetObject(objFallbackGet);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void FallbackIndexSetComplex(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean OptimisticSet, boolean RValueBase) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.OverflowException, system.NullReferenceException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("FallbackIndexSetComplex", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames, OptimisticSet, RValueBase);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,11 +222,21 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
-    public static void LateSetComplex(NetObject Instance, NetType Type, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames, NetType[] TypeArguments, boolean OptimisticSet, boolean RValueBase) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MissingMemberException, system.NullReferenceException, system.InvalidCastException, system.RankException {
+    public static void FallbackIndexSetComplex(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean OptimisticSet, boolean RValueBase) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.OverflowException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("LateSetComplex", Instance == null ? null : Instance.getJCOInstance(), Type == null ? null : Type.getJCOInstance(), MemberName, toObjectFromArray(Arguments), ArgumentNames, toObjectFromArray(TypeArguments), OptimisticSet, RValueBase);
+            classType.Invoke("FallbackIndexSetComplex", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames, OptimisticSet, RValueBase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FallbackSet(NetObject Instance, java.lang.String MemberName, NetObject[] Arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.MissingMemberException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.OverflowException, system.RankException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FallbackSet", Instance == null ? null : Instance.getJCOInstance(), MemberName, toObjectFromArray(Arguments));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,6 +252,26 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
+    public static void LateIndexSet(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.InvalidCastException, system.OverflowException, system.NullReferenceException, system.MissingMemberException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("LateIndexSet", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void LateIndexSetComplex(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean OptimisticSet, boolean RValueBase) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.InvalidCastException, system.OverflowException, system.NullReferenceException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("LateIndexSetComplex", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames, OptimisticSet, RValueBase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void LateSet(NetObject Instance, NetType Type, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames, NetType[] TypeArguments) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MissingMemberException, system.NullReferenceException, system.InvalidCastException, system.RankException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -292,11 +282,21 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
-    public static void FallbackSet(NetObject Instance, java.lang.String MemberName, NetObject[] Arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.MissingMemberException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.OverflowException, system.RankException {
+    public static void LateSet(NetObject Instance, NetType Type, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames, NetType[] TypeArguments, boolean OptimisticSet, boolean RValueBase, CallType CallType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MissingMemberException, system.NullReferenceException, system.InvalidCastException, system.OverflowException, system.RankException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("FallbackSet", Instance == null ? null : Instance.getJCOInstance(), MemberName, toObjectFromArray(Arguments));
+            classType.Invoke("LateSet", Instance == null ? null : Instance.getJCOInstance(), Type == null ? null : Type.getJCOInstance(), MemberName, toObjectFromArray(Arguments), ArgumentNames, toObjectFromArray(TypeArguments), OptimisticSet, RValueBase, CallType == null ? null : CallType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void LateSetComplex(NetObject Instance, NetType Type, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames, NetType[] TypeArguments, boolean OptimisticSet, boolean RValueBase) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MissingMemberException, system.NullReferenceException, system.InvalidCastException, system.RankException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("LateSetComplex", Instance == null ? null : Instance.getJCOInstance(), Type == null ? null : Type.getJCOInstance(), MemberName, toObjectFromArray(Arguments), ArgumentNames, toObjectFromArray(TypeArguments), OptimisticSet, RValueBase);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

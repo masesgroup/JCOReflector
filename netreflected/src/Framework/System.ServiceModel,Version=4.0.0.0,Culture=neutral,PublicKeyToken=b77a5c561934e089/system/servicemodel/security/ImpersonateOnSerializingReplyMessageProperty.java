@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.channels.Message;
+import system.servicemodel.channels.MessageProperties;
 import system.servicemodel.channels.IMessageProperty;
 import system.servicemodel.channels.IMessagePropertyImplementation;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.security.principal.IPrincipal;
 import system.security.principal.IPrincipalImplementation;
-import system.servicemodel.channels.Message;
-import system.servicemodel.channels.MessageProperties;
 
 
 /**

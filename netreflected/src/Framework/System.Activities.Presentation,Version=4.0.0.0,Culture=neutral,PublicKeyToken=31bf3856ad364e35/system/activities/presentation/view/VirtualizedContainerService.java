@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.presentation.EditingContext;
-import system.windows.UIElement;
+import system.activities.presentation.WorkflowViewElement;
 import system.activities.presentation.model.ModelItem;
 import system.activities.presentation.ICompositeView;
 import system.activities.presentation.ICompositeViewImplementation;
-import system.activities.presentation.WorkflowViewElement;
+import system.windows.UIElement;
 
 
 /**
@@ -129,22 +129,23 @@ public class VirtualizedContainerService extends NetObject  {
     
     // Methods section
     
+    public WorkflowViewElement GetViewElement(ModelItem modelItem, ICompositeView sourceContainer) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetViewElement = (JCObject)classInstance.Invoke("GetViewElement", modelItem == null ? null : modelItem.getJCOInstance(), sourceContainer == null ? null : sourceContainer.getJCOInstance());
+            return new WorkflowViewElement(objGetViewElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static NetObject GetHintSize(NetObject instance) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetHintSize = (JCObject)classType.Invoke("GetHintSize", instance == null ? null : instance.getJCOInstance());
             return new NetObject(objGetHintSize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void SetHintSize(NetObject instance, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SetHintSize", instance == null ? null : instance.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,12 +162,11 @@ public class VirtualizedContainerService extends NetObject  {
         }
     }
 
-    public WorkflowViewElement GetViewElement(ModelItem modelItem, ICompositeView sourceContainer) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void SetHintSize(NetObject instance, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetViewElement = (JCObject)classInstance.Invoke("GetViewElement", modelItem == null ? null : modelItem.getJCOInstance(), sourceContainer == null ? null : sourceContainer.getJCOInstance());
-            return new WorkflowViewElement(objGetViewElement);
+            classType.Invoke("SetHintSize", instance == null ? null : instance.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

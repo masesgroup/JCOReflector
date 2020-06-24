@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.portableexecutable.DebugDirectoryEntryType;
-import system.UInt32;
 import system.reflection.metadata.BlobContentId;
 import system.UInt16;
 import system.reflection.metadata.BlobBuilder;
+import system.reflection.portableexecutable.DebugDirectoryEntryType;
+import system.UInt32;
 
 
 /**
@@ -128,16 +128,6 @@ public class DebugDirectoryBuilder extends NetObject  {
     
     // Methods section
     
-    public void AddEntry(DebugDirectoryEntryType type, UInt32 version, UInt32 stamp) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddEntry", type == null ? null : type.getJCOInstance(), version == null ? null : version.getJCOInstance(), stamp == null ? null : stamp.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AddCodeViewEntry(java.lang.String pdbPath, BlobContentId pdbContentId, UInt16 portablePdbVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,21 +138,21 @@ public class DebugDirectoryBuilder extends NetObject  {
         }
     }
 
-    public void AddReproducibleEntry() throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddReproducibleEntry");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AddEmbeddedPortablePdbEntry(BlobBuilder debugMetadata, UInt16 portablePdbVersion) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.io.compression.ZLibException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEmbeddedPortablePdbEntry", debugMetadata == null ? null : debugMetadata.getJCOInstance(), portablePdbVersion == null ? null : portablePdbVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddEntry(DebugDirectoryEntryType type, UInt32 version, UInt32 stamp) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddEntry", type == null ? null : type.getJCOInstance(), version == null ? null : version.getJCOInstance(), stamp == null ? null : stamp.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

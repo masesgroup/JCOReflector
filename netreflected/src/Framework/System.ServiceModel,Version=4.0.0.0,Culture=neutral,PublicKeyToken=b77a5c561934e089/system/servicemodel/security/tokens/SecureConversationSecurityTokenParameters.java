@@ -154,21 +154,21 @@ public class SecureConversationSecurityTokenParameters extends NetObject  {
         }
     }
 
-    public SecureConversationSecurityTokenParameters(SecurityBindingElement bootstrapSecurityBindingElement, boolean requireCancellation, ChannelProtectionRequirements bootstrapProtectionRequirements) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(bootstrapSecurityBindingElement == null ? null : bootstrapSecurityBindingElement.getJCOInstance(), requireCancellation, bootstrapProtectionRequirements == null ? null : bootstrapProtectionRequirements.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecureConversationSecurityTokenParameters(SecurityBindingElement bootstrapSecurityBindingElement, boolean requireCancellation, boolean canRenewSession, ChannelProtectionRequirements bootstrapProtectionRequirements) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(bootstrapSecurityBindingElement == null ? null : bootstrapSecurityBindingElement.getJCOInstance(), requireCancellation, canRenewSession, bootstrapProtectionRequirements == null ? null : bootstrapProtectionRequirements.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecureConversationSecurityTokenParameters(SecurityBindingElement bootstrapSecurityBindingElement, boolean requireCancellation, ChannelProtectionRequirements bootstrapProtectionRequirements) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(bootstrapSecurityBindingElement == null ? null : bootstrapSecurityBindingElement.getJCOInstance(), requireCancellation, bootstrapProtectionRequirements == null ? null : bootstrapProtectionRequirements.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,6 +193,66 @@ public class SecureConversationSecurityTokenParameters extends NetObject  {
     
     // Properties section
     
+    public boolean getCanRenewSession() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("CanRenewSession");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCanRenewSession(boolean CanRenewSession) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CanRenewSession", CanRenewSession);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getRequireCancellation() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("RequireCancellation");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRequireCancellation(boolean RequireCancellation) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RequireCancellation", RequireCancellation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getRequireDerivedKeys() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("RequireDerivedKeys");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRequireDerivedKeys(boolean RequireDerivedKeys) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RequireDerivedKeys", RequireDerivedKeys);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityBindingElement getBootstrapSecurityBindingElement() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -220,46 +280,6 @@ public class SecureConversationSecurityTokenParameters extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("BootstrapProtectionRequirements");
             return new ChannelProtectionRequirements(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getRequireCancellation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("RequireCancellation");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRequireCancellation(boolean RequireCancellation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RequireCancellation", RequireCancellation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanRenewSession() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanRenewSession");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCanRenewSession(boolean CanRenewSession) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CanRenewSession", CanRenewSession);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,26 +322,6 @@ public class SecureConversationSecurityTokenParameters extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferenceStyle", ReferenceStyle == null ? null : ReferenceStyle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getRequireDerivedKeys() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("RequireDerivedKeys");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRequireDerivedKeys(boolean RequireDerivedKeys) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RequireDerivedKeys", RequireDerivedKeys);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

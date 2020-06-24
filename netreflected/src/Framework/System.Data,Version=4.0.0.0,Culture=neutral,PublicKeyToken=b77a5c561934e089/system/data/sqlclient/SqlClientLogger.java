@@ -123,11 +123,11 @@ public class SqlClientLogger extends NetObject  {
     
     // Methods section
     
-    public void LogInfo(java.lang.String type, java.lang.String method, java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public boolean LogAssert(boolean value, java.lang.String type, java.lang.String method, java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("LogInfo", type, method, message);
+            return (boolean)classInstance.Invoke("LogAssert", value, type, method, message);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,11 +143,11 @@ public class SqlClientLogger extends NetObject  {
         }
     }
 
-    public boolean LogAssert(boolean value, java.lang.String type, java.lang.String method, java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public void LogInfo(java.lang.String type, java.lang.String method, java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("LogAssert", value, type, method, message);
+            classInstance.Invoke("LogInfo", type, method, message);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -116,12 +116,11 @@ public class LocalVariableInfo extends NetObject  {
     
     // Properties section
     
-    public NetType getLocalType() throws Throwable {
+    public boolean getIsPinned() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalType");
-            return new NetType(val);
+            return (boolean)classInstance.Get("IsPinned");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -137,11 +136,12 @@ public class LocalVariableInfo extends NetObject  {
         }
     }
 
-    public boolean getIsPinned() throws Throwable {
+    public NetType getLocalType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsPinned");
+            JCObject val = (JCObject)classInstance.Get("LocalType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

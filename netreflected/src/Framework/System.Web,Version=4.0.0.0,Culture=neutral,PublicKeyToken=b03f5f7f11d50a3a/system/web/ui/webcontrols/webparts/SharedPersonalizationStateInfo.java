@@ -128,16 +128,6 @@ public class SharedPersonalizationStateInfo extends NetObject  {
     
     // Properties section
     
-    public int getSizeOfPersonalizations() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("SizeOfPersonalizations");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getCountOfPersonalizations() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,11 +138,21 @@ public class SharedPersonalizationStateInfo extends NetObject  {
         }
     }
 
-    public java.lang.String getPath() throws Throwable {
+    public int getSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            return (int)classInstance.Get("Size");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getSizeOfPersonalizations() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("SizeOfPersonalizations");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,11 +169,11 @@ public class SharedPersonalizationStateInfo extends NetObject  {
         }
     }
 
-    public int getSize() throws Throwable {
+    public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Size");
+            return (java.lang.String)classInstance.Get("Path");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

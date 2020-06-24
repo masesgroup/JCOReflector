@@ -95,9 +95,9 @@ public interface ICompositionElement extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String getDisplayName() throws Throwable;
-
     public ICompositionElement getOrigin() throws Throwable;
+
+    public java.lang.String getDisplayName() throws Throwable;
 
 
 

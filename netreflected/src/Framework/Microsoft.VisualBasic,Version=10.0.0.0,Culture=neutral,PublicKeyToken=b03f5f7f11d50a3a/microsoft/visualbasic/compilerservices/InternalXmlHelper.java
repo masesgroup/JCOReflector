@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xml.linq.XNamespace;
 import system.xml.linq.XAttribute;
 import system.xml.linq.XName;
-import system.xml.linq.XNamespace;
 import system.xml.linq.XElement;
 
 

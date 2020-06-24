@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.MemberDescriptor;
-import system.windows.DependencyProperty;
 import system.reflection.MemberInfo;
+import system.windows.DependencyProperty;
 
 
 /**
@@ -147,17 +147,6 @@ public class AttributeTable extends NetObject  {
         }
     }
 
-    public IEnumerable GetCustomAttributes(NetType ownerType, DependencyProperty dp) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
-            return new IEnumerableImplementation(objGetCustomAttributes);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IEnumerable GetCustomAttributes(NetType ownerType, MemberInfo member) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -174,6 +163,17 @@ public class AttributeTable extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), memberName);
+            return new IEnumerableImplementation(objGetCustomAttributes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable GetCustomAttributes(NetType ownerType, DependencyProperty dp) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
             return new IEnumerableImplementation(objGetCustomAttributes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

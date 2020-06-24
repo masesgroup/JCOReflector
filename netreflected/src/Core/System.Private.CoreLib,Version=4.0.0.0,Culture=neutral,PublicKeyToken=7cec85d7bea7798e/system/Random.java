@@ -133,21 +133,21 @@ public class Random extends NetObject  {
     
     // Methods section
     
-    public int Next() throws Throwable {
+    public double NextDouble() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Next");
+            return (double)classInstance.Invoke("NextDouble");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int Next(int minValue, int maxValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public int Next() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Next", minValue, maxValue);
+            return (int)classInstance.Invoke("Next");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,11 +163,11 @@ public class Random extends NetObject  {
         }
     }
 
-    public double NextDouble() throws Throwable {
+    public int Next(int minValue, int maxValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Invoke("NextDouble");
+            return (int)classInstance.Invoke("Next", minValue, maxValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

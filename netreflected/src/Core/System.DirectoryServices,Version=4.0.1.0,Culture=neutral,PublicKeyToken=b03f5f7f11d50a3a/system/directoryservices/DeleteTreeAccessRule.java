@@ -43,8 +43,8 @@ import system.security.accesscontrol.AccessControlType;
 import system.directoryservices.ActiveDirectorySecurityInheritance;
 import system.Guid;
 import system.directoryservices.ActiveDirectoryRights;
-import system.security.accesscontrol.ObjectAceFlags;
 import system.security.accesscontrol.InheritanceFlags;
+import system.security.accesscontrol.ObjectAceFlags;
 import system.security.accesscontrol.PropagationFlags;
 
 
@@ -155,6 +155,16 @@ public class DeleteTreeAccessRule extends NetObject  {
     
     // Properties section
     
+    public boolean getIsInherited() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsInherited");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ActiveDirectoryRights getActiveDirectoryRights() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -177,17 +187,6 @@ public class DeleteTreeAccessRule extends NetObject  {
         }
     }
 
-    public Guid getObjectType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ObjectType");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Guid getInheritedObjectType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -199,12 +198,12 @@ public class DeleteTreeAccessRule extends NetObject  {
         }
     }
 
-    public ObjectAceFlags getObjectFlags() throws Throwable {
+    public Guid getObjectType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectFlags");
-            return new ObjectAceFlags(val);
+            JCObject val = (JCObject)classInstance.Get("ObjectType");
+            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,27 +220,6 @@ public class DeleteTreeAccessRule extends NetObject  {
         }
     }
 
-    public IdentityReference getIdentityReference() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("IdentityReference");
-            return new IdentityReference(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsInherited() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsInherited");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public InheritanceFlags getInheritanceFlags() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -253,12 +231,34 @@ public class DeleteTreeAccessRule extends NetObject  {
         }
     }
 
+    public ObjectAceFlags getObjectFlags() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ObjectFlags");
+            return new ObjectAceFlags(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PropagationFlags getPropagationFlags() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("PropagationFlags");
             return new PropagationFlags(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IdentityReference getIdentityReference() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("IdentityReference");
+            return new IdentityReference(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

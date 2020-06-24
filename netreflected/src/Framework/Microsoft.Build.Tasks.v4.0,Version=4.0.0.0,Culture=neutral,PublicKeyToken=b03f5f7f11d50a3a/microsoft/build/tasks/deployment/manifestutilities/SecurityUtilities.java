@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.security.PermissionSet;
 import system.xml.XmlElement;
-import system.security.SecureString;
-import system.Uri;
 import system.security.cryptography.x509certificates.X509Certificate2;
+import system.Uri;
+import system.security.SecureString;
 
 
 /**
@@ -128,33 +128,23 @@ public class SecurityUtilities extends NetObject  {
         }
     }
 
-    public static PermissionSet XmlToPermissionSet(XmlElement element) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objXmlToPermissionSet = (JCObject)classType.Invoke("XmlToPermissionSet", element == null ? null : element.getJCOInstance());
-            return new PermissionSet(objXmlToPermissionSet);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void SignFile(java.lang.String certPath, SecureString certPassword, Uri timestampUrl, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.AccessViolationException, system.NotImplementedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.RankException, system.ApplicationException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.componentmodel.WarningException, system.threading.ThreadAbortException, system.security.accesscontrol.PrivilegeNotHeldException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicUnexpectedOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SignFile", certPath, certPassword == null ? null : certPassword.getJCOInstance(), timestampUrl == null ? null : timestampUrl.getJCOInstance(), path);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static PermissionSet IdentityListToPermissionSet(java.lang.String[] ids) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.RankException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objIdentityListToPermissionSet = (JCObject)classType.Invoke("IdentityListToPermissionSet", (Object)ids);
             return new PermissionSet(objIdentityListToPermissionSet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PermissionSet XmlToPermissionSet(XmlElement element) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objXmlToPermissionSet = (JCObject)classType.Invoke("XmlToPermissionSet", element == null ? null : element.getJCOInstance());
+            return new PermissionSet(objXmlToPermissionSet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,21 +169,31 @@ public class SecurityUtilities extends NetObject  {
         }
     }
 
-    public static void SignFile(java.lang.String certThumbprint, Uri timestampUrl, java.lang.String path) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.RankException, system.OverflowException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.ApplicationException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.componentmodel.WarningException, system.threading.ThreadAbortException, system.security.accesscontrol.PrivilegeNotHeldException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SignFile", certThumbprint, timestampUrl == null ? null : timestampUrl.getJCOInstance(), path);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void SignFile(X509Certificate2 cert, Uri timestampUrl, java.lang.String path) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.io.FileNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.io.IOException, system.AccessViolationException, system.RankException, system.OverflowException, system.PlatformNotSupportedException, system.ApplicationException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.componentmodel.WarningException, system.threading.ThreadAbortException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicUnexpectedOperationException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SignFile", cert == null ? null : cert.getJCOInstance(), timestampUrl == null ? null : timestampUrl.getJCOInstance(), path);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SignFile(java.lang.String certPath, SecureString certPassword, Uri timestampUrl, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.AccessViolationException, system.NotImplementedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.RankException, system.ApplicationException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.componentmodel.WarningException, system.threading.ThreadAbortException, system.security.accesscontrol.PrivilegeNotHeldException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicUnexpectedOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SignFile", certPath, certPassword == null ? null : certPassword.getJCOInstance(), timestampUrl == null ? null : timestampUrl.getJCOInstance(), path);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SignFile(java.lang.String certThumbprint, Uri timestampUrl, java.lang.String path) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.RankException, system.OverflowException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.ApplicationException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.componentmodel.WarningException, system.threading.ThreadAbortException, system.security.accesscontrol.PrivilegeNotHeldException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SignFile", certThumbprint, timestampUrl == null ? null : timestampUrl.getJCOInstance(), path);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

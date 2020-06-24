@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.PermissionSet;
-import system.security.policy.Evidence;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
+import system.security.policy.Evidence;
+import system.security.PermissionSet;
 import system.security.policy.PolicyLevel;
 import system.security.PolicyLevelType;
 
@@ -128,44 +128,11 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PermissionSet GetStandardSandbox(Evidence evidence) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetStandardSandbox = (JCObject)classType.Invoke("GetStandardSandbox", evidence == null ? null : evidence.getJCOInstance());
-            return new PermissionSet(objGetStandardSandbox);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean IsGranted(IPermission perm) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("IsGranted", perm == null ? null : perm.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static PolicyLevel LoadPolicyLevelFromFile(java.lang.String path, PolicyLevelType type) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLoadPolicyLevelFromFile = (JCObject)classType.Invoke("LoadPolicyLevelFromFile", path, type == null ? null : type.getJCOInstance());
-            return new PolicyLevel(objLoadPolicyLevelFromFile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static PolicyLevel LoadPolicyLevelFromString(java.lang.String str, PolicyLevelType type) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLoadPolicyLevelFromString = (JCObject)classType.Invoke("LoadPolicyLevelFromString", str, type == null ? null : type.getJCOInstance());
-            return new PolicyLevel(objLoadPolicyLevelFromString);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,6 +144,28 @@ public class SecurityManager extends NetObject  {
         try {
             JCObject objPolicyHierarchy = (JCObject)classType.Invoke("PolicyHierarchy");
             return new IEnumeratorImplementation(objPolicyHierarchy);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerator ResolvePolicyGroups(Evidence evidence) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objResolvePolicyGroups = (JCObject)classType.Invoke("ResolvePolicyGroups", evidence == null ? null : evidence.getJCOInstance());
+            return new IEnumeratorImplementation(objResolvePolicyGroups);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PermissionSet GetStandardSandbox(Evidence evidence) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetStandardSandbox = (JCObject)classType.Invoke("GetStandardSandbox", evidence == null ? null : evidence.getJCOInstance());
+            return new PermissionSet(objGetStandardSandbox);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,17 +193,6 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static IEnumerator ResolvePolicyGroups(Evidence evidence) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objResolvePolicyGroups = (JCObject)classType.Invoke("ResolvePolicyGroups", evidence == null ? null : evidence.getJCOInstance());
-            return new IEnumeratorImplementation(objResolvePolicyGroups);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static PermissionSet ResolveSystemPolicy(Evidence evidence) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -226,11 +204,23 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static void SavePolicy() throws Throwable {
+    public static PolicyLevel LoadPolicyLevelFromFile(java.lang.String path, PolicyLevelType type) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SavePolicy");
+            JCObject objLoadPolicyLevelFromFile = (JCObject)classType.Invoke("LoadPolicyLevelFromFile", path, type == null ? null : type.getJCOInstance());
+            return new PolicyLevel(objLoadPolicyLevelFromFile);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PolicyLevel LoadPolicyLevelFromString(java.lang.String str, PolicyLevelType type) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLoadPolicyLevelFromString = (JCObject)classType.Invoke("LoadPolicyLevelFromString", str, type == null ? null : type.getJCOInstance());
+            return new PolicyLevel(objLoadPolicyLevelFromString);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -147,11 +147,31 @@ public class Authorization extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getMessage() throws Throwable {
+    public boolean getComplete() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            return (boolean)classInstance.Get("Complete");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getMutuallyAuthenticated() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("MutuallyAuthenticated");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMutuallyAuthenticated(boolean MutuallyAuthenticated) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MutuallyAuthenticated", MutuallyAuthenticated);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,11 +187,11 @@ public class Authorization extends NetObject  {
         }
     }
 
-    public boolean getComplete() throws Throwable {
+    public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Complete");
+            return (java.lang.String)classInstance.Get("Message");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,26 +221,6 @@ public class Authorization extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtectionRealm", ProtectionRealm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getMutuallyAuthenticated() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("MutuallyAuthenticated");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMutuallyAuthenticated(boolean MutuallyAuthenticated) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MutuallyAuthenticated", MutuallyAuthenticated);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

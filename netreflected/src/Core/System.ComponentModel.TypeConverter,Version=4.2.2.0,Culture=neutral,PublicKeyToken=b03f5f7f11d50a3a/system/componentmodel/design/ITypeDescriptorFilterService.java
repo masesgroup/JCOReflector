@@ -95,9 +95,9 @@ public interface ITypeDescriptorFilterService extends IJCOBridgeReflected {
     
     public boolean FilterAttributes(IComponent component, IDictionary attributes) throws Throwable;
 
-    public boolean FilterProperties(IComponent component, IDictionary properties) throws Throwable;
-
     public boolean FilterEvents(IComponent component, IDictionary events) throws Throwable;
+
+    public boolean FilterProperties(IComponent component, IDictionary properties) throws Throwable;
 
 
     

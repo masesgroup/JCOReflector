@@ -142,27 +142,6 @@ public class MessageQueueAccessControlEntry extends NetObject  {
     
     // Properties section
     
-    public MessageQueueAccessRights getMessageQueueAccessRights() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MessageQueueAccessRights");
-            return new MessageQueueAccessRights(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMessageQueueAccessRights(MessageQueueAccessRights MessageQueueAccessRights) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MessageQueueAccessRights", MessageQueueAccessRights == null ? null : MessageQueueAccessRights.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AccessControlEntryType getEntryType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -200,6 +179,27 @@ public class MessageQueueAccessControlEntry extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GenericAccessRights", GenericAccessRights == null ? null : GenericAccessRights.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MessageQueueAccessRights getMessageQueueAccessRights() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MessageQueueAccessRights");
+            return new MessageQueueAccessRights(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMessageQueueAccessRights(MessageQueueAccessRights MessageQueueAccessRights) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MessageQueueAccessRights", MessageQueueAccessRights == null ? null : MessageQueueAccessRights.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

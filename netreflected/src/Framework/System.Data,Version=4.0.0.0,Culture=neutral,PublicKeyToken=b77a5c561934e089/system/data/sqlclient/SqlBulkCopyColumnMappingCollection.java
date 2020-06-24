@@ -123,16 +123,6 @@ public class SqlBulkCopyColumnMappingCollection extends NetObject  {
         }
     }
 
-    public void CopyTo(SqlBulkCopyColumnMapping[] array, int index) throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int IndexOf(SqlBulkCopyColumnMapping value) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -143,22 +133,11 @@ public class SqlBulkCopyColumnMappingCollection extends NetObject  {
         }
     }
 
-    public SqlBulkCopyColumnMapping Add(SqlBulkCopyColumnMapping bulkCopyColumnMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public SqlBulkCopyColumnMapping Add(int sourceColumnIndex, int destinationColumnIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", bulkCopyColumnMapping == null ? null : bulkCopyColumnMapping.getJCOInstance());
-            return new SqlBulkCopyColumnMapping(objAdd);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SqlBulkCopyColumnMapping Add(java.lang.String sourceColumn, java.lang.String destinationColumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", sourceColumn, destinationColumn);
+            JCObject objAdd = (JCObject)classInstance.Invoke("Add", sourceColumnIndex, destinationColumnIndex);
             return new SqlBulkCopyColumnMapping(objAdd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -176,6 +155,17 @@ public class SqlBulkCopyColumnMappingCollection extends NetObject  {
         }
     }
 
+    public SqlBulkCopyColumnMapping Add(SqlBulkCopyColumnMapping bulkCopyColumnMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAdd = (JCObject)classInstance.Invoke("Add", bulkCopyColumnMapping == null ? null : bulkCopyColumnMapping.getJCOInstance());
+            return new SqlBulkCopyColumnMapping(objAdd);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SqlBulkCopyColumnMapping Add(java.lang.String sourceColumn, int destinationColumnIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -187,11 +177,11 @@ public class SqlBulkCopyColumnMappingCollection extends NetObject  {
         }
     }
 
-    public SqlBulkCopyColumnMapping Add(int sourceColumnIndex, int destinationColumnIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public SqlBulkCopyColumnMapping Add(java.lang.String sourceColumn, java.lang.String destinationColumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", sourceColumnIndex, destinationColumnIndex);
+            JCObject objAdd = (JCObject)classInstance.Invoke("Add", sourceColumn, destinationColumn);
             return new SqlBulkCopyColumnMapping(objAdd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,6 +193,16 @@ public class SqlBulkCopyColumnMappingCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CopyTo(SqlBulkCopyColumnMapping[] array, int index) throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

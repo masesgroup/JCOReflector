@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.services.protocols.SoapServiceRoutingStyle;
 import system.web.services.description.SoapBindingUse;
+import system.web.services.protocols.SoapServiceRoutingStyle;
 
 
 /**
@@ -125,16 +125,6 @@ public class SoapRpcServiceAttribute extends NetObject  {
     
     // Methods section
     
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,26 +135,26 @@ public class SoapRpcServiceAttribute extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public SoapServiceRoutingStyle getRoutingStyle() throws Throwable {
+    public boolean Match(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RoutingStyle");
-            return new SoapServiceRoutingStyle(val);
+            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRoutingStyle(SoapServiceRoutingStyle RoutingStyle) throws Throwable {
+
+    
+    // Properties section
+    
+    public NetObject getTypeId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("RoutingStyle", RoutingStyle == null ? null : RoutingStyle.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("TypeId");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,12 +181,22 @@ public class SoapRpcServiceAttribute extends NetObject  {
         }
     }
 
-    public NetObject getTypeId() throws Throwable {
+    public SoapServiceRoutingStyle getRoutingStyle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("RoutingStyle");
+            return new SoapServiceRoutingStyle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRoutingStyle(SoapServiceRoutingStyle RoutingStyle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RoutingStyle", RoutingStyle == null ? null : RoutingStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

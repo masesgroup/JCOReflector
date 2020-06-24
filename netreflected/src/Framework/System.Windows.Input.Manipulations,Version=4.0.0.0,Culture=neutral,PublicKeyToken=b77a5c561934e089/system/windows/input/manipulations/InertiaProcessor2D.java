@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.windows.input.manipulations.InertiaParameters2D;
 import system.Single;
-import system.windows.input.manipulations.InertiaTranslationBehavior2D;
-import system.windows.input.manipulations.InertiaRotationBehavior2D;
 import system.windows.input.manipulations.InertiaExpansionBehavior2D;
+import system.windows.input.manipulations.InertiaRotationBehavior2D;
+import system.windows.input.manipulations.InertiaTranslationBehavior2D;
 
 
 /**
@@ -162,6 +162,16 @@ public class InertiaProcessor2D extends NetObject  {
     
     // Properties section
     
+    public boolean getIsRunning() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsRunning");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Single getInitialOriginX() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -204,32 +214,22 @@ public class InertiaProcessor2D extends NetObject  {
         }
     }
 
-    public boolean getIsRunning() throws Throwable {
+    public InertiaExpansionBehavior2D getExpansionBehavior() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsRunning");
+            JCObject val = (JCObject)classInstance.Get("ExpansionBehavior");
+            return new InertiaExpansionBehavior2D(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public InertiaTranslationBehavior2D getTranslationBehavior() throws Throwable {
+    public void setExpansionBehavior(InertiaExpansionBehavior2D ExpansionBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TranslationBehavior");
-            return new InertiaTranslationBehavior2D(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTranslationBehavior(InertiaTranslationBehavior2D TranslationBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TranslationBehavior", TranslationBehavior == null ? null : TranslationBehavior.getJCOInstance());
+            classInstance.Set("ExpansionBehavior", ExpansionBehavior == null ? null : ExpansionBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,22 +256,22 @@ public class InertiaProcessor2D extends NetObject  {
         }
     }
 
-    public InertiaExpansionBehavior2D getExpansionBehavior() throws Throwable {
+    public InertiaTranslationBehavior2D getTranslationBehavior() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpansionBehavior");
-            return new InertiaExpansionBehavior2D(val);
+            JCObject val = (JCObject)classInstance.Get("TranslationBehavior");
+            return new InertiaTranslationBehavior2D(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setExpansionBehavior(InertiaExpansionBehavior2D ExpansionBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.MulticastNotSupportedException {
+    public void setTranslationBehavior(InertiaTranslationBehavior2D TranslationBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ExpansionBehavior", ExpansionBehavior == null ? null : ExpansionBehavior.getJCOInstance());
+            classInstance.Set("TranslationBehavior", TranslationBehavior == null ? null : TranslationBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -89,6 +89,8 @@ public interface ICollectData extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void CloseData() throws Throwable;
+
 
     
     // Properties section

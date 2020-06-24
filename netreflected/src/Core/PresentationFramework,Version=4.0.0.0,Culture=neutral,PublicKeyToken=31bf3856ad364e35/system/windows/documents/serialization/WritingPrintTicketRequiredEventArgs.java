@@ -129,17 +129,6 @@ public class WritingPrintTicketRequiredEventArgs extends NetObject  {
     
     // Properties section
     
-    public PrintTicketLevel getCurrentPrintTicketLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CurrentPrintTicketLevel");
-            return new PrintTicketLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getSequence() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,6 +155,17 @@ public class WritingPrintTicketRequiredEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentPrintTicket", CurrentPrintTicket == null ? null : CurrentPrintTicket.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PrintTicketLevel getCurrentPrintTicketLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CurrentPrintTicketLevel");
+            return new PrintTicketLevel(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

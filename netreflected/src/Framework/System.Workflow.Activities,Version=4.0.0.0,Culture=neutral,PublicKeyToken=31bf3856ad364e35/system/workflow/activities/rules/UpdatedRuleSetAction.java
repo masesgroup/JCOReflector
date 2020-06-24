@@ -110,21 +110,21 @@ public class UpdatedRuleSetAction extends NetObject  {
     // Constructors section
     
 
-    public UpdatedRuleSetAction(RuleSet originalRuleSetDefinition, RuleSet updatedRuleSetDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(originalRuleSetDefinition == null ? null : originalRuleSetDefinition.getJCOInstance(), updatedRuleSetDefinition == null ? null : updatedRuleSetDefinition.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public UpdatedRuleSetAction() throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UpdatedRuleSetAction(RuleSet originalRuleSetDefinition, RuleSet updatedRuleSetDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(originalRuleSetDefinition == null ? null : originalRuleSetDefinition.getJCOInstance(), updatedRuleSetDefinition == null ? null : updatedRuleSetDefinition.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

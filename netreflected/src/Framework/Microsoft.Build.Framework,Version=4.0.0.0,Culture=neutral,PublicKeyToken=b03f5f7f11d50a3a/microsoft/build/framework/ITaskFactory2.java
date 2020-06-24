@@ -94,9 +94,9 @@ public interface ITaskFactory2 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public TaskPropertyInfo[] GetTaskParameters() throws Throwable;
-
     public ITask CreateTask(IBuildEngine taskFactoryLoggingHost) throws Throwable;
+
+    public TaskPropertyInfo[] GetTaskParameters() throws Throwable;
 
     public void CleanupTask(ITask task) throws Throwable;
 

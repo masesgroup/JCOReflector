@@ -113,6 +113,17 @@ public class ExecutionScope extends NetObject  {
     
     // Methods section
     
+    public Expression IsolateExpression(Expression expression, NetObject[] locals) throws Throwable, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objIsolateExpression = (JCObject)classInstance.Invoke("IsolateExpression", expression == null ? null : expression.getJCOInstance(), toObjectFromArray(locals));
+            return new Expression(objIsolateExpression);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject[] CreateHoistedLocals() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -125,17 +136,6 @@ public class ExecutionScope extends NetObject  {
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Expression IsolateExpression(Expression expression, NetObject[] locals) throws Throwable, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objIsolateExpression = (JCObject)classInstance.Invoke("IsolateExpression", expression == null ? null : expression.getJCOInstance(), toObjectFromArray(locals));
-            return new Expression(objIsolateExpression);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

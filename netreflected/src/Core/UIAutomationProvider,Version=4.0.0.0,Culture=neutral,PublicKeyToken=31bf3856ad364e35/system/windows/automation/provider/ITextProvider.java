@@ -95,13 +95,13 @@ public interface ITextProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public ITextRangeProvider[] GetSelection() throws Throwable;
-
-    public ITextRangeProvider[] GetVisibleRanges() throws Throwable;
-
     public ITextRangeProvider RangeFromChild(IRawElementProviderSimple childElement) throws Throwable;
 
     public ITextRangeProvider RangeFromPoint(Point screenLocation) throws Throwable;
+
+    public ITextRangeProvider[] GetSelection() throws Throwable;
+
+    public ITextRangeProvider[] GetVisibleRanges() throws Throwable;
 
 
     

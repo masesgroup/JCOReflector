@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.services.description.ServiceDescription;
-import system.web.services.description.Message;
 import system.xml.XmlQualifiedName;
+import system.web.services.description.Message;
 import system.web.services.description.PortType;
 import system.web.services.description.Service;
 
@@ -128,21 +128,21 @@ public class ServiceDescriptionCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(ServiceDescription serviceDescription) throws Throwable {
+    public boolean Contains(ServiceDescription serviceDescription) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", serviceDescription == null ? null : serviceDescription.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", serviceDescription == null ? null : serviceDescription.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, ServiceDescription serviceDescription) throws Throwable {
+    public int Add(ServiceDescription serviceDescription) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, serviceDescription == null ? null : serviceDescription.getJCOInstance());
+            return (int)classInstance.Invoke("Add", serviceDescription == null ? null : serviceDescription.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,31 +158,12 @@ public class ServiceDescriptionCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(ServiceDescription serviceDescription) throws Throwable {
+    public system.web.services.description.Binding GetBinding(XmlQualifiedName name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", serviceDescription == null ? null : serviceDescription.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(ServiceDescription serviceDescription) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", serviceDescription == null ? null : serviceDescription.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(ServiceDescription[] array, int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
+            JCObject objGetBinding = (JCObject)classInstance.Invoke("GetBinding", name == null ? null : name.getJCOInstance());
+            return new system.web.services.description.Binding(objGetBinding);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,22 +202,41 @@ public class ServiceDescriptionCollection extends NetObject  {
         }
     }
 
-    public system.web.services.description.Binding GetBinding(XmlQualifiedName name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetBinding = (JCObject)classInstance.Invoke("GetBinding", name == null ? null : name.getJCOInstance());
-            return new system.web.services.description.Binding(objGetBinding);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CopyTo(ServiceDescription[] array, int index) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Insert(int index, ServiceDescription serviceDescription) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Insert", index, serviceDescription == null ? null : serviceDescription.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(ServiceDescription serviceDescription) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", serviceDescription == null ? null : serviceDescription.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -43,9 +43,9 @@ import system.web.ui.webcontrols.IRepeatInfoUser;
 import system.web.ui.webcontrols.IRepeatInfoUserImplementation;
 import system.web.ui.webcontrols.Style;
 import system.web.ui.webcontrols.WebControl;
-import system.web.ui.webcontrols.TableCaptionAlign;
 import system.web.ui.webcontrols.RepeatDirection;
 import system.web.ui.webcontrols.RepeatLayout;
+import system.web.ui.webcontrols.TableCaptionAlign;
 
 
 /**
@@ -145,47 +145,6 @@ public class RepeatInfo extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getCaption() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Caption");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCaption(java.lang.String Caption) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Caption", Caption);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TableCaptionAlign getCaptionAlign() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CaptionAlign");
-            return new TableCaptionAlign(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCaptionAlign(TableCaptionAlign CaptionAlign) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CaptionAlign", CaptionAlign == null ? null : CaptionAlign.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getOuterTableImplied() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -206,6 +165,26 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    public boolean getUseAccessibleHeader() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("UseAccessibleHeader");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setUseAccessibleHeader(boolean UseAccessibleHeader) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("UseAccessibleHeader", UseAccessibleHeader);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int getRepeatColumns() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -221,6 +200,26 @@ public class RepeatInfo extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RepeatColumns", RepeatColumns);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getCaption() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Caption");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCaption(java.lang.String Caption) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Caption", Caption);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,21 +267,22 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
-    public boolean getUseAccessibleHeader() throws Throwable {
+    public TableCaptionAlign getCaptionAlign() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("UseAccessibleHeader");
+            JCObject val = (JCObject)classInstance.Get("CaptionAlign");
+            return new TableCaptionAlign(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUseAccessibleHeader(boolean UseAccessibleHeader) throws Throwable {
+    public void setCaptionAlign(TableCaptionAlign CaptionAlign) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("UseAccessibleHeader", UseAccessibleHeader);
+            classInstance.Set("CaptionAlign", CaptionAlign == null ? null : CaptionAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

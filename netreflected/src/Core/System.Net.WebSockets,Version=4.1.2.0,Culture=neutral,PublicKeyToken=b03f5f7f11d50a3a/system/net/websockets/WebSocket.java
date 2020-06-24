@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.net.websockets.WebSocket;
+import system.io.Stream;
+import system.TimeSpan;
 import system.threading.tasks.Task;
 import system.net.websockets.WebSocketCloseStatus;
 import system.threading.CancellationToken;
 import system.threading.tasks.ValueTask;
-import system.net.websockets.WebSocket;
-import system.io.Stream;
-import system.TimeSpan;
 import system.net.websockets.WebSocketState;
 
 
@@ -120,11 +120,22 @@ public class WebSocket extends NetObject  {
     
     // Methods section
     
-    public void Abort() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean IsApplicationTargeting45() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("Abort");
+            return (boolean)classType.Invoke("IsApplicationTargeting45");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static WebSocket CreateFromStream(Stream stream, boolean isServer, java.lang.String subProtocol, TimeSpan keepAliveInterval) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OperationCanceledException, system.threading.SemaphoreFullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateFromStream = (JCObject)classType.Invoke("CreateFromStream", stream == null ? null : stream.getJCOInstance(), isServer, subProtocol, keepAliveInterval == null ? null : keepAliveInterval.getJCOInstance());
+            return new WebSocket(objCreateFromStream);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,51 +163,21 @@ public class WebSocket extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static WebSocket CreateFromStream(Stream stream, boolean isServer, java.lang.String subProtocol, TimeSpan keepAliveInterval) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OperationCanceledException, system.threading.SemaphoreFullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateFromStream = (JCObject)classType.Invoke("CreateFromStream", stream == null ? null : stream.getJCOInstance(), isServer, subProtocol, keepAliveInterval == null ? null : keepAliveInterval.getJCOInstance());
-            return new WebSocket(objCreateFromStream);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsApplicationTargeting45() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsApplicationTargeting45");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void RegisterPrefixes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("RegisterPrefixes");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
+    public WebSocketState getState() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("State");
+            return new WebSocketState(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getCloseStatusDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -212,17 +193,6 @@ public class WebSocket extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("SubProtocol");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WebSocketState getState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("State");
-            return new WebSocketState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

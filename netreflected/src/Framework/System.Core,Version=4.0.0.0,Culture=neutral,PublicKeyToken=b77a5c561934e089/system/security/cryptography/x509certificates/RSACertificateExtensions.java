@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.RSA;
+import system.security.cryptography.x509certificates.X509Certificate2;
 
 
 /**
@@ -114,12 +114,12 @@ public class RSACertificateExtensions extends NetObject  {
     
     // Methods section
     
-    public static X509Certificate2 CopyWithPrivateKey(X509Certificate2 certificate, RSA privateKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.NullReferenceException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.AccessViolationException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
+    public static RSA GetRSAPrivateKey(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.AccessViolationException, system.RankException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCopyWithPrivateKey = (JCObject)classType.Invoke("CopyWithPrivateKey", certificate == null ? null : certificate.getJCOInstance(), privateKey == null ? null : privateKey.getJCOInstance());
-            return new X509Certificate2(objCopyWithPrivateKey);
+            JCObject objGetRSAPrivateKey = (JCObject)classType.Invoke("GetRSAPrivateKey", certificate == null ? null : certificate.getJCOInstance());
+            return new RSA(objGetRSAPrivateKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -136,12 +136,12 @@ public class RSACertificateExtensions extends NetObject  {
         }
     }
 
-    public static RSA GetRSAPrivateKey(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.AccessViolationException, system.RankException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException {
+    public static X509Certificate2 CopyWithPrivateKey(X509Certificate2 certificate, RSA privateKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.NullReferenceException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.AccessViolationException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetRSAPrivateKey = (JCObject)classType.Invoke("GetRSAPrivateKey", certificate == null ? null : certificate.getJCOInstance());
-            return new RSA(objGetRSAPrivateKey);
+            JCObject objCopyWithPrivateKey = (JCObject)classType.Invoke("CopyWithPrivateKey", certificate == null ? null : certificate.getJCOInstance(), privateKey == null ? null : privateKey.getJCOInstance());
+            return new X509Certificate2(objCopyWithPrivateKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

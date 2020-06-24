@@ -108,6 +108,16 @@ public class IInstanceContextProviderImplementation extends NetObject implements
 
     // Methods section
     
+    public boolean IsIdle(InstanceContext instanceContext) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsIdle", instanceContext == null ? null : instanceContext.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public InstanceContext GetExistingInstanceContext(Message message, IContextChannel channel) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -124,16 +134,6 @@ public class IInstanceContextProviderImplementation extends NetObject implements
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeInstanceContext", instanceContext == null ? null : instanceContext.getJCOInstance(), message == null ? null : message.getJCOInstance(), channel == null ? null : channel.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsIdle(InstanceContext instanceContext) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsIdle", instanceContext == null ? null : instanceContext.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

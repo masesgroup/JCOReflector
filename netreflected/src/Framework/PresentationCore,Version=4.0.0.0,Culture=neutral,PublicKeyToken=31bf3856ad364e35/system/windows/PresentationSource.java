@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.PresentationSource;
-import system.windows.media.Visual;
 import system.windows.DependencyObject;
+import system.windows.media.Visual;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
 import system.windows.SourceChangedEventHandler;
@@ -121,12 +121,11 @@ public class PresentationSource extends NetObject  {
     
     // Methods section
     
-    public static PresentationSource FromVisual(Visual visual) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean CheckAccess() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFromVisual = (JCObject)classType.Invoke("FromVisual", visual == null ? null : visual.getJCOInstance());
-            return new PresentationSource(objFromVisual);
+            return (boolean)classInstance.Invoke("CheckAccess");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,11 +142,12 @@ public class PresentationSource extends NetObject  {
         }
     }
 
-    public static void RemoveSourceChangedHandler(IInputElement e, SourceChangedEventHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.OutOfMemoryException {
+    public static PresentationSource FromVisual(Visual visual) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RemoveSourceChangedHandler", e == null ? null : e.getJCOInstance(), handler);
+            JCObject objFromVisual = (JCObject)classType.Invoke("FromVisual", visual == null ? null : visual.getJCOInstance());
+            return new PresentationSource(objFromVisual);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,11 +163,11 @@ public class PresentationSource extends NetObject  {
         }
     }
 
-    public boolean CheckAccess() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void RemoveSourceChangedHandler(IInputElement e, SourceChangedEventHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Invoke("CheckAccess");
+            classType.Invoke("RemoveSourceChangedHandler", e == null ? null : e.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,6 +187,27 @@ public class PresentationSource extends NetObject  {
     
     // Properties section
     
+    public boolean getIsDisposed() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsDisposed");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable getCurrentSources() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("CurrentSources");
+            return new IEnumerableImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CompositionTarget getCompositionTarget() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -219,33 +240,12 @@ public class PresentationSource extends NetObject  {
         }
     }
 
-    public boolean getIsDisposed() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsDisposed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Dispatcher getDispatcher() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Dispatcher");
             return new Dispatcher(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static IEnumerable getCurrentSources() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("CurrentSources");
-            return new IEnumerableImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

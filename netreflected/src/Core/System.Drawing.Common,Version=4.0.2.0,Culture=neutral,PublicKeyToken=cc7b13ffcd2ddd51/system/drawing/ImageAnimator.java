@@ -114,21 +114,11 @@ public class ImageAnimator extends NetObject  {
     
     // Methods section
     
-    public static void UpdateFrames(Image image) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException, system.ApplicationException, system.OperationCanceledException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public static boolean CanAnimate(Image image) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("UpdateFrames", image == null ? null : image.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void UpdateFrames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException, system.ApplicationException, system.OperationCanceledException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("UpdateFrames");
+            return (boolean)classType.Invoke("CanAnimate", image == null ? null : image.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,21 +134,31 @@ public class ImageAnimator extends NetObject  {
         }
     }
 
-    public static boolean CanAnimate(Image image) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("CanAnimate", image == null ? null : image.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void StopAnimate(Image image, EventHandler onFrameChangedHandler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException, system.ApplicationException, system.OperationCanceledException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("StopAnimate", image == null ? null : image.getJCOInstance(), onFrameChangedHandler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void UpdateFrames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException, system.ApplicationException, system.OperationCanceledException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("UpdateFrames");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void UpdateFrames(Image image) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException, system.ApplicationException, system.OperationCanceledException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("UpdateFrames", image == null ? null : image.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

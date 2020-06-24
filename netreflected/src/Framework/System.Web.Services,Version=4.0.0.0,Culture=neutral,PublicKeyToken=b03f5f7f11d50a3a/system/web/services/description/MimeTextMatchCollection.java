@@ -124,21 +124,21 @@ public class MimeTextMatchCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(MimeTextMatch match) throws Throwable {
+    public boolean Contains(MimeTextMatch match) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", match == null ? null : match.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", match == null ? null : match.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, MimeTextMatch match) throws Throwable {
+    public int Add(MimeTextMatch match) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, match == null ? null : match.getJCOInstance());
+            return (int)classInstance.Invoke("Add", match == null ? null : match.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,21 +154,11 @@ public class MimeTextMatchCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(MimeTextMatch match) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", match == null ? null : match.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(MimeTextMatch match) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", match == null ? null : match.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,11 +174,21 @@ public class MimeTextMatchCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public void Insert(int index, MimeTextMatch match) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, match == null ? null : match.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(MimeTextMatch match) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", match == null ? null : match.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -113,17 +113,6 @@ public class ModelSearchService extends NetObject  {
     
     // Methods section
     
-    public TextImage GenerateTextImage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGenerateTextImage = (JCObject)classInstance.Invoke("GenerateTextImage");
-            return new TextImage(objGenerateTextImage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean NavigateTo(int location) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -139,6 +128,17 @@ public class ModelSearchService extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("NavigateTo", startLine, startColumn, endLine, endColumn);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TextImage GenerateTextImage() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGenerateTextImage = (JCObject)classInstance.Invoke("GenerateTextImage");
+            return new TextImage(objGenerateTextImage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

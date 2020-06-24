@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.serialization.ISurrogateSelector;
-import system.runtime.serialization.ISurrogateSelectorImplementation;
 import system.runtime.serialization.ISerializationSurrogate;
 import system.runtime.serialization.ISerializationSurrogateImplementation;
 import system.runtime.serialization.StreamingContext;
+import system.runtime.serialization.ISurrogateSelector;
+import system.runtime.serialization.ISurrogateSelectorImplementation;
 
 
 /**
@@ -108,22 +108,22 @@ public class ISurrogateSelectorImplementation extends NetObject implements ISurr
 
     // Methods section
     
-    public void ChainSelector(ISurrogateSelector selector) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ChainSelector", selector == null ? null : selector.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ISurrogateSelector GetNextSelector() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetNextSelector = (JCObject)classInstance.Invoke("GetNextSelector");
             return new ISurrogateSelectorImplementation(objGetNextSelector);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ChainSelector(ISurrogateSelector selector) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ChainSelector", selector == null ? null : selector.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

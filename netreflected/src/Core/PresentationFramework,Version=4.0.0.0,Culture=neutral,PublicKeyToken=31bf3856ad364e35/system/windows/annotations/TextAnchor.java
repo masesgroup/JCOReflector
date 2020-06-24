@@ -117,22 +117,22 @@ public class TextAnchor extends NetObject  {
     
     // Properties section
     
-    public ContentPosition getBoundingStart() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public ContentPosition getBoundingEnd() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BoundingStart");
+            JCObject val = (JCObject)classInstance.Get("BoundingEnd");
             return new ContentPosition(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ContentPosition getBoundingEnd() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public ContentPosition getBoundingStart() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BoundingEnd");
+            JCObject val = (JCObject)classInstance.Get("BoundingStart");
             return new ContentPosition(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

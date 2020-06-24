@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.peertopeer.collaboration.PeerEndPoint;
-import system.net.peertopeer.collaboration.PeerContact;
-import system.net.peertopeer.collaboration.PeerChangeType;
 import system.net.peertopeer.collaboration.PeerApplication;
+import system.net.peertopeer.collaboration.PeerChangeType;
+import system.net.peertopeer.collaboration.PeerContact;
+import system.net.peertopeer.collaboration.PeerEndPoint;
 
 
 /**
@@ -120,23 +120,12 @@ public class ApplicationChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public PeerEndPoint getPeerEndPoint() throws Throwable {
+    public PeerApplication getPeerApplication() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerEndPoint");
-            return new PeerEndPoint(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PeerContact getPeerContact() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PeerContact");
-            return new PeerContact(val);
+            JCObject val = (JCObject)classInstance.Get("PeerApplication");
+            return new PeerApplication(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,12 +142,23 @@ public class ApplicationChangedEventArgs extends NetObject  {
         }
     }
 
-    public PeerApplication getPeerApplication() throws Throwable {
+    public PeerContact getPeerContact() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerApplication");
-            return new PeerApplication(val);
+            JCObject val = (JCObject)classInstance.Get("PeerContact");
+            return new PeerContact(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PeerEndPoint getPeerEndPoint() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PeerEndPoint");
+            return new PeerEndPoint(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

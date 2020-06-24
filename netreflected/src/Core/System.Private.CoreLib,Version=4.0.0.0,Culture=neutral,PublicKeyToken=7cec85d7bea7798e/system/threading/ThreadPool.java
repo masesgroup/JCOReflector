@@ -38,15 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.threading.WaitCallback;
 import system.runtime.interopservices.SafeHandle;
+import system.threading.WaitCallback;
+import system.threading.IThreadPoolWorkItem;
+import system.threading.IThreadPoolWorkItemImplementation;
 import system.threading.RegisteredWaitHandle;
 import system.threading.WaitHandle;
 import system.threading.WaitOrTimerCallback;
-import system.UInt32;
 import system.TimeSpan;
-import system.threading.IThreadPoolWorkItem;
-import system.threading.IThreadPoolWorkItemImplementation;
+import system.UInt32;
 
 
 /**
@@ -121,21 +121,31 @@ public class ThreadPool extends NetObject  {
     
     // Methods section
     
-    public static boolean QueueUserWorkItem(WaitCallback callBack, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("QueueUserWorkItem", callBack, state == null ? null : state.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean BindHandle(SafeHandle osHandle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("BindHandle", osHandle == null ? null : osHandle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean QueueUserWorkItem(WaitCallback callBack) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.InvalidOperationException, system.threading.SynchronizationLockException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("QueueUserWorkItem", callBack);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean QueueUserWorkItem(WaitCallback callBack, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("QueueUserWorkItem", callBack, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,23 +171,21 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, UInt32 millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static boolean UnsafeQueueUserWorkItem(IThreadPoolWorkItem callBack, boolean preferLocal) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRegisterWaitForSingleObject = (JCObject)classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval == null ? null : millisecondsTimeOutInterval.getJCOInstance(), executeOnlyOnce);
-            return new RegisteredWaitHandle(objRegisterWaitForSingleObject);
+            return (boolean)classType.Invoke("UnsafeQueueUserWorkItem", callBack == null ? null : callBack.getJCOInstance(), preferLocal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, UInt32 millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static boolean UnsafeQueueUserWorkItem(WaitCallback callBack, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objUnsafeRegisterWaitForSingleObject = (JCObject)classType.Invoke("UnsafeRegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval == null ? null : millisecondsTimeOutInterval.getJCOInstance(), executeOnlyOnce);
-            return new RegisteredWaitHandle(objUnsafeRegisterWaitForSingleObject);
+            return (boolean)classType.Invoke("UnsafeQueueUserWorkItem", callBack, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,6 +196,39 @@ public class ThreadPool extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objRegisterWaitForSingleObject = (JCObject)classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval, executeOnlyOnce);
+            return new RegisteredWaitHandle(objRegisterWaitForSingleObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, long millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRegisterWaitForSingleObject = (JCObject)classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval, executeOnlyOnce);
+            return new RegisteredWaitHandle(objRegisterWaitForSingleObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, TimeSpan timeout, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRegisterWaitForSingleObject = (JCObject)classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), executeOnlyOnce);
+            return new RegisteredWaitHandle(objRegisterWaitForSingleObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, UInt32 millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRegisterWaitForSingleObject = (JCObject)classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval == null ? null : millisecondsTimeOutInterval.getJCOInstance(), executeOnlyOnce);
             return new RegisteredWaitHandle(objRegisterWaitForSingleObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -205,34 +246,12 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, long millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRegisterWaitForSingleObject = (JCObject)classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval, executeOnlyOnce);
-            return new RegisteredWaitHandle(objRegisterWaitForSingleObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, long millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objUnsafeRegisterWaitForSingleObject = (JCObject)classType.Invoke("UnsafeRegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval, executeOnlyOnce);
             return new RegisteredWaitHandle(objUnsafeRegisterWaitForSingleObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, TimeSpan timeout, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRegisterWaitForSingleObject = (JCObject)classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), executeOnlyOnce);
-            return new RegisteredWaitHandle(objRegisterWaitForSingleObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,31 +268,12 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static boolean QueueUserWorkItem(WaitCallback callBack) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.InvalidOperationException, system.threading.SynchronizationLockException {
+    public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, UInt32 millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("QueueUserWorkItem", callBack);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean UnsafeQueueUserWorkItem(WaitCallback callBack, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("UnsafeQueueUserWorkItem", callBack, state == null ? null : state.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean UnsafeQueueUserWorkItem(IThreadPoolWorkItem callBack, boolean preferLocal) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("UnsafeQueueUserWorkItem", callBack == null ? null : callBack.getJCOInstance(), preferLocal);
+            JCObject objUnsafeRegisterWaitForSingleObject = (JCObject)classType.Invoke("UnsafeRegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval == null ? null : millisecondsTimeOutInterval.getJCOInstance(), executeOnlyOnce);
+            return new RegisteredWaitHandle(objUnsafeRegisterWaitForSingleObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

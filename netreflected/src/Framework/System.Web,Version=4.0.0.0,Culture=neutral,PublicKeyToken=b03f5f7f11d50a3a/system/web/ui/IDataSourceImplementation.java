@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.ui.DataSourceView;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.web.ui.DataSourceView;
 import system.EventHandler;
 
 
@@ -107,23 +107,23 @@ public class IDataSourceImplementation extends NetObject implements IDataSource 
 
     // Methods section
     
-    public DataSourceView GetView(java.lang.String viewName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetView = (JCObject)classInstance.Invoke("GetView", viewName);
-            return new DataSourceView(objGetView);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ICollection GetViewNames() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetViewNames = (JCObject)classInstance.Invoke("GetViewNames");
             return new ICollectionImplementation(objGetViewNames);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataSourceView GetView(java.lang.String viewName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetView = (JCObject)classInstance.Invoke("GetView", viewName);
+            return new DataSourceView(objGetView);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

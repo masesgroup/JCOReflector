@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.workflow.runtime.tracking.UserTrackingLocationCollection;
-import system.workflow.runtime.tracking.TrackingAnnotationCollection;
 import system.workflow.runtime.tracking.ExtractCollection;
+import system.workflow.runtime.tracking.TrackingAnnotationCollection;
+import system.workflow.runtime.tracking.UserTrackingLocationCollection;
 
 
 /**
@@ -130,23 +130,12 @@ public class UserTrackPoint extends NetObject  {
     
     // Properties section
     
-    public UserTrackingLocationCollection getMatchingLocations() throws Throwable {
+    public ExtractCollection getExtracts() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MatchingLocations");
-            return new UserTrackingLocationCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UserTrackingLocationCollection getExcludedLocations() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExcludedLocations");
-            return new UserTrackingLocationCollection(val);
+            JCObject val = (JCObject)classInstance.Get("Extracts");
+            return new ExtractCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,12 +152,23 @@ public class UserTrackPoint extends NetObject  {
         }
     }
 
-    public ExtractCollection getExtracts() throws Throwable {
+    public UserTrackingLocationCollection getExcludedLocations() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Extracts");
-            return new ExtractCollection(val);
+            JCObject val = (JCObject)classInstance.Get("ExcludedLocations");
+            return new UserTrackingLocationCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UserTrackingLocationCollection getMatchingLocations() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MatchingLocations");
+            return new UserTrackingLocationCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

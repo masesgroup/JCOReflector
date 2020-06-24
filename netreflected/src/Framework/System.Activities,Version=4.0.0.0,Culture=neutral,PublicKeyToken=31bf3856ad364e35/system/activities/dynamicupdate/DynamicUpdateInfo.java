@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.dynamicupdate.DynamicUpdateMapItem;
 import system.activities.Activity;
 import system.activities.ActivityBuilder;
+import system.activities.dynamicupdate.DynamicUpdateMapItem;
 
 
 /**
@@ -115,11 +115,23 @@ public class DynamicUpdateInfo extends NetObject  {
     
     // Methods section
     
-    public static void SetMapItem(NetObject instance, DynamicUpdateMapItem mapItem) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+    public static Activity GetOriginalDefinition(NetObject instance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetMapItem", instance == null ? null : instance.getJCOInstance(), mapItem == null ? null : mapItem.getJCOInstance());
+            JCObject objGetOriginalDefinition = (JCObject)classType.Invoke("GetOriginalDefinition", instance == null ? null : instance.getJCOInstance());
+            return new Activity(objGetOriginalDefinition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ActivityBuilder GetOriginalActivityBuilder(NetObject instance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetOriginalActivityBuilder = (JCObject)classType.Invoke("GetOriginalActivityBuilder", instance == null ? null : instance.getJCOInstance());
+            return new ActivityBuilder(objGetOriginalActivityBuilder);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -136,22 +148,11 @@ public class DynamicUpdateInfo extends NetObject  {
         }
     }
 
-    public static void SetOriginalDefinition(NetObject instance, Activity originalDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+    public static void SetMapItem(NetObject instance, DynamicUpdateMapItem mapItem) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetOriginalDefinition", instance == null ? null : instance.getJCOInstance(), originalDefinition == null ? null : originalDefinition.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Activity GetOriginalDefinition(NetObject instance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetOriginalDefinition = (JCObject)classType.Invoke("GetOriginalDefinition", instance == null ? null : instance.getJCOInstance());
-            return new Activity(objGetOriginalDefinition);
+            classType.Invoke("SetMapItem", instance == null ? null : instance.getJCOInstance(), mapItem == null ? null : mapItem.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,12 +168,11 @@ public class DynamicUpdateInfo extends NetObject  {
         }
     }
 
-    public static ActivityBuilder GetOriginalActivityBuilder(NetObject instance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static void SetOriginalDefinition(NetObject instance, Activity originalDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetOriginalActivityBuilder = (JCObject)classType.Invoke("GetOriginalActivityBuilder", instance == null ? null : instance.getJCOInstance());
-            return new ActivityBuilder(objGetOriginalActivityBuilder);
+            classType.Invoke("SetOriginalDefinition", instance == null ? null : instance.getJCOInstance(), originalDefinition == null ? null : originalDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

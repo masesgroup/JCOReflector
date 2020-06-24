@@ -37,27 +37,27 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.UInt32;
-import system.reflection.ConstructorInfo;
 import system.reflection.BindingFlags;
-import system.reflection.TypeFilter;
+import system.reflection.Binder;
+import system.globalization.CultureInfo;
+import system.reflection.ParameterModifier;
+import system.reflection.ConstructorInfo;
+import system.reflection.CallingConventions;
 import system.reflection.EventInfo;
+import system.reflection.FieldInfo;
+import system.reflection.InterfaceMapping;
 import system.reflection.MemberInfo;
 import system.reflection.MemberTypes;
 import system.reflection.MemberFilter;
-import system.reflection.InterfaceMapping;
 import system.reflection.MethodInfo;
-import system.reflection.Binder;
-import system.reflection.ParameterModifier;
-import system.reflection.FieldInfo;
 import system.reflection.PropertyInfo;
-import system.globalization.CultureInfo;
-import system.reflection.CallingConventions;
+import system.reflection.TypeFilter;
+import system.UInt32;
 import system.Guid;
-import system.reflection.Module;
 import system.reflection.Assembly;
-import system.RuntimeTypeHandle;
+import system.reflection.Module;
 import system.reflection.TypeAttributes;
+import system.RuntimeTypeHandle;
 
 
 /**
@@ -110,73 +110,27 @@ public interface _Type extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
-
-    public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
-
-    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable;
-
-    public int GetArrayRank() throws Throwable;
-
-    public ConstructorInfo[] GetConstructors(BindingFlags bindingAttr) throws Throwable;
-
-    public NetType GetInterface(java.lang.String name, boolean ignoreCase) throws Throwable;
-
-    public NetType[] GetInterfaces() throws Throwable;
-
-    public NetType[] FindInterfaces(TypeFilter filter, NetObject filterCriteria) throws Throwable;
-
-    public EventInfo GetEvent(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
-
-    public EventInfo[] GetEvents() throws Throwable;
-
-    public EventInfo[] GetEvents(BindingFlags bindingAttr) throws Throwable;
-
-    public NetType[] GetNestedTypes(BindingFlags bindingAttr) throws Throwable;
-
-    public NetType GetNestedType(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
-
-    public MemberInfo[] GetMember(java.lang.String name, MemberTypes type, BindingFlags bindingAttr) throws Throwable;
-
-    public MemberInfo[] GetDefaultMembers() throws Throwable;
-
-    public MemberInfo[] FindMembers(MemberTypes memberType, BindingFlags bindingAttr, MemberFilter filter, NetObject filterCriteria) throws Throwable;
-
-    public NetType GetElementType() throws Throwable;
-
-    public boolean IsSubclassOf(NetType c) throws Throwable;
-
-    public boolean IsInstanceOfType(NetObject o) throws Throwable;
+    public boolean Equals(NetType o) throws Throwable;
 
     public boolean IsAssignableFrom(NetType c) throws Throwable;
 
-    public InterfaceMapping GetInterfaceMap(NetType interfaceType) throws Throwable;
+    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable;
 
-    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
+    public boolean IsInstanceOfType(NetObject o) throws Throwable;
 
-    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
+    public boolean IsSubclassOf(NetType c) throws Throwable;
 
-    public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable;
+    public int GetArrayRank() throws Throwable;
 
-    public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
-
-    public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable;
-
-    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
-
-    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
-
-    public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable;
-
-    public MemberInfo[] GetMember(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
-
-    public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable;
-
-    public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable;
+    public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args) throws Throwable;
 
     public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, CultureInfo culture) throws Throwable;
 
-    public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args) throws Throwable;
+    public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable;
+
+    public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
+
+    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
 
     public ConstructorInfo GetConstructor(BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
 
@@ -186,141 +140,187 @@ public interface _Type extends IJCOBridgeReflected {
 
     public ConstructorInfo[] GetConstructors() throws Throwable;
 
-    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
-
-    public MethodInfo GetMethod(java.lang.String name, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
-
-    public MethodInfo GetMethod(java.lang.String name, NetType[] types) throws Throwable;
-
-    public MethodInfo GetMethod(java.lang.String name) throws Throwable;
-
-    public MethodInfo[] GetMethods() throws Throwable;
-
-    public FieldInfo GetField(java.lang.String name) throws Throwable;
-
-    public FieldInfo[] GetFields() throws Throwable;
-
-    public NetType GetInterface(java.lang.String name) throws Throwable;
+    public ConstructorInfo[] GetConstructors(BindingFlags bindingAttr) throws Throwable;
 
     public EventInfo GetEvent(java.lang.String name) throws Throwable;
 
-    public PropertyInfo GetProperty(java.lang.String name, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
+    public EventInfo GetEvent(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
 
-    public PropertyInfo GetProperty(java.lang.String name, NetType returnType, NetType[] types) throws Throwable;
+    public EventInfo[] GetEvents() throws Throwable;
 
-    public PropertyInfo GetProperty(java.lang.String name, NetType[] types) throws Throwable;
+    public EventInfo[] GetEvents(BindingFlags bindingAttr) throws Throwable;
 
-    public PropertyInfo GetProperty(java.lang.String name, NetType returnType) throws Throwable;
+    public FieldInfo GetField(java.lang.String name) throws Throwable;
 
-    public PropertyInfo GetProperty(java.lang.String name) throws Throwable;
+    public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
 
-    public PropertyInfo[] GetProperties() throws Throwable;
+    public FieldInfo[] GetFields() throws Throwable;
 
-    public NetType[] GetNestedTypes() throws Throwable;
+    public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable;
 
-    public NetType GetNestedType(java.lang.String name) throws Throwable;
+    public InterfaceMapping GetInterfaceMap(NetType interfaceType) throws Throwable;
+
+    public MemberInfo[] FindMembers(MemberTypes memberType, BindingFlags bindingAttr, MemberFilter filter, NetObject filterCriteria) throws Throwable;
+
+    public MemberInfo[] GetDefaultMembers() throws Throwable;
 
     public MemberInfo[] GetMember(java.lang.String name) throws Throwable;
 
+    public MemberInfo[] GetMember(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
+
+    public MemberInfo[] GetMember(java.lang.String name, MemberTypes type, BindingFlags bindingAttr) throws Throwable;
+
     public MemberInfo[] GetMembers() throws Throwable;
 
-    public boolean Equals(NetType o) throws Throwable;
+    public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable;
+
+    public MethodInfo GetMethod(java.lang.String name) throws Throwable;
+
+    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
+
+    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
+
+    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
+
+    public MethodInfo GetMethod(java.lang.String name, NetType[] types) throws Throwable;
+
+    public MethodInfo GetMethod(java.lang.String name, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
+
+    public MethodInfo[] GetMethods() throws Throwable;
+
+    public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable;
+
+    public PropertyInfo GetProperty(java.lang.String name) throws Throwable;
+
+    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
+
+    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
+
+    public PropertyInfo GetProperty(java.lang.String name, NetType returnType) throws Throwable;
+
+    public PropertyInfo GetProperty(java.lang.String name, NetType returnType, NetType[] types) throws Throwable;
+
+    public PropertyInfo GetProperty(java.lang.String name, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
+
+    public PropertyInfo GetProperty(java.lang.String name, NetType[] types) throws Throwable;
+
+    public PropertyInfo[] GetProperties() throws Throwable;
+
+    public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable;
+
+    public NetType GetElementType() throws Throwable;
+
+    public NetType GetInterface(java.lang.String name) throws Throwable;
+
+    public NetType GetInterface(java.lang.String name, boolean ignoreCase) throws Throwable;
+
+    public NetType GetNestedType(java.lang.String name) throws Throwable;
+
+    public NetType GetNestedType(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
+
+    public NetType[] FindInterfaces(TypeFilter filter, NetObject filterCriteria) throws Throwable;
+
+    public NetType[] GetInterfaces() throws Throwable;
+
+    public NetType[] GetNestedTypes() throws Throwable;
+
+    public NetType[] GetNestedTypes(BindingFlags bindingAttr) throws Throwable;
 
 
     
     // Properties section
     
-    public MemberTypes getMemberType() throws Throwable;
+    public boolean getHasElementType() throws Throwable;
 
-    public java.lang.String getName() throws Throwable;
+    public boolean getIsAbstract() throws Throwable;
 
-    public NetType getDeclaringType() throws Throwable;
+    public boolean getIsAnsiClass() throws Throwable;
 
-    public NetType getReflectedType() throws Throwable;
+    public boolean getIsArray() throws Throwable;
 
-    public Guid getGUID() throws Throwable;
+    public boolean getIsAutoClass() throws Throwable;
 
-    public Module getModule() throws Throwable;
+    public boolean getIsAutoLayout() throws Throwable;
 
-    public Assembly getAssembly() throws Throwable;
+    public boolean getIsByRef() throws Throwable;
 
-    public RuntimeTypeHandle getTypeHandle() throws Throwable;
+    public boolean getIsClass() throws Throwable;
 
-    public java.lang.String getFullName() throws Throwable;
+    public boolean getIsCOMObject() throws Throwable;
 
-    public java.lang.String getNamespace() throws Throwable;
+    public boolean getIsContextful() throws Throwable;
 
-    public java.lang.String getAssemblyQualifiedName() throws Throwable;
+    public boolean getIsEnum() throws Throwable;
 
-    public NetType getBaseType() throws Throwable;
+    public boolean getIsExplicitLayout() throws Throwable;
 
-    public NetType getUnderlyingSystemType() throws Throwable;
+    public boolean getIsImport() throws Throwable;
 
-    public ConstructorInfo getTypeInitializer() throws Throwable;
+    public boolean getIsInterface() throws Throwable;
 
-    public TypeAttributes getAttributes() throws Throwable;
+    public boolean getIsLayoutSequential() throws Throwable;
 
-    public boolean getIsNotPublic() throws Throwable;
-
-    public boolean getIsPublic() throws Throwable;
-
-    public boolean getIsNestedPublic() throws Throwable;
-
-    public boolean getIsNestedPrivate() throws Throwable;
-
-    public boolean getIsNestedFamily() throws Throwable;
+    public boolean getIsMarshalByRef() throws Throwable;
 
     public boolean getIsNestedAssembly() throws Throwable;
 
     public boolean getIsNestedFamANDAssem() throws Throwable;
 
+    public boolean getIsNestedFamily() throws Throwable;
+
     public boolean getIsNestedFamORAssem() throws Throwable;
 
-    public boolean getIsAutoLayout() throws Throwable;
+    public boolean getIsNestedPrivate() throws Throwable;
 
-    public boolean getIsLayoutSequential() throws Throwable;
+    public boolean getIsNestedPublic() throws Throwable;
 
-    public boolean getIsExplicitLayout() throws Throwable;
-
-    public boolean getIsClass() throws Throwable;
-
-    public boolean getIsInterface() throws Throwable;
-
-    public boolean getIsValueType() throws Throwable;
-
-    public boolean getIsAbstract() throws Throwable;
-
-    public boolean getIsSealed() throws Throwable;
-
-    public boolean getIsEnum() throws Throwable;
-
-    public boolean getIsSpecialName() throws Throwable;
-
-    public boolean getIsImport() throws Throwable;
-
-    public boolean getIsSerializable() throws Throwable;
-
-    public boolean getIsAnsiClass() throws Throwable;
-
-    public boolean getIsUnicodeClass() throws Throwable;
-
-    public boolean getIsAutoClass() throws Throwable;
-
-    public boolean getIsArray() throws Throwable;
-
-    public boolean getIsByRef() throws Throwable;
+    public boolean getIsNotPublic() throws Throwable;
 
     public boolean getIsPointer() throws Throwable;
 
     public boolean getIsPrimitive() throws Throwable;
 
-    public boolean getIsCOMObject() throws Throwable;
+    public boolean getIsPublic() throws Throwable;
 
-    public boolean getHasElementType() throws Throwable;
+    public boolean getIsSealed() throws Throwable;
 
-    public boolean getIsContextful() throws Throwable;
+    public boolean getIsSerializable() throws Throwable;
 
-    public boolean getIsMarshalByRef() throws Throwable;
+    public boolean getIsSpecialName() throws Throwable;
+
+    public boolean getIsUnicodeClass() throws Throwable;
+
+    public boolean getIsValueType() throws Throwable;
+
+    public Guid getGUID() throws Throwable;
+
+    public Assembly getAssembly() throws Throwable;
+
+    public ConstructorInfo getTypeInitializer() throws Throwable;
+
+    public MemberTypes getMemberType() throws Throwable;
+
+    public Module getModule() throws Throwable;
+
+    public TypeAttributes getAttributes() throws Throwable;
+
+    public RuntimeTypeHandle getTypeHandle() throws Throwable;
+
+    public java.lang.String getAssemblyQualifiedName() throws Throwable;
+
+    public java.lang.String getFullName() throws Throwable;
+
+    public java.lang.String getName() throws Throwable;
+
+    public java.lang.String getNamespace() throws Throwable;
+
+    public NetType getBaseType() throws Throwable;
+
+    public NetType getDeclaringType() throws Throwable;
+
+    public NetType getReflectedType() throws Throwable;
+
+    public NetType getUnderlyingSystemType() throws Throwable;
 
 
 

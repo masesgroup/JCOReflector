@@ -117,17 +117,6 @@ public class PingCompletedEventArgs extends NetObject  {
     
     // Properties section
     
-    public PingReply getReply() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Reply");
-            return new PingReply(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCancelled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -144,6 +133,17 @@ public class PingCompletedEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Error");
             return new NetException(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PingReply getReply() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Reply");
+            return new PingReply(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

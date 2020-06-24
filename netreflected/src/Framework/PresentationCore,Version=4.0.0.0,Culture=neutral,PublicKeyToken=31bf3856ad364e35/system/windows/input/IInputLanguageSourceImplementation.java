@@ -128,6 +128,17 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
     
     // Properties section
     
+    public IEnumerable getInputLanguageList() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("InputLanguageList");
+            return new IEnumerableImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CultureInfo getCurrentInputLanguage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -144,17 +155,6 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentInputLanguage", CurrentInputLanguage == null ? null : CurrentInputLanguage.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IEnumerable getInputLanguageList() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InputLanguageList");
-            return new IEnumerableImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

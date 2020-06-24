@@ -110,21 +110,21 @@ public class RemovedRuleSetAction extends NetObject  {
     // Constructors section
     
 
-    public RemovedRuleSetAction(RuleSet removedRuleSetDefinition) throws Throwable, system.ArgumentNullException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(removedRuleSetDefinition == null ? null : removedRuleSetDefinition.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public RemovedRuleSetAction() throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RemovedRuleSetAction(RuleSet removedRuleSetDefinition) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(removedRuleSetDefinition == null ? null : removedRuleSetDefinition.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

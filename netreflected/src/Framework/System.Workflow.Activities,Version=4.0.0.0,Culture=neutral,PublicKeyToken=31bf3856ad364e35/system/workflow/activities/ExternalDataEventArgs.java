@@ -132,21 +132,21 @@ public class ExternalDataEventArgs extends NetObject  {
         }
     }
 
-    public ExternalDataEventArgs(Guid instanceId, IPendingWork workHandler, NetObject workItem, boolean waitForIdle) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(instanceId == null ? null : instanceId.getJCOInstance(), workHandler == null ? null : workHandler.getJCOInstance(), workItem == null ? null : workItem.getJCOInstance(), waitForIdle));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ExternalDataEventArgs(Guid instanceId, IPendingWork workHandler, NetObject workItem) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(instanceId == null ? null : instanceId.getJCOInstance(), workHandler == null ? null : workHandler.getJCOInstance(), workItem == null ? null : workItem.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ExternalDataEventArgs(Guid instanceId, IPendingWork workHandler, NetObject workItem, boolean waitForIdle) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(instanceId == null ? null : instanceId.getJCOInstance(), workHandler == null ? null : workHandler.getJCOInstance(), workItem == null ? null : workItem.getJCOInstance(), waitForIdle));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,6 +160,26 @@ public class ExternalDataEventArgs extends NetObject  {
     
     // Properties section
     
+    public boolean getWaitForIdle() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("WaitForIdle");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setWaitForIdle(boolean WaitForIdle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("WaitForIdle", WaitForIdle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getInstanceId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -202,27 +222,6 @@ public class ExternalDataEventArgs extends NetObject  {
         }
     }
 
-    public IPendingWork getWorkHandler() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("WorkHandler");
-            return new IPendingWorkImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setWorkHandler(IPendingWork WorkHandler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("WorkHandler", WorkHandler == null ? null : WorkHandler.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getIdentity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -243,21 +242,22 @@ public class ExternalDataEventArgs extends NetObject  {
         }
     }
 
-    public boolean getWaitForIdle() throws Throwable {
+    public IPendingWork getWorkHandler() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("WaitForIdle");
+            JCObject val = (JCObject)classInstance.Get("WorkHandler");
+            return new IPendingWorkImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setWaitForIdle(boolean WaitForIdle) throws Throwable {
+    public void setWorkHandler(IPendingWork WorkHandler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("WaitForIdle", WaitForIdle);
+            classInstance.Set("WorkHandler", WorkHandler == null ? null : WorkHandler.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

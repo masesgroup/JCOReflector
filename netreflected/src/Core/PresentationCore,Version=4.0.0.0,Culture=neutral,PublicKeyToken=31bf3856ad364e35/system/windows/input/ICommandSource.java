@@ -37,10 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.windows.input.ICommand;
-import system.windows.input.ICommandImplementation;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
+import system.windows.input.ICommand;
+import system.windows.input.ICommandImplementation;
 
 
 /**
@@ -97,11 +97,11 @@ public interface ICommandSource extends IJCOBridgeReflected {
     
     // Properties section
     
-    public ICommand getCommand() throws Throwable;
-
     public NetObject getCommandParameter() throws Throwable;
 
     public IInputElement getCommandTarget() throws Throwable;
+
+    public ICommand getCommand() throws Throwable;
 
 
 

@@ -100,21 +100,21 @@ public interface _Exception extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String getMessage() throws Throwable;
+    public NetException getInnerException() throws Throwable;
 
-    public java.lang.String getStackTrace() throws Throwable;
+    public MethodBase getTargetSite() throws Throwable;
 
     public java.lang.String getHelpLink() throws Throwable;
 
     public void setHelpLink(java.lang.String HelpLink) throws Throwable;
 
+    public java.lang.String getMessage() throws Throwable;
+
     public java.lang.String getSource() throws Throwable;
 
     public void setSource(java.lang.String Source) throws Throwable;
 
-    public NetException getInnerException() throws Throwable;
-
-    public MethodBase getTargetSite() throws Throwable;
+    public java.lang.String getStackTrace() throws Throwable;
 
 
 

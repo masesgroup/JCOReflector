@@ -113,6 +113,16 @@ public class BootstrapContext extends NetObject  {
     // Constructors section
     
 
+    public BootstrapContext(byte[] token) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject((Object)token));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BootstrapContext(SecurityToken token, SecurityTokenHandler tokenHandler) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -128,16 +138,6 @@ public class BootstrapContext extends NetObject  {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(token));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BootstrapContext(byte[] token) throws Throwable, system.ArgumentNullException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)token));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,16 +180,6 @@ public class BootstrapContext extends NetObject  {
         }
     }
 
-    public java.lang.String getToken() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Token");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecurityToken getSecurityToken() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -207,6 +197,16 @@ public class BootstrapContext extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("SecurityTokenHandler");
             return new SecurityTokenHandler(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getToken() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Token");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -119,11 +119,11 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
-    public SqlBulkCopyColumnMapping(java.lang.String sourceColumn, java.lang.String destinationColumn) throws Throwable {
+    public SqlBulkCopyColumnMapping(int sourceColumnOrdinal, int destinationOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(sourceColumn, destinationColumn));
+            setJCOInstance((JCObject)classType.NewObject(sourceColumnOrdinal, destinationOrdinal));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,11 +149,11 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
-    public SqlBulkCopyColumnMapping(int sourceColumnOrdinal, int destinationOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public SqlBulkCopyColumnMapping(java.lang.String sourceColumn, java.lang.String destinationColumn) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(sourceColumnOrdinal, destinationOrdinal));
+            setJCOInstance((JCObject)classType.NewObject(sourceColumn, destinationColumn));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,26 +167,6 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getDestinationColumn() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DestinationColumn");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDestinationColumn(java.lang.String DestinationColumn) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DestinationColumn", DestinationColumn);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getDestinationOrdinal() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -207,26 +187,6 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
-    public java.lang.String getSourceColumn() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("SourceColumn");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSourceColumn(java.lang.String SourceColumn) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SourceColumn", SourceColumn);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getSourceOrdinal() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -242,6 +202,46 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceOrdinal", SourceOrdinal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getDestinationColumn() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("DestinationColumn");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDestinationColumn(java.lang.String DestinationColumn) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DestinationColumn", DestinationColumn);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getSourceColumn() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("SourceColumn");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSourceColumn(java.lang.String SourceColumn) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SourceColumn", SourceColumn);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

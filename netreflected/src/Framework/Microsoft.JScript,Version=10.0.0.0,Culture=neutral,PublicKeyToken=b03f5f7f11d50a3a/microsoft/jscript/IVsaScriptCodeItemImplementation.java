@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.codedom.CodeObject;
 import microsoft.jscript.vsa.JSVsaItemType;
+import system.codedom.CodeObject;
 
 
 /**
@@ -116,11 +116,12 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
-    public void AppendSourceText(java.lang.String text) throws Throwable {
+    public NetObject GetOption(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AppendSourceText", text);
+            JCObject objGetOption = (JCObject)classInstance.Invoke("GetOption", name);
+            return new NetObject(objGetOption);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -136,22 +137,21 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
-    public void RemoveEventSource(java.lang.String eventSourceName) throws Throwable {
+    public void AppendSourceText(java.lang.String text) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RemoveEventSource", eventSourceName);
+            classInstance.Invoke("AppendSourceText", text);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject GetOption(java.lang.String name) throws Throwable {
+    public void RemoveEventSource(java.lang.String eventSourceName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetOption = (JCObject)classInstance.Invoke("GetOption", name);
-            return new NetObject(objGetOption);
+            classInstance.Invoke("RemoveEventSource", eventSourceName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,21 +171,11 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
     
     // Properties section
     
-    public int getStartLine() throws Throwable {
+    public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("StartLine");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setStartLine(int StartLine) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("StartLine", StartLine);
+            return (boolean)classInstance.Get("IsDirty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,21 +201,32 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
-    public java.lang.String getSourceText() throws Throwable {
+    public int getStartLine() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("SourceText");
+            return (int)classInstance.Get("StartLine");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSourceText(java.lang.String SourceText) throws Throwable {
+    public void setStartLine(int StartLine) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SourceText", SourceText);
+            classInstance.Set("StartLine", StartLine);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public JSVsaItemType getItemType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ItemType");
+            return new JSVsaItemType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,22 +263,21 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
-    public JSVsaItemType getItemType() throws Throwable {
+    public java.lang.String getSourceText() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemType");
-            return new JSVsaItemType(val);
+            return (java.lang.String)classInstance.Get("SourceText");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsDirty() throws Throwable {
+    public void setSourceText(java.lang.String SourceText) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsDirty");
+            classInstance.Set("SourceText", SourceText);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

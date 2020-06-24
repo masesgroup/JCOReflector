@@ -95,33 +95,33 @@ public interface IWSTrustFeb2005AsyncContract extends IJCOBridgeReflected {
     
     public IAsyncResult BeginTrustFeb2005Cancel(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public Message EndTrustFeb2005Cancel(IAsyncResult ar) throws Throwable;
+    public IAsyncResult BeginTrustFeb2005CancelResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginTrustFeb2005Issue(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public Message EndTrustFeb2005Issue(IAsyncResult ar) throws Throwable;
+    public IAsyncResult BeginTrustFeb2005IssueResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginTrustFeb2005Renew(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public Message EndTrustFeb2005Renew(IAsyncResult ar) throws Throwable;
+    public IAsyncResult BeginTrustFeb2005RenewResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginTrustFeb2005Validate(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public Message EndTrustFeb2005Validate(IAsyncResult ar) throws Throwable;
+    public IAsyncResult BeginTrustFeb2005ValidateResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginTrustFeb2005CancelResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
+    public Message EndTrustFeb2005Cancel(IAsyncResult ar) throws Throwable;
 
     public Message EndTrustFeb2005CancelResponse(IAsyncResult ar) throws Throwable;
 
-    public IAsyncResult BeginTrustFeb2005IssueResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
+    public Message EndTrustFeb2005Issue(IAsyncResult ar) throws Throwable;
 
     public Message EndTrustFeb2005IssueResponse(IAsyncResult ar) throws Throwable;
 
-    public IAsyncResult BeginTrustFeb2005RenewResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
+    public Message EndTrustFeb2005Renew(IAsyncResult ar) throws Throwable;
 
     public Message EndTrustFeb2005RenewResponse(IAsyncResult ar) throws Throwable;
 
-    public IAsyncResult BeginTrustFeb2005ValidateResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
+    public Message EndTrustFeb2005Validate(IAsyncResult ar) throws Throwable;
 
     public Message EndTrustFeb2005ValidateResponse(IAsyncResult ar) throws Throwable;
 

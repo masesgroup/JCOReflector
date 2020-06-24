@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.spatial.DbGeometry;
 import system.data.spatial.DbGeography;
 import system.data.spatial.DbGeographyWellKnownValue;
 import system.data.spatial.DbGeometryWellKnownValue;
-import system.data.spatial.DbGeometry;
 import system.data.spatial.DbSpatialServices;
 
 
@@ -117,353 +117,21 @@ public class DbSpatialServices extends NetObject  {
     
     // Methods section
     
-    public DbGeography GeographyFromProviderValue(NetObject providerValue) throws Throwable {
+    public boolean Contains(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGeographyFromProviderValue = (JCObject)classInstance.Invoke("GeographyFromProviderValue", providerValue == null ? null : providerValue.getJCOInstance());
-            return new DbGeography(objGeographyFromProviderValue);
+            return (boolean)classInstance.Invoke("Contains", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject CreateProviderValue(DbGeographyWellKnownValue wellKnownValue) throws Throwable {
+    public boolean Crosses(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateProviderValue = (JCObject)classInstance.Invoke("CreateProviderValue", wellKnownValue == null ? null : wellKnownValue.getJCOInstance());
-            return new NetObject(objCreateProviderValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeographyWellKnownValue CreateWellKnownValue(DbGeography geographyValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateWellKnownValue = (JCObject)classInstance.Invoke("CreateWellKnownValue", geographyValue == null ? null : geographyValue.getJCOInstance());
-            return new DbGeographyWellKnownValue(objCreateWellKnownValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyFromBinary(byte[] wellKnownBinary) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyFromBinary = (JCObject)classInstance.Invoke("GeographyFromBinary", (Object)wellKnownBinary);
-            return new DbGeography(objGeographyFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyFromBinary(byte[] wellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyFromBinary = (JCObject)classInstance.Invoke("GeographyFromBinary", wellKnownBinary, coordinateSystemId);
-            return new DbGeography(objGeographyFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyLineFromBinary(byte[] lineWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyLineFromBinary = (JCObject)classInstance.Invoke("GeographyLineFromBinary", lineWellKnownBinary, coordinateSystemId);
-            return new DbGeography(objGeographyLineFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyPointFromBinary(byte[] pointWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyPointFromBinary = (JCObject)classInstance.Invoke("GeographyPointFromBinary", pointWellKnownBinary, coordinateSystemId);
-            return new DbGeography(objGeographyPointFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyPolygonFromBinary(byte[] polygonWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyPolygonFromBinary = (JCObject)classInstance.Invoke("GeographyPolygonFromBinary", polygonWellKnownBinary, coordinateSystemId);
-            return new DbGeography(objGeographyPolygonFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyMultiLineFromBinary(byte[] multiLineWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyMultiLineFromBinary = (JCObject)classInstance.Invoke("GeographyMultiLineFromBinary", multiLineWellKnownBinary, coordinateSystemId);
-            return new DbGeography(objGeographyMultiLineFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyMultiPointFromBinary(byte[] multiPointWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyMultiPointFromBinary = (JCObject)classInstance.Invoke("GeographyMultiPointFromBinary", multiPointWellKnownBinary, coordinateSystemId);
-            return new DbGeography(objGeographyMultiPointFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyMultiPolygonFromBinary(byte[] multiPolygonWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyMultiPolygonFromBinary = (JCObject)classInstance.Invoke("GeographyMultiPolygonFromBinary", multiPolygonWellKnownBinary, coordinateSystemId);
-            return new DbGeography(objGeographyMultiPolygonFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyCollectionFromBinary(byte[] geographyCollectionWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyCollectionFromBinary = (JCObject)classInstance.Invoke("GeographyCollectionFromBinary", geographyCollectionWellKnownBinary, coordinateSystemId);
-            return new DbGeography(objGeographyCollectionFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyFromText(java.lang.String wellKnownText) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyFromText = (JCObject)classInstance.Invoke("GeographyFromText", wellKnownText);
-            return new DbGeography(objGeographyFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyFromText(java.lang.String wellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyFromText = (JCObject)classInstance.Invoke("GeographyFromText", wellKnownText, coordinateSystemId);
-            return new DbGeography(objGeographyFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyLineFromText(java.lang.String lineWellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyLineFromText = (JCObject)classInstance.Invoke("GeographyLineFromText", lineWellKnownText, coordinateSystemId);
-            return new DbGeography(objGeographyLineFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyPointFromText(java.lang.String pointWellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyPointFromText = (JCObject)classInstance.Invoke("GeographyPointFromText", pointWellKnownText, coordinateSystemId);
-            return new DbGeography(objGeographyPointFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyPolygonFromText(java.lang.String polygonWellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyPolygonFromText = (JCObject)classInstance.Invoke("GeographyPolygonFromText", polygonWellKnownText, coordinateSystemId);
-            return new DbGeography(objGeographyPolygonFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyMultiLineFromText(java.lang.String multiLineWellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyMultiLineFromText = (JCObject)classInstance.Invoke("GeographyMultiLineFromText", multiLineWellKnownText, coordinateSystemId);
-            return new DbGeography(objGeographyMultiLineFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyMultiPointFromText(java.lang.String multiPointWellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyMultiPointFromText = (JCObject)classInstance.Invoke("GeographyMultiPointFromText", multiPointWellKnownText, coordinateSystemId);
-            return new DbGeography(objGeographyMultiPointFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyMultiPolygonFromText(java.lang.String multiPolygonWellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyMultiPolygonFromText = (JCObject)classInstance.Invoke("GeographyMultiPolygonFromText", multiPolygonWellKnownText, coordinateSystemId);
-            return new DbGeography(objGeographyMultiPolygonFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyCollectionFromText(java.lang.String geographyCollectionWellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyCollectionFromText = (JCObject)classInstance.Invoke("GeographyCollectionFromText", geographyCollectionWellKnownText, coordinateSystemId);
-            return new DbGeography(objGeographyCollectionFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyFromGml(java.lang.String geographyMarkup) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyFromGml = (JCObject)classInstance.Invoke("GeographyFromGml", geographyMarkup);
-            return new DbGeography(objGeographyFromGml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GeographyFromGml(java.lang.String geographyMarkup, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeographyFromGml = (JCObject)classInstance.Invoke("GeographyFromGml", geographyMarkup, coordinateSystemId);
-            return new DbGeography(objGeographyFromGml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetCoordinateSystemId(DbGeography geographyValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetCoordinateSystemId", geographyValue == null ? null : geographyValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetDimension(DbGeography geographyValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetDimension", geographyValue == null ? null : geographyValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetSpatialTypeName(DbGeography geographyValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetSpatialTypeName", geographyValue == null ? null : geographyValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean GetIsEmpty(DbGeography geographyValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetIsEmpty", geographyValue == null ? null : geographyValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String AsText(DbGeography geographyValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("AsText", geographyValue == null ? null : geographyValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String AsTextIncludingElevationAndMeasure(DbGeography geographyValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("AsTextIncludingElevationAndMeasure", geographyValue == null ? null : geographyValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] AsBinary(DbGeography geographyValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("AsBinary", geographyValue == null ? null : geographyValue.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexAsBinary = 0; indexAsBinary < resultingArrayList.size(); indexAsBinary++ ) {
-				resultingArray[indexAsBinary] = (byte)resultingArrayList.get(indexAsBinary);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String AsGml(DbGeography geographyValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("AsGml", geographyValue == null ? null : geographyValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SpatialEquals(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SpatialEquals", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            return (boolean)classInstance.Invoke("Crosses", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,425 +147,21 @@ public class DbSpatialServices extends NetObject  {
         }
     }
 
-    public boolean Intersects(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
+    public boolean Disjoint(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Intersects", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            return (boolean)classInstance.Invoke("Disjoint", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DbGeography Buffer(DbGeography geographyValue, double distance) throws Throwable {
+    public boolean GetIsEmpty(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBuffer = (JCObject)classInstance.Invoke("Buffer", geographyValue == null ? null : geographyValue.getJCOInstance(), distance);
-            return new DbGeography(objBuffer);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double Distance(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Invoke("Distance", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography Intersection(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objIntersection = (JCObject)classInstance.Invoke("Intersection", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
-            return new DbGeography(objIntersection);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography Union(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objUnion = (JCObject)classInstance.Invoke("Union", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
-            return new DbGeography(objUnion);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography Difference(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDifference = (JCObject)classInstance.Invoke("Difference", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
-            return new DbGeography(objDifference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography SymmetricDifference(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSymmetricDifference = (JCObject)classInstance.Invoke("SymmetricDifference", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
-            return new DbGeography(objSymmetricDifference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography ElementAt(DbGeography geographyValue, int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objElementAt = (JCObject)classInstance.Invoke("ElementAt", geographyValue == null ? null : geographyValue.getJCOInstance(), index);
-            return new DbGeography(objElementAt);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GetStartPoint(DbGeography geographyValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetStartPoint = (JCObject)classInstance.Invoke("GetStartPoint", geographyValue == null ? null : geographyValue.getJCOInstance());
-            return new DbGeography(objGetStartPoint);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography GetEndPoint(DbGeography geographyValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEndPoint = (JCObject)classInstance.Invoke("GetEndPoint", geographyValue == null ? null : geographyValue.getJCOInstance());
-            return new DbGeography(objGetEndPoint);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeography PointAt(DbGeography geographyValue, int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objPointAt = (JCObject)classInstance.Invoke("PointAt", geographyValue == null ? null : geographyValue.getJCOInstance(), index);
-            return new DbGeography(objPointAt);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject CreateProviderValue(DbGeometryWellKnownValue wellKnownValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateProviderValue = (JCObject)classInstance.Invoke("CreateProviderValue", wellKnownValue == null ? null : wellKnownValue.getJCOInstance());
-            return new NetObject(objCreateProviderValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometryWellKnownValue CreateWellKnownValue(DbGeometry geometryValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateWellKnownValue = (JCObject)classInstance.Invoke("CreateWellKnownValue", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbGeometryWellKnownValue(objCreateWellKnownValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryFromProviderValue(NetObject providerValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryFromProviderValue = (JCObject)classInstance.Invoke("GeometryFromProviderValue", providerValue == null ? null : providerValue.getJCOInstance());
-            return new DbGeometry(objGeometryFromProviderValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryFromBinary(byte[] wellKnownBinary) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryFromBinary = (JCObject)classInstance.Invoke("GeometryFromBinary", (Object)wellKnownBinary);
-            return new DbGeometry(objGeometryFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryFromBinary(byte[] wellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryFromBinary = (JCObject)classInstance.Invoke("GeometryFromBinary", wellKnownBinary, coordinateSystemId);
-            return new DbGeometry(objGeometryFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryLineFromBinary(byte[] lineWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryLineFromBinary = (JCObject)classInstance.Invoke("GeometryLineFromBinary", lineWellKnownBinary, coordinateSystemId);
-            return new DbGeometry(objGeometryLineFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryPointFromBinary(byte[] pointWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryPointFromBinary = (JCObject)classInstance.Invoke("GeometryPointFromBinary", pointWellKnownBinary, coordinateSystemId);
-            return new DbGeometry(objGeometryPointFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryPolygonFromBinary(byte[] polygonWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryPolygonFromBinary = (JCObject)classInstance.Invoke("GeometryPolygonFromBinary", polygonWellKnownBinary, coordinateSystemId);
-            return new DbGeometry(objGeometryPolygonFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryMultiLineFromBinary(byte[] multiLineWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryMultiLineFromBinary = (JCObject)classInstance.Invoke("GeometryMultiLineFromBinary", multiLineWellKnownBinary, coordinateSystemId);
-            return new DbGeometry(objGeometryMultiLineFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryMultiPointFromBinary(byte[] multiPointWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryMultiPointFromBinary = (JCObject)classInstance.Invoke("GeometryMultiPointFromBinary", multiPointWellKnownBinary, coordinateSystemId);
-            return new DbGeometry(objGeometryMultiPointFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryMultiPolygonFromBinary(byte[] multiPolygonWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryMultiPolygonFromBinary = (JCObject)classInstance.Invoke("GeometryMultiPolygonFromBinary", multiPolygonWellKnownBinary, coordinateSystemId);
-            return new DbGeometry(objGeometryMultiPolygonFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryCollectionFromBinary(byte[] geometryCollectionWellKnownBinary, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryCollectionFromBinary = (JCObject)classInstance.Invoke("GeometryCollectionFromBinary", geometryCollectionWellKnownBinary, coordinateSystemId);
-            return new DbGeometry(objGeometryCollectionFromBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryFromText(java.lang.String wellKnownText) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryFromText = (JCObject)classInstance.Invoke("GeometryFromText", wellKnownText);
-            return new DbGeometry(objGeometryFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryFromText(java.lang.String wellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryFromText = (JCObject)classInstance.Invoke("GeometryFromText", wellKnownText, coordinateSystemId);
-            return new DbGeometry(objGeometryFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryLineFromText(java.lang.String lineWellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryLineFromText = (JCObject)classInstance.Invoke("GeometryLineFromText", lineWellKnownText, coordinateSystemId);
-            return new DbGeometry(objGeometryLineFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryPointFromText(java.lang.String pointWellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryPointFromText = (JCObject)classInstance.Invoke("GeometryPointFromText", pointWellKnownText, coordinateSystemId);
-            return new DbGeometry(objGeometryPointFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryPolygonFromText(java.lang.String polygonWellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryPolygonFromText = (JCObject)classInstance.Invoke("GeometryPolygonFromText", polygonWellKnownText, coordinateSystemId);
-            return new DbGeometry(objGeometryPolygonFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryMultiLineFromText(java.lang.String multiLineWellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryMultiLineFromText = (JCObject)classInstance.Invoke("GeometryMultiLineFromText", multiLineWellKnownText, coordinateSystemId);
-            return new DbGeometry(objGeometryMultiLineFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryMultiPointFromText(java.lang.String multiPointWellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryMultiPointFromText = (JCObject)classInstance.Invoke("GeometryMultiPointFromText", multiPointWellKnownText, coordinateSystemId);
-            return new DbGeometry(objGeometryMultiPointFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryMultiPolygonFromText(java.lang.String multiPolygonKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryMultiPolygonFromText = (JCObject)classInstance.Invoke("GeometryMultiPolygonFromText", multiPolygonKnownText, coordinateSystemId);
-            return new DbGeometry(objGeometryMultiPolygonFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryCollectionFromText(java.lang.String geometryCollectionWellKnownText, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryCollectionFromText = (JCObject)classInstance.Invoke("GeometryCollectionFromText", geometryCollectionWellKnownText, coordinateSystemId);
-            return new DbGeometry(objGeometryCollectionFromText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryFromGml(java.lang.String geometryMarkup) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryFromGml = (JCObject)classInstance.Invoke("GeometryFromGml", geometryMarkup);
-            return new DbGeometry(objGeometryFromGml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GeometryFromGml(java.lang.String geometryMarkup, int coordinateSystemId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGeometryFromGml = (JCObject)classInstance.Invoke("GeometryFromGml", geometryMarkup, coordinateSystemId);
-            return new DbGeometry(objGeometryFromGml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetCoordinateSystemId(DbGeometry geometryValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetCoordinateSystemId", geometryValue == null ? null : geometryValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GetBoundary(DbGeometry geometryValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetBoundary = (JCObject)classInstance.Invoke("GetBoundary", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbGeometry(objGetBoundary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetDimension(DbGeometry geometryValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetDimension", geometryValue == null ? null : geometryValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbGeometry GetEnvelope(DbGeometry geometryValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEnvelope = (JCObject)classInstance.Invoke("GetEnvelope", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbGeometry(objGetEnvelope);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetSpatialTypeName(DbGeometry geometryValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetSpatialTypeName", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return (boolean)classInstance.Invoke("GetIsEmpty", geographyValue == null ? null : geographyValue.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -933,70 +197,11 @@ public class DbSpatialServices extends NetObject  {
         }
     }
 
-    public java.lang.String AsText(DbGeometry geometryValue) throws Throwable {
+    public boolean Intersects(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("AsText", geometryValue == null ? null : geometryValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String AsTextIncludingElevationAndMeasure(DbGeometry geometryValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("AsTextIncludingElevationAndMeasure", geometryValue == null ? null : geometryValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] AsBinary(DbGeometry geometryValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("AsBinary", geometryValue == null ? null : geometryValue.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexAsBinary = 0; indexAsBinary < resultingArrayList.size(); indexAsBinary++ ) {
-				resultingArray[indexAsBinary] = (byte)resultingArrayList.get(indexAsBinary);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String AsGml(DbGeometry geometryValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("AsGml", geometryValue == null ? null : geometryValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SpatialEquals(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SpatialEquals", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Disjoint(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Disjoint", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            return (boolean)classInstance.Invoke("Intersects", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1007,46 +212,6 @@ public class DbSpatialServices extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Intersects", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Touches(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Touches", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Crosses(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Crosses", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Within(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Within", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Contains(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Contains", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1072,12 +237,89 @@ public class DbSpatialServices extends NetObject  {
         }
     }
 
-    public DbGeometry Buffer(DbGeometry geometryValue, double distance) throws Throwable {
+    public boolean SpatialEquals(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBuffer = (JCObject)classInstance.Invoke("Buffer", geometryValue == null ? null : geometryValue.getJCOInstance(), distance);
-            return new DbGeometry(objBuffer);
+            return (boolean)classInstance.Invoke("SpatialEquals", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean SpatialEquals(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SpatialEquals", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Touches(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Touches", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Within(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Within", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] AsBinary(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("AsBinary", geographyValue == null ? null : geographyValue.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexAsBinary = 0; indexAsBinary < resultingArrayList.size(); indexAsBinary++ ) {
+				resultingArray[indexAsBinary] = (byte)resultingArrayList.get(indexAsBinary);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] AsBinary(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("AsBinary", geometryValue == null ? null : geometryValue.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexAsBinary = 0; indexAsBinary < resultingArrayList.size(); indexAsBinary++ ) {
+				resultingArray[indexAsBinary] = (byte)resultingArrayList.get(indexAsBinary);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double Distance(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Invoke("Distance", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1093,34 +335,393 @@ public class DbSpatialServices extends NetObject  {
         }
     }
 
-    public DbGeometry GetConvexHull(DbGeometry geometryValue) throws Throwable {
+    public int GetCoordinateSystemId(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetConvexHull = (JCObject)classInstance.Invoke("GetConvexHull", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbGeometry(objGetConvexHull);
+            return (int)classInstance.Invoke("GetCoordinateSystemId", geographyValue == null ? null : geographyValue.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DbGeometry Intersection(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
+    public int GetCoordinateSystemId(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objIntersection = (JCObject)classInstance.Invoke("Intersection", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
-            return new DbGeometry(objIntersection);
+            return (int)classInstance.Invoke("GetCoordinateSystemId", geometryValue == null ? null : geometryValue.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DbGeometry Union(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
+    public int GetDimension(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objUnion = (JCObject)classInstance.Invoke("Union", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
-            return new DbGeometry(objUnion);
+            return (int)classInstance.Invoke("GetDimension", geographyValue == null ? null : geographyValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetDimension(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetDimension", geometryValue == null ? null : geometryValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography Buffer(DbGeography geographyValue, double distance) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBuffer = (JCObject)classInstance.Invoke("Buffer", geographyValue == null ? null : geographyValue.getJCOInstance(), distance);
+            return new DbGeography(objBuffer);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography Difference(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDifference = (JCObject)classInstance.Invoke("Difference", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            return new DbGeography(objDifference);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography ElementAt(DbGeography geographyValue, int index) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objElementAt = (JCObject)classInstance.Invoke("ElementAt", geographyValue == null ? null : geographyValue.getJCOInstance(), index);
+            return new DbGeography(objElementAt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyCollectionFromBinary(byte[] geographyCollectionWellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyCollectionFromBinary = (JCObject)classInstance.Invoke("GeographyCollectionFromBinary", geographyCollectionWellKnownBinary, coordinateSystemId);
+            return new DbGeography(objGeographyCollectionFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyCollectionFromText(java.lang.String geographyCollectionWellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyCollectionFromText = (JCObject)classInstance.Invoke("GeographyCollectionFromText", geographyCollectionWellKnownText, coordinateSystemId);
+            return new DbGeography(objGeographyCollectionFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyFromBinary(byte[] wellKnownBinary) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyFromBinary = (JCObject)classInstance.Invoke("GeographyFromBinary", (Object)wellKnownBinary);
+            return new DbGeography(objGeographyFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyFromBinary(byte[] wellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyFromBinary = (JCObject)classInstance.Invoke("GeographyFromBinary", wellKnownBinary, coordinateSystemId);
+            return new DbGeography(objGeographyFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyFromGml(java.lang.String geographyMarkup) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyFromGml = (JCObject)classInstance.Invoke("GeographyFromGml", geographyMarkup);
+            return new DbGeography(objGeographyFromGml);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyFromGml(java.lang.String geographyMarkup, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyFromGml = (JCObject)classInstance.Invoke("GeographyFromGml", geographyMarkup, coordinateSystemId);
+            return new DbGeography(objGeographyFromGml);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyFromProviderValue(NetObject providerValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyFromProviderValue = (JCObject)classInstance.Invoke("GeographyFromProviderValue", providerValue == null ? null : providerValue.getJCOInstance());
+            return new DbGeography(objGeographyFromProviderValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyFromText(java.lang.String wellKnownText) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyFromText = (JCObject)classInstance.Invoke("GeographyFromText", wellKnownText);
+            return new DbGeography(objGeographyFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyFromText(java.lang.String wellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyFromText = (JCObject)classInstance.Invoke("GeographyFromText", wellKnownText, coordinateSystemId);
+            return new DbGeography(objGeographyFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyLineFromBinary(byte[] lineWellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyLineFromBinary = (JCObject)classInstance.Invoke("GeographyLineFromBinary", lineWellKnownBinary, coordinateSystemId);
+            return new DbGeography(objGeographyLineFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyLineFromText(java.lang.String lineWellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyLineFromText = (JCObject)classInstance.Invoke("GeographyLineFromText", lineWellKnownText, coordinateSystemId);
+            return new DbGeography(objGeographyLineFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyMultiLineFromBinary(byte[] multiLineWellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyMultiLineFromBinary = (JCObject)classInstance.Invoke("GeographyMultiLineFromBinary", multiLineWellKnownBinary, coordinateSystemId);
+            return new DbGeography(objGeographyMultiLineFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyMultiLineFromText(java.lang.String multiLineWellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyMultiLineFromText = (JCObject)classInstance.Invoke("GeographyMultiLineFromText", multiLineWellKnownText, coordinateSystemId);
+            return new DbGeography(objGeographyMultiLineFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyMultiPointFromBinary(byte[] multiPointWellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyMultiPointFromBinary = (JCObject)classInstance.Invoke("GeographyMultiPointFromBinary", multiPointWellKnownBinary, coordinateSystemId);
+            return new DbGeography(objGeographyMultiPointFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyMultiPointFromText(java.lang.String multiPointWellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyMultiPointFromText = (JCObject)classInstance.Invoke("GeographyMultiPointFromText", multiPointWellKnownText, coordinateSystemId);
+            return new DbGeography(objGeographyMultiPointFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyMultiPolygonFromBinary(byte[] multiPolygonWellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyMultiPolygonFromBinary = (JCObject)classInstance.Invoke("GeographyMultiPolygonFromBinary", multiPolygonWellKnownBinary, coordinateSystemId);
+            return new DbGeography(objGeographyMultiPolygonFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyMultiPolygonFromText(java.lang.String multiPolygonWellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyMultiPolygonFromText = (JCObject)classInstance.Invoke("GeographyMultiPolygonFromText", multiPolygonWellKnownText, coordinateSystemId);
+            return new DbGeography(objGeographyMultiPolygonFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyPointFromBinary(byte[] pointWellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyPointFromBinary = (JCObject)classInstance.Invoke("GeographyPointFromBinary", pointWellKnownBinary, coordinateSystemId);
+            return new DbGeography(objGeographyPointFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyPointFromText(java.lang.String pointWellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyPointFromText = (JCObject)classInstance.Invoke("GeographyPointFromText", pointWellKnownText, coordinateSystemId);
+            return new DbGeography(objGeographyPointFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyPolygonFromBinary(byte[] polygonWellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyPolygonFromBinary = (JCObject)classInstance.Invoke("GeographyPolygonFromBinary", polygonWellKnownBinary, coordinateSystemId);
+            return new DbGeography(objGeographyPolygonFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GeographyPolygonFromText(java.lang.String polygonWellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeographyPolygonFromText = (JCObject)classInstance.Invoke("GeographyPolygonFromText", polygonWellKnownText, coordinateSystemId);
+            return new DbGeography(objGeographyPolygonFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GetEndPoint(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetEndPoint = (JCObject)classInstance.Invoke("GetEndPoint", geographyValue == null ? null : geographyValue.getJCOInstance());
+            return new DbGeography(objGetEndPoint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography GetStartPoint(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetStartPoint = (JCObject)classInstance.Invoke("GetStartPoint", geographyValue == null ? null : geographyValue.getJCOInstance());
+            return new DbGeography(objGetStartPoint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography Intersection(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objIntersection = (JCObject)classInstance.Invoke("Intersection", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            return new DbGeography(objIntersection);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography PointAt(DbGeography geographyValue, int index) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objPointAt = (JCObject)classInstance.Invoke("PointAt", geographyValue == null ? null : geographyValue.getJCOInstance(), index);
+            return new DbGeography(objPointAt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography SymmetricDifference(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSymmetricDifference = (JCObject)classInstance.Invoke("SymmetricDifference", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            return new DbGeography(objSymmetricDifference);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeography Union(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objUnion = (JCObject)classInstance.Invoke("Union", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            return new DbGeography(objUnion);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeographyWellKnownValue CreateWellKnownValue(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateWellKnownValue = (JCObject)classInstance.Invoke("CreateWellKnownValue", geographyValue == null ? null : geographyValue.getJCOInstance());
+            return new DbGeographyWellKnownValue(objCreateWellKnownValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry Buffer(DbGeometry geometryValue, double distance) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBuffer = (JCObject)classInstance.Invoke("Buffer", geometryValue == null ? null : geometryValue.getJCOInstance(), distance);
+            return new DbGeometry(objBuffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1137,17 +738,6 @@ public class DbSpatialServices extends NetObject  {
         }
     }
 
-    public DbGeometry SymmetricDifference(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSymmetricDifference = (JCObject)classInstance.Invoke("SymmetricDifference", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
-            return new DbGeometry(objSymmetricDifference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DbGeometry ElementAt(DbGeometry geometryValue, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -1159,34 +749,243 @@ public class DbSpatialServices extends NetObject  {
         }
     }
 
-    public DbGeometry GetStartPoint(DbGeometry geometryValue) throws Throwable {
+    public DbGeometry GeometryCollectionFromBinary(byte[] geometryCollectionWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetStartPoint = (JCObject)classInstance.Invoke("GetStartPoint", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbGeometry(objGetStartPoint);
+            JCObject objGeometryCollectionFromBinary = (JCObject)classInstance.Invoke("GeometryCollectionFromBinary", geometryCollectionWellKnownBinary, coordinateSystemId);
+            return new DbGeometry(objGeometryCollectionFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DbGeometry GetEndPoint(DbGeometry geometryValue) throws Throwable {
+    public DbGeometry GeometryCollectionFromText(java.lang.String geometryCollectionWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetEndPoint = (JCObject)classInstance.Invoke("GetEndPoint", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbGeometry(objGetEndPoint);
+            JCObject objGeometryCollectionFromText = (JCObject)classInstance.Invoke("GeometryCollectionFromText", geometryCollectionWellKnownText, coordinateSystemId);
+            return new DbGeometry(objGeometryCollectionFromText);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DbGeometry PointAt(DbGeometry geometryValue, int index) throws Throwable {
+    public DbGeometry GeometryFromBinary(byte[] wellKnownBinary) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objPointAt = (JCObject)classInstance.Invoke("PointAt", geometryValue == null ? null : geometryValue.getJCOInstance(), index);
-            return new DbGeometry(objPointAt);
+            JCObject objGeometryFromBinary = (JCObject)classInstance.Invoke("GeometryFromBinary", (Object)wellKnownBinary);
+            return new DbGeometry(objGeometryFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryFromBinary(byte[] wellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryFromBinary = (JCObject)classInstance.Invoke("GeometryFromBinary", wellKnownBinary, coordinateSystemId);
+            return new DbGeometry(objGeometryFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryFromGml(java.lang.String geometryMarkup) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryFromGml = (JCObject)classInstance.Invoke("GeometryFromGml", geometryMarkup);
+            return new DbGeometry(objGeometryFromGml);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryFromGml(java.lang.String geometryMarkup, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryFromGml = (JCObject)classInstance.Invoke("GeometryFromGml", geometryMarkup, coordinateSystemId);
+            return new DbGeometry(objGeometryFromGml);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryFromProviderValue(NetObject providerValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryFromProviderValue = (JCObject)classInstance.Invoke("GeometryFromProviderValue", providerValue == null ? null : providerValue.getJCOInstance());
+            return new DbGeometry(objGeometryFromProviderValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryFromText(java.lang.String wellKnownText) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryFromText = (JCObject)classInstance.Invoke("GeometryFromText", wellKnownText);
+            return new DbGeometry(objGeometryFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryFromText(java.lang.String wellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryFromText = (JCObject)classInstance.Invoke("GeometryFromText", wellKnownText, coordinateSystemId);
+            return new DbGeometry(objGeometryFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryLineFromBinary(byte[] lineWellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryLineFromBinary = (JCObject)classInstance.Invoke("GeometryLineFromBinary", lineWellKnownBinary, coordinateSystemId);
+            return new DbGeometry(objGeometryLineFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryLineFromText(java.lang.String lineWellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryLineFromText = (JCObject)classInstance.Invoke("GeometryLineFromText", lineWellKnownText, coordinateSystemId);
+            return new DbGeometry(objGeometryLineFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryMultiLineFromBinary(byte[] multiLineWellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryMultiLineFromBinary = (JCObject)classInstance.Invoke("GeometryMultiLineFromBinary", multiLineWellKnownBinary, coordinateSystemId);
+            return new DbGeometry(objGeometryMultiLineFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryMultiLineFromText(java.lang.String multiLineWellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryMultiLineFromText = (JCObject)classInstance.Invoke("GeometryMultiLineFromText", multiLineWellKnownText, coordinateSystemId);
+            return new DbGeometry(objGeometryMultiLineFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryMultiPointFromBinary(byte[] multiPointWellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryMultiPointFromBinary = (JCObject)classInstance.Invoke("GeometryMultiPointFromBinary", multiPointWellKnownBinary, coordinateSystemId);
+            return new DbGeometry(objGeometryMultiPointFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryMultiPointFromText(java.lang.String multiPointWellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryMultiPointFromText = (JCObject)classInstance.Invoke("GeometryMultiPointFromText", multiPointWellKnownText, coordinateSystemId);
+            return new DbGeometry(objGeometryMultiPointFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryMultiPolygonFromBinary(byte[] multiPolygonWellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryMultiPolygonFromBinary = (JCObject)classInstance.Invoke("GeometryMultiPolygonFromBinary", multiPolygonWellKnownBinary, coordinateSystemId);
+            return new DbGeometry(objGeometryMultiPolygonFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryMultiPolygonFromText(java.lang.String multiPolygonKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryMultiPolygonFromText = (JCObject)classInstance.Invoke("GeometryMultiPolygonFromText", multiPolygonKnownText, coordinateSystemId);
+            return new DbGeometry(objGeometryMultiPolygonFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryPointFromBinary(byte[] pointWellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryPointFromBinary = (JCObject)classInstance.Invoke("GeometryPointFromBinary", pointWellKnownBinary, coordinateSystemId);
+            return new DbGeometry(objGeometryPointFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryPointFromText(java.lang.String pointWellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryPointFromText = (JCObject)classInstance.Invoke("GeometryPointFromText", pointWellKnownText, coordinateSystemId);
+            return new DbGeometry(objGeometryPointFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryPolygonFromBinary(byte[] polygonWellKnownBinary, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryPolygonFromBinary = (JCObject)classInstance.Invoke("GeometryPolygonFromBinary", polygonWellKnownBinary, coordinateSystemId);
+            return new DbGeometry(objGeometryPolygonFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GeometryPolygonFromText(java.lang.String polygonWellKnownText, int coordinateSystemId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGeometryPolygonFromText = (JCObject)classInstance.Invoke("GeometryPolygonFromText", polygonWellKnownText, coordinateSystemId);
+            return new DbGeometry(objGeometryPolygonFromText);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GetBoundary(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetBoundary = (JCObject)classInstance.Invoke("GetBoundary", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbGeometry(objGetBoundary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1203,12 +1002,34 @@ public class DbSpatialServices extends NetObject  {
         }
     }
 
-    public DbGeometry GetPointOnSurface(DbGeometry geometryValue) throws Throwable {
+    public DbGeometry GetConvexHull(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPointOnSurface = (JCObject)classInstance.Invoke("GetPointOnSurface", geometryValue == null ? null : geometryValue.getJCOInstance());
-            return new DbGeometry(objGetPointOnSurface);
+            JCObject objGetConvexHull = (JCObject)classInstance.Invoke("GetConvexHull", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbGeometry(objGetConvexHull);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GetEndPoint(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetEndPoint = (JCObject)classInstance.Invoke("GetEndPoint", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbGeometry(objGetEndPoint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GetEnvelope(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetEnvelope = (JCObject)classInstance.Invoke("GetEnvelope", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbGeometry(objGetEnvelope);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1225,12 +1046,191 @@ public class DbSpatialServices extends NetObject  {
         }
     }
 
+    public DbGeometry GetPointOnSurface(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetPointOnSurface = (JCObject)classInstance.Invoke("GetPointOnSurface", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbGeometry(objGetPointOnSurface);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry GetStartPoint(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetStartPoint = (JCObject)classInstance.Invoke("GetStartPoint", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbGeometry(objGetStartPoint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DbGeometry InteriorRingAt(DbGeometry geometryValue, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objInteriorRingAt = (JCObject)classInstance.Invoke("InteriorRingAt", geometryValue == null ? null : geometryValue.getJCOInstance(), index);
             return new DbGeometry(objInteriorRingAt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry Intersection(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objIntersection = (JCObject)classInstance.Invoke("Intersection", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            return new DbGeometry(objIntersection);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry PointAt(DbGeometry geometryValue, int index) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objPointAt = (JCObject)classInstance.Invoke("PointAt", geometryValue == null ? null : geometryValue.getJCOInstance(), index);
+            return new DbGeometry(objPointAt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry SymmetricDifference(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSymmetricDifference = (JCObject)classInstance.Invoke("SymmetricDifference", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            return new DbGeometry(objSymmetricDifference);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry Union(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objUnion = (JCObject)classInstance.Invoke("Union", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            return new DbGeometry(objUnion);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometryWellKnownValue CreateWellKnownValue(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateWellKnownValue = (JCObject)classInstance.Invoke("CreateWellKnownValue", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return new DbGeometryWellKnownValue(objCreateWellKnownValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject CreateProviderValue(DbGeographyWellKnownValue wellKnownValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateProviderValue = (JCObject)classInstance.Invoke("CreateProviderValue", wellKnownValue == null ? null : wellKnownValue.getJCOInstance());
+            return new NetObject(objCreateProviderValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject CreateProviderValue(DbGeometryWellKnownValue wellKnownValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateProviderValue = (JCObject)classInstance.Invoke("CreateProviderValue", wellKnownValue == null ? null : wellKnownValue.getJCOInstance());
+            return new NetObject(objCreateProviderValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String AsGml(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("AsGml", geographyValue == null ? null : geographyValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String AsGml(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("AsGml", geometryValue == null ? null : geometryValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String AsText(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("AsText", geographyValue == null ? null : geographyValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String AsText(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("AsText", geometryValue == null ? null : geometryValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String AsTextIncludingElevationAndMeasure(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("AsTextIncludingElevationAndMeasure", geographyValue == null ? null : geographyValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String AsTextIncludingElevationAndMeasure(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("AsTextIncludingElevationAndMeasure", geometryValue == null ? null : geometryValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetSpatialTypeName(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetSpatialTypeName", geographyValue == null ? null : geographyValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetSpatialTypeName(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetSpatialTypeName", geometryValue == null ? null : geometryValue.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

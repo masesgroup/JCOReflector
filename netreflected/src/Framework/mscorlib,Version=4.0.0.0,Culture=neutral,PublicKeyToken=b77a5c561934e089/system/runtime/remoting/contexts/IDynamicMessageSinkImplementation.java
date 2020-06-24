@@ -105,21 +105,21 @@ public class IDynamicMessageSinkImplementation extends NetObject implements IDyn
 
     // Methods section
     
-    public void ProcessMessageStart(IMessage reqMsg, boolean bCliSide, boolean bAsync) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ProcessMessageStart", reqMsg == null ? null : reqMsg.getJCOInstance(), bCliSide, bAsync);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void ProcessMessageFinish(IMessage replyMsg, boolean bCliSide, boolean bAsync) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessMessageFinish", replyMsg == null ? null : replyMsg.getJCOInstance(), bCliSide, bAsync);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ProcessMessageStart(IMessage reqMsg, boolean bCliSide, boolean bAsync) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ProcessMessageStart", reqMsg == null ? null : reqMsg.getJCOInstance(), bCliSide, bAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

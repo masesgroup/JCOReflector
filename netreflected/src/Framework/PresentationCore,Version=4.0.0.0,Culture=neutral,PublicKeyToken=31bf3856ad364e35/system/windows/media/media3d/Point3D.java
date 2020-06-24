@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.media3d.Point3D;
-import system.windows.media.media3d.Vector3D;
-import system.windows.media.media3d.Matrix3D;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
+import system.windows.media.media3d.Vector3D;
+import system.windows.media.media3d.Matrix3D;
 
 
 /**
@@ -128,11 +128,31 @@ public class Point3D extends NetObject  {
     
     // Methods section
     
-    public void Offset(double offsetX, double offsetY, double offsetZ) throws Throwable {
+    public boolean Equals(Point3D value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Offset", offsetX, offsetY, offsetZ);
+            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean Equals(Point3D point1, Point3D point2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("Equals", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,6 +164,28 @@ public class Point3D extends NetObject  {
         try {
             JCObject objAdd = (JCObject)classType.Invoke("Add", point == null ? null : point.getJCOInstance(), vector == null ? null : vector.getJCOInstance());
             return new Point3D(objAdd);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Point3D Multiply(Point3D point, Matrix3D matrix) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", point == null ? null : point.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            return new Point3D(objMultiply);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Point3D Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objParse = (JCObject)classType.Invoke("Parse", source);
+            return new Point3D(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,53 +213,11 @@ public class Point3D extends NetObject  {
         }
     }
 
-    public static Point3D Multiply(Point3D point, Matrix3D matrix) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", point == null ? null : point.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
-            return new Point3D(objMultiply);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean Equals(Point3D point1, Point3D point2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("Equals", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Equals(Point3D value) throws Throwable {
+    public void Offset(double offsetX, double offsetY, double offsetZ) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Point3D Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", source);
-            return new Point3D(objParse);
+            classInstance.Invoke("Offset", offsetX, offsetY, offsetZ);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

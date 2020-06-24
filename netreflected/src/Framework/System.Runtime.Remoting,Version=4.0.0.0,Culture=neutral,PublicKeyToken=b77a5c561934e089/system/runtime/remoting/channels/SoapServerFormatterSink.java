@@ -38,21 +38,21 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.io.Stream;
 import system.runtime.remoting.channels.IServerResponseChannelSinkStack;
 import system.runtime.remoting.channels.IServerResponseChannelSinkStackImplementation;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
 import system.runtime.remoting.channels.ITransportHeaders;
 import system.runtime.remoting.channels.ITransportHeadersImplementation;
-import system.io.Stream;
 import system.runtime.remoting.channels.ServerProcessing;
 import system.runtime.remoting.channels.IServerChannelSinkStack;
 import system.runtime.remoting.channels.IServerChannelSinkStackImplementation;
-import system.runtime.serialization.formatters.TypeFilterLevel;
-import system.runtime.remoting.channels.IServerChannelSink;
-import system.runtime.remoting.channels.IServerChannelSinkImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.runtime.remoting.channels.IServerChannelSink;
+import system.runtime.remoting.channels.IServerChannelSinkImplementation;
+import system.runtime.serialization.formatters.TypeFilterLevel;
 
 
 /**
@@ -128,16 +128,6 @@ public class SoapServerFormatterSink extends NetObject  {
     
     // Methods section
     
-    public void AsyncProcessResponse(IServerResponseChannelSinkStack sinkStack, NetObject state, IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.UriFormatException, system.OutOfMemoryException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.FormatException, system.runtime.serialization.SerializationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AsyncProcessResponse", sinkStack == null ? null : sinkStack.getJCOInstance(), state == null ? null : state.getJCOInstance(), msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Stream GetResponseStream(IServerResponseChannelSinkStack sinkStack, NetObject state, IMessage msg, ITransportHeaders headers) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -149,26 +139,26 @@ public class SoapServerFormatterSink extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public TypeFilterLevel getTypeFilterLevel() throws Throwable {
+    public void AsyncProcessResponse(IServerResponseChannelSinkStack sinkStack, NetObject state, IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.UriFormatException, system.OutOfMemoryException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.FormatException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeFilterLevel");
-            return new TypeFilterLevel(val);
+            classInstance.Invoke("AsyncProcessResponse", sinkStack == null ? null : sinkStack.getJCOInstance(), state == null ? null : state.getJCOInstance(), msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTypeFilterLevel(TypeFilterLevel TypeFilterLevel) throws Throwable {
+
+    
+    // Properties section
+    
+    public IDictionary getProperties() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("TypeFilterLevel", TypeFilterLevel == null ? null : TypeFilterLevel.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("Properties");
+            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,12 +175,22 @@ public class SoapServerFormatterSink extends NetObject  {
         }
     }
 
-    public IDictionary getProperties() throws Throwable {
+    public TypeFilterLevel getTypeFilterLevel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
-            return new IDictionaryImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("TypeFilterLevel");
+            return new TypeFilterLevel(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTypeFilterLevel(TypeFilterLevel TypeFilterLevel) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TypeFilterLevel", TypeFilterLevel == null ? null : TypeFilterLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

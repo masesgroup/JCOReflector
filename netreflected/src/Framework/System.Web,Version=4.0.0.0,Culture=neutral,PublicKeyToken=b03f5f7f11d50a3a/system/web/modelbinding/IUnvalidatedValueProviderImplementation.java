@@ -104,17 +104,6 @@ public class IUnvalidatedValueProviderImplementation extends NetObject implement
 
     // Methods section
     
-    public ValueProviderResult GetValue(java.lang.String key, boolean skipValidation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", key, skipValidation);
-            return new ValueProviderResult(objGetValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean ContainsPrefix(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -130,6 +119,17 @@ public class IUnvalidatedValueProviderImplementation extends NetObject implement
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", key);
+            return new ValueProviderResult(objGetValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueProviderResult GetValue(java.lang.String key, boolean skipValidation) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", key, skipValidation);
             return new ValueProviderResult(objGetValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

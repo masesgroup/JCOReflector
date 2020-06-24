@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.transactions.Transaction;
-import system.activities.NativeActivityContext;
-import system.activities.CodeActivityContext;
 import system.activities.AsyncCodeActivityContext;
+import system.activities.CodeActivityContext;
+import system.activities.NativeActivityContext;
 import system.activities.BookmarkCallback;
 import system.activities.ActivityInstance;
 
@@ -139,7 +139,7 @@ public class RuntimeTransactionHandle extends NetObject  {
     
     // Methods section
     
-    public Transaction GetCurrentTransaction(NativeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public Transaction GetCurrentTransaction(AsyncCodeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -161,7 +161,7 @@ public class RuntimeTransactionHandle extends NetObject  {
         }
     }
 
-    public Transaction GetCurrentTransaction(AsyncCodeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public Transaction GetCurrentTransaction(NativeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

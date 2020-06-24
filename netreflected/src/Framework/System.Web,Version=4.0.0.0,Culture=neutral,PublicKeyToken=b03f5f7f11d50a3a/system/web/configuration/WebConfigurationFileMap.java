@@ -149,17 +149,6 @@ public class WebConfigurationFileMap extends NetObject  {
     
     // Properties section
     
-    public VirtualDirectoryMappingCollection getVirtualDirectories() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("VirtualDirectories");
-            return new VirtualDirectoryMappingCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getMachineConfigFilename() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -175,6 +164,17 @@ public class WebConfigurationFileMap extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MachineConfigFilename", MachineConfigFilename);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public VirtualDirectoryMappingCollection getVirtualDirectories() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("VirtualDirectories");
+            return new VirtualDirectoryMappingCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

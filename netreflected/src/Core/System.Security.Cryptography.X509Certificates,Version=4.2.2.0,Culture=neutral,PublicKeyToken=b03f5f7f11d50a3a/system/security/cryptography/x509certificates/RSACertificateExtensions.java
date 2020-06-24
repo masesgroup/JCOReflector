@@ -114,23 +114,23 @@ public class RSACertificateExtensions extends NetObject  {
     
     // Methods section
     
-    public static RSA GetRSAPublicKey(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetRSAPublicKey = (JCObject)classType.Invoke("GetRSAPublicKey", certificate == null ? null : certificate.getJCOInstance());
-            return new RSA(objGetRSAPublicKey);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static RSA GetRSAPrivateKey(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetRSAPrivateKey = (JCObject)classType.Invoke("GetRSAPrivateKey", certificate == null ? null : certificate.getJCOInstance());
             return new RSA(objGetRSAPrivateKey);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static RSA GetRSAPublicKey(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetRSAPublicKey = (JCObject)classType.Invoke("GetRSAPublicKey", certificate == null ? null : certificate.getJCOInstance());
+            return new RSA(objGetRSAPublicKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.codedom.CodeObject;
 import microsoft.jscript.vsa.JSVsaItemType;
+import system.codedom.CodeObject;
 
 
 /**
@@ -93,13 +93,13 @@ public interface IVsaScriptCodeItem extends IJCOBridgeReflected {
     
     public NetObject Execute() throws Throwable;
 
-    public void AppendSourceText(java.lang.String text) throws Throwable;
+    public NetObject GetOption(java.lang.String name) throws Throwable;
 
     public void AddEventSource(java.lang.String eventSourceName, java.lang.String eventSourceType) throws Throwable;
 
-    public void RemoveEventSource(java.lang.String eventSourceName) throws Throwable;
+    public void AppendSourceText(java.lang.String text) throws Throwable;
 
-    public NetObject GetOption(java.lang.String name) throws Throwable;
+    public void RemoveEventSource(java.lang.String eventSourceName) throws Throwable;
 
     public void SetOption(java.lang.String name, NetObject value) throws Throwable;
 
@@ -107,17 +107,17 @@ public interface IVsaScriptCodeItem extends IJCOBridgeReflected {
     
     // Properties section
     
-    public int getStartLine() throws Throwable;
-
-    public void setStartLine(int StartLine) throws Throwable;
+    public boolean getIsDirty() throws Throwable;
 
     public int getStartColumn() throws Throwable;
 
     public void setStartColumn(int StartColumn) throws Throwable;
 
-    public java.lang.String getSourceText() throws Throwable;
+    public int getStartLine() throws Throwable;
 
-    public void setSourceText(java.lang.String SourceText) throws Throwable;
+    public void setStartLine(int StartLine) throws Throwable;
+
+    public JSVsaItemType getItemType() throws Throwable;
 
     public CodeObject getCodeDOM() throws Throwable;
 
@@ -125,9 +125,9 @@ public interface IVsaScriptCodeItem extends IJCOBridgeReflected {
 
     public void setName(java.lang.String Name) throws Throwable;
 
-    public JSVsaItemType getItemType() throws Throwable;
+    public java.lang.String getSourceText() throws Throwable;
 
-    public boolean getIsDirty() throws Throwable;
+    public void setSourceText(java.lang.String SourceText) throws Throwable;
 
 
 

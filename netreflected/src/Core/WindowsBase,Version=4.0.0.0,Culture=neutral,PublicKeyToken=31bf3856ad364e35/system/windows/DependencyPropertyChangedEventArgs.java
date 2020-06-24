@@ -139,12 +139,12 @@ public class DependencyPropertyChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public DependencyProperty getProperty() throws Throwable {
+    public NetObject getNewValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Property");
-            return new DependencyProperty(val);
+            JCObject val = (JCObject)classInstance.Get("NewValue");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,12 +161,12 @@ public class DependencyPropertyChangedEventArgs extends NetObject  {
         }
     }
 
-    public NetObject getNewValue() throws Throwable {
+    public DependencyProperty getProperty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NewValue");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("Property");
+            return new DependencyProperty(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

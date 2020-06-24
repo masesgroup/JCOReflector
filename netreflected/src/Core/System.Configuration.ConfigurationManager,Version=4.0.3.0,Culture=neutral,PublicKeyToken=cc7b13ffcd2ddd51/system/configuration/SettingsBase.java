@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.SettingsBase;
 import system.configuration.SettingsContext;
 import system.configuration.SettingsPropertyCollection;
 import system.configuration.SettingsProviderCollection;
-import system.configuration.SettingsBase;
 import system.configuration.SettingsPropertyValueCollection;
 
 
@@ -117,6 +117,17 @@ public class SettingsBase extends NetObject  {
     
     // Methods section
     
+    public static SettingsBase Synchronized(SettingsBase settingsBase) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSynchronized = (JCObject)classType.Invoke("Synchronized", settingsBase == null ? null : settingsBase.getJCOInstance());
+            return new SettingsBase(objSynchronized);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Initialize(SettingsContext context, SettingsPropertyCollection properties, SettingsProviderCollection providers) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -137,49 +148,15 @@ public class SettingsBase extends NetObject  {
         }
     }
 
-    public static SettingsBase Synchronized(SettingsBase settingsBase) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSynchronized = (JCObject)classType.Invoke("Synchronized", settingsBase == null ? null : settingsBase.getJCOInstance());
-            return new SettingsBase(objSynchronized);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public SettingsPropertyCollection getProperties() throws Throwable {
+    public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
-            return new SettingsPropertyCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SettingsProviderCollection getProviders() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Providers");
-            return new SettingsProviderCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SettingsPropertyValueCollection getPropertyValues() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PropertyValues");
-            return new SettingsPropertyValueCollection(val);
+            return (boolean)classInstance.Get("IsSynchronized");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,11 +173,34 @@ public class SettingsBase extends NetObject  {
         }
     }
 
-    public boolean getIsSynchronized() throws Throwable {
+    public SettingsPropertyCollection getProperties() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsSynchronized");
+            JCObject val = (JCObject)classInstance.Get("Properties");
+            return new SettingsPropertyCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SettingsPropertyValueCollection getPropertyValues() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PropertyValues");
+            return new SettingsPropertyValueCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SettingsProviderCollection getProviders() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Providers");
+            return new SettingsProviderCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

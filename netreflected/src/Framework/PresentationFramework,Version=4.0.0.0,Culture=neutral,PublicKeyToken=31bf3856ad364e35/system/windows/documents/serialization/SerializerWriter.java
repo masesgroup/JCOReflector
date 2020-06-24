@@ -38,17 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.media.Visual;
+import system.windows.documents.serialization.SerializerWriterCollator;
 import system.printing.PrintTicket;
 import system.windows.documents.DocumentPaginator;
-import system.windows.documents.FixedPage;
 import system.windows.documents.FixedDocument;
 import system.windows.documents.FixedDocumentSequence;
-import system.windows.documents.serialization.SerializerWriterCollator;
+import system.windows.documents.FixedPage;
+import system.windows.media.Visual;
+import system.windows.documents.serialization.WritingCancelledEventHandler;
+import system.windows.documents.serialization.WritingCompletedEventHandler;
 import system.windows.documents.serialization.WritingPrintTicketRequiredEventHandler;
 import system.windows.documents.serialization.WritingProgressChangedEventHandler;
-import system.windows.documents.serialization.WritingCompletedEventHandler;
-import system.windows.documents.serialization.WritingCancelledEventHandler;
 
 
 /**
@@ -123,6 +123,118 @@ public class SerializerWriter extends NetObject  {
     
     // Methods section
     
+    public SerializerWriterCollator CreateVisualsCollator() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateVisualsCollator = (JCObject)classInstance.Invoke("CreateVisualsCollator");
+            return new SerializerWriterCollator(objCreateVisualsCollator);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SerializerWriterCollator CreateVisualsCollator(PrintTicket documentSequencePT, PrintTicket documentPT) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateVisualsCollator = (JCObject)classInstance.Invoke("CreateVisualsCollator", documentSequencePT == null ? null : documentSequencePT.getJCOInstance(), documentPT == null ? null : documentPT.getJCOInstance());
+            return new SerializerWriterCollator(objCreateVisualsCollator);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CancelAsync() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CancelAsync");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Write(DocumentPaginator documentPaginator) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", documentPaginator == null ? null : documentPaginator.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Write(DocumentPaginator documentPaginator, PrintTicket printTicket) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", documentPaginator == null ? null : documentPaginator.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Write(FixedDocument fixedDocument) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", fixedDocument == null ? null : fixedDocument.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Write(FixedDocument fixedDocument, PrintTicket printTicket) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", fixedDocument == null ? null : fixedDocument.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Write(FixedDocumentSequence fixedDocumentSequence) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Write(FixedDocumentSequence fixedDocumentSequence, PrintTicket printTicket) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Write(FixedPage fixedPage) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", fixedPage == null ? null : fixedPage.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Write(FixedPage fixedPage, PrintTicket printTicket) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", fixedPage == null ? null : fixedPage.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Write(Visual visual) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -138,6 +250,166 @@ public class SerializerWriter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", visual == null ? null : visual.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(DocumentPaginator documentPaginator) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", documentPaginator == null ? null : documentPaginator.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(DocumentPaginator documentPaginator, NetObject userState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", documentPaginator == null ? null : documentPaginator.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(DocumentPaginator documentPaginator, PrintTicket printTicket) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", documentPaginator == null ? null : documentPaginator.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(DocumentPaginator documentPaginator, PrintTicket printTicket, NetObject userState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", documentPaginator == null ? null : documentPaginator.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(FixedDocument fixedDocument) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", fixedDocument == null ? null : fixedDocument.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(FixedDocument fixedDocument, NetObject userState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", fixedDocument == null ? null : fixedDocument.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(FixedDocument fixedDocument, PrintTicket printTicket) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", fixedDocument == null ? null : fixedDocument.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(FixedDocument fixedDocument, PrintTicket printTicket, NetObject userState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", fixedDocument == null ? null : fixedDocument.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(FixedDocumentSequence fixedDocumentSequence) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(FixedDocumentSequence fixedDocumentSequence, NetObject userState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(FixedDocumentSequence fixedDocumentSequence, PrintTicket printTicket) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(FixedDocumentSequence fixedDocumentSequence, PrintTicket printTicket, NetObject userState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(FixedPage fixedPage) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", fixedPage == null ? null : fixedPage.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(FixedPage fixedPage, NetObject userState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", fixedPage == null ? null : fixedPage.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(FixedPage fixedPage, PrintTicket printTicket) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", fixedPage == null ? null : fixedPage.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAsync(FixedPage fixedPage, PrintTicket printTicket, NetObject userState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAsync", fixedPage == null ? null : fixedPage.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,278 +455,6 @@ public class SerializerWriter extends NetObject  {
         }
     }
 
-    public void Write(DocumentPaginator documentPaginator) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Write", documentPaginator == null ? null : documentPaginator.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Write(DocumentPaginator documentPaginator, PrintTicket printTicket) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Write", documentPaginator == null ? null : documentPaginator.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(DocumentPaginator documentPaginator) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", documentPaginator == null ? null : documentPaginator.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(DocumentPaginator documentPaginator, PrintTicket printTicket) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", documentPaginator == null ? null : documentPaginator.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(DocumentPaginator documentPaginator, NetObject userState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", documentPaginator == null ? null : documentPaginator.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(DocumentPaginator documentPaginator, PrintTicket printTicket, NetObject userState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", documentPaginator == null ? null : documentPaginator.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Write(FixedPage fixedPage) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Write", fixedPage == null ? null : fixedPage.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Write(FixedPage fixedPage, PrintTicket printTicket) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Write", fixedPage == null ? null : fixedPage.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(FixedPage fixedPage) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", fixedPage == null ? null : fixedPage.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(FixedPage fixedPage, PrintTicket printTicket) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", fixedPage == null ? null : fixedPage.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(FixedPage fixedPage, NetObject userState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", fixedPage == null ? null : fixedPage.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(FixedPage fixedPage, PrintTicket printTicket, NetObject userState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", fixedPage == null ? null : fixedPage.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Write(FixedDocument fixedDocument) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Write", fixedDocument == null ? null : fixedDocument.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Write(FixedDocument fixedDocument, PrintTicket printTicket) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Write", fixedDocument == null ? null : fixedDocument.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(FixedDocument fixedDocument) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", fixedDocument == null ? null : fixedDocument.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(FixedDocument fixedDocument, PrintTicket printTicket) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", fixedDocument == null ? null : fixedDocument.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(FixedDocument fixedDocument, NetObject userState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", fixedDocument == null ? null : fixedDocument.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(FixedDocument fixedDocument, PrintTicket printTicket, NetObject userState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", fixedDocument == null ? null : fixedDocument.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Write(FixedDocumentSequence fixedDocumentSequence) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Write", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Write(FixedDocumentSequence fixedDocumentSequence, PrintTicket printTicket) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Write", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(FixedDocumentSequence fixedDocumentSequence) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(FixedDocumentSequence fixedDocumentSequence, PrintTicket printTicket) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(FixedDocumentSequence fixedDocumentSequence, NetObject userState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteAsync(FixedDocumentSequence fixedDocumentSequence, PrintTicket printTicket, NetObject userState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteAsync", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CancelAsync() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CancelAsync");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SerializerWriterCollator CreateVisualsCollator() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateVisualsCollator = (JCObject)classInstance.Invoke("CreateVisualsCollator");
-            return new SerializerWriterCollator(objCreateVisualsCollator);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SerializerWriterCollator CreateVisualsCollator(PrintTicket documentSequencePT, PrintTicket documentPT) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateVisualsCollator = (JCObject)classInstance.Invoke("CreateVisualsCollator", documentSequencePT == null ? null : documentSequencePT.getJCOInstance(), documentPT == null ? null : documentPT.getJCOInstance());
-            return new SerializerWriterCollator(objCreateVisualsCollator);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -463,6 +463,46 @@ public class SerializerWriter extends NetObject  {
 
     // Instance Events section
     
+
+    public void addWritingCancelled(WritingCancelledEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("WritingCancelled", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeWritingCancelled(WritingCancelledEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("WritingCancelled", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addWritingCompleted(WritingCompletedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("WritingCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeWritingCompleted(WritingCompletedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("WritingCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
     public void addWritingPrintTicketRequired(WritingPrintTicketRequiredEventHandler handler) throws Throwable {
         if (classInstance == null)
@@ -499,46 +539,6 @@ public class SerializerWriter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WritingProgressChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addWritingCompleted(WritingCompletedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("WritingCompleted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeWritingCompleted(WritingCompletedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("WritingCompleted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addWritingCancelled(WritingCancelledEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("WritingCancelled", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeWritingCancelled(WritingCancelledEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("WritingCancelled", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

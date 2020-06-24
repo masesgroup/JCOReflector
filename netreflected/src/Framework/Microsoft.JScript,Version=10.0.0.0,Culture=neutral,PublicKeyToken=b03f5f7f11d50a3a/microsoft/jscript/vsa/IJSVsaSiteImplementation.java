@@ -115,23 +115,23 @@ public class IJSVsaSiteImplementation extends NetObject implements IJSVsaSite {
         }
     }
 
-    public NetObject GetGlobalInstance(java.lang.String name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetGlobalInstance = (JCObject)classInstance.Invoke("GetGlobalInstance", name);
-            return new NetObject(objGetGlobalInstance);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetEventSourceInstance(java.lang.String itemName, java.lang.String eventSourceName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetEventSourceInstance = (JCObject)classInstance.Invoke("GetEventSourceInstance", itemName, eventSourceName);
             return new NetObject(objGetEventSourceInstance);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetGlobalInstance(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetGlobalInstance = (JCObject)classInstance.Invoke("GetGlobalInstance", name);
+            return new NetObject(objGetGlobalInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

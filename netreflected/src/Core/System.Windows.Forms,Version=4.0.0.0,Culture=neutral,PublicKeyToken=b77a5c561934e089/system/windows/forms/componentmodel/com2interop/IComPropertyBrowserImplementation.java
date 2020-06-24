@@ -105,21 +105,21 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
 
     // Methods section
     
-    public void DropDownDone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DropDownDone");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean EnsurePendingChangesCommitted() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("EnsurePendingChangesCommitted");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DropDownDone() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DropDownDone");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

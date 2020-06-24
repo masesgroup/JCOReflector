@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.codedom.CodeObject;
 import microsoft.jscript.vsa.JSVsaItemType;
+import system.codedom.CodeObject;
 
 
 /**
@@ -91,13 +91,13 @@ public interface IJSVsaCodeItem extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void AppendSourceText(java.lang.String text) throws Throwable;
+    public NetObject GetOption(java.lang.String name) throws Throwable;
 
     public void AddEventSource(java.lang.String eventSourceName, java.lang.String eventSourceType) throws Throwable;
 
-    public void RemoveEventSource(java.lang.String eventSourceName) throws Throwable;
+    public void AppendSourceText(java.lang.String text) throws Throwable;
 
-    public NetObject GetOption(java.lang.String name) throws Throwable;
+    public void RemoveEventSource(java.lang.String eventSourceName) throws Throwable;
 
     public void SetOption(java.lang.String name, NetObject value) throws Throwable;
 
@@ -105,9 +105,9 @@ public interface IJSVsaCodeItem extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String getSourceText() throws Throwable;
+    public boolean getIsDirty() throws Throwable;
 
-    public void setSourceText(java.lang.String SourceText) throws Throwable;
+    public JSVsaItemType getItemType() throws Throwable;
 
     public CodeObject getCodeDOM() throws Throwable;
 
@@ -115,9 +115,9 @@ public interface IJSVsaCodeItem extends IJCOBridgeReflected {
 
     public void setName(java.lang.String Name) throws Throwable;
 
-    public JSVsaItemType getItemType() throws Throwable;
+    public java.lang.String getSourceText() throws Throwable;
 
-    public boolean getIsDirty() throws Throwable;
+    public void setSourceText(java.lang.String SourceText) throws Throwable;
 
 
 

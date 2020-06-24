@@ -89,9 +89,9 @@ public interface IStackWalk extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Demand() throws Throwable;
-
     public void Assert() throws Throwable;
+
+    public void Demand() throws Throwable;
 
     public void Deny() throws Throwable;
 

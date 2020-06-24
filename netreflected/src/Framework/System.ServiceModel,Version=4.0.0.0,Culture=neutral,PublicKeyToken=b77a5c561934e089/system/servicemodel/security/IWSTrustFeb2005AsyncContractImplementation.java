@@ -118,12 +118,12 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
-    public Message EndTrustFeb2005Cancel(IAsyncResult ar) throws Throwable {
+    public IAsyncResult BeginTrustFeb2005CancelResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objEndTrustFeb2005Cancel = (JCObject)classInstance.Invoke("EndTrustFeb2005Cancel", ar == null ? null : ar.getJCOInstance());
-            return new Message(objEndTrustFeb2005Cancel);
+            JCObject objBeginTrustFeb2005CancelResponse = (JCObject)classInstance.Invoke("BeginTrustFeb2005CancelResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginTrustFeb2005CancelResponse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -140,12 +140,12 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
-    public Message EndTrustFeb2005Issue(IAsyncResult ar) throws Throwable {
+    public IAsyncResult BeginTrustFeb2005IssueResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objEndTrustFeb2005Issue = (JCObject)classInstance.Invoke("EndTrustFeb2005Issue", ar == null ? null : ar.getJCOInstance());
-            return new Message(objEndTrustFeb2005Issue);
+            JCObject objBeginTrustFeb2005IssueResponse = (JCObject)classInstance.Invoke("BeginTrustFeb2005IssueResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginTrustFeb2005IssueResponse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,12 +162,12 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
-    public Message EndTrustFeb2005Renew(IAsyncResult ar) throws Throwable {
+    public IAsyncResult BeginTrustFeb2005RenewResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objEndTrustFeb2005Renew = (JCObject)classInstance.Invoke("EndTrustFeb2005Renew", ar == null ? null : ar.getJCOInstance());
-            return new Message(objEndTrustFeb2005Renew);
+            JCObject objBeginTrustFeb2005RenewResponse = (JCObject)classInstance.Invoke("BeginTrustFeb2005RenewResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginTrustFeb2005RenewResponse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,23 +184,23 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
-    public Message EndTrustFeb2005Validate(IAsyncResult ar) throws Throwable {
+    public IAsyncResult BeginTrustFeb2005ValidateResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objEndTrustFeb2005Validate = (JCObject)classInstance.Invoke("EndTrustFeb2005Validate", ar == null ? null : ar.getJCOInstance());
-            return new Message(objEndTrustFeb2005Validate);
+            JCObject objBeginTrustFeb2005ValidateResponse = (JCObject)classInstance.Invoke("BeginTrustFeb2005ValidateResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginTrustFeb2005ValidateResponse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IAsyncResult BeginTrustFeb2005CancelResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
+    public Message EndTrustFeb2005Cancel(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginTrustFeb2005CancelResponse = (JCObject)classInstance.Invoke("BeginTrustFeb2005CancelResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginTrustFeb2005CancelResponse);
+            JCObject objEndTrustFeb2005Cancel = (JCObject)classInstance.Invoke("EndTrustFeb2005Cancel", ar == null ? null : ar.getJCOInstance());
+            return new Message(objEndTrustFeb2005Cancel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,12 +217,12 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
-    public IAsyncResult BeginTrustFeb2005IssueResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
+    public Message EndTrustFeb2005Issue(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginTrustFeb2005IssueResponse = (JCObject)classInstance.Invoke("BeginTrustFeb2005IssueResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginTrustFeb2005IssueResponse);
+            JCObject objEndTrustFeb2005Issue = (JCObject)classInstance.Invoke("EndTrustFeb2005Issue", ar == null ? null : ar.getJCOInstance());
+            return new Message(objEndTrustFeb2005Issue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,12 +239,12 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
-    public IAsyncResult BeginTrustFeb2005RenewResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
+    public Message EndTrustFeb2005Renew(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginTrustFeb2005RenewResponse = (JCObject)classInstance.Invoke("BeginTrustFeb2005RenewResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginTrustFeb2005RenewResponse);
+            JCObject objEndTrustFeb2005Renew = (JCObject)classInstance.Invoke("EndTrustFeb2005Renew", ar == null ? null : ar.getJCOInstance());
+            return new Message(objEndTrustFeb2005Renew);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,12 +261,12 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
-    public IAsyncResult BeginTrustFeb2005ValidateResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
+    public Message EndTrustFeb2005Validate(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginTrustFeb2005ValidateResponse = (JCObject)classInstance.Invoke("BeginTrustFeb2005ValidateResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginTrustFeb2005ValidateResponse);
+            JCObject objEndTrustFeb2005Validate = (JCObject)classInstance.Invoke("EndTrustFeb2005Validate", ar == null ? null : ar.getJCOInstance());
+            return new Message(objEndTrustFeb2005Validate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -91,13 +91,13 @@ public interface ICompositeViewEvents extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void RegisterDefaultCompositeView(ICompositeView container) throws Throwable;
-
-    public void UnregisterDefaultCompositeView(ICompositeView container) throws Throwable;
-
     public void RegisterCompositeView(ICompositeView container) throws Throwable;
 
+    public void RegisterDefaultCompositeView(ICompositeView container) throws Throwable;
+
     public void UnregisterCompositeView(ICompositeView container) throws Throwable;
+
+    public void UnregisterDefaultCompositeView(ICompositeView container) throws Throwable;
 
 
     

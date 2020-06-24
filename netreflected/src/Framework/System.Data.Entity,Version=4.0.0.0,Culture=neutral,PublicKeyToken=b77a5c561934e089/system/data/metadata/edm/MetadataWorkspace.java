@@ -38,16 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.common.entitysql.EntitySqlParser;
+import system.data.metadata.edm.EnumType;
+import system.data.metadata.edm.StructuralType;
+import system.data.metadata.edm.DataSpace;
 import system.data.common.commandtrees.DbQueryCommandTree;
 import system.data.common.commandtrees.DbExpression;
-import system.data.metadata.edm.ItemCollection;
-import system.data.metadata.edm.DataSpace;
-import system.reflection.Assembly;
+import system.data.common.entitysql.EntitySqlParser;
 import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.EntityContainer;
-import system.data.metadata.edm.StructuralType;
-import system.data.metadata.edm.EnumType;
+import system.data.metadata.edm.ItemCollection;
+import system.reflection.Assembly;
 
 
 /**
@@ -133,17 +133,6 @@ public class MetadataWorkspace extends NetObject  {
     
     // Methods section
     
-    public EntitySqlParser CreateEntitySqlParser() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateEntitySqlParser = (JCObject)classInstance.Invoke("CreateEntitySqlParser");
-            return new EntitySqlParser(objCreateEntitySqlParser);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DbQueryCommandTree CreateQueryCommandTree(DbExpression query) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -155,43 +144,12 @@ public class MetadataWorkspace extends NetObject  {
         }
     }
 
-    public ItemCollection GetItemCollection(DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
+    public EntitySqlParser CreateEntitySqlParser() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetItemCollection = (JCObject)classInstance.Invoke("GetItemCollection", dataSpace == null ? null : dataSpace.getJCOInstance());
-            return new ItemCollection(objGetItemCollection);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RegisterItemCollection(ItemCollection collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.data.MetadataException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RegisterItemCollection", collection == null ? null : collection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LoadFromAssembly(Assembly assembly) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.data.MappingException, system.InvalidOperationException, system.data.MetadataException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LoadFromAssembly", assembly == null ? null : assembly.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EdmType GetType(java.lang.String name, java.lang.String namespaceName, DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name, namespaceName, dataSpace == null ? null : dataSpace.getJCOInstance());
-            return new EdmType(objGetType);
+            JCObject objCreateEntitySqlParser = (JCObject)classInstance.Invoke("CreateEntitySqlParser");
+            return new EntitySqlParser(objCreateEntitySqlParser);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,12 +166,12 @@ public class MetadataWorkspace extends NetObject  {
         }
     }
 
-    public EntityContainer GetEntityContainer(java.lang.String name, DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
+    public EdmType GetType(java.lang.String name, java.lang.String namespaceName, DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetEntityContainer = (JCObject)classInstance.Invoke("GetEntityContainer", name, dataSpace == null ? null : dataSpace.getJCOInstance());
-            return new EntityContainer(objGetEntityContainer);
+            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name, namespaceName, dataSpace == null ? null : dataSpace.getJCOInstance());
+            return new EdmType(objGetType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,12 +188,23 @@ public class MetadataWorkspace extends NetObject  {
         }
     }
 
-    public StructuralType GetObjectSpaceType(StructuralType edmSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.MappingException, system.data.MetadataException {
+    public EntityContainer GetEntityContainer(java.lang.String name, DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetObjectSpaceType = (JCObject)classInstance.Invoke("GetObjectSpaceType", edmSpaceType == null ? null : edmSpaceType.getJCOInstance());
-            return new StructuralType(objGetObjectSpaceType);
+            JCObject objGetEntityContainer = (JCObject)classInstance.Invoke("GetEntityContainer", name, dataSpace == null ? null : dataSpace.getJCOInstance());
+            return new EntityContainer(objGetEntityContainer);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EnumType GetEdmSpaceType(EnumType objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.MappingException, system.data.MetadataException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetEdmSpaceType = (JCObject)classInstance.Invoke("GetEdmSpaceType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
+            return new EnumType(objGetEdmSpaceType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,6 +221,17 @@ public class MetadataWorkspace extends NetObject  {
         }
     }
 
+    public ItemCollection GetItemCollection(DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetItemCollection = (JCObject)classInstance.Invoke("GetItemCollection", dataSpace == null ? null : dataSpace.getJCOInstance());
+            return new ItemCollection(objGetItemCollection);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public StructuralType GetEdmSpaceType(StructuralType objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -263,12 +243,42 @@ public class MetadataWorkspace extends NetObject  {
         }
     }
 
-    public EnumType GetEdmSpaceType(EnumType objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.MappingException, system.data.MetadataException {
+    public StructuralType GetObjectSpaceType(StructuralType edmSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetEdmSpaceType = (JCObject)classInstance.Invoke("GetEdmSpaceType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
-            return new EnumType(objGetEdmSpaceType);
+            JCObject objGetObjectSpaceType = (JCObject)classInstance.Invoke("GetObjectSpaceType", edmSpaceType == null ? null : edmSpaceType.getJCOInstance());
+            return new StructuralType(objGetObjectSpaceType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ClearCache() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.data.MetadataException, system.NotSupportedException, system.io.FileNotFoundException, system.NotImplementedException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ClearCache");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void LoadFromAssembly(Assembly assembly) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.data.MappingException, system.InvalidOperationException, system.data.MetadataException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("LoadFromAssembly", assembly == null ? null : assembly.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RegisterItemCollection(ItemCollection collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.data.MetadataException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterItemCollection", collection == null ? null : collection.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

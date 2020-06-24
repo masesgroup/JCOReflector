@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.Stream;
-import system.io.TextWriter;
 import system.io.TextReader;
+import system.io.TextWriter;
 
 
 /**
@@ -122,7 +122,7 @@ public class LosFormatter extends NetObject  {
         }
     }
 
-    public LosFormatter(boolean enableMac, java.lang.String macKeyModifier) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public LosFormatter(boolean enableMac, byte[] macKeyModifier) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -132,7 +132,7 @@ public class LosFormatter extends NetObject  {
         }
     }
 
-    public LosFormatter(boolean enableMac, byte[] macKeyModifier) throws Throwable {
+    public LosFormatter(boolean enableMac, java.lang.String macKeyModifier) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -151,6 +151,17 @@ public class LosFormatter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", stream == null ? null : stream.getJCOInstance());
+            return new NetObject(objDeserialize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject Deserialize(TextReader input) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.threading.ThreadAbortException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotSupportedException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.OutOfMemoryException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", input == null ? null : input.getJCOInstance());
             return new NetObject(objDeserialize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -183,17 +194,6 @@ public class LosFormatter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", output == null ? null : output.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject Deserialize(TextReader input) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.threading.ThreadAbortException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotSupportedException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.OutOfMemoryException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", input == null ? null : input.getJCOInstance());
-            return new NetObject(objDeserialize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

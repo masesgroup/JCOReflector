@@ -122,21 +122,21 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
-    public DataSourceSelectArguments(java.lang.String sortExpression) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(sortExpression));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataSourceSelectArguments(int startRowIndex, int maximumRows) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(startRowIndex, maximumRows));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataSourceSelectArguments(java.lang.String sortExpression) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(sortExpression));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,26 +180,6 @@ public class DataSourceSelectArguments extends NetObject  {
     
     // Properties section
     
-    public int getMaximumRows() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MaximumRows");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMaximumRows(int MaximumRows) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MaximumRows", MaximumRows);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getRetrieveTotalRowCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -220,21 +200,21 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
-    public java.lang.String getSortExpression() throws Throwable {
+    public int getMaximumRows() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("SortExpression");
+            return (int)classInstance.Get("MaximumRows");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSortExpression(java.lang.String SortExpression) throws Throwable {
+    public void setMaximumRows(int MaximumRows) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SortExpression", SortExpression);
+            classInstance.Set("MaximumRows", MaximumRows);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,6 +255,26 @@ public class DataSourceSelectArguments extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TotalRowCount", TotalRowCount);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getSortExpression() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("SortExpression");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSortExpression(java.lang.String SortExpression) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SortExpression", SortExpression);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -117,17 +117,6 @@ public class SessionEndingCancelEventArgs extends NetObject  {
     
     // Properties section
     
-    public ReasonSessionEnding getReasonSessionEnding() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ReasonSessionEnding");
-            return new ReasonSessionEnding(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -143,6 +132,17 @@ public class SessionEndingCancelEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Cancel", Cancel);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReasonSessionEnding getReasonSessionEnding() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ReasonSessionEnding");
+            return new ReasonSessionEnding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.Single;
 import system.windows.input.StylusPointDescription;
+import system.windows.input.StylusPoint;
 import system.windows.input.StylusPointProperty;
 import system.windows.Point;
-import system.windows.input.StylusPoint;
 
 
 /**
@@ -148,6 +148,26 @@ public class StylusPoint extends NetObject  {
     
     // Methods section
     
+    public boolean Equals(StylusPoint value) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean Equals(StylusPoint stylusPoint1, StylusPoint stylusPoint2) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("Equals", stylusPoint1 == null ? null : stylusPoint1.getJCOInstance(), stylusPoint2 == null ? null : stylusPoint2.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean HasProperty(StylusPointProperty stylusPointProperty) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -168,16 +188,6 @@ public class StylusPoint extends NetObject  {
         }
     }
 
-    public void SetPropertyValue(StylusPointProperty stylusPointProperty, int value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetPropertyValue", stylusPointProperty == null ? null : stylusPointProperty.getJCOInstance(), value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Point ToPoint() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -189,21 +199,11 @@ public class StylusPoint extends NetObject  {
         }
     }
 
-    public static boolean Equals(StylusPoint stylusPoint1, StylusPoint stylusPoint2) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("Equals", stylusPoint1 == null ? null : stylusPoint1.getJCOInstance(), stylusPoint2 == null ? null : stylusPoint2.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Equals(StylusPoint value) throws Throwable, system.ArgumentNullException {
+    public void SetPropertyValue(StylusPointProperty stylusPointProperty, int value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            classInstance.Invoke("SetPropertyValue", stylusPointProperty == null ? null : stylusPointProperty.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

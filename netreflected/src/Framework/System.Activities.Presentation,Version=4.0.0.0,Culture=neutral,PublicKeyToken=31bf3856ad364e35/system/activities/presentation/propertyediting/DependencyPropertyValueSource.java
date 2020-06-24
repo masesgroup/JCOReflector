@@ -117,21 +117,11 @@ public class DependencyPropertyValueSource extends NetObject  {
     
     // Properties section
     
-    public boolean getIsExpression() throws Throwable {
+    public boolean getIsCustomMarkupExtension() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsExpression");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsResource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsResource");
+            return (boolean)classInstance.Get("IsCustomMarkupExtension");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,41 +137,31 @@ public class DependencyPropertyValueSource extends NetObject  {
         }
     }
 
-    public boolean getIsSystemResource() throws Throwable {
+    public boolean getIsDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsSystemResource");
+            return (boolean)classInstance.Get("IsDefaultValue");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsLocalResource() throws Throwable {
+    public boolean getIsExpression() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsLocalResource");
+            return (boolean)classInstance.Get("IsExpression");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsTemplateBinding() throws Throwable {
+    public boolean getIsInherited() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsTemplateBinding");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsCustomMarkupExtension() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsCustomMarkupExtension");
+            return (boolean)classInstance.Get("IsInherited");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,21 +177,52 @@ public class DependencyPropertyValueSource extends NetObject  {
         }
     }
 
-    public boolean getIsDefaultValue() throws Throwable {
+    public boolean getIsLocalResource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsDefaultValue");
+            return (boolean)classInstance.Get("IsLocalResource");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsInherited() throws Throwable {
+    public boolean getIsResource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsInherited");
+            return (boolean)classInstance.Get("IsResource");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsSystemResource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsSystemResource");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsTemplateBinding() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsTemplateBinding");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DependencyPropertyValueSource getCustomMarkupExtension() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("CustomMarkupExtension");
+            return new DependencyPropertyValueSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,11 +239,33 @@ public class DependencyPropertyValueSource extends NetObject  {
         }
     }
 
-    public static DependencyPropertyValueSource getSystemResource() throws Throwable {
+    public static DependencyPropertyValueSource getDefaultValue() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SystemResource");
+            JCObject val = (JCObject)classType.Get("DefaultValue");
+            return new DependencyPropertyValueSource(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DependencyPropertyValueSource getInherited() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Inherited");
+            return new DependencyPropertyValueSource(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DependencyPropertyValueSource getLocal() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Local");
             return new DependencyPropertyValueSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -261,55 +294,22 @@ public class DependencyPropertyValueSource extends NetObject  {
         }
     }
 
+    public static DependencyPropertyValueSource getSystemResource() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("SystemResource");
+            return new DependencyPropertyValueSource(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DependencyPropertyValueSource getTemplateBinding() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject val = (JCObject)classType.Get("TemplateBinding");
-            return new DependencyPropertyValueSource(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DependencyPropertyValueSource getCustomMarkupExtension() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("CustomMarkupExtension");
-            return new DependencyPropertyValueSource(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DependencyPropertyValueSource getLocal() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Local");
-            return new DependencyPropertyValueSource(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DependencyPropertyValueSource getDefaultValue() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("DefaultValue");
-            return new DependencyPropertyValueSource(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DependencyPropertyValueSource getInherited() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Inherited");
             return new DependencyPropertyValueSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

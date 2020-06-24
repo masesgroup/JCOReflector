@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.activities.presentation.propertyediting.PropertyFilterPredicate;
 import system.activities.presentation.propertyediting.PropertyFilter;
+import system.activities.presentation.propertyediting.PropertyValue;
+import system.activities.presentation.propertyediting.PropertyValueEditor;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
-import system.activities.presentation.propertyediting.PropertyValueEditor;
-import system.activities.presentation.propertyediting.PropertyValue;
 import system.componentmodel.PropertyChangedEventHandler;
 
 
@@ -143,52 +143,11 @@ public class PropertyEntry extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getPropertyName() throws Throwable {
+    public boolean getIsAdvanced() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("PropertyName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDisplayName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DisplayName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType getPropertyType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PropertyType");
-            return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getCategoryName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("CategoryName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
+            return (boolean)classInstance.Get("IsAdvanced");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,33 +163,21 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
-    public boolean getIsAdvanced() throws Throwable {
+    public boolean getMatchesFilter() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsAdvanced");
+            return (boolean)classInstance.Get("MatchesFilter");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ICollection getStandardValues() throws Throwable {
+    public void setMatchesFilter(boolean MatchesFilter) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StandardValues");
-            return new ICollectionImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyValueEditor getPropertyValueEditor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PropertyValueEditor");
-            return new PropertyValueEditor(val);
+            classInstance.Set("MatchesFilter", MatchesFilter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,21 +205,74 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
-    public boolean getMatchesFilter() throws Throwable {
+    public PropertyValueEditor getPropertyValueEditor() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("MatchesFilter");
+            JCObject val = (JCObject)classInstance.Get("PropertyValueEditor");
+            return new PropertyValueEditor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMatchesFilter(boolean MatchesFilter) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public ICollection getStandardValues() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("MatchesFilter", MatchesFilter);
+            JCObject val = (JCObject)classInstance.Get("StandardValues");
+            return new ICollectionImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getCategoryName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("CategoryName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getDescription() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Description");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getDisplayName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("DisplayName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getPropertyName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("PropertyName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType getPropertyType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PropertyType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

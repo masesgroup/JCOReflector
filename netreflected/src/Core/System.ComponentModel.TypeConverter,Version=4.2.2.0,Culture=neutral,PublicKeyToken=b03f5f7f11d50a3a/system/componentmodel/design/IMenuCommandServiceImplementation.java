@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.CommandID;
 import system.componentmodel.design.MenuCommand;
 import system.componentmodel.design.DesignerVerb;
-import system.componentmodel.design.CommandID;
 import system.componentmodel.design.DesignerVerbCollection;
 
 
@@ -107,21 +107,11 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
 
     // Methods section
     
-    public void AddCommand(MenuCommand command) throws Throwable {
+    public boolean GlobalInvoke(CommandID commandID) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddCommand", command == null ? null : command.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddVerb(DesignerVerb verb) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddVerb", verb == null ? null : verb.getJCOInstance());
+            return (boolean)classInstance.Invoke("GlobalInvoke", commandID == null ? null : commandID.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -138,11 +128,21 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
         }
     }
 
-    public boolean GlobalInvoke(CommandID commandID) throws Throwable {
+    public void AddCommand(MenuCommand command) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("GlobalInvoke", commandID == null ? null : commandID.getJCOInstance());
+            classInstance.Invoke("AddCommand", command == null ? null : command.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddVerb(DesignerVerb verb) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddVerb", verb == null ? null : verb.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

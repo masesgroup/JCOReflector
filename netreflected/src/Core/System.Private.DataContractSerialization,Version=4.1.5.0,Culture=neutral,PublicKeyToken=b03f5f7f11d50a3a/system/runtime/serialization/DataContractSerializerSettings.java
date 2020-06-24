@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.XmlDictionaryString;
 import system.runtime.serialization.DataContractResolver;
+import system.xml.XmlDictionaryString;
 
 
 /**
@@ -129,68 +129,6 @@ public class DataContractSerializerSettings extends NetObject  {
     
     // Properties section
     
-    public XmlDictionaryString getRootName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RootName");
-            return new XmlDictionaryString(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRootName(XmlDictionaryString RootName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RootName", RootName == null ? null : RootName.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlDictionaryString getRootNamespace() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RootNamespace");
-            return new XmlDictionaryString(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRootNamespace(XmlDictionaryString RootNamespace) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RootNamespace", RootNamespace == null ? null : RootNamespace.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getMaxItemsInObjectGraph() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MaxItemsInObjectGraph");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMaxItemsInObjectGraph(int MaxItemsInObjectGraph) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MaxItemsInObjectGraph", MaxItemsInObjectGraph);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIgnoreExtensionDataObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -231,6 +169,46 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    public boolean getSerializeReadOnlyTypes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("SerializeReadOnlyTypes");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSerializeReadOnlyTypes(boolean SerializeReadOnlyTypes) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SerializeReadOnlyTypes", SerializeReadOnlyTypes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getMaxItemsInObjectGraph() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("MaxItemsInObjectGraph");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMaxItemsInObjectGraph(int MaxItemsInObjectGraph) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MaxItemsInObjectGraph", MaxItemsInObjectGraph);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DataContractResolver getDataContractResolver() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -252,21 +230,43 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
-    public boolean getSerializeReadOnlyTypes() throws Throwable {
+    public XmlDictionaryString getRootName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("SerializeReadOnlyTypes");
+            JCObject val = (JCObject)classInstance.Get("RootName");
+            return new XmlDictionaryString(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSerializeReadOnlyTypes(boolean SerializeReadOnlyTypes) throws Throwable {
+    public void setRootName(XmlDictionaryString RootName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SerializeReadOnlyTypes", SerializeReadOnlyTypes);
+            classInstance.Set("RootName", RootName == null ? null : RootName.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlDictionaryString getRootNamespace() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RootNamespace");
+            return new XmlDictionaryString(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRootNamespace(XmlDictionaryString RootNamespace) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RootNamespace", RootNamespace == null ? null : RootNamespace.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

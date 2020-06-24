@@ -91,9 +91,9 @@ public interface IPersistComponentSettings extends IJCOBridgeReflected {
     
     public void LoadComponentSettings() throws Throwable;
 
-    public void SaveComponentSettings() throws Throwable;
-
     public void ResetComponentSettings() throws Throwable;
+
+    public void SaveComponentSettings() throws Throwable;
 
 
     

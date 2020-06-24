@@ -42,9 +42,9 @@ import system.runtime.remoting.activation.IConstructionReturnMessage;
 import system.runtime.remoting.activation.IConstructionReturnMessageImplementation;
 import system.runtime.remoting.activation.IConstructionCallMessage;
 import system.runtime.remoting.activation.IConstructionCallMessageImplementation;
+import system.runtime.remoting.activation.ActivatorLevel;
 import system.runtime.remoting.activation.IActivator;
 import system.runtime.remoting.activation.IActivatorImplementation;
-import system.runtime.remoting.activation.ActivatorLevel;
 
 
 /**
@@ -125,6 +125,17 @@ public class IActivatorImplementation extends NetObject implements IActivator {
     
     // Properties section
     
+    public ActivatorLevel getLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Level");
+            return new ActivatorLevel(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IActivator getNextActivator() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -141,17 +152,6 @@ public class IActivatorImplementation extends NetObject implements IActivator {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NextActivator", NextActivator == null ? null : NextActivator.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ActivatorLevel getLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Level");
-            return new ActivatorLevel(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -40,11 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.directoryservices.protocols.DirectoryResponse;
 import system.directoryservices.protocols.DirectoryRequest;
-import system.xml.XmlNode;
 import system.directoryservices.protocols.DirectoryIdentifier;
+import system.net.NetworkCredential;
 import system.security.cryptography.x509certificates.X509CertificateCollection;
 import system.TimeSpan;
-import system.net.NetworkCredential;
+import system.xml.XmlNode;
 
 
 /**
@@ -119,6 +119,17 @@ public class DsmlSoapConnection extends NetObject  {
     
     // Methods section
     
+    public DirectoryResponse SendRequest(DirectoryRequest request) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSendRequest = (JCObject)classInstance.Invoke("SendRequest", request == null ? null : request.getJCOInstance());
+            return new DirectoryResponse(objSendRequest);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void BeginSession() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -139,52 +150,10 @@ public class DsmlSoapConnection extends NetObject  {
         }
     }
 
-    public DirectoryResponse SendRequest(DirectoryRequest request) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSendRequest = (JCObject)classInstance.Invoke("SendRequest", request == null ? null : request.getJCOInstance());
-            return new DirectoryResponse(objSendRequest);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public java.lang.String getSessionId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("SessionId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlNode getSoapRequestHeader() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SoapRequestHeader");
-            return new XmlNode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSoapRequestHeader(XmlNode SoapRequestHeader) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SoapRequestHeader", SoapRequestHeader == null ? null : SoapRequestHeader.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DirectoryIdentifier getDirectory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -196,12 +165,32 @@ public class DsmlSoapConnection extends NetObject  {
         }
     }
 
+    public void setCredential(NetworkCredential Credential) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Credential", Credential == null ? null : Credential.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public X509CertificateCollection getClientCertificates() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ClientCertificates");
             return new X509CertificateCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getSessionId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("SessionId");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,11 +217,22 @@ public class DsmlSoapConnection extends NetObject  {
         }
     }
 
-    public void setCredential(NetworkCredential Credential) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NotSupportedException {
+    public XmlNode getSoapRequestHeader() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Credential", Credential == null ? null : Credential.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("SoapRequestHeader");
+            return new XmlNode(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSoapRequestHeader(XmlNode SoapRequestHeader) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SoapRequestHeader", SoapRequestHeader == null ? null : SoapRequestHeader.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

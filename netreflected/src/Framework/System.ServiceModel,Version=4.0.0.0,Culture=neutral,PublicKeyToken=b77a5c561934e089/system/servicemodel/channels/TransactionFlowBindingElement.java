@@ -135,6 +135,16 @@ public class TransactionFlowBindingElement extends NetObject  {
     
     // Methods section
     
+    public boolean ShouldSerializeTransactionProtocol() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ShouldSerializeTransactionProtocol");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BindingElement Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -146,20 +156,30 @@ public class TransactionFlowBindingElement extends NetObject  {
         }
     }
 
-    public boolean ShouldSerializeTransactionProtocol() throws Throwable {
+
+    
+    // Properties section
+    
+    public boolean getAllowWildcardAction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeTransactionProtocol");
+            return (boolean)classInstance.Get("AllowWildcardAction");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public void setAllowWildcardAction(boolean AllowWildcardAction) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AllowWildcardAction", AllowWildcardAction);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
-    
-    // Properties section
-    
     public TransactionProtocol getTransactionProtocol() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,26 +196,6 @@ public class TransactionFlowBindingElement extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionProtocol", TransactionProtocol == null ? null : TransactionProtocol.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getAllowWildcardAction() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("AllowWildcardAction");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAllowWildcardAction(boolean AllowWildcardAction) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AllowWildcardAction", AllowWildcardAction);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

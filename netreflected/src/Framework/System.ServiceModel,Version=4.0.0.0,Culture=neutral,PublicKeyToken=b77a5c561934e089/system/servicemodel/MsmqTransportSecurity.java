@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.MsmqTransportSecurity;
+import system.net.security.ProtectionLevel;
 import system.servicemodel.MsmqAuthenticationMode;
 import system.servicemodel.MsmqEncryptionAlgorithm;
 import system.servicemodel.MsmqSecureHashAlgorithm;
-import system.net.security.ProtectionLevel;
 
 
 /**
@@ -142,6 +142,27 @@ public class MsmqTransportSecurity extends NetObject  {
     
     // Properties section
     
+    public ProtectionLevel getMsmqProtectionLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MsmqProtectionLevel");
+            return new ProtectionLevel(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMsmqProtectionLevel(ProtectionLevel MsmqProtectionLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MsmqProtectionLevel", MsmqProtectionLevel == null ? null : MsmqProtectionLevel.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MsmqAuthenticationMode getMsmqAuthenticationMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -200,27 +221,6 @@ public class MsmqTransportSecurity extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MsmqSecureHashAlgorithm", MsmqSecureHashAlgorithm == null ? null : MsmqSecureHashAlgorithm.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ProtectionLevel getMsmqProtectionLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MsmqProtectionLevel");
-            return new ProtectionLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMsmqProtectionLevel(ProtectionLevel MsmqProtectionLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MsmqProtectionLevel", MsmqProtectionLevel == null ? null : MsmqProtectionLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

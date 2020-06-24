@@ -106,6 +106,17 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
 
     // Methods section
     
+    public IAsyncResult InvokeBegin(NetObject instance, NetObject[] inputs, AsyncCallback callback, NetObject state) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objInvokeBegin = (JCObject)classInstance.Invoke("InvokeBegin", instance == null ? null : instance.getJCOInstance(), toObjectFromArray(inputs), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objInvokeBegin);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject[] AllocateInputs() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -118,17 +129,6 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IAsyncResult InvokeBegin(NetObject instance, NetObject[] inputs, AsyncCallback callback, NetObject state) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInvokeBegin = (JCObject)classInstance.Invoke("InvokeBegin", instance == null ? null : instance.getJCOInstance(), toObjectFromArray(inputs), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objInvokeBegin);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

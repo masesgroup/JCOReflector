@@ -140,23 +140,6 @@ public class FileReference extends NetObject  {
     
     // Properties section
     
-    public ComClass[] getComClasses() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<ComClass> resultingArrayList = new ArrayList<ComClass>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ComClasses");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new ComClass(resultingObject));
-            }
-            ComClass[] resultingArray = new ComClass[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsDataFile() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -177,33 +160,56 @@ public class FileReference extends NetObject  {
         }
     }
 
-    public ProxyStub[] getProxyStubs() throws Throwable {
+    public boolean getIsOptional() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<ProxyStub> resultingArrayList = new ArrayList<ProxyStub>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ProxyStubs");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new ProxyStub(resultingObject));
-            }
-            ProxyStub[] resultingArray = new ProxyStub[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            return (boolean)classInstance.Get("IsOptional");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TypeLib[] getTypeLibs() throws Throwable {
+    public void setIsOptional(boolean IsOptional) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<TypeLib> resultingArrayList = new ArrayList<TypeLib>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TypeLibs");
+            classInstance.Set("IsOptional", IsOptional);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long getSize() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Get("Size");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSize(long Size) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Size", Size);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ComClass[] getComClasses() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<ComClass> resultingArrayList = new ArrayList<ComClass>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("ComClasses");
             for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new TypeLib(resultingObject));
+			    resultingArrayList.add(new ComClass(resultingObject));
             }
-            TypeLib[] resultingArray = new TypeLib[resultingArrayList.size()];
+            ComClass[] resultingArray = new ComClass[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -238,6 +244,23 @@ public class FileReference extends NetObject  {
         }
     }
 
+    public ProxyStub[] getProxyStubs() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<ProxyStub> resultingArrayList = new ArrayList<ProxyStub>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("ProxyStubs");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new ProxyStub(resultingObject));
+            }
+            ProxyStub[] resultingArray = new ProxyStub[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ProxyStub[] getXmlProxyStubs() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -265,6 +288,23 @@ public class FileReference extends NetObject  {
         }
     }
 
+    public TypeLib[] getTypeLibs() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<TypeLib> resultingArrayList = new ArrayList<TypeLib>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("TypeLibs");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new TypeLib(resultingObject));
+            }
+            TypeLib[] resultingArray = new TypeLib[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TypeLib[] getXmlTypeLibs() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -287,26 +327,6 @@ public class FileReference extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlTypeLibs", toObjectFromArray(XmlTypeLibs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getXmlWriteableType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("XmlWriteableType");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setXmlWriteableType(java.lang.String XmlWriteableType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("XmlWriteableType", XmlWriteableType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,26 +372,6 @@ public class FileReference extends NetObject  {
         }
     }
 
-    public boolean getIsOptional() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsOptional");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIsOptional(boolean IsOptional) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IsOptional", IsOptional);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getResolvedPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -387,26 +387,6 @@ public class FileReference extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResolvedPath", ResolvedPath);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public long getSize() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("Size");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSize(long Size) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Size", Size);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -567,6 +547,26 @@ public class FileReference extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlSize", XmlSize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getXmlWriteableType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("XmlWriteableType");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setXmlWriteableType(java.lang.String XmlWriteableType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("XmlWriteableType", XmlWriteableType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

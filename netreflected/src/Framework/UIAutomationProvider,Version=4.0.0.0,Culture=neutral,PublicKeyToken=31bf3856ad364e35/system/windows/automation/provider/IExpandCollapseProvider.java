@@ -90,9 +90,9 @@ public interface IExpandCollapseProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Expand() throws Throwable;
-
     public void Collapse() throws Throwable;
+
+    public void Expand() throws Throwable;
 
 
     

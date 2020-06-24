@@ -133,17 +133,6 @@ public class FeatureSupport extends NetObject  {
         }
     }
 
-    public Version GetVersionPresent(NetObject feature) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetVersionPresent = (JCObject)classInstance.Invoke("GetVersionPresent", feature == null ? null : feature.getJCOInstance());
-            return new Version(objGetVersionPresent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -159,6 +148,17 @@ public class FeatureSupport extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("IsPresent", featureClassName, featureConstName, minimumVersion == null ? null : minimumVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Version GetVersionPresent(NetObject feature) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetVersionPresent = (JCObject)classInstance.Invoke("GetVersionPresent", feature == null ? null : feature.getJCOInstance());
+            return new Version(objGetVersionPresent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -113,28 +113,6 @@ public class CharUnicodeInfo extends NetObject  {
     
     // Methods section
     
-    public static UnicodeCategory GetUnicodeCategory(char ch) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetUnicodeCategory = (JCObject)classType.Invoke("GetUnicodeCategory", ch);
-            return new UnicodeCategory(objGetUnicodeCategory);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UnicodeCategory GetUnicodeCategory(int codePoint) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetUnicodeCategory = (JCObject)classType.Invoke("GetUnicodeCategory", codePoint);
-            return new UnicodeCategory(objGetUnicodeCategory);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static double GetNumericValue(char ch) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -190,6 +168,28 @@ public class CharUnicodeInfo extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (int)classType.Invoke("GetDigitValue", s, index);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UnicodeCategory GetUnicodeCategory(char ch) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetUnicodeCategory = (JCObject)classType.Invoke("GetUnicodeCategory", ch);
+            return new UnicodeCategory(objGetUnicodeCategory);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UnicodeCategory GetUnicodeCategory(int codePoint) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetUnicodeCategory = (JCObject)classType.Invoke("GetUnicodeCategory", codePoint);
+            return new UnicodeCategory(objGetUnicodeCategory);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -110,21 +110,21 @@ public class MeasureItemEventArgs extends NetObject  {
     // Constructors section
     
 
-    public MeasureItemEventArgs(Graphics graphics, int index, int itemHeight) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(graphics == null ? null : graphics.getJCOInstance(), index, itemHeight));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MeasureItemEventArgs(Graphics graphics, int index) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(graphics == null ? null : graphics.getJCOInstance(), index));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MeasureItemEventArgs(Graphics graphics, int index, int itemHeight) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(graphics == null ? null : graphics.getJCOInstance(), index, itemHeight));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -138,17 +138,6 @@ public class MeasureItemEventArgs extends NetObject  {
     
     // Properties section
     
-    public Graphics getGraphics() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
-            return new Graphics(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -194,6 +183,17 @@ public class MeasureItemEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemWidth", ItemWidth);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Graphics getGraphics() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Graphics");
+            return new Graphics(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

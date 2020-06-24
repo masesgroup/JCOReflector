@@ -138,17 +138,6 @@ public class FileChangeMonitor extends NetObject  {
     
     // Properties section
     
-    public DateTimeOffset getLastModified() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LastModified");
-            return new DateTimeOffset(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getHasChanged() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,6 +153,17 @@ public class FileChangeMonitor extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsDisposed");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DateTimeOffset getLastModified() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("LastModified");
+            return new DateTimeOffset(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

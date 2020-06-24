@@ -91,9 +91,9 @@ public interface IActivityToolboxService extends IJCOBridgeReflected {
     
     public void AddCategory(java.lang.String categoryName) throws Throwable;
 
-    public void RemoveCategory(java.lang.String categoryName) throws Throwable;
-
     public void AddItem(java.lang.String qualifiedTypeName, java.lang.String categoryName) throws Throwable;
+
+    public void RemoveCategory(java.lang.String categoryName) throws Throwable;
 
     public void RemoveItem(java.lang.String qualifiedTypeName, java.lang.String categoryName) throws Throwable;
 

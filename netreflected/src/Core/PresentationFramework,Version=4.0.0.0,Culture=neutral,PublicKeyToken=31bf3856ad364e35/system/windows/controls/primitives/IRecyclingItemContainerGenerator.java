@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.windows.controls.primitives.GeneratorPosition;
-import system.windows.controls.ItemContainerGenerator;
-import system.windows.controls.Panel;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.windows.controls.primitives.GeneratorDirection;
+import system.windows.controls.ItemContainerGenerator;
+import system.windows.controls.Panel;
 import system.windows.DependencyObject;
 
 
@@ -96,25 +96,25 @@ public interface IRecyclingItemContainerGenerator extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Recycle(GeneratorPosition position, int count) throws Throwable;
-
-    public ItemContainerGenerator GetItemContainerGeneratorForPanel(Panel panel) throws Throwable;
+    public int IndexFromGeneratorPosition(GeneratorPosition position) throws Throwable;
 
     public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction) throws Throwable;
 
     public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction, boolean allowStartAtRealizedItem) throws Throwable;
 
+    public ItemContainerGenerator GetItemContainerGeneratorForPanel(Panel panel) throws Throwable;
+
+    public GeneratorPosition GeneratorPositionFromIndex(int itemIndex) throws Throwable;
+
     public DependencyObject GenerateNext() throws Throwable;
 
     public void PrepareItemContainer(DependencyObject container) throws Throwable;
 
-    public void RemoveAll() throws Throwable;
+    public void Recycle(GeneratorPosition position, int count) throws Throwable;
 
     public void Remove(GeneratorPosition position, int count) throws Throwable;
 
-    public GeneratorPosition GeneratorPositionFromIndex(int itemIndex) throws Throwable;
-
-    public int IndexFromGeneratorPosition(GeneratorPosition position) throws Throwable;
+    public void RemoveAll() throws Throwable;
 
 
     

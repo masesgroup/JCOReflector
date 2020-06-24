@@ -105,9 +105,9 @@ public interface ISelectionService extends IJCOBridgeReflected {
     
     // Properties section
     
-    public NetObject getPrimarySelection() throws Throwable;
-
     public int getSelectionCount() throws Throwable;
+
+    public NetObject getPrimarySelection() throws Throwable;
 
 
 

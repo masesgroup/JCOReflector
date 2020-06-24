@@ -103,31 +103,11 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
 
     // Methods section
     
-    public void ReportStarted() throws Throwable {
+    public int GetBlobLength() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ReportStarted");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ReportStopped(int hr) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReportStopped", hr);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ReportMessageReceived() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReportMessageReceived");
+            return (int)classInstance.Invoke("GetBlobLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,11 +123,11 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
         }
     }
 
-    public int GetBlobLength() throws Throwable {
+    public void ReportStopped(int hr) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetBlobLength");
+            classInstance.Invoke("ReportStopped", hr);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.XmlElement;
-import system.xml.XmlAttribute;
-import system.xml.serialization.XmlSerializerNamespaces;
 import system.web.services.description.ServiceDescriptionFormatExtensionCollection;
+import system.xml.serialization.XmlSerializerNamespaces;
+import system.xml.XmlAttribute;
+import system.xml.XmlElement;
 
 
 /**
@@ -140,22 +140,33 @@ public class DocumentableItem extends NetObject  {
         }
     }
 
-    public XmlElement getDocumentationElement() throws Throwable {
+    public ServiceDescriptionFormatExtensionCollection getExtensions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DocumentationElement");
-            return new XmlElement(val);
+            JCObject val = (JCObject)classInstance.Get("Extensions");
+            return new ServiceDescriptionFormatExtensionCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDocumentationElement(XmlElement DocumentationElement) throws Throwable {
+    public XmlSerializerNamespaces getNamespaces() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("DocumentationElement", DocumentationElement == null ? null : DocumentationElement.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("Namespaces");
+            return new XmlSerializerNamespaces(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setNamespaces(XmlSerializerNamespaces Namespaces) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Namespaces", Namespaces == null ? null : Namespaces.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,33 +199,22 @@ public class DocumentableItem extends NetObject  {
         }
     }
 
-    public XmlSerializerNamespaces getNamespaces() throws Throwable {
+    public XmlElement getDocumentationElement() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Namespaces");
-            return new XmlSerializerNamespaces(val);
+            JCObject val = (JCObject)classInstance.Get("DocumentationElement");
+            return new XmlElement(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setNamespaces(XmlSerializerNamespaces Namespaces) throws Throwable {
+    public void setDocumentationElement(XmlElement DocumentationElement) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Namespaces", Namespaces == null ? null : Namespaces.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ServiceDescriptionFormatExtensionCollection getExtensions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Extensions");
-            return new ServiceDescriptionFormatExtensionCollection(val);
+            classInstance.Set("DocumentationElement", DocumentationElement == null ? null : DocumentationElement.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -37,11 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.drawing.design.PropertyValueUIHandler;
 import system.drawing.design.PropertyValueUIItem;
 import system.componentmodel.ITypeDescriptorContext;
 import system.componentmodel.ITypeDescriptorContextImplementation;
 import system.componentmodel.PropertyDescriptor;
+import system.drawing.design.PropertyValueUIHandler;
 import system.EventHandler;
 
 
@@ -95,9 +95,9 @@ public interface IPropertyValueUIService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void AddPropertyValueUIHandler(PropertyValueUIHandler newHandler) throws Throwable;
-
     public PropertyValueUIItem[] GetPropertyUIValueItems(ITypeDescriptorContext context, PropertyDescriptor propDesc) throws Throwable;
+
+    public void AddPropertyValueUIHandler(PropertyValueUIHandler newHandler) throws Throwable;
 
     public void NotifyPropertyValueUIItemsChanged() throws Throwable;
 

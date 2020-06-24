@@ -115,22 +115,22 @@ public class MessageVersion extends NetObject  {
     
     // Methods section
     
-    public static MessageVersion CreateVersion(EnvelopeVersion envelopeVersion, AddressingVersion addressingVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public static MessageVersion CreateVersion(EnvelopeVersion envelopeVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateVersion = (JCObject)classType.Invoke("CreateVersion", envelopeVersion == null ? null : envelopeVersion.getJCOInstance(), addressingVersion == null ? null : addressingVersion.getJCOInstance());
+            JCObject objCreateVersion = (JCObject)classType.Invoke("CreateVersion", envelopeVersion == null ? null : envelopeVersion.getJCOInstance());
             return new MessageVersion(objCreateVersion);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static MessageVersion CreateVersion(EnvelopeVersion envelopeVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public static MessageVersion CreateVersion(EnvelopeVersion envelopeVersion, AddressingVersion addressingVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateVersion = (JCObject)classType.Invoke("CreateVersion", envelopeVersion == null ? null : envelopeVersion.getJCOInstance());
+            JCObject objCreateVersion = (JCObject)classType.Invoke("CreateVersion", envelopeVersion == null ? null : envelopeVersion.getJCOInstance(), addressingVersion == null ? null : addressingVersion.getJCOInstance());
             return new MessageVersion(objCreateVersion);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -147,17 +147,6 @@ public class MessageVersion extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Addressing");
             return new AddressingVersion(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EnvelopeVersion getEnvelope() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Envelope");
-            return new EnvelopeVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,11 +174,11 @@ public class MessageVersion extends NetObject  {
         }
     }
 
-    public static MessageVersion getSoap12WSAddressing10() throws Throwable {
+    public static MessageVersion getSoap11() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Soap12WSAddressing10");
+            JCObject val = (JCObject)classType.Get("Soap11");
             return new MessageVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,33 +196,11 @@ public class MessageVersion extends NetObject  {
         }
     }
 
-    public static MessageVersion getSoap12WSAddressingAugust2004() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Soap12WSAddressingAugust2004");
-            return new MessageVersion(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static MessageVersion getSoap11WSAddressingAugust2004() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject val = (JCObject)classType.Get("Soap11WSAddressingAugust2004");
-            return new MessageVersion(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MessageVersion getSoap11() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Soap11");
             return new MessageVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -246,6 +213,39 @@ public class MessageVersion extends NetObject  {
         try {
             JCObject val = (JCObject)classType.Get("Soap12");
             return new MessageVersion(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MessageVersion getSoap12WSAddressing10() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Soap12WSAddressing10");
+            return new MessageVersion(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MessageVersion getSoap12WSAddressingAugust2004() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Soap12WSAddressingAugust2004");
+            return new MessageVersion(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EnvelopeVersion getEnvelope() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Envelope");
+            return new EnvelopeVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

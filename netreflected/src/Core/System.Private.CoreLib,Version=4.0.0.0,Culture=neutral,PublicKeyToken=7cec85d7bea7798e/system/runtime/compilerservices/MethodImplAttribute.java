@@ -110,11 +110,11 @@ public class MethodImplAttribute extends NetObject  {
     // Constructors section
     
 
-    public MethodImplAttribute(MethodImplOptions methodImplOptions) throws Throwable {
+    public MethodImplAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(methodImplOptions == null ? null : methodImplOptions.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -130,11 +130,11 @@ public class MethodImplAttribute extends NetObject  {
         }
     }
 
-    public MethodImplAttribute() throws Throwable {
+    public MethodImplAttribute(MethodImplOptions methodImplOptions) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject());
+            setJCOInstance((JCObject)classType.NewObject(methodImplOptions == null ? null : methodImplOptions.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,16 +144,6 @@ public class MethodImplAttribute extends NetObject  {
     
     // Methods section
     
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,27 +154,37 @@ public class MethodImplAttribute extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public MethodImplOptions getValue() throws Throwable {
+    public boolean Match(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
-            return new MethodImplOptions(val);
+            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public NetObject getTypeId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("TypeId");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodImplOptions getValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Value");
+            return new MethodImplOptions(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

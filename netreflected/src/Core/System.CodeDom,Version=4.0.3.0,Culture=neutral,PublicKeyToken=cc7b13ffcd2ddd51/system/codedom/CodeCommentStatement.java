@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.codedom.CodeComment;
-import system.codedom.CodeLinePragma;
 import system.codedom.CodeDirectiveCollection;
+import system.codedom.CodeLinePragma;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 
@@ -183,22 +183,12 @@ public class CodeCommentStatement extends NetObject  {
         }
     }
 
-    public CodeLinePragma getLinePragma() throws Throwable {
+    public CodeDirectiveCollection getEndDirectives() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("LinePragma");
-            return new CodeLinePragma(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLinePragma(CodeLinePragma LinePragma) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("LinePragma", LinePragma == null ? null : LinePragma.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("EndDirectives");
+            return new CodeDirectiveCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,12 +205,22 @@ public class CodeCommentStatement extends NetObject  {
         }
     }
 
-    public CodeDirectiveCollection getEndDirectives() throws Throwable {
+    public CodeLinePragma getLinePragma() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EndDirectives");
-            return new CodeDirectiveCollection(val);
+            JCObject val = (JCObject)classInstance.Get("LinePragma");
+            return new CodeLinePragma(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setLinePragma(CodeLinePragma LinePragma) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("LinePragma", LinePragma == null ? null : LinePragma.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

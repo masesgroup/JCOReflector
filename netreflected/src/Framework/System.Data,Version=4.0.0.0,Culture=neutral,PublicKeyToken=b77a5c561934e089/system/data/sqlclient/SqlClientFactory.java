@@ -43,10 +43,10 @@ import system.data.common.DbCommandBuilder;
 import system.data.common.DbConnection;
 import system.data.common.DbConnectionStringBuilder;
 import system.data.common.DbDataAdapter;
+import system.data.common.DbDataSourceEnumerator;
 import system.data.common.DbParameter;
 import system.security.CodeAccessPermission;
 import system.security.permissions.PermissionState;
-import system.data.common.DbDataSourceEnumerator;
 
 
 /**
@@ -176,6 +176,17 @@ public class SqlClientFactory extends NetObject  {
         }
     }
 
+    public DbDataSourceEnumerator CreateDataSourceEnumerator() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateDataSourceEnumerator = (JCObject)classInstance.Invoke("CreateDataSourceEnumerator");
+            return new DbDataSourceEnumerator(objCreateDataSourceEnumerator);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DbParameter CreateParameter() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -193,17 +204,6 @@ public class SqlClientFactory extends NetObject  {
         try {
             JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission", state == null ? null : state.getJCOInstance());
             return new CodeAccessPermission(objCreatePermission);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbDataSourceEnumerator CreateDataSourceEnumerator() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateDataSourceEnumerator = (JCObject)classInstance.Invoke("CreateDataSourceEnumerator");
-            return new DbDataSourceEnumerator(objCreateDataSourceEnumerator);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

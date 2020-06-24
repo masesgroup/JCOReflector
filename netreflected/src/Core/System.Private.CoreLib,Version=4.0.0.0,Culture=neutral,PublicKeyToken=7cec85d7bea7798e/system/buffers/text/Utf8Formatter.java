@@ -38,16 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.DateTimeOffset;
-import system.DateTime;
-import system.Decimal;
-import system.Single;
-import system.Guid;
 import system.SByte;
+import system.Single;
+import system.DateTime;
+import system.DateTimeOffset;
+import system.Decimal;
+import system.Guid;
+import system.TimeSpan;
 import system.UInt16;
 import system.UInt32;
 import system.UInt64;
-import system.TimeSpan;
 
 
 /**

@@ -108,22 +108,21 @@ public class IAsyncResultImplementation extends NetObject implements IAsyncResul
     
     // Properties section
     
-    public boolean getIsCompleted() throws Throwable {
+    public boolean getCompletedSynchronously() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsCompleted");
+            return (boolean)classInstance.Get("CompletedSynchronously");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public WaitHandle getAsyncWaitHandle() throws Throwable {
+    public boolean getIsCompleted() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncWaitHandle");
-            return new WaitHandle(val);
+            return (boolean)classInstance.Get("IsCompleted");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -140,11 +139,12 @@ public class IAsyncResultImplementation extends NetObject implements IAsyncResul
         }
     }
 
-    public boolean getCompletedSynchronously() throws Throwable {
+    public WaitHandle getAsyncWaitHandle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CompletedSynchronously");
+            JCObject val = (JCObject)classInstance.Get("AsyncWaitHandle");
+            return new WaitHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -114,12 +114,12 @@ public class DecimalType extends NetObject  {
     
     // Methods section
     
-    public static Decimal Parse(java.lang.String Value, NumberFormatInfo NumberFormat) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static Decimal FromBoolean(boolean Value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", Value, NumberFormat == null ? null : NumberFormat.getJCOInstance());
-            return new Decimal(objParse);
+            JCObject objFromBoolean = (JCObject)classType.Invoke("FromBoolean", Value);
+            return new Decimal(objFromBoolean);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,12 +147,12 @@ public class DecimalType extends NetObject  {
         }
     }
 
-    public static Decimal FromBoolean(boolean Value) throws Throwable {
+    public static Decimal FromString(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromBoolean = (JCObject)classType.Invoke("FromBoolean", Value);
-            return new Decimal(objFromBoolean);
+            JCObject objFromString = (JCObject)classType.Invoke("FromString", Value);
+            return new Decimal(objFromString);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,12 +169,12 @@ public class DecimalType extends NetObject  {
         }
     }
 
-    public static Decimal FromString(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
+    public static Decimal Parse(java.lang.String Value, NumberFormatInfo NumberFormat) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromString = (JCObject)classType.Invoke("FromString", Value);
-            return new Decimal(objFromString);
+            JCObject objParse = (JCObject)classType.Invoke("Parse", Value, NumberFormat == null ? null : NumberFormat.getJCOInstance());
+            return new Decimal(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

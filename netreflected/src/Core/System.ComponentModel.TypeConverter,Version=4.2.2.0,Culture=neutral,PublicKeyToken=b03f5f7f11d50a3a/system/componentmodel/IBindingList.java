@@ -93,25 +93,23 @@ public interface IBindingList extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean Contains(NetObject value) throws Throwable;
+
+    public int Add(NetObject value) throws Throwable;
+
+    public int Find(PropertyDescriptor property, NetObject key) throws Throwable;
+
+    public int IndexOf(NetObject value) throws Throwable;
+
     public NetObject AddNew() throws Throwable;
 
     public void AddIndex(PropertyDescriptor property) throws Throwable;
 
     public void ApplySort(PropertyDescriptor property, ListSortDirection direction) throws Throwable;
 
-    public int Find(PropertyDescriptor property, NetObject key) throws Throwable;
-
-    public void RemoveIndex(PropertyDescriptor property) throws Throwable;
-
-    public void RemoveSort() throws Throwable;
-
-    public int Add(NetObject value) throws Throwable;
-
     public void Clear() throws Throwable;
 
-    public boolean Contains(NetObject value) throws Throwable;
-
-    public int IndexOf(NetObject value) throws Throwable;
+    public void CopyTo(Array array, int index) throws Throwable;
 
     public void Insert(int index, NetObject value) throws Throwable;
 
@@ -119,17 +117,27 @@ public interface IBindingList extends IJCOBridgeReflected {
 
     public void RemoveAt(int index) throws Throwable;
 
-    public void CopyTo(Array array, int index) throws Throwable;
+    public void RemoveIndex(PropertyDescriptor property) throws Throwable;
+
+    public void RemoveSort() throws Throwable;
 
 
     
     // Properties section
     
-    public boolean getAllowNew() throws Throwable;
-
     public boolean getAllowEdit() throws Throwable;
 
+    public boolean getAllowNew() throws Throwable;
+
     public boolean getAllowRemove() throws Throwable;
+
+    public boolean getIsFixedSize() throws Throwable;
+
+    public boolean getIsReadOnly() throws Throwable;
+
+    public boolean getIsSorted() throws Throwable;
+
+    public boolean getIsSynchronized() throws Throwable;
 
     public boolean getSupportsChangeNotification() throws Throwable;
 
@@ -137,21 +145,13 @@ public interface IBindingList extends IJCOBridgeReflected {
 
     public boolean getSupportsSorting() throws Throwable;
 
-    public boolean getIsSorted() throws Throwable;
-
-    public PropertyDescriptor getSortProperty() throws Throwable;
+    public int getCount() throws Throwable;
 
     public ListSortDirection getSortDirection() throws Throwable;
 
-    public boolean getIsReadOnly() throws Throwable;
-
-    public boolean getIsFixedSize() throws Throwable;
-
-    public int getCount() throws Throwable;
+    public PropertyDescriptor getSortProperty() throws Throwable;
 
     public NetObject getSyncRoot() throws Throwable;
-
-    public boolean getIsSynchronized() throws Throwable;
 
 
 

@@ -124,21 +124,21 @@ public class MimePartCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(MimePart mimePart) throws Throwable {
+    public boolean Contains(MimePart mimePart) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", mimePart == null ? null : mimePart.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", mimePart == null ? null : mimePart.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, MimePart mimePart) throws Throwable {
+    public int Add(MimePart mimePart) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, mimePart == null ? null : mimePart.getJCOInstance());
+            return (int)classInstance.Invoke("Add", mimePart == null ? null : mimePart.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,21 +154,11 @@ public class MimePartCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(MimePart mimePart) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", mimePart == null ? null : mimePart.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(MimePart mimePart) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", mimePart == null ? null : mimePart.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,11 +174,21 @@ public class MimePartCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public void Insert(int index, MimePart mimePart) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, mimePart == null ? null : mimePart.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(MimePart mimePart) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", mimePart == null ? null : mimePart.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

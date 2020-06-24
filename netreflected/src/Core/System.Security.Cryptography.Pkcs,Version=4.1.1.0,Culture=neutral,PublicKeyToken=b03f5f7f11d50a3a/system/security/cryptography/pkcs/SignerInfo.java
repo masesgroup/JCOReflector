@@ -39,14 +39,14 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.AsnEncodedData;
+import system.security.cryptography.x509certificates.X509Certificate2Collection;
 import system.security.cryptography.pkcs.CmsSigner;
 import system.security.cryptography.pkcs.SignerInfo;
-import system.security.cryptography.x509certificates.X509Certificate2Collection;
-import system.security.cryptography.pkcs.SubjectIdentifier;
 import system.security.cryptography.CryptographicAttributeObjectCollection;
-import system.security.cryptography.x509certificates.X509Certificate2;
-import system.security.cryptography.pkcs.SignerInfoCollection;
 import system.security.cryptography.Oid;
+import system.security.cryptography.pkcs.SignerInfoCollection;
+import system.security.cryptography.pkcs.SubjectIdentifier;
+import system.security.cryptography.x509certificates.X509Certificate2;
 
 
 /**
@@ -150,11 +150,31 @@ public class SignerInfo extends NetObject  {
         }
     }
 
-    public void RemoveUnsignedAttribute(AsnEncodedData unsignedAttribute) throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.ArgumentException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public void CheckHash() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RemoveUnsignedAttribute", unsignedAttribute == null ? null : unsignedAttribute.getJCOInstance());
+            classInstance.Invoke("CheckHash");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CheckSignature(boolean verifySignatureOnly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.io.IOException, system.ArrayTypeMismatchException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CheckSignature", verifySignatureOnly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CheckSignature(X509Certificate2Collection extraStore, boolean verifySignatureOnly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.io.IOException, system.FormatException, system.ArrayTypeMismatchException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CheckSignature", extraStore == null ? null : extraStore.getJCOInstance(), verifySignatureOnly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,31 +220,11 @@ public class SignerInfo extends NetObject  {
         }
     }
 
-    public void CheckSignature(boolean verifySignatureOnly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.io.IOException, system.ArrayTypeMismatchException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public void RemoveUnsignedAttribute(AsnEncodedData unsignedAttribute) throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.ArgumentException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CheckSignature", verifySignatureOnly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CheckSignature(X509Certificate2Collection extraStore, boolean verifySignatureOnly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.io.IOException, system.FormatException, system.ArrayTypeMismatchException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CheckSignature", extraStore == null ? null : extraStore.getJCOInstance(), verifySignatureOnly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CheckHash() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CheckHash");
+            classInstance.Invoke("RemoveUnsignedAttribute", unsignedAttribute == null ? null : unsignedAttribute.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,17 +239,6 @@ public class SignerInfo extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("Version");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SubjectIdentifier getSignerIdentifier() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SignerIdentifier");
-            return new SubjectIdentifier(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,28 +266,6 @@ public class SignerInfo extends NetObject  {
         }
     }
 
-    public X509Certificate2 getCertificate() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.io.IOException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Certificate");
-            return new X509Certificate2(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SignerInfoCollection getCounterSignerInfos() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CounterSignerInfos");
-            return new SignerInfoCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Oid getDigestAlgorithm() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -316,6 +283,39 @@ public class SignerInfo extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("SignatureAlgorithm");
             return new Oid(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SignerInfoCollection getCounterSignerInfos() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CounterSignerInfos");
+            return new SignerInfoCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SubjectIdentifier getSignerIdentifier() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SignerIdentifier");
+            return new SubjectIdentifier(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public X509Certificate2 getCertificate() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.io.IOException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Certificate");
+            return new X509Certificate2(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

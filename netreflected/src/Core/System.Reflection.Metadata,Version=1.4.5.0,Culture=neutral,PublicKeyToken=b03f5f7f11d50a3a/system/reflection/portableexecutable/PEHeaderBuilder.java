@@ -156,28 +156,6 @@ public class PEHeaderBuilder extends NetObject  {
     
     // Properties section
     
-    public Machine getMachine() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Machine");
-            return new Machine(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Characteristics getImageCharacteristics() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ImageCharacteristics");
-            return new Characteristics(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte getMajorLinkerVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -198,12 +176,11 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
-    public UInt64 getImageBase() throws Throwable {
+    public int getFileAlignment() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageBase");
-            return new UInt64(val);
+            return (int)classInstance.Get("FileAlignment");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,33 +196,45 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
-    public int getFileAlignment() throws Throwable {
+    public Characteristics getImageCharacteristics() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("FileAlignment");
+            JCObject val = (JCObject)classInstance.Get("ImageCharacteristics");
+            return new Characteristics(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public UInt16 getMajorOperatingSystemVersion() throws Throwable {
+    public DllCharacteristics getDllCharacteristics() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MajorOperatingSystemVersion");
-            return new UInt16(val);
+            JCObject val = (JCObject)classInstance.Get("DllCharacteristics");
+            return new DllCharacteristics(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public UInt16 getMinorOperatingSystemVersion() throws Throwable {
+    public Machine getMachine() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MinorOperatingSystemVersion");
-            return new UInt16(val);
+            JCObject val = (JCObject)classInstance.Get("Machine");
+            return new Machine(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Subsystem getSubsystem() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Subsystem");
+            return new Subsystem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,11 +251,11 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
-    public UInt16 getMinorImageVersion() throws Throwable {
+    public UInt16 getMajorOperatingSystemVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MinorImageVersion");
+            JCObject val = (JCObject)classInstance.Get("MajorOperatingSystemVersion");
             return new UInt16(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -284,6 +273,28 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    public UInt16 getMinorImageVersion() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MinorImageVersion");
+            return new UInt16(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UInt16 getMinorOperatingSystemVersion() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MinorOperatingSystemVersion");
+            return new UInt16(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public UInt16 getMinorSubsystemVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -295,44 +306,22 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
-    public Subsystem getSubsystem() throws Throwable {
+    public UInt64 getImageBase() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Subsystem");
-            return new Subsystem(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DllCharacteristics getDllCharacteristics() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DllCharacteristics");
-            return new DllCharacteristics(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UInt64 getSizeOfStackReserve() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SizeOfStackReserve");
+            JCObject val = (JCObject)classInstance.Get("ImageBase");
             return new UInt64(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public UInt64 getSizeOfStackCommit() throws Throwable {
+    public UInt64 getSizeOfHeapCommit() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeOfStackCommit");
+            JCObject val = (JCObject)classInstance.Get("SizeOfHeapCommit");
             return new UInt64(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -350,11 +339,22 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
-    public UInt64 getSizeOfHeapCommit() throws Throwable {
+    public UInt64 getSizeOfStackCommit() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeOfHeapCommit");
+            JCObject val = (JCObject)classInstance.Get("SizeOfStackCommit");
+            return new UInt64(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UInt64 getSizeOfStackReserve() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SizeOfStackReserve");
             return new UInt64(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

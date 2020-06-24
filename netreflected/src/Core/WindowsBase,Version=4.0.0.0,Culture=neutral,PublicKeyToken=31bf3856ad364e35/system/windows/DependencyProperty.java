@@ -118,6 +118,48 @@ public class DependencyProperty extends NetObject  {
     
     // Methods section
     
+    public boolean IsValidType(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsValidType", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsValidValue(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsValidValue", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DependencyProperty AddOwner(NetType ownerType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddOwner = (JCObject)classInstance.Invoke("AddOwner", ownerType == null ? null : ownerType.getJCOInstance());
+            return new DependencyProperty(objAddOwner);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DependencyProperty AddOwner(NetType ownerType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddOwner = (JCObject)classInstance.Invoke("AddOwner", ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
+            return new DependencyProperty(objAddOwner);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DependencyProperty Register(java.lang.String name, NetType propertyType, NetType ownerType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -146,50 +188,6 @@ public class DependencyProperty extends NetObject  {
         try {
             JCObject objRegister = (JCObject)classType.Invoke("Register", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance(), validateValueCallback);
             return new DependencyProperty(objRegister);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DependencyPropertyKey RegisterReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRegisterReadOnly = (JCObject)classType.Invoke("RegisterReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
-            return new DependencyPropertyKey(objRegisterReadOnly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DependencyPropertyKey RegisterReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArrayTypeMismatchException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException, system.MulticastNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRegisterReadOnly = (JCObject)classType.Invoke("RegisterReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance(), validateValueCallback);
-            return new DependencyPropertyKey(objRegisterReadOnly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DependencyPropertyKey RegisterAttachedReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRegisterAttachedReadOnly = (JCObject)classType.Invoke("RegisterAttachedReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), defaultMetadata == null ? null : defaultMetadata.getJCOInstance());
-            return new DependencyPropertyKey(objRegisterAttachedReadOnly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DependencyPropertyKey RegisterAttachedReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArrayTypeMismatchException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRegisterAttachedReadOnly = (JCObject)classType.Invoke("RegisterAttachedReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), defaultMetadata == null ? null : defaultMetadata.getJCOInstance(), validateValueCallback);
-            return new DependencyPropertyKey(objRegisterAttachedReadOnly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,21 +226,45 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public void OverrideMetadata(NetType forType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.security.SecurityException, system.io.IOException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static DependencyPropertyKey RegisterAttachedReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("OverrideMetadata", forType == null ? null : forType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
+            JCObject objRegisterAttachedReadOnly = (JCObject)classType.Invoke("RegisterAttachedReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), defaultMetadata == null ? null : defaultMetadata.getJCOInstance());
+            return new DependencyPropertyKey(objRegisterAttachedReadOnly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void OverrideMetadata(NetType forType, PropertyMetadata typeMetadata, DependencyPropertyKey key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.security.SecurityException, system.io.IOException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static DependencyPropertyKey RegisterAttachedReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArrayTypeMismatchException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("OverrideMetadata", forType == null ? null : forType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance(), key == null ? null : key.getJCOInstance());
+            JCObject objRegisterAttachedReadOnly = (JCObject)classType.Invoke("RegisterAttachedReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), defaultMetadata == null ? null : defaultMetadata.getJCOInstance(), validateValueCallback);
+            return new DependencyPropertyKey(objRegisterAttachedReadOnly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DependencyPropertyKey RegisterReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRegisterReadOnly = (JCObject)classType.Invoke("RegisterReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
+            return new DependencyPropertyKey(objRegisterReadOnly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DependencyPropertyKey RegisterReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArrayTypeMismatchException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRegisterReadOnly = (JCObject)classType.Invoke("RegisterReadOnly", name, propertyType == null ? null : propertyType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance(), validateValueCallback);
+            return new DependencyPropertyKey(objRegisterReadOnly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,43 +303,21 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public DependencyProperty AddOwner(NetType ownerType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException {
+    public void OverrideMetadata(NetType forType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.security.SecurityException, system.io.IOException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAddOwner = (JCObject)classInstance.Invoke("AddOwner", ownerType == null ? null : ownerType.getJCOInstance());
-            return new DependencyProperty(objAddOwner);
+            classInstance.Invoke("OverrideMetadata", forType == null ? null : forType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DependencyProperty AddOwner(NetType ownerType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException {
+    public void OverrideMetadata(NetType forType, PropertyMetadata typeMetadata, DependencyPropertyKey key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.security.SecurityException, system.io.IOException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAddOwner = (JCObject)classInstance.Invoke("AddOwner", ownerType == null ? null : ownerType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
-            return new DependencyProperty(objAddOwner);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsValidType(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsValidType", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsValidValue(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsValidValue", value == null ? null : value.getJCOInstance());
+            classInstance.Invoke("OverrideMetadata", forType == null ? null : forType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance(), key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,6 +327,26 @@ public class DependencyProperty extends NetObject  {
     
     // Properties section
     
+    public boolean getReadOnly() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("ReadOnly");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getGlobalIndex() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("GlobalIndex");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -337,22 +357,22 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public NetType getPropertyType() throws Throwable {
+    public NetType getOwnerType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyType");
+            JCObject val = (JCObject)classInstance.Get("OwnerType");
             return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType getOwnerType() throws Throwable {
+    public NetType getPropertyType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OwnerType");
+            JCObject val = (JCObject)classInstance.Get("PropertyType");
             return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -375,26 +395,6 @@ public class DependencyProperty extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (ValidateValueCallback)classInstance.Get("ValidateValueCallback");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getGlobalIndex() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("GlobalIndex");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getReadOnly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ReadOnly");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

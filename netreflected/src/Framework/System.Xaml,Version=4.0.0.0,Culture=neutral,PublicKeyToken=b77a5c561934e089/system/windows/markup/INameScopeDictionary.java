@@ -89,25 +89,27 @@ public interface INameScopeDictionary extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void RegisterName(java.lang.String name, NetObject scopedElement) throws Throwable;
+    public boolean ContainsKey(java.lang.String key) throws Throwable;
 
-    public void UnregisterName(java.lang.String name) throws Throwable;
+    public boolean Remove(java.lang.String key) throws Throwable;
 
     public NetObject FindName(java.lang.String name) throws Throwable;
 
-    public boolean ContainsKey(java.lang.String key) throws Throwable;
-
     public void Add(java.lang.String key, NetObject value) throws Throwable;
 
-    public boolean Remove(java.lang.String key) throws Throwable;
+    public void Clear() throws Throwable;
+
+    public void RegisterName(java.lang.String name, NetObject scopedElement) throws Throwable;
+
+    public void UnregisterName(java.lang.String name) throws Throwable;
 
 
     
     // Properties section
     
-    public int getCount() throws Throwable;
-
     public boolean getIsReadOnly() throws Throwable;
+
+    public int getCount() throws Throwable;
 
 
 

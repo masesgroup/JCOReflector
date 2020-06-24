@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.xpath.XPathNavigator;
 import system.xml.xsl.runtime.XmlQueryNodeSequence;
+import system.xml.xpath.XPathNavigator;
 
 
 /**
@@ -114,22 +114,22 @@ public class XmlILIndex extends NetObject  {
     
     // Methods section
     
-    public void Add(java.lang.String key, XPathNavigator navigator) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", key, navigator == null ? null : navigator.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlQueryNodeSequence Lookup(java.lang.String key) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objLookup = (JCObject)classInstance.Invoke("Lookup", key);
             return new XmlQueryNodeSequence(objLookup);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Add(java.lang.String key, XPathNavigator navigator) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Add", key, navigator == null ? null : navigator.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

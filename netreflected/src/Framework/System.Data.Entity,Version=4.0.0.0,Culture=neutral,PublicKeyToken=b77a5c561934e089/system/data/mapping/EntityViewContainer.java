@@ -116,6 +116,26 @@ public class EntityViewContainer extends NetObject  {
     
     // Properties section
     
+    public int getViewCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("ViewCount");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setViewCount(int ViewCount) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ViewCount", ViewCount);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getEdmEntityContainerName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -131,46 +151,6 @@ public class EntityViewContainer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EdmEntityContainerName", EdmEntityContainerName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getStoreEntityContainerName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("StoreEntityContainerName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setStoreEntityContainerName(java.lang.String StoreEntityContainerName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("StoreEntityContainerName", StoreEntityContainerName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getHashOverMappingClosure() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("HashOverMappingClosure");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHashOverMappingClosure(java.lang.String HashOverMappingClosure) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HashOverMappingClosure", HashOverMappingClosure);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,21 +176,41 @@ public class EntityViewContainer extends NetObject  {
         }
     }
 
-    public int getViewCount() throws Throwable {
+    public java.lang.String getHashOverMappingClosure() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("ViewCount");
+            return (java.lang.String)classInstance.Get("HashOverMappingClosure");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setViewCount(int ViewCount) throws Throwable {
+    public void setHashOverMappingClosure(java.lang.String HashOverMappingClosure) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ViewCount", ViewCount);
+            classInstance.Set("HashOverMappingClosure", HashOverMappingClosure);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getStoreEntityContainerName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("StoreEntityContainerName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setStoreEntityContainerName(java.lang.String StoreEntityContainerName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("StoreEntityContainerName", StoreEntityContainerName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

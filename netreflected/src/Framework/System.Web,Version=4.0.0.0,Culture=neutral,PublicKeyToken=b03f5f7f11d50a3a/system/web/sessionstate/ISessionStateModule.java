@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.web.HttpContext;
 import system.threading.tasks.Task;
+import system.web.HttpContext;
 import system.web.HttpApplication;
 
 
@@ -92,13 +92,13 @@ public interface ISessionStateModule extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void ReleaseSessionState(HttpContext context) throws Throwable;
-
     public Task ReleaseSessionStateAsync(HttpContext context) throws Throwable;
+
+    public void Dispose() throws Throwable;
 
     public void Init(HttpApplication context) throws Throwable;
 
-    public void Dispose() throws Throwable;
+    public void ReleaseSessionState(HttpContext context) throws Throwable;
 
 
     

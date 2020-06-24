@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Guid;
 import system.DateTime;
-import system.workflow.runtime.WorkflowStatus;
+import system.Guid;
 import system.workflow.componentmodel.Activity;
+import system.workflow.runtime.WorkflowStatus;
 
 
 /**
@@ -150,22 +150,11 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
-    public Guid getWorkflowInstanceId() throws Throwable {
+    public boolean getWorkflowDefinitionUpdated() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowInstanceId");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setWorkflowInstanceId(Guid WorkflowInstanceId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("WorkflowInstanceId", WorkflowInstanceId == null ? null : WorkflowInstanceId.getJCOInstance());
+            return (boolean)classInstance.Get("WorkflowDefinitionUpdated");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,22 +222,22 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
-    public WorkflowStatus getStatus() throws Throwable {
+    public Guid getWorkflowInstanceId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Status");
-            return new WorkflowStatus(val);
+            JCObject val = (JCObject)classInstance.Get("WorkflowInstanceId");
+            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setStatus(WorkflowStatus Status) throws Throwable {
+    public void setWorkflowInstanceId(Guid WorkflowInstanceId) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Status", Status == null ? null : Status.getJCOInstance());
+            classInstance.Set("WorkflowInstanceId", WorkflowInstanceId == null ? null : WorkflowInstanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,22 +264,33 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
-    public boolean getWorkflowDefinitionUpdated() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("WorkflowDefinitionUpdated");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Activity getWorkflowDefinition() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("WorkflowDefinition");
             return new Activity(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WorkflowStatus getStatus() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Status");
+            return new WorkflowStatus(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setStatus(WorkflowStatus Status) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Status", Status == null ? null : Status.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

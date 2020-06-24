@@ -117,6 +117,16 @@ public class BrowserInteropHelper extends NetObject  {
     
     // Properties section
     
+    public static boolean getIsBrowserHosted() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Get("IsBrowserHosted");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static NetObject getClientSite() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -134,16 +144,6 @@ public class BrowserInteropHelper extends NetObject  {
         try {
             JCObject val = (JCObject)classType.Get("HostScript");
             return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean getIsBrowserHosted() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Get("IsBrowserHosted");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

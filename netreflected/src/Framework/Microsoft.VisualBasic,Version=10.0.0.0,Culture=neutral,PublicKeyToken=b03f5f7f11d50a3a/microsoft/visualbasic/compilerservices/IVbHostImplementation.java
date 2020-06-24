@@ -105,22 +105,22 @@ public class IVbHostImplementation extends NetObject implements IVbHost {
 
     // Methods section
     
+    public java.lang.String GetWindowTitle() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetWindowTitle");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IWin32Window GetParentWindow() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetParentWindow = (JCObject)classInstance.Invoke("GetParentWindow");
             return new IWin32WindowImplementation(objGetParentWindow);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetWindowTitle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetWindowTitle");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

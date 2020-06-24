@@ -91,11 +91,11 @@ public interface IMultiTargetingSupportService extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean IsSupportedType(NetType type) throws Throwable;
+
     public Assembly GetReflectionAssembly(AssemblyName targetAssemblyName) throws Throwable;
 
     public NetType GetRuntimeType(NetType reflectionType) throws Throwable;
-
-    public boolean IsSupportedType(NetType type) throws Throwable;
 
 
     

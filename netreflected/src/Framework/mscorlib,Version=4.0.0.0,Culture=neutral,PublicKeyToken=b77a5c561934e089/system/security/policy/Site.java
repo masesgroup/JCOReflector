@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.policy.Site;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
 import system.security.policy.Evidence;
 import system.security.policy.EvidenceBase;
+import system.security.policy.Site;
 
 
 /**
@@ -128,12 +128,12 @@ public class Site extends NetObject  {
     
     // Methods section
     
-    public static Site CreateFromUrl(java.lang.String url) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NullReferenceException, system.OverflowException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetObject Copy() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateFromUrl = (JCObject)classType.Invoke("CreateFromUrl", url);
-            return new Site(objCreateFromUrl);
+            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            return new NetObject(objCopy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,12 +161,12 @@ public class Site extends NetObject  {
         }
     }
 
-    public NetObject Copy() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Site CreateFromUrl(java.lang.String url) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NullReferenceException, system.OverflowException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
-            return new NetObject(objCopy);
+            JCObject objCreateFromUrl = (JCObject)classType.Invoke("CreateFromUrl", url);
+            return new Site(objCreateFromUrl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

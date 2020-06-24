@@ -123,25 +123,6 @@ public class SqlColumnEncryptionCertificateStoreProvider extends NetObject  {
     
     // Methods section
     
-    public byte[] SignColumnMasterKeyMetadata(java.lang.String masterKeyPath, boolean allowEnclaveComputations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.security.cryptography.CryptographicUnexpectedOperationException, system.AccessViolationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.RankException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignColumnMasterKeyMetadata", masterKeyPath, allowEnclaveComputations);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexSignColumnMasterKeyMetadata = 0; indexSignColumnMasterKeyMetadata < resultingArrayList.size(); indexSignColumnMasterKeyMetadata++ ) {
-				resultingArray[indexSignColumnMasterKeyMetadata] = (byte)resultingArrayList.get(indexSignColumnMasterKeyMetadata);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean VerifyColumnMasterKeyMetadata(java.lang.String masterKeyPath, boolean allowEnclaveComputations, byte[] signature) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.security.cryptography.CryptographicUnexpectedOperationException, system.AccessViolationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.RankException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -183,6 +164,25 @@ public class SqlColumnEncryptionCertificateStoreProvider extends NetObject  {
             byte[] resultingArray = new byte[resultingArrayList.size()];
             for(int indexEncryptColumnEncryptionKey = 0; indexEncryptColumnEncryptionKey < resultingArrayList.size(); indexEncryptColumnEncryptionKey++ ) {
 				resultingArray[indexEncryptColumnEncryptionKey] = (byte)resultingArrayList.get(indexEncryptColumnEncryptionKey);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] SignColumnMasterKeyMetadata(java.lang.String masterKeyPath, boolean allowEnclaveComputations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.security.cryptography.CryptographicUnexpectedOperationException, system.AccessViolationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.RankException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignColumnMasterKeyMetadata", masterKeyPath, allowEnclaveComputations);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexSignColumnMasterKeyMetadata = 0; indexSignColumnMasterKeyMetadata < resultingArrayList.size(); indexSignColumnMasterKeyMetadata++ ) {
+				resultingArray[indexSignColumnMasterKeyMetadata] = (byte)resultingArrayList.get(indexSignColumnMasterKeyMetadata);
             }
             return resultingArray;
         } catch (JCNativeException jcne) {

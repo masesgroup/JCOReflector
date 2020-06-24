@@ -113,16 +113,6 @@ public class WebReference extends NetObject  {
     // Constructors section
     
 
-    public WebReference(DiscoveryClientDocumentCollection documents, CodeNamespace proxyCode, java.lang.String protocolName, java.lang.String appSettingUrlKey, java.lang.String appSettingBaseUrl) throws Throwable, system.ArgumentNullException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(documents == null ? null : documents.getJCOInstance(), proxyCode == null ? null : proxyCode.getJCOInstance(), protocolName, appSettingUrlKey, appSettingBaseUrl));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public WebReference(DiscoveryClientDocumentCollection documents, CodeNamespace proxyCode) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -143,6 +133,16 @@ public class WebReference extends NetObject  {
         }
     }
 
+    public WebReference(DiscoveryClientDocumentCollection documents, CodeNamespace proxyCode, java.lang.String protocolName, java.lang.String appSettingUrlKey, java.lang.String appSettingBaseUrl) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(documents == null ? null : documents.getJCOInstance(), proxyCode == null ? null : proxyCode.getJCOInstance(), protocolName, appSettingUrlKey, appSettingBaseUrl));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -151,6 +151,28 @@ public class WebReference extends NetObject  {
     
     // Properties section
     
+    public CodeNamespace getProxyCode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ProxyCode");
+            return new CodeNamespace(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StringCollection getValidationWarnings() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ValidationWarnings");
+            return new StringCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getAppSettingBaseUrl() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -171,34 +193,21 @@ public class WebReference extends NetObject  {
         }
     }
 
-    public DiscoveryClientDocumentCollection getDocuments() throws Throwable {
+    public java.lang.String getProtocolName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Documents");
-            return new DiscoveryClientDocumentCollection(val);
+            return (java.lang.String)classInstance.Get("ProtocolName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CodeNamespace getProxyCode() throws Throwable {
+    public void setProtocolName(java.lang.String ProtocolName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ProxyCode");
-            return new CodeNamespace(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StringCollection getValidationWarnings() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValidationWarnings");
-            return new StringCollection(val);
+            classInstance.Set("ProtocolName", ProtocolName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,21 +234,12 @@ public class WebReference extends NetObject  {
         }
     }
 
-    public java.lang.String getProtocolName() throws Throwable {
+    public DiscoveryClientDocumentCollection getDocuments() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ProtocolName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setProtocolName(java.lang.String ProtocolName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ProtocolName", ProtocolName);
+            JCObject val = (JCObject)classInstance.Get("Documents");
+            return new DiscoveryClientDocumentCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

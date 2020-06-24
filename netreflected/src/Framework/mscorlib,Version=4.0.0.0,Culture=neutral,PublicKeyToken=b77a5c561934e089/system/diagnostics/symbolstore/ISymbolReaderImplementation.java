@@ -38,16 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.diagnostics.symbolstore.SymbolToken;
 import system.diagnostics.symbolstore.ISymbolDocument;
 import system.diagnostics.symbolstore.ISymbolDocumentImplementation;
 import system.Guid;
 import system.diagnostics.symbolstore.ISymbolMethod;
 import system.diagnostics.symbolstore.ISymbolMethodImplementation;
-import system.diagnostics.symbolstore.SymbolToken;
-import system.diagnostics.symbolstore.ISymbolVariable;
-import system.diagnostics.symbolstore.ISymbolVariableImplementation;
 import system.diagnostics.symbolstore.ISymbolNamespace;
 import system.diagnostics.symbolstore.ISymbolNamespaceImplementation;
+import system.diagnostics.symbolstore.ISymbolVariable;
+import system.diagnostics.symbolstore.ISymbolVariableImplementation;
 
 
 /**
@@ -113,6 +113,25 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
 
     // Methods section
     
+    public byte[] GetSymAttribute(SymbolToken parent, java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSymAttribute", parent == null ? null : parent.getJCOInstance(), name);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexGetSymAttribute = 0; indexGetSymAttribute < resultingArrayList.size(); indexGetSymAttribute++ ) {
+				resultingArray[indexGetSymAttribute] = (byte)resultingArrayList.get(indexGetSymAttribute);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ISymbolDocument GetDocument(java.lang.String url, Guid language, Guid languageVendor, Guid documentType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -163,16 +182,27 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
         }
     }
 
-    public ISymbolVariable[] GetVariables(SymbolToken parent) throws Throwable {
+    public ISymbolMethod GetMethodFromDocumentPosition(ISymbolDocument document, int line, int column) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<ISymbolVariable> resultingArrayList = new ArrayList<ISymbolVariable>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetVariables", parent == null ? null : parent.getJCOInstance());
+            JCObject objGetMethodFromDocumentPosition = (JCObject)classInstance.Invoke("GetMethodFromDocumentPosition", document == null ? null : document.getJCOInstance(), line, column);
+            return new ISymbolMethodImplementation(objGetMethodFromDocumentPosition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ISymbolNamespace[] GetNamespaces() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<ISymbolNamespace> resultingArrayList = new ArrayList<ISymbolNamespace>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNamespaces");
             for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new ISymbolVariableImplementation(resultingObject));
+			    resultingArrayList.add(new ISymbolNamespaceImplementation(resultingObject));
             }
-            ISymbolVariable[] resultingArray = new ISymbolVariable[resultingArrayList.size()];
+            ISymbolNamespace[] resultingArray = new ISymbolNamespace[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -197,46 +227,16 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
         }
     }
 
-    public ISymbolMethod GetMethodFromDocumentPosition(ISymbolDocument document, int line, int column) throws Throwable {
+    public ISymbolVariable[] GetVariables(SymbolToken parent) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetMethodFromDocumentPosition = (JCObject)classInstance.Invoke("GetMethodFromDocumentPosition", document == null ? null : document.getJCOInstance(), line, column);
-            return new ISymbolMethodImplementation(objGetMethodFromDocumentPosition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] GetSymAttribute(SymbolToken parent, java.lang.String name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSymAttribute", parent == null ? null : parent.getJCOInstance(), name);
+            ArrayList<ISymbolVariable> resultingArrayList = new ArrayList<ISymbolVariable>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetVariables", parent == null ? null : parent.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
+			    resultingArrayList.add(new ISymbolVariableImplementation(resultingObject));
             }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexGetSymAttribute = 0; indexGetSymAttribute < resultingArrayList.size(); indexGetSymAttribute++ ) {
-				resultingArray[indexGetSymAttribute] = (byte)resultingArrayList.get(indexGetSymAttribute);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ISymbolNamespace[] GetNamespaces() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<ISymbolNamespace> resultingArrayList = new ArrayList<ISymbolNamespace>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNamespaces");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new ISymbolNamespaceImplementation(resultingObject));
-            }
-            ISymbolNamespace[] resultingArray = new ISymbolNamespace[resultingArrayList.size()];
+            ISymbolVariable[] resultingArray = new ISymbolVariable[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (JCNativeException jcne) {

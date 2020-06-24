@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.codedom.CodeExpression;
 import system.workflow.activities.rules.RuleExpressionInfo;
 import system.workflow.activities.rules.RuleValidation;
 import system.workflow.activities.rules.RuleExpressionResult;
@@ -45,7 +46,6 @@ import system.workflow.activities.rules.RuleExecution;
 import system.workflow.activities.rules.RuleAnalysis;
 import system.workflow.activities.rules.RulePathQualifier;
 import system.text.StringBuilder;
-import system.codedom.CodeExpression;
 
 
 /**
@@ -111,6 +111,27 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
 
     // Methods section
     
+    public boolean Match(CodeExpression expression) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Match", expression == null ? null : expression.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeExpression Clone() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            return new CodeExpression(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public RuleExpressionInfo Validate(RuleValidation validation, boolean isWritten) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,27 +169,6 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decompile", stringBuilder == null ? null : stringBuilder.getJCOInstance(), parentExpression == null ? null : parentExpression.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(CodeExpression expression) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", expression == null ? null : expression.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeExpression Clone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new CodeExpression(objClone);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

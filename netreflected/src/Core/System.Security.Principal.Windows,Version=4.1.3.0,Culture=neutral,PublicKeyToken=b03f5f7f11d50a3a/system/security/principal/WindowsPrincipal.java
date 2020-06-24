@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.principal.WindowsIdentity;
-import system.security.principal.WindowsBuiltInRole;
 import system.security.principal.SecurityIdentifier;
-import system.security.claims.ClaimsIdentity;
-import system.security.claims.ClaimsPrincipal;
+import system.security.principal.WindowsBuiltInRole;
 import system.security.claims.Claim;
+import system.security.claims.ClaimsPrincipal;
+import system.security.claims.ClaimsIdentity;
 import system.io.BinaryWriter;
 import system.security.principal.IIdentity;
 import system.security.principal.IIdentityImplementation;
@@ -132,21 +132,11 @@ public class WindowsPrincipal extends NetObject  {
     
     // Methods section
     
-    public boolean IsInRole(java.lang.String role) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.ArrayTypeMismatchException, system.security.principal.IdentityNotMappedException, system.security.SecurityException {
+    public boolean HasClaim(java.lang.String type, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsInRole", role);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsInRole(WindowsBuiltInRole role) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsInRole", role == null ? null : role.getJCOInstance());
+            return (boolean)classInstance.Invoke("HasClaim", type, value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,22 +162,21 @@ public class WindowsPrincipal extends NetObject  {
         }
     }
 
-    public void AddIdentity(ClaimsIdentity identity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public boolean IsInRole(WindowsBuiltInRole role) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddIdentity", identity == null ? null : identity.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsInRole", role == null ? null : role.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ClaimsPrincipal Clone() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public boolean IsInRole(java.lang.String role) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.ArrayTypeMismatchException, system.security.principal.IdentityNotMappedException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new ClaimsPrincipal(objClone);
+            return (boolean)classInstance.Invoke("IsInRole", role);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,11 +193,22 @@ public class WindowsPrincipal extends NetObject  {
         }
     }
 
-    public boolean HasClaim(java.lang.String type, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public ClaimsPrincipal Clone() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("HasClaim", type, value);
+            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            return new ClaimsPrincipal(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddIdentity(ClaimsIdentity identity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddIdentity", identity == null ? null : identity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -136,22 +136,22 @@ public class ServiceNameCollection extends NetObject  {
         }
     }
 
-    public ServiceNameCollection Merge(java.lang.String serviceName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.UriFormatException, system.FormatException {
+    public ServiceNameCollection Merge(IEnumerable serviceNames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.UriFormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objMerge = (JCObject)classInstance.Invoke("Merge", serviceName);
+            JCObject objMerge = (JCObject)classInstance.Invoke("Merge", serviceNames == null ? null : serviceNames.getJCOInstance());
             return new ServiceNameCollection(objMerge);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ServiceNameCollection Merge(IEnumerable serviceNames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.UriFormatException, system.InvalidOperationException {
+    public ServiceNameCollection Merge(java.lang.String serviceName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.UriFormatException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objMerge = (JCObject)classInstance.Invoke("Merge", serviceNames == null ? null : serviceNames.getJCOInstance());
+            JCObject objMerge = (JCObject)classInstance.Invoke("Merge", serviceName);
             return new ServiceNameCollection(objMerge);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

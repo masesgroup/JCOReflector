@@ -38,15 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.durableinstancing.InstanceHandle;
-import system.runtime.durableinstancing.InstanceView;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
-import system.runtime.durableinstancing.InstanceOwner;
-import system.Guid;
+import system.runtime.durableinstancing.InstanceHandle;
 import system.runtime.durableinstancing.InstancePersistenceCommand;
 import system.TimeSpan;
 import system.AsyncCallback;
+import system.Guid;
+import system.runtime.durableinstancing.InstanceOwner;
+import system.runtime.durableinstancing.InstanceView;
 
 
 /**
@@ -121,50 +121,6 @@ public class InstanceStore extends NetObject  {
     
     // Methods section
     
-    public InstanceHandle CreateInstanceHandle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateInstanceHandle = (JCObject)classInstance.Invoke("CreateInstanceHandle");
-            return new InstanceHandle(objCreateInstanceHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public InstanceView EndExecute(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEndExecute = (JCObject)classInstance.Invoke("EndExecute", result == null ? null : result.getJCOInstance());
-            return new InstanceView(objEndExecute);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public InstanceHandle CreateInstanceHandle(InstanceOwner owner, Guid instanceId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateInstanceHandle = (JCObject)classInstance.Invoke("CreateInstanceHandle", owner == null ? null : owner.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance());
-            return new InstanceHandle(objCreateInstanceHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public InstanceView Execute(InstanceHandle handle, InstancePersistenceCommand command, TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.TypeLoadException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.NotSupportedException, system.transactions.TransactionManagerCommunicationException, system.OverflowException, system.OperationCanceledException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.TimeoutException, system.threading.WaitHandleCannotBeOpenedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objExecute = (JCObject)classInstance.Invoke("Execute", handle == null ? null : handle.getJCOInstance(), command == null ? null : command.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
-            return new InstanceView(objExecute);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IAsyncResult BeginExecute(InstanceHandle handle, InstancePersistenceCommand command, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.TypeLoadException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.NotSupportedException, system.transactions.TransactionManagerCommunicationException, system.OverflowException, system.OperationCanceledException, system.TimeoutException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,11 +132,22 @@ public class InstanceStore extends NetObject  {
         }
     }
 
-    public InstanceHandle CreateInstanceHandle(InstanceOwner owner) throws Throwable {
+    public IAsyncResult BeginWaitForEvents(InstanceHandle handle, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.TimeoutException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateInstanceHandle = (JCObject)classInstance.Invoke("CreateInstanceHandle", owner == null ? null : owner.getJCOInstance());
+            JCObject objBeginWaitForEvents = (JCObject)classInstance.Invoke("BeginWaitForEvents", handle == null ? null : handle.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginWaitForEvents);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InstanceHandle CreateInstanceHandle() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateInstanceHandle = (JCObject)classInstance.Invoke("CreateInstanceHandle");
             return new InstanceHandle(objCreateInstanceHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -198,12 +165,45 @@ public class InstanceStore extends NetObject  {
         }
     }
 
-    public IAsyncResult BeginWaitForEvents(InstanceHandle handle, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.TimeoutException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public InstanceHandle CreateInstanceHandle(InstanceOwner owner) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginWaitForEvents = (JCObject)classInstance.Invoke("BeginWaitForEvents", handle == null ? null : handle.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginWaitForEvents);
+            JCObject objCreateInstanceHandle = (JCObject)classInstance.Invoke("CreateInstanceHandle", owner == null ? null : owner.getJCOInstance());
+            return new InstanceHandle(objCreateInstanceHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InstanceHandle CreateInstanceHandle(InstanceOwner owner, Guid instanceId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateInstanceHandle = (JCObject)classInstance.Invoke("CreateInstanceHandle", owner == null ? null : owner.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance());
+            return new InstanceHandle(objCreateInstanceHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InstanceView EndExecute(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEndExecute = (JCObject)classInstance.Invoke("EndExecute", result == null ? null : result.getJCOInstance());
+            return new InstanceView(objEndExecute);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InstanceView Execute(InstanceHandle handle, InstancePersistenceCommand command, TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.TypeLoadException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.NotSupportedException, system.transactions.TransactionManagerCommunicationException, system.OverflowException, system.OperationCanceledException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.TimeoutException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objExecute = (JCObject)classInstance.Invoke("Execute", handle == null ? null : handle.getJCOInstance(), command == null ? null : command.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            return new InstanceView(objExecute);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

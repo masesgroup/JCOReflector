@@ -103,7 +103,7 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
 
     // Methods section
     
-    public void AddResource(java.lang.String name, java.lang.String value) throws Throwable {
+    public void AddResource(java.lang.String name, byte[] value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -123,7 +123,7 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
         }
     }
 
-    public void AddResource(java.lang.String name, byte[] value) throws Throwable {
+    public void AddResource(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -143,21 +143,21 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
         }
     }
 
-    public void Generate() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Generate");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Generate() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Generate");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

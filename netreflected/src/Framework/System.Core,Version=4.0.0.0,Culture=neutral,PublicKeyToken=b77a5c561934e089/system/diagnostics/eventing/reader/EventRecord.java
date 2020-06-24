@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.principal.SecurityIdentifier;
 import system.diagnostics.eventing.reader.EventBookmark;
+import system.security.principal.SecurityIdentifier;
 
 
 /**
@@ -114,16 +114,6 @@ public class EventRecord extends NetObject  {
     
     // Methods section
     
-    public void Dispose() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String FormatDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -144,6 +134,16 @@ public class EventRecord extends NetObject  {
         }
     }
 
+    public void Dispose() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -158,31 +158,12 @@ public class EventRecord extends NetObject  {
         }
     }
 
-    public java.lang.String getProviderName() throws Throwable {
+    public EventBookmark getBookmark() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ProviderName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getLogName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("LogName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getMachineName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("MachineName");
+            JCObject val = (JCObject)classInstance.Get("Bookmark");
+            return new EventBookmark(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,6 +190,26 @@ public class EventRecord extends NetObject  {
         }
     }
 
+    public java.lang.String getLogName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("LogName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getMachineName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("MachineName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getOpcodeDisplayName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -219,22 +220,21 @@ public class EventRecord extends NetObject  {
         }
     }
 
-    public java.lang.String getTaskDisplayName() throws Throwable {
+    public java.lang.String getProviderName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("TaskDisplayName");
+            return (java.lang.String)classInstance.Get("ProviderName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public EventBookmark getBookmark() throws Throwable {
+    public java.lang.String getTaskDisplayName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Bookmark");
-            return new EventBookmark(val);
+            return (java.lang.String)classInstance.Get("TaskDisplayName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

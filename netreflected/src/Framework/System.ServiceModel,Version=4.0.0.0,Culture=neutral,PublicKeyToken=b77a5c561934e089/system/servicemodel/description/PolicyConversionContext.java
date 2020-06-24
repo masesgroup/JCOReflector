@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.description.PolicyAssertionCollection;
-import system.servicemodel.description.OperationDescription;
-import system.servicemodel.description.MessageDescription;
 import system.servicemodel.description.FaultDescription;
+import system.servicemodel.description.MessageDescription;
+import system.servicemodel.description.OperationDescription;
 import system.servicemodel.channels.BindingElementCollection;
 import system.servicemodel.description.ContractDescription;
 
@@ -129,12 +129,12 @@ public class PolicyConversionContext extends NetObject  {
         }
     }
 
-    public PolicyAssertionCollection GetOperationBindingAssertions(OperationDescription operation) throws Throwable {
+    public PolicyAssertionCollection GetFaultBindingAssertions(FaultDescription fault) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetOperationBindingAssertions = (JCObject)classInstance.Invoke("GetOperationBindingAssertions", operation == null ? null : operation.getJCOInstance());
-            return new PolicyAssertionCollection(objGetOperationBindingAssertions);
+            JCObject objGetFaultBindingAssertions = (JCObject)classInstance.Invoke("GetFaultBindingAssertions", fault == null ? null : fault.getJCOInstance());
+            return new PolicyAssertionCollection(objGetFaultBindingAssertions);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,12 +151,12 @@ public class PolicyConversionContext extends NetObject  {
         }
     }
 
-    public PolicyAssertionCollection GetFaultBindingAssertions(FaultDescription fault) throws Throwable {
+    public PolicyAssertionCollection GetOperationBindingAssertions(OperationDescription operation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetFaultBindingAssertions = (JCObject)classInstance.Invoke("GetFaultBindingAssertions", fault == null ? null : fault.getJCOInstance());
-            return new PolicyAssertionCollection(objGetFaultBindingAssertions);
+            JCObject objGetOperationBindingAssertions = (JCObject)classInstance.Invoke("GetOperationBindingAssertions", operation == null ? null : operation.getJCOInstance());
+            return new PolicyAssertionCollection(objGetOperationBindingAssertions);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

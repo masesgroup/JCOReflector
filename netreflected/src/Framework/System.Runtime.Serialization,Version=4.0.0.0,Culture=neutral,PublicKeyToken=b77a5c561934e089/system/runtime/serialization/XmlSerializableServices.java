@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.xml.XmlNode;
 import system.xml.XmlReader;
-import system.xml.XmlWriter;
 import system.xml.schema.XmlSchemaSet;
 import system.xml.XmlQualifiedName;
+import system.xml.XmlWriter;
 
 
 /**
@@ -134,21 +134,21 @@ public class XmlSerializableServices extends NetObject  {
         }
     }
 
-    public static void WriteNodes(XmlWriter xmlWriter, XmlNode[] nodes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("WriteNodes", xmlWriter == null ? null : xmlWriter.getJCOInstance(), toObjectFromArray(nodes));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void AddDefaultSchema(XmlSchemaSet schemas, XmlQualifiedName typeQName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.RankException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddDefaultSchema", schemas == null ? null : schemas.getJCOInstance(), typeQName == null ? null : typeQName.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteNodes(XmlWriter xmlWriter, XmlNode[] nodes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteNodes", xmlWriter == null ? null : xmlWriter.getJCOInstance(), toObjectFromArray(nodes));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

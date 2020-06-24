@@ -117,17 +117,6 @@ public class RefreshDataCompletedEventArgs extends NetObject  {
     
     // Properties section
     
-    public PeerEndPoint getPeerEndPoint() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PeerEndPoint");
-            return new PeerEndPoint(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCancelled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -144,6 +133,17 @@ public class RefreshDataCompletedEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Error");
             return new NetException(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PeerEndPoint getPeerEndPoint() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PeerEndPoint");
+            return new PeerEndPoint(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

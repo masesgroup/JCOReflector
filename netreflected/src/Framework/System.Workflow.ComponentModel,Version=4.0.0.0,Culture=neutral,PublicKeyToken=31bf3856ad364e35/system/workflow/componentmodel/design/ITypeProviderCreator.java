@@ -37,12 +37,12 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.workflow.componentmodel.compiler.ITypeProvider;
-import system.workflow.componentmodel.compiler.ITypeProviderImplementation;
-import system.reflection.Assembly;
-import system.reflection.AssemblyName;
 import system.componentmodel.design.ITypeResolutionService;
 import system.componentmodel.design.ITypeResolutionServiceImplementation;
+import system.reflection.Assembly;
+import system.reflection.AssemblyName;
+import system.workflow.componentmodel.compiler.ITypeProvider;
+import system.workflow.componentmodel.compiler.ITypeProviderImplementation;
 
 
 /**
@@ -95,13 +95,13 @@ public interface ITypeProviderCreator extends IJCOBridgeReflected {
 
     // Methods section
     
-    public ITypeProvider GetTypeProvider(NetObject obj) throws Throwable;
+    public ITypeResolutionService GetTypeResolutionService(NetObject obj) throws Throwable;
 
     public Assembly GetLocalAssembly(NetObject obj) throws Throwable;
 
     public Assembly GetTransientAssembly(AssemblyName assemblyName) throws Throwable;
 
-    public ITypeResolutionService GetTypeResolutionService(NetObject obj) throws Throwable;
+    public ITypeProvider GetTypeProvider(NetObject obj) throws Throwable;
 
 
     

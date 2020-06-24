@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.InheritanceAttribute;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.componentmodel.IContainer;
 import system.componentmodel.IContainerImplementation;
-import system.componentmodel.InheritanceAttribute;
 
 
 /**
@@ -128,11 +128,12 @@ public class InheritanceService extends NetObject  {
     
     // Methods section
     
-    public void Dispose() throws Throwable {
+    public InheritanceAttribute GetInheritanceAttribute(IComponent component) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Dispose");
+            JCObject objGetInheritanceAttribute = (JCObject)classInstance.Invoke("GetInheritanceAttribute", component == null ? null : component.getJCOInstance());
+            return new InheritanceAttribute(objGetInheritanceAttribute);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,12 +149,11 @@ public class InheritanceService extends NetObject  {
         }
     }
 
-    public InheritanceAttribute GetInheritanceAttribute(IComponent component) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetInheritanceAttribute = (JCObject)classInstance.Invoke("GetInheritanceAttribute", component == null ? null : component.getJCOInstance());
-            return new InheritanceAttribute(objGetInheritanceAttribute);
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

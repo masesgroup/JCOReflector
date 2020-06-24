@@ -38,20 +38,20 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import microsoft.build.framework.BuildMessageEventHandler;
-import microsoft.build.framework.BuildErrorEventHandler;
-import microsoft.build.framework.BuildWarningEventHandler;
-import microsoft.build.framework.BuildStartedEventHandler;
-import microsoft.build.framework.BuildFinishedEventHandler;
-import microsoft.build.framework.ProjectStartedEventHandler;
-import microsoft.build.framework.ProjectFinishedEventHandler;
-import microsoft.build.framework.TargetStartedEventHandler;
-import microsoft.build.framework.TargetFinishedEventHandler;
-import microsoft.build.framework.TaskStartedEventHandler;
-import microsoft.build.framework.TaskFinishedEventHandler;
-import microsoft.build.framework.CustomBuildEventHandler;
-import microsoft.build.framework.BuildStatusEventHandler;
 import microsoft.build.framework.AnyEventHandler;
+import microsoft.build.framework.BuildErrorEventHandler;
+import microsoft.build.framework.BuildFinishedEventHandler;
+import microsoft.build.framework.BuildMessageEventHandler;
+import microsoft.build.framework.BuildStartedEventHandler;
+import microsoft.build.framework.BuildStatusEventHandler;
+import microsoft.build.framework.BuildWarningEventHandler;
+import microsoft.build.framework.CustomBuildEventHandler;
+import microsoft.build.framework.ProjectFinishedEventHandler;
+import microsoft.build.framework.ProjectStartedEventHandler;
+import microsoft.build.framework.TargetFinishedEventHandler;
+import microsoft.build.framework.TargetStartedEventHandler;
+import microsoft.build.framework.TaskFinishedEventHandler;
+import microsoft.build.framework.TaskStartedEventHandler;
 
 
 /**
@@ -126,21 +126,21 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
     // Instance Events section
     
 
-    public void addMessageRaised(BuildMessageEventHandler handler) throws Throwable {
+    public void addAnyEventRaised(AnyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("MessageRaised", handler);
+            classInstance.RegisterEventListener("AnyEventRaised", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeMessageRaised(BuildMessageEventHandler handler) throws Throwable {
+    public void removeAnyEventRaised(AnyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("MessageRaised", handler);
+            classInstance.UnregisterEventListener("AnyEventRaised", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,21 +166,41 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
-    public void addWarningRaised(BuildWarningEventHandler handler) throws Throwable {
+    public void addBuildFinished(BuildFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("WarningRaised", handler);
+            classInstance.RegisterEventListener("BuildFinished", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeWarningRaised(BuildWarningEventHandler handler) throws Throwable {
+    public void removeBuildFinished(BuildFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("WarningRaised", handler);
+            classInstance.UnregisterEventListener("BuildFinished", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addMessageRaised(BuildMessageEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("MessageRaised", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeMessageRaised(BuildMessageEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("MessageRaised", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,141 +226,41 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
-    public void addBuildFinished(BuildFinishedEventHandler handler) throws Throwable {
+    public void addStatusEventRaised(BuildStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("BuildFinished", handler);
+            classInstance.RegisterEventListener("StatusEventRaised", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeBuildFinished(BuildFinishedEventHandler handler) throws Throwable {
+    public void removeStatusEventRaised(BuildStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("BuildFinished", handler);
+            classInstance.UnregisterEventListener("StatusEventRaised", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void addProjectStarted(ProjectStartedEventHandler handler) throws Throwable {
+    public void addWarningRaised(BuildWarningEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("ProjectStarted", handler);
+            classInstance.RegisterEventListener("WarningRaised", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeProjectStarted(ProjectStartedEventHandler handler) throws Throwable {
+    public void removeWarningRaised(BuildWarningEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("ProjectStarted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addProjectFinished(ProjectFinishedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("ProjectFinished", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeProjectFinished(ProjectFinishedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("ProjectFinished", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addTargetStarted(TargetStartedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("TargetStarted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeTargetStarted(TargetStartedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("TargetStarted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addTargetFinished(TargetFinishedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("TargetFinished", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeTargetFinished(TargetFinishedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("TargetFinished", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addTaskStarted(TaskStartedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("TaskStarted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeTaskStarted(TaskStartedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("TaskStarted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addTaskFinished(TaskFinishedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("TaskFinished", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeTaskFinished(TaskFinishedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("TaskFinished", handler);
+            classInstance.UnregisterEventListener("WarningRaised", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,41 +286,121 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
-    public void addStatusEventRaised(BuildStatusEventHandler handler) throws Throwable {
+    public void addProjectFinished(ProjectFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("StatusEventRaised", handler);
+            classInstance.RegisterEventListener("ProjectFinished", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeStatusEventRaised(BuildStatusEventHandler handler) throws Throwable {
+    public void removeProjectFinished(ProjectFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("StatusEventRaised", handler);
+            classInstance.UnregisterEventListener("ProjectFinished", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void addAnyEventRaised(AnyEventHandler handler) throws Throwable {
+    public void addProjectStarted(ProjectStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("AnyEventRaised", handler);
+            classInstance.RegisterEventListener("ProjectStarted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeAnyEventRaised(AnyEventHandler handler) throws Throwable {
+    public void removeProjectStarted(ProjectStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("AnyEventRaised", handler);
+            classInstance.UnregisterEventListener("ProjectStarted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addTargetFinished(TargetFinishedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("TargetFinished", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeTargetFinished(TargetFinishedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("TargetFinished", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addTargetStarted(TargetStartedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("TargetStarted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeTargetStarted(TargetStartedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("TargetStarted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addTaskFinished(TaskFinishedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("TaskFinished", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeTaskFinished(TaskFinishedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("TaskFinished", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addTaskStarted(TaskStartedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("TaskStarted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeTaskStarted(TaskStartedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("TaskStarted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

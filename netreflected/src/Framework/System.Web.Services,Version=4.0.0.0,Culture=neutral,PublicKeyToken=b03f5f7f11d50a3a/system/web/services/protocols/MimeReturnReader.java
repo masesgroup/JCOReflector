@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.services.protocols.LogicalMethodInfo;
 import system.net.WebResponse;
 import system.io.Stream;
-import system.web.services.protocols.LogicalMethodInfo;
 
 
 /**
@@ -115,17 +115,6 @@ public class MimeReturnReader extends NetObject  {
     
     // Methods section
     
-    public NetObject Read(WebResponse response, Stream responseStream) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRead = (JCObject)classInstance.Invoke("Read", response == null ? null : response.getJCOInstance(), responseStream == null ? null : responseStream.getJCOInstance());
-            return new NetObject(objRead);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetInitializer(LogicalMethodInfo methodInfo) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -137,11 +126,12 @@ public class MimeReturnReader extends NetObject  {
         }
     }
 
-    public void Initialize(NetObject initializer) throws Throwable {
+    public NetObject Read(WebResponse response, Stream responseStream) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Initialize", initializer == null ? null : initializer.getJCOInstance());
+            JCObject objRead = (JCObject)classInstance.Invoke("Read", response == null ? null : response.getJCOInstance(), responseStream == null ? null : responseStream.getJCOInstance());
+            return new NetObject(objRead);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,6 +149,16 @@ public class MimeReturnReader extends NetObject  {
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Initialize(NetObject initializer) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Initialize", initializer == null ? null : initializer.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -138,17 +138,6 @@ public class WritingProgressChangedEventArgs extends NetObject  {
         }
     }
 
-    public WritingProgressChangeLevel getWritingLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("WritingLevel");
-            return new WritingProgressChangeLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getProgressPercentage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -165,6 +154,17 @@ public class WritingProgressChangedEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("UserState");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WritingProgressChangeLevel getWritingLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("WritingLevel");
+            return new WritingProgressChangeLevel(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

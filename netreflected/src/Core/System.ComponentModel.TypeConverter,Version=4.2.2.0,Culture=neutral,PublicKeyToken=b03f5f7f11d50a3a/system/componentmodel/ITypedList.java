@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.PropertyDescriptorCollection;
+import system.componentmodel.PropertyDescriptor;
 
 
 /**
@@ -91,9 +91,9 @@ public interface ITypedList extends IJCOBridgeReflected {
 
     // Methods section
     
-    public java.lang.String GetListName(PropertyDescriptor[] listAccessors) throws Throwable;
-
     public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors) throws Throwable;
+
+    public java.lang.String GetListName(PropertyDescriptor[] listAccessors) throws Throwable;
 
 
     

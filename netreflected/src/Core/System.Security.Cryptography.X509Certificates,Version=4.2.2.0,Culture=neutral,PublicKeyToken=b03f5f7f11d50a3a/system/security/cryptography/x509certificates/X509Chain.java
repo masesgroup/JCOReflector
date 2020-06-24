@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.cryptography.x509certificates.X509Chain;
 import system.security.cryptography.x509certificates.X509Certificate2;
+import system.security.cryptography.x509certificates.X509Chain;
+import microsoft.win32.safehandles.SafeX509ChainHandle;
 import system.security.cryptography.x509certificates.X509ChainElementCollection;
 import system.security.cryptography.x509certificates.X509ChainPolicy;
 import system.security.cryptography.x509certificates.X509ChainStatus;
-import microsoft.win32.safehandles.SafeX509ChainHandle;
 
 
 /**
@@ -139,22 +139,22 @@ public class X509Chain extends NetObject  {
     
     // Methods section
     
+    public boolean Build(X509Certificate2 certificate) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Build", certificate == null ? null : certificate.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static X509Chain Create() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreate = (JCObject)classType.Invoke("Create");
             return new X509Chain(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Build(X509Certificate2 certificate) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Build", certificate == null ? null : certificate.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,6 +184,17 @@ public class X509Chain extends NetObject  {
     
     // Properties section
     
+    public SafeX509ChainHandle getSafeHandle() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SafeHandle");
+            return new SafeX509ChainHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public X509ChainElementCollection getChainElements() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -228,17 +239,6 @@ public class X509Chain extends NetObject  {
             X509ChainStatus[] resultingArray = new X509ChainStatus[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SafeX509ChainHandle getSafeHandle() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SafeHandle");
-            return new SafeX509ChainHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

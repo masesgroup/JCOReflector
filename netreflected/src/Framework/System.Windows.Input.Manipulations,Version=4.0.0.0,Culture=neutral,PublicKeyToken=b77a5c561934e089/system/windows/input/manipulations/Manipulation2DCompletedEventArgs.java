@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.Single;
-import system.windows.input.manipulations.ManipulationVelocities2D;
 import system.windows.input.manipulations.ManipulationDelta2D;
+import system.windows.input.manipulations.ManipulationVelocities2D;
 
 
 /**
@@ -141,23 +141,23 @@ public class Manipulation2DCompletedEventArgs extends NetObject  {
         }
     }
 
-    public ManipulationVelocities2D getVelocities() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Velocities");
-            return new ManipulationVelocities2D(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ManipulationDelta2D getTotal() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Total");
             return new ManipulationDelta2D(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ManipulationVelocities2D getVelocities() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Velocities");
+            return new ManipulationVelocities2D(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.BlobBuilder;
-import system.reflection.metadata.ecma335.VectorEncoder;
 import system.reflection.metadata.ecma335.ScalarEncoder;
+import system.reflection.metadata.ecma335.VectorEncoder;
 
 
 /**
@@ -126,23 +126,23 @@ public class LiteralEncoder extends NetObject  {
     
     // Methods section
     
-    public VectorEncoder Vector() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objVector = (JCObject)classInstance.Invoke("Vector");
-            return new VectorEncoder(objVector);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ScalarEncoder Scalar() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objScalar = (JCObject)classInstance.Invoke("Scalar");
             return new ScalarEncoder(objScalar);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public VectorEncoder Vector() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objVector = (JCObject)classInstance.Invoke("Vector");
+            return new VectorEncoder(objVector);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

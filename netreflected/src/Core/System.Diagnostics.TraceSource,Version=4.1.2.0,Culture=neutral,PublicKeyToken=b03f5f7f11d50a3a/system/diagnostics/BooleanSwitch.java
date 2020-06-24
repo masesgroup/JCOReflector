@@ -158,11 +158,12 @@ public class BooleanSwitch extends NetObject  {
         }
     }
 
-    public java.lang.String getDisplayName() throws Throwable {
+    public StringDictionary getAttributes() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            JCObject val = (JCObject)classInstance.Get("Attributes");
+            return new StringDictionary(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,12 +179,11 @@ public class BooleanSwitch extends NetObject  {
         }
     }
 
-    public StringDictionary getAttributes() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
+    public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new StringDictionary(val);
+            return (java.lang.String)classInstance.Get("DisplayName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

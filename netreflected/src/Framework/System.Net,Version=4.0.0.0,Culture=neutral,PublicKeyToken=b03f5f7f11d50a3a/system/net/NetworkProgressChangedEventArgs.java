@@ -137,21 +137,21 @@ public class NetworkProgressChangedEventArgs extends NetObject  {
         }
     }
 
-    public int getTotalBytes() throws Throwable, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("TotalBytes");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getProgressPercentage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("ProgressPercentage");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getTotalBytes() throws Throwable, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("TotalBytes");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

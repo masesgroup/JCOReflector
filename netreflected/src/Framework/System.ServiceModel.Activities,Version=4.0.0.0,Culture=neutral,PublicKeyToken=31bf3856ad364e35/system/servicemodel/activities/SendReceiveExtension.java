@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.Bookmark;
+import system.runtime.durableinstancing.InstanceKey;
+import system.servicemodel.activities.ReceiveSettings;
 import system.servicemodel.activities.MessageContext;
 import system.servicemodel.activities.SendSettings;
-import system.runtime.durableinstancing.InstanceKey;
-import system.activities.Bookmark;
-import system.servicemodel.activities.ReceiveSettings;
 import system.servicemodel.activities.HostSettings;
 
 
@@ -118,16 +118,6 @@ public class SendReceiveExtension extends NetObject  {
     
     // Methods section
     
-    public void Send(MessageContext message, SendSettings settings, InstanceKey correlatesWith, Bookmark sendCompleteBookmark) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Send", message == null ? null : message.getJCOInstance(), settings == null ? null : settings.getJCOInstance(), correlatesWith == null ? null : correlatesWith.getJCOInstance(), sendCompleteBookmark == null ? null : sendCompleteBookmark.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Cancel(Bookmark bookmark) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -153,6 +143,16 @@ public class SendReceiveExtension extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterReceive", settings == null ? null : settings.getJCOInstance(), correlatesWith == null ? null : correlatesWith.getJCOInstance(), receiveBookmark == null ? null : receiveBookmark.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Send(MessageContext message, SendSettings settings, InstanceKey correlatesWith, Bookmark sendCompleteBookmark) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Send", message == null ? null : message.getJCOInstance(), settings == null ? null : settings.getJCOInstance(), correlatesWith == null ? null : correlatesWith.getJCOInstance(), sendCompleteBookmark == null ? null : sendCompleteBookmark.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -113,11 +113,11 @@ public class Buffer extends NetObject  {
     
     // Methods section
     
-    public static void BlockCopy(Array src, int srcOffset, Array dst, int dstOffset, int count) throws Throwable {
+    public static byte GetByte(Array array, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("BlockCopy", src == null ? null : src.getJCOInstance(), srcOffset, dst == null ? null : dst.getJCOInstance(), dstOffset, count);
+            return (byte)classType.Invoke("GetByte", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -133,11 +133,11 @@ public class Buffer extends NetObject  {
         }
     }
 
-    public static byte GetByte(Array array, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static void BlockCopy(Array src, int srcOffset, Array dst, int dstOffset, int count) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (byte)classType.Invoke("GetByte", array == null ? null : array.getJCOInstance(), index);
+            classType.Invoke("BlockCopy", src == null ? null : src.getJCOInstance(), srcOffset, dst == null ? null : dst.getJCOInstance(), dstOffset, count);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

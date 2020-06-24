@@ -141,11 +141,11 @@ public class StylusPointPropertyInfo extends NetObject  {
     
     // Properties section
     
-    public int getMinimum() throws Throwable {
+    public boolean getIsButton() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Minimum");
+            return (boolean)classInstance.Get("IsButton");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,6 +156,16 @@ public class StylusPointPropertyInfo extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("Maximum");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getMinimum() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Minimum");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,17 +192,6 @@ public class StylusPointPropertyInfo extends NetObject  {
         }
     }
 
-    public StylusPointPropertyUnit getUnit() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Unit");
-            return new StylusPointPropertyUnit(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Guid getId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -204,11 +203,12 @@ public class StylusPointPropertyInfo extends NetObject  {
         }
     }
 
-    public boolean getIsButton() throws Throwable {
+    public StylusPointPropertyUnit getUnit() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsButton");
+            JCObject val = (JCObject)classInstance.Get("Unit");
+            return new StylusPointPropertyUnit(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

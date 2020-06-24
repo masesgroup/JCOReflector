@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.networkinformation.NetworkInterface;
-import system.net.networkinformation.IPInterfaceProperties;
-import system.net.networkinformation.IPv4InterfaceStatistics;
-import system.net.networkinformation.IPInterfaceStatistics;
-import system.net.networkinformation.PhysicalAddress;
 import system.net.networkinformation.NetworkInterfaceComponent;
-import system.net.networkinformation.OperationalStatus;
+import system.net.networkinformation.IPInterfaceProperties;
+import system.net.networkinformation.IPInterfaceStatistics;
+import system.net.networkinformation.IPv4InterfaceStatistics;
+import system.net.networkinformation.NetworkInterface;
+import system.net.networkinformation.PhysicalAddress;
 import system.net.networkinformation.NetworkInterfaceType;
+import system.net.networkinformation.OperationalStatus;
 
 
 /**
@@ -120,6 +120,59 @@ public class NetworkInterface extends NetObject  {
     
     // Methods section
     
+    public static boolean GetIsNetworkAvailable() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.networkinformation.NetworkInformationException, system.net.sockets.SocketException, system.NotImplementedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("GetIsNetworkAvailable");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Supports(NetworkInterfaceComponent networkInterfaceComponent) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Supports", networkInterfaceComponent == null ? null : networkInterfaceComponent.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IPInterfaceProperties GetIPProperties() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetIPProperties = (JCObject)classInstance.Invoke("GetIPProperties");
+            return new IPInterfaceProperties(objGetIPProperties);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IPInterfaceStatistics GetIPStatistics() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetIPStatistics = (JCObject)classInstance.Invoke("GetIPStatistics");
+            return new IPInterfaceStatistics(objGetIPStatistics);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IPv4InterfaceStatistics GetIPv4Statistics() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetIPv4Statistics = (JCObject)classInstance.Invoke("GetIPv4Statistics");
+            return new IPv4InterfaceStatistics(objGetIPv4Statistics);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static NetworkInterface[] GetAllNetworkInterfaces() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.networkinformation.NetworkInformationException, system.resources.MissingManifestResourceException, system.net.sockets.SocketException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -137,49 +190,6 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
-    public static boolean GetIsNetworkAvailable() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.networkinformation.NetworkInformationException, system.net.sockets.SocketException, system.NotImplementedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("GetIsNetworkAvailable");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IPInterfaceProperties GetIPProperties() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetIPProperties = (JCObject)classInstance.Invoke("GetIPProperties");
-            return new IPInterfaceProperties(objGetIPProperties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IPv4InterfaceStatistics GetIPv4Statistics() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetIPv4Statistics = (JCObject)classInstance.Invoke("GetIPv4Statistics");
-            return new IPv4InterfaceStatistics(objGetIPv4Statistics);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IPInterfaceStatistics GetIPStatistics() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetIPStatistics = (JCObject)classInstance.Invoke("GetIPStatistics");
-            return new IPInterfaceStatistics(objGetIPStatistics);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PhysicalAddress GetPhysicalAddress() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -191,71 +201,10 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
-    public boolean Supports(NetworkInterfaceComponent networkInterfaceComponent) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Supports", networkInterfaceComponent == null ? null : networkInterfaceComponent.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public java.lang.String getId() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Id");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDescription() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OperationalStatus getOperationalStatus() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("OperationalStatus");
-            return new OperationalStatus(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public long getSpeed() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("Speed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsReceiveOnly() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -276,12 +225,11 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
-    public NetworkInterfaceType getNetworkInterfaceType() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getIPv6LoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NetworkInterfaceType");
-            return new NetworkInterfaceType(val);
+            return (int)classType.Get("IPv6LoopbackInterfaceIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,11 +245,63 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
-    public static int getIPv6LoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public long getSpeed() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("IPv6LoopbackInterfaceIndex");
+            return (long)classInstance.Get("Speed");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetworkInterfaceType getNetworkInterfaceType() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NetworkInterfaceType");
+            return new NetworkInterfaceType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public OperationalStatus getOperationalStatus() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("OperationalStatus");
+            return new OperationalStatus(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getDescription() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Description");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getId() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Id");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

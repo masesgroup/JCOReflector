@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.remoting.contexts.Context;
 import system.runtime.remoting.activation.IConstructionCallMessage;
 import system.runtime.remoting.activation.IConstructionCallMessageImplementation;
 import system.runtime.remoting.messaging.IMessageSink;
 import system.runtime.remoting.messaging.IMessageSinkImplementation;
-import system.runtime.remoting.contexts.Context;
 
 
 /**
@@ -158,22 +158,41 @@ public class SynchronizationAttribute extends NetObject  {
     
     // Methods section
     
-    public void GetPropertiesForNewContext(IConstructionCallMessage ctorMsg) throws Throwable {
+    public boolean IsContextOK(Context ctx, IConstructionCallMessage msg) throws Throwable, system.ArgumentNullException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetPropertiesForNewContext", ctorMsg == null ? null : ctorMsg.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), msg == null ? null : msg.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IMessageSink GetServerContextSink(IMessageSink nextSink) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NullReferenceException {
+    public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetServerContextSink = (JCObject)classInstance.Invoke("GetServerContextSink", nextSink == null ? null : nextSink.getJCOInstance());
-            return new IMessageSinkImplementation(objGetServerContextSink);
+            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsNewContextOK(Context newCtx) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsNewContextOK", newCtx == null ? null : newCtx.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Match(NetObject obj) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,21 +209,12 @@ public class SynchronizationAttribute extends NetObject  {
         }
     }
 
-    public boolean IsContextOK(Context ctx, IConstructionCallMessage msg) throws Throwable, system.ArgumentNullException, system.NullReferenceException {
+    public IMessageSink GetServerContextSink(IMessageSink nextSink) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), msg == null ? null : msg.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsNewContextOK(Context newCtx) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsNewContextOK", newCtx == null ? null : newCtx.getJCOInstance());
+            JCObject objGetServerContextSink = (JCObject)classInstance.Invoke("GetServerContextSink", nextSink == null ? null : nextSink.getJCOInstance());
+            return new IMessageSinkImplementation(objGetServerContextSink);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,21 +230,11 @@ public class SynchronizationAttribute extends NetObject  {
         }
     }
 
-    public boolean Match(NetObject obj) throws Throwable {
+    public void GetPropertiesForNewContext(IConstructionCallMessage ctorMsg) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            classInstance.Invoke("GetPropertiesForNewContext", ctorMsg == null ? null : ctorMsg.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,6 +244,16 @@ public class SynchronizationAttribute extends NetObject  {
     
     // Properties section
     
+    public boolean getIsReEntrant() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsReEntrant");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getLocked() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -264,11 +274,12 @@ public class SynchronizationAttribute extends NetObject  {
         }
     }
 
-    public boolean getIsReEntrant() throws Throwable {
+    public NetObject getTypeId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsReEntrant");
+            JCObject val = (JCObject)classInstance.Get("TypeId");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,17 +290,6 @@ public class SynchronizationAttribute extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

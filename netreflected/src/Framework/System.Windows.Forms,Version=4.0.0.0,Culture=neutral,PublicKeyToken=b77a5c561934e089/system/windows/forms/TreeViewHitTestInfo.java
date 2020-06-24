@@ -129,23 +129,23 @@ public class TreeViewHitTestInfo extends NetObject  {
     
     // Properties section
     
-    public TreeViewHitTestLocations getLocation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Location");
-            return new TreeViewHitTestLocations(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TreeNode getNode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Node");
             return new TreeNode(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TreeViewHitTestLocations getLocation() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Location");
+            return new TreeViewHitTestLocations(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -113,17 +113,6 @@ public class FileReferenceCollection extends NetObject  {
     
     // Methods section
     
-    public FileReference Add(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", path);
-            return new FileReference(objAdd);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FileReference Add(FileReference file) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -135,11 +124,12 @@ public class FileReferenceCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public FileReference Add(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            JCObject objAdd = (JCObject)classInstance.Invoke("Add", path);
+            return new FileReference(objAdd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,6 +141,16 @@ public class FileReferenceCollection extends NetObject  {
         try {
             JCObject objFindTargetPath = (JCObject)classInstance.Invoke("FindTargetPath", targetPath);
             return new FileReference(objFindTargetPath);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Clear() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

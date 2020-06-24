@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Version;
 import system.workflow.runtime.tracking.ActivityTrackPointCollection;
 import system.workflow.runtime.tracking.UserTrackPointCollection;
 import system.workflow.runtime.tracking.WorkflowTrackPointCollection;
-import system.Version;
 
 
 /**
@@ -131,6 +131,27 @@ public class TrackingProfile extends NetObject  {
     
     // Properties section
     
+    public Version getVersion() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Version");
+            return new Version(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setVersion(Version Version) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Version", Version == null ? null : Version.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ActivityTrackPointCollection getActivityTrackPoints() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -159,27 +180,6 @@ public class TrackingProfile extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("WorkflowTrackPoints");
             return new WorkflowTrackPointCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Version getVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Version");
-            return new Version(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setVersion(Version Version) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Version", Version == null ? null : Version.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

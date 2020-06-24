@@ -37,15 +37,15 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.reflection.Assembly;
-import system.AppDomain;
-import microsoft.jscript.vsa.IJSVsaSite;
-import microsoft.jscript.vsa.IJSVsaSiteImplementation;
 import microsoft.jscript.IVsaScriptScope;
 import microsoft.jscript.IVsaScriptScopeImplementation;
-import system.reflection.Module;
 import microsoft.jscript.vsa.IJSVsaEngine;
 import microsoft.jscript.vsa.IJSVsaEngineImplementation;
+import system.AppDomain;
+import system.reflection.Assembly;
+import system.reflection.Module;
+import microsoft.jscript.vsa.IJSVsaSite;
+import microsoft.jscript.vsa.IJSVsaSiteImplementation;
 
 
 /**
@@ -98,31 +98,31 @@ public interface IEngine2 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public Assembly GetAssembly() throws Throwable;
-
-    public void Run(AppDomain domain) throws Throwable;
-
     public boolean CompileEmpty() throws Throwable;
-
-    public void RunEmpty() throws Throwable;
-
-    public void DisconnectEvents() throws Throwable;
-
-    public void ConnectEvents() throws Throwable;
-
-    public void RegisterEventSource(java.lang.String name) throws Throwable;
-
-    public void Interrupt() throws Throwable;
-
-    public void InitVsaEngine(java.lang.String rootMoniker, IJSVsaSite site) throws Throwable;
 
     public IVsaScriptScope GetGlobalScope() throws Throwable;
 
-    public Module GetModule() throws Throwable;
-
     public IJSVsaEngine Clone(AppDomain domain) throws Throwable;
 
+    public Assembly GetAssembly() throws Throwable;
+
+    public Module GetModule() throws Throwable;
+
+    public void ConnectEvents() throws Throwable;
+
+    public void DisconnectEvents() throws Throwable;
+
+    public void InitVsaEngine(java.lang.String rootMoniker, IJSVsaSite site) throws Throwable;
+
+    public void Interrupt() throws Throwable;
+
+    public void RegisterEventSource(java.lang.String name) throws Throwable;
+
     public void Restart() throws Throwable;
+
+    public void Run(AppDomain domain) throws Throwable;
+
+    public void RunEmpty() throws Throwable;
 
 
     

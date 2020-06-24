@@ -91,9 +91,9 @@ public interface INameCreationService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public java.lang.String CreateName(IContainer container, NetType dataType) throws Throwable;
-
     public boolean IsValidName(java.lang.String name) throws Throwable;
+
+    public java.lang.String CreateName(IContainer container, NetType dataType) throws Throwable;
 
     public void ValidateName(java.lang.String name) throws Throwable;
 

@@ -139,12 +139,11 @@ public class InputLanguageChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public InputLanguage getInputLanguage() throws Throwable {
+    public byte getCharSet() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("InputLanguage");
-            return new InputLanguage(val);
+            return (byte)classInstance.Get("CharSet");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,11 +160,12 @@ public class InputLanguageChangedEventArgs extends NetObject  {
         }
     }
 
-    public byte getCharSet() throws Throwable {
+    public InputLanguage getInputLanguage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (byte)classInstance.Get("CharSet");
+            JCObject val = (JCObject)classInstance.Get("InputLanguage");
+            return new InputLanguage(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

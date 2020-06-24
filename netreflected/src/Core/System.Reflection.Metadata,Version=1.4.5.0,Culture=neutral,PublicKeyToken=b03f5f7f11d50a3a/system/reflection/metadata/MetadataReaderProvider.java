@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.MetadataReaderProvider;
-import system.io.Stream;
-import system.reflection.metadata.MetadataStreamOptions;
 import system.reflection.metadata.MetadataReader;
 import system.reflection.metadata.MetadataReaderOptions;
 import system.reflection.metadata.MetadataStringDecoder;
+import system.reflection.metadata.MetadataReaderProvider;
+import system.io.Stream;
+import system.reflection.metadata.MetadataStreamOptions;
 
 
 /**
@@ -118,12 +118,12 @@ public class MetadataReaderProvider extends NetObject  {
     
     // Methods section
     
-    public static MetadataReaderProvider FromPortablePdbStream(Stream stream, MetadataStreamOptions options, int size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.io.IOException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public MetadataReader GetMetadataReader(MetadataReaderOptions options, MetadataStringDecoder utf8Decoder) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.BadImageFormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFromPortablePdbStream = (JCObject)classType.Invoke("FromPortablePdbStream", stream == null ? null : stream.getJCOInstance(), options == null ? null : options.getJCOInstance(), size);
-            return new MetadataReaderProvider(objFromPortablePdbStream);
+            JCObject objGetMetadataReader = (JCObject)classInstance.Invoke("GetMetadataReader", options == null ? null : options.getJCOInstance(), utf8Decoder == null ? null : utf8Decoder.getJCOInstance());
+            return new MetadataReader(objGetMetadataReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -140,22 +140,22 @@ public class MetadataReaderProvider extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MetadataReaderProvider FromPortablePdbStream(Stream stream, MetadataStreamOptions options, int size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.io.IOException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("Dispose");
+            JCObject objFromPortablePdbStream = (JCObject)classType.Invoke("FromPortablePdbStream", stream == null ? null : stream.getJCOInstance(), options == null ? null : options.getJCOInstance(), size);
+            return new MetadataReaderProvider(objFromPortablePdbStream);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MetadataReader GetMetadataReader(MetadataReaderOptions options, MetadataStringDecoder utf8Decoder) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.BadImageFormatException, system.ArrayTypeMismatchException {
+    public void Dispose() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetMetadataReader = (JCObject)classInstance.Invoke("GetMetadataReader", options == null ? null : options.getJCOInstance(), utf8Decoder == null ? null : utf8Decoder.getJCOInstance());
-            return new MetadataReader(objGetMetadataReader);
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

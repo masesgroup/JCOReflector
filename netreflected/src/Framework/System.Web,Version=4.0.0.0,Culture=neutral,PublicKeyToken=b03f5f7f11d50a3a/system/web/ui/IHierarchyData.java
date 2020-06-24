@@ -103,9 +103,9 @@ public interface IHierarchyData extends IJCOBridgeReflected {
     
     public boolean getHasChildren() throws Throwable;
 
-    public java.lang.String getPath() throws Throwable;
-
     public NetObject getItem() throws Throwable;
+
+    public java.lang.String getPath() throws Throwable;
 
     public java.lang.String getType() throws Throwable;
 

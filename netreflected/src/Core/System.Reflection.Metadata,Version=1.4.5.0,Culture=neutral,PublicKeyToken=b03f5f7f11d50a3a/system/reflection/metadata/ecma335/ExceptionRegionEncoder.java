@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.ecma335.ExceptionRegionEncoder;
-import system.reflection.metadata.EntityHandle;
 import system.reflection.metadata.ExceptionRegionKind;
+import system.reflection.metadata.EntityHandle;
 import system.reflection.metadata.BlobBuilder;
 
 
@@ -116,16 +116,6 @@ public class ExceptionRegionEncoder extends NetObject  {
     
     // Methods section
     
-    public static boolean IsSmallRegionCount(int exceptionRegionCount) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsSmallRegionCount", exceptionRegionCount);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean IsSmallExceptionRegion(int startOffset, int length) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -136,45 +126,11 @@ public class ExceptionRegionEncoder extends NetObject  {
         }
     }
 
-    public ExceptionRegionEncoder AddFinally(int tryOffset, int tryLength, int handlerOffset, int handlerLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean IsSmallRegionCount(int exceptionRegionCount) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAddFinally = (JCObject)classInstance.Invoke("AddFinally", tryOffset, tryLength, handlerOffset, handlerLength);
-            return new ExceptionRegionEncoder(objAddFinally);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ExceptionRegionEncoder AddFault(int tryOffset, int tryLength, int handlerOffset, int handlerLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddFault = (JCObject)classInstance.Invoke("AddFault", tryOffset, tryLength, handlerOffset, handlerLength);
-            return new ExceptionRegionEncoder(objAddFault);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ExceptionRegionEncoder AddCatch(int tryOffset, int tryLength, int handlerOffset, int handlerLength, EntityHandle catchType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddCatch = (JCObject)classInstance.Invoke("AddCatch", tryOffset, tryLength, handlerOffset, handlerLength, catchType == null ? null : catchType.getJCOInstance());
-            return new ExceptionRegionEncoder(objAddCatch);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ExceptionRegionEncoder AddFilter(int tryOffset, int tryLength, int handlerOffset, int handlerLength, int filterOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddFilter = (JCObject)classInstance.Invoke("AddFilter", tryOffset, tryLength, handlerOffset, handlerLength, filterOffset);
-            return new ExceptionRegionEncoder(objAddFilter);
+            return (boolean)classType.Invoke("IsSmallRegionCount", exceptionRegionCount);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,26 +147,70 @@ public class ExceptionRegionEncoder extends NetObject  {
         }
     }
 
+    public ExceptionRegionEncoder AddCatch(int tryOffset, int tryLength, int handlerOffset, int handlerLength, EntityHandle catchType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddCatch = (JCObject)classInstance.Invoke("AddCatch", tryOffset, tryLength, handlerOffset, handlerLength, catchType == null ? null : catchType.getJCOInstance());
+            return new ExceptionRegionEncoder(objAddCatch);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ExceptionRegionEncoder AddFault(int tryOffset, int tryLength, int handlerOffset, int handlerLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddFault = (JCObject)classInstance.Invoke("AddFault", tryOffset, tryLength, handlerOffset, handlerLength);
+            return new ExceptionRegionEncoder(objAddFault);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ExceptionRegionEncoder AddFilter(int tryOffset, int tryLength, int handlerOffset, int handlerLength, int filterOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddFilter = (JCObject)classInstance.Invoke("AddFilter", tryOffset, tryLength, handlerOffset, handlerLength, filterOffset);
+            return new ExceptionRegionEncoder(objAddFilter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ExceptionRegionEncoder AddFinally(int tryOffset, int tryLength, int handlerOffset, int handlerLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddFinally = (JCObject)classInstance.Invoke("AddFinally", tryOffset, tryLength, handlerOffset, handlerLength);
+            return new ExceptionRegionEncoder(objAddFinally);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public boolean getHasSmallFormat() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("HasSmallFormat");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Builder");
             return new BlobBuilder(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getHasSmallFormat() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("HasSmallFormat");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

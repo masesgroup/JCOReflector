@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.xsl.runtime.XmlQueryRuntime;
 import system.xml.xsl.runtime.SetIteratorResult;
 import system.xml.xpath.XPathNavigator;
+import system.xml.xsl.runtime.XmlQueryRuntime;
 
 
 /**
@@ -115,22 +115,22 @@ public class DifferenceIterator extends NetObject  {
     
     // Methods section
     
-    public void Create(XmlQueryRuntime runtime) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Create", runtime == null ? null : runtime.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SetIteratorResult MoveNext(XPathNavigator nestedNavigator) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objMoveNext = (JCObject)classInstance.Invoke("MoveNext", nestedNavigator == null ? null : nestedNavigator.getJCOInstance());
             return new SetIteratorResult(objMoveNext);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Create(XmlQueryRuntime runtime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Create", runtime == null ? null : runtime.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

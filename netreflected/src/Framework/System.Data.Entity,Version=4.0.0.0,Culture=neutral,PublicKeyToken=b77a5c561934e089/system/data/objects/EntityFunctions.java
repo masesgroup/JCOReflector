@@ -112,21 +112,21 @@ public class EntityFunctions extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String AsUnicode(java.lang.String value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("AsUnicode", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static java.lang.String AsNonUnicode(java.lang.String value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Invoke("AsNonUnicode", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String AsUnicode(java.lang.String value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("AsUnicode", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

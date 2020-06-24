@@ -40,13 +40,13 @@ import java.util.ArrayList;
 // Import section
 import system.Uri;
 import system.DateTimeOffset;
-import system.servicemodel.syndication.SyndicationFeed;
-import system.xml.XmlReader;
 import system.servicemodel.syndication.Atom10FeedFormatter;
 import system.servicemodel.syndication.Rss20FeedFormatter;
+import system.servicemodel.syndication.SyndicationFeed;
+import system.xml.XmlReader;
 import system.xml.XmlWriter;
-import system.servicemodel.syndication.TextSyndicationContent;
 import system.servicemodel.syndication.SyndicationElementExtensionCollection;
+import system.servicemodel.syndication.TextSyndicationContent;
 
 
 /**
@@ -152,28 +152,6 @@ public class SyndicationFeed extends NetObject  {
     
     // Methods section
     
-    public static SyndicationFeed Load(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", reader == null ? null : reader.getJCOInstance());
-            return new SyndicationFeed(objLoad);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SyndicationFeed Clone(boolean cloneItems) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone", cloneItems);
-            return new SyndicationFeed(objClone);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Atom10FeedFormatter GetAtom10Formatter() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -207,6 +185,28 @@ public class SyndicationFeed extends NetObject  {
         }
     }
 
+    public SyndicationFeed Clone(boolean cloneItems) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objClone = (JCObject)classInstance.Invoke("Clone", cloneItems);
+            return new SyndicationFeed(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SyndicationFeed Load(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLoad = (JCObject)classType.Invoke("Load", reader == null ? null : reader.getJCOInstance());
+            return new SyndicationFeed(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SaveAsAtom10(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -231,22 +231,33 @@ public class SyndicationFeed extends NetObject  {
     
     // Properties section
     
-    public Uri getBaseUri() throws Throwable {
+    public DateTimeOffset getLastUpdatedTime() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseUri");
-            return new Uri(val);
+            JCObject val = (JCObject)classInstance.Get("LastUpdatedTime");
+            return new DateTimeOffset(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setBaseUri(Uri BaseUri) throws Throwable {
+    public void setLastUpdatedTime(DateTimeOffset LastUpdatedTime) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
+            classInstance.Set("LastUpdatedTime", LastUpdatedTime == null ? null : LastUpdatedTime.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SyndicationElementExtensionCollection getElementExtensions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ElementExtensions");
+            return new SyndicationElementExtensionCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,12 +305,22 @@ public class SyndicationFeed extends NetObject  {
         }
     }
 
-    public SyndicationElementExtensionCollection getElementExtensions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotSupportedException {
+    public TextSyndicationContent getTitle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ElementExtensions");
-            return new SyndicationElementExtensionCollection(val);
+            JCObject val = (JCObject)classInstance.Get("Title");
+            return new TextSyndicationContent(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTitle(TextSyndicationContent Title) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Title", Title == null ? null : Title.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,27 +366,6 @@ public class SyndicationFeed extends NetObject  {
         }
     }
 
-    public Uri getImageUrl() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ImageUrl");
-            return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setImageUrl(Uri ImageUrl) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ImageUrl", ImageUrl == null ? null : ImageUrl.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getLanguage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -386,43 +386,43 @@ public class SyndicationFeed extends NetObject  {
         }
     }
 
-    public DateTimeOffset getLastUpdatedTime() throws Throwable {
+    public Uri getBaseUri() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("LastUpdatedTime");
-            return new DateTimeOffset(val);
+            JCObject val = (JCObject)classInstance.Get("BaseUri");
+            return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setLastUpdatedTime(DateTimeOffset LastUpdatedTime) throws Throwable {
+    public void setBaseUri(Uri BaseUri) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("LastUpdatedTime", LastUpdatedTime == null ? null : LastUpdatedTime.getJCOInstance());
+            classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TextSyndicationContent getTitle() throws Throwable {
+    public Uri getImageUrl() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Title");
-            return new TextSyndicationContent(val);
+            JCObject val = (JCObject)classInstance.Get("ImageUrl");
+            return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTitle(TextSyndicationContent Title) throws Throwable {
+    public void setImageUrl(Uri ImageUrl) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Title", Title == null ? null : Title.getJCOInstance());
+            classInstance.Set("ImageUrl", ImageUrl == null ? null : ImageUrl.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -48,13 +48,13 @@ import system.web.ui.DataSourceViewSelectCallback;
 import system.web.ui.ConflictOptions;
 import system.web.ui.webcontrols.ParameterCollection;
 import system.web.ui.webcontrols.ParsingCulture;
-import system.web.ui.webcontrols.ObjectDataSourceStatusEventHandler;
-import system.web.ui.webcontrols.ObjectDataSourceMethodEventHandler;
-import system.web.ui.webcontrols.ObjectDataSourceFilteringEventHandler;
-import system.web.ui.webcontrols.ObjectDataSourceObjectEventHandler;
-import system.web.ui.webcontrols.ObjectDataSourceDisposingEventHandler;
-import system.web.ui.webcontrols.ObjectDataSourceSelectingEventHandler;
 import system.EventHandler;
+import system.web.ui.webcontrols.ObjectDataSourceDisposingEventHandler;
+import system.web.ui.webcontrols.ObjectDataSourceFilteringEventHandler;
+import system.web.ui.webcontrols.ObjectDataSourceMethodEventHandler;
+import system.web.ui.webcontrols.ObjectDataSourceObjectEventHandler;
+import system.web.ui.webcontrols.ObjectDataSourceSelectingEventHandler;
+import system.web.ui.webcontrols.ObjectDataSourceStatusEventHandler;
 
 
 /**
@@ -140,6 +140,16 @@ public class ObjectDataSourceView extends NetObject  {
     
     // Methods section
     
+    public boolean CanExecute(java.lang.String commandName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("CanExecute", commandName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int Delete(IDictionary keys, IDictionary oldValues) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -160,17 +170,6 @@ public class ObjectDataSourceView extends NetObject  {
         }
     }
 
-    public IEnumerable Select(DataSourceSelectArguments arguments) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSelect = (JCObject)classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance());
-            return new IEnumerableImplementation(objSelect);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int Update(IDictionary keys, IDictionary values, IDictionary oldValues) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -181,11 +180,12 @@ public class ObjectDataSourceView extends NetObject  {
         }
     }
 
-    public boolean CanExecute(java.lang.String commandName) throws Throwable {
+    public IEnumerable Select(DataSourceSelectArguments arguments) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("CanExecute", commandName);
+            JCObject objSelect = (JCObject)classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance());
+            return new IEnumerableImplementation(objSelect);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,27 +305,6 @@ public class ObjectDataSourceView extends NetObject  {
         }
     }
 
-    public ConflictOptions getConflictDetection() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ConflictDetection");
-            return new ConflictOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setConflictDetection(ConflictOptions ConflictDetection) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ConflictDetection", ConflictDetection == null ? null : ConflictDetection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getConvertNullToDBNull() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -341,6 +320,26 @@ public class ObjectDataSourceView extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConvertNullToDBNull", ConvertNullToDBNull);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getEnablePaging() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("EnablePaging");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEnablePaging(boolean EnablePaging) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("EnablePaging", EnablePaging);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,37 +385,6 @@ public class ObjectDataSourceView extends NetObject  {
         }
     }
 
-    public ParameterCollection getDeleteParameters() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DeleteParameters");
-            return new ParameterCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getEnablePaging() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("EnablePaging");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEnablePaging(boolean EnablePaging) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EnablePaging", EnablePaging);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getFilterExpression() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -432,17 +400,6 @@ public class ObjectDataSourceView extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FilterExpression", FilterExpression);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ParameterCollection getFilterParameters() throws Throwable, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("FilterParameters");
-            return new ParameterCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,17 +425,6 @@ public class ObjectDataSourceView extends NetObject  {
         }
     }
 
-    public ParameterCollection getInsertParameters() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InsertParameters");
-            return new ParameterCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getMaximumRowsParameterName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -494,6 +440,16 @@ public class ObjectDataSourceView extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumRowsParameterName", MaximumRowsParameterName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -554,17 +510,6 @@ public class ObjectDataSourceView extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectMethod", SelectMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ParameterCollection getSelectParameters() throws Throwable, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SelectParameters");
-            return new ParameterCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -650,6 +595,71 @@ public class ObjectDataSourceView extends NetObject  {
         }
     }
 
+    public ConflictOptions getConflictDetection() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ConflictDetection");
+            return new ConflictOptions(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setConflictDetection(ConflictOptions ConflictDetection) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ConflictDetection", ConflictDetection == null ? null : ConflictDetection.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ParameterCollection getDeleteParameters() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DeleteParameters");
+            return new ParameterCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ParameterCollection getFilterParameters() throws Throwable, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("FilterParameters");
+            return new ParameterCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ParameterCollection getInsertParameters() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("InsertParameters");
+            return new ParameterCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ParameterCollection getSelectParameters() throws Throwable, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SelectParameters");
+            return new ParameterCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ParameterCollection getUpdateParameters() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -682,56 +692,46 @@ public class ObjectDataSourceView extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section
     
 
-    public void addDeleted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
+    public void addDataSourceViewChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("Deleted", handler);
+            classInstance.RegisterEventListener("DataSourceViewChanged", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeDeleted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
+    public void removeDataSourceViewChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("Deleted", handler);
+            classInstance.UnregisterEventListener("DataSourceViewChanged", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void addDeleting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
+    public void addObjectDisposing(ObjectDataSourceDisposingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("Deleting", handler);
+            classInstance.RegisterEventListener("ObjectDisposing", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeDeleting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
+    public void removeObjectDisposing(ObjectDataSourceDisposingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("Deleting", handler);
+            classInstance.UnregisterEventListener("ObjectDisposing", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -757,21 +757,21 @@ public class ObjectDataSourceView extends NetObject  {
         }
     }
 
-    public void addInserted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
+    public void addDeleting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("Inserted", handler);
+            classInstance.RegisterEventListener("Deleting", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeInserted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
+    public void removeDeleting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("Inserted", handler);
+            classInstance.UnregisterEventListener("Deleting", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -792,6 +792,26 @@ public class ObjectDataSourceView extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Inserting", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addUpdating(ObjectDataSourceMethodEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Updating", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeUpdating(ObjectDataSourceMethodEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Updating", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -837,21 +857,61 @@ public class ObjectDataSourceView extends NetObject  {
         }
     }
 
-    public void addObjectDisposing(ObjectDataSourceDisposingEventHandler handler) throws Throwable {
+    public void addSelecting(ObjectDataSourceSelectingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("ObjectDisposing", handler);
+            classInstance.RegisterEventListener("Selecting", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeObjectDisposing(ObjectDataSourceDisposingEventHandler handler) throws Throwable {
+    public void removeSelecting(ObjectDataSourceSelectingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("ObjectDisposing", handler);
+            classInstance.UnregisterEventListener("Selecting", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addDeleted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Deleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeDeleted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Deleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addInserted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Inserted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeInserted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Inserted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -877,26 +937,6 @@ public class ObjectDataSourceView extends NetObject  {
         }
     }
 
-    public void addSelecting(ObjectDataSourceSelectingEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Selecting", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeSelecting(ObjectDataSourceSelectingEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Selecting", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void addUpdated(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -912,46 +952,6 @@ public class ObjectDataSourceView extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Updated", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addUpdating(ObjectDataSourceMethodEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Updating", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeUpdating(ObjectDataSourceMethodEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Updating", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addDataSourceViewChanged(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("DataSourceViewChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeDataSourceViewChanged(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("DataSourceViewChanged", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.interopservices.ExporterEventKind;
 import system.reflection.Assembly;
+import system.runtime.interopservices.ExporterEventKind;
 
 
 /**
@@ -105,22 +105,22 @@ public class ITypeLibExporterNotifySinkImplementation extends NetObject implemen
 
     // Methods section
     
-    public void ReportEvent(ExporterEventKind eventKind, int eventCode, java.lang.String eventMsg) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReportEvent", eventKind == null ? null : eventKind.getJCOInstance(), eventCode, eventMsg);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject ResolveRef(Assembly assembly) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objResolveRef = (JCObject)classInstance.Invoke("ResolveRef", assembly == null ? null : assembly.getJCOInstance());
             return new NetObject(objResolveRef);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReportEvent(ExporterEventKind eventKind, int eventCode, java.lang.String eventMsg) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReportEvent", eventKind == null ? null : eventKind.getJCOInstance(), eventCode, eventMsg);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

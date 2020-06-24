@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import microsoft.jscript.Context;
-import microsoft.jscript.ScriptBlock;
 import microsoft.jscript.Block;
+import microsoft.jscript.ScriptBlock;
 
 
 /**
@@ -126,23 +126,23 @@ public class JSParser extends NetObject  {
     
     // Methods section
     
-    public ScriptBlock Parse() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.EndOfFile, microsoft.jscript.vsa.JSVsaException, system.NullReferenceException, system.ArithmeticException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objParse = (JCObject)classInstance.Invoke("Parse");
-            return new ScriptBlock(objParse);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Block ParseEvalBody() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.EndOfFile, microsoft.jscript.vsa.JSVsaException, system.NullReferenceException, system.ArithmeticException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objParseEvalBody = (JCObject)classInstance.Invoke("ParseEvalBody");
             return new Block(objParseEvalBody);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ScriptBlock Parse() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.EndOfFile, microsoft.jscript.vsa.JSVsaException, system.NullReferenceException, system.ArithmeticException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objParse = (JCObject)classInstance.Invoke("Parse");
+            return new ScriptBlock(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

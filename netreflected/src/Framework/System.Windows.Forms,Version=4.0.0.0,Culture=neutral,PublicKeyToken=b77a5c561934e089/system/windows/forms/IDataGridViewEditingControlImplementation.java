@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.forms.DataGridViewCellStyle;
 import system.windows.forms.Keys;
 import system.windows.forms.DataGridViewDataErrorContexts;
-import system.windows.forms.DataGridView;
+import system.windows.forms.DataGridViewCellStyle;
 import system.windows.forms.Cursor;
+import system.windows.forms.DataGridView;
 
 
 /**
@@ -108,16 +108,6 @@ public class IDataGridViewEditingControlImplementation extends NetObject impleme
 
     // Methods section
     
-    public void ApplyCellStyleToEditingControl(DataGridViewCellStyle dataGridViewCellStyle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ApplyCellStyleToEditingControl", dataGridViewCellStyle == null ? null : dataGridViewCellStyle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean EditingControlWantsInputKey(Keys keyData, boolean dataGridViewWantsInputKey) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -139,6 +129,16 @@ public class IDataGridViewEditingControlImplementation extends NetObject impleme
         }
     }
 
+    public void ApplyCellStyleToEditingControl(DataGridViewCellStyle dataGridViewCellStyle) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ApplyCellStyleToEditingControl", dataGridViewCellStyle == null ? null : dataGridViewCellStyle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void PrepareEditingControlForEdit(boolean selectAll) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -153,22 +153,51 @@ public class IDataGridViewEditingControlImplementation extends NetObject impleme
     
     // Properties section
     
-    public DataGridView getEditingControlDataGridView() throws Throwable {
+    public boolean getEditingControlValueChanged() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EditingControlDataGridView");
-            return new DataGridView(val);
+            return (boolean)classInstance.Get("EditingControlValueChanged");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEditingControlDataGridView(DataGridView EditingControlDataGridView) throws Throwable {
+    public void setEditingControlValueChanged(boolean EditingControlValueChanged) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("EditingControlDataGridView", EditingControlDataGridView == null ? null : EditingControlDataGridView.getJCOInstance());
+            classInstance.Set("EditingControlValueChanged", EditingControlValueChanged);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getRepositionEditingControlOnValueChange() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("RepositionEditingControlOnValueChange");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getEditingControlRowIndex() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("EditingControlRowIndex");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEditingControlRowIndex(int EditingControlRowIndex) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("EditingControlRowIndex", EditingControlRowIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,46 +224,6 @@ public class IDataGridViewEditingControlImplementation extends NetObject impleme
         }
     }
 
-    public int getEditingControlRowIndex() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("EditingControlRowIndex");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEditingControlRowIndex(int EditingControlRowIndex) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EditingControlRowIndex", EditingControlRowIndex);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getEditingControlValueChanged() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("EditingControlValueChanged");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEditingControlValueChanged(boolean EditingControlValueChanged) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EditingControlValueChanged", EditingControlValueChanged);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Cursor getEditingPanelCursor() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -246,11 +235,22 @@ public class IDataGridViewEditingControlImplementation extends NetObject impleme
         }
     }
 
-    public boolean getRepositionEditingControlOnValueChange() throws Throwable {
+    public DataGridView getEditingControlDataGridView() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("RepositionEditingControlOnValueChange");
+            JCObject val = (JCObject)classInstance.Get("EditingControlDataGridView");
+            return new DataGridView(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEditingControlDataGridView(DataGridView EditingControlDataGridView) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("EditingControlDataGridView", EditingControlDataGridView == null ? null : EditingControlDataGridView.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

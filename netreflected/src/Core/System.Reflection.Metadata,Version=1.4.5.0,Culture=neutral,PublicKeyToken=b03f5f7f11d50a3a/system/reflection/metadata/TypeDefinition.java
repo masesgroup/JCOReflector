@@ -38,21 +38,21 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.TypeLayout;
-import system.reflection.metadata.TypeDefinitionHandle;
-import system.reflection.metadata.GenericParameterHandleCollection;
-import system.reflection.metadata.MethodDefinitionHandleCollection;
-import system.reflection.metadata.FieldDefinitionHandleCollection;
-import system.reflection.metadata.PropertyDefinitionHandleCollection;
-import system.reflection.metadata.EventDefinitionHandleCollection;
-import system.reflection.metadata.MethodImplementationHandleCollection;
-import system.reflection.metadata.InterfaceImplementationHandleCollection;
 import system.reflection.metadata.CustomAttributeHandleCollection;
 import system.reflection.metadata.DeclarativeSecurityAttributeHandleCollection;
-import system.reflection.TypeAttributes;
-import system.reflection.metadata.StringHandle;
-import system.reflection.metadata.NamespaceDefinitionHandle;
+import system.reflection.metadata.EventDefinitionHandleCollection;
+import system.reflection.metadata.FieldDefinitionHandleCollection;
+import system.reflection.metadata.GenericParameterHandleCollection;
+import system.reflection.metadata.InterfaceImplementationHandleCollection;
+import system.reflection.metadata.MethodDefinitionHandleCollection;
+import system.reflection.metadata.MethodImplementationHandleCollection;
+import system.reflection.metadata.PropertyDefinitionHandleCollection;
+import system.reflection.metadata.TypeDefinitionHandle;
+import system.reflection.metadata.TypeLayout;
 import system.reflection.metadata.EntityHandle;
+import system.reflection.metadata.NamespaceDefinitionHandle;
+import system.reflection.metadata.StringHandle;
+import system.reflection.TypeAttributes;
 
 
 /**
@@ -127,105 +127,6 @@ public class TypeDefinition extends NetObject  {
     
     // Methods section
     
-    public TypeLayout GetLayout() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLayout = (JCObject)classInstance.Invoke("GetLayout");
-            return new TypeLayout(objGetLayout);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeDefinitionHandle GetDeclaringType() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDeclaringType = (JCObject)classInstance.Invoke("GetDeclaringType");
-            return new TypeDefinitionHandle(objGetDeclaringType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public GenericParameterHandleCollection GetGenericParameters() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetGenericParameters = (JCObject)classInstance.Invoke("GetGenericParameters");
-            return new GenericParameterHandleCollection(objGetGenericParameters);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodDefinitionHandleCollection GetMethods() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMethods = (JCObject)classInstance.Invoke("GetMethods");
-            return new MethodDefinitionHandleCollection(objGetMethods);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FieldDefinitionHandleCollection GetFields() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetFields = (JCObject)classInstance.Invoke("GetFields");
-            return new FieldDefinitionHandleCollection(objGetFields);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyDefinitionHandleCollection GetProperties() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties");
-            return new PropertyDefinitionHandleCollection(objGetProperties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EventDefinitionHandleCollection GetEvents() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents");
-            return new EventDefinitionHandleCollection(objGetEvents);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodImplementationHandleCollection GetMethodImplementations() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMethodImplementations = (JCObject)classInstance.Invoke("GetMethodImplementations");
-            return new MethodImplementationHandleCollection(objGetMethodImplementations);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public InterfaceImplementationHandleCollection GetInterfaceImplementations() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetInterfaceImplementations = (JCObject)classInstance.Invoke("GetInterfaceImplementations");
-            return new InterfaceImplementationHandleCollection(objGetInterfaceImplementations);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CustomAttributeHandleCollection GetCustomAttributes() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -248,26 +149,136 @@ public class TypeDefinition extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public TypeAttributes getAttributes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
+    public EventDefinitionHandleCollection GetEvents() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new TypeAttributes(val);
+            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents");
+            return new EventDefinitionHandleCollection(objGetEvents);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public FieldDefinitionHandleCollection GetFields() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetFields = (JCObject)classInstance.Invoke("GetFields");
+            return new FieldDefinitionHandleCollection(objGetFields);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public GenericParameterHandleCollection GetGenericParameters() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetGenericParameters = (JCObject)classInstance.Invoke("GetGenericParameters");
+            return new GenericParameterHandleCollection(objGetGenericParameters);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InterfaceImplementationHandleCollection GetInterfaceImplementations() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetInterfaceImplementations = (JCObject)classInstance.Invoke("GetInterfaceImplementations");
+            return new InterfaceImplementationHandleCollection(objGetInterfaceImplementations);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodDefinitionHandleCollection GetMethods() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetMethods = (JCObject)classInstance.Invoke("GetMethods");
+            return new MethodDefinitionHandleCollection(objGetMethods);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodImplementationHandleCollection GetMethodImplementations() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetMethodImplementations = (JCObject)classInstance.Invoke("GetMethodImplementations");
+            return new MethodImplementationHandleCollection(objGetMethodImplementations);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyDefinitionHandleCollection GetProperties() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties");
+            return new PropertyDefinitionHandleCollection(objGetProperties);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeDefinitionHandle GetDeclaringType() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDeclaringType = (JCObject)classInstance.Invoke("GetDeclaringType");
+            return new TypeDefinitionHandle(objGetDeclaringType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeLayout GetLayout() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetLayout = (JCObject)classInstance.Invoke("GetLayout");
+            return new TypeLayout(objGetLayout);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+
+    
+    // Properties section
+    
     public boolean getIsNested() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsNested");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EntityHandle getBaseType() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("BaseType");
+            return new EntityHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NamespaceDefinitionHandle getNamespaceDefinition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NamespaceDefinition");
+            return new NamespaceDefinitionHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,23 +306,12 @@ public class TypeDefinition extends NetObject  {
         }
     }
 
-    public NamespaceDefinitionHandle getNamespaceDefinition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public TypeAttributes getAttributes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NamespaceDefinition");
-            return new NamespaceDefinitionHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EntityHandle getBaseType() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BaseType");
-            return new EntityHandle(val);
+            JCObject val = (JCObject)classInstance.Get("Attributes");
+            return new TypeAttributes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

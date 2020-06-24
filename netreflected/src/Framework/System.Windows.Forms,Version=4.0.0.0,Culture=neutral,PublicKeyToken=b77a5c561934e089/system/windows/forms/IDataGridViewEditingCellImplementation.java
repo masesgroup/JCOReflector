@@ -129,6 +129,26 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
     
     // Properties section
     
+    public boolean getEditingCellValueChanged() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("EditingCellValueChanged");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEditingCellValueChanged(boolean EditingCellValueChanged) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("EditingCellValueChanged", EditingCellValueChanged);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject getEditingCellFormattedValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,26 +165,6 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditingCellFormattedValue", EditingCellFormattedValue == null ? null : EditingCellFormattedValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getEditingCellValueChanged() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("EditingCellValueChanged");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEditingCellValueChanged(boolean EditingCellValueChanged) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EditingCellValueChanged", EditingCellValueChanged);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

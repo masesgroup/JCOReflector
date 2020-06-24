@@ -128,21 +128,22 @@ public class VsaItems extends NetObject  {
     
     // Methods section
     
-    public void Close() throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentException {
+    public IJSVsaItem CreateItem(java.lang.String name, JSVsaItemType itemType, JSVsaItemFlag itemFlag) throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Close");
+            JCObject objCreateItem = (JCObject)classInstance.Invoke("CreateItem", name, itemType == null ? null : itemType.getJCOInstance(), itemFlag == null ? null : itemFlag.getJCOInstance());
+            return new IJSVsaItemImplementation(objCreateItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Remove(java.lang.String itemName) throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+    public void Close() throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Remove", itemName);
+            classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,12 +159,11 @@ public class VsaItems extends NetObject  {
         }
     }
 
-    public IJSVsaItem CreateItem(java.lang.String name, JSVsaItemType itemType, JSVsaItemFlag itemFlag) throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+    public void Remove(java.lang.String itemName) throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateItem = (JCObject)classInstance.Invoke("CreateItem", name, itemType == null ? null : itemType.getJCOInstance(), itemFlag == null ? null : itemFlag.getJCOInstance());
-            return new IJSVsaItemImplementation(objCreateItem);
+            classInstance.Invoke("Remove", itemName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.selectors.SecurityTokenResolver;
-import system.identitymodel.tokens.SecurityToken;
-import system.identitymodel.tokens.SecurityKeyIdentifier;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
+import system.identitymodel.tokens.SecurityKeyIdentifier;
 import system.identitymodel.tokens.SecurityKey;
+import system.identitymodel.tokens.SecurityToken;
 import system.xml.XmlNodeList;
 
 
@@ -139,6 +139,17 @@ public class IssuerTokenResolver extends NetObject  {
     
     // Methods section
     
+    public SecurityKey ResolveSecurityKey(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveSecurityKey = (JCObject)classInstance.Invoke("ResolveSecurityKey", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return new SecurityKey(objResolveSecurityKey);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityToken ResolveToken(SecurityKeyIdentifier keyIdentifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -156,17 +167,6 @@ public class IssuerTokenResolver extends NetObject  {
         try {
             JCObject objResolveToken = (JCObject)classInstance.Invoke("ResolveToken", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
             return new SecurityToken(objResolveToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityKey ResolveSecurityKey(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveSecurityKey = (JCObject)classInstance.Invoke("ResolveSecurityKey", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
-            return new SecurityKey(objResolveSecurityKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

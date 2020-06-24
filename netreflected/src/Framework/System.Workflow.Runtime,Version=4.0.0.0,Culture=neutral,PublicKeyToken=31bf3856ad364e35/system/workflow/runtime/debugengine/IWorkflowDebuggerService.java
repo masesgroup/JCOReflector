@@ -89,6 +89,8 @@ public interface IWorkflowDebuggerService extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void NotifyHandlerInvoked() throws Throwable;
+
 
     
     // Properties section

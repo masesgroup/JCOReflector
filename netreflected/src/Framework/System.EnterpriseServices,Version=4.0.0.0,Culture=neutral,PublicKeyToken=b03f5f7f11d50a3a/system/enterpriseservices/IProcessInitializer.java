@@ -89,9 +89,9 @@ public interface IProcessInitializer extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Startup(NetObject punkProcessControl) throws Throwable;
-
     public void Shutdown() throws Throwable;
+
+    public void Startup(NetObject punkProcessControl) throws Throwable;
 
 
     

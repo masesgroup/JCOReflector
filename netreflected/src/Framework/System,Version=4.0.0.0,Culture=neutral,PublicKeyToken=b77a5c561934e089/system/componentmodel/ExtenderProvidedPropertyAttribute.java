@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.IExtenderProvider;
 import system.componentmodel.IExtenderProviderImplementation;
+import system.componentmodel.PropertyDescriptor;
 
 
 /**
@@ -150,17 +150,6 @@ public class ExtenderProvidedPropertyAttribute extends NetObject  {
     
     // Properties section
     
-    public PropertyDescriptor getExtenderProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExtenderProperty");
-            return new PropertyDescriptor(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IExtenderProvider getProvider() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -172,12 +161,12 @@ public class ExtenderProvidedPropertyAttribute extends NetObject  {
         }
     }
 
-    public NetType getReceiverType() throws Throwable {
+    public PropertyDescriptor getExtenderProperty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ReceiverType");
-            return new NetType(val);
+            JCObject val = (JCObject)classInstance.Get("ExtenderProperty");
+            return new PropertyDescriptor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,6 +178,17 @@ public class ExtenderProvidedPropertyAttribute extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("TypeId");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType getReceiverType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ReceiverType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

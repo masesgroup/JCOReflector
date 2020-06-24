@@ -117,17 +117,6 @@ public class PublicKeyInfo extends NetObject  {
     
     // Properties section
     
-    public AlgorithmIdentifier getAlgorithm() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Algorithm");
-            return new AlgorithmIdentifier(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] getKeyValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -142,6 +131,17 @@ public class PublicKeyInfo extends NetObject  {
 				resultingArray[indexKeyValue] = (byte)resultingArrayList.get(indexKeyValue);
 			}
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AlgorithmIdentifier getAlgorithm() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Algorithm");
+            return new AlgorithmIdentifier(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

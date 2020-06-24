@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.workflow.componentmodel.Activity;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
-import system.workflow.componentmodel.Activity;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 
@@ -148,12 +148,12 @@ public class ActivityBind extends NetObject  {
     
     // Methods section
     
-    public NetObject ProvideValue(IServiceProvider provider) throws Throwable {
+    public NetObject GetRuntimeValue(Activity activity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objProvideValue = (JCObject)classInstance.Invoke("ProvideValue", provider == null ? null : provider.getJCOInstance());
-            return new NetObject(objProvideValue);
+            JCObject objGetRuntimeValue = (JCObject)classInstance.Invoke("GetRuntimeValue", activity == null ? null : activity.getJCOInstance());
+            return new NetObject(objGetRuntimeValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,12 +170,12 @@ public class ActivityBind extends NetObject  {
         }
     }
 
-    public NetObject GetRuntimeValue(Activity activity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.NotImplementedException {
+    public NetObject ProvideValue(IServiceProvider provider) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetRuntimeValue = (JCObject)classInstance.Invoke("GetRuntimeValue", activity == null ? null : activity.getJCOInstance());
-            return new NetObject(objGetRuntimeValue);
+            JCObject objProvideValue = (JCObject)classInstance.Invoke("ProvideValue", provider == null ? null : provider.getJCOInstance());
+            return new NetObject(objProvideValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

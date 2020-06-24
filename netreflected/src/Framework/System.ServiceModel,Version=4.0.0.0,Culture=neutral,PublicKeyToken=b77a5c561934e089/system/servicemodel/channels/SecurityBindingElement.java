@@ -38,20 +38,20 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.channels.SecurityBindingElement;
 import system.servicemodel.channels.AsymmetricSecurityBindingElement;
 import system.servicemodel.MessageSecurityVersion;
+import system.servicemodel.channels.BindingElement;
+import system.servicemodel.channels.SecurityBindingElement;
+import system.servicemodel.security.ChannelProtectionRequirements;
 import system.servicemodel.channels.SymmetricSecurityBindingElement;
 import system.servicemodel.security.tokens.IssuedSecurityTokenParameters;
 import system.servicemodel.channels.TransportSecurityBindingElement;
-import system.servicemodel.security.ChannelProtectionRequirements;
-import system.servicemodel.channels.BindingElement;
-import system.servicemodel.security.tokens.SupportingTokenParameters;
-import system.servicemodel.channels.SecurityHeaderLayout;
-import system.servicemodel.security.SecurityAlgorithmSuite;
 import system.servicemodel.channels.LocalClientSecuritySettings;
 import system.servicemodel.channels.LocalServiceSecuritySettings;
+import system.servicemodel.channels.SecurityHeaderLayout;
+import system.servicemodel.security.SecurityAlgorithmSuite;
 import system.servicemodel.security.SecurityKeyEntropyMode;
+import system.servicemodel.security.tokens.SupportingTokenParameters;
 
 
 /**
@@ -126,55 +126,12 @@ public class SecurityBindingElement extends NetObject  {
     
     // Methods section
     
-    public void SetKeyDerivation(boolean requireDerivedKeys) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetKeyDerivation", requireDerivedKeys);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SecurityBindingElement CreateMutualCertificateBindingElement() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateMutualCertificateBindingElement = (JCObject)classType.Invoke("CreateMutualCertificateBindingElement");
-            return new SecurityBindingElement(objCreateMutualCertificateBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static AsymmetricSecurityBindingElement CreateCertificateSignatureBindingElement() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateCertificateSignatureBindingElement = (JCObject)classType.Invoke("CreateCertificateSignatureBindingElement");
             return new AsymmetricSecurityBindingElement(objCreateCertificateSignatureBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SecurityBindingElement CreateMutualCertificateBindingElement(MessageSecurityVersion version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateMutualCertificateBindingElement = (JCObject)classType.Invoke("CreateMutualCertificateBindingElement", version == null ? null : version.getJCOInstance());
-            return new SecurityBindingElement(objCreateMutualCertificateBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SymmetricSecurityBindingElement CreateAnonymousForCertificateBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateAnonymousForCertificateBindingElement = (JCObject)classType.Invoke("CreateAnonymousForCertificateBindingElement");
-            return new SymmetricSecurityBindingElement(objCreateAnonymousForCertificateBindingElement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,12 +148,144 @@ public class SecurityBindingElement extends NetObject  {
         }
     }
 
-    public static SymmetricSecurityBindingElement CreateUserNameForCertificateBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
+    public static AsymmetricSecurityBindingElement CreateMutualCertificateDuplexBindingElement(MessageSecurityVersion version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateUserNameForCertificateBindingElement = (JCObject)classType.Invoke("CreateUserNameForCertificateBindingElement");
-            return new SymmetricSecurityBindingElement(objCreateUserNameForCertificateBindingElement);
+            JCObject objCreateMutualCertificateDuplexBindingElement = (JCObject)classType.Invoke("CreateMutualCertificateDuplexBindingElement", version == null ? null : version.getJCOInstance());
+            return new AsymmetricSecurityBindingElement(objCreateMutualCertificateDuplexBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BindingElement Clone() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            return new BindingElement(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SecurityBindingElement CreateMutualCertificateBindingElement() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateMutualCertificateBindingElement = (JCObject)classType.Invoke("CreateMutualCertificateBindingElement");
+            return new SecurityBindingElement(objCreateMutualCertificateBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SecurityBindingElement CreateMutualCertificateBindingElement(MessageSecurityVersion version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateMutualCertificateBindingElement = (JCObject)classType.Invoke("CreateMutualCertificateBindingElement", version == null ? null : version.getJCOInstance());
+            return new SecurityBindingElement(objCreateMutualCertificateBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SecurityBindingElement CreateMutualCertificateBindingElement(MessageSecurityVersion version, boolean allowSerializedSigningTokenOnReply) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateMutualCertificateBindingElement = (JCObject)classType.Invoke("CreateMutualCertificateBindingElement", version == null ? null : version.getJCOInstance(), allowSerializedSigningTokenOnReply);
+            return new SecurityBindingElement(objCreateMutualCertificateBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SecurityBindingElement CreateSecureConversationBindingElement(SecurityBindingElement bootstrapSecurity) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateSecureConversationBindingElement = (JCObject)classType.Invoke("CreateSecureConversationBindingElement", bootstrapSecurity == null ? null : bootstrapSecurity.getJCOInstance());
+            return new SecurityBindingElement(objCreateSecureConversationBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SecurityBindingElement CreateSecureConversationBindingElement(SecurityBindingElement bootstrapSecurity, boolean requireCancellation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateSecureConversationBindingElement = (JCObject)classType.Invoke("CreateSecureConversationBindingElement", bootstrapSecurity == null ? null : bootstrapSecurity.getJCOInstance(), requireCancellation);
+            return new SecurityBindingElement(objCreateSecureConversationBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SecurityBindingElement CreateSecureConversationBindingElement(SecurityBindingElement bootstrapSecurity, boolean requireCancellation, ChannelProtectionRequirements bootstrapProtectionRequirements) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateSecureConversationBindingElement = (JCObject)classType.Invoke("CreateSecureConversationBindingElement", bootstrapSecurity == null ? null : bootstrapSecurity.getJCOInstance(), requireCancellation, bootstrapProtectionRequirements == null ? null : bootstrapProtectionRequirements.getJCOInstance());
+            return new SecurityBindingElement(objCreateSecureConversationBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SymmetricSecurityBindingElement CreateAnonymousForCertificateBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateAnonymousForCertificateBindingElement = (JCObject)classType.Invoke("CreateAnonymousForCertificateBindingElement");
+            return new SymmetricSecurityBindingElement(objCreateAnonymousForCertificateBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SymmetricSecurityBindingElement CreateIssuedTokenBindingElement(IssuedSecurityTokenParameters issuedTokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateIssuedTokenBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
+            return new SymmetricSecurityBindingElement(objCreateIssuedTokenBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SymmetricSecurityBindingElement CreateIssuedTokenForCertificateBindingElement(IssuedSecurityTokenParameters issuedTokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateIssuedTokenForCertificateBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenForCertificateBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
+            return new SymmetricSecurityBindingElement(objCreateIssuedTokenForCertificateBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SymmetricSecurityBindingElement CreateIssuedTokenForSslBindingElement(IssuedSecurityTokenParameters issuedTokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateIssuedTokenForSslBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenForSslBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
+            return new SymmetricSecurityBindingElement(objCreateIssuedTokenForSslBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SymmetricSecurityBindingElement CreateIssuedTokenForSslBindingElement(IssuedSecurityTokenParameters issuedTokenParameters, boolean requireCancellation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateIssuedTokenForSslBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenForSslBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance(), requireCancellation);
+            return new SymmetricSecurityBindingElement(objCreateIssuedTokenForSslBindingElement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,28 +297,6 @@ public class SecurityBindingElement extends NetObject  {
         try {
             JCObject objCreateKerberosBindingElement = (JCObject)classType.Invoke("CreateKerberosBindingElement");
             return new SymmetricSecurityBindingElement(objCreateKerberosBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SymmetricSecurityBindingElement CreateSspiNegotiationBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateSspiNegotiationBindingElement = (JCObject)classType.Invoke("CreateSspiNegotiationBindingElement");
-            return new SymmetricSecurityBindingElement(objCreateSspiNegotiationBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SymmetricSecurityBindingElement CreateSspiNegotiationBindingElement(boolean requireCancellation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateSspiNegotiationBindingElement = (JCObject)classType.Invoke("CreateSspiNegotiationBindingElement", requireCancellation);
-            return new SymmetricSecurityBindingElement(objCreateSspiNegotiationBindingElement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,12 +324,34 @@ public class SecurityBindingElement extends NetObject  {
         }
     }
 
-    public static SymmetricSecurityBindingElement CreateIssuedTokenForSslBindingElement(IssuedSecurityTokenParameters issuedTokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public static SymmetricSecurityBindingElement CreateSspiNegotiationBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateIssuedTokenForSslBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenForSslBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
-            return new SymmetricSecurityBindingElement(objCreateIssuedTokenForSslBindingElement);
+            JCObject objCreateSspiNegotiationBindingElement = (JCObject)classType.Invoke("CreateSspiNegotiationBindingElement");
+            return new SymmetricSecurityBindingElement(objCreateSspiNegotiationBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SymmetricSecurityBindingElement CreateSspiNegotiationBindingElement(boolean requireCancellation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateSspiNegotiationBindingElement = (JCObject)classType.Invoke("CreateSspiNegotiationBindingElement", requireCancellation);
+            return new SymmetricSecurityBindingElement(objCreateSspiNegotiationBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SymmetricSecurityBindingElement CreateUserNameForCertificateBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateUserNameForCertificateBindingElement = (JCObject)classType.Invoke("CreateUserNameForCertificateBindingElement");
+            return new SymmetricSecurityBindingElement(objCreateUserNameForCertificateBindingElement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,23 +379,34 @@ public class SecurityBindingElement extends NetObject  {
         }
     }
 
-    public static TransportSecurityBindingElement CreateUserNameOverTransportBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateUserNameOverTransportBindingElement = (JCObject)classType.Invoke("CreateUserNameOverTransportBindingElement");
-            return new TransportSecurityBindingElement(objCreateUserNameOverTransportBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static TransportSecurityBindingElement CreateCertificateOverTransportBindingElement() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateCertificateOverTransportBindingElement = (JCObject)classType.Invoke("CreateCertificateOverTransportBindingElement");
             return new TransportSecurityBindingElement(objCreateCertificateOverTransportBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TransportSecurityBindingElement CreateCertificateOverTransportBindingElement(MessageSecurityVersion version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateCertificateOverTransportBindingElement = (JCObject)classType.Invoke("CreateCertificateOverTransportBindingElement", version == null ? null : version.getJCOInstance());
+            return new TransportSecurityBindingElement(objCreateCertificateOverTransportBindingElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TransportSecurityBindingElement CreateIssuedTokenOverTransportBindingElement(IssuedSecurityTokenParameters issuedTokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateIssuedTokenOverTransportBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenOverTransportBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
+            return new TransportSecurityBindingElement(objCreateIssuedTokenOverTransportBindingElement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,122 +445,22 @@ public class SecurityBindingElement extends NetObject  {
         }
     }
 
-    public static SecurityBindingElement CreateSecureConversationBindingElement(SecurityBindingElement bootstrapSecurity) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
+    public static TransportSecurityBindingElement CreateUserNameOverTransportBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateSecureConversationBindingElement = (JCObject)classType.Invoke("CreateSecureConversationBindingElement", bootstrapSecurity == null ? null : bootstrapSecurity.getJCOInstance());
-            return new SecurityBindingElement(objCreateSecureConversationBindingElement);
+            JCObject objCreateUserNameOverTransportBindingElement = (JCObject)classType.Invoke("CreateUserNameOverTransportBindingElement");
+            return new TransportSecurityBindingElement(objCreateUserNameOverTransportBindingElement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityBindingElement CreateSecureConversationBindingElement(SecurityBindingElement bootstrapSecurity, boolean requireCancellation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateSecureConversationBindingElement = (JCObject)classType.Invoke("CreateSecureConversationBindingElement", bootstrapSecurity == null ? null : bootstrapSecurity.getJCOInstance(), requireCancellation);
-            return new SecurityBindingElement(objCreateSecureConversationBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SecurityBindingElement CreateMutualCertificateBindingElement(MessageSecurityVersion version, boolean allowSerializedSigningTokenOnReply) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateMutualCertificateBindingElement = (JCObject)classType.Invoke("CreateMutualCertificateBindingElement", version == null ? null : version.getJCOInstance(), allowSerializedSigningTokenOnReply);
-            return new SecurityBindingElement(objCreateMutualCertificateBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static AsymmetricSecurityBindingElement CreateMutualCertificateDuplexBindingElement(MessageSecurityVersion version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateMutualCertificateDuplexBindingElement = (JCObject)classType.Invoke("CreateMutualCertificateDuplexBindingElement", version == null ? null : version.getJCOInstance());
-            return new AsymmetricSecurityBindingElement(objCreateMutualCertificateDuplexBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SymmetricSecurityBindingElement CreateIssuedTokenBindingElement(IssuedSecurityTokenParameters issuedTokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateIssuedTokenBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
-            return new SymmetricSecurityBindingElement(objCreateIssuedTokenBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SymmetricSecurityBindingElement CreateIssuedTokenForCertificateBindingElement(IssuedSecurityTokenParameters issuedTokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateIssuedTokenForCertificateBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenForCertificateBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
-            return new SymmetricSecurityBindingElement(objCreateIssuedTokenForCertificateBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SymmetricSecurityBindingElement CreateIssuedTokenForSslBindingElement(IssuedSecurityTokenParameters issuedTokenParameters, boolean requireCancellation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateIssuedTokenForSslBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenForSslBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance(), requireCancellation);
-            return new SymmetricSecurityBindingElement(objCreateIssuedTokenForSslBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TransportSecurityBindingElement CreateCertificateOverTransportBindingElement(MessageSecurityVersion version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateCertificateOverTransportBindingElement = (JCObject)classType.Invoke("CreateCertificateOverTransportBindingElement", version == null ? null : version.getJCOInstance());
-            return new TransportSecurityBindingElement(objCreateCertificateOverTransportBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TransportSecurityBindingElement CreateIssuedTokenOverTransportBindingElement(IssuedSecurityTokenParameters issuedTokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateIssuedTokenOverTransportBindingElement = (JCObject)classType.Invoke("CreateIssuedTokenOverTransportBindingElement", issuedTokenParameters == null ? null : issuedTokenParameters.getJCOInstance());
-            return new TransportSecurityBindingElement(objCreateIssuedTokenOverTransportBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SecurityBindingElement CreateSecureConversationBindingElement(SecurityBindingElement bootstrapSecurity, boolean requireCancellation, ChannelProtectionRequirements bootstrapProtectionRequirements) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateSecureConversationBindingElement = (JCObject)classType.Invoke("CreateSecureConversationBindingElement", bootstrapSecurity == null ? null : bootstrapSecurity.getJCOInstance(), requireCancellation, bootstrapProtectionRequirements == null ? null : bootstrapProtectionRequirements.getJCOInstance());
-            return new SecurityBindingElement(objCreateSecureConversationBindingElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BindingElement Clone() throws Throwable {
+    public void SetKeyDerivation(boolean requireDerivedKeys) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new BindingElement(objClone);
+            classInstance.Invoke("SetKeyDerivation", requireDerivedKeys);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,65 +470,21 @@ public class SecurityBindingElement extends NetObject  {
     
     // Properties section
     
-    public SupportingTokenParameters getEndpointSupportingTokenParameters() throws Throwable {
+    public boolean getAllowInsecureTransport() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EndpointSupportingTokenParameters");
-            return new SupportingTokenParameters(val);
+            return (boolean)classInstance.Get("AllowInsecureTransport");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SupportingTokenParameters getOptionalEndpointSupportingTokenParameters() throws Throwable {
+    public void setAllowInsecureTransport(boolean AllowInsecureTransport) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OptionalEndpointSupportingTokenParameters");
-            return new SupportingTokenParameters(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityHeaderLayout getSecurityHeaderLayout() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SecurityHeaderLayout");
-            return new SecurityHeaderLayout(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSecurityHeaderLayout(SecurityHeaderLayout SecurityHeaderLayout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SecurityHeaderLayout", SecurityHeaderLayout == null ? null : SecurityHeaderLayout.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MessageSecurityVersion getMessageSecurityVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MessageSecurityVersion");
-            return new MessageSecurityVersion(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMessageSecurityVersion(MessageSecurityVersion MessageSecurityVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MessageSecurityVersion", MessageSecurityVersion == null ? null : MessageSecurityVersion.getJCOInstance());
+            classInstance.Set("AllowInsecureTransport", AllowInsecureTransport);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -569,47 +525,6 @@ public class SecurityBindingElement extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeTimestamp", IncludeTimestamp);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getAllowInsecureTransport() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("AllowInsecureTransport");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAllowInsecureTransport(boolean AllowInsecureTransport) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AllowInsecureTransport", AllowInsecureTransport);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityAlgorithmSuite getDefaultAlgorithmSuite() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DefaultAlgorithmSuite");
-            return new SecurityAlgorithmSuite(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDefaultAlgorithmSuite(SecurityAlgorithmSuite DefaultAlgorithmSuite) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DefaultAlgorithmSuite", DefaultAlgorithmSuite == null ? null : DefaultAlgorithmSuite.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -657,6 +572,69 @@ public class SecurityBindingElement extends NetObject  {
         }
     }
 
+    public SecurityHeaderLayout getSecurityHeaderLayout() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SecurityHeaderLayout");
+            return new SecurityHeaderLayout(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSecurityHeaderLayout(SecurityHeaderLayout SecurityHeaderLayout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SecurityHeaderLayout", SecurityHeaderLayout == null ? null : SecurityHeaderLayout.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MessageSecurityVersion getMessageSecurityVersion() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MessageSecurityVersion");
+            return new MessageSecurityVersion(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMessageSecurityVersion(MessageSecurityVersion MessageSecurityVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MessageSecurityVersion", MessageSecurityVersion == null ? null : MessageSecurityVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityAlgorithmSuite getDefaultAlgorithmSuite() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DefaultAlgorithmSuite");
+            return new SecurityAlgorithmSuite(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDefaultAlgorithmSuite(SecurityAlgorithmSuite DefaultAlgorithmSuite) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DefaultAlgorithmSuite", DefaultAlgorithmSuite == null ? null : DefaultAlgorithmSuite.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityKeyEntropyMode getKeyEntropyMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -673,6 +651,28 @@ public class SecurityBindingElement extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyEntropyMode", KeyEntropyMode == null ? null : KeyEntropyMode.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SupportingTokenParameters getEndpointSupportingTokenParameters() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EndpointSupportingTokenParameters");
+            return new SupportingTokenParameters(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SupportingTokenParameters getOptionalEndpointSupportingTokenParameters() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("OptionalEndpointSupportingTokenParameters");
+            return new SupportingTokenParameters(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

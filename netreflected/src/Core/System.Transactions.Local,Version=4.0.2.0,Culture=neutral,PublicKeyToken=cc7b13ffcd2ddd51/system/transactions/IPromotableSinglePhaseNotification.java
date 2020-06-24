@@ -90,13 +90,13 @@ public interface IPromotableSinglePhaseNotification extends IJCOBridgeReflected 
 
     // Methods section
     
-    public void Initialize() throws Throwable;
+    public byte[] Promote() throws Throwable;
 
-    public void SinglePhaseCommit(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable;
+    public void Initialize() throws Throwable;
 
     public void Rollback(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable;
 
-    public byte[] Promote() throws Throwable;
+    public void SinglePhaseCommit(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable;
 
 
     

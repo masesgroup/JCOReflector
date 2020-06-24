@@ -142,12 +142,11 @@ public class CryptoKeyAccessRule extends NetObject  {
     
     // Properties section
     
-    public CryptoKeyRights getCryptoKeyRights() throws Throwable {
+    public boolean getIsInherited() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CryptoKeyRights");
-            return new CryptoKeyRights(val);
+            return (boolean)classInstance.Get("IsInherited");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,22 +163,12 @@ public class CryptoKeyAccessRule extends NetObject  {
         }
     }
 
-    public IdentityReference getIdentityReference() throws Throwable {
+    public CryptoKeyRights getCryptoKeyRights() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("IdentityReference");
-            return new IdentityReference(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsInherited() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsInherited");
+            JCObject val = (JCObject)classInstance.Get("CryptoKeyRights");
+            return new CryptoKeyRights(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,6 +191,17 @@ public class CryptoKeyAccessRule extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("PropagationFlags");
             return new PropagationFlags(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IdentityReference getIdentityReference() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("IdentityReference");
+            return new IdentityReference(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

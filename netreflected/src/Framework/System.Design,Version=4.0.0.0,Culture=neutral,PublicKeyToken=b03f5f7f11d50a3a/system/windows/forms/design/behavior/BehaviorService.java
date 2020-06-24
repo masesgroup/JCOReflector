@@ -38,15 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.forms.design.behavior.Behavior;
 import system.drawing.Point;
 import system.windows.forms.Control;
 import system.drawing.Rectangle;
+import system.windows.forms.design.behavior.Behavior;
 import system.drawing.Region;
-import system.windows.forms.design.behavior.BehaviorServiceAdornerCollection;
 import system.drawing.Graphics;
-import system.windows.forms.design.behavior.BehaviorDragDropEventHandler;
+import system.windows.forms.design.behavior.BehaviorServiceAdornerCollection;
 import system.EventHandler;
+import system.windows.forms.design.behavior.BehaviorDragDropEventHandler;
 
 
 /**
@@ -121,37 +121,6 @@ public class BehaviorService extends NetObject  {
     
     // Methods section
     
-    public Behavior GetNextBehavior(Behavior behavior) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetNextBehavior = (JCObject)classInstance.Invoke("GetNextBehavior", behavior == null ? null : behavior.getJCOInstance());
-            return new Behavior(objGetNextBehavior);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SyncSelection() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SyncSelection");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PushBehavior(Behavior behavior) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PushBehavior", behavior == null ? null : behavior.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Point AdornerWindowPointToScreen(Point p) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -185,12 +154,45 @@ public class BehaviorService extends NetObject  {
         }
     }
 
+    public Point ScreenToAdornerWindow(Point p) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objScreenToAdornerWindow = (JCObject)classInstance.Invoke("ScreenToAdornerWindow", p == null ? null : p.getJCOInstance());
+            return new Point(objScreenToAdornerWindow);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Rectangle ControlRectInAdornerWindow(Control c) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objControlRectInAdornerWindow = (JCObject)classInstance.Invoke("ControlRectInAdornerWindow", c == null ? null : c.getJCOInstance());
             return new Rectangle(objControlRectInAdornerWindow);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Behavior GetNextBehavior(Behavior behavior) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetNextBehavior = (JCObject)classInstance.Invoke("GetNextBehavior", behavior == null ? null : behavior.getJCOInstance());
+            return new Behavior(objGetNextBehavior);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Behavior PopBehavior(Behavior behavior) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objPopBehavior = (JCObject)classInstance.Invoke("PopBehavior", behavior == null ? null : behavior.getJCOInstance());
+            return new Behavior(objPopBehavior);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,12 +238,11 @@ public class BehaviorService extends NetObject  {
         }
     }
 
-    public Behavior PopBehavior(Behavior behavior) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
+    public void PushBehavior(Behavior behavior) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objPopBehavior = (JCObject)classInstance.Invoke("PopBehavior", behavior == null ? null : behavior.getJCOInstance());
-            return new Behavior(objPopBehavior);
+            classInstance.Invoke("PushBehavior", behavior == null ? null : behavior.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,12 +258,11 @@ public class BehaviorService extends NetObject  {
         }
     }
 
-    public Point ScreenToAdornerWindow(Point p) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
+    public void SyncSelection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objScreenToAdornerWindow = (JCObject)classInstance.Invoke("ScreenToAdornerWindow", p == null ? null : p.getJCOInstance());
-            return new Point(objScreenToAdornerWindow);
+            classInstance.Invoke("SyncSelection");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,17 +272,6 @@ public class BehaviorService extends NetObject  {
     
     // Properties section
     
-    public BehaviorServiceAdornerCollection getAdorners() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Adorners");
-            return new BehaviorServiceAdornerCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Graphics getAdornerWindowGraphics() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -305,10 +294,41 @@ public class BehaviorService extends NetObject  {
         }
     }
 
+    public BehaviorServiceAdornerCollection getAdorners() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Adorners");
+            return new BehaviorServiceAdornerCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section
     
+
+    public void addSynchronize(EventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Synchronize", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeSynchronize(EventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Synchronize", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
     public void addBeginDrag(BehaviorDragDropEventHandler handler) throws Throwable {
         if (classInstance == null)
@@ -345,26 +365,6 @@ public class BehaviorService extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EndDrag", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addSynchronize(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Synchronize", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeSynchronize(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Synchronize", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -132,23 +132,23 @@ public class IRawElementProviderHwndOverrideImplementation extends NetObject imp
     
     // Properties section
     
-    public ProviderOptions getProviderOptions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ProviderOptions");
-            return new ProviderOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IRawElementProviderSimple getHostRawElementProvider() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("HostRawElementProvider");
             return new IRawElementProviderSimpleImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ProviderOptions getProviderOptions() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ProviderOptions");
+            return new ProviderOptions(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

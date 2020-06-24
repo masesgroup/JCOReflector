@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.remoting.ActivatedServiceTypeEntry;
-import system.runtime.remoting.WellKnownObjectMode;
-import system.runtime.remoting.WellKnownServiceTypeEntry;
 import system.runtime.remoting.ActivatedClientTypeEntry;
+import system.runtime.remoting.ActivatedServiceTypeEntry;
 import system.runtime.remoting.WellKnownClientTypeEntry;
+import system.runtime.remoting.WellKnownServiceTypeEntry;
+import system.runtime.remoting.WellKnownObjectMode;
 import system.runtime.remoting.CustomErrorsModes;
 
 
@@ -118,26 +118,6 @@ public class RemotingConfiguration extends NetObject  {
     
     // Methods section
     
-    public static void Configure(java.lang.String filename) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ApplicationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Configure", filename);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Configure(java.lang.String filename, boolean ensureSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.OverflowException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.NotImplementedException, system.ApplicationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Configure", filename, ensureSecurity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean CustomErrorsEnabled(boolean isLocalRequest) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -148,81 +128,50 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static void RegisterActivatedServiceType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static boolean IsActivationAllowed(NetType svrType) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RegisterActivatedServiceType", type == null ? null : type.getJCOInstance());
+            return (boolean)classType.Invoke("IsActivationAllowed", svrType == null ? null : svrType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void RegisterActivatedServiceType(ActivatedServiceTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static ActivatedClientTypeEntry IsRemotelyActivatedClientType(java.lang.String typeName, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RegisterActivatedServiceType", entry == null ? null : entry.getJCOInstance());
+            JCObject objIsRemotelyActivatedClientType = (JCObject)classType.Invoke("IsRemotelyActivatedClientType", typeName, assemblyName);
+            return new ActivatedClientTypeEntry(objIsRemotelyActivatedClientType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void RegisterWellKnownServiceType(NetType type, java.lang.String objectUri, WellKnownObjectMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
+    public static ActivatedClientTypeEntry IsRemotelyActivatedClientType(NetType svrType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.NotImplementedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RegisterWellKnownServiceType", type == null ? null : type.getJCOInstance(), objectUri, mode == null ? null : mode.getJCOInstance());
+            JCObject objIsRemotelyActivatedClientType = (JCObject)classType.Invoke("IsRemotelyActivatedClientType", svrType == null ? null : svrType.getJCOInstance());
+            return new ActivatedClientTypeEntry(objIsRemotelyActivatedClientType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void RegisterWellKnownServiceType(WellKnownServiceTypeEntry entry) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
+    public static ActivatedClientTypeEntry[] GetRegisteredActivatedClientTypes() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RegisterWellKnownServiceType", entry == null ? null : entry.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void RegisterActivatedClientType(NetType type, java.lang.String appUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("RegisterActivatedClientType", type == null ? null : type.getJCOInstance(), appUrl);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void RegisterActivatedClientType(ActivatedClientTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("RegisterActivatedClientType", entry == null ? null : entry.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void RegisterWellKnownClientType(NetType type, java.lang.String objectUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("RegisterWellKnownClientType", type == null ? null : type.getJCOInstance(), objectUrl);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void RegisterWellKnownClientType(WellKnownClientTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("RegisterWellKnownClientType", entry == null ? null : entry.getJCOInstance());
+            ArrayList<ActivatedClientTypeEntry> resultingArrayList = new ArrayList<ActivatedClientTypeEntry>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetRegisteredActivatedClientTypes");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new ActivatedClientTypeEntry(resultingObject));
+            }
+            ActivatedClientTypeEntry[] resultingArray = new ActivatedClientTypeEntry[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,6 +187,45 @@ public class RemotingConfiguration extends NetObject  {
 			    resultingArrayList.add(new ActivatedServiceTypeEntry(resultingObject));
             }
             ActivatedServiceTypeEntry[] resultingArray = new ActivatedServiceTypeEntry[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static WellKnownClientTypeEntry IsWellKnownClientType(java.lang.String typeName, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objIsWellKnownClientType = (JCObject)classType.Invoke("IsWellKnownClientType", typeName, assemblyName);
+            return new WellKnownClientTypeEntry(objIsWellKnownClientType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static WellKnownClientTypeEntry IsWellKnownClientType(NetType svrType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objIsWellKnownClientType = (JCObject)classType.Invoke("IsWellKnownClientType", svrType == null ? null : svrType.getJCOInstance());
+            return new WellKnownClientTypeEntry(objIsWellKnownClientType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static WellKnownClientTypeEntry[] GetRegisteredWellKnownClientTypes() throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<WellKnownClientTypeEntry> resultingArrayList = new ArrayList<WellKnownClientTypeEntry>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetRegisteredWellKnownClientTypes");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new WellKnownClientTypeEntry(resultingObject));
+            }
+            WellKnownClientTypeEntry[] resultingArray = new WellKnownClientTypeEntry[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -262,89 +250,101 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static ActivatedClientTypeEntry[] GetRegisteredActivatedClientTypes() throws Throwable, system.ArgumentNullException {
+    public static void Configure(java.lang.String filename) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ApplicationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<ActivatedClientTypeEntry> resultingArrayList = new ArrayList<ActivatedClientTypeEntry>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetRegisteredActivatedClientTypes");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new ActivatedClientTypeEntry(resultingObject));
-            }
-            ActivatedClientTypeEntry[] resultingArray = new ActivatedClientTypeEntry[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            classType.Invoke("Configure", filename);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static WellKnownClientTypeEntry[] GetRegisteredWellKnownClientTypes() throws Throwable, system.ArgumentNullException {
+    public static void Configure(java.lang.String filename, boolean ensureSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.OverflowException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.NotImplementedException, system.ApplicationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<WellKnownClientTypeEntry> resultingArrayList = new ArrayList<WellKnownClientTypeEntry>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetRegisteredWellKnownClientTypes");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new WellKnownClientTypeEntry(resultingObject));
-            }
-            WellKnownClientTypeEntry[] resultingArray = new WellKnownClientTypeEntry[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            classType.Invoke("Configure", filename, ensureSecurity);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ActivatedClientTypeEntry IsRemotelyActivatedClientType(NetType svrType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.NotImplementedException {
+    public static void RegisterActivatedClientType(ActivatedClientTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objIsRemotelyActivatedClientType = (JCObject)classType.Invoke("IsRemotelyActivatedClientType", svrType == null ? null : svrType.getJCOInstance());
-            return new ActivatedClientTypeEntry(objIsRemotelyActivatedClientType);
+            classType.Invoke("RegisterActivatedClientType", entry == null ? null : entry.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ActivatedClientTypeEntry IsRemotelyActivatedClientType(java.lang.String typeName, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
+    public static void RegisterActivatedClientType(NetType type, java.lang.String appUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objIsRemotelyActivatedClientType = (JCObject)classType.Invoke("IsRemotelyActivatedClientType", typeName, assemblyName);
-            return new ActivatedClientTypeEntry(objIsRemotelyActivatedClientType);
+            classType.Invoke("RegisterActivatedClientType", type == null ? null : type.getJCOInstance(), appUrl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static WellKnownClientTypeEntry IsWellKnownClientType(NetType svrType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static void RegisterActivatedServiceType(ActivatedServiceTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objIsWellKnownClientType = (JCObject)classType.Invoke("IsWellKnownClientType", svrType == null ? null : svrType.getJCOInstance());
-            return new WellKnownClientTypeEntry(objIsWellKnownClientType);
+            classType.Invoke("RegisterActivatedServiceType", entry == null ? null : entry.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static WellKnownClientTypeEntry IsWellKnownClientType(java.lang.String typeName, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static void RegisterActivatedServiceType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objIsWellKnownClientType = (JCObject)classType.Invoke("IsWellKnownClientType", typeName, assemblyName);
-            return new WellKnownClientTypeEntry(objIsWellKnownClientType);
+            classType.Invoke("RegisterActivatedServiceType", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean IsActivationAllowed(NetType svrType) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
+    public static void RegisterWellKnownClientType(WellKnownClientTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsActivationAllowed", svrType == null ? null : svrType.getJCOInstance());
+            classType.Invoke("RegisterWellKnownClientType", entry == null ? null : entry.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RegisterWellKnownClientType(NetType type, java.lang.String objectUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RegisterWellKnownClientType", type == null ? null : type.getJCOInstance(), objectUrl);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RegisterWellKnownServiceType(WellKnownServiceTypeEntry entry) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RegisterWellKnownServiceType", entry == null ? null : entry.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RegisterWellKnownServiceType(NetType type, java.lang.String objectUri, WellKnownObjectMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RegisterWellKnownServiceType", type == null ? null : type.getJCOInstance(), objectUri, mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,6 +354,37 @@ public class RemotingConfiguration extends NetObject  {
     
     // Properties section
     
+    public static CustomErrorsModes getCustomErrorsMode() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("CustomErrorsMode");
+            return new CustomErrorsModes(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void setCustomErrorsMode(CustomErrorsModes CustomErrorsMode) throws Throwable, system.runtime.remoting.RemotingException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Set("CustomErrorsMode", CustomErrorsMode == null ? null : CustomErrorsMode.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String getApplicationId() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Get("ApplicationId");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String getApplicationName() throws Throwable, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -374,42 +405,11 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static java.lang.String getApplicationId() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Get("ApplicationId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static java.lang.String getProcessId() throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Get("ProcessId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static CustomErrorsModes getCustomErrorsMode() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("CustomErrorsMode");
-            return new CustomErrorsModes(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void setCustomErrorsMode(CustomErrorsModes CustomErrorsMode) throws Throwable, system.runtime.remoting.RemotingException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Set("CustomErrorsMode", CustomErrorsMode == null ? null : CustomErrorsMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

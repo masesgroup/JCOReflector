@@ -116,17 +116,6 @@ public class RuntimeOps extends NetObject  {
     
     // Methods section
     
-    public static NetObject ExpandoTrySetValue(ExpandoObject expando, NetObject indexClass, int index, NetObject value, java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objExpandoTrySetValue = (JCObject)classType.Invoke("ExpandoTrySetValue", expando == null ? null : expando.getJCOInstance(), indexClass == null ? null : indexClass.getJCOInstance(), index, value == null ? null : value.getJCOInstance(), name, ignoreCase);
-            return new NetObject(objExpandoTrySetValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean ExpandoCheckVersion(ExpandoObject expando, NetObject version) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -137,11 +126,11 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static void ExpandoPromoteClass(ExpandoObject expando, NetObject oldClass, NetObject newClass) throws Throwable, system.ArgumentException, system.ArgumentNullException {
+    public static boolean ExpandoTryDeleteValue(ExpandoObject expando, NetObject indexClass, int index, java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("ExpandoPromoteClass", expando == null ? null : expando.getJCOInstance(), oldClass == null ? null : oldClass.getJCOInstance(), newClass == null ? null : newClass.getJCOInstance());
+            return (boolean)classType.Invoke("ExpandoTryDeleteValue", expando == null ? null : expando.getJCOInstance(), indexClass == null ? null : indexClass.getJCOInstance(), index, name, ignoreCase);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,23 +147,12 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static IRuntimeVariables MergeRuntimeVariables(IRuntimeVariables first, IRuntimeVariables second, int[] indexes) throws Throwable {
+    public static NetObject ExpandoTrySetValue(ExpandoObject expando, NetObject indexClass, int index, NetObject value, java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMergeRuntimeVariables = (JCObject)classType.Invoke("MergeRuntimeVariables", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), indexes);
-            return new IRuntimeVariablesImplementation(objMergeRuntimeVariables);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static IRuntimeVariables CreateRuntimeVariables(NetObject[] data, long[] indexes) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateRuntimeVariables = (JCObject)classType.Invoke("CreateRuntimeVariables", toObjectFromArray(data), indexes);
-            return new IRuntimeVariablesImplementation(objCreateRuntimeVariables);
+            JCObject objExpandoTrySetValue = (JCObject)classType.Invoke("ExpandoTrySetValue", expando == null ? null : expando.getJCOInstance(), indexClass == null ? null : indexClass.getJCOInstance(), index, value == null ? null : value.getJCOInstance(), name, ignoreCase);
+            return new NetObject(objExpandoTrySetValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,11 +169,33 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static boolean ExpandoTryDeleteValue(ExpandoObject expando, NetObject indexClass, int index, java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static IRuntimeVariables CreateRuntimeVariables(NetObject[] data, long[] indexes) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("ExpandoTryDeleteValue", expando == null ? null : expando.getJCOInstance(), indexClass == null ? null : indexClass.getJCOInstance(), index, name, ignoreCase);
+            JCObject objCreateRuntimeVariables = (JCObject)classType.Invoke("CreateRuntimeVariables", toObjectFromArray(data), indexes);
+            return new IRuntimeVariablesImplementation(objCreateRuntimeVariables);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IRuntimeVariables MergeRuntimeVariables(IRuntimeVariables first, IRuntimeVariables second, int[] indexes) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMergeRuntimeVariables = (JCObject)classType.Invoke("MergeRuntimeVariables", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), indexes);
+            return new IRuntimeVariablesImplementation(objMergeRuntimeVariables);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ExpandoPromoteClass(ExpandoObject expando, NetObject oldClass, NetObject newClass) throws Throwable, system.ArgumentException, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ExpandoPromoteClass", expando == null ? null : expando.getJCOInstance(), oldClass == null ? null : oldClass.getJCOInstance(), newClass == null ? null : newClass.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

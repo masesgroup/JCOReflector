@@ -39,13 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.deployment.application.UpdateCheckInfo;
-import system.Version;
 import system.DateTime;
-import system.Uri;
 import system.deployment.application.ApplicationDeployment;
-import system.deployment.application.DeploymentProgressChangedEventHandler;
-import system.deployment.application.CheckForUpdateCompletedEventHandler;
+import system.Uri;
+import system.Version;
 import system.componentmodel.AsyncCompletedEventHandler;
+import system.deployment.application.CheckForUpdateCompletedEventHandler;
+import system.deployment.application.DeploymentProgressChangedEventHandler;
 import system.deployment.application.DownloadFileGroupCompletedEventHandler;
 
 
@@ -121,17 +121,6 @@ public class ApplicationDeployment extends NetObject  {
     
     // Methods section
     
-    public UpdateCheckInfo CheckForDetailedUpdate() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.deployment.application.InvalidDeploymentException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.MulticastNotSupportedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.FormatException, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.OverflowException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCheckForDetailedUpdate = (JCObject)classInstance.Invoke("CheckForDetailedUpdate");
-            return new UpdateCheckInfo(objCheckForDetailedUpdate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean CheckForUpdate() throws Throwable, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.deployment.application.InvalidDeploymentException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.deployment.application.DeploymentDownloadException, system.FormatException, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.security.XmlSyntaxException, system.OverflowException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -152,21 +141,63 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
-    public void CheckForUpdateAsyncCancel() throws Throwable {
+    public boolean IsFileGroupDownloaded(java.lang.String groupName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.io.IOException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotImplementedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.deployment.application.DeploymentException, system.OverflowException, system.deployment.application.InvalidDeploymentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CheckForUpdateAsyncCancel");
+            return (boolean)classInstance.Invoke("IsFileGroupDownloaded", groupName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void UpdateAsyncCancel() throws Throwable {
+    public boolean Update() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.FormatException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.RankException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("UpdateAsyncCancel");
+            return (boolean)classInstance.Invoke("Update");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UpdateCheckInfo CheckForDetailedUpdate() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.deployment.application.InvalidDeploymentException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.MulticastNotSupportedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.FormatException, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.OverflowException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCheckForDetailedUpdate = (JCObject)classInstance.Invoke("CheckForDetailedUpdate");
+            return new UpdateCheckInfo(objCheckForDetailedUpdate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UpdateCheckInfo CheckForDetailedUpdate(boolean persistUpdateCheckResult) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.FormatException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.RankException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCheckForDetailedUpdate = (JCObject)classInstance.Invoke("CheckForDetailedUpdate", persistUpdateCheckResult);
+            return new UpdateCheckInfo(objCheckForDetailedUpdate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CheckForUpdateAsync() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.FormatException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.RankException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CheckForUpdateAsync");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CheckForUpdateAsyncCancel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CheckForUpdateAsyncCancel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,52 +233,11 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
-    public boolean IsFileGroupDownloaded(java.lang.String groupName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.io.IOException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotImplementedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.deployment.application.DeploymentException, system.OverflowException, system.deployment.application.InvalidDeploymentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsFileGroupDownloaded", groupName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void DownloadFileGroupAsyncCancel(java.lang.String groupName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.OverflowException, system.deployment.application.InvalidDeploymentException, system.OutOfMemoryException, system.NotSupportedException, system.deployment.application.DeploymentDownloadException, system.MulticastNotSupportedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFileGroupAsyncCancel", groupName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UpdateCheckInfo CheckForDetailedUpdate(boolean persistUpdateCheckResult) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.FormatException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.RankException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCheckForDetailedUpdate = (JCObject)classInstance.Invoke("CheckForDetailedUpdate", persistUpdateCheckResult);
-            return new UpdateCheckInfo(objCheckForDetailedUpdate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CheckForUpdateAsync() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.FormatException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.RankException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CheckForUpdateAsync");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Update() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.FormatException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.RankException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Update");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +253,104 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    public void UpdateAsyncCancel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateAsyncCancel");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public boolean getIsFirstRun() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsFirstRun");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean getIsNetworkDeployed() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.UriFormatException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Get("IsNetworkDeployed");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DateTime getTimeOfLastUpdateCheck() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TimeOfLastUpdateCheck");
+            return new DateTime(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ApplicationDeployment getCurrentDeployment() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.deployment.application.InvalidDeploymentException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.UriFormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("CurrentDeployment");
+            return new ApplicationDeployment(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getDataDirectory() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("DataDirectory");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getUpdatedApplicationFullName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("UpdatedApplicationFullName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Uri getActivationUri() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ActivationUri");
+            return new Uri(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Uri getUpdateLocation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("UpdateLocation");
+            return new Uri(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Version getCurrentVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -289,110 +373,26 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
-    public java.lang.String getUpdatedApplicationFullName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("UpdatedApplicationFullName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getTimeOfLastUpdateCheck() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TimeOfLastUpdateCheck");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Uri getUpdateLocation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UpdateLocation");
-            return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Uri getActivationUri() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ActivationUri");
-            return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDataDirectory() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DataDirectory");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsFirstRun() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsFirstRun");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static ApplicationDeployment getCurrentDeployment() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.deployment.application.InvalidDeploymentException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.UriFormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("CurrentDeployment");
-            return new ApplicationDeployment(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean getIsNetworkDeployed() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.UriFormatException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Get("IsNetworkDeployed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section
     
 
-    public void addCheckForUpdateProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
+    public void addUpdateCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("CheckForUpdateProgressChanged", handler);
+            classInstance.RegisterEventListener("UpdateCompleted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeCheckForUpdateProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
+    public void removeUpdateCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("CheckForUpdateProgressChanged", handler);
+            classInstance.UnregisterEventListener("UpdateCompleted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,41 +418,21 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
-    public void addUpdateProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
+    public void addCheckForUpdateProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("UpdateProgressChanged", handler);
+            classInstance.RegisterEventListener("CheckForUpdateProgressChanged", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeUpdateProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
+    public void removeCheckForUpdateProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("UpdateProgressChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addUpdateCompleted(AsyncCompletedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("UpdateCompleted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeUpdateCompleted(AsyncCompletedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("UpdateCompleted", handler);
+            classInstance.UnregisterEventListener("CheckForUpdateProgressChanged", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,6 +453,26 @@ public class ApplicationDeployment extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DownloadFileGroupProgressChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addUpdateProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("UpdateProgressChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeUpdateProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("UpdateProgressChanged", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

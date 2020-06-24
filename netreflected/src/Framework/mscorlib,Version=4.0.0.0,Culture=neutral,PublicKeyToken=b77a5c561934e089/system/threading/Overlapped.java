@@ -140,42 +140,21 @@ public class Overlapped extends NetObject  {
     
     // Properties section
     
-    public IAsyncResult getAsyncResult() throws Throwable {
+    public int getEventHandle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncResult");
-            return new IAsyncResultImplementation(val);
+            return (int)classInstance.Get("EventHandle");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAsyncResult(IAsyncResult AsyncResult) throws Throwable {
+    public void setEventHandle(int EventHandle) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("AsyncResult", AsyncResult == null ? null : AsyncResult.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getOffsetLow() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("OffsetLow");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOffsetLow(int OffsetLow) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("OffsetLow", OffsetLow);
+            classInstance.Set("EventHandle", EventHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,21 +180,42 @@ public class Overlapped extends NetObject  {
         }
     }
 
-    public int getEventHandle() throws Throwable {
+    public int getOffsetLow() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("EventHandle");
+            return (int)classInstance.Get("OffsetLow");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEventHandle(int EventHandle) throws Throwable {
+    public void setOffsetLow(int OffsetLow) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("EventHandle", EventHandle);
+            classInstance.Set("OffsetLow", OffsetLow);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult getAsyncResult() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AsyncResult");
+            return new IAsyncResultImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAsyncResult(IAsyncResult AsyncResult) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AsyncResult", AsyncResult == null ? null : AsyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

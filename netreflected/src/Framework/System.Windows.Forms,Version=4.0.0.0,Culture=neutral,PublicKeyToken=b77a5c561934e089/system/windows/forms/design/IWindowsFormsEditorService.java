@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.windows.forms.Control;
 import system.windows.forms.DialogResult;
 import system.windows.forms.Form;
+import system.windows.forms.Control;
 
 
 /**
@@ -92,11 +92,11 @@ public interface IWindowsFormsEditorService extends IJCOBridgeReflected {
 
     // Methods section
     
+    public DialogResult ShowDialog(Form dialog) throws Throwable;
+
     public void CloseDropDown() throws Throwable;
 
     public void DropDownControl(Control control) throws Throwable;
-
-    public DialogResult ShowDialog(Form dialog) throws Throwable;
 
 
     

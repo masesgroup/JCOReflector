@@ -143,41 +143,21 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
-    public void addOperationPosted(DispatcherHookEventHandler handler) throws Throwable {
+    public void addOperationAborted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("OperationPosted", handler);
+            classInstance.RegisterEventListener("OperationAborted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeOperationPosted(DispatcherHookEventHandler handler) throws Throwable {
+    public void removeOperationAborted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("OperationPosted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addOperationStarted(DispatcherHookEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("OperationStarted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeOperationStarted(DispatcherHookEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("OperationStarted", handler);
+            classInstance.UnregisterEventListener("OperationAborted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,6 +183,26 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
+    public void addOperationPosted(DispatcherHookEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("OperationPosted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeOperationPosted(DispatcherHookEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("OperationPosted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void addOperationPriorityChanged(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -223,21 +223,21 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
-    public void addOperationAborted(DispatcherHookEventHandler handler) throws Throwable {
+    public void addOperationStarted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("OperationAborted", handler);
+            classInstance.RegisterEventListener("OperationStarted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeOperationAborted(DispatcherHookEventHandler handler) throws Throwable {
+    public void removeOperationStarted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("OperationAborted", handler);
+            classInstance.UnregisterEventListener("OperationStarted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

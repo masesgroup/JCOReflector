@@ -95,26 +95,30 @@ public interface ITaskItem2 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public java.lang.String GetMetadataValueEscaped(java.lang.String metadataName) throws Throwable;
-
-    public void SetMetadataValueLiteral(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable;
+    public IDictionary CloneCustomMetadata() throws Throwable;
 
     public IDictionary CloneCustomMetadataEscaped() throws Throwable;
 
     public java.lang.String GetMetadata(java.lang.String metadataName) throws Throwable;
 
-    public void SetMetadata(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable;
-
-    public void RemoveMetadata(java.lang.String metadataName) throws Throwable;
+    public java.lang.String GetMetadataValueEscaped(java.lang.String metadataName) throws Throwable;
 
     public void CopyMetadataTo(ITaskItem destinationItem) throws Throwable;
 
-    public IDictionary CloneCustomMetadata() throws Throwable;
+    public void RemoveMetadata(java.lang.String metadataName) throws Throwable;
+
+    public void SetMetadata(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable;
+
+    public void SetMetadataValueLiteral(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable;
 
 
     
     // Properties section
     
+    public int getMetadataCount() throws Throwable;
+
+    public ICollection getMetadataNames() throws Throwable;
+
     public java.lang.String getEvaluatedIncludeEscaped() throws Throwable;
 
     public void setEvaluatedIncludeEscaped(java.lang.String EvaluatedIncludeEscaped) throws Throwable;
@@ -122,10 +126,6 @@ public interface ITaskItem2 extends IJCOBridgeReflected {
     public java.lang.String getItemSpec() throws Throwable;
 
     public void setItemSpec(java.lang.String ItemSpec) throws Throwable;
-
-    public ICollection getMetadataNames() throws Throwable;
-
-    public int getMetadataCount() throws Throwable;
 
 
 

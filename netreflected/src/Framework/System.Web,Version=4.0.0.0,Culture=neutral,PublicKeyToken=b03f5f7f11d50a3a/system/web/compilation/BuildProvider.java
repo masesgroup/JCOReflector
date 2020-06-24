@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.compilation.AssemblyBuilder;
 import system.codedom.compiler.CompilerResults;
 import system.web.compilation.BuildProviderResultFlags;
-import system.web.compilation.CompilerType;
+import system.web.compilation.AssemblyBuilder;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.web.compilation.CompilerType;
 
 
 /**
@@ -118,11 +118,11 @@ public class BuildProvider extends NetObject  {
     
     // Methods section
     
-    public void GenerateCode(AssemblyBuilder assemblyBuilder) throws Throwable {
+    public java.lang.String GetCustomString(CompilerResults results) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GenerateCode", assemblyBuilder == null ? null : assemblyBuilder.getJCOInstance());
+            return (java.lang.String)classInstance.Invoke("GetCustomString", results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -139,22 +139,22 @@ public class BuildProvider extends NetObject  {
         }
     }
 
-    public java.lang.String GetCustomString(CompilerResults results) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetCustomString", results == null ? null : results.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public BuildProviderResultFlags GetResultFlags(CompilerResults results) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetResultFlags = (JCObject)classInstance.Invoke("GetResultFlags", results == null ? null : results.getJCOInstance());
             return new BuildProviderResultFlags(objGetResultFlags);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GenerateCode(AssemblyBuilder assemblyBuilder) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GenerateCode", assemblyBuilder == null ? null : assemblyBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,23 +184,23 @@ public class BuildProvider extends NetObject  {
     
     // Properties section
     
-    public CompilerType getCodeCompilerType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CodeCompilerType");
-            return new CompilerType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ICollection getVirtualPathDependencies() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("VirtualPathDependencies");
             return new ICollectionImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CompilerType getCodeCompilerType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CodeCompilerType");
+            return new CompilerType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

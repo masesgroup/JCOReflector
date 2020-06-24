@@ -138,26 +138,6 @@ public class XamlSchemaContextSettings extends NetObject  {
     
     // Properties section
     
-    public boolean getSupportMarkupExtensionsWithDuplicateArity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SupportMarkupExtensionsWithDuplicateArity");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSupportMarkupExtensionsWithDuplicateArity(boolean SupportMarkupExtensionsWithDuplicateArity) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SupportMarkupExtensionsWithDuplicateArity", SupportMarkupExtensionsWithDuplicateArity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getFullyQualifyAssemblyNamesInClrNamespaces() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -173,6 +153,26 @@ public class XamlSchemaContextSettings extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FullyQualifyAssemblyNamesInClrNamespaces", FullyQualifyAssemblyNamesInClrNamespaces);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getSupportMarkupExtensionsWithDuplicateArity() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("SupportMarkupExtensionsWithDuplicateArity");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSupportMarkupExtensionsWithDuplicateArity(boolean SupportMarkupExtensionsWithDuplicateArity) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SupportMarkupExtensionsWithDuplicateArity", SupportMarkupExtensionsWithDuplicateArity);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

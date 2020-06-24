@@ -37,14 +37,14 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.runtime.remoting.activation.IActivator;
-import system.runtime.remoting.activation.IActivatorImplementation;
-import system.collections.IList;
-import system.collections.IListImplementation;
-import system.runtime.remoting.messaging.LogicalCallContext;
-import system.reflection.MethodBase;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.collections.IList;
+import system.collections.IListImplementation;
+import system.reflection.MethodBase;
+import system.runtime.remoting.activation.IActivator;
+import system.runtime.remoting.activation.IActivatorImplementation;
+import system.runtime.remoting.messaging.LogicalCallContext;
 
 
 /**
@@ -97,53 +97,53 @@ public interface IConstructionCallMessage extends IJCOBridgeReflected {
 
     // Methods section
     
-    public java.lang.String GetInArgName(int index) throws Throwable;
+    public NetObject GetArg(int argNum) throws Throwable;
 
     public NetObject GetInArg(int argNum) throws Throwable;
 
     public java.lang.String GetArgName(int index) throws Throwable;
 
-    public NetObject GetArg(int argNum) throws Throwable;
+    public java.lang.String GetInArgName(int index) throws Throwable;
 
 
     
     // Properties section
     
+    public boolean getHasVarArgs() throws Throwable;
+
+    public int getArgCount() throws Throwable;
+
+    public int getInArgCount() throws Throwable;
+
+    public IDictionary getProperties() throws Throwable;
+
+    public IList getContextProperties() throws Throwable;
+
+    public NetObject getMethodSignature() throws Throwable;
+
+    public NetObject[] getArgs() throws Throwable;
+
+    public NetObject[] getCallSiteActivationAttributes() throws Throwable;
+
+    public NetObject[] getInArgs() throws Throwable;
+
+    public MethodBase getMethodBase() throws Throwable;
+
     public IActivator getActivator() throws Throwable;
 
     public void setActivator(IActivator Activator) throws Throwable;
 
-    public NetObject[] getCallSiteActivationAttributes() throws Throwable;
+    public LogicalCallContext getLogicalCallContext() throws Throwable;
 
     public java.lang.String getActivationTypeName() throws Throwable;
-
-    public NetType getActivationType() throws Throwable;
-
-    public IList getContextProperties() throws Throwable;
-
-    public int getInArgCount() throws Throwable;
-
-    public NetObject[] getInArgs() throws Throwable;
-
-    public java.lang.String getUri() throws Throwable;
 
     public java.lang.String getMethodName() throws Throwable;
 
     public java.lang.String getTypeName() throws Throwable;
 
-    public NetObject getMethodSignature() throws Throwable;
+    public java.lang.String getUri() throws Throwable;
 
-    public int getArgCount() throws Throwable;
-
-    public NetObject[] getArgs() throws Throwable;
-
-    public boolean getHasVarArgs() throws Throwable;
-
-    public LogicalCallContext getLogicalCallContext() throws Throwable;
-
-    public MethodBase getMethodBase() throws Throwable;
-
-    public IDictionary getProperties() throws Throwable;
+    public NetType getActivationType() throws Throwable;
 
 
 

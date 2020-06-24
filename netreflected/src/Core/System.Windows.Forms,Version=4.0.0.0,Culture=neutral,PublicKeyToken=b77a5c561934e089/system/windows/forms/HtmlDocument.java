@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.HtmlDocument;
 import system.windows.forms.HtmlElement;
 import system.drawing.Point;
 import system.windows.forms.HtmlElementCollection;
-import system.windows.forms.HtmlDocument;
 import system.EventHandler;
+import system.drawing.Color;
 import system.Uri;
 import system.windows.forms.HtmlWindow;
-import system.drawing.Color;
 import system.windows.forms.HtmlElementEventHandler;
 
 
@@ -121,31 +121,45 @@ public class HtmlDocument extends NetObject  {
     
     // Methods section
     
-    public void Write(java.lang.String text) throws Throwable {
+    public NetObject InvokeScript(java.lang.String scriptName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", text);
+            JCObject objInvokeScript = (JCObject)classInstance.Invoke("InvokeScript", scriptName);
+            return new NetObject(objInvokeScript);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void ExecCommand(java.lang.String command, boolean showUI, NetObject value) throws Throwable {
+    public NetObject InvokeScript(java.lang.String scriptName, NetObject[] args) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ExecCommand", command, showUI, value == null ? null : value.getJCOInstance());
+            JCObject objInvokeScript = (JCObject)classInstance.Invoke("InvokeScript", scriptName, toObjectFromArray(args));
+            return new NetObject(objInvokeScript);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Focus() throws Throwable {
+    public HtmlDocument OpenNew(boolean replaceInHistory) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Focus");
+            JCObject objOpenNew = (JCObject)classInstance.Invoke("OpenNew", replaceInHistory);
+            return new HtmlDocument(objOpenNew);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HtmlElement CreateElement(java.lang.String elementTag) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateElement = (JCObject)classInstance.Invoke("CreateElement", elementTag);
+            return new HtmlElement(objCreateElement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,50 +198,6 @@ public class HtmlDocument extends NetObject  {
         }
     }
 
-    public HtmlDocument OpenNew(boolean replaceInHistory) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objOpenNew = (JCObject)classInstance.Invoke("OpenNew", replaceInHistory);
-            return new HtmlDocument(objOpenNew);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HtmlElement CreateElement(java.lang.String elementTag) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateElement = (JCObject)classInstance.Invoke("CreateElement", elementTag);
-            return new HtmlElement(objCreateElement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InvokeScript(java.lang.String scriptName, NetObject[] args) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInvokeScript = (JCObject)classInstance.Invoke("InvokeScript", scriptName, toObjectFromArray(args));
-            return new NetObject(objInvokeScript);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InvokeScript(java.lang.String scriptName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInvokeScript = (JCObject)classInstance.Invoke("InvokeScript", scriptName);
-            return new NetObject(objInvokeScript);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AttachEventHandler(java.lang.String eventName, EventHandler eventHandler) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -248,89 +218,86 @@ public class HtmlDocument extends NetObject  {
         }
     }
 
+    public void ExecCommand(java.lang.String command, boolean showUI, NetObject value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ExecCommand", command, showUI, value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Focus() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Focus");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Write(java.lang.String text) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", text);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public HtmlElement getActiveElement() throws Throwable {
+    public boolean getFocused() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveElement");
-            return new HtmlElement(val);
+            return (boolean)classInstance.Get("Focused");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public HtmlElement getBody() throws Throwable {
+    public boolean getRightToLeft() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Body");
-            return new HtmlElement(val);
+            return (boolean)classInstance.Get("RightToLeft");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getDomain() throws Throwable {
+    public void setRightToLeft(boolean RightToLeft) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Domain");
+            classInstance.Set("RightToLeft", RightToLeft);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDomain(java.lang.String Domain) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+    public Color getActiveLinkColor() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.MissingMemberException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Domain", Domain);
+            JCObject val = (JCObject)classInstance.Get("ActiveLinkColor");
+            return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getTitle() throws Throwable {
+    public void setActiveLinkColor(Color ActiveLinkColor) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Title");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTitle(java.lang.String Title) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Title", Title);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Uri getUrl() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.UriFormatException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Url");
-            return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HtmlWindow getWindow() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Window");
-            return new HtmlWindow(val);
+            classInstance.Set("ActiveLinkColor", ActiveLinkColor == null ? null : ActiveLinkColor.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,27 +366,6 @@ public class HtmlDocument extends NetObject  {
         }
     }
 
-    public Color getActiveLinkColor() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.MissingMemberException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ActiveLinkColor");
-            return new Color(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setActiveLinkColor(Color ActiveLinkColor) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ActiveLinkColor", ActiveLinkColor == null ? null : ActiveLinkColor.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Color getVisitedLinkColor() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.MissingMemberException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -436,16 +382,6 @@ public class HtmlDocument extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VisitedLinkColor", VisitedLinkColor == null ? null : VisitedLinkColor.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getFocused() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Focused");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,21 +418,31 @@ public class HtmlDocument extends NetObject  {
         }
     }
 
-    public boolean getRightToLeft() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public java.lang.String getDefaultEncoding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("RightToLeft");
+            return (java.lang.String)classInstance.Get("DefaultEncoding");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRightToLeft(boolean RightToLeft) throws Throwable {
+    public java.lang.String getDomain() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("RightToLeft", RightToLeft);
+            return (java.lang.String)classInstance.Get("Domain");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDomain(java.lang.String Domain) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Domain", Domain);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -522,11 +468,54 @@ public class HtmlDocument extends NetObject  {
         }
     }
 
-    public java.lang.String getDefaultEncoding() throws Throwable {
+    public java.lang.String getTitle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("DefaultEncoding");
+            return (java.lang.String)classInstance.Get("Title");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTitle(java.lang.String Title) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Title", Title);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Uri getUrl() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.UriFormatException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Url");
+            return new Uri(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HtmlElement getActiveElement() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ActiveElement");
+            return new HtmlElement(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HtmlElement getBody() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Body");
+            return new HtmlElement(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,11 +532,11 @@ public class HtmlDocument extends NetObject  {
         }
     }
 
-    public HtmlElementCollection getLinks() throws Throwable {
+    public HtmlElementCollection getForms() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Links");
+            JCObject val = (JCObject)classInstance.Get("Forms");
             return new HtmlElementCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -565,12 +554,23 @@ public class HtmlDocument extends NetObject  {
         }
     }
 
-    public HtmlElementCollection getForms() throws Throwable {
+    public HtmlElementCollection getLinks() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Forms");
+            JCObject val = (JCObject)classInstance.Get("Links");
             return new HtmlElementCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HtmlWindow getWindow() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Window");
+            return new HtmlWindow(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -90,9 +90,9 @@ public interface IHttpModule extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Init(HttpApplication context) throws Throwable;
-
     public void Dispose() throws Throwable;
+
+    public void Init(HttpApplication context) throws Throwable;
 
 
     

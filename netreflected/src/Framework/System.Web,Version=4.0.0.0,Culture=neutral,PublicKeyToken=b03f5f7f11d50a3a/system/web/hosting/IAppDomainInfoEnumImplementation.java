@@ -105,12 +105,11 @@ public class IAppDomainInfoEnumImplementation extends NetObject implements IAppD
 
     // Methods section
     
-    public IAppDomainInfo GetData() throws Throwable {
+    public boolean MoveNext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData");
-            return new IAppDomainInfoImplementation(objGetData);
+            return (boolean)classInstance.Invoke("MoveNext");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -126,11 +125,12 @@ public class IAppDomainInfoEnumImplementation extends NetObject implements IAppD
         }
     }
 
-    public boolean MoveNext() throws Throwable {
+    public IAppDomainInfo GetData() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("MoveNext");
+            JCObject objGetData = (JCObject)classInstance.Invoke("GetData");
+            return new IAppDomainInfoImplementation(objGetData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

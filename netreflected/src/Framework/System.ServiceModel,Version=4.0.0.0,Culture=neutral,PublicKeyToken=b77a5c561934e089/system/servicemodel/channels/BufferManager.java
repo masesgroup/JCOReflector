@@ -113,17 +113,6 @@ public class BufferManager extends NetObject  {
     
     // Methods section
     
-    public static BufferManager CreateBufferManager(long maxBufferPoolSize, int maxBufferSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateBufferManager = (JCObject)classType.Invoke("CreateBufferManager", maxBufferPoolSize, maxBufferSize);
-            return new BufferManager(objCreateBufferManager);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] TakeBuffer(int bufferSize) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -143,11 +132,12 @@ public class BufferManager extends NetObject  {
         }
     }
 
-    public void ReturnBuffer(byte[] buffer) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static BufferManager CreateBufferManager(long maxBufferPoolSize, int maxBufferSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("ReturnBuffer", (Object)buffer);
+            JCObject objCreateBufferManager = (JCObject)classType.Invoke("CreateBufferManager", maxBufferPoolSize, maxBufferSize);
+            return new BufferManager(objCreateBufferManager);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,6 +148,16 @@ public class BufferManager extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReturnBuffer(byte[] buffer) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReturnBuffer", (Object)buffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

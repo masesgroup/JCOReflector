@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.forms.Screen;
-import system.drawing.Point;
 import system.drawing.Rectangle;
+import system.drawing.Point;
 import system.windows.forms.Control;
+import system.windows.forms.Screen;
 
 
 /**
@@ -116,34 +116,34 @@ public class Screen extends NetObject  {
     
     // Methods section
     
-    public static Screen FromPoint(Point point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static Rectangle GetBounds(Point pt) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromPoint = (JCObject)classType.Invoke("FromPoint", point == null ? null : point.getJCOInstance());
-            return new Screen(objFromPoint);
+            JCObject objGetBounds = (JCObject)classType.Invoke("GetBounds", pt == null ? null : pt.getJCOInstance());
+            return new Rectangle(objGetBounds);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Screen FromRectangle(Rectangle rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static Rectangle GetBounds(Rectangle rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromRectangle = (JCObject)classType.Invoke("FromRectangle", rect == null ? null : rect.getJCOInstance());
-            return new Screen(objFromRectangle);
+            JCObject objGetBounds = (JCObject)classType.Invoke("GetBounds", rect == null ? null : rect.getJCOInstance());
+            return new Rectangle(objGetBounds);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Screen FromControl(Control control) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
+    public static Rectangle GetBounds(Control ctl) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromControl = (JCObject)classType.Invoke("FromControl", control == null ? null : control.getJCOInstance());
-            return new Screen(objFromControl);
+            JCObject objGetBounds = (JCObject)classType.Invoke("GetBounds", ctl == null ? null : ctl.getJCOInstance());
+            return new Rectangle(objGetBounds);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,34 +182,34 @@ public class Screen extends NetObject  {
         }
     }
 
-    public static Rectangle GetBounds(Point pt) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static Screen FromControl(Control control) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetBounds = (JCObject)classType.Invoke("GetBounds", pt == null ? null : pt.getJCOInstance());
-            return new Rectangle(objGetBounds);
+            JCObject objFromControl = (JCObject)classType.Invoke("FromControl", control == null ? null : control.getJCOInstance());
+            return new Screen(objFromControl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Rectangle GetBounds(Rectangle rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static Screen FromPoint(Point point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetBounds = (JCObject)classType.Invoke("GetBounds", rect == null ? null : rect.getJCOInstance());
-            return new Rectangle(objGetBounds);
+            JCObject objFromPoint = (JCObject)classType.Invoke("FromPoint", point == null ? null : point.getJCOInstance());
+            return new Screen(objFromPoint);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Rectangle GetBounds(Control ctl) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
+    public static Screen FromRectangle(Rectangle rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetBounds = (JCObject)classType.Invoke("GetBounds", ctl == null ? null : ctl.getJCOInstance());
-            return new Rectangle(objGetBounds);
+            JCObject objFromRectangle = (JCObject)classType.Invoke("FromRectangle", rect == null ? null : rect.getJCOInstance());
+            return new Screen(objFromRectangle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,6 +219,16 @@ public class Screen extends NetObject  {
     
     // Properties section
     
+    public boolean getPrimary() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("Primary");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int getBitsPerPixel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -240,6 +250,17 @@ public class Screen extends NetObject  {
         }
     }
 
+    public Rectangle getWorkingArea() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("WorkingArea");
+            return new Rectangle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getDeviceName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -250,22 +271,12 @@ public class Screen extends NetObject  {
         }
     }
 
-    public boolean getPrimary() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Screen getPrimaryScreen() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("Primary");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Rectangle getWorkingArea() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("WorkingArea");
-            return new Rectangle(val);
+            JCObject val = (JCObject)classType.Get("PrimaryScreen");
+            return new Screen(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,17 +294,6 @@ public class Screen extends NetObject  {
             Screen[] resultingArray = new Screen[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Screen getPrimaryScreen() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("PrimaryScreen");
-            return new Screen(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

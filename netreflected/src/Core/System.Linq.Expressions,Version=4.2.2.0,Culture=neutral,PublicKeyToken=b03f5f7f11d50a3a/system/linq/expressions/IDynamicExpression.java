@@ -90,19 +90,19 @@ public interface IDynamicExpression extends IJCOBridgeReflected {
 
     // Methods section
     
+    public Expression GetArgument(int index) throws Throwable;
+
     public Expression Rewrite(Expression[] args) throws Throwable;
 
     public NetObject CreateCallSite() throws Throwable;
-
-    public Expression GetArgument(int index) throws Throwable;
 
 
     
     // Properties section
     
-    public NetType getDelegateType() throws Throwable;
-
     public int getArgumentCount() throws Throwable;
+
+    public NetType getDelegateType() throws Throwable;
 
 
 

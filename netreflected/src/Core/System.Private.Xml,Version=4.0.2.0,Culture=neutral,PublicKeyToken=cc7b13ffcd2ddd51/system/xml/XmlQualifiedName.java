@@ -157,11 +157,11 @@ public class XmlQualifiedName extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getNamespace() throws Throwable {
+    public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            return (boolean)classInstance.Get("IsEmpty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,11 +177,11 @@ public class XmlQualifiedName extends NetObject  {
         }
     }
 
-    public boolean getIsEmpty() throws Throwable {
+    public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            return (java.lang.String)classInstance.Get("Namespace");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

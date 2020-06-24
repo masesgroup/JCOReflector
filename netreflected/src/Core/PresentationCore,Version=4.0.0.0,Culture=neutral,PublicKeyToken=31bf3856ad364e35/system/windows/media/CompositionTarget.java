@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.media.Visual;
 import system.windows.media.Matrix;
+import system.windows.media.Visual;
 import system.windows.threading.Dispatcher;
 
 
@@ -115,21 +115,21 @@ public class CompositionTarget extends NetObject  {
     
     // Methods section
     
-    public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean CheckAccess() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("CheckAccess");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,22 +149,12 @@ public class CompositionTarget extends NetObject  {
     
     // Properties section
     
-    public Visual getRootVisual() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public Matrix getTransformFromDevice() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RootVisual");
-            return new Visual(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRootVisual(Visual RootVisual) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.TimeoutException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidProgramException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RootVisual", RootVisual == null ? null : RootVisual.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("TransformFromDevice");
+            return new Matrix(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,12 +171,22 @@ public class CompositionTarget extends NetObject  {
         }
     }
 
-    public Matrix getTransformFromDevice() throws Throwable {
+    public Visual getRootVisual() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TransformFromDevice");
-            return new Matrix(val);
+            JCObject val = (JCObject)classInstance.Get("RootVisual");
+            return new Visual(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRootVisual(Visual RootVisual) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.TimeoutException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidProgramException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RootVisual", RootVisual == null ? null : RootVisual.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

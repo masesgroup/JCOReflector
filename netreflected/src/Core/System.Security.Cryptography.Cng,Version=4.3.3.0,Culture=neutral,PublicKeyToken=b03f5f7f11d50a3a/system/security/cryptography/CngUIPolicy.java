@@ -189,21 +189,21 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
-    public java.lang.String getFriendlyName() throws Throwable {
+    public java.lang.String getCreationTitle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("FriendlyName");
+            return (java.lang.String)classInstance.Get("CreationTitle");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setFriendlyName(java.lang.String FriendlyName) throws Throwable {
+    public void setCreationTitle(java.lang.String CreationTitle) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("FriendlyName", FriendlyName);
+            classInstance.Set("CreationTitle", CreationTitle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,6 +229,26 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    public java.lang.String getFriendlyName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("FriendlyName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setFriendlyName(java.lang.String FriendlyName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("FriendlyName", FriendlyName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getUseContext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -244,26 +264,6 @@ public class CngUIPolicy extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseContext", UseContext);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getCreationTitle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("CreationTitle");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCreationTitle(java.lang.String CreationTitle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CreationTitle", CreationTitle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

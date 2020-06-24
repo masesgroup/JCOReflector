@@ -117,11 +117,11 @@ public class EndpointPermission extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getHostname() throws Throwable {
+    public int getPort() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Hostname");
+            return (int)classInstance.Get("Port");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -138,11 +138,11 @@ public class EndpointPermission extends NetObject  {
         }
     }
 
-    public int getPort() throws Throwable {
+    public java.lang.String getHostname() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Port");
+            return (java.lang.String)classInstance.Get("Hostname");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

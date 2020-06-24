@@ -108,48 +108,6 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
 
     // Methods section
     
-    public IJSVsaItem AddItem(java.lang.String itemName, JSVsaItemType type) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddItem = (JCObject)classInstance.Invoke("AddItem", itemName, type == null ? null : type.getJCOInstance());
-            return new IJSVsaItemImplementation(objAddItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IJSVsaItem GetItem(java.lang.String itemName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", itemName);
-            return new IJSVsaItemImplementation(objGetItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveItem(java.lang.String itemName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveItem", itemName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveItem(IJSVsaItem item) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveItem", item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int GetItemCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -160,33 +118,12 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
-    public IJSVsaItem GetItemAtIndex(int index) throws Throwable {
+    public IJSVsaItem AddItem(java.lang.String itemName, JSVsaItemType type) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetItemAtIndex = (JCObject)classInstance.Invoke("GetItemAtIndex", index);
-            return new IJSVsaItemImplementation(objGetItemAtIndex);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveItemAtIndex(int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveItemAtIndex", index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetObject() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetObject = (JCObject)classInstance.Invoke("GetObject");
-            return new NetObject(objGetObject);
+            JCObject objAddItem = (JCObject)classInstance.Invoke("AddItem", itemName, type == null ? null : type.getJCOInstance());
+            return new IJSVsaItemImplementation(objAddItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,12 +140,75 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    public IJSVsaItem GetItem(java.lang.String itemName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", itemName);
+            return new IJSVsaItemImplementation(objGetItem);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IJSVsaItem GetItemAtIndex(int index) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetItemAtIndex = (JCObject)classInstance.Invoke("GetItemAtIndex", index);
+            return new IJSVsaItemImplementation(objGetItemAtIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetObject() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetObject = (JCObject)classInstance.Invoke("GetObject");
+            return new NetObject(objGetObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetOption(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetOption = (JCObject)classInstance.Invoke("GetOption", name);
             return new NetObject(objGetOption);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveItem(IJSVsaItem item) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveItem", item == null ? null : item.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveItem(java.lang.String itemName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveItem", itemName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveItemAtIndex(int index) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveItemAtIndex", index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,12 +228,33 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
     
     // Properties section
     
+    public boolean getIsDirty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsDirty");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IVsaScriptScope getParent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Parent");
             return new IVsaScriptScopeImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public JSVsaItemType getItemType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ItemType");
+            return new JSVsaItemType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,27 +275,6 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public JSVsaItemType getItemType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ItemType");
-            return new JSVsaItemType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsDirty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsDirty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

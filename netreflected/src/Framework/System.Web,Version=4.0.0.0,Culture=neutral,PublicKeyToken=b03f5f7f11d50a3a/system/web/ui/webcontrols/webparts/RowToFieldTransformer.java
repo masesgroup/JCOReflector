@@ -124,23 +124,23 @@ public class RowToFieldTransformer extends NetObject  {
     
     // Methods section
     
-    public Control CreateConfigurationControl() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateConfigurationControl = (JCObject)classInstance.Invoke("CreateConfigurationControl");
-            return new Control(objCreateConfigurationControl);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject Transform(NetObject providerData) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objTransform = (JCObject)classInstance.Invoke("Transform", providerData == null ? null : providerData.getJCOInstance());
             return new NetObject(objTransform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Control CreateConfigurationControl() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateConfigurationControl = (JCObject)classInstance.Invoke("CreateConfigurationControl");
+            return new Control(objCreateConfigurationControl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

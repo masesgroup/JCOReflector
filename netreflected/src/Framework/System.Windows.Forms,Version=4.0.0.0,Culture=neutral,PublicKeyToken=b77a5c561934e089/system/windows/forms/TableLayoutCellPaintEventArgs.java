@@ -139,12 +139,11 @@ public class TableLayoutCellPaintEventArgs extends NetObject  {
     
     // Properties section
     
-    public Rectangle getCellBounds() throws Throwable {
+    public int getColumn() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CellBounds");
-            return new Rectangle(val);
+            return (int)classInstance.Get("Column");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,11 +159,23 @@ public class TableLayoutCellPaintEventArgs extends NetObject  {
         }
     }
 
-    public int getColumn() throws Throwable {
+    public Graphics getGraphics() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Column");
+            JCObject val = (JCObject)classInstance.Get("Graphics");
+            return new Graphics(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Rectangle getCellBounds() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CellBounds");
+            return new Rectangle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,17 +187,6 @@ public class TableLayoutCellPaintEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ClipRectangle");
             return new Rectangle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Graphics getGraphics() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
-            return new Graphics(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

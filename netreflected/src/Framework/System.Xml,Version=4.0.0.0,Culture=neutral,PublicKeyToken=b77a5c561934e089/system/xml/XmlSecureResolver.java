@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.XmlResolver;
-import system.security.policy.Evidence;
 import system.security.PermissionSet;
+import system.security.policy.Evidence;
 import system.Uri;
 import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
@@ -115,11 +115,11 @@ public class XmlSecureResolver extends NetObject  {
     // Constructors section
     
 
-    public XmlSecureResolver(XmlResolver resolver, java.lang.String securityUrl) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.MemberAccessException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.XmlSyntaxException {
+    public XmlSecureResolver(XmlResolver resolver, PermissionSet permissionSet) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(resolver == null ? null : resolver.getJCOInstance(), securityUrl));
+            setJCOInstance((JCObject)classType.NewObject(resolver == null ? null : resolver.getJCOInstance(), permissionSet == null ? null : permissionSet.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -135,11 +135,11 @@ public class XmlSecureResolver extends NetObject  {
         }
     }
 
-    public XmlSecureResolver(XmlResolver resolver, PermissionSet permissionSet) throws Throwable {
+    public XmlSecureResolver(XmlResolver resolver, java.lang.String securityUrl) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.MemberAccessException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.XmlSyntaxException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(resolver == null ? null : resolver.getJCOInstance(), permissionSet == null ? null : permissionSet.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(resolver == null ? null : resolver.getJCOInstance(), securityUrl));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,12 +149,11 @@ public class XmlSecureResolver extends NetObject  {
     
     // Methods section
     
-    public static Evidence CreateEvidenceForUrl(java.lang.String securityUrl) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.MemberAccessException, system.configuration.ConfigurationException, system.UriFormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean SupportsType(Uri absoluteUri, NetType type) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateEvidenceForUrl = (JCObject)classType.Invoke("CreateEvidenceForUrl", securityUrl);
-            return new Evidence(objCreateEvidenceForUrl);
+            return (boolean)classInstance.Invoke("SupportsType", absoluteUri == null ? null : absoluteUri.getJCOInstance(), type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,22 +170,23 @@ public class XmlSecureResolver extends NetObject  {
         }
     }
 
+    public static Evidence CreateEvidenceForUrl(java.lang.String securityUrl) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.MemberAccessException, system.configuration.ConfigurationException, system.UriFormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateEvidenceForUrl = (JCObject)classType.Invoke("CreateEvidenceForUrl", securityUrl);
+            return new Evidence(objCreateEvidenceForUrl);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Uri ResolveUri(Uri baseUri, java.lang.String relativeUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objResolveUri = (JCObject)classInstance.Invoke("ResolveUri", baseUri == null ? null : baseUri.getJCOInstance(), relativeUri);
             return new Uri(objResolveUri);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SupportsType(Uri absoluteUri, NetType type) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SupportsType", absoluteUri == null ? null : absoluteUri.getJCOInstance(), type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

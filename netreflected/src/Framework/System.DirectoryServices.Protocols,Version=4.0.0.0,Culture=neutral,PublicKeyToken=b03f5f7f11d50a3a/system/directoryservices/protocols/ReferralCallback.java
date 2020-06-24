@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.directoryservices.protocols.QueryForConnectionCallback;
-import system.directoryservices.protocols.NotifyOfNewConnectionCallback;
 import system.directoryservices.protocols.DereferenceConnectionCallback;
+import system.directoryservices.protocols.NotifyOfNewConnectionCallback;
+import system.directoryservices.protocols.QueryForConnectionCallback;
 
 
 /**
@@ -130,21 +130,21 @@ public class ReferralCallback extends NetObject  {
     
     // Properties section
     
-    public QueryForConnectionCallback getQueryForConnection() throws Throwable {
+    public DereferenceConnectionCallback getDereferenceConnection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (QueryForConnectionCallback)classInstance.Get("QueryForConnection");
+            return (DereferenceConnectionCallback)classInstance.Get("DereferenceConnection");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setQueryForConnection(QueryForConnectionCallback QueryForConnection) throws Throwable {
+    public void setDereferenceConnection(DereferenceConnectionCallback DereferenceConnection) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("QueryForConnection", QueryForConnection);
+            classInstance.Set("DereferenceConnection", DereferenceConnection);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,21 +170,21 @@ public class ReferralCallback extends NetObject  {
         }
     }
 
-    public DereferenceConnectionCallback getDereferenceConnection() throws Throwable {
+    public QueryForConnectionCallback getQueryForConnection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (DereferenceConnectionCallback)classInstance.Get("DereferenceConnection");
+            return (QueryForConnectionCallback)classInstance.Get("QueryForConnection");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDereferenceConnection(DereferenceConnectionCallback DereferenceConnection) throws Throwable {
+    public void setQueryForConnection(QueryForConnectionCallback QueryForConnection) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("DereferenceConnection", DereferenceConnection);
+            classInstance.Set("QueryForConnection", QueryForConnection);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

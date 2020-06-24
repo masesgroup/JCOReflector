@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.reflection.metadata.BlobHandle;
 import system.reflection.metadata.EntityHandle;
 import system.reflection.metadata.GuidHandle;
-import system.reflection.metadata.BlobHandle;
 
 
 /**
@@ -119,6 +119,17 @@ public class CustomDebugInformation extends NetObject  {
     
     // Properties section
     
+    public BlobHandle getValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Value");
+            return new BlobHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EntityHandle getParent() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,17 +147,6 @@ public class CustomDebugInformation extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Kind");
             return new GuidHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BlobHandle getValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Value");
-            return new BlobHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

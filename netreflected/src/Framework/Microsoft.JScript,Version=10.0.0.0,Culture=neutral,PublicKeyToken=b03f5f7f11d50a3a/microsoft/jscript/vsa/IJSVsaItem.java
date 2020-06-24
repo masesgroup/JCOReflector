@@ -98,13 +98,13 @@ public interface IJSVsaItem extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable;
-
-    public void setName(java.lang.String Name) throws Throwable;
+    public boolean getIsDirty() throws Throwable;
 
     public JSVsaItemType getItemType() throws Throwable;
 
-    public boolean getIsDirty() throws Throwable;
+    public java.lang.String getName() throws Throwable;
+
+    public void setName(java.lang.String Name) throws Throwable;
 
 
 

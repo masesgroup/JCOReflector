@@ -89,11 +89,11 @@ public interface IMultipleViewProvider extends IJCOBridgeReflected {
 
     // Methods section
     
+    public int[] GetSupportedViews() throws Throwable;
+
     public java.lang.String GetViewName(int viewId) throws Throwable;
 
     public void SetCurrentView(int viewId) throws Throwable;
-
-    public int[] GetSupportedViews() throws Throwable;
 
 
     

@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.oledb.OleDbDataReader;
 import system.data.DataTable;
+import system.data.oledb.OleDbDataReader;
 
 
 /**
@@ -125,23 +125,23 @@ public class OleDbEnumerator extends NetObject  {
     
     // Methods section
     
-    public static OleDbDataReader GetEnumerator(NetType type) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.AccessViolationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetEnumerator = (JCObject)classType.Invoke("GetEnumerator", type == null ? null : type.getJCOInstance());
-            return new OleDbDataReader(objGetEnumerator);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataTable GetElements() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetElements = (JCObject)classInstance.Invoke("GetElements");
             return new DataTable(objGetElements);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static OleDbDataReader GetEnumerator(NetType type) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.AccessViolationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetEnumerator = (JCObject)classType.Invoke("GetEnumerator", type == null ? null : type.getJCOInstance());
+            return new OleDbDataReader(objGetEnumerator);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

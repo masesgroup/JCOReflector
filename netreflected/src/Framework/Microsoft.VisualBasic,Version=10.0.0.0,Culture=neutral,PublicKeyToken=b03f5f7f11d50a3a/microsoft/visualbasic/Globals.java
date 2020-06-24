@@ -116,11 +116,11 @@ public class Globals extends NetObject  {
     
     // Properties section
     
-    public static java.lang.String getScriptEngine() throws Throwable {
+    public static int getScriptEngineBuildVersion() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Get("ScriptEngine");
+            return (int)classType.Get("ScriptEngineBuildVersion");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -146,11 +146,11 @@ public class Globals extends NetObject  {
         }
     }
 
-    public static int getScriptEngineBuildVersion() throws Throwable {
+    public static java.lang.String getScriptEngine() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Get("ScriptEngineBuildVersion");
+            return (java.lang.String)classType.Get("ScriptEngine");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

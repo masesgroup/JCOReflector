@@ -39,12 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.input.Key;
-import system.windows.input.KeyStates;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
-import system.windows.PresentationSource;
-import system.windows.input.RestoreFocusMode;
+import system.windows.input.KeyStates;
 import system.windows.input.ModifierKeys;
+import system.windows.input.RestoreFocusMode;
+import system.windows.PresentationSource;
 import system.windows.threading.Dispatcher;
 
 
@@ -120,11 +120,11 @@ public class KeyboardDevice extends NetObject  {
     
     // Methods section
     
-    public void ClearFocus() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.io.IOException, system.componentmodel.Win32Exception {
+    public boolean CheckAccess() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ClearFocus");
+            return (boolean)classInstance.Invoke("CheckAccess");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -140,16 +140,6 @@ public class KeyboardDevice extends NetObject  {
         }
     }
 
-    public boolean IsKeyUp(Key key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsKeyUp", key == null ? null : key.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsKeyToggled(Key key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -160,12 +150,11 @@ public class KeyboardDevice extends NetObject  {
         }
     }
 
-    public KeyStates GetKeyStates(Key key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public boolean IsKeyUp(Key key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetKeyStates = (JCObject)classInstance.Invoke("GetKeyStates", key == null ? null : key.getJCOInstance());
-            return new KeyStates(objGetKeyStates);
+            return (boolean)classInstance.Invoke("IsKeyUp", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,11 +171,22 @@ public class KeyboardDevice extends NetObject  {
         }
     }
 
-    public boolean CheckAccess() throws Throwable {
+    public KeyStates GetKeyStates(Key key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("CheckAccess");
+            JCObject objGetKeyStates = (JCObject)classInstance.Invoke("GetKeyStates", key == null ? null : key.getJCOInstance());
+            return new KeyStates(objGetKeyStates);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ClearFocus() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.io.IOException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ClearFocus");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,6 +206,17 @@ public class KeyboardDevice extends NetObject  {
     
     // Properties section
     
+    public IInputElement getFocusedElement() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("FocusedElement");
+            return new IInputElementImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IInputElement getTarget() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -217,12 +228,12 @@ public class KeyboardDevice extends NetObject  {
         }
     }
 
-    public PresentationSource getActiveSource() throws Throwable, system.ArgumentException {
+    public ModifierKeys getModifiers() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveSource");
-            return new PresentationSource(val);
+            JCObject val = (JCObject)classInstance.Get("Modifiers");
+            return new ModifierKeys(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,23 +260,12 @@ public class KeyboardDevice extends NetObject  {
         }
     }
 
-    public IInputElement getFocusedElement() throws Throwable {
+    public PresentationSource getActiveSource() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("FocusedElement");
-            return new IInputElementImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModifierKeys getModifiers() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Modifiers");
-            return new ModifierKeys(val);
+            JCObject val = (JCObject)classInstance.Get("ActiveSource");
+            return new PresentationSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

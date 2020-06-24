@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.identitymodel.claims.ClaimSet;
 import system.identitymodel.tokens.SecurityToken;
+import system.identitymodel.claims.ClaimSet;
 import system.identitymodel.tokens.SecurityKeyIdentifier;
 import system.security.principal.IIdentity;
 import system.security.principal.IIdentityImplementation;
@@ -119,12 +119,11 @@ public class SamlSecurityTokenAuthenticator extends NetObject  {
     
     // Methods section
     
-    public ClaimSet ResolveClaimSet(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public boolean CanValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveClaimSet = (JCObject)classInstance.Invoke("ResolveClaimSet", token == null ? null : token.getJCOInstance());
-            return new ClaimSet(objResolveClaimSet);
+            return (boolean)classInstance.Invoke("CanValidateToken", token == null ? null : token.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -141,12 +140,12 @@ public class SamlSecurityTokenAuthenticator extends NetObject  {
         }
     }
 
-    public IIdentity ResolveIdentity(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public ClaimSet ResolveClaimSet(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveIdentity = (JCObject)classInstance.Invoke("ResolveIdentity", token == null ? null : token.getJCOInstance());
-            return new IIdentityImplementation(objResolveIdentity);
+            JCObject objResolveClaimSet = (JCObject)classInstance.Invoke("ResolveClaimSet", token == null ? null : token.getJCOInstance());
+            return new ClaimSet(objResolveClaimSet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,11 +162,12 @@ public class SamlSecurityTokenAuthenticator extends NetObject  {
         }
     }
 
-    public boolean CanValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public IIdentity ResolveIdentity(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("CanValidateToken", token == null ? null : token.getJCOInstance());
+            JCObject objResolveIdentity = (JCObject)classInstance.Invoke("ResolveIdentity", token == null ? null : token.getJCOInstance());
+            return new IIdentityImplementation(objResolveIdentity);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

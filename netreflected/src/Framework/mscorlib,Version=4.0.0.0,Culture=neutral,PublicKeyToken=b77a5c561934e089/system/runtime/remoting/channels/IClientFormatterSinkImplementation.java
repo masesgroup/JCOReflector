@@ -38,23 +38,23 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.io.Stream;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
+import system.runtime.remoting.channels.ITransportHeaders;
+import system.runtime.remoting.channels.ITransportHeadersImplementation;
 import system.runtime.remoting.messaging.IMessageCtrl;
 import system.runtime.remoting.messaging.IMessageCtrlImplementation;
 import system.runtime.remoting.messaging.IMessageSink;
 import system.runtime.remoting.messaging.IMessageSinkImplementation;
-import system.runtime.remoting.channels.ITransportHeaders;
-import system.runtime.remoting.channels.ITransportHeadersImplementation;
-import system.io.Stream;
 import system.runtime.remoting.channels.IClientChannelSinkStack;
 import system.runtime.remoting.channels.IClientChannelSinkStackImplementation;
 import system.runtime.remoting.channels.IClientResponseChannelSinkStack;
 import system.runtime.remoting.channels.IClientResponseChannelSinkStackImplementation;
-import system.runtime.remoting.channels.IClientChannelSink;
-import system.runtime.remoting.channels.IClientChannelSinkImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.runtime.remoting.channels.IClientChannelSink;
+import system.runtime.remoting.channels.IClientChannelSinkImplementation;
 
 
 /**
@@ -120,6 +120,17 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
 
     // Methods section
     
+    public Stream GetRequestStream(IMessage msg, ITransportHeaders headers) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetRequestStream = (JCObject)classInstance.Invoke("GetRequestStream", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance());
+            return new Stream(objGetRequestStream);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IMessage SyncProcessMessage(IMessage msg) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -162,27 +173,16 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
         }
     }
 
-    public Stream GetRequestStream(IMessage msg, ITransportHeaders headers) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRequestStream = (JCObject)classInstance.Invoke("GetRequestStream", msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance());
-            return new Stream(objGetRequestStream);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public IMessageSink getNextSink() throws Throwable {
+    public IDictionary getProperties() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NextSink");
-            return new IMessageSinkImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("Properties");
+            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,12 +199,12 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
         }
     }
 
-    public IDictionary getProperties() throws Throwable {
+    public IMessageSink getNextSink() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
-            return new IDictionaryImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("NextSink");
+            return new IMessageSinkImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

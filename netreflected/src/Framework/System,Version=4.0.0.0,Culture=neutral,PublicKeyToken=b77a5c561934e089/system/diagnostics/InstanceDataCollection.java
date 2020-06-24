@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.diagnostics.InstanceData;
 import system.Array;
+import system.diagnostics.InstanceData;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 
@@ -137,11 +137,11 @@ public class InstanceDataCollection extends NetObject  {
         }
     }
 
-    public void CopyTo(InstanceData[] instances, int index) throws Throwable {
+    public void Clear() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CopyTo", toObjectFromArray(instances), index);
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,11 +157,11 @@ public class InstanceDataCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
+    public void CopyTo(InstanceData[] instances, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("CopyTo", toObjectFromArray(instances), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,11 +171,11 @@ public class InstanceDataCollection extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getCounterName() throws Throwable {
+    public int getCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("CounterName");
+            return (int)classInstance.Get("Count");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,11 +203,11 @@ public class InstanceDataCollection extends NetObject  {
         }
     }
 
-    public int getCount() throws Throwable {
+    public java.lang.String getCounterName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Count");
+            return (java.lang.String)classInstance.Get("CounterName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

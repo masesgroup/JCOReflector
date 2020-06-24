@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.principal.TokenImpersonationLevel;
 import system.servicemodel.Endpoint;
 import system.Uri;
-import system.security.principal.TokenImpersonationLevel;
 
 
 /**
@@ -150,63 +150,21 @@ public class SendSettings extends NetObject  {
         }
     }
 
-    public Endpoint getEndpoint() throws Throwable {
+    public boolean getRequirePersistBeforeSend() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Endpoint");
-            return new Endpoint(val);
+            return (boolean)classInstance.Get("RequirePersistBeforeSend");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEndpoint(Endpoint Endpoint) throws Throwable {
+    public void setRequirePersistBeforeSend(boolean RequirePersistBeforeSend) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Endpoint", Endpoint == null ? null : Endpoint.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Uri getEndpointAddress() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EndpointAddress");
-            return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEndpointAddress(Uri EndpointAddress) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EndpointAddress", EndpointAddress == null ? null : EndpointAddress.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getEndpointConfigurationName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("EndpointConfigurationName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEndpointConfigurationName(java.lang.String EndpointConfigurationName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EndpointConfigurationName", EndpointConfigurationName);
+            classInstance.Set("RequirePersistBeforeSend", RequirePersistBeforeSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,6 +191,47 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    public Endpoint getEndpoint() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Endpoint");
+            return new Endpoint(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEndpoint(Endpoint Endpoint) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Endpoint", Endpoint == null ? null : Endpoint.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getEndpointConfigurationName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("EndpointConfigurationName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEndpointConfigurationName(java.lang.String EndpointConfigurationName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("EndpointConfigurationName", EndpointConfigurationName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getOwnerDisplayName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -253,21 +252,22 @@ public class SendSettings extends NetObject  {
         }
     }
 
-    public boolean getRequirePersistBeforeSend() throws Throwable {
+    public Uri getEndpointAddress() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("RequirePersistBeforeSend");
+            JCObject val = (JCObject)classInstance.Get("EndpointAddress");
+            return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRequirePersistBeforeSend(boolean RequirePersistBeforeSend) throws Throwable {
+    public void setEndpointAddress(Uri EndpointAddress) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("RequirePersistBeforeSend", RequirePersistBeforeSend);
+            classInstance.Set("EndpointAddress", EndpointAddress == null ? null : EndpointAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

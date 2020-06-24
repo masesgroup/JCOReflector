@@ -116,26 +116,6 @@ public class BaseCompatibilityPreferences extends NetObject  {
     
     // Properties section
     
-    public static boolean getReuseDispatcherSynchronizationContextInstance() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Get("ReuseDispatcherSynchronizationContextInstance");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void setReuseDispatcherSynchronizationContextInstance(boolean ReuseDispatcherSynchronizationContextInstance) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Set("ReuseDispatcherSynchronizationContextInstance", ReuseDispatcherSynchronizationContextInstance);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean getFlowDispatcherSynchronizationContextPriority() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -171,6 +151,26 @@ public class BaseCompatibilityPreferences extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Set("InlineDispatcherSynchronizationContextSend", InlineDispatcherSynchronizationContextSend);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean getReuseDispatcherSynchronizationContextInstance() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Get("ReuseDispatcherSynchronizationContextInstance");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void setReuseDispatcherSynchronizationContextInstance(boolean ReuseDispatcherSynchronizationContextInstance) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Set("ReuseDispatcherSynchronizationContextInstance", ReuseDispatcherSynchronizationContextInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

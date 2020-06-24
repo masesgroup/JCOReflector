@@ -89,9 +89,9 @@ public interface ICommandService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean IsCommandSupported(int commandId) throws Throwable;
-
     public boolean CanExecuteCommand(int commandId) throws Throwable;
+
+    public boolean IsCommandSupported(int commandId) throws Throwable;
 
 
     

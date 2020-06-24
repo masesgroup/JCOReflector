@@ -117,11 +117,12 @@ public class PolicyVersion extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getNamespace() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static PolicyVersion getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            JCObject val = (JCObject)classType.Get("Default");
+            return new PolicyVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,12 +150,11 @@ public class PolicyVersion extends NetObject  {
         }
     }
 
-    public static PolicyVersion getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getNamespace() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
-            return new PolicyVersion(val);
+            return (java.lang.String)classInstance.Get("Namespace");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -116,21 +116,21 @@ public class MemberCodeDomSerializer extends NetObject  {
     
     // Methods section
     
-    public void Serialize(IDesignerSerializationManager manager, NetObject value, MemberDescriptor descriptor, CodeStatementCollection statements) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Serialize", manager == null ? null : manager.getJCOInstance(), value == null ? null : value.getJCOInstance(), descriptor == null ? null : descriptor.getJCOInstance(), statements == null ? null : statements.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean ShouldSerialize(IDesignerSerializationManager manager, NetObject value, MemberDescriptor descriptor) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("ShouldSerialize", manager == null ? null : manager.getJCOInstance(), value == null ? null : value.getJCOInstance(), descriptor == null ? null : descriptor.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Serialize(IDesignerSerializationManager manager, NetObject value, MemberDescriptor descriptor, CodeStatementCollection statements) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Serialize", manager == null ? null : manager.getJCOInstance(), value == null ? null : value.getJCOInstance(), descriptor == null ? null : descriptor.getJCOInstance(), statements == null ? null : statements.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

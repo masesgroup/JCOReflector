@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.Oid;
-import system.security.cryptography.pkcs.Pkcs12SafeContents;
 import system.security.cryptography.CryptographicAttributeObjectCollection;
+import system.security.cryptography.pkcs.Pkcs12SafeContents;
 
 
 /**
@@ -149,27 +149,6 @@ public class Pkcs12SafeContentsBag extends NetObject  {
     
     // Properties section
     
-    public Pkcs12SafeContents getSafeContents() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SafeContents");
-            return new Pkcs12SafeContents(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSafeContents(Pkcs12SafeContents SafeContents) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SafeContents", SafeContents == null ? null : SafeContents.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CryptographicAttributeObjectCollection getAttributes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -186,6 +165,27 @@ public class Pkcs12SafeContentsBag extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Attributes", Attributes == null ? null : Attributes.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Pkcs12SafeContents getSafeContents() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SafeContents");
+            return new Pkcs12SafeContents(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSafeContents(Pkcs12SafeContents SafeContents) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SafeContents", SafeContents == null ? null : SafeContents.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

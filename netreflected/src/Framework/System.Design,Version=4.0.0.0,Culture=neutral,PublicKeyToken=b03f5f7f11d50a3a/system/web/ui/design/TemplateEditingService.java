@@ -40,11 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
+import system.web.ui.Control;
 import system.web.ui.design.ITemplateEditingFrame;
 import system.web.ui.design.ITemplateEditingFrameImplementation;
 import system.web.ui.design.TemplatedControlDesigner;
 import system.web.ui.webcontrols.Style;
-import system.web.ui.Control;
 
 
 /**
@@ -130,6 +130,16 @@ public class TemplateEditingService extends NetObject  {
     
     // Methods section
     
+    public java.lang.String GetContainingTemplateName(Control control) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetContainingTemplateName", control == null ? null : control.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner designer, java.lang.String frameName, java.lang.String[] templateNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -157,16 +167,6 @@ public class TemplateEditingService extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetContainingTemplateName(Control control) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetContainingTemplateName", control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

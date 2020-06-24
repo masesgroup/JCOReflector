@@ -37,14 +37,14 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.TypeCode;
-import system.SByte;
 import system.UInt16;
-import system.UInt32;
 import system.UInt64;
-import system.Single;
+import system.TypeCode;
 import microsoft.jscript.vsa.IJSVsaEngine;
 import microsoft.jscript.vsa.IJSVsaEngineImplementation;
+import system.SByte;
+import system.Single;
+import system.UInt32;
 
 
 /**
@@ -97,45 +97,45 @@ public interface IDebugConvert extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject ToPrimitive(NetObject value, TypeCode typeCode, boolean truncationPermitted) throws Throwable;
-
-    public java.lang.String ByteToString(byte value, int radix) throws Throwable;
-
-    public java.lang.String SByteToString(SByte value, int radix) throws Throwable;
-
-    public java.lang.String Int16ToString(short value, int radix) throws Throwable;
-
-    public java.lang.String UInt16ToString(UInt16 value, int radix) throws Throwable;
-
-    public java.lang.String Int32ToString(int value, int radix) throws Throwable;
-
-    public java.lang.String UInt32ToString(UInt32 value, int radix) throws Throwable;
-
-    public java.lang.String Int64ToString(long value, int radix) throws Throwable;
-
-    public java.lang.String UInt64ToString(UInt64 value, int radix) throws Throwable;
-
-    public java.lang.String SingleToString(Single value) throws Throwable;
-
-    public java.lang.String DoubleToString(double value) throws Throwable;
-
-    public java.lang.String BooleanToString(boolean value) throws Throwable;
-
-    public java.lang.String DoubleToDateString(double value) throws Throwable;
-
-    public java.lang.String RegexpToString(java.lang.String source, boolean ignoreCase, boolean global, boolean multiline) throws Throwable;
-
-    public java.lang.String StringToPrintable(java.lang.String source) throws Throwable;
-
-    public NetObject GetManagedObject(NetObject value) throws Throwable;
+    public NetObject GetManagedCharObject(UInt16 i) throws Throwable;
 
     public NetObject GetManagedInt64Object(long i) throws Throwable;
 
+    public NetObject GetManagedObject(NetObject value) throws Throwable;
+
     public NetObject GetManagedUInt64Object(UInt64 i) throws Throwable;
 
-    public NetObject GetManagedCharObject(UInt16 i) throws Throwable;
+    public NetObject ToPrimitive(NetObject value, TypeCode typeCode, boolean truncationPermitted) throws Throwable;
+
+    public java.lang.String BooleanToString(boolean value) throws Throwable;
+
+    public java.lang.String ByteToString(byte value, int radix) throws Throwable;
+
+    public java.lang.String DoubleToDateString(double value) throws Throwable;
+
+    public java.lang.String DoubleToString(double value) throws Throwable;
 
     public java.lang.String GetErrorMessageForHR(int hr, IJSVsaEngine engine) throws Throwable;
+
+    public java.lang.String Int16ToString(short value, int radix) throws Throwable;
+
+    public java.lang.String Int32ToString(int value, int radix) throws Throwable;
+
+    public java.lang.String Int64ToString(long value, int radix) throws Throwable;
+
+    public java.lang.String RegexpToString(java.lang.String source, boolean ignoreCase, boolean global, boolean multiline) throws Throwable;
+
+    public java.lang.String SByteToString(SByte value, int radix) throws Throwable;
+
+    public java.lang.String SingleToString(Single value) throws Throwable;
+
+    public java.lang.String StringToPrintable(java.lang.String source) throws Throwable;
+
+    public java.lang.String UInt16ToString(UInt16 value, int radix) throws Throwable;
+
+    public java.lang.String UInt32ToString(UInt32 value, int radix) throws Throwable;
+
+    public java.lang.String UInt64ToString(UInt64 value, int radix) throws Throwable;
 
 
     

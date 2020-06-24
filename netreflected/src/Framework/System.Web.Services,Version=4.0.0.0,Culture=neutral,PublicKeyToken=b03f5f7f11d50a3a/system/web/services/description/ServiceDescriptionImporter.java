@@ -38,18 +38,18 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.services.description.ServiceDescription;
-import system.web.services.description.ServiceDescriptionImportWarnings;
-import system.codedom.CodeNamespace;
-import system.codedom.CodeCompileUnit;
 import system.collections.specialized.StringCollection;
 import system.web.services.description.WebReferenceCollection;
 import system.codedom.compiler.CodeDomProvider;
+import system.codedom.CodeCompileUnit;
 import system.web.services.description.WebReferenceOptions;
+import system.web.services.description.ServiceDescriptionImportWarnings;
+import system.codedom.CodeNamespace;
+import system.web.services.description.ServiceDescription;
 import system.web.services.description.ServiceDescriptionCollection;
-import system.xml.serialization.XmlSchemas;
 import system.web.services.description.ServiceDescriptionImportStyle;
 import system.xml.serialization.CodeGenerationOptions;
+import system.xml.serialization.XmlSchemas;
 
 
 /**
@@ -135,11 +135,12 @@ public class ServiceDescriptionImporter extends NetObject  {
     
     // Methods section
     
-    public void AddServiceDescription(ServiceDescription serviceDescription, java.lang.String appSettingUrlKey, java.lang.String appSettingBaseUrl) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static StringCollection GenerateWebReferences(WebReferenceCollection webReferences, CodeDomProvider codeProvider, CodeCompileUnit codeCompileUnit, WebReferenceOptions options) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.XmlException, system.MulticastNotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("AddServiceDescription", serviceDescription == null ? null : serviceDescription.getJCOInstance(), appSettingUrlKey, appSettingBaseUrl);
+            JCObject objGenerateWebReferences = (JCObject)classType.Invoke("GenerateWebReferences", webReferences == null ? null : webReferences.getJCOInstance(), codeProvider == null ? null : codeProvider.getJCOInstance(), codeCompileUnit == null ? null : codeCompileUnit.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            return new StringCollection(objGenerateWebReferences);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,12 +157,11 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
 
-    public static StringCollection GenerateWebReferences(WebReferenceCollection webReferences, CodeDomProvider codeProvider, CodeCompileUnit codeCompileUnit, WebReferenceOptions options) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.XmlException, system.MulticastNotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void AddServiceDescription(ServiceDescription serviceDescription, java.lang.String appSettingUrlKey, java.lang.String appSettingBaseUrl) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGenerateWebReferences = (JCObject)classType.Invoke("GenerateWebReferences", webReferences == null ? null : webReferences.getJCOInstance(), codeProvider == null ? null : codeProvider.getJCOInstance(), codeCompileUnit == null ? null : codeCompileUnit.getJCOInstance(), options == null ? null : options.getJCOInstance());
-            return new StringCollection(objGenerateWebReferences);
+            classInstance.Invoke("AddServiceDescription", serviceDescription == null ? null : serviceDescription.getJCOInstance(), appSettingUrlKey, appSettingBaseUrl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,23 +171,53 @@ public class ServiceDescriptionImporter extends NetObject  {
     
     // Properties section
     
+    public CodeDomProvider getCodeGenerator() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CodeGenerator");
+            return new CodeDomProvider(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCodeGenerator(CodeDomProvider CodeGenerator) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CodeGenerator", CodeGenerator == null ? null : CodeGenerator.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getProtocolName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ProtocolName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setProtocolName(java.lang.String ProtocolName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ProtocolName", ProtocolName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ServiceDescriptionCollection getServiceDescriptions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ServiceDescriptions");
             return new ServiceDescriptionCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSchemas getSchemas() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Schemas");
-            return new XmlSchemas(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,42 +265,12 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
 
-    public CodeDomProvider getCodeGenerator() throws Throwable {
+    public XmlSchemas getSchemas() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeGenerator");
-            return new CodeDomProvider(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCodeGenerator(CodeDomProvider CodeGenerator) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CodeGenerator", CodeGenerator == null ? null : CodeGenerator.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getProtocolName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ProtocolName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setProtocolName(java.lang.String ProtocolName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ProtocolName", ProtocolName);
+            JCObject val = (JCObject)classInstance.Get("Schemas");
+            return new XmlSchemas(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

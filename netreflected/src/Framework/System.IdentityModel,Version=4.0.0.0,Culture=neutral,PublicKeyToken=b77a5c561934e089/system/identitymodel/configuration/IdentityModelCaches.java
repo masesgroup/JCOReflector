@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.identitymodel.tokens.TokenReplayCache;
 import system.identitymodel.tokens.SessionSecurityTokenCache;
+import system.identitymodel.tokens.TokenReplayCache;
 
 
 /**
@@ -129,27 +129,6 @@ public class IdentityModelCaches extends NetObject  {
     
     // Properties section
     
-    public TokenReplayCache getTokenReplayCache() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TokenReplayCache");
-            return new TokenReplayCache(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTokenReplayCache(TokenReplayCache TokenReplayCache) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TokenReplayCache", TokenReplayCache == null ? null : TokenReplayCache.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SessionSecurityTokenCache getSessionSecurityTokenCache() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,6 +145,27 @@ public class IdentityModelCaches extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SessionSecurityTokenCache", SessionSecurityTokenCache == null ? null : SessionSecurityTokenCache.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TokenReplayCache getTokenReplayCache() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TokenReplayCache");
+            return new TokenReplayCache(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTokenReplayCache(TokenReplayCache TokenReplayCache) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TokenReplayCache", TokenReplayCache == null ? null : TokenReplayCache.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

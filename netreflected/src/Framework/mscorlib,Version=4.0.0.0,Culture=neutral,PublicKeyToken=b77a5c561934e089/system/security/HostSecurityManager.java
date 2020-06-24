@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.security.PermissionSet;
 import system.security.policy.Evidence;
-import system.reflection.Assembly;
 import system.security.policy.ApplicationTrust;
 import system.security.policy.TrustManagerContext;
+import system.reflection.Assembly;
 import system.security.policy.EvidenceBase;
 import system.security.HostSecurityManagerOptions;
 import system.security.policy.PolicyLevel;
@@ -142,6 +142,17 @@ public class HostSecurityManager extends NetObject  {
         }
     }
 
+    public ApplicationTrust DetermineApplicationTrust(Evidence applicationEvidence, Evidence activatorEvidence, TrustManagerContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.policy.PolicyException, system.OverflowException, system.RankException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDetermineApplicationTrust = (JCObject)classInstance.Invoke("DetermineApplicationTrust", applicationEvidence == null ? null : applicationEvidence.getJCOInstance(), activatorEvidence == null ? null : activatorEvidence.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            return new ApplicationTrust(objDetermineApplicationTrust);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Evidence ProvideAppDomainEvidence(Evidence inputEvidence) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,12 +175,23 @@ public class HostSecurityManager extends NetObject  {
         }
     }
 
-    public ApplicationTrust DetermineApplicationTrust(Evidence applicationEvidence, Evidence activatorEvidence, TrustManagerContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.policy.PolicyException, system.OverflowException, system.RankException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public EvidenceBase GenerateAppDomainEvidence(NetType evidenceType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDetermineApplicationTrust = (JCObject)classInstance.Invoke("DetermineApplicationTrust", applicationEvidence == null ? null : applicationEvidence.getJCOInstance(), activatorEvidence == null ? null : activatorEvidence.getJCOInstance(), context == null ? null : context.getJCOInstance());
-            return new ApplicationTrust(objDetermineApplicationTrust);
+            JCObject objGenerateAppDomainEvidence = (JCObject)classInstance.Invoke("GenerateAppDomainEvidence", evidenceType == null ? null : evidenceType.getJCOInstance());
+            return new EvidenceBase(objGenerateAppDomainEvidence);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EvidenceBase GenerateAssemblyEvidence(NetType evidenceType, Assembly assembly) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGenerateAssemblyEvidence = (JCObject)classInstance.Invoke("GenerateAssemblyEvidence", evidenceType == null ? null : evidenceType.getJCOInstance(), assembly == null ? null : assembly.getJCOInstance());
+            return new EvidenceBase(objGenerateAssemblyEvidence);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,28 +226,6 @@ public class HostSecurityManager extends NetObject  {
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EvidenceBase GenerateAppDomainEvidence(NetType evidenceType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGenerateAppDomainEvidence = (JCObject)classInstance.Invoke("GenerateAppDomainEvidence", evidenceType == null ? null : evidenceType.getJCOInstance());
-            return new EvidenceBase(objGenerateAppDomainEvidence);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EvidenceBase GenerateAssemblyEvidence(NetType evidenceType, Assembly assembly) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGenerateAssemblyEvidence = (JCObject)classInstance.Invoke("GenerateAssemblyEvidence", evidenceType == null ? null : evidenceType.getJCOInstance(), assembly == null ? null : assembly.getJCOInstance());
-            return new EvidenceBase(objGenerateAssemblyEvidence);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

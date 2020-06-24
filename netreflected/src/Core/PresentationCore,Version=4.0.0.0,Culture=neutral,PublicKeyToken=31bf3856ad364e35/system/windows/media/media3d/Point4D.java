@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.media3d.Point4D;
-import system.windows.media.media3d.Matrix3D;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
+import system.windows.media.media3d.Matrix3D;
 
 
 /**
@@ -127,11 +127,31 @@ public class Point4D extends NetObject  {
     
     // Methods section
     
-    public void Offset(double deltaX, double deltaY, double deltaZ, double deltaW) throws Throwable {
+    public boolean Equals(Point4D value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Offset", deltaX, deltaY, deltaZ, deltaW);
+            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean Equals(Point4D point1, Point4D point2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("Equals", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,43 +168,12 @@ public class Point4D extends NetObject  {
         }
     }
 
-    public static Point4D Subtract(Point4D point1, Point4D point2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
-            return new Point4D(objSubtract);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Point4D Multiply(Point4D point, Matrix3D matrix) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objMultiply = (JCObject)classType.Invoke("Multiply", point == null ? null : point.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
             return new Point4D(objMultiply);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean Equals(Point4D point1, Point4D point2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("Equals", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Equals(Point4D value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,11 +190,22 @@ public class Point4D extends NetObject  {
         }
     }
 
-    public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
+    public static Point4D Subtract(Point4D point1, Point4D point2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
+            return new Point4D(objSubtract);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Offset(double deltaX, double deltaY, double deltaZ, double deltaW) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            classInstance.Invoke("Offset", deltaX, deltaY, deltaZ, deltaW);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,6 +215,26 @@ public class Point4D extends NetObject  {
     
     // Properties section
     
+    public double getW() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("W");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setW(double W) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("W", W);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public double getX() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -270,26 +290,6 @@ public class Point4D extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Z", Z);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getW() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("W");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setW(double W) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("W", W);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

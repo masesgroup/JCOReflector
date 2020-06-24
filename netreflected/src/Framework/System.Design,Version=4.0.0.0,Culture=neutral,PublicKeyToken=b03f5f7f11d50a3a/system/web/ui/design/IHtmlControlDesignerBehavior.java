@@ -92,13 +92,13 @@ public interface IHtmlControlDesignerBehavior extends IJCOBridgeReflected {
     
     public NetObject GetAttribute(java.lang.String attribute, boolean ignoreCase) throws Throwable;
 
-    public void RemoveAttribute(java.lang.String attribute, boolean ignoreCase) throws Throwable;
-
-    public void SetAttribute(java.lang.String attribute, NetObject value, boolean ignoreCase) throws Throwable;
-
     public NetObject GetStyleAttribute(java.lang.String attribute, boolean designTimeOnly, boolean ignoreCase) throws Throwable;
 
+    public void RemoveAttribute(java.lang.String attribute, boolean ignoreCase) throws Throwable;
+
     public void RemoveStyleAttribute(java.lang.String attribute, boolean designTimeOnly, boolean ignoreCase) throws Throwable;
+
+    public void SetAttribute(java.lang.String attribute, NetObject value, boolean ignoreCase) throws Throwable;
 
     public void SetStyleAttribute(java.lang.String attribute, boolean designTimeOnly, NetObject value, boolean ignoreCase) throws Throwable;
 
@@ -106,11 +106,11 @@ public interface IHtmlControlDesignerBehavior extends IJCOBridgeReflected {
     
     // Properties section
     
+    public NetObject getDesignTimeElement() throws Throwable;
+
     public HtmlControlDesigner getDesigner() throws Throwable;
 
     public void setDesigner(HtmlControlDesigner Designer) throws Throwable;
-
-    public NetObject getDesignTimeElement() throws Throwable;
 
 
 

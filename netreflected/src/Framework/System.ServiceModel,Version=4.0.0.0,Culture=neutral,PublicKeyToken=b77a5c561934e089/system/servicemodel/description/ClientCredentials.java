@@ -39,17 +39,17 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.selectors.SecurityTokenManager;
+import system.servicemodel.description.ClientCredentials;
 import system.servicemodel.description.ServiceEndpoint;
 import system.servicemodel.dispatcher.ClientRuntime;
-import system.servicemodel.description.ClientCredentials;
+import system.identitymodel.tokens.SecurityTokenHandlerCollectionManager;
+import system.servicemodel.security.HttpDigestClientCredential;
 import system.servicemodel.security.IssuedTokenClientCredential;
+import system.servicemodel.security.PeerCredential;
 import system.servicemodel.security.UserNamePasswordClientCredential;
+import system.servicemodel.security.WindowsClientCredential;
 import system.servicemodel.security.X509CertificateInitiatorClientCredential;
 import system.servicemodel.security.X509CertificateRecipientClientCredential;
-import system.servicemodel.security.WindowsClientCredential;
-import system.servicemodel.security.HttpDigestClientCredential;
-import system.servicemodel.security.PeerCredential;
-import system.identitymodel.tokens.SecurityTokenHandlerCollectionManager;
 
 
 /**
@@ -146,16 +146,6 @@ public class ClientCredentials extends NetObject  {
         }
     }
 
-    public void ApplyClientBehavior(ServiceEndpoint serviceEndpoint, ClientRuntime behavior) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.UriFormatException, system.NullReferenceException, system.xml.XmlException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ApplyClientBehavior", serviceEndpoint == null ? null : serviceEndpoint.getJCOInstance(), behavior == null ? null : behavior.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ClientCredentials Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -167,82 +157,55 @@ public class ClientCredentials extends NetObject  {
         }
     }
 
+    public void ApplyClientBehavior(ServiceEndpoint serviceEndpoint, ClientRuntime behavior) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.UriFormatException, system.NullReferenceException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ApplyClientBehavior", serviceEndpoint == null ? null : serviceEndpoint.getJCOInstance(), behavior == null ? null : behavior.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public IssuedTokenClientCredential getIssuedToken() throws Throwable {
+    public boolean getSupportInteractive() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuedToken");
-            return new IssuedTokenClientCredential(val);
+            return (boolean)classInstance.Get("SupportInteractive");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public UserNamePasswordClientCredential getUserName() throws Throwable {
+    public void setSupportInteractive(boolean SupportInteractive) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UserName");
-            return new UserNamePasswordClientCredential(val);
+            classInstance.Set("SupportInteractive", SupportInteractive);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public X509CertificateInitiatorClientCredential getClientCertificate() throws Throwable {
+    public boolean getUseIdentityConfiguration() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientCertificate");
-            return new X509CertificateInitiatorClientCredential(val);
+            return (boolean)classInstance.Get("UseIdentityConfiguration");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public X509CertificateRecipientClientCredential getServiceCertificate() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public void setUseIdentityConfiguration(boolean UseIdentityConfiguration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceCertificate");
-            return new X509CertificateRecipientClientCredential(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WindowsClientCredential getWindows() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Windows");
-            return new WindowsClientCredential(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HttpDigestClientCredential getHttpDigest() throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("HttpDigest");
-            return new HttpDigestClientCredential(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PeerCredential getPeer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Peer");
-            return new PeerCredential(val);
+            classInstance.Set("UseIdentityConfiguration", UseIdentityConfiguration);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,41 +232,78 @@ public class ClientCredentials extends NetObject  {
         }
     }
 
-    public boolean getUseIdentityConfiguration() throws Throwable {
+    public HttpDigestClientCredential getHttpDigest() throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("UseIdentityConfiguration");
+            JCObject val = (JCObject)classInstance.Get("HttpDigest");
+            return new HttpDigestClientCredential(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUseIdentityConfiguration(boolean UseIdentityConfiguration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public IssuedTokenClientCredential getIssuedToken() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("UseIdentityConfiguration", UseIdentityConfiguration);
+            JCObject val = (JCObject)classInstance.Get("IssuedToken");
+            return new IssuedTokenClientCredential(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getSupportInteractive() throws Throwable {
+    public PeerCredential getPeer() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("SupportInteractive");
+            JCObject val = (JCObject)classInstance.Get("Peer");
+            return new PeerCredential(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSupportInteractive(boolean SupportInteractive) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public UserNamePasswordClientCredential getUserName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SupportInteractive", SupportInteractive);
+            JCObject val = (JCObject)classInstance.Get("UserName");
+            return new UserNamePasswordClientCredential(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WindowsClientCredential getWindows() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Windows");
+            return new WindowsClientCredential(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public X509CertificateInitiatorClientCredential getClientCertificate() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ClientCertificate");
+            return new X509CertificateInitiatorClientCredential(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public X509CertificateRecipientClientCredential getServiceCertificate() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ServiceCertificate");
+            return new X509CertificateRecipientClientCredential(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

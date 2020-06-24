@@ -125,6 +125,17 @@ public class CompositionBatch extends NetObject  {
     
     // Methods section
     
+    public ComposablePart AddExport(Export export) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddExport = (JCObject)classInstance.Invoke("AddExport", export == null ? null : export.getJCOInstance());
+            return new ComposablePart(objAddExport);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddPart(ComposablePart part) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -140,17 +151,6 @@ public class CompositionBatch extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemovePart", part == null ? null : part.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ComposablePart AddExport(Export export) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddExport = (JCObject)classInstance.Invoke("AddExport", export == null ? null : export.getJCOInstance());
-            return new ComposablePart(objAddExport);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

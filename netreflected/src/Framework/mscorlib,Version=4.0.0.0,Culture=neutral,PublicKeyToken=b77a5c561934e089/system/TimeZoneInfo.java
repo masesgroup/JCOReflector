@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.TimeSpan;
-import system.DateTimeOffset;
-import system.DateTime;
 import system.TimeZoneInfo;
+import system.DateTime;
+import system.DateTimeOffset;
+import system.TimeSpan;
 
 
 /**
@@ -116,67 +116,21 @@ public class TimeZoneInfo extends NetObject  {
     
     // Methods section
     
-    public TimeSpan[] GetAmbiguousTimeOffsets(DateTimeOffset dateTimeOffset) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OverflowException {
+    public boolean Equals(TimeZoneInfo other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<TimeSpan> resultingArrayList = new ArrayList<TimeSpan>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAmbiguousTimeOffsets", dateTimeOffset == null ? null : dateTimeOffset.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new TimeSpan(resultingObject));
-            }
-            TimeSpan[] resultingArray = new TimeSpan[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TimeSpan[] GetAmbiguousTimeOffsets(DateTime dateTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
+    public boolean HasSameRules(TimeZoneInfo other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<TimeSpan> resultingArrayList = new ArrayList<TimeSpan>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAmbiguousTimeOffsets", dateTime == null ? null : dateTime.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new TimeSpan(resultingObject));
-            }
-            TimeSpan[] resultingArray = new TimeSpan[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TimeSpan GetUtcOffset(DateTimeOffset dateTimeOffset) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetUtcOffset = (JCObject)classInstance.Invoke("GetUtcOffset", dateTimeOffset == null ? null : dateTimeOffset.getJCOInstance());
-            return new TimeSpan(objGetUtcOffset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TimeSpan GetUtcOffset(DateTime dateTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetUtcOffset = (JCObject)classInstance.Invoke("GetUtcOffset", dateTime == null ? null : dateTime.getJCOInstance());
-            return new TimeSpan(objGetUtcOffset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsAmbiguousTime(DateTimeOffset dateTimeOffset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsAmbiguousTime", dateTimeOffset == null ? null : dateTimeOffset.getJCOInstance());
+            return (boolean)classInstance.Invoke("HasSameRules", other == null ? null : other.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,11 +146,11 @@ public class TimeZoneInfo extends NetObject  {
         }
     }
 
-    public boolean IsDaylightSavingTime(DateTimeOffset dateTimeOffset) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.ArgumentNullException {
+    public boolean IsAmbiguousTime(DateTimeOffset dateTimeOffset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsDaylightSavingTime", dateTimeOffset == null ? null : dateTimeOffset.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsAmbiguousTime", dateTimeOffset == null ? null : dateTimeOffset.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,65 +166,21 @@ public class TimeZoneInfo extends NetObject  {
         }
     }
 
+    public boolean IsDaylightSavingTime(DateTimeOffset dateTimeOffset) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsDaylightSavingTime", dateTimeOffset == null ? null : dateTimeOffset.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean IsInvalidTime(DateTime dateTime) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsInvalidTime", dateTime == null ? null : dateTime.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void ClearCachedData() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("ClearCachedData");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DateTimeOffset ConvertTimeBySystemTimeZoneId(DateTimeOffset dateTimeOffset, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.TimeZoneNotFoundException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objConvertTimeBySystemTimeZoneId = (JCObject)classType.Invoke("ConvertTimeBySystemTimeZoneId", dateTimeOffset == null ? null : dateTimeOffset.getJCOInstance(), destinationTimeZoneId);
-            return new DateTimeOffset(objConvertTimeBySystemTimeZoneId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DateTime ConvertTimeBySystemTimeZoneId(DateTime dateTime, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.TimeZoneNotFoundException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objConvertTimeBySystemTimeZoneId = (JCObject)classType.Invoke("ConvertTimeBySystemTimeZoneId", dateTime == null ? null : dateTime.getJCOInstance(), destinationTimeZoneId);
-            return new DateTime(objConvertTimeBySystemTimeZoneId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DateTime ConvertTimeBySystemTimeZoneId(DateTime dateTime, java.lang.String sourceTimeZoneId, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TimeZoneNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objConvertTimeBySystemTimeZoneId = (JCObject)classType.Invoke("ConvertTimeBySystemTimeZoneId", dateTime == null ? null : dateTime.getJCOInstance(), sourceTimeZoneId, destinationTimeZoneId);
-            return new DateTime(objConvertTimeBySystemTimeZoneId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DateTimeOffset ConvertTime(DateTimeOffset dateTimeOffset, TimeZoneInfo destinationTimeZone) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objConvertTime = (JCObject)classType.Invoke("ConvertTime", dateTimeOffset == null ? null : dateTimeOffset.getJCOInstance(), destinationTimeZone == null ? null : destinationTimeZone.getJCOInstance());
-            return new DateTimeOffset(objConvertTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,6 +203,28 @@ public class TimeZoneInfo extends NetObject  {
         try {
             JCObject objConvertTime = (JCObject)classType.Invoke("ConvertTime", dateTime == null ? null : dateTime.getJCOInstance(), sourceTimeZone == null ? null : sourceTimeZone.getJCOInstance(), destinationTimeZone == null ? null : destinationTimeZone.getJCOInstance());
             return new DateTime(objConvertTime);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DateTime ConvertTimeBySystemTimeZoneId(DateTime dateTime, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.TimeZoneNotFoundException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objConvertTimeBySystemTimeZoneId = (JCObject)classType.Invoke("ConvertTimeBySystemTimeZoneId", dateTime == null ? null : dateTime.getJCOInstance(), destinationTimeZoneId);
+            return new DateTime(objConvertTimeBySystemTimeZoneId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DateTime ConvertTimeBySystemTimeZoneId(DateTime dateTime, java.lang.String sourceTimeZoneId, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TimeZoneNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objConvertTimeBySystemTimeZoneId = (JCObject)classType.Invoke("ConvertTimeBySystemTimeZoneId", dateTime == null ? null : dateTime.getJCOInstance(), sourceTimeZoneId, destinationTimeZoneId);
+            return new DateTime(objConvertTimeBySystemTimeZoneId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,32 +263,23 @@ public class TimeZoneInfo extends NetObject  {
         }
     }
 
-    public boolean Equals(TimeZoneInfo other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TimeZoneInfo FromSerializedString(java.lang.String source) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException, system.InvalidTimeZoneException, system.OverflowException {
+    public static DateTimeOffset ConvertTime(DateTimeOffset dateTimeOffset, TimeZoneInfo destinationTimeZone) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromSerializedString = (JCObject)classType.Invoke("FromSerializedString", source);
-            return new TimeZoneInfo(objFromSerializedString);
+            JCObject objConvertTime = (JCObject)classType.Invoke("ConvertTime", dateTimeOffset == null ? null : dateTimeOffset.getJCOInstance(), destinationTimeZone == null ? null : destinationTimeZone.getJCOInstance());
+            return new DateTimeOffset(objConvertTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean HasSameRules(TimeZoneInfo other) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static DateTimeOffset ConvertTimeBySystemTimeZoneId(DateTimeOffset dateTimeOffset, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.TimeZoneNotFoundException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Invoke("HasSameRules", other == null ? null : other.getJCOInstance());
+            JCObject objConvertTimeBySystemTimeZoneId = (JCObject)classType.Invoke("ConvertTimeBySystemTimeZoneId", dateTimeOffset == null ? null : dateTimeOffset.getJCOInstance(), destinationTimeZoneId);
+            return new DateTimeOffset(objConvertTimeBySystemTimeZoneId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,6 +290,62 @@ public class TimeZoneInfo extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("ToSerializedString");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TimeSpan GetUtcOffset(DateTime dateTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetUtcOffset = (JCObject)classInstance.Invoke("GetUtcOffset", dateTime == null ? null : dateTime.getJCOInstance());
+            return new TimeSpan(objGetUtcOffset);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TimeSpan GetUtcOffset(DateTimeOffset dateTimeOffset) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetUtcOffset = (JCObject)classInstance.Invoke("GetUtcOffset", dateTimeOffset == null ? null : dateTimeOffset.getJCOInstance());
+            return new TimeSpan(objGetUtcOffset);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TimeSpan[] GetAmbiguousTimeOffsets(DateTime dateTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<TimeSpan> resultingArrayList = new ArrayList<TimeSpan>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAmbiguousTimeOffsets", dateTime == null ? null : dateTime.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new TimeSpan(resultingObject));
+            }
+            TimeSpan[] resultingArray = new TimeSpan[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TimeSpan[] GetAmbiguousTimeOffsets(DateTimeOffset dateTimeOffset) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<TimeSpan> resultingArrayList = new ArrayList<TimeSpan>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAmbiguousTimeOffsets", dateTimeOffset == null ? null : dateTimeOffset.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new TimeSpan(resultingObject));
+            }
+            TimeSpan[] resultingArray = new TimeSpan[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,35 +373,36 @@ public class TimeZoneInfo extends NetObject  {
         }
     }
 
+    public static TimeZoneInfo FromSerializedString(java.lang.String source) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException, system.InvalidTimeZoneException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromSerializedString = (JCObject)classType.Invoke("FromSerializedString", source);
+            return new TimeZoneInfo(objFromSerializedString);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ClearCachedData() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ClearCachedData");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public java.lang.String getId() throws Throwable {
+    public boolean getSupportsDaylightSavingTime() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Id");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDisplayName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DisplayName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getStandardName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("StandardName");
+            return (boolean)classInstance.Get("SupportsDaylightSavingTime");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,22 +418,42 @@ public class TimeZoneInfo extends NetObject  {
         }
     }
 
+    public java.lang.String getDisplayName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("DisplayName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Id");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getStandardName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("StandardName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TimeSpan getBaseUtcOffset() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("BaseUtcOffset");
             return new TimeSpan(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getSupportsDaylightSavingTime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SupportsDaylightSavingTime");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

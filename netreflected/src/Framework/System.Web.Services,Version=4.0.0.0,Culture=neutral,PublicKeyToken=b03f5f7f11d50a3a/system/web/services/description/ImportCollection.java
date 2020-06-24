@@ -113,21 +113,21 @@ public class ImportCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(Import _import) throws Throwable {
+    public boolean Contains(Import _import) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", _import == null ? null : _import.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", _import == null ? null : _import.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, Import _import) throws Throwable {
+    public int Add(Import _import) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, _import == null ? null : _import.getJCOInstance());
+            return (int)classInstance.Invoke("Add", _import == null ? null : _import.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,21 +143,11 @@ public class ImportCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(Import _import) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", _import == null ? null : _import.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(Import _import) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", _import == null ? null : _import.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,11 +163,21 @@ public class ImportCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public void Insert(int index, Import _import) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, _import == null ? null : _import.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(Import _import) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", _import == null ? null : _import.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

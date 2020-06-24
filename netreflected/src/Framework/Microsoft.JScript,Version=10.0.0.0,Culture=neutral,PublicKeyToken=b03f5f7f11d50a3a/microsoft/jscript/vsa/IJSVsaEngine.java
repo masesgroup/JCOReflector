@@ -39,12 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import microsoft.jscript.vsa.IJSVsaPersistSite;
 import microsoft.jscript.vsa.IJSVsaPersistSiteImplementation;
-import microsoft.jscript.vsa.IJSVsaSite;
-import microsoft.jscript.vsa.IJSVsaSiteImplementation;
-import system.security.policy.Evidence;
 import microsoft.jscript.vsa.IJSVsaItems;
 import microsoft.jscript.vsa.IJSVsaItemsImplementation;
+import microsoft.jscript.vsa.IJSVsaSite;
+import microsoft.jscript.vsa.IJSVsaSiteImplementation;
 import system.reflection.Assembly;
+import system.security.policy.Evidence;
 
 
 /**
@@ -97,33 +97,59 @@ public interface IJSVsaEngine extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject GetOption(java.lang.String name) throws Throwable;
-
-    public void SetOption(java.lang.String name, NetObject value) throws Throwable;
-
     public boolean Compile() throws Throwable;
 
-    public void Run() throws Throwable;
+    public boolean IsValidIdentifier(java.lang.String identifier) throws Throwable;
 
-    public void Reset() throws Throwable;
+    public NetObject GetOption(java.lang.String name) throws Throwable;
 
     public void Close() throws Throwable;
 
-    public void RevokeCache() throws Throwable;
-
-    public void SaveSourceState(IJSVsaPersistSite site) throws Throwable;
+    public void InitNew() throws Throwable;
 
     public void LoadSourceState(IJSVsaPersistSite site) throws Throwable;
 
-    public boolean IsValidIdentifier(java.lang.String identifier) throws Throwable;
+    public void Reset() throws Throwable;
+
+    public void RevokeCache() throws Throwable;
+
+    public void Run() throws Throwable;
+
+    public void SaveSourceState(IJSVsaPersistSite site) throws Throwable;
+
+    public void SetOption(java.lang.String name, NetObject value) throws Throwable;
 
 
     
     // Properties section
     
+    public boolean getGenerateDebugInfo() throws Throwable;
+
+    public void setGenerateDebugInfo(boolean GenerateDebugInfo) throws Throwable;
+
+    public boolean getIsCompiled() throws Throwable;
+
+    public boolean getIsDirty() throws Throwable;
+
+    public boolean getIsRunning() throws Throwable;
+
+    public int getLCID() throws Throwable;
+
+    public void setLCID(int LCID) throws Throwable;
+
+    public IJSVsaItems getItems() throws Throwable;
+
     public IJSVsaSite getSite() throws Throwable;
 
     public void setSite(IJSVsaSite Site) throws Throwable;
+
+    public Assembly getAssembly() throws Throwable;
+
+    public Evidence getEvidence() throws Throwable;
+
+    public void setEvidence(Evidence Evidence) throws Throwable;
+
+    public java.lang.String getLanguage() throws Throwable;
 
     public java.lang.String getName() throws Throwable;
 
@@ -137,31 +163,7 @@ public interface IJSVsaEngine extends IJCOBridgeReflected {
 
     public void setRootNamespace(java.lang.String RootNamespace) throws Throwable;
 
-    public int getLCID() throws Throwable;
-
-    public void setLCID(int LCID) throws Throwable;
-
-    public boolean getGenerateDebugInfo() throws Throwable;
-
-    public void setGenerateDebugInfo(boolean GenerateDebugInfo) throws Throwable;
-
-    public Evidence getEvidence() throws Throwable;
-
-    public void setEvidence(Evidence Evidence) throws Throwable;
-
-    public IJSVsaItems getItems() throws Throwable;
-
-    public boolean getIsDirty() throws Throwable;
-
-    public java.lang.String getLanguage() throws Throwable;
-
     public java.lang.String getVersion() throws Throwable;
-
-    public boolean getIsRunning() throws Throwable;
-
-    public boolean getIsCompiled() throws Throwable;
-
-    public Assembly getAssembly() throws Throwable;
 
 
 

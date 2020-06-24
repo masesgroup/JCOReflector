@@ -134,17 +134,6 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
-    public static Transaction GetTransactionFromExportCookie(byte[] cookie) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.AbandonedMutexException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetTransactionFromExportCookie = (JCObject)classType.Invoke("GetTransactionFromExportCookie", (Object)cookie);
-            return new Transaction(objGetTransactionFromExportCookie);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static byte[] GetTransmitterPropagationToken(Transaction transaction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.transactions.TransactionPromotionException, system.transactions.TransactionException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -164,12 +153,20 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
-    public static Transaction GetTransactionFromTransmitterPropagationToken(byte[] propagationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.AbandonedMutexException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
+    public static byte[] GetWhereabouts() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetTransactionFromTransmitterPropagationToken = (JCObject)classType.Invoke("GetTransactionFromTransmitterPropagationToken", (Object)propagationToken);
-            return new Transaction(objGetTransactionFromTransmitterPropagationToken);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetWhereabouts");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexGetWhereabouts = 0; indexGetWhereabouts < resultingArrayList.size(); indexGetWhereabouts++ ) {
+				resultingArray[indexGetWhereabouts] = (byte)resultingArrayList.get(indexGetWhereabouts);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,20 +194,23 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
-    public static byte[] GetWhereabouts() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static Transaction GetTransactionFromExportCookie(byte[] cookie) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.AbandonedMutexException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetWhereabouts");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexGetWhereabouts = 0; indexGetWhereabouts < resultingArrayList.size(); indexGetWhereabouts++ ) {
-				resultingArray[indexGetWhereabouts] = (byte)resultingArrayList.get(indexGetWhereabouts);
-            }
-            return resultingArray;
+            JCObject objGetTransactionFromExportCookie = (JCObject)classType.Invoke("GetTransactionFromExportCookie", (Object)cookie);
+            return new Transaction(objGetTransactionFromExportCookie);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Transaction GetTransactionFromTransmitterPropagationToken(byte[] propagationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.AbandonedMutexException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetTransactionFromTransmitterPropagationToken = (JCObject)classType.Invoke("GetTransactionFromTransmitterPropagationToken", (Object)propagationToken);
+            return new Transaction(objGetTransactionFromTransmitterPropagationToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

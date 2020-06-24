@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.Assembly;
-import system.data.metadata.edm.EdmItemCollection;
-import system.data.metadata.edm.StructuralType;
+import system.data.metadata.edm.GlobalItem;
 import system.data.metadata.edm.EnumType;
+import system.data.metadata.edm.StructuralType;
 import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.EntityContainer;
-import system.data.metadata.edm.GlobalItem;
+import system.reflection.Assembly;
+import system.data.metadata.edm.EdmItemCollection;
 import system.data.metadata.edm.DataSpace;
 
 
@@ -131,43 +131,31 @@ public class ObjectItemCollection extends NetObject  {
     
     // Methods section
     
-    public void LoadFromAssembly(Assembly assembly) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.data.MetadataException, system.data.MappingException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+    public boolean Contains(GlobalItem value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("LoadFromAssembly", assembly == null ? null : assembly.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void LoadFromAssembly(Assembly assembly, EdmItemCollection edmItemCollection) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.data.MetadataException, system.data.MappingException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+    public boolean Contains(java.lang.String identity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("LoadFromAssembly", assembly == null ? null : assembly.getJCOInstance(), edmItemCollection == null ? null : edmItemCollection.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", identity);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType GetClrType(StructuralType objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public int IndexOf(GlobalItem value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetClrType = (JCObject)classInstance.Invoke("GetClrType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
-            return new NetType(objGetClrType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType GetClrType(EnumType objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetClrType = (JCObject)classInstance.Invoke("GetClrType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
-            return new NetType(objGetClrType);
+            return (int)classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,31 +216,23 @@ public class ObjectItemCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(java.lang.String identity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
+    public NetType GetClrType(EnumType objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", identity);
+            JCObject objGetClrType = (JCObject)classInstance.Invoke("GetClrType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
+            return new NetType(objGetClrType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int IndexOf(GlobalItem value) throws Throwable {
+    public NetType GetClrType(StructuralType objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Contains(GlobalItem value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
+            JCObject objGetClrType = (JCObject)classInstance.Invoke("GetClrType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
+            return new NetType(objGetClrType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,21 +248,30 @@ public class ObjectItemCollection extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public DataSpace getDataSpace() throws Throwable {
+    public void LoadFromAssembly(Assembly assembly) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.data.MetadataException, system.data.MappingException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSpace");
-            return new DataSpace(val);
+            classInstance.Invoke("LoadFromAssembly", assembly == null ? null : assembly.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public void LoadFromAssembly(Assembly assembly, EdmItemCollection edmItemCollection) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.data.MetadataException, system.data.MappingException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("LoadFromAssembly", assembly == null ? null : assembly.getJCOInstance(), edmItemCollection == null ? null : edmItemCollection.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+
+    
+    // Properties section
+    
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -298,6 +287,17 @@ public class ObjectItemCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("Count");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataSpace getDataSpace() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DataSpace");
+            return new DataSpace(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

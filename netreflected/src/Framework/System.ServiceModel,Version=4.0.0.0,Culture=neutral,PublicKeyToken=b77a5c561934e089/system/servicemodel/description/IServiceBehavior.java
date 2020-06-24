@@ -91,9 +91,9 @@ public interface IServiceBehavior extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable;
-
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable;
+
+    public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable;
 
 
     

@@ -39,16 +39,16 @@ import java.util.ArrayList;
 
 // Import section
 import microsoft.visualbasic.devices.Audio;
-import microsoft.visualbasic.myservices.ClipboardProxy;
-import microsoft.visualbasic.devices.Ports;
-import microsoft.visualbasic.devices.Mouse;
-import microsoft.visualbasic.devices.Keyboard;
-import system.windows.forms.Screen;
 import microsoft.visualbasic.devices.Clock;
-import microsoft.visualbasic.myservices.FileSystemProxy;
 import microsoft.visualbasic.devices.ComputerInfo;
+import microsoft.visualbasic.devices.Keyboard;
+import microsoft.visualbasic.devices.Mouse;
 import microsoft.visualbasic.devices.Network;
+import microsoft.visualbasic.devices.Ports;
+import microsoft.visualbasic.myservices.ClipboardProxy;
+import microsoft.visualbasic.myservices.FileSystemProxy;
 import microsoft.visualbasic.myservices.RegistryProxy;
+import system.windows.forms.Screen;
 
 
 /**
@@ -149,78 +149,12 @@ public class Computer extends NetObject  {
         }
     }
 
-    public ClipboardProxy getClipboard() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Clipboard");
-            return new ClipboardProxy(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Ports getPorts() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Ports");
-            return new Ports(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Mouse getMouse() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Mouse");
-            return new Mouse(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Keyboard getKeyboard() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Keyboard");
-            return new Keyboard(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Screen getScreen() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.MemberAccessException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Screen");
-            return new Screen(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Clock getClock() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Clock");
             return new Clock(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FileSystemProxy getFileSystem() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("FileSystem");
-            return new FileSystemProxy(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,12 +171,78 @@ public class Computer extends NetObject  {
         }
     }
 
+    public Keyboard getKeyboard() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Keyboard");
+            return new Keyboard(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Mouse getMouse() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Mouse");
+            return new Mouse(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Network getNetwork() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Network");
             return new Network(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Ports getPorts() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Ports");
+            return new Ports(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ClipboardProxy getClipboard() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Clipboard");
+            return new ClipboardProxy(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FileSystemProxy getFileSystem() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("FileSystem");
+            return new FileSystemProxy(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RegistryProxy getRegistry() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Registry");
+            return new RegistryProxy(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,12 +258,12 @@ public class Computer extends NetObject  {
         }
     }
 
-    public RegistryProxy getRegistry() throws Throwable {
+    public Screen getScreen() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.MemberAccessException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Registry");
-            return new RegistryProxy(val);
+            JCObject val = (JCObject)classInstance.Get("Screen");
+            return new Screen(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

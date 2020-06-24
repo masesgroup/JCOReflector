@@ -126,6 +126,16 @@ public class XmlMemberMapping extends NetObject  {
         }
     }
 
+    public boolean getCheckSpecified() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("CheckSpecified");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getElementName() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,11 +146,11 @@ public class XmlMemberMapping extends NetObject  {
         }
     }
 
-    public java.lang.String getXsdElementName() throws Throwable {
+    public java.lang.String getMemberName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("XsdElementName");
+            return (java.lang.String)classInstance.Get("MemberName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,11 +166,11 @@ public class XmlMemberMapping extends NetObject  {
         }
     }
 
-    public java.lang.String getMemberName() throws Throwable {
+    public java.lang.String getTypeFullName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("MemberName");
+            return (java.lang.String)classInstance.Get("TypeFullName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,21 +196,11 @@ public class XmlMemberMapping extends NetObject  {
         }
     }
 
-    public java.lang.String getTypeFullName() throws Throwable {
+    public java.lang.String getXsdElementName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("TypeFullName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCheckSpecified() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CheckSpecified");
+            return (java.lang.String)classInstance.Get("XsdElementName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

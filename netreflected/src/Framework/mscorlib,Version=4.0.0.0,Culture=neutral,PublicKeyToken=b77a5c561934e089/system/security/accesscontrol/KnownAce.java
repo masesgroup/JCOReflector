@@ -39,12 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.accesscontrol.GenericAce;
-import system.security.principal.SecurityIdentifier;
-import system.security.accesscontrol.AceType;
 import system.security.accesscontrol.AceFlags;
+import system.security.accesscontrol.AceType;
+import system.security.accesscontrol.AuditFlags;
 import system.security.accesscontrol.InheritanceFlags;
 import system.security.accesscontrol.PropagationFlags;
-import system.security.accesscontrol.AuditFlags;
+import system.security.principal.SecurityIdentifier;
 
 
 /**
@@ -144,6 +144,16 @@ public class KnownAce extends NetObject  {
     
     // Properties section
     
+    public boolean getIsInherited() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsInherited");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int getAccessMask() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,33 +174,11 @@ public class KnownAce extends NetObject  {
         }
     }
 
-    public SecurityIdentifier getSecurityIdentifier() throws Throwable {
+    public int getBinaryLength() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityIdentifier");
-            return new SecurityIdentifier(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSecurityIdentifier(SecurityIdentifier SecurityIdentifier) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SecurityIdentifier", SecurityIdentifier == null ? null : SecurityIdentifier.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AceType getAceType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AceType");
-            return new AceType(val);
+            return (int)classInstance.Get("BinaryLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,11 +205,23 @@ public class KnownAce extends NetObject  {
         }
     }
 
-    public boolean getIsInherited() throws Throwable {
+    public AceType getAceType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsInherited");
+            JCObject val = (JCObject)classInstance.Get("AceType");
+            return new AceType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AuditFlags getAuditFlags() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AuditFlags");
+            return new AuditFlags(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,22 +249,22 @@ public class KnownAce extends NetObject  {
         }
     }
 
-    public AuditFlags getAuditFlags() throws Throwable {
+    public SecurityIdentifier getSecurityIdentifier() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AuditFlags");
-            return new AuditFlags(val);
+            JCObject val = (JCObject)classInstance.Get("SecurityIdentifier");
+            return new SecurityIdentifier(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getBinaryLength() throws Throwable {
+    public void setSecurityIdentifier(SecurityIdentifier SecurityIdentifier) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("BinaryLength");
+            classInstance.Set("SecurityIdentifier", SecurityIdentifier == null ? null : SecurityIdentifier.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

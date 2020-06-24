@@ -113,22 +113,22 @@ public class KeyInterop extends NetObject  {
     
     // Methods section
     
+    public static int VirtualKeyFromKey(Key key) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("VirtualKeyFromKey", key == null ? null : key.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Key KeyFromVirtualKey(int virtualKey) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objKeyFromVirtualKey = (JCObject)classType.Invoke("KeyFromVirtualKey", virtualKey);
             return new Key(objKeyFromVirtualKey);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int VirtualKeyFromKey(Key key) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("VirtualKeyFromKey", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.reflection.MemberInfo;
 import system.codedom.CodeTypeDeclaration;
 import system.codedom.CodeCompileUnit;
+import system.reflection.MemberInfo;
 
 
 /**
@@ -92,19 +92,19 @@ public interface IDataContractSurrogate extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetType GetDataContractType(NetType type) throws Throwable;
-
-    public NetObject GetObjectToSerialize(NetObject obj, NetType targetType) throws Throwable;
-
-    public NetObject GetDeserializedObject(NetObject obj, NetType targetType) throws Throwable;
+    public CodeTypeDeclaration ProcessImportedType(CodeTypeDeclaration typeDeclaration, CodeCompileUnit compileUnit) throws Throwable;
 
     public NetObject GetCustomDataToExport(MemberInfo memberInfo, NetType dataContractType) throws Throwable;
 
     public NetObject GetCustomDataToExport(NetType clrType, NetType dataContractType) throws Throwable;
 
-    public NetType GetReferencedTypeOnImport(java.lang.String typeName, java.lang.String typeNamespace, NetObject customData) throws Throwable;
+    public NetObject GetDeserializedObject(NetObject obj, NetType targetType) throws Throwable;
 
-    public CodeTypeDeclaration ProcessImportedType(CodeTypeDeclaration typeDeclaration, CodeCompileUnit compileUnit) throws Throwable;
+    public NetObject GetObjectToSerialize(NetObject obj, NetType targetType) throws Throwable;
+
+    public NetType GetDataContractType(NetType type) throws Throwable;
+
+    public NetType GetReferencedTypeOnImport(java.lang.String typeName, java.lang.String typeNamespace, NetObject customData) throws Throwable;
 
 
     

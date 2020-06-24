@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.CustomAttributeHandleCollection;
-import system.reflection.metadata.StringHandle;
 import system.reflection.metadata.GuidHandle;
+import system.reflection.metadata.StringHandle;
 
 
 /**
@@ -140,22 +140,11 @@ public class ModuleDefinition extends NetObject  {
         }
     }
 
-    public StringHandle getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public GuidHandle getBaseGenerationId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
-            return new StringHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public GuidHandle getMvid() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Mvid");
+            JCObject val = (JCObject)classInstance.Get("BaseGenerationId");
             return new GuidHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -173,12 +162,23 @@ public class ModuleDefinition extends NetObject  {
         }
     }
 
-    public GuidHandle getBaseGenerationId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public GuidHandle getMvid() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseGenerationId");
+            JCObject val = (JCObject)classInstance.Get("Mvid");
             return new GuidHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StringHandle getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Name");
+            return new StringHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

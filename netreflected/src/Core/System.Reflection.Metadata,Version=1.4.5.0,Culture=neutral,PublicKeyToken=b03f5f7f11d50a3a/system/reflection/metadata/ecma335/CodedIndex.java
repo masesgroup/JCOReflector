@@ -113,11 +113,11 @@ public class CodedIndex extends NetObject  {
     
     // Methods section
     
-    public static int HasCustomAttribute(EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static int CustomAttributeType(EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("HasCustomAttribute", handle == null ? null : handle.getJCOInstance());
+            return (int)classType.Invoke("CustomAttributeType", handle == null ? null : handle.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -133,11 +133,21 @@ public class CodedIndex extends NetObject  {
         }
     }
 
-    public static int CustomAttributeType(EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static int HasCustomAttribute(EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("CustomAttributeType", handle == null ? null : handle.getJCOInstance());
+            return (int)classType.Invoke("HasCustomAttribute", handle == null ? null : handle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int HasCustomDebugInformation(EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("HasCustomDebugInformation", handle == null ? null : handle.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,16 +258,6 @@ public class CodedIndex extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (int)classType.Invoke("TypeOrMethodDef", handle == null ? null : handle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int HasCustomDebugInformation(EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("HasCustomDebugInformation", handle == null ? null : handle.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.UInt64;
 import system.UInt32;
+import system.UInt64;
 
 
 /**
@@ -114,21 +114,21 @@ public class SafeMemoryMappedViewHandle extends NetObject  {
     
     // Methods section
     
-    public void Initialize(UInt64 numBytes) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", numBytes == null ? null : numBytes.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Initialize(UInt32 numElements, UInt32 sizeOfEachElement) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", numElements == null ? null : numElements.getJCOInstance(), sizeOfEachElement == null ? null : sizeOfEachElement.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Initialize(UInt64 numBytes) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Initialize", numBytes == null ? null : numBytes.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,16 +144,25 @@ public class SafeMemoryMappedViewHandle extends NetObject  {
         }
     }
 
+    public void SetHandleAsInvalid() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetHandleAsInvalid");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public UInt64 getByteLength() throws Throwable, system.InvalidOperationException {
+    public boolean getIsClosed() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ByteLength");
-            return new UInt64(val);
+            return (boolean)classInstance.Get("IsClosed");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,11 +178,12 @@ public class SafeMemoryMappedViewHandle extends NetObject  {
         }
     }
 
-    public boolean getIsClosed() throws Throwable {
+    public UInt64 getByteLength() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsClosed");
+            JCObject val = (JCObject)classInstance.Get("ByteLength");
+            return new UInt64(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

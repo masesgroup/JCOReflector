@@ -96,11 +96,11 @@ public interface ITextExpression extends IJCOBridgeReflected {
     
     // Properties section
     
+    public boolean getRequiresCompilation() throws Throwable;
+
     public java.lang.String getExpressionText() throws Throwable;
 
     public java.lang.String getLanguage() throws Throwable;
-
-    public boolean getRequiresCompilation() throws Throwable;
 
 
 

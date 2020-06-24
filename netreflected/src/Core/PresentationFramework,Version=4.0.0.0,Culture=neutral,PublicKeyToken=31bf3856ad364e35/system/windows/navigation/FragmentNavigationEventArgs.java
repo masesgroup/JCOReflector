@@ -116,16 +116,6 @@ public class FragmentNavigationEventArgs extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getFragment() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Fragment");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -152,6 +142,16 @@ public class FragmentNavigationEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Navigator");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getFragment() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Fragment");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

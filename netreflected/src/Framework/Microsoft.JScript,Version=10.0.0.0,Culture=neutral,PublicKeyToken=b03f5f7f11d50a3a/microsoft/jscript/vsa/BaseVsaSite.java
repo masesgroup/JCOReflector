@@ -125,6 +125,16 @@ public class BaseVsaSite extends NetObject  {
     
     // Methods section
     
+    public boolean OnCompilerError(IJSVsaError error) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("OnCompilerError", error == null ? null : error.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetEventSourceInstance(java.lang.String itemName, java.lang.String eventSourceName) throws Throwable, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -152,16 +162,6 @@ public class BaseVsaSite extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Notify", notify, optional == null ? null : optional.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean OnCompilerError(IJSVsaError error) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("OnCompilerError", error == null ? null : error.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

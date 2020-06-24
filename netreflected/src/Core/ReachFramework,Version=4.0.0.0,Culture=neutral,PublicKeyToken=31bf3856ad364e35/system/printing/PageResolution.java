@@ -120,21 +120,21 @@ public class PageResolution extends NetObject  {
         }
     }
 
-    public PageResolution(PageQualitativeResolution qualitative) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(qualitative == null ? null : qualitative.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PageResolution(int resolutionX, int resolutionY, PageQualitativeResolution qualitative) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(resolutionX, resolutionY, qualitative == null ? null : qualitative.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PageResolution(PageQualitativeResolution qualitative) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(qualitative == null ? null : qualitative.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

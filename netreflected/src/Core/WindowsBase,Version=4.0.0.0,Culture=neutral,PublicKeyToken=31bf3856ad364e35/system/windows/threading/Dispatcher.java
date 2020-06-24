@@ -38,20 +38,20 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.threading.DispatcherOperation;
 import system.windows.threading.DispatcherPriority;
+import system.TimeSpan;
 import system.windows.threading.Dispatcher;
 import system.threading.Thread;
-import system.windows.threading.DispatcherFrame;
-import system.windows.threading.DispatcherPriorityAwaitable;
+import system.windows.threading.DispatcherOperation;
 import system.Action;
 import system.threading.CancellationToken;
-import system.TimeSpan;
+import system.windows.threading.DispatcherPriorityAwaitable;
 import system.windows.threading.DispatcherProcessingDisabled;
+import system.windows.threading.DispatcherFrame;
 import system.windows.threading.DispatcherHooks;
 import system.EventHandler;
-import system.windows.threading.DispatcherUnhandledExceptionFilterEventHandler;
 import system.windows.threading.DispatcherUnhandledExceptionEventHandler;
+import system.windows.threading.DispatcherUnhandledExceptionFilterEventHandler;
 
 
 /**
@@ -126,31 +126,11 @@ public class Dispatcher extends NetObject  {
     
     // Methods section
     
-    public void VerifyAccess() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("VerifyAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean CheckAccess() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("CheckAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void ValidatePriority(DispatcherPriority priority, java.lang.String parameterName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("ValidatePriority", priority == null ? null : priority.getJCOInstance(), parameterName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,51 +147,34 @@ public class Dispatcher extends NetObject  {
         }
     }
 
-    public void BeginInvokeShutdown(DispatcherPriority priority) throws Throwable, system.ArgumentException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public DispatcherOperation InvokeAsync(Action callback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidCastException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("BeginInvokeShutdown", priority == null ? null : priority.getJCOInstance());
+            JCObject objInvokeAsync = (JCObject)classInstance.Invoke("InvokeAsync", callback);
+            return new DispatcherOperation(objInvokeAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void InvokeShutdown() throws Throwable, system.ArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.InvalidOperationException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.AbandonedMutexException, system.TimeoutException {
+    public DispatcherOperation InvokeAsync(Action callback, DispatcherPriority priority) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidCastException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InvokeShutdown");
+            JCObject objInvokeAsync = (JCObject)classInstance.Invoke("InvokeAsync", callback, priority == null ? null : priority.getJCOInstance());
+            return new DispatcherOperation(objInvokeAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void Run() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.TypeLoadException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DispatcherOperation InvokeAsync(Action callback, DispatcherPriority priority, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.InvalidCastException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Invoke("Run");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void PushFrame(DispatcherFrame frame) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException, system.TimeoutException, system.InvalidCastException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("PushFrame", frame == null ? null : frame.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void ExitAllFrames() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException, system.TimeoutException, system.PlatformNotSupportedException, system.InvalidCastException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("ExitAllFrames");
+            JCObject objInvokeAsync = (JCObject)classInstance.Invoke("InvokeAsync", callback, priority == null ? null : priority.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            return new DispatcherOperation(objInvokeAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,6 +197,37 @@ public class Dispatcher extends NetObject  {
         try {
             JCObject objYield = (JCObject)classType.Invoke("Yield", priority == null ? null : priority.getJCOInstance());
             return new DispatcherPriorityAwaitable(objYield);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DispatcherProcessingDisabled DisableProcessing() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDisableProcessing = (JCObject)classInstance.Invoke("DisableProcessing");
+            return new DispatcherProcessingDisabled(objDisableProcessing);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void BeginInvokeShutdown(DispatcherPriority priority) throws Throwable, system.ArgumentException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BeginInvokeShutdown", priority == null ? null : priority.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ExitAllFrames() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException, system.TimeoutException, system.PlatformNotSupportedException, system.InvalidCastException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ExitAllFrames");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,45 +273,51 @@ public class Dispatcher extends NetObject  {
         }
     }
 
-    public DispatcherOperation InvokeAsync(Action callback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidCastException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException {
+    public void InvokeShutdown() throws Throwable, system.ArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.InvalidOperationException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.AbandonedMutexException, system.TimeoutException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInvokeAsync = (JCObject)classInstance.Invoke("InvokeAsync", callback);
-            return new DispatcherOperation(objInvokeAsync);
+            classInstance.Invoke("InvokeShutdown");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DispatcherOperation InvokeAsync(Action callback, DispatcherPriority priority) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidCastException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void PushFrame(DispatcherFrame frame) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException, system.TimeoutException, system.InvalidCastException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objInvokeAsync = (JCObject)classInstance.Invoke("InvokeAsync", callback, priority == null ? null : priority.getJCOInstance());
-            return new DispatcherOperation(objInvokeAsync);
+            classType.Invoke("PushFrame", frame == null ? null : frame.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DispatcherOperation InvokeAsync(Action callback, DispatcherPriority priority, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.InvalidCastException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void Run() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.TypeLoadException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objInvokeAsync = (JCObject)classInstance.Invoke("InvokeAsync", callback, priority == null ? null : priority.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
-            return new DispatcherOperation(objInvokeAsync);
+            classType.Invoke("Run");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DispatcherProcessingDisabled DisableProcessing() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException {
+    public static void ValidatePriority(DispatcherPriority priority, java.lang.String parameterName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ValidatePriority", priority == null ? null : priority.getJCOInstance(), parameterName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void VerifyAccess() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDisableProcessing = (JCObject)classInstance.Invoke("DisableProcessing");
-            return new DispatcherProcessingDisabled(objDisableProcessing);
+            classInstance.Invoke("VerifyAccess");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,12 +327,11 @@ public class Dispatcher extends NetObject  {
     
     // Properties section
     
-    public Thread getThread() throws Throwable {
+    public boolean getHasShutdownFinished() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Thread");
-            return new Thread(val);
+            return (boolean)classInstance.Get("HasShutdownFinished");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,22 +347,12 @@ public class Dispatcher extends NetObject  {
         }
     }
 
-    public boolean getHasShutdownFinished() throws Throwable {
+    public Thread getThread() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HasShutdownFinished");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DispatcherHooks getHooks() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Hooks");
-            return new DispatcherHooks(val);
+            JCObject val = (JCObject)classInstance.Get("Thread");
+            return new Thread(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,30 +369,21 @@ public class Dispatcher extends NetObject  {
         }
     }
 
+    public DispatcherHooks getHooks() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Hooks");
+            return new DispatcherHooks(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section
     
-
-    public void addShutdownStarted(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("ShutdownStarted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeShutdownStarted(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("ShutdownStarted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
     public void addShutdownFinished(EventHandler handler) throws Throwable {
         if (classInstance == null)
@@ -425,21 +405,21 @@ public class Dispatcher extends NetObject  {
         }
     }
 
-    public void addUnhandledExceptionFilter(DispatcherUnhandledExceptionFilterEventHandler handler) throws Throwable {
+    public void addShutdownStarted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("UnhandledExceptionFilter", handler);
+            classInstance.RegisterEventListener("ShutdownStarted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeUnhandledExceptionFilter(DispatcherUnhandledExceptionFilterEventHandler handler) throws Throwable {
+    public void removeShutdownStarted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("UnhandledExceptionFilter", handler);
+            classInstance.UnregisterEventListener("ShutdownStarted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,6 +440,26 @@ public class Dispatcher extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UnhandledException", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addUnhandledExceptionFilter(DispatcherUnhandledExceptionFilterEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("UnhandledExceptionFilter", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeUnhandledExceptionFilter(DispatcherUnhandledExceptionFilterEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("UnhandledExceptionFilter", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

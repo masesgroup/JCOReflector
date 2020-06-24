@@ -148,27 +148,6 @@ public class ServiceDebugBehavior extends NetObject  {
         }
     }
 
-    public Uri getHttpHelpPageUrl() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("HttpHelpPageUrl");
-            return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHttpHelpPageUrl(Uri HttpHelpPageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HttpHelpPageUrl", HttpHelpPageUrl == null ? null : HttpHelpPageUrl.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getHttpsHelpPageEnabled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -189,22 +168,21 @@ public class ServiceDebugBehavior extends NetObject  {
         }
     }
 
-    public Uri getHttpsHelpPageUrl() throws Throwable {
+    public boolean getIncludeExceptionDetailInFaults() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpsHelpPageUrl");
-            return new Uri(val);
+            return (boolean)classInstance.Get("IncludeExceptionDetailInFaults");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHttpsHelpPageUrl(Uri HttpsHelpPageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public void setIncludeExceptionDetailInFaults(boolean IncludeExceptionDetailInFaults) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("HttpsHelpPageUrl", HttpsHelpPageUrl == null ? null : HttpsHelpPageUrl.getJCOInstance());
+            classInstance.Set("IncludeExceptionDetailInFaults", IncludeExceptionDetailInFaults);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,21 +230,43 @@ public class ServiceDebugBehavior extends NetObject  {
         }
     }
 
-    public boolean getIncludeExceptionDetailInFaults() throws Throwable {
+    public Uri getHttpHelpPageUrl() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IncludeExceptionDetailInFaults");
+            JCObject val = (JCObject)classInstance.Get("HttpHelpPageUrl");
+            return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIncludeExceptionDetailInFaults(boolean IncludeExceptionDetailInFaults) throws Throwable {
+    public void setHttpHelpPageUrl(Uri HttpHelpPageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IncludeExceptionDetailInFaults", IncludeExceptionDetailInFaults);
+            classInstance.Set("HttpHelpPageUrl", HttpHelpPageUrl == null ? null : HttpHelpPageUrl.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Uri getHttpsHelpPageUrl() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("HttpsHelpPageUrl");
+            return new Uri(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setHttpsHelpPageUrl(Uri HttpsHelpPageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("HttpsHelpPageUrl", HttpsHelpPageUrl == null ? null : HttpsHelpPageUrl.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -122,11 +122,11 @@ public class INestedSiteImplementation extends NetObject implements INestedSite 
     
     // Properties section
     
-    public java.lang.String getFullName() throws Throwable {
+    public boolean getDesignMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("FullName");
+            return (boolean)classInstance.Get("DesignMode");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,11 +154,11 @@ public class INestedSiteImplementation extends NetObject implements INestedSite 
         }
     }
 
-    public boolean getDesignMode() throws Throwable {
+    public java.lang.String getFullName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("DesignMode");
+            return (java.lang.String)classInstance.Get("FullName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.ui.design.ExpressionEditor;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
+import system.web.ui.design.ExpressionEditor;
 import system.web.ui.design.ExpressionEditorSheet;
 
 
@@ -116,11 +116,33 @@ public class ExpressionEditor extends NetObject  {
     
     // Methods section
     
+    public NetObject EvaluateExpression(java.lang.String expression, NetObject parseTimeData, NetType propertyType, IServiceProvider serviceProvider) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEvaluateExpression = (JCObject)classInstance.Invoke("EvaluateExpression", expression, parseTimeData == null ? null : parseTimeData.getJCOInstance(), propertyType == null ? null : propertyType.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            return new NetObject(objEvaluateExpression);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ExpressionEditor GetExpressionEditor(java.lang.String expressionPrefix, IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetExpressionEditor = (JCObject)classType.Invoke("GetExpressionEditor", expressionPrefix, serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            return new ExpressionEditor(objGetExpressionEditor);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ExpressionEditor GetExpressionEditor(NetType expressionBuilderType, IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.TypeLoadException, system.xml.XmlException, system.io.IOException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetExpressionEditor = (JCObject)classType.Invoke("GetExpressionEditor", expressionBuilderType == null ? null : expressionBuilderType.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance());
             return new ExpressionEditor(objGetExpressionEditor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -133,28 +155,6 @@ public class ExpressionEditor extends NetObject  {
         try {
             JCObject objGetExpressionEditorSheet = (JCObject)classInstance.Invoke("GetExpressionEditorSheet", expression, serviceProvider == null ? null : serviceProvider.getJCOInstance());
             return new ExpressionEditorSheet(objGetExpressionEditorSheet);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject EvaluateExpression(java.lang.String expression, NetObject parseTimeData, NetType propertyType, IServiceProvider serviceProvider) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEvaluateExpression = (JCObject)classInstance.Invoke("EvaluateExpression", expression, parseTimeData == null ? null : parseTimeData.getJCOInstance(), propertyType == null ? null : propertyType.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance());
-            return new NetObject(objEvaluateExpression);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static ExpressionEditor GetExpressionEditor(NetType expressionBuilderType, IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.TypeLoadException, system.xml.XmlException, system.io.IOException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetExpressionEditor = (JCObject)classType.Invoke("GetExpressionEditor", expressionBuilderType == null ? null : expressionBuilderType.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance());
-            return new ExpressionEditor(objGetExpressionEditor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

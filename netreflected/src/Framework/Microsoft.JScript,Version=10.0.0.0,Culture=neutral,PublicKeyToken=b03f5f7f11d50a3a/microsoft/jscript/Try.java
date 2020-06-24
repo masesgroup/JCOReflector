@@ -113,22 +113,22 @@ public class Try extends NetObject  {
     
     // Methods section
     
-    public static void PushHandlerScope(VsaEngine engine, java.lang.String id, int scopeId) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("PushHandlerScope", engine == null ? null : engine.getJCOInstance(), id, scopeId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static NetObject JScriptExceptionValue(NetObject e, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objJScriptExceptionValue = (JCObject)classType.Invoke("JScriptExceptionValue", e == null ? null : e.getJCOInstance(), engine == null ? null : engine.getJCOInstance());
             return new NetObject(objJScriptExceptionValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void PushHandlerScope(VsaEngine engine, java.lang.String id, int scopeId) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("PushHandlerScope", engine == null ? null : engine.getJCOInstance(), id, scopeId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

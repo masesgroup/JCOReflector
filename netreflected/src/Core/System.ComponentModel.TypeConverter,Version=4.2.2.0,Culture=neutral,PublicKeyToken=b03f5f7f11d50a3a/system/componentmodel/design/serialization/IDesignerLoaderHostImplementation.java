@@ -38,18 +38,18 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.collections.ICollection;
-import system.collections.ICollectionImplementation;
-import system.componentmodel.IComponent;
-import system.componentmodel.IComponentImplementation;
 import system.componentmodel.design.DesignerTransaction;
 import system.componentmodel.design.IDesigner;
 import system.componentmodel.design.IDesignerImplementation;
+import system.componentmodel.IComponent;
+import system.componentmodel.IComponentImplementation;
 import system.componentmodel.design.ServiceCreatorCallback;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
 import system.componentmodel.IContainer;
 import system.componentmodel.IContainerImplementation;
-import system.EventHandler;
 import system.componentmodel.design.DesignerTransactionCloseEventHandler;
+import system.EventHandler;
 
 
 /**
@@ -115,31 +115,34 @@ public class IDesignerLoaderHostImplementation extends NetObject implements IDes
 
     // Methods section
     
-    public void EndLoad(java.lang.String baseClassName, boolean successful, ICollection errorCollection) throws Throwable {
+    public DesignerTransaction CreateTransaction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("EndLoad", baseClassName, successful, errorCollection == null ? null : errorCollection.getJCOInstance());
+            JCObject objCreateTransaction = (JCObject)classInstance.Invoke("CreateTransaction");
+            return new DesignerTransaction(objCreateTransaction);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Reload() throws Throwable {
+    public DesignerTransaction CreateTransaction(java.lang.String description) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Reload");
+            JCObject objCreateTransaction = (JCObject)classInstance.Invoke("CreateTransaction", description);
+            return new DesignerTransaction(objCreateTransaction);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Activate() throws Throwable {
+    public IDesigner GetDesigner(IComponent component) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Activate");
+            JCObject objGetDesigner = (JCObject)classInstance.Invoke("GetDesigner", component == null ? null : component.getJCOInstance());
+            return new IDesignerImplementation(objGetDesigner);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,44 +170,12 @@ public class IDesignerLoaderHostImplementation extends NetObject implements IDes
         }
     }
 
-    public DesignerTransaction CreateTransaction() throws Throwable {
+    public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateTransaction = (JCObject)classInstance.Invoke("CreateTransaction");
-            return new DesignerTransaction(objCreateTransaction);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DesignerTransaction CreateTransaction(java.lang.String description) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateTransaction = (JCObject)classInstance.Invoke("CreateTransaction", description);
-            return new DesignerTransaction(objCreateTransaction);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DestroyComponent(IComponent component) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DestroyComponent", component == null ? null : component.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDesigner GetDesigner(IComponent component) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDesigner = (JCObject)classInstance.Invoke("GetDesigner", component == null ? null : component.getJCOInstance());
-            return new IDesignerImplementation(objGetDesigner);
+            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            return new NetObject(objGetService);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,21 +192,11 @@ public class IDesignerLoaderHostImplementation extends NetObject implements IDes
         }
     }
 
-    public void AddService(NetType serviceType, NetObject serviceInstance, boolean promote) throws Throwable {
+    public void Activate() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), serviceInstance == null ? null : serviceInstance.getJCOInstance(), promote);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), serviceInstance == null ? null : serviceInstance.getJCOInstance());
+            classInstance.Invoke("Activate");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,6 +222,56 @@ public class IDesignerLoaderHostImplementation extends NetObject implements IDes
         }
     }
 
+    public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), serviceInstance == null ? null : serviceInstance.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddService(NetType serviceType, NetObject serviceInstance, boolean promote) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), serviceInstance == null ? null : serviceInstance.getJCOInstance(), promote);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DestroyComponent(IComponent component) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DestroyComponent", component == null ? null : component.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndLoad(java.lang.String baseClassName, boolean successful, ICollection errorCollection) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndLoad", baseClassName, successful, errorCollection == null ? null : errorCollection.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Reload() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Reload");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void RemoveService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -281,31 +292,10 @@ public class IDesignerLoaderHostImplementation extends NetObject implements IDes
         }
     }
 
-    public NetObject GetService(NetType serviceType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
-            return new NetObject(objGetService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getLoading() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Loading");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getInTransaction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -316,12 +306,11 @@ public class IDesignerLoaderHostImplementation extends NetObject implements IDes
         }
     }
 
-    public IContainer getContainer() throws Throwable {
+    public boolean getLoading() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Container");
-            return new IContainerImplementation(val);
+            return (boolean)classInstance.Get("Loading");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,6 +322,17 @@ public class IDesignerLoaderHostImplementation extends NetObject implements IDes
         try {
             JCObject val = (JCObject)classInstance.Get("RootComponent");
             return new IComponentImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IContainer getContainer() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Container");
+            return new IContainerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,6 +362,46 @@ public class IDesignerLoaderHostImplementation extends NetObject implements IDes
 
     // Instance Events section
     
+
+    public void addTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("TransactionClosed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("TransactionClosed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("TransactionClosing", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("TransactionClosing", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
     public void addActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
@@ -418,46 +458,6 @@ public class IDesignerLoaderHostImplementation extends NetObject implements IDes
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoadComplete", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("TransactionClosed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("TransactionClosed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("TransactionClosing", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("TransactionClosing", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.componentmodel.ListSortDescriptionCollection;
 import system.componentmodel.PropertyDescriptor;
+import system.componentmodel.ListSortDescriptionCollection;
 import system.componentmodel.ListSortDirection;
 import system.Array;
 import system.componentmodel.ListChangedEventHandler;
@@ -94,29 +94,25 @@ public interface IBindingListView extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void ApplySort(ListSortDescriptionCollection sorts) throws Throwable;
+    public boolean Contains(NetObject value) throws Throwable;
 
-    public void RemoveFilter() throws Throwable;
+    public int Add(NetObject value) throws Throwable;
+
+    public int Find(PropertyDescriptor property, NetObject key) throws Throwable;
+
+    public int IndexOf(NetObject value) throws Throwable;
 
     public NetObject AddNew() throws Throwable;
 
     public void AddIndex(PropertyDescriptor property) throws Throwable;
 
+    public void ApplySort(ListSortDescriptionCollection sorts) throws Throwable;
+
     public void ApplySort(PropertyDescriptor property, ListSortDirection direction) throws Throwable;
-
-    public int Find(PropertyDescriptor property, NetObject key) throws Throwable;
-
-    public void RemoveIndex(PropertyDescriptor property) throws Throwable;
-
-    public void RemoveSort() throws Throwable;
-
-    public int Add(NetObject value) throws Throwable;
-
-    public boolean Contains(NetObject value) throws Throwable;
 
     public void Clear() throws Throwable;
 
-    public int IndexOf(NetObject value) throws Throwable;
+    public void CopyTo(Array array, int index) throws Throwable;
 
     public void Insert(int index, NetObject value) throws Throwable;
 
@@ -124,49 +120,53 @@ public interface IBindingListView extends IJCOBridgeReflected {
 
     public void RemoveAt(int index) throws Throwable;
 
-    public void CopyTo(Array array, int index) throws Throwable;
+    public void RemoveFilter() throws Throwable;
+
+    public void RemoveIndex(PropertyDescriptor property) throws Throwable;
+
+    public void RemoveSort() throws Throwable;
 
 
     
     // Properties section
     
-    public java.lang.String getFilter() throws Throwable;
-
-    public void setFilter(java.lang.String Filter) throws Throwable;
-
-    public ListSortDescriptionCollection getSortDescriptions() throws Throwable;
-
-    public boolean getSupportsAdvancedSorting() throws Throwable;
-
-    public boolean getSupportsFiltering() throws Throwable;
+    public boolean getAllowEdit() throws Throwable;
 
     public boolean getAllowNew() throws Throwable;
 
-    public boolean getAllowEdit() throws Throwable;
-
     public boolean getAllowRemove() throws Throwable;
 
+    public boolean getIsFixedSize() throws Throwable;
+
+    public boolean getIsReadOnly() throws Throwable;
+
+    public boolean getIsSorted() throws Throwable;
+
+    public boolean getIsSynchronized() throws Throwable;
+
+    public boolean getSupportsAdvancedSorting() throws Throwable;
+
     public boolean getSupportsChangeNotification() throws Throwable;
+
+    public boolean getSupportsFiltering() throws Throwable;
 
     public boolean getSupportsSearching() throws Throwable;
 
     public boolean getSupportsSorting() throws Throwable;
 
-    public boolean getIsSorted() throws Throwable;
+    public int getCount() throws Throwable;
 
-    public PropertyDescriptor getSortProperty() throws Throwable;
+    public ListSortDescriptionCollection getSortDescriptions() throws Throwable;
 
     public ListSortDirection getSortDirection() throws Throwable;
 
-    public boolean getIsReadOnly() throws Throwable;
-
-    public boolean getIsFixedSize() throws Throwable;
-
-    public int getCount() throws Throwable;
+    public PropertyDescriptor getSortProperty() throws Throwable;
 
     public NetObject getSyncRoot() throws Throwable;
 
-    public boolean getIsSynchronized() throws Throwable;
+    public java.lang.String getFilter() throws Throwable;
+
+    public void setFilter(java.lang.String Filter) throws Throwable;
 
 
 

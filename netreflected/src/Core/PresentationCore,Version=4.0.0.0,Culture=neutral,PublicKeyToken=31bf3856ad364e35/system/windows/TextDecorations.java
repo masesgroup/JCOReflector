@@ -117,22 +117,11 @@ public class TextDecorations extends NetObject  {
     
     // Properties section
     
-    public static TextDecorationCollection getUnderline() throws Throwable {
+    public static TextDecorationCollection getBaseline() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Underline");
-            return new TextDecorationCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TextDecorationCollection getStrikethrough() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Strikethrough");
+            JCObject val = (JCObject)classType.Get("Baseline");
             return new TextDecorationCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -150,11 +139,22 @@ public class TextDecorations extends NetObject  {
         }
     }
 
-    public static TextDecorationCollection getBaseline() throws Throwable {
+    public static TextDecorationCollection getStrikethrough() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Baseline");
+            JCObject val = (JCObject)classType.Get("Strikethrough");
+            return new TextDecorationCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TextDecorationCollection getUnderline() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("Underline");
             return new TextDecorationCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.MethodBase;
-import system.reflection.BindingFlags;
-import system.reflection.FieldInfo;
 import system.globalization.CultureInfo;
+import system.reflection.FieldInfo;
+import system.reflection.BindingFlags;
+import system.reflection.MethodBase;
 import system.reflection.ParameterModifier;
 import system.reflection.PropertyInfo;
 
@@ -118,6 +118,17 @@ public class Binder extends NetObject  {
     
     // Methods section
     
+    public NetObject ChangeType(NetObject value, NetType type, CultureInfo culture) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objChangeType = (JCObject)classInstance.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            return new NetObject(objChangeType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public FieldInfo BindToField(BindingFlags bindingAttr, FieldInfo[] match, NetObject value, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -146,17 +157,6 @@ public class Binder extends NetObject  {
         try {
             JCObject objSelectProperty = (JCObject)classInstance.Invoke("SelectProperty", bindingAttr == null ? null : bindingAttr.getJCOInstance(), toObjectFromArray(match), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(indexes), toObjectFromArray(modifiers));
             return new PropertyInfo(objSelectProperty);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject ChangeType(NetObject value, NetType type, CultureInfo culture) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objChangeType = (JCObject)classInstance.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
-            return new NetObject(objChangeType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

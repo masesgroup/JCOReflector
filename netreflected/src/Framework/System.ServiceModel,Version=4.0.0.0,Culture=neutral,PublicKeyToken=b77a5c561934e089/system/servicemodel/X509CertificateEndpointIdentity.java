@@ -140,23 +140,23 @@ public class X509CertificateEndpointIdentity extends NetObject  {
     
     // Properties section
     
-    public X509Certificate2Collection getCertificates() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Certificates");
-            return new X509Certificate2Collection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Claim getIdentityClaim() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("IdentityClaim");
             return new Claim(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public X509Certificate2Collection getCertificates() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Certificates");
+            return new X509Certificate2Collection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

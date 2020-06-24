@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.xpath.XPathNavigator;
 import system.xml.linq.XNode;
-import system.xml.XmlNameTable;
 import system.xml.IXmlNamespaceResolver;
 import system.xml.IXmlNamespaceResolverImplementation;
 import system.xml.linq.XElement;
+import system.xml.xpath.XPathNavigator;
+import system.xml.XmlNameTable;
 
 
 /**
@@ -118,28 +118,6 @@ public class Extensions extends NetObject  {
     
     // Methods section
     
-    public static XPathNavigator CreateNavigator(XNode node) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateNavigator = (JCObject)classType.Invoke("CreateNavigator", node == null ? null : node.getJCOInstance());
-            return new XPathNavigator(objCreateNavigator);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static XPathNavigator CreateNavigator(XNode node, XmlNameTable nameTable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateNavigator = (JCObject)classType.Invoke("CreateNavigator", node == null ? null : node.getJCOInstance(), nameTable == null ? null : nameTable.getJCOInstance());
-            return new XPathNavigator(objCreateNavigator);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static NetObject XPathEvaluate(XNode node, java.lang.String expression) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -179,6 +157,28 @@ public class Extensions extends NetObject  {
         try {
             JCObject objXPathSelectElement = (JCObject)classType.Invoke("XPathSelectElement", node == null ? null : node.getJCOInstance(), expression, resolver == null ? null : resolver.getJCOInstance());
             return new XElement(objXPathSelectElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XPathNavigator CreateNavigator(XNode node) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateNavigator = (JCObject)classType.Invoke("CreateNavigator", node == null ? null : node.getJCOInstance());
+            return new XPathNavigator(objCreateNavigator);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XPathNavigator CreateNavigator(XNode node, XmlNameTable nameTable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateNavigator = (JCObject)classType.Invoke("CreateNavigator", node == null ? null : node.getJCOInstance(), nameTable == null ? null : nameTable.getJCOInstance());
+            return new XPathNavigator(objCreateNavigator);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

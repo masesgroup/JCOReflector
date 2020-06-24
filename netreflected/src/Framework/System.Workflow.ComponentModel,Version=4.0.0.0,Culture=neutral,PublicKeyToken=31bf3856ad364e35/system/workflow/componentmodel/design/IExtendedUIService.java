@@ -37,12 +37,12 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.windows.forms.DialogResult;
-import system.Uri;
-import system.workflow.componentmodel.design.DesignerAction;
 import system.componentmodel.ITypeDescriptorContext;
 import system.componentmodel.ITypeDescriptorContextImplementation;
+import system.Uri;
+import system.windows.forms.DialogResult;
 import system.reflection.AssemblyName;
+import system.workflow.componentmodel.design.DesignerAction;
 
 
 /**
@@ -95,21 +95,21 @@ public interface IExtendedUIService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public Uri GetUrlForProxyClass(NetType proxyClass) throws Throwable;
+    public boolean NavigateToProperty(java.lang.String propName) throws Throwable;
+
+    public ITypeDescriptorContext GetSelectedPropertyContext() throws Throwable;
 
     public NetType GetProxyClassForUrl(Uri url) throws Throwable;
+
+    public Uri GetUrlForProxyClass(NetType proxyClass) throws Throwable;
+
+    public void AddAssemblyReference(AssemblyName assemblyName) throws Throwable;
 
     public void AddDesignerActions(DesignerAction[] actions) throws Throwable;
 
     public void RemoveDesignerActions() throws Throwable;
 
-    public boolean NavigateToProperty(java.lang.String propName) throws Throwable;
-
-    public ITypeDescriptorContext GetSelectedPropertyContext() throws Throwable;
-
     public void ShowToolsOptions() throws Throwable;
-
-    public void AddAssemblyReference(AssemblyName assemblyName) throws Throwable;
 
 
     

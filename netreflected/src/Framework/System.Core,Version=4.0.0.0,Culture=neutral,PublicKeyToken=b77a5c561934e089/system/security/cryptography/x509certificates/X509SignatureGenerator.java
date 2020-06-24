@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.HashAlgorithmName;
 import system.security.cryptography.x509certificates.X509SignatureGenerator;
 import system.security.cryptography.ECDsa;
 import system.security.cryptography.RSA;
 import system.security.cryptography.RSASignaturePadding;
-import system.security.cryptography.HashAlgorithmName;
 import system.security.cryptography.x509certificates.PublicKey;
 
 
@@ -118,28 +118,6 @@ public class X509SignatureGenerator extends NetObject  {
     
     // Methods section
     
-    public static X509SignatureGenerator CreateForECDsa(ECDsa key) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateForECDsa = (JCObject)classType.Invoke("CreateForECDsa", key == null ? null : key.getJCOInstance());
-            return new X509SignatureGenerator(objCreateForECDsa);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static X509SignatureGenerator CreateForRSA(RSA key, RSASignaturePadding signaturePadding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateForRSA = (JCObject)classType.Invoke("CreateForRSA", key == null ? null : key.getJCOInstance(), signaturePadding == null ? null : signaturePadding.getJCOInstance());
-            return new X509SignatureGenerator(objCreateForRSA);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] GetSignatureAlgorithmIdentifier(HashAlgorithmName hashAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -173,6 +151,28 @@ public class X509SignatureGenerator extends NetObject  {
 				resultingArray[indexSignData] = (byte)resultingArrayList.get(indexSignData);
             }
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static X509SignatureGenerator CreateForECDsa(ECDsa key) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateForECDsa = (JCObject)classType.Invoke("CreateForECDsa", key == null ? null : key.getJCOInstance());
+            return new X509SignatureGenerator(objCreateForECDsa);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static X509SignatureGenerator CreateForRSA(RSA key, RSASignaturePadding signaturePadding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateForRSA = (JCObject)classType.Invoke("CreateForRSA", key == null ? null : key.getJCOInstance(), signaturePadding == null ? null : signaturePadding.getJCOInstance());
+            return new X509SignatureGenerator(objCreateForRSA);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

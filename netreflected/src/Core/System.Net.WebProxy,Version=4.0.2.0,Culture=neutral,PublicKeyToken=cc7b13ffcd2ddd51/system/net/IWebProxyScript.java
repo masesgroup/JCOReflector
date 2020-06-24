@@ -90,11 +90,11 @@ public interface IWebProxyScript extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Close() throws Throwable;
-
     public boolean Load(Uri scriptLocation, java.lang.String script, NetType helperType) throws Throwable;
 
     public java.lang.String Run(java.lang.String url, java.lang.String host) throws Throwable;
+
+    public void Close() throws Throwable;
 
 
     

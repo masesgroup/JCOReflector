@@ -128,17 +128,6 @@ public class RSASignaturePadding extends NetObject  {
     
     // Properties section
     
-    public RSASignaturePaddingMode getMode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
-            return new RSASignaturePaddingMode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static RSASignaturePadding getPkcs1() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -156,6 +145,17 @@ public class RSASignaturePadding extends NetObject  {
         try {
             JCObject val = (JCObject)classType.Get("Pss");
             return new RSASignaturePadding(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RSASignaturePaddingMode getMode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Mode");
+            return new RSASignaturePaddingMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

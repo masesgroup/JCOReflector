@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.diagnostics.symbolstore.ISymbolNamespace;
+import system.diagnostics.symbolstore.ISymbolNamespaceImplementation;
 import system.diagnostics.symbolstore.ISymbolScope;
 import system.diagnostics.symbolstore.ISymbolScopeImplementation;
 import system.diagnostics.symbolstore.ISymbolVariable;
 import system.diagnostics.symbolstore.ISymbolVariableImplementation;
-import system.diagnostics.symbolstore.ISymbolNamespace;
-import system.diagnostics.symbolstore.ISymbolNamespaceImplementation;
 import system.diagnostics.symbolstore.ISymbolMethod;
 import system.diagnostics.symbolstore.ISymbolMethodImplementation;
 
@@ -111,6 +111,23 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
 
     // Methods section
     
+    public ISymbolNamespace[] GetNamespaces() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<ISymbolNamespace> resultingArrayList = new ArrayList<ISymbolNamespace>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNamespaces");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new ISymbolNamespaceImplementation(resultingObject));
+            }
+            ISymbolNamespace[] resultingArray = new ISymbolNamespace[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ISymbolScope[] GetChildren() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,27 +162,30 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
         }
     }
 
-    public ISymbolNamespace[] GetNamespaces() throws Throwable {
+
+    
+    // Properties section
+    
+    public int getEndOffset() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<ISymbolNamespace> resultingArrayList = new ArrayList<ISymbolNamespace>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNamespaces");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new ISymbolNamespaceImplementation(resultingObject));
-            }
-            ISymbolNamespace[] resultingArray = new ISymbolNamespace[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            return (int)classInstance.Get("EndOffset");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public int getStartOffset() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("StartOffset");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
-    
-    // Properties section
-    
     public ISymbolMethod getMethod() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -183,26 +203,6 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
         try {
             JCObject val = (JCObject)classInstance.Get("Parent");
             return new ISymbolScopeImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getStartOffset() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("StartOffset");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getEndOffset() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("EndOffset");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

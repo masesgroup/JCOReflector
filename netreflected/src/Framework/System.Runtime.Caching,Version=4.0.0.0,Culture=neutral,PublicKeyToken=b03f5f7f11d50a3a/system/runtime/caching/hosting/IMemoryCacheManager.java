@@ -90,9 +90,9 @@ public interface IMemoryCacheManager extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void UpdateCacheSize(long size, MemoryCache cache) throws Throwable;
-
     public void ReleaseCache(MemoryCache cache) throws Throwable;
+
+    public void UpdateCacheSize(long size, MemoryCache cache) throws Throwable;
 
 
     

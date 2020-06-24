@@ -123,23 +123,23 @@ public class Plus extends NetObject  {
     
     // Methods section
     
-    public NetObject EvaluatePlus(NetObject v1, NetObject v2) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEvaluatePlus = (JCObject)classInstance.Invoke("EvaluatePlus", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
-            return new NetObject(objEvaluatePlus);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static NetObject DoOp(NetObject v1, NetObject v2) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, microsoft.jscript.JScriptException, system.NullReferenceException, microsoft.jscript.EndOfFile, system.MissingMethodException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException, system.ArithmeticException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objDoOp = (JCObject)classType.Invoke("DoOp", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
             return new NetObject(objDoOp);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject EvaluatePlus(NetObject v1, NetObject v2) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEvaluatePlus = (JCObject)classInstance.Invoke("EvaluatePlus", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            return new NetObject(objEvaluatePlus);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

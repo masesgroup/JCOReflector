@@ -105,11 +105,11 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
 
     // Methods section
     
-    public void SetVisualState(WindowVisualState state) throws Throwable {
+    public boolean WaitForInputIdle(int milliseconds) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetVisualState", state == null ? null : state.getJCOInstance());
+            return (boolean)classInstance.Invoke("WaitForInputIdle", milliseconds);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -125,11 +125,11 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
         }
     }
 
-    public boolean WaitForInputIdle(int milliseconds) throws Throwable {
+    public void SetVisualState(WindowVisualState state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("WaitForInputIdle", milliseconds);
+            classInstance.Invoke("SetVisualState", state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -139,6 +139,26 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
     
     // Properties section
     
+    public boolean getIsModal() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsModal");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsTopmost() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsTopmost");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getMaximizable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -159,27 +179,6 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
         }
     }
 
-    public boolean getIsModal() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsModal");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WindowVisualState getVisualState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("VisualState");
-            return new WindowVisualState(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public WindowInteractionState getInteractionState() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -191,11 +190,12 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
         }
     }
 
-    public boolean getIsTopmost() throws Throwable {
+    public WindowVisualState getVisualState() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsTopmost");
+            JCObject val = (JCObject)classInstance.Get("VisualState");
+            return new WindowVisualState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -42,8 +42,8 @@ import system.activities.Activity;
 import system.io.Stream;
 import system.activities.xamlintegration.ActivityXamlServicesSettings;
 import system.io.TextReader;
-import system.xaml.XamlWriter;
 import system.xml.XmlReader;
+import system.xaml.XamlWriter;
 
 
 /**
@@ -140,28 +140,6 @@ public class ActivityXamlServices extends NetObject  {
         }
     }
 
-    public static Activity Load(java.lang.String fileName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.AggregateException, system.FormatException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", fileName);
-            return new Activity(objLoad);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Activity Load(java.lang.String fileName, ActivityXamlServicesSettings settings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException, system.FormatException, system.xml.schema.XmlSchemaException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.io.EndOfStreamException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", fileName, settings == null ? null : settings.getJCOInstance());
-            return new Activity(objLoad);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Activity Load(TextReader textReader) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -184,22 +162,23 @@ public class ActivityXamlServices extends NetObject  {
         }
     }
 
-    public static XamlWriter CreateBuilderWriter(XamlWriter innerWriter) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static Activity Load(java.lang.String fileName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.AggregateException, system.FormatException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateBuilderWriter = (JCObject)classType.Invoke("CreateBuilderWriter", innerWriter == null ? null : innerWriter.getJCOInstance());
-            return new XamlWriter(objCreateBuilderWriter);
+            JCObject objLoad = (JCObject)classType.Invoke("Load", fileName);
+            return new Activity(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void InitializeComponent(NetType componentType, NetObject componentInstance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.security.SecurityException, system.NotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException {
+    public static Activity Load(java.lang.String fileName, ActivityXamlServicesSettings settings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException, system.FormatException, system.xml.schema.XmlSchemaException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.io.EndOfStreamException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("InitializeComponent", componentType == null ? null : componentType.getJCOInstance(), componentInstance == null ? null : componentInstance.getJCOInstance());
+            JCObject objLoad = (JCObject)classType.Invoke("Load", fileName, settings == null ? null : settings.getJCOInstance());
+            return new Activity(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,6 +201,27 @@ public class ActivityXamlServices extends NetObject  {
         try {
             JCObject objLoad = (JCObject)classType.Invoke("Load", xmlReader == null ? null : xmlReader.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
             return new Activity(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XamlWriter CreateBuilderWriter(XamlWriter innerWriter) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateBuilderWriter = (JCObject)classType.Invoke("CreateBuilderWriter", innerWriter == null ? null : innerWriter.getJCOInstance());
+            return new XamlWriter(objCreateBuilderWriter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void InitializeComponent(NetType componentType, NetObject componentInstance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.security.SecurityException, system.NotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("InitializeComponent", componentType == null ? null : componentType.getJCOInstance(), componentInstance == null ? null : componentInstance.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

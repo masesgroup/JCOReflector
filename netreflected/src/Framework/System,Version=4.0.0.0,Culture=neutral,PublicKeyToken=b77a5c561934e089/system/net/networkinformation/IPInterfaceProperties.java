@@ -40,11 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.net.networkinformation.IPv4InterfaceProperties;
 import system.net.networkinformation.IPv6InterfaceProperties;
-import system.net.networkinformation.UnicastIPAddressInformationCollection;
-import system.net.networkinformation.MulticastIPAddressInformationCollection;
-import system.net.networkinformation.IPAddressInformationCollection;
-import system.net.networkinformation.IPAddressCollection;
 import system.net.networkinformation.GatewayIPAddressInformationCollection;
+import system.net.networkinformation.IPAddressCollection;
+import system.net.networkinformation.IPAddressInformationCollection;
+import system.net.networkinformation.MulticastIPAddressInformationCollection;
+import system.net.networkinformation.UnicastIPAddressInformationCollection;
 
 
 /**
@@ -155,65 +155,11 @@ public class IPInterfaceProperties extends NetObject  {
         }
     }
 
-    public java.lang.String getDnsSuffix() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DnsSuffix");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsDynamicDnsEnabled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsDynamicDnsEnabled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UnicastIPAddressInformationCollection getUnicastAddresses() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UnicastAddresses");
-            return new UnicastIPAddressInformationCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MulticastIPAddressInformationCollection getMulticastAddresses() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MulticastAddresses");
-            return new MulticastIPAddressInformationCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IPAddressInformationCollection getAnycastAddresses() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AnycastAddresses");
-            return new IPAddressInformationCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IPAddressCollection getDnsAddresses() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DnsAddresses");
-            return new IPAddressCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,12 +187,66 @@ public class IPInterfaceProperties extends NetObject  {
         }
     }
 
+    public IPAddressCollection getDnsAddresses() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DnsAddresses");
+            return new IPAddressCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IPAddressCollection getWinsServersAddresses() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("WinsServersAddresses");
             return new IPAddressCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IPAddressInformationCollection getAnycastAddresses() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AnycastAddresses");
+            return new IPAddressInformationCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MulticastIPAddressInformationCollection getMulticastAddresses() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MulticastAddresses");
+            return new MulticastIPAddressInformationCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UnicastIPAddressInformationCollection getUnicastAddresses() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("UnicastAddresses");
+            return new UnicastIPAddressInformationCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getDnsSuffix() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("DnsSuffix");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

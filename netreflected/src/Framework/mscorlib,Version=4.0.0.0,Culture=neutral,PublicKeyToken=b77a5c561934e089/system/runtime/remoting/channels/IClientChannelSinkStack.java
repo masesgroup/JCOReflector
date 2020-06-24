@@ -96,15 +96,15 @@ public interface IClientChannelSinkStack extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Push(IClientChannelSink sink, NetObject state) throws Throwable;
-
     public NetObject Pop(IClientChannelSink sink) throws Throwable;
 
     public void AsyncProcessResponse(ITransportHeaders headers, Stream stream) throws Throwable;
 
+    public void DispatchException(NetException e) throws Throwable;
+
     public void DispatchReplyMessage(IMessage msg) throws Throwable;
 
-    public void DispatchException(NetException e) throws Throwable;
+    public void Push(IClientChannelSink sink, NetObject state) throws Throwable;
 
 
     

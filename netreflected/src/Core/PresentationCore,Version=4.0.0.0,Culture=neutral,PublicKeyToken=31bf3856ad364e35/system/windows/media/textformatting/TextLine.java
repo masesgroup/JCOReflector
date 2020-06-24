@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.media.DrawingContext;
-import system.windows.Point;
-import system.windows.media.textformatting.InvertAxes;
+import system.windows.media.textformatting.CharacterHit;
 import system.windows.media.textformatting.TextLine;
 import system.windows.media.textformatting.TextCollapsingProperties;
 import system.windows.media.textformatting.TextLineBreak;
-import system.windows.media.textformatting.CharacterHit;
+import system.windows.media.DrawingContext;
+import system.windows.Point;
+import system.windows.media.textformatting.InvertAxes;
 
 
 /**
@@ -119,43 +119,22 @@ public class TextLine extends NetObject  {
     
     // Methods section
     
-    public void Draw(DrawingContext drawingContext, Point origin, InvertAxes inversion) throws Throwable {
+    public double GetDistanceFromCharacterHit(CharacterHit characterHit) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Draw", drawingContext == null ? null : drawingContext.getJCOInstance(), origin == null ? null : origin.getJCOInstance(), inversion == null ? null : inversion.getJCOInstance());
+            return (double)classInstance.Invoke("GetDistanceFromCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TextLine Collapse(TextCollapsingProperties... collapsingPropertiesList) throws Throwable {
+    public CharacterHit GetBackspaceCaretCharacterHit(CharacterHit characterHit) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCollapse = (JCObject)classInstance.Invoke("Collapse", (Object)toObjectFromArray(collapsingPropertiesList));
-            return new TextLine(objCollapse);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TextLineBreak GetTextLineBreak() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetTextLineBreak = (JCObject)classInstance.Invoke("GetTextLineBreak");
-            return new TextLineBreak(objGetTextLineBreak);
+            JCObject objGetBackspaceCaretCharacterHit = (JCObject)classInstance.Invoke("GetBackspaceCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            return new CharacterHit(objGetBackspaceCaretCharacterHit);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,16 +146,6 @@ public class TextLine extends NetObject  {
         try {
             JCObject objGetCharacterHitFromDistance = (JCObject)classInstance.Invoke("GetCharacterHitFromDistance", distance);
             return new CharacterHit(objGetCharacterHitFromDistance);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double GetDistanceFromCharacterHit(CharacterHit characterHit) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Invoke("GetDistanceFromCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,12 +173,43 @@ public class TextLine extends NetObject  {
         }
     }
 
-    public CharacterHit GetBackspaceCaretCharacterHit(CharacterHit characterHit) throws Throwable {
+    public TextLine Collapse(TextCollapsingProperties... collapsingPropertiesList) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetBackspaceCaretCharacterHit = (JCObject)classInstance.Invoke("GetBackspaceCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
-            return new CharacterHit(objGetBackspaceCaretCharacterHit);
+            JCObject objCollapse = (JCObject)classInstance.Invoke("Collapse", (Object)toObjectFromArray(collapsingPropertiesList));
+            return new TextLine(objCollapse);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TextLineBreak GetTextLineBreak() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetTextLineBreak = (JCObject)classInstance.Invoke("GetTextLineBreak");
+            return new TextLineBreak(objGetTextLineBreak);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Draw(DrawingContext drawingContext, Point origin, InvertAxes inversion) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Draw", drawingContext == null ? null : drawingContext.getJCOInstance(), origin == null ? null : origin.getJCOInstance(), inversion == null ? null : inversion.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,21 +219,11 @@ public class TextLine extends NetObject  {
     
     // Properties section
     
-    public double getPixelsPerDip() throws Throwable {
+    public boolean getHasCollapsed() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("PixelsPerDip");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPixelsPerDip(double PixelsPerDip) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PixelsPerDip", PixelsPerDip);
+            return (boolean)classInstance.Get("HasCollapsed");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,121 +239,11 @@ public class TextLine extends NetObject  {
         }
     }
 
-    public boolean getHasCollapsed() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("HasCollapsed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsTruncated() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsTruncated");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Length");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getTrailingWhitespaceLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("TrailingWhitespaceLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getDependentLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("DependentLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getNewlineLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("NewlineLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getStart() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("Start");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getWidth() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("Width");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getWidthIncludingTrailingWhitespace() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("WidthIncludingTrailingWhitespace");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getHeight() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("Height");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getTextHeight() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("TextHeight");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getExtent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("Extent");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,11 +259,21 @@ public class TextLine extends NetObject  {
         }
     }
 
-    public double getTextBaseline() throws Throwable {
+    public double getExtent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("TextBaseline");
+            return (double)classInstance.Get("Extent");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getHeight() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("Height");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,6 +299,16 @@ public class TextLine extends NetObject  {
         }
     }
 
+    public double getOverhangAfter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("OverhangAfter");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public double getOverhangLeading() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -429,11 +329,111 @@ public class TextLine extends NetObject  {
         }
     }
 
-    public double getOverhangAfter() throws Throwable {
+    public double getPixelsPerDip() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("OverhangAfter");
+            return (double)classInstance.Get("PixelsPerDip");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPixelsPerDip(double PixelsPerDip) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PixelsPerDip", PixelsPerDip);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getStart() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("Start");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getTextBaseline() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("TextBaseline");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getTextHeight() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("TextHeight");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getWidth() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("Width");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getWidthIncludingTrailingWhitespace() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("WidthIncludingTrailingWhitespace");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getDependentLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("DependentLength");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Length");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getNewlineLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("NewlineLength");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getTrailingWhitespaceLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("TrailingWhitespaceLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

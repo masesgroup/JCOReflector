@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.workflow.componentmodel.compiler.ValidationErrorCollection;
-import system.workflow.componentmodel.compiler.ValidationManager;
 import system.workflow.componentmodel.compiler.ValidationError;
 import system.workflow.componentmodel.Activity;
 import system.workflow.componentmodel.ActivityChangeAction;
+import system.workflow.componentmodel.compiler.ValidationErrorCollection;
+import system.workflow.componentmodel.compiler.ValidationManager;
 
 
 /**
@@ -128,23 +128,23 @@ public class DependencyObjectValidator extends NetObject  {
     
     // Methods section
     
-    public ValidationErrorCollection Validate(ValidationManager manager, NetObject obj) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", manager == null ? null : manager.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
-            return new ValidationErrorCollection(objValidate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ValidationError ValidateActivityChange(Activity activity, ActivityChangeAction action) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objValidateActivityChange = (JCObject)classInstance.Invoke("ValidateActivityChange", activity == null ? null : activity.getJCOInstance(), action == null ? null : action.getJCOInstance());
             return new ValidationError(objValidateActivityChange);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValidationErrorCollection Validate(ValidationManager manager, NetObject obj) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", manager == null ? null : manager.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
+            return new ValidationErrorCollection(objValidate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

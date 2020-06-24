@@ -37,13 +37,13 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.identitymodel.protocols.wstrust.RequestSecurityTokenResponse;
-import system.identitymodel.protocols.wstrust.RequestSecurityToken;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.identitymodel.protocols.wstrust.RequestSecurityToken;
 import system.AsyncCallback;
-import system.identitymodel.tokens.SecurityToken;
 import system.servicemodel.channels.Message;
+import system.identitymodel.protocols.wstrust.RequestSecurityTokenResponse;
+import system.identitymodel.tokens.SecurityToken;
 
 
 /**
@@ -96,45 +96,45 @@ public interface IWSTrustChannelContract extends IJCOBridgeReflected {
 
     // Methods section
     
-    public RequestSecurityTokenResponse Cancel(RequestSecurityToken request) throws Throwable;
-
     public IAsyncResult BeginCancel(RequestSecurityToken request, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public SecurityToken Issue(RequestSecurityToken request) throws Throwable;
-
-    public IAsyncResult BeginIssue(RequestSecurityToken request, AsyncCallback callback, NetObject asyncState) throws Throwable;
-
-    public RequestSecurityTokenResponse Renew(RequestSecurityToken request) throws Throwable;
-
-    public IAsyncResult BeginRenew(RequestSecurityToken request, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public RequestSecurityTokenResponse Validate(RequestSecurityToken request) throws Throwable;
-
-    public IAsyncResult BeginValidate(RequestSecurityToken request, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public Message Cancel(Message message) throws Throwable;
 
     public IAsyncResult BeginCancel(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable;
 
-    public Message EndCancel(IAsyncResult asyncResult) throws Throwable;
-
-    public Message Issue(Message message) throws Throwable;
+    public IAsyncResult BeginIssue(RequestSecurityToken request, AsyncCallback callback, NetObject asyncState) throws Throwable;
 
     public IAsyncResult BeginIssue(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable;
 
-    public Message EndIssue(IAsyncResult asyncResult) throws Throwable;
-
-    public Message Renew(Message message) throws Throwable;
+    public IAsyncResult BeginRenew(RequestSecurityToken request, AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginRenew(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable;
 
-    public Message EndRenew(IAsyncResult asyncResult) throws Throwable;
-
-    public Message Validate(Message message) throws Throwable;
+    public IAsyncResult BeginValidate(RequestSecurityToken request, AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginValidate(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable;
 
+    public RequestSecurityTokenResponse Cancel(RequestSecurityToken request) throws Throwable;
+
+    public RequestSecurityTokenResponse Renew(RequestSecurityToken request) throws Throwable;
+
+    public RequestSecurityTokenResponse Validate(RequestSecurityToken request) throws Throwable;
+
+    public SecurityToken Issue(RequestSecurityToken request) throws Throwable;
+
+    public Message Cancel(Message message) throws Throwable;
+
+    public Message EndCancel(IAsyncResult asyncResult) throws Throwable;
+
+    public Message EndIssue(IAsyncResult asyncResult) throws Throwable;
+
+    public Message EndRenew(IAsyncResult asyncResult) throws Throwable;
+
     public Message EndValidate(IAsyncResult asyncResult) throws Throwable;
+
+    public Message Issue(Message message) throws Throwable;
+
+    public Message Renew(Message message) throws Throwable;
+
+    public Message Validate(Message message) throws Throwable;
 
 
     

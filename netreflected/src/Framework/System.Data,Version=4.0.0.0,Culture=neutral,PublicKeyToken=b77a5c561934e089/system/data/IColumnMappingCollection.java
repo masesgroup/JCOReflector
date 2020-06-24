@@ -92,23 +92,23 @@ public interface IColumnMappingCollection extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IColumnMapping Add(java.lang.String sourceColumnName, java.lang.String dataSetColumnName) throws Throwable;
+    public boolean Contains(NetObject value) throws Throwable;
 
     public boolean Contains(java.lang.String sourceColumnName) throws Throwable;
 
-    public IColumnMapping GetByDataSetColumn(java.lang.String dataSetColumnName) throws Throwable;
+    public int Add(NetObject value) throws Throwable;
+
+    public int IndexOf(NetObject value) throws Throwable;
 
     public int IndexOf(java.lang.String sourceColumnName) throws Throwable;
 
-    public void RemoveAt(java.lang.String sourceColumnName) throws Throwable;
+    public IColumnMapping Add(java.lang.String sourceColumnName, java.lang.String dataSetColumnName) throws Throwable;
 
-    public int Add(NetObject value) throws Throwable;
-
-    public boolean Contains(NetObject value) throws Throwable;
+    public IColumnMapping GetByDataSetColumn(java.lang.String dataSetColumnName) throws Throwable;
 
     public void Clear() throws Throwable;
 
-    public int IndexOf(NetObject value) throws Throwable;
+    public void CopyTo(Array array, int index) throws Throwable;
 
     public void Insert(int index, NetObject value) throws Throwable;
 
@@ -116,21 +116,21 @@ public interface IColumnMappingCollection extends IJCOBridgeReflected {
 
     public void RemoveAt(int index) throws Throwable;
 
-    public void CopyTo(Array array, int index) throws Throwable;
+    public void RemoveAt(java.lang.String sourceColumnName) throws Throwable;
 
 
     
     // Properties section
     
+    public boolean getIsFixedSize() throws Throwable;
+
     public boolean getIsReadOnly() throws Throwable;
 
-    public boolean getIsFixedSize() throws Throwable;
+    public boolean getIsSynchronized() throws Throwable;
 
     public int getCount() throws Throwable;
 
     public NetObject getSyncRoot() throws Throwable;
-
-    public boolean getIsSynchronized() throws Throwable;
 
 
 

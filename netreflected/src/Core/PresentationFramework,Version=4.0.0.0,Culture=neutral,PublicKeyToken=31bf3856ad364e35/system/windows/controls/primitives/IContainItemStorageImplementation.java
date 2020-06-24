@@ -104,22 +104,22 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
 
     // Methods section
     
-    public void StoreItemValue(NetObject item, DependencyProperty dp, NetObject value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("StoreItemValue", item == null ? null : item.getJCOInstance(), dp == null ? null : dp.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject ReadItemValue(NetObject item, DependencyProperty dp) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objReadItemValue = (JCObject)classInstance.Invoke("ReadItemValue", item == null ? null : item.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
             return new NetObject(objReadItemValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Clear() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,11 +145,11 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
         }
     }
 
-    public void Clear() throws Throwable {
+    public void StoreItemValue(NetObject item, DependencyProperty dp, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("StoreItemValue", item == null ? null : item.getJCOInstance(), dp == null ? null : dp.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

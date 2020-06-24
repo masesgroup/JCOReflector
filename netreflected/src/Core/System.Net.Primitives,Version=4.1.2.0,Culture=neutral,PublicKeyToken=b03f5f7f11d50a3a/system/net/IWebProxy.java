@@ -92,9 +92,9 @@ public interface IWebProxy extends IJCOBridgeReflected {
 
     // Methods section
     
-    public Uri GetProxy(Uri destination) throws Throwable;
-
     public boolean IsBypassed(Uri host) throws Throwable;
+
+    public Uri GetProxy(Uri destination) throws Throwable;
 
 
     

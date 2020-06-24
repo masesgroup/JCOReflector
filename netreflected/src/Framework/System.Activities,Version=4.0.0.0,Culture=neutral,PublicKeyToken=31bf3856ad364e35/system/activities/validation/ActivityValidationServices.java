@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.validation.ValidationResults;
 import system.activities.Activity;
+import system.activities.validation.ValidationResults;
 import system.activities.validation.ValidationSettings;
 
 
@@ -115,23 +115,23 @@ public class ActivityValidationServices extends NetObject  {
     
     // Methods section
     
-    public static ValidationResults Validate(Activity toValidate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objValidate = (JCObject)classType.Invoke("Validate", toValidate == null ? null : toValidate.getJCOInstance());
-            return new ValidationResults(objValidate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Activity Resolve(Activity root, java.lang.String id) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objResolve = (JCObject)classType.Invoke("Resolve", root == null ? null : root.getJCOInstance(), id);
             return new Activity(objResolve);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValidationResults Validate(Activity toValidate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objValidate = (JCObject)classType.Invoke("Validate", toValidate == null ? null : toValidate.getJCOInstance());
+            return new ValidationResults(objValidate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

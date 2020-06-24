@@ -113,6 +113,16 @@ public class ColorTranslator extends NetObject  {
     
     // Methods section
     
+    public static int ToOle(Color c) throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("ToOle", c == null ? null : c.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int ToWin32(Color c) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -123,11 +133,12 @@ public class ColorTranslator extends NetObject  {
         }
     }
 
-    public static int ToOle(Color c) throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException {
+    public static Color FromHtml(java.lang.String htmlColor) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.TypeLoadException, system.security.SecurityException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ToOle", c == null ? null : c.getJCOInstance());
+            JCObject objFromHtml = (JCObject)classType.Invoke("FromHtml", htmlColor);
+            return new Color(objFromHtml);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -150,17 +161,6 @@ public class ColorTranslator extends NetObject  {
         try {
             JCObject objFromWin32 = (JCObject)classType.Invoke("FromWin32", win32Color);
             return new Color(objFromWin32);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Color FromHtml(java.lang.String htmlColor) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.TypeLoadException, system.security.SecurityException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFromHtml = (JCObject)classType.Invoke("FromHtml", htmlColor);
-            return new Color(objFromHtml);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

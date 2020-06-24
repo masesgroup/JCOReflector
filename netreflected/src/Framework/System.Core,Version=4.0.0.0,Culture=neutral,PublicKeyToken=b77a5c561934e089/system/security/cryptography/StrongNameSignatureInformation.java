@@ -118,11 +118,11 @@ public class StrongNameSignatureInformation extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getHashAlgorithm() throws Throwable {
+    public boolean getIsValid() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("HashAlgorithm");
+            return (boolean)classInstance.Get("IsValid");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -133,16 +133,6 @@ public class StrongNameSignatureInformation extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("HResult");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsValid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsValid");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,6 +155,16 @@ public class StrongNameSignatureInformation extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("VerificationResult");
             return new SignatureVerificationResult(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getHashAlgorithm() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("HashAlgorithm");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

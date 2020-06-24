@@ -38,17 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.reflection.emit.Label;
+import system.reflection.emit.LocalBuilder;
 import system.reflection.emit.OpCode;
 import system.SByte;
+import system.Single;
+import system.reflection.ConstructorInfo;
+import system.reflection.emit.SignatureHelper;
+import system.reflection.FieldInfo;
 import system.reflection.MethodInfo;
 import system.reflection.CallingConventions;
 import system.runtime.interopservices.CallingConvention;
-import system.reflection.emit.SignatureHelper;
-import system.reflection.ConstructorInfo;
-import system.Single;
-import system.reflection.emit.Label;
-import system.reflection.FieldInfo;
-import system.reflection.emit.LocalBuilder;
 import system.diagnostics.symbolstore.ISymbolDocumentWriter;
 import system.diagnostics.symbolstore.ISymbolDocumentWriterImplementation;
 
@@ -125,206 +125,6 @@ public class ILGenerator extends NetObject  {
     
     // Methods section
     
-    public void Emit(OpCode opcode) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, byte arg) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, SByte arg) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, short arg) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, int arg) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, MethodInfo meth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), meth == null ? null : meth.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void EmitCalli(OpCode opcode, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, NetType[] optionalParameterTypes) throws Throwable, system.InvalidOperationException, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("EmitCalli", opcode == null ? null : opcode.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), toObjectFromArray(optionalParameterTypes));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void EmitCalli(OpCode opcode, CallingConvention unmanagedCallConv, NetType returnType, NetType[] parameterTypes) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("EmitCalli", opcode == null ? null : opcode.getJCOInstance(), unmanagedCallConv == null ? null : unmanagedCallConv.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void EmitCall(OpCode opcode, MethodInfo methodInfo, NetType[] optionalParameterTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("EmitCall", opcode == null ? null : opcode.getJCOInstance(), methodInfo == null ? null : methodInfo.getJCOInstance(), toObjectFromArray(optionalParameterTypes));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, SignatureHelper signature) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, ConstructorInfo con) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), con == null ? null : con.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, NetType cls) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), cls == null ? null : cls.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, long arg) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, Single arg) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, double arg) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, Label label) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), label == null ? null : label.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, Label[] labels) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), toObjectFromArray(labels));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, FieldInfo field) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), field == null ? null : field.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, java.lang.String str) throws Throwable, system.NotImplementedException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), str);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode, LocalBuilder local) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), local == null ? null : local.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Label BeginExceptionBlock() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -336,82 +136,12 @@ public class ILGenerator extends NetObject  {
         }
     }
 
-    public void EndExceptionBlock() throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("EndExceptionBlock");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void BeginExceptFilterBlock() throws Throwable, system.NotSupportedException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("BeginExceptFilterBlock");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void BeginCatchBlock(NetType exceptionType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("BeginCatchBlock", exceptionType == null ? null : exceptionType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void BeginFaultBlock() throws Throwable, system.NotSupportedException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("BeginFaultBlock");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void BeginFinallyBlock() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("BeginFinallyBlock");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Label DefineLabel() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objDefineLabel = (JCObject)classInstance.Invoke("DefineLabel");
             return new Label(objDefineLabel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void MarkLabel(Label loc) throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("MarkLabel", loc == null ? null : loc.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ThrowException(NetType excType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ThrowException", excType == null ? null : excType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,21 +169,41 @@ public class ILGenerator extends NetObject  {
         }
     }
 
-    public void UsingNamespace(java.lang.String usingNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException {
+    public void BeginCatchBlock(NetType exceptionType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("UsingNamespace", usingNamespace);
+            classInstance.Invoke("BeginCatchBlock", exceptionType == null ? null : exceptionType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void MarkSequencePoint(ISymbolDocumentWriter document, int startLine, int startColumn, int endLine, int endColumn) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public void BeginExceptFilterBlock() throws Throwable, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("MarkSequencePoint", document == null ? null : document.getJCOInstance(), startLine, startColumn, endLine, endColumn);
+            classInstance.Invoke("BeginExceptFilterBlock");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void BeginFaultBlock() throws Throwable, system.NotSupportedException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BeginFaultBlock");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void BeginFinallyBlock() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BeginFinallyBlock");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -469,21 +219,201 @@ public class ILGenerator extends NetObject  {
         }
     }
 
-    public void EndScope() throws Throwable, system.ArgumentException, system.ArgumentNullException {
+    public void Emit(OpCode opcode) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("EndScope");
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void EmitWriteLine(java.lang.String value) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException {
+    public void Emit(OpCode opcode, byte arg) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("EmitWriteLine", value);
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, double arg) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, short arg) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, int arg) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, long arg) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, SByte arg) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, Single arg) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, ConstructorInfo con) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), con == null ? null : con.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, Label label) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), label == null ? null : label.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, Label[] labels) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), toObjectFromArray(labels));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, LocalBuilder local) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), local == null ? null : local.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, SignatureHelper signature) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, FieldInfo field) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), field == null ? null : field.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, MethodInfo meth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), meth == null ? null : meth.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, java.lang.String str) throws Throwable, system.NotImplementedException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), str);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode, NetType cls) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), cls == null ? null : cls.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EmitCall(OpCode opcode, MethodInfo methodInfo, NetType[] optionalParameterTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EmitCall", opcode == null ? null : opcode.getJCOInstance(), methodInfo == null ? null : methodInfo.getJCOInstance(), toObjectFromArray(optionalParameterTypes));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EmitCalli(OpCode opcode, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, NetType[] optionalParameterTypes) throws Throwable, system.InvalidOperationException, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EmitCalli", opcode == null ? null : opcode.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), toObjectFromArray(optionalParameterTypes));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EmitCalli(OpCode opcode, CallingConvention unmanagedCallConv, NetType returnType, NetType[] parameterTypes) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EmitCalli", opcode == null ? null : opcode.getJCOInstance(), unmanagedCallConv == null ? null : unmanagedCallConv.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -504,6 +434,76 @@ public class ILGenerator extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EmitWriteLine", fld == null ? null : fld.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EmitWriteLine(java.lang.String value) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EmitWriteLine", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndExceptionBlock() throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndExceptionBlock");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndScope() throws Throwable, system.ArgumentException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndScope");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void MarkLabel(Label loc) throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("MarkLabel", loc == null ? null : loc.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void MarkSequencePoint(ISymbolDocumentWriter document, int startLine, int startColumn, int endLine, int endColumn) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("MarkSequencePoint", document == null ? null : document.getJCOInstance(), startLine, startColumn, endLine, endColumn);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ThrowException(NetType excType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ThrowException", excType == null ? null : excType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UsingNamespace(java.lang.String usingNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UsingNamespace", usingNamespace);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

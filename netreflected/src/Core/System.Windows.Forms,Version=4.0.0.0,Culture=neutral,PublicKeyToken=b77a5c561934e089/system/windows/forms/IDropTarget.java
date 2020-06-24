@@ -91,11 +91,11 @@ public interface IDropTarget extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void OnDragDrop(DragEventArgs e) throws Throwable;
+
     public void OnDragEnter(DragEventArgs e) throws Throwable;
 
     public void OnDragLeave(EventArgs e) throws Throwable;
-
-    public void OnDragDrop(DragEventArgs e) throws Throwable;
 
     public void OnDragOver(DragEventArgs e) throws Throwable;
 

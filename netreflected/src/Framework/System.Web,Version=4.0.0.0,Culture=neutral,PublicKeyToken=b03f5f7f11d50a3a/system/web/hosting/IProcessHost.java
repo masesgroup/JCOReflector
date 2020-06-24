@@ -91,8 +91,6 @@ public interface IProcessHost extends IJCOBridgeReflected {
     
     public void ShutdownApplication(java.lang.String appId) throws Throwable;
 
-    public void Shutdown() throws Throwable;
-
 
     
     // Properties section

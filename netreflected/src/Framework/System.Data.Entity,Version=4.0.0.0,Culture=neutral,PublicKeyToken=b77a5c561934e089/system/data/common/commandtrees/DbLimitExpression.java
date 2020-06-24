@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.data.common.commandtrees.DbExpressionVisitor;
 import system.data.common.commandtrees.DbExpression;
-import system.data.metadata.edm.TypeUsage;
 import system.data.common.commandtrees.DbExpressionKind;
+import system.data.metadata.edm.TypeUsage;
 
 
 /**
@@ -130,6 +130,16 @@ public class DbLimitExpression extends NetObject  {
     
     // Properties section
     
+    public boolean getWithTies() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("WithTies");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DbExpression getArgument() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -152,11 +162,12 @@ public class DbLimitExpression extends NetObject  {
         }
     }
 
-    public boolean getWithTies() throws Throwable {
+    public DbExpressionKind getExpressionKind() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("WithTies");
+            JCObject val = (JCObject)classInstance.Get("ExpressionKind");
+            return new DbExpressionKind(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,17 +179,6 @@ public class DbLimitExpression extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ResultType");
             return new TypeUsage(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbExpressionKind getExpressionKind() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExpressionKind");
-            return new DbExpressionKind(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

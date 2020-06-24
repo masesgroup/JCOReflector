@@ -148,23 +148,23 @@ public class StructureChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public StructureChangeType getStructureChangeType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("StructureChangeType");
-            return new StructureChangeType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AutomationEvent getEventId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("EventId");
             return new AutomationEvent(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StructureChangeType getStructureChangeType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("StructureChangeType");
+            return new StructureChangeType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

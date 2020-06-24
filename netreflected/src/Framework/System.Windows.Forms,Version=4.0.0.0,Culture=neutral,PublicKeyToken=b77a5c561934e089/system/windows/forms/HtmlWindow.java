@@ -38,15 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.HtmlWindow;
+import system.Uri;
 import system.EventHandler;
 import system.drawing.Point;
-import system.Uri;
-import system.windows.forms.HtmlWindow;
 import system.drawing.Size;
 import system.windows.forms.HtmlDocument;
-import system.windows.forms.HtmlWindowCollection;
-import system.windows.forms.HtmlHistory;
 import system.windows.forms.HtmlElement;
+import system.windows.forms.HtmlHistory;
+import system.windows.forms.HtmlWindowCollection;
 import system.windows.forms.HtmlElementErrorEventHandler;
 import system.windows.forms.HtmlElementEventHandler;
 
@@ -123,6 +123,70 @@ public class HtmlWindow extends NetObject  {
     
     // Methods section
     
+    public boolean Confirm(java.lang.String message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Confirm", message);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String Prompt(java.lang.String message, java.lang.String defaultInputValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("Prompt", message, defaultInputValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HtmlWindow Open(java.lang.String urlString, java.lang.String target, java.lang.String windowOptions, boolean replaceEntry) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objOpen = (JCObject)classInstance.Invoke("Open", urlString, target, windowOptions, replaceEntry);
+            return new HtmlWindow(objOpen);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HtmlWindow Open(Uri url, java.lang.String target, java.lang.String windowOptions, boolean replaceEntry) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objOpen = (JCObject)classInstance.Invoke("Open", url == null ? null : url.getJCOInstance(), target, windowOptions, replaceEntry);
+            return new HtmlWindow(objOpen);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HtmlWindow OpenNew(java.lang.String urlString, java.lang.String windowOptions) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objOpenNew = (JCObject)classInstance.Invoke("OpenNew", urlString, windowOptions);
+            return new HtmlWindow(objOpenNew);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HtmlWindow OpenNew(Uri url, java.lang.String windowOptions) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objOpenNew = (JCObject)classInstance.Invoke("OpenNew", url == null ? null : url.getJCOInstance(), windowOptions);
+            return new HtmlWindow(objOpenNew);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Alert(java.lang.String message) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,16 +212,6 @@ public class HtmlWindow extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Confirm(java.lang.String message) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Confirm", message);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,16 +257,6 @@ public class HtmlWindow extends NetObject  {
         }
     }
 
-    public void Navigate(Uri url) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Navigate", url == null ? null : url.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Navigate(java.lang.String urlString) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -223,44 +267,11 @@ public class HtmlWindow extends NetObject  {
         }
     }
 
-    public HtmlWindow Open(java.lang.String urlString, java.lang.String target, java.lang.String windowOptions, boolean replaceEntry) throws Throwable {
+    public void Navigate(Uri url) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objOpen = (JCObject)classInstance.Invoke("Open", urlString, target, windowOptions, replaceEntry);
-            return new HtmlWindow(objOpen);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HtmlWindow Open(Uri url, java.lang.String target, java.lang.String windowOptions, boolean replaceEntry) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objOpen = (JCObject)classInstance.Invoke("Open", url == null ? null : url.getJCOInstance(), target, windowOptions, replaceEntry);
-            return new HtmlWindow(objOpen);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HtmlWindow OpenNew(Uri url, java.lang.String windowOptions) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objOpenNew = (JCObject)classInstance.Invoke("OpenNew", url == null ? null : url.getJCOInstance(), windowOptions);
-            return new HtmlWindow(objOpenNew);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String Prompt(java.lang.String message, java.lang.String defaultInputValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("Prompt", message, defaultInputValue);
+            classInstance.Invoke("Navigate", url == null ? null : url.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,112 +327,15 @@ public class HtmlWindow extends NetObject  {
         }
     }
 
-    public HtmlWindow OpenNew(java.lang.String urlString, java.lang.String windowOptions) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objOpenNew = (JCObject)classInstance.Invoke("OpenNew", urlString, windowOptions);
-            return new HtmlWindow(objOpenNew);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public HtmlDocument getDocument() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Document");
-            return new HtmlDocument(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getDomWindow() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DomWindow");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HtmlWindowCollection getFrames() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Frames");
-            return new HtmlWindowCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HtmlHistory getHistory() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("History");
-            return new HtmlHistory(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsClosed() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsClosed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setName(java.lang.String Name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Name", Name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HtmlWindow getOpener() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Opener");
-            return new HtmlWindow(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HtmlWindow getParent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new HtmlWindow(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,6 +373,37 @@ public class HtmlWindow extends NetObject  {
         }
     }
 
+    public NetObject getDomWindow() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DomWindow");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setName(java.lang.String Name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Name", Name);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getStatusBarText() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -490,12 +435,67 @@ public class HtmlWindow extends NetObject  {
         }
     }
 
+    public HtmlDocument getDocument() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Document");
+            return new HtmlDocument(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public HtmlElement getWindowFrameElement() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("WindowFrameElement");
             return new HtmlElement(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HtmlHistory getHistory() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("History");
+            return new HtmlHistory(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HtmlWindow getOpener() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Opener");
+            return new HtmlWindow(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HtmlWindow getParent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Parent");
+            return new HtmlWindow(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HtmlWindowCollection getFrames() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Frames");
+            return new HtmlWindowCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

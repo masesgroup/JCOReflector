@@ -37,11 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.io.Stream;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
 import system.runtime.remoting.channels.ITransportHeaders;
 import system.runtime.remoting.channels.ITransportHeadersImplementation;
-import system.io.Stream;
 
 
 /**
@@ -94,9 +94,9 @@ public interface IServerResponseChannelSinkStack extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void AsyncProcessResponse(IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable;
-
     public Stream GetResponseStream(IMessage msg, ITransportHeaders headers) throws Throwable;
+
+    public void AsyncProcessResponse(IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable;
 
 
     

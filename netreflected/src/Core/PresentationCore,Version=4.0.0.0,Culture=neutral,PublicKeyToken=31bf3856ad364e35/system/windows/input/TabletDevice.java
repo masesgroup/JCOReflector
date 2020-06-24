@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
-import system.windows.PresentationSource;
-import system.windows.input.TabletHardwareCapabilities;
-import system.windows.input.TabletDeviceType;
 import system.windows.input.StylusDeviceCollection;
+import system.windows.input.TabletDeviceType;
+import system.windows.input.TabletHardwareCapabilities;
+import system.windows.PresentationSource;
 import system.windows.threading.Dispatcher;
 
 
@@ -143,28 +143,6 @@ public class TabletDevice extends NetObject  {
     
     // Properties section
     
-    public IInputElement getTarget() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Target");
-            return new IInputElementImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PresentationSource getActiveSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ActiveSource");
-            return new PresentationSource(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -195,12 +173,23 @@ public class TabletDevice extends NetObject  {
         }
     }
 
-    public TabletHardwareCapabilities getTabletHardwareCapabilities() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public IInputElement getTarget() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TabletHardwareCapabilities");
-            return new TabletHardwareCapabilities(val);
+            JCObject val = (JCObject)classInstance.Get("Target");
+            return new IInputElementImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StylusDeviceCollection getStylusDevices() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("StylusDevices");
+            return new StylusDeviceCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,12 +206,23 @@ public class TabletDevice extends NetObject  {
         }
     }
 
-    public StylusDeviceCollection getStylusDevices() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public TabletHardwareCapabilities getTabletHardwareCapabilities() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StylusDevices");
-            return new StylusDeviceCollection(val);
+            JCObject val = (JCObject)classInstance.Get("TabletHardwareCapabilities");
+            return new TabletHardwareCapabilities(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PresentationSource getActiveSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ActiveSource");
+            return new PresentationSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

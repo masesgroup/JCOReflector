@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.linq.expressions.Expression;
 import system.linq.expressions.LabelExpression;
 import system.linq.expressions.LabelTarget;
-import system.linq.expressions.Expression;
 import system.linq.expressions.ExpressionType;
 
 
@@ -116,17 +116,6 @@ public class LabelExpression extends NetObject  {
     
     // Methods section
     
-    public LabelExpression Update(LabelTarget target, Expression defaultValue) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objUpdate = (JCObject)classInstance.Invoke("Update", target == null ? null : target.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance());
-            return new LabelExpression(objUpdate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Expression Reduce() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -160,16 +149,37 @@ public class LabelExpression extends NetObject  {
         }
     }
 
+    public LabelExpression Update(LabelTarget target, Expression defaultValue) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objUpdate = (JCObject)classInstance.Invoke("Update", target == null ? null : target.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance());
+            return new LabelExpression(objUpdate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public NetType getType() throws Throwable {
+    public boolean getCanReduce() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new NetType(val);
+            return (boolean)classInstance.Get("CanReduce");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Expression getDefaultValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DefaultValue");
+            return new Expression(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,22 +207,12 @@ public class LabelExpression extends NetObject  {
         }
     }
 
-    public Expression getDefaultValue() throws Throwable {
+    public NetType getType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultValue");
-            return new Expression(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanReduce() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanReduce");
+            JCObject val = (JCObject)classInstance.Get("Type");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

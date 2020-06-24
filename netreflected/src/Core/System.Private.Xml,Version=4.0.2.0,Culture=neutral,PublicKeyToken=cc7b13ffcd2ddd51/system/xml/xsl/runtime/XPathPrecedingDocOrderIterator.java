@@ -114,21 +114,21 @@ public class XPathPrecedingDocOrderIterator extends NetObject  {
     
     // Methods section
     
-    public void Create(XPathNavigator input, XmlNavigatorFilter filter) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Create", input == null ? null : input.getJCOInstance(), filter == null ? null : filter.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean MoveNext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("MoveNext");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Create(XPathNavigator input, XmlNavigatorFilter filter) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Create", input == null ? null : input.getJCOInstance(), filter == null ? null : filter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

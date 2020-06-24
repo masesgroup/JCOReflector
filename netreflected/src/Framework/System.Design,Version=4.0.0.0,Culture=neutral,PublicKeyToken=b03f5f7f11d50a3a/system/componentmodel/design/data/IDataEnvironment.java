@@ -37,14 +37,14 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.codedom.CodeExpression;
 import system.componentmodel.design.data.DesignerDataConnection;
 import system.windows.forms.IWin32Window;
 import system.windows.forms.IWin32WindowImplementation;
-import system.componentmodel.design.data.QueryBuilderMode;
 import system.componentmodel.design.data.IDesignerDataSchema;
 import system.componentmodel.design.data.IDesignerDataSchemaImplementation;
 import system.data.common.DbConnection;
-import system.codedom.CodeExpression;
+import system.componentmodel.design.data.QueryBuilderMode;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 
@@ -99,9 +99,9 @@ public interface IDataEnvironment extends IJCOBridgeReflected {
 
     // Methods section
     
-    public DesignerDataConnection BuildConnection(IWin32Window owner, DesignerDataConnection initialConnection) throws Throwable;
+    public CodeExpression GetCodeExpression(DesignerDataConnection connection) throws Throwable;
 
-    public java.lang.String BuildQuery(IWin32Window owner, DesignerDataConnection connection, QueryBuilderMode mode, java.lang.String initialQueryText) throws Throwable;
+    public DesignerDataConnection BuildConnection(IWin32Window owner, DesignerDataConnection initialConnection) throws Throwable;
 
     public DesignerDataConnection ConfigureConnection(IWin32Window owner, DesignerDataConnection connection, java.lang.String name) throws Throwable;
 
@@ -109,7 +109,7 @@ public interface IDataEnvironment extends IJCOBridgeReflected {
 
     public DbConnection GetDesignTimeConnection(DesignerDataConnection connection) throws Throwable;
 
-    public CodeExpression GetCodeExpression(DesignerDataConnection connection) throws Throwable;
+    public java.lang.String BuildQuery(IWin32Window owner, DesignerDataConnection connection, QueryBuilderMode mode, java.lang.String initialQueryText) throws Throwable;
 
 
     

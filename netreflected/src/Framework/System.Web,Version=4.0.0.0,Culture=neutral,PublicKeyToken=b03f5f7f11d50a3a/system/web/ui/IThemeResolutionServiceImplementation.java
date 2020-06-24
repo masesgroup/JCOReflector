@@ -104,18 +104,12 @@ public class IThemeResolutionServiceImplementation extends NetObject implements 
 
     // Methods section
     
-    public ThemeProvider[] GetAllThemeProviders() throws Throwable {
+    public ThemeProvider GetStylesheetThemeProvider() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<ThemeProvider> resultingArrayList = new ArrayList<ThemeProvider>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAllThemeProviders");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new ThemeProvider(resultingObject));
-            }
-            ThemeProvider[] resultingArray = new ThemeProvider[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            JCObject objGetStylesheetThemeProvider = (JCObject)classInstance.Invoke("GetStylesheetThemeProvider");
+            return new ThemeProvider(objGetStylesheetThemeProvider);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -132,12 +126,18 @@ public class IThemeResolutionServiceImplementation extends NetObject implements 
         }
     }
 
-    public ThemeProvider GetStylesheetThemeProvider() throws Throwable {
+    public ThemeProvider[] GetAllThemeProviders() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetStylesheetThemeProvider = (JCObject)classInstance.Invoke("GetStylesheetThemeProvider");
-            return new ThemeProvider(objGetStylesheetThemeProvider);
+            ArrayList<ThemeProvider> resultingArrayList = new ArrayList<ThemeProvider>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAllThemeProviders");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new ThemeProvider(resultingObject));
+            }
+            ThemeProvider[] resultingArray = new ThemeProvider[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

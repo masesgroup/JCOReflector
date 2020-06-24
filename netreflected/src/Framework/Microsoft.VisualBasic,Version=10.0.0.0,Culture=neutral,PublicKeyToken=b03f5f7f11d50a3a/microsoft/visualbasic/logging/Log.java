@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.diagnostics.TraceEventType;
-import system.diagnostics.TraceSource;
 import microsoft.visualbasic.logging.FileLogTraceListener;
+import system.diagnostics.TraceSource;
 
 
 /**
@@ -200,23 +200,23 @@ public class Log extends NetObject  {
     
     // Properties section
     
-    public TraceSource getTraceSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TraceSource");
-            return new TraceSource(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FileLogTraceListener getDefaultFileLogWriter() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("DefaultFileLogWriter");
             return new FileLogTraceListener(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TraceSource getTraceSource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TraceSource");
+            return new TraceSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -92,25 +92,25 @@ public interface IWorkflowDebugger extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void ActivityStatusChanged(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable;
+
+    public void AssemblyLoaded(Guid programId, java.lang.String assemblyPath, boolean fromGlobalAssemblyCache) throws Throwable;
+
+    public void BeforeActivityStatusChanged(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable;
+
+    public void BeforeHandlerInvoked(Guid programId, Guid scheduleTypeId, java.lang.String activityQualifiedName, ActivityHandlerDescriptor handlerMethod) throws Throwable;
+
+    public void HandlerInvoked(Guid programId, Guid instanceId, int threadId, java.lang.String activityQualifiedName) throws Throwable;
+
+    public void InstanceCompleted(Guid programId, Guid instanceId) throws Throwable;
+
     public void InstanceCreated(Guid programId, Guid instanceId, Guid scheduleTypeId) throws Throwable;
 
     public void InstanceDynamicallyUpdated(Guid programId, Guid instanceId, Guid scheduleTypeId) throws Throwable;
 
-    public void InstanceCompleted(Guid programId, Guid instanceId) throws Throwable;
-
-    public void BeforeActivityStatusChanged(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable;
-
-    public void ActivityStatusChanged(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable;
-
-    public void SetInitialActivityStatus(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable;
-
     public void ScheduleTypeLoaded(Guid programId, Guid scheduleTypeId, java.lang.String assemblyFullName, java.lang.String fileName, java.lang.String md5Digest, boolean isDynamic, java.lang.String scheduleNamespace, java.lang.String scheduleName, java.lang.String workflowMarkup) throws Throwable;
 
-    public void AssemblyLoaded(Guid programId, java.lang.String assemblyPath, boolean fromGlobalAssemblyCache) throws Throwable;
-
-    public void HandlerInvoked(Guid programId, Guid instanceId, int threadId, java.lang.String activityQualifiedName) throws Throwable;
-
-    public void BeforeHandlerInvoked(Guid programId, Guid scheduleTypeId, java.lang.String activityQualifiedName, ActivityHandlerDescriptor handlerMethod) throws Throwable;
+    public void SetInitialActivityStatus(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable;
 
 
     

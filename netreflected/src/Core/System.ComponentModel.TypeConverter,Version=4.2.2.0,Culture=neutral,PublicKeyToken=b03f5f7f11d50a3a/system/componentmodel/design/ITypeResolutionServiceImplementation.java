@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.AssemblyName;
 import system.reflection.Assembly;
+import system.reflection.AssemblyName;
 
 
 /**
@@ -105,16 +105,6 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
 
     // Methods section
     
-    public java.lang.String GetPathOfAssembly(AssemblyName name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetPathOfAssembly", name == null ? null : name.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Assembly GetAssembly(AssemblyName name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -132,6 +122,16 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
         try {
             JCObject objGetAssembly = (JCObject)classInstance.Invoke("GetAssembly", name == null ? null : name.getJCOInstance(), throwOnError);
             return new Assembly(objGetAssembly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetPathOfAssembly(AssemblyName name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetPathOfAssembly", name == null ? null : name.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

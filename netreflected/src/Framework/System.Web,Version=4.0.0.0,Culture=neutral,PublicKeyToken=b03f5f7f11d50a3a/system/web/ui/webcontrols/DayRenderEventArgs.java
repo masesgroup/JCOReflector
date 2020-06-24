@@ -139,12 +139,11 @@ public class DayRenderEventArgs extends NetObject  {
     
     // Properties section
     
-    public TableCell getCell() throws Throwable {
+    public java.lang.String getSelectUrl() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Cell");
-            return new TableCell(val);
+            return (java.lang.String)classInstance.Get("SelectUrl");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,11 +160,12 @@ public class DayRenderEventArgs extends NetObject  {
         }
     }
 
-    public java.lang.String getSelectUrl() throws Throwable {
+    public TableCell getCell() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("SelectUrl");
+            JCObject val = (JCObject)classInstance.Get("Cell");
+            return new TableCell(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

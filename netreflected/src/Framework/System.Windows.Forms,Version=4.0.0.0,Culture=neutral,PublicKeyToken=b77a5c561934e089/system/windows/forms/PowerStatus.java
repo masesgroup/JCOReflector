@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.forms.PowerLineStatus;
-import system.windows.forms.BatteryChargeStatus;
 import system.Single;
+import system.windows.forms.BatteryChargeStatus;
+import system.windows.forms.PowerLineStatus;
 
 
 /**
@@ -119,33 +119,21 @@ public class PowerStatus extends NetObject  {
     
     // Properties section
     
-    public PowerLineStatus getPowerLineStatus() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PowerLineStatus");
-            return new PowerLineStatus(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BatteryChargeStatus getBatteryChargeStatus() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BatteryChargeStatus");
-            return new BatteryChargeStatus(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getBatteryFullLifetime() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("BatteryFullLifetime");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getBatteryLifeRemaining() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("BatteryLifeRemaining");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,11 +150,23 @@ public class PowerStatus extends NetObject  {
         }
     }
 
-    public int getBatteryLifeRemaining() throws Throwable {
+    public BatteryChargeStatus getBatteryChargeStatus() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("BatteryLifeRemaining");
+            JCObject val = (JCObject)classInstance.Get("BatteryChargeStatus");
+            return new BatteryChargeStatus(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PowerLineStatus getPowerLineStatus() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PowerLineStatus");
+            return new PowerLineStatus(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

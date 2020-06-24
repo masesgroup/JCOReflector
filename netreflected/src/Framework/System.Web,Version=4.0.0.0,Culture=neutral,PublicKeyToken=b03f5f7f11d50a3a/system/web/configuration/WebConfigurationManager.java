@@ -117,17 +117,6 @@ public class WebConfigurationManager extends NetObject  {
     
     // Methods section
     
-    public static NetObject GetSection(java.lang.String sectionName, java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetSection = (JCObject)classType.Invoke("GetSection", sectionName, path);
-            return new NetObject(objGetSection);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Configuration OpenMachineConfiguration() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -194,6 +183,39 @@ public class WebConfigurationManager extends NetObject  {
         }
     }
 
+    public static Configuration OpenMappedWebConfiguration(WebConfigurationFileMap fileMap, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objOpenMappedWebConfiguration = (JCObject)classType.Invoke("OpenMappedWebConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), path);
+            return new Configuration(objOpenMappedWebConfiguration);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Configuration OpenMappedWebConfiguration(WebConfigurationFileMap fileMap, java.lang.String path, java.lang.String site) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objOpenMappedWebConfiguration = (JCObject)classType.Invoke("OpenMappedWebConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), path, site);
+            return new Configuration(objOpenMappedWebConfiguration);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Configuration OpenMappedWebConfiguration(WebConfigurationFileMap fileMap, java.lang.String path, java.lang.String site, java.lang.String locationSubPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objOpenMappedWebConfiguration = (JCObject)classType.Invoke("OpenMappedWebConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), path, site, locationSubPath);
+            return new Configuration(objOpenMappedWebConfiguration);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Configuration OpenWebConfiguration(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -249,44 +271,22 @@ public class WebConfigurationManager extends NetObject  {
         }
     }
 
-    public static Configuration OpenMappedWebConfiguration(WebConfigurationFileMap fileMap, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objOpenMappedWebConfiguration = (JCObject)classType.Invoke("OpenMappedWebConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), path);
-            return new Configuration(objOpenMappedWebConfiguration);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Configuration OpenMappedWebConfiguration(WebConfigurationFileMap fileMap, java.lang.String path, java.lang.String site) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objOpenMappedWebConfiguration = (JCObject)classType.Invoke("OpenMappedWebConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), path, site);
-            return new Configuration(objOpenMappedWebConfiguration);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Configuration OpenMappedWebConfiguration(WebConfigurationFileMap fileMap, java.lang.String path, java.lang.String site, java.lang.String locationSubPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objOpenMappedWebConfiguration = (JCObject)classType.Invoke("OpenMappedWebConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), path, site, locationSubPath);
-            return new Configuration(objOpenMappedWebConfiguration);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static NetObject GetSection(java.lang.String sectionName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.web.HttpRequestValidationException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetSection = (JCObject)classType.Invoke("GetSection", sectionName);
+            return new NetObject(objGetSection);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject GetSection(java.lang.String sectionName, java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetSection = (JCObject)classType.Invoke("GetSection", sectionName, path);
             return new NetObject(objGetSection);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -89,23 +89,23 @@ public interface IAccessible extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void accSelect(int flagsSelect, NetObject varChild) throws Throwable;
+    public NetObject accHitTest(int xLeft, int yTop) throws Throwable;
 
     public NetObject accNavigate(int navDir, NetObject varStart) throws Throwable;
 
-    public NetObject accHitTest(int xLeft, int yTop) throws Throwable;
-
     public void accDoDefaultAction(NetObject varChild) throws Throwable;
+
+    public void accSelect(int flagsSelect, NetObject varChild) throws Throwable;
 
 
     
     // Properties section
     
-    public NetObject getaccParent() throws Throwable;
-
     public int getaccChildCount() throws Throwable;
 
     public NetObject getaccFocus() throws Throwable;
+
+    public NetObject getaccParent() throws Throwable;
 
     public NetObject getaccSelection() throws Throwable;
 

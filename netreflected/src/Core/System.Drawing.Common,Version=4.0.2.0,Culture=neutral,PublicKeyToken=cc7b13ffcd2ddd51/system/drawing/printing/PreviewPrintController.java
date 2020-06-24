@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.drawing.printing.PrintDocument;
-import system.drawing.printing.PrintEventArgs;
 import system.drawing.Graphics;
+import system.drawing.printing.PrintDocument;
 import system.drawing.printing.PrintPageEventArgs;
 import system.drawing.printing.PreviewPageInfo;
+import system.drawing.printing.PrintEventArgs;
 
 
 /**
@@ -128,22 +128,29 @@ public class PreviewPrintController extends NetObject  {
     
     // Methods section
     
-    public void OnStartPrint(PrintDocument document, PrintEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.AccessViolationException, system.drawing.printing.InvalidPrinterException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidCastException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("OnStartPrint", document == null ? null : document.getJCOInstance(), e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Graphics OnStartPage(PrintDocument document, PrintPageEventArgs e) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.componentmodel.Win32Exception, system.AccessViolationException, system.drawing.printing.InvalidPrinterException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objOnStartPage = (JCObject)classInstance.Invoke("OnStartPage", document == null ? null : document.getJCOInstance(), e == null ? null : e.getJCOInstance());
             return new Graphics(objOnStartPage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PreviewPageInfo[] GetPreviewPageInfo() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<PreviewPageInfo> resultingArrayList = new ArrayList<PreviewPageInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPreviewPageInfo");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new PreviewPageInfo(resultingObject));
+            }
+            PreviewPageInfo[] resultingArray = new PreviewPageInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,18 +176,11 @@ public class PreviewPrintController extends NetObject  {
         }
     }
 
-    public PreviewPageInfo[] GetPreviewPageInfo() throws Throwable {
+    public void OnStartPrint(PrintDocument document, PrintEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.AccessViolationException, system.drawing.printing.InvalidPrinterException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<PreviewPageInfo> resultingArrayList = new ArrayList<PreviewPageInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPreviewPageInfo");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new PreviewPageInfo(resultingObject));
-            }
-            PreviewPageInfo[] resultingArray = new PreviewPageInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            classInstance.Invoke("OnStartPrint", document == null ? null : document.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -112,6 +112,16 @@ public class SendKeys extends NetObject  {
     
     // Methods section
     
+    public static void Flush() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NullReferenceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.OverflowException, system.componentmodel.InvalidAsynchronousStateException, system.io.FileNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Flush");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void Send(java.lang.String keys) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException, system.NullReferenceException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -127,16 +137,6 @@ public class SendKeys extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SendWait", keys);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Flush() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NullReferenceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.OverflowException, system.componentmodel.InvalidAsynchronousStateException, system.io.FileNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Flush");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

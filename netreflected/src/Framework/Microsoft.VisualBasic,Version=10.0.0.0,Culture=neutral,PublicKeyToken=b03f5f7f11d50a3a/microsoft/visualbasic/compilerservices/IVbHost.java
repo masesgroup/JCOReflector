@@ -91,9 +91,9 @@ public interface IVbHost extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IWin32Window GetParentWindow() throws Throwable;
-
     public java.lang.String GetWindowTitle() throws Throwable;
+
+    public IWin32Window GetParentWindow() throws Throwable;
 
 
     

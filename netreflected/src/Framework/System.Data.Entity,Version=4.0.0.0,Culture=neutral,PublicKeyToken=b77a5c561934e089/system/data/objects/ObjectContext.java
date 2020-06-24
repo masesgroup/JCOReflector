@@ -39,19 +39,19 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.entityclient.EntityConnection;
-import system.data.objects.MergeOption;
+import system.data.EntityKey;
+import system.data.objects.ObjectParameter;
+import system.data.objects.SaveOptions;
 import system.data.objects.dataclasses.IEntityWithKey;
 import system.data.objects.dataclasses.IEntityWithKeyImplementation;
-import system.data.EntityKey;
+import system.data.objects.MergeOption;
 import system.data.objects.RefreshMode;
-import system.data.objects.SaveOptions;
-import system.data.objects.ObjectParameter;
 import system.data.common.DbConnection;
 import system.data.metadata.edm.MetadataWorkspace;
-import system.data.objects.ObjectStateManager;
 import system.data.objects.ObjectContextOptions;
-import system.EventHandler;
+import system.data.objects.ObjectStateManager;
 import system.data.objects.ObjectMaterializedEventHandler;
+import system.EventHandler;
 
 
 /**
@@ -147,143 +147,31 @@ public class ObjectContext extends NetObject  {
     
     // Methods section
     
-    public void AcceptAllChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public boolean DatabaseExists() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AcceptAllChanges");
+            return (boolean)classInstance.Invoke("DatabaseExists");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void AddObject(java.lang.String entitySetName, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.OutOfMemoryException, system.TypeLoadException, system.NullReferenceException {
+    public int ExecuteFunction(java.lang.String functionName, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NotSupportedException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.data.EntityCommandExecutionException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddObject", entitySetName, entity == null ? null : entity.getJCOInstance());
+            return (int)classInstance.Invoke("ExecuteFunction", functionName, toObjectFromArray(parameters));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void LoadProperty(NetObject entity, java.lang.String navigationProperty) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
+    public int ExecuteStoreCommand(java.lang.String commandText, NetObject... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.io.FileNotFoundException, system.NotSupportedException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("LoadProperty", entity == null ? null : entity.getJCOInstance(), navigationProperty);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LoadProperty(NetObject entity, java.lang.String navigationProperty, MergeOption mergeOption) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LoadProperty", entity == null ? null : entity.getJCOInstance(), navigationProperty, mergeOption == null ? null : mergeOption.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ApplyPropertyChanges(java.lang.String entitySetName, NetObject changed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ApplyPropertyChanges", entitySetName, changed == null ? null : changed.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AttachTo(java.lang.String entitySetName, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.TypeLoadException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AttachTo", entitySetName, entity == null ? null : entity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Attach(IEntityWithKey entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.NullReferenceException, system.threading.LockRecursionException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Attach", entity == null ? null : entity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EntityKey CreateEntityKey(java.lang.String entitySetName, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateEntityKey = (JCObject)classInstance.Invoke("CreateEntityKey", entitySetName, entity == null ? null : entity.getJCOInstance());
-            return new EntityKey(objCreateEntityKey);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DeleteObject(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DeleteObject", entity == null ? null : entity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Detach(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Detach", entity == null ? null : entity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetObjectByKey(EntityKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException, system.data.ObjectNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetObjectByKey = (JCObject)classInstance.Invoke("GetObjectByKey", key == null ? null : key.getJCOInstance());
-            return new NetObject(objGetObjectByKey);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Refresh(RefreshMode refreshMode, IEnumerable collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NullReferenceException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.data.ProviderIncompatibleException, system.data.EntityCommandCompilationException, system.data.EntityCommandExecutionException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Refresh", refreshMode == null ? null : refreshMode.getJCOInstance(), collection == null ? null : collection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Refresh(RefreshMode refreshMode, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NullReferenceException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.data.ProviderIncompatibleException, system.data.EntityCommandCompilationException, system.data.EntityCommandExecutionException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Refresh", refreshMode == null ? null : refreshMode.getJCOInstance(), entity == null ? null : entity.getJCOInstance());
+            return (int)classInstance.Invoke("ExecuteStoreCommand", commandText, toObjectFromArray(parameters));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,21 +207,33 @@ public class ObjectContext extends NetObject  {
         }
     }
 
-    public void DetectChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.data.MetadataException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.data.EntityException, system.NotImplementedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
+    public EntityKey CreateEntityKey(java.lang.String entitySetName, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DetectChanges");
+            JCObject objCreateEntityKey = (JCObject)classInstance.Invoke("CreateEntityKey", entitySetName, entity == null ? null : entity.getJCOInstance());
+            return new EntityKey(objCreateEntityKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int ExecuteFunction(java.lang.String functionName, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NotSupportedException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.data.EntityCommandExecutionException {
+    public NetObject GetObjectByKey(EntityKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException, system.data.ObjectNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ExecuteFunction", functionName, toObjectFromArray(parameters));
+            JCObject objGetObjectByKey = (JCObject)classInstance.Invoke("GetObjectByKey", key == null ? null : key.getJCOInstance());
+            return new NetObject(objGetObjectByKey);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String CreateDatabaseScript() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("CreateDatabaseScript");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,11 +250,51 @@ public class ObjectContext extends NetObject  {
         }
     }
 
-    public int ExecuteStoreCommand(java.lang.String commandText, NetObject... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.io.FileNotFoundException, system.NotSupportedException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException {
+    public void AcceptAllChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ExecuteStoreCommand", commandText, toObjectFromArray(parameters));
+            classInstance.Invoke("AcceptAllChanges");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddObject(java.lang.String entitySetName, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.OutOfMemoryException, system.TypeLoadException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddObject", entitySetName, entity == null ? null : entity.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ApplyPropertyChanges(java.lang.String entitySetName, NetObject changed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ApplyPropertyChanges", entitySetName, changed == null ? null : changed.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Attach(IEntityWithKey entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.NullReferenceException, system.threading.LockRecursionException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Attach", entity == null ? null : entity.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AttachTo(java.lang.String entitySetName, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.TypeLoadException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AttachTo", entitySetName, entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,31 +310,81 @@ public class ObjectContext extends NetObject  {
         }
     }
 
-    public void DeleteDatabase() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
+    public void DeleteObject(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DeleteDatabase");
+            classInstance.Invoke("DeleteObject", entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean DatabaseExists() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
+    public void Detach(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("DatabaseExists");
+            classInstance.Invoke("Detach", entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String CreateDatabaseScript() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
+    public void DetectChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.data.MetadataException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.data.EntityException, system.NotImplementedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("CreateDatabaseScript");
+            classInstance.Invoke("DetectChanges");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void LoadProperty(NetObject entity, java.lang.String navigationProperty) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("LoadProperty", entity == null ? null : entity.getJCOInstance(), navigationProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void LoadProperty(NetObject entity, java.lang.String navigationProperty, MergeOption mergeOption) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("LoadProperty", entity == null ? null : entity.getJCOInstance(), navigationProperty, mergeOption == null ? null : mergeOption.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Refresh(RefreshMode refreshMode, IEnumerable collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NullReferenceException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.data.ProviderIncompatibleException, system.data.EntityCommandCompilationException, system.data.EntityCommandExecutionException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Refresh", refreshMode == null ? null : refreshMode.getJCOInstance(), collection == null ? null : collection.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Refresh(RefreshMode refreshMode, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NullReferenceException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.data.ProviderIncompatibleException, system.data.EntityCommandCompilationException, system.data.EntityCommandExecutionException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Refresh", refreshMode == null ? null : refreshMode.getJCOInstance(), entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,6 +400,39 @@ public class ObjectContext extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Connection");
             return new DbConnection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MetadataWorkspace getMetadataWorkspace() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MetadataWorkspace");
+            return new MetadataWorkspace(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObjectContextOptions getContextOptions() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ContextOptions");
+            return new ObjectContextOptions(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObjectStateManager getObjectStateManager() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ObjectStateManager");
+            return new ObjectStateManager(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,63 +458,10 @@ public class ObjectContext extends NetObject  {
         }
     }
 
-    public MetadataWorkspace getMetadataWorkspace() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MetadataWorkspace");
-            return new MetadataWorkspace(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ObjectStateManager getObjectStateManager() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ObjectStateManager");
-            return new ObjectStateManager(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ObjectContextOptions getContextOptions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ContextOptions");
-            return new ObjectContextOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section
     
-
-    public void addSavingChanges(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("SavingChanges", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeSavingChanges(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("SavingChanges", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
     public void addObjectMaterialized(ObjectMaterializedEventHandler handler) throws Throwable {
         if (classInstance == null)
@@ -508,6 +478,26 @@ public class ObjectContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ObjectMaterialized", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addSavingChanges(EventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("SavingChanges", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeSavingChanges(EventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("SavingChanges", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

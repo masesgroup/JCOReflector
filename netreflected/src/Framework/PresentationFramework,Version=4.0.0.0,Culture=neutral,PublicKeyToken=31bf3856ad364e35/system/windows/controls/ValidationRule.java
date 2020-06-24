@@ -117,6 +117,17 @@ public class ValidationRule extends NetObject  {
     
     // Methods section
     
+    public ValidationResult Validate(NetObject value, CultureInfo cultureInfo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", value == null ? null : value.getJCOInstance(), cultureInfo == null ? null : cultureInfo.getJCOInstance());
+            return new ValidationResult(objValidate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ValidationResult Validate(NetObject value, CultureInfo cultureInfo, BindingExpressionBase owner) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -139,21 +150,30 @@ public class ValidationRule extends NetObject  {
         }
     }
 
-    public ValidationResult Validate(NetObject value, CultureInfo cultureInfo) throws Throwable {
+
+    
+    // Properties section
+    
+    public boolean getValidatesOnTargetUpdated() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", value == null ? null : value.getJCOInstance(), cultureInfo == null ? null : cultureInfo.getJCOInstance());
-            return new ValidationResult(objValidate);
+            return (boolean)classInstance.Get("ValidatesOnTargetUpdated");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public void setValidatesOnTargetUpdated(boolean ValidatesOnTargetUpdated) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ValidatesOnTargetUpdated", ValidatesOnTargetUpdated);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
-    
-    // Properties section
-    
     public ValidationStep getValidationStep() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -170,26 +190,6 @@ public class ValidationRule extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidationStep", ValidationStep == null ? null : ValidationStep.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getValidatesOnTargetUpdated() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ValidatesOnTargetUpdated");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setValidatesOnTargetUpdated(boolean ValidatesOnTargetUpdated) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ValidatesOnTargetUpdated", ValidatesOnTargetUpdated);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

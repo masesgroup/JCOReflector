@@ -171,11 +171,12 @@ public class DesignerView extends NetObject  {
         }
     }
 
-    public java.lang.String getText() throws Throwable {
+    public IDictionary getUserData() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            JCObject val = (JCObject)classInstance.Get("UserData");
+            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,12 +193,11 @@ public class DesignerView extends NetObject  {
         }
     }
 
-    public IDictionary getUserData() throws Throwable {
+    public java.lang.String getText() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
-            return new IDictionaryImplementation(val);
+            return (java.lang.String)classInstance.Get("Text");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

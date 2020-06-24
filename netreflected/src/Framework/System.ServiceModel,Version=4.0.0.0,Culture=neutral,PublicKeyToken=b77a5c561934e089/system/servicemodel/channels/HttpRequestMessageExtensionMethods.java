@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.http.HttpRequestMessage;
 import system.security.principal.IPrincipal;
 import system.security.principal.IPrincipalImplementation;
+import system.net.http.HttpRequestMessage;
 
 
 /**
@@ -115,22 +115,22 @@ public class HttpRequestMessageExtensionMethods extends NetObject  {
     
     // Methods section
     
-    public static void SetUserPrincipal(HttpRequestMessage httpRequestMessage, IPrincipal user) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SetUserPrincipal", httpRequestMessage == null ? null : httpRequestMessage.getJCOInstance(), user == null ? null : user.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static IPrincipal GetUserPrincipal(HttpRequestMessage httpRequestMessage) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetUserPrincipal = (JCObject)classType.Invoke("GetUserPrincipal", httpRequestMessage == null ? null : httpRequestMessage.getJCOInstance());
             return new IPrincipalImplementation(objGetUserPrincipal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetUserPrincipal(HttpRequestMessage httpRequestMessage, IPrincipal user) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetUserPrincipal", httpRequestMessage == null ? null : httpRequestMessage.getJCOInstance(), user == null ? null : user.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.MethodImportAttributes;
-import system.reflection.metadata.StringHandle;
 import system.reflection.metadata.ModuleReferenceHandle;
+import system.reflection.metadata.StringHandle;
+import system.reflection.MethodImportAttributes;
 
 
 /**
@@ -119,12 +119,12 @@ public class MethodImport extends NetObject  {
     
     // Properties section
     
-    public MethodImportAttributes getAttributes() throws Throwable {
+    public ModuleReferenceHandle getModule() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new MethodImportAttributes(val);
+            JCObject val = (JCObject)classInstance.Get("Module");
+            return new ModuleReferenceHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -141,12 +141,12 @@ public class MethodImport extends NetObject  {
         }
     }
 
-    public ModuleReferenceHandle getModule() throws Throwable {
+    public MethodImportAttributes getAttributes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Module");
-            return new ModuleReferenceHandle(val);
+            JCObject val = (JCObject)classInstance.Get("Attributes");
+            return new MethodImportAttributes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -149,16 +149,6 @@ public class EntityTagHeaderValue extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getTag() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Tag");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsWeak() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -175,6 +165,16 @@ public class EntityTagHeaderValue extends NetObject  {
         try {
             JCObject val = (JCObject)classType.Get("Any");
             return new EntityTagHeaderValue(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getTag() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Tag");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

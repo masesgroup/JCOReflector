@@ -37,6 +37,7 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.codedom.CodeExpression;
 import system.workflow.activities.rules.RuleExpressionInfo;
 import system.workflow.activities.rules.RuleValidation;
 import system.workflow.activities.rules.RuleExpressionResult;
@@ -44,7 +45,6 @@ import system.workflow.activities.rules.RuleExecution;
 import system.workflow.activities.rules.RuleAnalysis;
 import system.workflow.activities.rules.RulePathQualifier;
 import system.text.StringBuilder;
-import system.codedom.CodeExpression;
 
 
 /**
@@ -97,6 +97,10 @@ public interface IRuleExpression extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean Match(CodeExpression expression) throws Throwable;
+
+    public CodeExpression Clone() throws Throwable;
+
     public RuleExpressionInfo Validate(RuleValidation validation, boolean isWritten) throws Throwable;
 
     public RuleExpressionResult Evaluate(RuleExecution execution) throws Throwable;
@@ -104,10 +108,6 @@ public interface IRuleExpression extends IJCOBridgeReflected {
     public void AnalyzeUsage(RuleAnalysis analysis, boolean isRead, boolean isWritten, RulePathQualifier qualifier) throws Throwable;
 
     public void Decompile(StringBuilder stringBuilder, CodeExpression parentExpression) throws Throwable;
-
-    public boolean Match(CodeExpression expression) throws Throwable;
-
-    public CodeExpression Clone() throws Throwable;
 
 
     

@@ -128,22 +128,41 @@ public class DesignerOptions extends NetObject  {
     
     // Properties section
     
-    public Size getGridSize() throws Throwable {
+    public boolean getEnableInSituEditing() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("GridSize");
-            return new Size(val);
+            return (boolean)classInstance.Get("EnableInSituEditing");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setGridSize(Size GridSize) throws Throwable {
+    public void setEnableInSituEditing(boolean EnableInSituEditing) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("GridSize", GridSize == null ? null : GridSize.getJCOInstance());
+            classInstance.Set("EnableInSituEditing", EnableInSituEditing);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getObjectBoundSmartTagAutoShow() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("ObjectBoundSmartTagAutoShow");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setObjectBoundSmartTagAutoShow(boolean ObjectBoundSmartTagAutoShow) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ObjectBoundSmartTagAutoShow", ObjectBoundSmartTagAutoShow);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,21 +208,21 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
-    public boolean getUseSnapLines() throws Throwable {
+    public boolean getUseOptimizedCodeGeneration() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("UseSnapLines");
+            return (boolean)classInstance.Get("UseOptimizedCodeGeneration");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUseSnapLines(boolean UseSnapLines) throws Throwable {
+    public void setUseOptimizedCodeGeneration(boolean UseOptimizedCodeGeneration) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("UseSnapLines", UseSnapLines);
+            classInstance.Set("UseOptimizedCodeGeneration", UseOptimizedCodeGeneration);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,61 +248,42 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
-    public boolean getObjectBoundSmartTagAutoShow() throws Throwable {
+    public boolean getUseSnapLines() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("ObjectBoundSmartTagAutoShow");
+            return (boolean)classInstance.Get("UseSnapLines");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setObjectBoundSmartTagAutoShow(boolean ObjectBoundSmartTagAutoShow) throws Throwable {
+    public void setUseSnapLines(boolean UseSnapLines) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ObjectBoundSmartTagAutoShow", ObjectBoundSmartTagAutoShow);
+            classInstance.Set("UseSnapLines", UseSnapLines);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getUseOptimizedCodeGeneration() throws Throwable {
+    public Size getGridSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("UseOptimizedCodeGeneration");
+            JCObject val = (JCObject)classInstance.Get("GridSize");
+            return new Size(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUseOptimizedCodeGeneration(boolean UseOptimizedCodeGeneration) throws Throwable {
+    public void setGridSize(Size GridSize) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("UseOptimizedCodeGeneration", UseOptimizedCodeGeneration);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getEnableInSituEditing() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("EnableInSituEditing");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEnableInSituEditing(boolean EnableInSituEditing) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EnableInSituEditing", EnableInSituEditing);
+            classInstance.Set("GridSize", GridSize == null ? null : GridSize.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

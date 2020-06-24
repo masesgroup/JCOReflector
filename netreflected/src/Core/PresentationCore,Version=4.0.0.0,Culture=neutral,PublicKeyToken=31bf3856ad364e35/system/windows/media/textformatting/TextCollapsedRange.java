@@ -116,11 +116,11 @@ public class TextCollapsedRange extends NetObject  {
     
     // Properties section
     
-    public int getTextSourceCharacterIndex() throws Throwable {
+    public double getWidth() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("TextSourceCharacterIndex");
+            return (double)classInstance.Get("Width");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -136,11 +136,11 @@ public class TextCollapsedRange extends NetObject  {
         }
     }
 
-    public double getWidth() throws Throwable {
+    public int getTextSourceCharacterIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("Width");
+            return (int)classInstance.Get("TextSourceCharacterIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

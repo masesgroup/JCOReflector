@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.data.DataView;
 import system.data.DataRelation;
-import system.data.DataRowVersion;
 import system.data.DataRow;
+import system.data.DataRowVersion;
 import system.componentmodel.PropertyChangedEventHandler;
 
 
@@ -117,17 +117,6 @@ public class DataRowView extends NetObject  {
     
     // Methods section
     
-    public DataView CreateChildView(DataRelation relation, boolean followParent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relation == null ? null : relation.getJCOInstance(), followParent);
-            return new DataView(objCreateChildView);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataView CreateChildView(DataRelation relation) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -139,11 +128,11 @@ public class DataRowView extends NetObject  {
         }
     }
 
-    public DataView CreateChildView(java.lang.String relationName, boolean followParent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NotSupportedException {
+    public DataView CreateChildView(DataRelation relation, boolean followParent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relationName, followParent);
+            JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relation == null ? null : relation.getJCOInstance(), followParent);
             return new DataView(objCreateChildView);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -155,6 +144,17 @@ public class DataRowView extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relationName);
+            return new DataView(objCreateChildView);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataView CreateChildView(java.lang.String relationName, boolean followParent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relationName, followParent);
             return new DataView(objCreateChildView);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -181,16 +181,6 @@ public class DataRowView extends NetObject  {
         }
     }
 
-    public void EndEdit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("EndEdit");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Delete() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -201,27 +191,35 @@ public class DataRowView extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public DataView getDataView() throws Throwable {
+    public void EndEdit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DataView");
-            return new DataView(val);
+            classInstance.Invoke("EndEdit");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DataRowVersion getRowVersion() throws Throwable {
+
+    
+    // Properties section
+    
+    public boolean getIsEdit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RowVersion");
-            return new DataRowVersion(val);
+            return (boolean)classInstance.Get("IsEdit");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsNew() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsNew");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,21 +236,23 @@ public class DataRowView extends NetObject  {
         }
     }
 
-    public boolean getIsNew() throws Throwable {
+    public DataRowVersion getRowVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsNew");
+            JCObject val = (JCObject)classInstance.Get("RowVersion");
+            return new DataRowVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsEdit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public DataView getDataView() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsEdit");
+            JCObject val = (JCObject)classInstance.Get("DataView");
+            return new DataView(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

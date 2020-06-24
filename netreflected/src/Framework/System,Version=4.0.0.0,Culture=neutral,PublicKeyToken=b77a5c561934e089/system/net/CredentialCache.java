@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Uri;
 import system.net.NetworkCredential;
+import system.Uri;
 import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
 
@@ -127,21 +127,12 @@ public class CredentialCache extends NetObject  {
     
     // Methods section
     
-    public void Remove(Uri uriPrefix, java.lang.String authType) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public NetworkCredential GetCredential(java.lang.String host, int port, java.lang.String authenticationType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Remove", uriPrefix == null ? null : uriPrefix.getJCOInstance(), authType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(java.lang.String host, int port, java.lang.String authenticationType) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", host, port, authenticationType);
+            JCObject objGetCredential = (JCObject)classInstance.Invoke("GetCredential", host, port, authenticationType);
+            return new NetworkCredential(objGetCredential);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,16 +149,6 @@ public class CredentialCache extends NetObject  {
         }
     }
 
-    public void Add(Uri uriPrefix, java.lang.String authType, NetworkCredential cred) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", uriPrefix == null ? null : uriPrefix.getJCOInstance(), authType, cred == null ? null : cred.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Add(java.lang.String host, int port, java.lang.String authenticationType, NetworkCredential credential) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -178,12 +159,31 @@ public class CredentialCache extends NetObject  {
         }
     }
 
-    public NetworkCredential GetCredential(java.lang.String host, int port, java.lang.String authenticationType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public void Add(Uri uriPrefix, java.lang.String authType, NetworkCredential cred) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetCredential = (JCObject)classInstance.Invoke("GetCredential", host, port, authenticationType);
-            return new NetworkCredential(objGetCredential);
+            classInstance.Invoke("Add", uriPrefix == null ? null : uriPrefix.getJCOInstance(), authType, cred == null ? null : cred.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(java.lang.String host, int port, java.lang.String authenticationType) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", host, port, authenticationType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(Uri uriPrefix, java.lang.String authType) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", uriPrefix == null ? null : uriPrefix.getJCOInstance(), authType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

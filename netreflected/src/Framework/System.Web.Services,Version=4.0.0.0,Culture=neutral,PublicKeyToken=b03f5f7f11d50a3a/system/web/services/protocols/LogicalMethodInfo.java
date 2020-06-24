@@ -39,14 +39,14 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.MethodInfo;
-import system.web.services.protocols.LogicalMethodInfo;
-import system.web.services.protocols.LogicalMethodTypes;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
-import system.reflection.ParameterInfo;
+import system.web.services.protocols.LogicalMethodInfo;
+import system.web.services.protocols.LogicalMethodTypes;
 import system.reflection.ICustomAttributeProvider;
 import system.reflection.ICustomAttributeProviderImplementation;
+import system.reflection.ParameterInfo;
 
 
 /**
@@ -132,63 +132,21 @@ public class LogicalMethodInfo extends NetObject  {
     
     // Methods section
     
-    public NetObject GetCustomAttribute(NetType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCustomAttribute = (JCObject)classInstance.Invoke("GetCustomAttribute", type == null ? null : type.getJCOInstance());
-            return new NetObject(objGetCustomAttribute);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static LogicalMethodInfo[] Create(MethodInfo[] methodInfos) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+    public static boolean IsBeginMethod(MethodInfo methodInfo) throws Throwable, system.NotImplementedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<LogicalMethodInfo> resultingArrayList = new ArrayList<LogicalMethodInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Create", (Object)toObjectFromArray(methodInfos));
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new LogicalMethodInfo(resultingObject));
-            }
-            LogicalMethodInfo[] resultingArray = new LogicalMethodInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            return (boolean)classType.Invoke("IsBeginMethod", methodInfo == null ? null : methodInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static LogicalMethodInfo[] Create(MethodInfo[] methodInfos, LogicalMethodTypes types) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+    public static boolean IsEndMethod(MethodInfo methodInfo) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<LogicalMethodInfo> resultingArrayList = new ArrayList<LogicalMethodInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Create", toObjectFromArray(methodInfos), types == null ? null : types.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new LogicalMethodInfo(resultingObject));
-            }
-            LogicalMethodInfo[] resultingArray = new LogicalMethodInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject[] Invoke(NetObject target, NetObject[] values) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Invoke", target == null ? null : target.getJCOInstance(), toObjectFromArray(values));
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetObject(resultingObject));
-            }
-            NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            return (boolean)classType.Invoke("IsEndMethod", methodInfo == null ? null : methodInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,6 +158,17 @@ public class LogicalMethodInfo extends NetObject  {
         try {
             JCObject objBeginInvoke = (JCObject)classInstance.Invoke("BeginInvoke", target == null ? null : target.getJCOInstance(), toObjectFromArray(values), callback, asyncState == null ? null : asyncState.getJCOInstance());
             return new IAsyncResultImplementation(objBeginInvoke);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetCustomAttribute(NetType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetCustomAttribute = (JCObject)classInstance.Invoke("GetCustomAttribute", type == null ? null : type.getJCOInstance());
+            return new NetObject(objGetCustomAttribute);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,21 +208,52 @@ public class LogicalMethodInfo extends NetObject  {
         }
     }
 
-    public static boolean IsBeginMethod(MethodInfo methodInfo) throws Throwable, system.NotImplementedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetObject[] Invoke(NetObject target, NetObject[] values) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Invoke("IsBeginMethod", methodInfo == null ? null : methodInfo.getJCOInstance());
+            ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Invoke", target == null ? null : target.getJCOInstance(), toObjectFromArray(values));
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new NetObject(resultingObject));
+            }
+            NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean IsEndMethod(MethodInfo methodInfo) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public static LogicalMethodInfo[] Create(MethodInfo[] methodInfos) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsEndMethod", methodInfo == null ? null : methodInfo.getJCOInstance());
+            ArrayList<LogicalMethodInfo> resultingArrayList = new ArrayList<LogicalMethodInfo>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("Create", (Object)toObjectFromArray(methodInfos));
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new LogicalMethodInfo(resultingObject));
+            }
+            LogicalMethodInfo[] resultingArray = new LogicalMethodInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static LogicalMethodInfo[] Create(MethodInfo[] methodInfos, LogicalMethodTypes types) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<LogicalMethodInfo> resultingArrayList = new ArrayList<LogicalMethodInfo>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("Create", toObjectFromArray(methodInfos), types == null ? null : types.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new LogicalMethodInfo(resultingObject));
+            }
+            LogicalMethodInfo[] resultingArray = new LogicalMethodInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,33 +263,76 @@ public class LogicalMethodInfo extends NetObject  {
     
     // Properties section
     
-    public NetType getDeclaringType() throws Throwable {
+    public boolean getIsAsync() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DeclaringType");
-            return new NetType(val);
+            return (boolean)classInstance.Get("IsAsync");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getName() throws Throwable {
+    public boolean getIsVoid() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            return (boolean)classInstance.Get("IsVoid");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ParameterInfo getAsyncResultParameter() throws Throwable {
+    public ICustomAttributeProvider getCustomAttributeProvider() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncResultParameter");
-            return new ParameterInfo(val);
+            JCObject val = (JCObject)classInstance.Get("CustomAttributeProvider");
+            return new ICustomAttributeProviderImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICustomAttributeProvider getReturnTypeCustomAttributeProvider() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ReturnTypeCustomAttributeProvider");
+            return new ICustomAttributeProviderImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo getBeginMethodInfo() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("BeginMethodInfo");
+            return new MethodInfo(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo getEndMethodInfo() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EndMethodInfo");
+            return new MethodInfo(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo getMethodInfo() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MethodInfo");
+            return new MethodInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,43 +349,23 @@ public class LogicalMethodInfo extends NetObject  {
         }
     }
 
-    public ParameterInfo getAsyncStateParameter() throws Throwable {
+    public ParameterInfo getAsyncResultParameter() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncStateParameter");
+            JCObject val = (JCObject)classInstance.Get("AsyncResultParameter");
             return new ParameterInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType getReturnType() throws Throwable {
+    public ParameterInfo getAsyncStateParameter() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnType");
-            return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsVoid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsVoid");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsAsync() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsAsync");
+            JCObject val = (JCObject)classInstance.Get("AsyncStateParameter");
+            return new ParameterInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,56 +422,33 @@ public class LogicalMethodInfo extends NetObject  {
         }
     }
 
-    public ICustomAttributeProvider getCustomAttributeProvider() throws Throwable {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomAttributeProvider");
-            return new ICustomAttributeProviderImplementation(val);
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ICustomAttributeProvider getReturnTypeCustomAttributeProvider() throws Throwable {
+    public NetType getDeclaringType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnTypeCustomAttributeProvider");
-            return new ICustomAttributeProviderImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("DeclaringType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MethodInfo getMethodInfo() throws Throwable {
+    public NetType getReturnType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodInfo");
-            return new MethodInfo(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo getBeginMethodInfo() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BeginMethodInfo");
-            return new MethodInfo(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodInfo getEndMethodInfo() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EndMethodInfo");
-            return new MethodInfo(val);
+            JCObject val = (JCObject)classInstance.Get("ReturnType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -127,6 +127,35 @@ public class DbGeographyWellKnownValue extends NetObject  {
     
     // Properties section
     
+    public byte[] getWellKnownBinary() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("WellKnownBinary");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+			for(int indexWellKnownBinary = 0; indexWellKnownBinary < resultingArrayList.size(); indexWellKnownBinary++ ) {
+				resultingArray[indexWellKnownBinary] = (byte)resultingArrayList.get(indexWellKnownBinary);
+			}
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setWellKnownBinary(byte[] WellKnownBinary) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("WellKnownBinary", WellKnownBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int getCoordinateSystemId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -162,35 +191,6 @@ public class DbGeographyWellKnownValue extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WellKnownText", WellKnownText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] getWellKnownBinary() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("WellKnownBinary");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-			for(int indexWellKnownBinary = 0; indexWellKnownBinary < resultingArrayList.size(); indexWellKnownBinary++ ) {
-				resultingArray[indexWellKnownBinary] = (byte)resultingArrayList.get(indexWellKnownBinary);
-			}
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setWellKnownBinary(byte[] WellKnownBinary) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("WellKnownBinary", WellKnownBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

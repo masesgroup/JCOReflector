@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.common.commandtrees.DbExpressionVisitor;
-import system.data.common.commandtrees.DbExpressionBinding;
 import system.data.common.commandtrees.DbExpression;
-import system.data.metadata.edm.TypeUsage;
+import system.data.common.commandtrees.DbExpressionBinding;
 import system.data.common.commandtrees.DbExpressionKind;
+import system.data.metadata.edm.TypeUsage;
 
 
 /**
@@ -131,17 +131,6 @@ public class DbProjectExpression extends NetObject  {
     
     // Properties section
     
-    public DbExpressionBinding getInput() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Input");
-            return new DbExpressionBinding(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DbExpression getProjection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -153,12 +142,12 @@ public class DbProjectExpression extends NetObject  {
         }
     }
 
-    public TypeUsage getResultType() throws Throwable {
+    public DbExpressionBinding getInput() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ResultType");
-            return new TypeUsage(val);
+            JCObject val = (JCObject)classInstance.Get("Input");
+            return new DbExpressionBinding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,6 +159,17 @@ public class DbProjectExpression extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ExpressionKind");
             return new DbExpressionKind(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeUsage getResultType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ResultType");
+            return new TypeUsage(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

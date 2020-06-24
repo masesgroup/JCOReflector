@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.FontVariants;
 import system.windows.FontCapitals;
-import system.windows.FontFraction;
-import system.windows.FontNumeralStyle;
-import system.windows.FontNumeralAlignment;
-import system.windows.FontEastAsianWidths;
 import system.windows.FontEastAsianLanguage;
+import system.windows.FontEastAsianWidths;
+import system.windows.FontFraction;
+import system.windows.FontNumeralAlignment;
+import system.windows.FontNumeralStyle;
+import system.windows.FontVariants;
 
 
 /**
@@ -123,11 +123,31 @@ public class TextRunTypographyProperties extends NetObject  {
     
     // Properties section
     
-    public boolean getStandardLigatures() throws Throwable {
+    public boolean getCapitalSpacing() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("StandardLigatures");
+            return (boolean)classInstance.Get("CapitalSpacing");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getCaseSensitiveForms() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("CaseSensitiveForms");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getContextualAlternates() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("ContextualAlternates");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,21 +173,11 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
-    public boolean getHistoricalLigatures() throws Throwable {
+    public boolean getEastAsianExpertForms() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HistoricalLigatures");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getContextualAlternates() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ContextualAlternates");
+            return (boolean)classInstance.Get("EastAsianExpertForms");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,6 +193,16 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    public boolean getHistoricalLigatures() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("HistoricalLigatures");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getKerning() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -193,21 +213,31 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
-    public boolean getCapitalSpacing() throws Throwable {
+    public boolean getMathematicalGreek() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CapitalSpacing");
+            return (boolean)classInstance.Get("MathematicalGreek");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getCaseSensitiveForms() throws Throwable {
+    public boolean getSlashedZero() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CaseSensitiveForms");
+            return (boolean)classInstance.Get("SlashedZero");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getStandardLigatures() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("StandardLigatures");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,86 +248,6 @@ public class TextRunTypographyProperties extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("StylisticSet1");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getStylisticSet2() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("StylisticSet2");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getStylisticSet3() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("StylisticSet3");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getStylisticSet4() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("StylisticSet4");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getStylisticSet5() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("StylisticSet5");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getStylisticSet6() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("StylisticSet6");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getStylisticSet7() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("StylisticSet7");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getStylisticSet8() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("StylisticSet8");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getStylisticSet9() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("StylisticSet9");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,6 +353,16 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    public boolean getStylisticSet2() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("StylisticSet2");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getStylisticSet20() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -413,42 +373,111 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
-    public boolean getSlashedZero() throws Throwable {
+    public boolean getStylisticSet3() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("SlashedZero");
+            return (boolean)classInstance.Get("StylisticSet3");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getMathematicalGreek() throws Throwable {
+    public boolean getStylisticSet4() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("MathematicalGreek");
+            return (boolean)classInstance.Get("StylisticSet4");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getEastAsianExpertForms() throws Throwable {
+    public boolean getStylisticSet5() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("EastAsianExpertForms");
+            return (boolean)classInstance.Get("StylisticSet5");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public FontVariants getVariants() throws Throwable {
+    public boolean getStylisticSet6() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Variants");
-            return new FontVariants(val);
+            return (boolean)classInstance.Get("StylisticSet6");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getStylisticSet7() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("StylisticSet7");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getStylisticSet8() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("StylisticSet8");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getStylisticSet9() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("StylisticSet9");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getAnnotationAlternates() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("AnnotationAlternates");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getContextualSwashes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("ContextualSwashes");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getStandardSwashes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("StandardSwashes");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getStylisticAlternates() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("StylisticAlternates");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,34 +494,12 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
-    public FontFraction getFraction() throws Throwable {
+    public FontEastAsianLanguage getEastAsianLanguage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Fraction");
-            return new FontFraction(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FontNumeralStyle getNumeralStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NumeralStyle");
-            return new FontNumeralStyle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FontNumeralAlignment getNumeralAlignment() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NumeralAlignment");
-            return new FontNumeralAlignment(val);
+            JCObject val = (JCObject)classInstance.Get("EastAsianLanguage");
+            return new FontEastAsianLanguage(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -509,52 +516,45 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
-    public FontEastAsianLanguage getEastAsianLanguage() throws Throwable {
+    public FontFraction getFraction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EastAsianLanguage");
-            return new FontEastAsianLanguage(val);
+            JCObject val = (JCObject)classInstance.Get("Fraction");
+            return new FontFraction(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getStandardSwashes() throws Throwable {
+    public FontNumeralAlignment getNumeralAlignment() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("StandardSwashes");
+            JCObject val = (JCObject)classInstance.Get("NumeralAlignment");
+            return new FontNumeralAlignment(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getContextualSwashes() throws Throwable {
+    public FontNumeralStyle getNumeralStyle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("ContextualSwashes");
+            JCObject val = (JCObject)classInstance.Get("NumeralStyle");
+            return new FontNumeralStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getStylisticAlternates() throws Throwable {
+    public FontVariants getVariants() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("StylisticAlternates");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getAnnotationAlternates() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("AnnotationAlternates");
+            JCObject val = (JCObject)classInstance.Get("Variants");
+            return new FontVariants(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

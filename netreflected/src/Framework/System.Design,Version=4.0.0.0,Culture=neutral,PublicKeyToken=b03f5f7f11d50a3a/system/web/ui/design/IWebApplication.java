@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.configuration.Configuration;
 import system.web.ui.design.IProjectItem;
 import system.web.ui.design.IProjectItemImplementation;
-import system.configuration.Configuration;
 
 
 /**
@@ -92,11 +92,11 @@ public interface IWebApplication extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IProjectItem GetProjectItemFromUrl(java.lang.String appRelativeUrl) throws Throwable;
-
     public Configuration OpenWebConfiguration(boolean isReadOnly) throws Throwable;
 
     public NetObject GetService(NetType serviceType) throws Throwable;
+
+    public IProjectItem GetProjectItemFromUrl(java.lang.String appRelativeUrl) throws Throwable;
 
 
     

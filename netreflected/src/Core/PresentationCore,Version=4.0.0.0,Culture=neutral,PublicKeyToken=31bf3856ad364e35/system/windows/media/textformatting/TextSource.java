@@ -113,22 +113,22 @@ public class TextSource extends NetObject  {
     
     // Methods section
     
+    public int GetTextEffectCharacterIndexFromTextSourceCharacterIndex(int textSourceCharacterIndex) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetTextEffectCharacterIndexFromTextSourceCharacterIndex", textSourceCharacterIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TextRun GetTextRun(int textSourceCharacterIndex) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetTextRun = (JCObject)classInstance.Invoke("GetTextRun", textSourceCharacterIndex);
             return new TextRun(objGetTextRun);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetTextEffectCharacterIndexFromTextSourceCharacterIndex(int textSourceCharacterIndex) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetTextEffectCharacterIndexFromTextSourceCharacterIndex", textSourceCharacterIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

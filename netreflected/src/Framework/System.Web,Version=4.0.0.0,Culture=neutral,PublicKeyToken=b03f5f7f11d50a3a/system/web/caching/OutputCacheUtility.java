@@ -114,21 +114,22 @@ public class OutputCacheUtility extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String SetupKernelCaching(java.lang.String originalCacheUrl, HttpResponse response) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.web.HttpRequestValidationException {
+    public static NetArrayList GetContentBuffers(HttpResponse response) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.NotSupportedException, system.PlatformNotSupportedException, system.threading.ThreadAbortException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("SetupKernelCaching", originalCacheUrl, response == null ? null : response.getJCOInstance());
+            JCObject objGetContentBuffers = (JCObject)classType.Invoke("GetContentBuffers", response == null ? null : response.getJCOInstance());
+            return new NetArrayList(objGetContentBuffers);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void FlushKernelCache(java.lang.String cacheKey) throws Throwable {
+    public static java.lang.String SetupKernelCaching(java.lang.String originalCacheUrl, HttpResponse response) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.web.HttpRequestValidationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("FlushKernelCache", cacheKey);
+            return (java.lang.String)classType.Invoke("SetupKernelCaching", originalCacheUrl, response == null ? null : response.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,12 +146,11 @@ public class OutputCacheUtility extends NetObject  {
         }
     }
 
-    public static NetArrayList GetContentBuffers(HttpResponse response) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.NotSupportedException, system.PlatformNotSupportedException, system.threading.ThreadAbortException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException {
+    public static void FlushKernelCache(java.lang.String cacheKey) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetContentBuffers = (JCObject)classType.Invoke("GetContentBuffers", response == null ? null : response.getJCOInstance());
-            return new NetArrayList(objGetContentBuffers);
+            classType.Invoke("FlushKernelCache", cacheKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -128,22 +128,21 @@ public class TextTabProperties extends NetObject  {
     
     // Properties section
     
-    public TextTabAlignment getAlignment() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Alignment");
-            return new TextTabAlignment(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public double getLocation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (double)classInstance.Get("Location");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getAligningCharacter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("AligningCharacter");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,11 +158,12 @@ public class TextTabProperties extends NetObject  {
         }
     }
 
-    public int getAligningCharacter() throws Throwable {
+    public TextTabAlignment getAlignment() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("AligningCharacter");
+            JCObject val = (JCObject)classInstance.Get("Alignment");
+            return new TextTabAlignment(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

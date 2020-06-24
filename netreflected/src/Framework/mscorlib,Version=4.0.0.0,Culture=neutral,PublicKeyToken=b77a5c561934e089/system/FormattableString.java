@@ -115,11 +115,12 @@ public class FormattableString extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String Invariant(FormattableString formattable) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetObject GetArgument(int index) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Invoke("Invariant", formattable == null ? null : formattable.getJCOInstance());
+            JCObject objGetArgument = (JCObject)classInstance.Invoke("GetArgument", index);
+            return new NetObject(objGetArgument);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -142,12 +143,11 @@ public class FormattableString extends NetObject  {
         }
     }
 
-    public NetObject GetArgument(int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String Invariant(FormattableString formattable) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetArgument = (JCObject)classInstance.Invoke("GetArgument", index);
-            return new NetObject(objGetArgument);
+            return (java.lang.String)classType.Invoke("Invariant", formattable == null ? null : formattable.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,21 +167,21 @@ public class FormattableString extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getFormat() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Format");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getArgumentCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("ArgumentCount");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getFormat() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Format");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

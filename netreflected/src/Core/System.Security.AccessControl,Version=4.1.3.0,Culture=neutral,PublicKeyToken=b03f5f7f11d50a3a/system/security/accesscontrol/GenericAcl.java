@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.accesscontrol.GenericAce;
 import system.security.accesscontrol.AceEnumerator;
+import system.security.accesscontrol.GenericAce;
 
 
 /**
@@ -114,15 +114,14 @@ public class GenericAcl extends NetObject implements Iterable<GenericAce> {
     
     // Methods section
     
-    public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetBinaryForm", binaryForm, offset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
+    public AceEnumerator GetEnumerator() throws Throwable {
+        return new AceEnumerator(classInstance);
     }
+
+	@SuppressWarnings("unchecked")
+	public java.util.Iterator<GenericAce> iterator() {
+		return new AceEnumerator(classInstance);
+	}
 
     public void CopyTo(GenericAce[] array, int index) throws Throwable {
         if (classInstance == null)
@@ -134,19 +133,30 @@ public class GenericAcl extends NetObject implements Iterable<GenericAce> {
         }
     }
 
-    public AceEnumerator GetEnumerator() throws Throwable {
-        return new AceEnumerator(classInstance);
+    public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetBinaryForm", binaryForm, offset);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
-
-	@SuppressWarnings("unchecked")
-	public java.util.Iterator<GenericAce> iterator() {
-		return new AceEnumerator(classInstance);
-	}
 
 
     
     // Properties section
     
+    public boolean getIsSynchronized() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsSynchronized");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte getRevision() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -172,16 +182,6 @@ public class GenericAcl extends NetObject implements Iterable<GenericAce> {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsSynchronized() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsSynchronized");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

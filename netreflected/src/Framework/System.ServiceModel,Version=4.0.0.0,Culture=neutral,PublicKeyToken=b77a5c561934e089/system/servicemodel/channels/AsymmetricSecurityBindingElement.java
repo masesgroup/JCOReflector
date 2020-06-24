@@ -40,14 +40,14 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.security.tokens.SecurityTokenParameters;
 import system.servicemodel.channels.BindingElement;
-import system.servicemodel.security.MessageProtectionOrder;
-import system.servicemodel.security.tokens.SupportingTokenParameters;
-import system.servicemodel.channels.SecurityHeaderLayout;
-import system.servicemodel.MessageSecurityVersion;
-import system.servicemodel.security.SecurityAlgorithmSuite;
 import system.servicemodel.channels.LocalClientSecuritySettings;
 import system.servicemodel.channels.LocalServiceSecuritySettings;
+import system.servicemodel.channels.SecurityHeaderLayout;
+import system.servicemodel.MessageSecurityVersion;
+import system.servicemodel.security.MessageProtectionOrder;
+import system.servicemodel.security.SecurityAlgorithmSuite;
 import system.servicemodel.security.SecurityKeyEntropyMode;
+import system.servicemodel.security.tokens.SupportingTokenParameters;
 
 
 /**
@@ -153,16 +153,6 @@ public class AsymmetricSecurityBindingElement extends NetObject  {
     
     // Methods section
     
-    public void SetKeyDerivation(boolean requireDerivedKeys) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetKeyDerivation", requireDerivedKeys);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public BindingElement Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -174,10 +164,40 @@ public class AsymmetricSecurityBindingElement extends NetObject  {
         }
     }
 
+    public void SetKeyDerivation(boolean requireDerivedKeys) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetKeyDerivation", requireDerivedKeys);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public boolean getAllowInsecureTransport() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("AllowInsecureTransport");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAllowInsecureTransport(boolean AllowInsecureTransport) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AllowInsecureTransport", AllowInsecureTransport);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getAllowSerializedSigningTokenOnReply() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -198,64 +218,61 @@ public class AsymmetricSecurityBindingElement extends NetObject  {
         }
     }
 
-    public SecurityTokenParameters getInitiatorTokenParameters() throws Throwable {
+    public boolean getEnableUnsecuredResponse() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("InitiatorTokenParameters");
-            return new SecurityTokenParameters(val);
+            return (boolean)classInstance.Get("EnableUnsecuredResponse");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setInitiatorTokenParameters(SecurityTokenParameters InitiatorTokenParameters) throws Throwable {
+    public void setEnableUnsecuredResponse(boolean EnableUnsecuredResponse) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("InitiatorTokenParameters", InitiatorTokenParameters == null ? null : InitiatorTokenParameters.getJCOInstance());
+            classInstance.Set("EnableUnsecuredResponse", EnableUnsecuredResponse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MessageProtectionOrder getMessageProtectionOrder() throws Throwable {
+    public boolean getIncludeTimestamp() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageProtectionOrder");
-            return new MessageProtectionOrder(val);
+            return (boolean)classInstance.Get("IncludeTimestamp");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMessageProtectionOrder(MessageProtectionOrder MessageProtectionOrder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public void setIncludeTimestamp(boolean IncludeTimestamp) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("MessageProtectionOrder", MessageProtectionOrder == null ? null : MessageProtectionOrder.getJCOInstance());
+            classInstance.Set("IncludeTimestamp", IncludeTimestamp);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SecurityTokenParameters getRecipientTokenParameters() throws Throwable {
+    public boolean getProtectTokens() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RecipientTokenParameters");
-            return new SecurityTokenParameters(val);
+            return (boolean)classInstance.Get("ProtectTokens");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRecipientTokenParameters(SecurityTokenParameters RecipientTokenParameters) throws Throwable {
+    public void setProtectTokens(boolean ProtectTokens) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("RecipientTokenParameters", RecipientTokenParameters == null ? null : RecipientTokenParameters.getJCOInstance());
+            classInstance.Set("ProtectTokens", ProtectTokens);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,23 +298,23 @@ public class AsymmetricSecurityBindingElement extends NetObject  {
         }
     }
 
-    public SupportingTokenParameters getEndpointSupportingTokenParameters() throws Throwable {
+    public LocalClientSecuritySettings getLocalClientSettings() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EndpointSupportingTokenParameters");
-            return new SupportingTokenParameters(val);
+            JCObject val = (JCObject)classInstance.Get("LocalClientSettings");
+            return new LocalClientSecuritySettings(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SupportingTokenParameters getOptionalEndpointSupportingTokenParameters() throws Throwable {
+    public LocalServiceSecuritySettings getLocalServiceSettings() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OptionalEndpointSupportingTokenParameters");
-            return new SupportingTokenParameters(val);
+            JCObject val = (JCObject)classInstance.Get("LocalServiceSettings");
+            return new LocalServiceSecuritySettings(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,61 +362,22 @@ public class AsymmetricSecurityBindingElement extends NetObject  {
         }
     }
 
-    public boolean getEnableUnsecuredResponse() throws Throwable {
+    public MessageProtectionOrder getMessageProtectionOrder() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("EnableUnsecuredResponse");
+            JCObject val = (JCObject)classInstance.Get("MessageProtectionOrder");
+            return new MessageProtectionOrder(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEnableUnsecuredResponse(boolean EnableUnsecuredResponse) throws Throwable {
+    public void setMessageProtectionOrder(MessageProtectionOrder MessageProtectionOrder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("EnableUnsecuredResponse", EnableUnsecuredResponse);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIncludeTimestamp() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IncludeTimestamp");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIncludeTimestamp(boolean IncludeTimestamp) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IncludeTimestamp", IncludeTimestamp);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getAllowInsecureTransport() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("AllowInsecureTransport");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAllowInsecureTransport(boolean AllowInsecureTransport) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AllowInsecureTransport", AllowInsecureTransport);
+            classInstance.Set("MessageProtectionOrder", MessageProtectionOrder == null ? null : MessageProtectionOrder.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,48 +404,6 @@ public class AsymmetricSecurityBindingElement extends NetObject  {
         }
     }
 
-    public boolean getProtectTokens() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ProtectTokens");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setProtectTokens(boolean ProtectTokens) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ProtectTokens", ProtectTokens);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LocalClientSecuritySettings getLocalClientSettings() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LocalClientSettings");
-            return new LocalClientSecuritySettings(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LocalServiceSecuritySettings getLocalServiceSettings() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LocalServiceSettings");
-            return new LocalServiceSecuritySettings(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecurityKeyEntropyMode getKeyEntropyMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -484,6 +420,70 @@ public class AsymmetricSecurityBindingElement extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyEntropyMode", KeyEntropyMode == null ? null : KeyEntropyMode.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityTokenParameters getInitiatorTokenParameters() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("InitiatorTokenParameters");
+            return new SecurityTokenParameters(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInitiatorTokenParameters(SecurityTokenParameters InitiatorTokenParameters) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InitiatorTokenParameters", InitiatorTokenParameters == null ? null : InitiatorTokenParameters.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityTokenParameters getRecipientTokenParameters() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RecipientTokenParameters");
+            return new SecurityTokenParameters(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRecipientTokenParameters(SecurityTokenParameters RecipientTokenParameters) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RecipientTokenParameters", RecipientTokenParameters == null ? null : RecipientTokenParameters.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SupportingTokenParameters getEndpointSupportingTokenParameters() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EndpointSupportingTokenParameters");
+            return new SupportingTokenParameters(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SupportingTokenParameters getOptionalEndpointSupportingTokenParameters() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("OptionalEndpointSupportingTokenParameters");
+            return new SupportingTokenParameters(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

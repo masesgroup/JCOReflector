@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.schema.XmlSchemaValidity;
-import system.xml.schema.XmlSchemaSimpleType;
-import system.xml.schema.XmlSchemaType;
-import system.xml.schema.XmlSchemaElement;
 import system.xml.schema.XmlSchemaAttribute;
 import system.xml.schema.XmlSchemaContentType;
+import system.xml.schema.XmlSchemaElement;
+import system.xml.schema.XmlSchemaSimpleType;
+import system.xml.schema.XmlSchemaType;
+import system.xml.schema.XmlSchemaValidity;
 
 
 /**
@@ -133,27 +133,6 @@ public class XmlSchemaInfo extends NetObject  {
     
     // Properties section
     
-    public XmlSchemaValidity getValidity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Validity");
-            return new XmlSchemaValidity(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setValidity(XmlSchemaValidity Validity) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Validity", Validity == null ? null : Validity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsDefault() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -189,6 +168,69 @@ public class XmlSchemaInfo extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsNil", IsNil);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSchemaAttribute getSchemaAttribute() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SchemaAttribute");
+            return new XmlSchemaAttribute(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSchemaAttribute(XmlSchemaAttribute SchemaAttribute) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SchemaAttribute", SchemaAttribute == null ? null : SchemaAttribute.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSchemaContentType getContentType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ContentType");
+            return new XmlSchemaContentType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setContentType(XmlSchemaContentType ContentType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ContentType", ContentType == null ? null : ContentType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSchemaElement getSchemaElement() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SchemaElement");
+            return new XmlSchemaElement(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSchemaElement(XmlSchemaElement SchemaElement) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SchemaElement", SchemaElement == null ? null : SchemaElement.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,64 +278,22 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
-    public XmlSchemaElement getSchemaElement() throws Throwable {
+    public XmlSchemaValidity getValidity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaElement");
-            return new XmlSchemaElement(val);
+            JCObject val = (JCObject)classInstance.Get("Validity");
+            return new XmlSchemaValidity(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSchemaElement(XmlSchemaElement SchemaElement) throws Throwable {
+    public void setValidity(XmlSchemaValidity Validity) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SchemaElement", SchemaElement == null ? null : SchemaElement.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSchemaAttribute getSchemaAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SchemaAttribute");
-            return new XmlSchemaAttribute(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSchemaAttribute(XmlSchemaAttribute SchemaAttribute) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SchemaAttribute", SchemaAttribute == null ? null : SchemaAttribute.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSchemaContentType getContentType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ContentType");
-            return new XmlSchemaContentType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setContentType(XmlSchemaContentType ContentType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ContentType", ContentType == null ? null : ContentType.getJCOInstance());
+            classInstance.Set("Validity", Validity == null ? null : Validity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

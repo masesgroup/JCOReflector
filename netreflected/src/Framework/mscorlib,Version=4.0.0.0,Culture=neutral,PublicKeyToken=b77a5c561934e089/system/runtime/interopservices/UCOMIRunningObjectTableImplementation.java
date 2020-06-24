@@ -105,21 +105,21 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
 
     // Methods section
     
-    public void Revoke(int dwRegister) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Revoke", dwRegister);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void IsRunning(UCOMIMoniker pmkObjectName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("IsRunning", pmkObjectName == null ? null : pmkObjectName.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Revoke(int dwRegister) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Revoke", dwRegister);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

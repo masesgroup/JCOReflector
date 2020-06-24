@@ -41,8 +41,8 @@ import java.util.ArrayList;
 import system.windows.forms.Cursor;
 import system.drawing.Point;
 import system.windows.forms.PaintEventArgs;
-import system.windows.forms.design.behavior.Behavior;
 import system.drawing.Rectangle;
+import system.windows.forms.design.behavior.Behavior;
 
 
 /**
@@ -142,23 +142,23 @@ public class Glyph extends NetObject  {
     
     // Properties section
     
-    public Behavior getBehavior() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Behavior");
-            return new Behavior(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Bounds");
             return new Rectangle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Behavior getBehavior() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Behavior");
+            return new Behavior(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -140,21 +140,12 @@ public class InputScope extends NetObject  {
         }
     }
 
-    public java.lang.String getSrgsMarkup() throws Throwable {
+    public IList getPhraseList() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("SrgsMarkup");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSrgsMarkup(java.lang.String SrgsMarkup) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SrgsMarkup", SrgsMarkup);
+            JCObject val = (JCObject)classInstance.Get("PhraseList");
+            return new IListImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,12 +171,21 @@ public class InputScope extends NetObject  {
         }
     }
 
-    public IList getPhraseList() throws Throwable {
+    public java.lang.String getSrgsMarkup() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PhraseList");
-            return new IListImplementation(val);
+            return (java.lang.String)classInstance.Get("SrgsMarkup");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSrgsMarkup(java.lang.String SrgsMarkup) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SrgsMarkup", SrgsMarkup);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

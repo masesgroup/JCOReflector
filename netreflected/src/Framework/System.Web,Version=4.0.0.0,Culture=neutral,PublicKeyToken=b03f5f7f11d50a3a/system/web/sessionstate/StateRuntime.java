@@ -123,16 +123,6 @@ public class StateRuntime extends NetObject  {
     
     // Methods section
     
-    public void StopProcessing() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.configuration.provider.ProviderException, system.MemberAccessException, system.NotImplementedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("StopProcessing");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section

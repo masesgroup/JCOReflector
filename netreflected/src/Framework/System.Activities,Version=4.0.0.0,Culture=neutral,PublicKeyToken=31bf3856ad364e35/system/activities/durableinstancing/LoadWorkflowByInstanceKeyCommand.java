@@ -149,27 +149,6 @@ public class LoadWorkflowByInstanceKeyCommand extends NetObject  {
         }
     }
 
-    public Guid getLookupInstanceKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LookupInstanceKey");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLookupInstanceKey(Guid LookupInstanceKey) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("LookupInstanceKey", LookupInstanceKey == null ? null : LookupInstanceKey.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Guid getAssociateInstanceKeyToInstanceId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -186,6 +165,27 @@ public class LoadWorkflowByInstanceKeyCommand extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssociateInstanceKeyToInstanceId", AssociateInstanceKeyToInstanceId == null ? null : AssociateInstanceKeyToInstanceId.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Guid getLookupInstanceKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("LookupInstanceKey");
+            return new Guid(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setLookupInstanceKey(Guid LookupInstanceKey) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("LookupInstanceKey", LookupInstanceKey == null ? null : LookupInstanceKey.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -146,11 +146,11 @@ public class SelectionGlyph extends NetObject  {
     
     // Properties section
     
-    public int getPriority() throws Throwable {
+    public boolean getCanBeActivated() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Priority");
+            return (boolean)classInstance.Get("CanBeActivated");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,11 +166,11 @@ public class SelectionGlyph extends NetObject  {
         }
     }
 
-    public boolean getCanBeActivated() throws Throwable {
+    public int getPriority() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CanBeActivated");
+            return (int)classInstance.Get("Priority");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

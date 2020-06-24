@@ -124,23 +124,12 @@ public class XmlNamedNodeMap extends NetObject  {
         }
     }
 
-    public XmlNode SetNamedItem(XmlNode node) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public XmlNode GetNamedItem(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSetNamedItem = (JCObject)classInstance.Invoke("SetNamedItem", node == null ? null : node.getJCOInstance());
-            return new XmlNode(objSetNamedItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlNode RemoveNamedItem(java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRemoveNamedItem = (JCObject)classInstance.Invoke("RemoveNamedItem", name);
-            return new XmlNode(objRemoveNamedItem);
+            JCObject objGetNamedItem = (JCObject)classInstance.Invoke("GetNamedItem", localName, namespaceURI);
+            return new XmlNode(objGetNamedItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,12 +146,12 @@ public class XmlNamedNodeMap extends NetObject  {
         }
     }
 
-    public XmlNode GetNamedItem(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public XmlNode RemoveNamedItem(java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetNamedItem = (JCObject)classInstance.Invoke("GetNamedItem", localName, namespaceURI);
-            return new XmlNode(objGetNamedItem);
+            JCObject objRemoveNamedItem = (JCObject)classInstance.Invoke("RemoveNamedItem", name);
+            return new XmlNode(objRemoveNamedItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,6 +163,17 @@ public class XmlNamedNodeMap extends NetObject  {
         try {
             JCObject objRemoveNamedItem = (JCObject)classInstance.Invoke("RemoveNamedItem", localName, namespaceURI);
             return new XmlNode(objRemoveNamedItem);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlNode SetNamedItem(XmlNode node) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSetNamedItem = (JCObject)classInstance.Invoke("SetNamedItem", node == null ? null : node.getJCOInstance());
+            return new XmlNode(objSetNamedItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

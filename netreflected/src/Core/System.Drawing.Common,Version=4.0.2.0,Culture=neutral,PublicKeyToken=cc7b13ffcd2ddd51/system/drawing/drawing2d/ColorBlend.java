@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.drawing.Color;
 import system.Single;
+import system.drawing.Color;
 
 
 /**
@@ -139,33 +139,6 @@ public class ColorBlend extends NetObject  {
     
     // Properties section
     
-    public Color[] getColors() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Color> resultingArrayList = new ArrayList<Color>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Colors");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new Color(resultingObject));
-            }
-            Color[] resultingArray = new Color[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setColors(Color[] Colors) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Colors", toObjectFromArray(Colors));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Single[] getPositions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -188,6 +161,33 @@ public class ColorBlend extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Positions", toObjectFromArray(Positions));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Color[] getColors() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Color> resultingArrayList = new ArrayList<Color>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("Colors");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new Color(resultingObject));
+            }
+            Color[] resultingArray = new Color[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setColors(Color[] Colors) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Colors", toObjectFromArray(Colors));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

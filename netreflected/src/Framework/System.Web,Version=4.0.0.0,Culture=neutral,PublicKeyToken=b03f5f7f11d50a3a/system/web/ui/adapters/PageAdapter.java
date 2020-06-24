@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.collections.specialized.NameValueCollection;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.collections.specialized.NameValueCollection;
 import system.web.ui.PageStatePersister;
 import system.web.ui.webcontrols.RadioButton;
 import system.web.ui.HtmlTextWriter;
@@ -119,6 +119,17 @@ public class PageAdapter extends NetObject  {
     
     // Methods section
     
+    public ICollection GetRadioButtonsByGroup(java.lang.String groupName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetRadioButtonsByGroup = (JCObject)classInstance.Invoke("GetRadioButtonsByGroup", groupName);
+            return new ICollectionImplementation(objGetRadioButtonsByGroup);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NameValueCollection DeterminePostBackMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -141,12 +152,11 @@ public class PageAdapter extends NetObject  {
         }
     }
 
-    public ICollection GetRadioButtonsByGroup(java.lang.String groupName) throws Throwable {
+    public java.lang.String TransformText(java.lang.String text) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetRadioButtonsByGroup = (JCObject)classInstance.Invoke("GetRadioButtonsByGroup", groupName);
-            return new ICollectionImplementation(objGetRadioButtonsByGroup);
+            return (java.lang.String)classInstance.Invoke("TransformText", text);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,36 +193,6 @@ public class PageAdapter extends NetObject  {
         }
     }
 
-    public void RenderPostBackEvent(HtmlTextWriter writer, java.lang.String target, java.lang.String argument, java.lang.String softkeyLabel, java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.web.HttpRequestValidationException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RenderPostBackEvent", writer == null ? null : writer.getJCOInstance(), target, argument, softkeyLabel, text);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RenderPostBackEvent(HtmlTextWriter writer, java.lang.String target, java.lang.String argument, java.lang.String softkeyLabel, java.lang.String text, java.lang.String postUrl, java.lang.String accessKey) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.provider.ProviderException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.threading.ThreadAbortException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RenderPostBackEvent", writer == null ? null : writer.getJCOInstance(), target, argument, softkeyLabel, text, postUrl, accessKey);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String TransformText(java.lang.String text) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("TransformText", text);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void RenderBeginHyperlink(HtmlTextWriter writer, java.lang.String targetUrl, boolean encodeUrl, java.lang.String softkeyLabel, java.lang.String accessKey) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.web.HttpException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -228,6 +208,26 @@ public class PageAdapter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderEndHyperlink", writer == null ? null : writer.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RenderPostBackEvent(HtmlTextWriter writer, java.lang.String target, java.lang.String argument, java.lang.String softkeyLabel, java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.web.HttpRequestValidationException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RenderPostBackEvent", writer == null ? null : writer.getJCOInstance(), target, argument, softkeyLabel, text);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RenderPostBackEvent(HtmlTextWriter writer, java.lang.String target, java.lang.String argument, java.lang.String softkeyLabel, java.lang.String text, java.lang.String postUrl, java.lang.String accessKey) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.provider.ProviderException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.threading.ThreadAbortException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RenderPostBackEvent", writer == null ? null : writer.getJCOInstance(), target, argument, softkeyLabel, text, postUrl, accessKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

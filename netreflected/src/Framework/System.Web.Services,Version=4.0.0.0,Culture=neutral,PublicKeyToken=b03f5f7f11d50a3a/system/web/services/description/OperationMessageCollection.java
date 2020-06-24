@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.services.description.OperationMessage;
+import system.web.services.description.OperationFlow;
 import system.web.services.description.OperationInput;
 import system.web.services.description.OperationOutput;
-import system.web.services.description.OperationFlow;
 
 
 /**
@@ -116,21 +116,21 @@ public class OperationMessageCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(OperationMessage operationMessage) throws Throwable {
+    public boolean Contains(OperationMessage operationMessage) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", operationMessage == null ? null : operationMessage.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", operationMessage == null ? null : operationMessage.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, OperationMessage operationMessage) throws Throwable {
+    public int Add(OperationMessage operationMessage) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, operationMessage == null ? null : operationMessage.getJCOInstance());
+            return (int)classInstance.Invoke("Add", operationMessage == null ? null : operationMessage.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -146,21 +146,11 @@ public class OperationMessageCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(OperationMessage operationMessage) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", operationMessage == null ? null : operationMessage.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(OperationMessage operationMessage) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", operationMessage == null ? null : operationMessage.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,11 +166,21 @@ public class OperationMessageCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public void Insert(int index, OperationMessage operationMessage) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, operationMessage == null ? null : operationMessage.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(OperationMessage operationMessage) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", operationMessage == null ? null : operationMessage.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,39 +200,6 @@ public class OperationMessageCollection extends NetObject  {
     
     // Properties section
     
-    public OperationInput getInput() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Input");
-            return new OperationInput(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OperationOutput getOutput() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Output");
-            return new OperationOutput(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OperationFlow getFlow() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Flow");
-            return new OperationFlow(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getCapacity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -258,6 +225,39 @@ public class OperationMessageCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("Count");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public OperationFlow getFlow() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Flow");
+            return new OperationFlow(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public OperationInput getInput() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Input");
+            return new OperationInput(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public OperationOutput getOutput() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Output");
+            return new OperationOutput(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

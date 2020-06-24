@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.Configuration;
 import system.web.ui.design.IProjectItem;
 import system.web.ui.design.IProjectItemImplementation;
-import system.configuration.Configuration;
 
 
 /**
@@ -106,17 +106,6 @@ public class IWebApplicationImplementation extends NetObject implements IWebAppl
 
     // Methods section
     
-    public IProjectItem GetProjectItemFromUrl(java.lang.String appRelativeUrl) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetProjectItemFromUrl = (JCObject)classInstance.Invoke("GetProjectItemFromUrl", appRelativeUrl);
-            return new IProjectItemImplementation(objGetProjectItemFromUrl);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Configuration OpenWebConfiguration(boolean isReadOnly) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -134,6 +123,17 @@ public class IWebApplicationImplementation extends NetObject implements IWebAppl
         try {
             JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
             return new NetObject(objGetService);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IProjectItem GetProjectItemFromUrl(java.lang.String appRelativeUrl) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetProjectItemFromUrl = (JCObject)classInstance.Invoke("GetProjectItemFromUrl", appRelativeUrl);
+            return new IProjectItemImplementation(objGetProjectItemFromUrl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

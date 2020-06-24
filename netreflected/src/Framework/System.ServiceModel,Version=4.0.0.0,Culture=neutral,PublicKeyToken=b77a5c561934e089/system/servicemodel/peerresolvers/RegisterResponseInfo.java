@@ -111,21 +111,21 @@ public class RegisterResponseInfo extends NetObject  {
     // Constructors section
     
 
-    public RegisterResponseInfo(Guid registrationId, TimeSpan registrationLifetime) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(registrationId == null ? null : registrationId.getJCOInstance(), registrationLifetime == null ? null : registrationLifetime.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public RegisterResponseInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RegisterResponseInfo(Guid registrationId, TimeSpan registrationLifetime) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(registrationId == null ? null : registrationId.getJCOInstance(), registrationLifetime == null ? null : registrationLifetime.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

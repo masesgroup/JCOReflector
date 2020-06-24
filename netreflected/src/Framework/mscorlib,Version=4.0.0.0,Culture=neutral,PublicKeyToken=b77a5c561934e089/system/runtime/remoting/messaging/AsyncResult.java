@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.remoting.messaging.IMessageCtrl;
-import system.runtime.remoting.messaging.IMessageCtrlImplementation;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
+import system.runtime.remoting.messaging.IMessageCtrl;
+import system.runtime.remoting.messaging.IMessageCtrlImplementation;
 import system.runtime.remoting.messaging.IMessageSink;
 import system.runtime.remoting.messaging.IMessageSinkImplementation;
 import system.threading.WaitHandle;
@@ -119,27 +119,6 @@ public class AsyncResult extends NetObject  {
     
     // Methods section
     
-    public void SetMessageCtrl(IMessageCtrl mc) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetMessageCtrl", mc == null ? null : mc.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IMessageCtrl AsyncProcessMessage(IMessage msg, IMessageSink replySink) throws Throwable, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAsyncProcessMessage = (JCObject)classInstance.Invoke("AsyncProcessMessage", msg == null ? null : msg.getJCOInstance(), replySink == null ? null : replySink.getJCOInstance());
-            return new IMessageCtrlImplementation(objAsyncProcessMessage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IMessage GetReplyMessage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -162,10 +141,61 @@ public class AsyncResult extends NetObject  {
         }
     }
 
+    public IMessageCtrl AsyncProcessMessage(IMessage msg, IMessageSink replySink) throws Throwable, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAsyncProcessMessage = (JCObject)classInstance.Invoke("AsyncProcessMessage", msg == null ? null : msg.getJCOInstance(), replySink == null ? null : replySink.getJCOInstance());
+            return new IMessageCtrlImplementation(objAsyncProcessMessage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetMessageCtrl(IMessageCtrl mc) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetMessageCtrl", mc == null ? null : mc.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public boolean getCompletedSynchronously() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("CompletedSynchronously");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getEndInvokeCalled() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("EndInvokeCalled");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEndInvokeCalled(boolean EndInvokeCalled) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("EndInvokeCalled", EndInvokeCalled);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getIsCompleted() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -198,31 +228,12 @@ public class AsyncResult extends NetObject  {
         }
     }
 
-    public boolean getCompletedSynchronously() throws Throwable {
+    public IMessageSink getNextSink() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CompletedSynchronously");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getEndInvokeCalled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("EndInvokeCalled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEndInvokeCalled(boolean EndInvokeCalled) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EndInvokeCalled", EndInvokeCalled);
+            JCObject val = (JCObject)classInstance.Get("NextSink");
+            return new IMessageSinkImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,17 +245,6 @@ public class AsyncResult extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("AsyncWaitHandle");
             return new WaitHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IMessageSink getNextSink() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NextSink");
-            return new IMessageSinkImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

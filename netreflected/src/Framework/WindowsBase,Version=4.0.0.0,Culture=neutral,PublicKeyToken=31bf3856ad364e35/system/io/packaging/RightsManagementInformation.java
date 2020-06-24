@@ -127,16 +127,6 @@ public class RightsManagementInformation extends NetObject  {
         }
     }
 
-    public void SavePublishLicense(PublishLicense publishLicense) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SavePublishLicense", publishLicense == null ? null : publishLicense.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public UseLicense LoadUseLicense(ContentUser userKey) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.security.rightsmanagement.RightsManagementException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,21 +138,31 @@ public class RightsManagementInformation extends NetObject  {
         }
     }
 
-    public void SaveUseLicense(ContentUser userKey, UseLicense useLicense) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.io.IOException, system.InvalidOperationException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SaveUseLicense", userKey == null ? null : userKey.getJCOInstance(), useLicense == null ? null : useLicense.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void DeleteUseLicense(ContentUser userKey) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.io.FileFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteUseLicense", userKey == null ? null : userKey.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SavePublishLicense(PublishLicense publishLicense) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SavePublishLicense", publishLicense == null ? null : publishLicense.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SaveUseLicense(ContentUser userKey, UseLicense useLicense) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.io.IOException, system.InvalidOperationException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SaveUseLicense", userKey == null ? null : userKey.getJCOInstance(), useLicense == null ? null : useLicense.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

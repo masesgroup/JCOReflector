@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.RuntimeTypeHandle;
 import system.Array;
 import system.RuntimeFieldHandle;
-import system.ModuleHandle;
 import system.RuntimeMethodHandle;
+import system.RuntimeTypeHandle;
+import system.ModuleHandle;
 
 
 /**
@@ -117,16 +117,6 @@ public class RuntimeHelpers extends NetObject  {
     
     // Methods section
     
-    public static int GetHashCode(NetObject o) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("GetHashCode", o == null ? null : o.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean Equals(NetObject o1, NetObject o2) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -137,11 +127,53 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void RunClassConstructor(RuntimeTypeHandle type) throws Throwable {
+    public static boolean TryEnsureSufficientExecutionStack() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RunClassConstructor", type == null ? null : type.getJCOInstance());
+            return (boolean)classType.Invoke("TryEnsureSufficientExecutionStack");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int GetHashCode(NetObject o) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetHashCode", o == null ? null : o.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject GetObjectValue(NetObject obj) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetObjectValue = (JCObject)classType.Invoke("GetObjectValue", obj == null ? null : obj.getJCOInstance());
+            return new NetObject(objGetObjectValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject GetUninitializedObject(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetUninitializedObject = (JCObject)classType.Invoke("GetUninitializedObject", type == null ? null : type.getJCOInstance());
+            return new NetObject(objGetUninitializedObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void EnsureSufficientExecutionStack() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("EnsureSufficientExecutionStack");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,32 +199,11 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static boolean TryEnsureSufficientExecutionStack() throws Throwable {
+    public static void PrepareConstrainedRegionsNoOP() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("TryEnsureSufficientExecutionStack");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject GetObjectValue(NetObject obj) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetObjectValue = (JCObject)classType.Invoke("GetObjectValue", obj == null ? null : obj.getJCOInstance());
-            return new NetObject(objGetObjectValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void RunModuleConstructor(ModuleHandle module) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("RunModuleConstructor", module == null ? null : module.getJCOInstance());
+            classType.Invoke("PrepareConstrainedRegionsNoOP");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,12 +229,31 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static NetObject GetUninitializedObject(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException {
+    public static void ProbeForSufficientStack() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetUninitializedObject = (JCObject)classType.Invoke("GetUninitializedObject", type == null ? null : type.getJCOInstance());
-            return new NetObject(objGetUninitializedObject);
+            classType.Invoke("ProbeForSufficientStack");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RunClassConstructor(RuntimeTypeHandle type) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RunClassConstructor", type == null ? null : type.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RunModuleConstructor(ModuleHandle module) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RunModuleConstructor", module == null ? null : module.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

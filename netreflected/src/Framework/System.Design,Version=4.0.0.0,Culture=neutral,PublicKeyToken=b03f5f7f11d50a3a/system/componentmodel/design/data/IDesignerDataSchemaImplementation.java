@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.data.DesignerDataSchemaClass;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
-import system.componentmodel.design.data.DesignerDataSchemaClass;
 
 
 /**
@@ -106,22 +106,22 @@ public class IDesignerDataSchemaImplementation extends NetObject implements IDes
 
     // Methods section
     
+    public boolean SupportsSchemaClass(DesignerDataSchemaClass schemaClass) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SupportsSchemaClass", schemaClass == null ? null : schemaClass.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ICollection GetSchemaItems(DesignerDataSchemaClass schemaClass) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetSchemaItems = (JCObject)classInstance.Invoke("GetSchemaItems", schemaClass == null ? null : schemaClass.getJCOInstance());
             return new ICollectionImplementation(objGetSchemaItems);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SupportsSchemaClass(DesignerDataSchemaClass schemaClass) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SupportsSchemaClass", schemaClass == null ? null : schemaClass.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

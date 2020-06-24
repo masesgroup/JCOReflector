@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.codedom.CodeExpression;
 import system.componentmodel.design.data.DesignerDataConnection;
 import system.windows.forms.IWin32Window;
 import system.windows.forms.IWin32WindowImplementation;
-import system.componentmodel.design.data.QueryBuilderMode;
 import system.componentmodel.design.data.IDesignerDataSchema;
 import system.componentmodel.design.data.IDesignerDataSchemaImplementation;
 import system.data.common.DbConnection;
-import system.codedom.CodeExpression;
+import system.componentmodel.design.data.QueryBuilderMode;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 
@@ -113,22 +113,23 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
 
     // Methods section
     
+    public CodeExpression GetCodeExpression(DesignerDataConnection connection) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetCodeExpression = (JCObject)classInstance.Invoke("GetCodeExpression", connection == null ? null : connection.getJCOInstance());
+            return new CodeExpression(objGetCodeExpression);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DesignerDataConnection BuildConnection(IWin32Window owner, DesignerDataConnection initialConnection) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objBuildConnection = (JCObject)classInstance.Invoke("BuildConnection", owner == null ? null : owner.getJCOInstance(), initialConnection == null ? null : initialConnection.getJCOInstance());
             return new DesignerDataConnection(objBuildConnection);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String BuildQuery(IWin32Window owner, DesignerDataConnection connection, QueryBuilderMode mode, java.lang.String initialQueryText) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("BuildQuery", owner == null ? null : owner.getJCOInstance(), connection == null ? null : connection.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), initialQueryText);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,12 +168,11 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
         }
     }
 
-    public CodeExpression GetCodeExpression(DesignerDataConnection connection) throws Throwable {
+    public java.lang.String BuildQuery(IWin32Window owner, DesignerDataConnection connection, QueryBuilderMode mode, java.lang.String initialQueryText) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetCodeExpression = (JCObject)classInstance.Invoke("GetCodeExpression", connection == null ? null : connection.getJCOInstance());
-            return new CodeExpression(objGetCodeExpression);
+            return (java.lang.String)classInstance.Invoke("BuildQuery", owner == null ? null : owner.getJCOInstance(), connection == null ? null : connection.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), initialQueryText);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

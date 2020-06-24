@@ -96,13 +96,13 @@ public interface IRemotingFormatter extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject Deserialize(Stream serializationStream, HeaderHandler handler) throws Throwable;
-
-    public void Serialize(Stream serializationStream, NetObject graph, Header[] headers) throws Throwable;
-
     public NetObject Deserialize(Stream serializationStream) throws Throwable;
 
+    public NetObject Deserialize(Stream serializationStream, HeaderHandler handler) throws Throwable;
+
     public void Serialize(Stream serializationStream, NetObject graph) throws Throwable;
+
+    public void Serialize(Stream serializationStream, NetObject graph, Header[] headers) throws Throwable;
 
 
     

@@ -117,22 +117,22 @@ public class ManipulationDelta2D extends NetObject  {
     
     // Properties section
     
-    public Single getTranslationX() throws Throwable {
+    public Single getExpansionX() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TranslationX");
+            JCObject val = (JCObject)classInstance.Get("ExpansionX");
             return new Single(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Single getTranslationY() throws Throwable {
+    public Single getExpansionY() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TranslationY");
+            JCObject val = (JCObject)classInstance.Get("ExpansionY");
             return new Single(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -172,22 +172,22 @@ public class ManipulationDelta2D extends NetObject  {
         }
     }
 
-    public Single getExpansionX() throws Throwable {
+    public Single getTranslationX() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpansionX");
+            JCObject val = (JCObject)classInstance.Get("TranslationX");
             return new Single(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Single getExpansionY() throws Throwable {
+    public Single getTranslationY() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpansionY");
+            JCObject val = (JCObject)classInstance.Get("TranslationY");
             return new Single(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

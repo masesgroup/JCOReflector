@@ -39,13 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.BlobBuilder;
-import system.reflection.metadata.ecma335.SignatureTypeEncoder;
 import system.reflection.metadata.ecma335.GenericTypeArgumentsEncoder;
+import system.reflection.metadata.ecma335.LocalVariablesEncoder;
 import system.reflection.metadata.ecma335.MethodSignatureEncoder;
 import system.reflection.metadata.SignatureCallingConvention;
-import system.reflection.metadata.ecma335.LocalVariablesEncoder;
-import system.reflection.metadata.ecma335.PermissionSetEncoder;
 import system.reflection.metadata.ecma335.NamedArgumentsEncoder;
+import system.reflection.metadata.ecma335.PermissionSetEncoder;
+import system.reflection.metadata.ecma335.SignatureTypeEncoder;
 
 
 /**
@@ -131,23 +131,23 @@ public class BlobEncoder extends NetObject  {
     
     // Methods section
     
-    public SignatureTypeEncoder FieldSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objFieldSignature = (JCObject)classInstance.Invoke("FieldSignature");
-            return new SignatureTypeEncoder(objFieldSignature);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public GenericTypeArgumentsEncoder MethodSpecificationSignature(int genericArgumentCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objMethodSpecificationSignature = (JCObject)classInstance.Invoke("MethodSpecificationSignature", genericArgumentCount);
             return new GenericTypeArgumentsEncoder(objMethodSpecificationSignature);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LocalVariablesEncoder LocalVariableSignature(int variableCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLocalVariableSignature = (JCObject)classInstance.Invoke("LocalVariableSignature", variableCount);
+            return new LocalVariablesEncoder(objLocalVariableSignature);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,23 +175,12 @@ public class BlobEncoder extends NetObject  {
         }
     }
 
-    public LocalVariablesEncoder LocalVariableSignature(int variableCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public NamedArgumentsEncoder PermissionSetArguments(int argumentCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLocalVariableSignature = (JCObject)classInstance.Invoke("LocalVariableSignature", variableCount);
-            return new LocalVariablesEncoder(objLocalVariableSignature);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SignatureTypeEncoder TypeSpecificationSignature() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objTypeSpecificationSignature = (JCObject)classInstance.Invoke("TypeSpecificationSignature");
-            return new SignatureTypeEncoder(objTypeSpecificationSignature);
+            JCObject objPermissionSetArguments = (JCObject)classInstance.Invoke("PermissionSetArguments", argumentCount);
+            return new NamedArgumentsEncoder(objPermissionSetArguments);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,12 +197,23 @@ public class BlobEncoder extends NetObject  {
         }
     }
 
-    public NamedArgumentsEncoder PermissionSetArguments(int argumentCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public SignatureTypeEncoder FieldSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objPermissionSetArguments = (JCObject)classInstance.Invoke("PermissionSetArguments", argumentCount);
-            return new NamedArgumentsEncoder(objPermissionSetArguments);
+            JCObject objFieldSignature = (JCObject)classInstance.Invoke("FieldSignature");
+            return new SignatureTypeEncoder(objFieldSignature);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SignatureTypeEncoder TypeSpecificationSignature() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objTypeSpecificationSignature = (JCObject)classInstance.Invoke("TypeSpecificationSignature");
+            return new SignatureTypeEncoder(objTypeSpecificationSignature);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

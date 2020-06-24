@@ -91,11 +91,11 @@ public interface IAppDomainInfoEnum extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IAppDomainInfo GetData() throws Throwable;
+    public boolean MoveNext() throws Throwable;
 
     public int Count() throws Throwable;
 
-    public boolean MoveNext() throws Throwable;
+    public IAppDomainInfo GetData() throws Throwable;
 
     public void Reset() throws Throwable;
 

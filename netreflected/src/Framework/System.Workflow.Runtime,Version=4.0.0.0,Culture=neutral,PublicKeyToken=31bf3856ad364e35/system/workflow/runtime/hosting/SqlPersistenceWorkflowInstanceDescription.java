@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.sqltypes.SqlDateTime;
 import system.Guid;
 import system.workflow.runtime.WorkflowStatus;
-import system.data.sqltypes.SqlDateTime;
 
 
 /**
@@ -119,33 +119,33 @@ public class SqlPersistenceWorkflowInstanceDescription extends NetObject  {
     
     // Properties section
     
+    public boolean getIsBlocked() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsBlocked");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlDateTime getNextTimerExpiration() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NextTimerExpiration");
+            return new SqlDateTime(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getWorkflowInstanceId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("WorkflowInstanceId");
             return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WorkflowStatus getStatus() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Status");
-            return new WorkflowStatus(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsBlocked() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsBlocked");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,12 +161,12 @@ public class SqlPersistenceWorkflowInstanceDescription extends NetObject  {
         }
     }
 
-    public SqlDateTime getNextTimerExpiration() throws Throwable {
+    public WorkflowStatus getStatus() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NextTimerExpiration");
-            return new SqlDateTime(val);
+            JCObject val = (JCObject)classInstance.Get("Status");
+            return new WorkflowStatus(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

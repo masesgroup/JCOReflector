@@ -123,21 +123,21 @@ public class Validator extends NetObject  {
         }
     }
 
-    public static void ValidateProperty(NetObject value, ValidationContext validationContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.componentmodel.dataannotations.ValidationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("ValidateProperty", value == null ? null : value.getJCOInstance(), validationContext == null ? null : validationContext.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void ValidateObject(NetObject instance, ValidationContext validationContext, boolean validateAllProperties) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.RankException, system.NullReferenceException, system.componentmodel.dataannotations.ValidationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ValidateObject", instance == null ? null : instance.getJCOInstance(), validationContext == null ? null : validationContext.getJCOInstance(), validateAllProperties);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ValidateProperty(NetObject value, ValidationContext validationContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.componentmodel.dataannotations.ValidationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ValidateProperty", value == null ? null : value.getJCOInstance(), validationContext == null ? null : validationContext.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -37,12 +37,12 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.runtime.interopservices.comtypes.IStream;
-import system.runtime.interopservices.comtypes.IStreamImplementation;
-import system.runtime.interopservices.comtypes.IBindCtx;
-import system.runtime.interopservices.comtypes.IBindCtxImplementation;
 import system.runtime.interopservices.comtypes.IMoniker;
 import system.runtime.interopservices.comtypes.IMonikerImplementation;
+import system.runtime.interopservices.comtypes.IBindCtx;
+import system.runtime.interopservices.comtypes.IBindCtxImplementation;
+import system.runtime.interopservices.comtypes.IStream;
+import system.runtime.interopservices.comtypes.IStreamImplementation;
 
 
 /**
@@ -97,13 +97,13 @@ public interface IMoniker extends IJCOBridgeReflected {
     
     public int IsDirty() throws Throwable;
 
-    public void Load(IStream pStm) throws Throwable;
-
-    public void Save(IStream pStm, boolean fClearDirty) throws Throwable;
-
     public int IsEqual(IMoniker pmkOtherMoniker) throws Throwable;
 
     public int IsRunning(IBindCtx pbc, IMoniker pmkToLeft, IMoniker pmkNewlyRunning) throws Throwable;
+
+    public void Load(IStream pStm) throws Throwable;
+
+    public void Save(IStream pStm, boolean fClearDirty) throws Throwable;
 
 
     

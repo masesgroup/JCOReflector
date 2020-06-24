@@ -129,23 +129,23 @@ public class MenuCommandsChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public MenuCommandsChangedType getChangeType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ChangeType");
-            return new MenuCommandsChangedType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MenuCommand getCommand() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Command");
             return new MenuCommand(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MenuCommandsChangedType getChangeType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ChangeType");
+            return new MenuCommandsChangedType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

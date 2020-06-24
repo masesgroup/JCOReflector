@@ -113,21 +113,21 @@ public class MessagePartCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(MessagePart messagePart) throws Throwable {
+    public boolean Contains(MessagePart messagePart) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", messagePart == null ? null : messagePart.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", messagePart == null ? null : messagePart.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, MessagePart messagePart) throws Throwable {
+    public int Add(MessagePart messagePart) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, messagePart == null ? null : messagePart.getJCOInstance());
+            return (int)classInstance.Invoke("Add", messagePart == null ? null : messagePart.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,21 +143,11 @@ public class MessagePartCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(MessagePart messagePart) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", messagePart == null ? null : messagePart.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(MessagePart messagePart) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", messagePart == null ? null : messagePart.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,11 +163,21 @@ public class MessagePartCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public void Insert(int index, MessagePart messagePart) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, messagePart == null ? null : messagePart.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(MessagePart messagePart) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", messagePart == null ? null : messagePart.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

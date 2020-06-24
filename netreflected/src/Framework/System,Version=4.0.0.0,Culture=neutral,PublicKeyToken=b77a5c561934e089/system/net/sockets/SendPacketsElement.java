@@ -109,36 +109,6 @@ public class SendPacketsElement extends NetObject  {
     // Constructors section
     
 
-    public SendPacketsElement(java.lang.String filepath) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(filepath));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SendPacketsElement(java.lang.String filepath, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(filepath, offset, count));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SendPacketsElement(java.lang.String filepath, int offset, int count, boolean endOfPacket) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(filepath, offset, count, endOfPacket));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SendPacketsElement(byte[] buffer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +139,36 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    public SendPacketsElement(java.lang.String filepath) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(filepath));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SendPacketsElement(java.lang.String filepath, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(filepath, offset, count));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SendPacketsElement(java.lang.String filepath, int offset, int count, boolean endOfPacket) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(filepath, offset, count, endOfPacket));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -177,11 +177,11 @@ public class SendPacketsElement extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getFilePath() throws Throwable {
+    public boolean getEndOfPacket() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("FilePath");
+            return (boolean)classInstance.Get("EndOfPacket");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,11 +226,11 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
-    public boolean getEndOfPacket() throws Throwable {
+    public java.lang.String getFilePath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("EndOfPacket");
+            return (java.lang.String)classInstance.Get("FilePath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

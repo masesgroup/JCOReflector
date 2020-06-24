@@ -40,11 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.xml.schema.XmlAtomicValue;
 import system.xml.xsl.runtime.XmlQueryRuntime;
+import system.DateTime;
 import system.Decimal;
 import system.Single;
-import system.DateTime;
-import system.xml.XmlQualifiedName;
 import system.TimeSpan;
+import system.xml.XmlQualifiedName;
 
 
 /**
@@ -119,50 +119,6 @@ public class XmlILStorageConverter extends NetObject  {
     
     // Methods section
     
-    public static XmlAtomicValue StringToAtomicValue(java.lang.String value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objStringToAtomicValue = (JCObject)classType.Invoke("StringToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
-            return new XmlAtomicValue(objStringToAtomicValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static XmlAtomicValue DecimalToAtomicValue(Decimal value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDecimalToAtomicValue = (JCObject)classType.Invoke("DecimalToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
-            return new XmlAtomicValue(objDecimalToAtomicValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static XmlAtomicValue Int64ToAtomicValue(long value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objInt64ToAtomicValue = (JCObject)classType.Invoke("Int64ToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
-            return new XmlAtomicValue(objInt64ToAtomicValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static XmlAtomicValue Int32ToAtomicValue(int value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objInt32ToAtomicValue = (JCObject)classType.Invoke("Int32ToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
-            return new XmlAtomicValue(objInt32ToAtomicValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static XmlAtomicValue BooleanToAtomicValue(boolean value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -174,23 +130,12 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue DoubleToAtomicValue(double value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static XmlAtomicValue BytesToAtomicValue(byte[] value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objDoubleToAtomicValue = (JCObject)classType.Invoke("DoubleToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
-            return new XmlAtomicValue(objDoubleToAtomicValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static XmlAtomicValue SingleToAtomicValue(Single value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSingleToAtomicValue = (JCObject)classType.Invoke("SingleToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
-            return new XmlAtomicValue(objSingleToAtomicValue);
+            JCObject objBytesToAtomicValue = (JCObject)classType.Invoke("BytesToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            return new XmlAtomicValue(objBytesToAtomicValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,12 +152,67 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue XmlQualifiedNameToAtomicValue(XmlQualifiedName value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static XmlAtomicValue DecimalToAtomicValue(Decimal value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objXmlQualifiedNameToAtomicValue = (JCObject)classType.Invoke("XmlQualifiedNameToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
-            return new XmlAtomicValue(objXmlQualifiedNameToAtomicValue);
+            JCObject objDecimalToAtomicValue = (JCObject)classType.Invoke("DecimalToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
+            return new XmlAtomicValue(objDecimalToAtomicValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlAtomicValue DoubleToAtomicValue(double value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDoubleToAtomicValue = (JCObject)classType.Invoke("DoubleToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            return new XmlAtomicValue(objDoubleToAtomicValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlAtomicValue Int32ToAtomicValue(int value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objInt32ToAtomicValue = (JCObject)classType.Invoke("Int32ToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            return new XmlAtomicValue(objInt32ToAtomicValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlAtomicValue Int64ToAtomicValue(long value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objInt64ToAtomicValue = (JCObject)classType.Invoke("Int64ToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            return new XmlAtomicValue(objInt64ToAtomicValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlAtomicValue SingleToAtomicValue(Single value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSingleToAtomicValue = (JCObject)classType.Invoke("SingleToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
+            return new XmlAtomicValue(objSingleToAtomicValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlAtomicValue StringToAtomicValue(java.lang.String value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objStringToAtomicValue = (JCObject)classType.Invoke("StringToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            return new XmlAtomicValue(objStringToAtomicValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,12 +229,12 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue BytesToAtomicValue(byte[] value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static XmlAtomicValue XmlQualifiedNameToAtomicValue(XmlQualifiedName value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objBytesToAtomicValue = (JCObject)classType.Invoke("BytesToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
-            return new XmlAtomicValue(objBytesToAtomicValue);
+            JCObject objXmlQualifiedNameToAtomicValue = (JCObject)classType.Invoke("XmlQualifiedNameToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
+            return new XmlAtomicValue(objXmlQualifiedNameToAtomicValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

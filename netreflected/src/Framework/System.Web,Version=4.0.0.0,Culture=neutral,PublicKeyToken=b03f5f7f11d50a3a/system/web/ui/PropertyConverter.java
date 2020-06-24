@@ -124,22 +124,22 @@ public class PropertyConverter extends NetObject  {
         }
     }
 
-    public static java.lang.String EnumToString(NetType enumType, NetObject enumValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("EnumToString", enumType == null ? null : enumType.getJCOInstance(), enumValue == null ? null : enumValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static NetObject ObjectFromString(NetType objType, MemberInfo propertyInfo, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objObjectFromString = (JCObject)classType.Invoke("ObjectFromString", objType == null ? null : objType.getJCOInstance(), propertyInfo == null ? null : propertyInfo.getJCOInstance(), value);
             return new NetObject(objObjectFromString);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String EnumToString(NetType enumType, NetObject enumValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("EnumToString", enumType == null ? null : enumType.getJCOInstance(), enumValue == null ? null : enumValue.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

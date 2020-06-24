@@ -103,21 +103,21 @@ public class ICommandServiceImplementation extends NetObject implements ICommand
 
     // Methods section
     
-    public boolean IsCommandSupported(int commandId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsCommandSupported", commandId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean CanExecuteCommand(int commandId) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("CanExecuteCommand", commandId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsCommandSupported(int commandId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsCommandSupported", commandId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

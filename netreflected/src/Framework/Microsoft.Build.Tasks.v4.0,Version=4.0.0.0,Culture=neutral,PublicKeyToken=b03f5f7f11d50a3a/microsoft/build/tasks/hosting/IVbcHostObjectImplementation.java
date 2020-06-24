@@ -105,21 +105,11 @@ public class IVbcHostObjectImplementation extends NetObject implements IVbcHostO
 
     // Methods section
     
-    public void BeginInitialization() throws Throwable {
+    public boolean Compile() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("BeginInitialization");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void EndInitialization() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("EndInitialization");
+            return (boolean)classInstance.Invoke("Compile");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -130,6 +120,16 @@ public class IVbcHostObjectImplementation extends NetObject implements IVbcHostO
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsDesignTime");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsUpToDate() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsUpToDate");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,6 +220,16 @@ public class IVbcHostObjectImplementation extends NetObject implements IVbcHostO
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("SetDocumentationFile", documentationFile);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean SetErrorReport(java.lang.String errorReport) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetErrorReport", errorReport);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,6 +395,16 @@ public class IVbcHostObjectImplementation extends NetObject implements IVbcHostO
         }
     }
 
+    public boolean SetPlatform(java.lang.String platform) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetPlatform", platform);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean SetReferences(ITaskItem[] references) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -525,41 +545,21 @@ public class IVbcHostObjectImplementation extends NetObject implements IVbcHostO
         }
     }
 
-    public boolean IsUpToDate() throws Throwable {
+    public void BeginInitialization() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsUpToDate");
+            classInstance.Invoke("BeginInitialization");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean Compile() throws Throwable {
+    public void EndInitialization() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Compile");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SetErrorReport(java.lang.String errorReport) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SetErrorReport", errorReport);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SetPlatform(java.lang.String platform) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SetPlatform", platform);
+            classInstance.Invoke("EndInitialization");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

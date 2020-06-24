@@ -37,10 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.web.ui.webcontrols.DataKeyArray;
-import system.web.ui.webcontrols.DataKey;
 import system.web.ui.IDataSource;
 import system.web.ui.IDataSourceImplementation;
+import system.web.ui.webcontrols.DataKey;
+import system.web.ui.webcontrols.DataKeyArray;
 
 
 /**
@@ -97,39 +97,39 @@ public interface IDataBoundListControl extends IJCOBridgeReflected {
     
     // Properties section
     
-    public DataKeyArray getDataKeys() throws Throwable;
+    public boolean getEnablePersistedSelection() throws Throwable;
 
-    public DataKey getSelectedDataKey() throws Throwable;
+    public void setEnablePersistedSelection(boolean EnablePersistedSelection) throws Throwable;
 
     public int getSelectedIndex() throws Throwable;
 
     public void setSelectedIndex(int SelectedIndex) throws Throwable;
 
-    public java.lang.String[] getClientIDRowSuffix() throws Throwable;
+    public NetObject getDataSource() throws Throwable;
 
-    public void setClientIDRowSuffix(java.lang.String[] ClientIDRowSuffix) throws Throwable;
+    public void setDataSource(NetObject DataSource) throws Throwable;
 
-    public boolean getEnablePersistedSelection() throws Throwable;
+    public java.lang.String getDataMember() throws Throwable;
 
-    public void setEnablePersistedSelection(boolean EnablePersistedSelection) throws Throwable;
+    public void setDataMember(java.lang.String DataMember) throws Throwable;
 
     public java.lang.String getDataSourceID() throws Throwable;
 
     public void setDataSourceID(java.lang.String DataSourceID) throws Throwable;
 
-    public IDataSource getDataSourceObject() throws Throwable;
+    public java.lang.String[] getClientIDRowSuffix() throws Throwable;
 
-    public NetObject getDataSource() throws Throwable;
-
-    public void setDataSource(NetObject DataSource) throws Throwable;
+    public void setClientIDRowSuffix(java.lang.String[] ClientIDRowSuffix) throws Throwable;
 
     public java.lang.String[] getDataKeyNames() throws Throwable;
 
     public void setDataKeyNames(java.lang.String[] DataKeyNames) throws Throwable;
 
-    public java.lang.String getDataMember() throws Throwable;
+    public IDataSource getDataSourceObject() throws Throwable;
 
-    public void setDataMember(java.lang.String DataMember) throws Throwable;
+    public DataKey getSelectedDataKey() throws Throwable;
+
+    public DataKeyArray getDataKeys() throws Throwable;
 
 
 

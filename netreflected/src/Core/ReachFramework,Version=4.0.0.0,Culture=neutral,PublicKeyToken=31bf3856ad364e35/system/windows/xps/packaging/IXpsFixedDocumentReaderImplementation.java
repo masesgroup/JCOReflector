@@ -41,8 +41,8 @@ import java.util.ArrayList;
 import system.windows.xps.packaging.IXpsFixedPageReader;
 import system.windows.xps.packaging.IXpsFixedPageReaderImplementation;
 import system.Uri;
-import system.windows.xps.packaging.XpsSignatureDefinition;
 import system.windows.xps.packaging.XpsStructure;
+import system.windows.xps.packaging.XpsSignatureDefinition;
 import system.printing.PrintTicket;
 import system.windows.xps.packaging.XpsThumbnail;
 
@@ -121,21 +121,22 @@ public class IXpsFixedDocumentReaderImplementation extends NetObject implements 
         }
     }
 
-    public void AddSignatureDefinition(XpsSignatureDefinition signatureDefinition) throws Throwable {
+    public XpsStructure AddDocumentStructure() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddSignatureDefinition", signatureDefinition == null ? null : signatureDefinition.getJCOInstance());
+            JCObject objAddDocumentStructure = (JCObject)classInstance.Invoke("AddDocumentStructure");
+            return new XpsStructure(objAddDocumentStructure);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void RemoveSignatureDefinition(XpsSignatureDefinition signatureDefinition) throws Throwable {
+    public void AddSignatureDefinition(XpsSignatureDefinition signatureDefinition) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RemoveSignatureDefinition", signatureDefinition == null ? null : signatureDefinition.getJCOInstance());
+            classInstance.Invoke("AddSignatureDefinition", signatureDefinition == null ? null : signatureDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,12 +152,11 @@ public class IXpsFixedDocumentReaderImplementation extends NetObject implements 
         }
     }
 
-    public XpsStructure AddDocumentStructure() throws Throwable {
+    public void RemoveSignatureDefinition(XpsSignatureDefinition signatureDefinition) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAddDocumentStructure = (JCObject)classInstance.Invoke("AddDocumentStructure");
-            return new XpsStructure(objAddDocumentStructure);
+            classInstance.Invoke("RemoveSignatureDefinition", signatureDefinition == null ? null : signatureDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,6 +166,16 @@ public class IXpsFixedDocumentReaderImplementation extends NetObject implements 
     
     // Properties section
     
+    public int getDocumentNumber() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("DocumentNumber");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PrintTicket getPrintTicket() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -188,11 +198,12 @@ public class IXpsFixedDocumentReaderImplementation extends NetObject implements 
         }
     }
 
-    public int getDocumentNumber() throws Throwable {
+    public XpsStructure getDocumentStructure() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("DocumentNumber");
+            JCObject val = (JCObject)classInstance.Get("DocumentStructure");
+            return new XpsStructure(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,17 +215,6 @@ public class IXpsFixedDocumentReaderImplementation extends NetObject implements 
         try {
             JCObject val = (JCObject)classInstance.Get("Thumbnail");
             return new XpsThumbnail(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XpsStructure getDocumentStructure() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DocumentStructure");
-            return new XpsStructure(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

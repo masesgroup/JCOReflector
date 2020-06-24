@@ -38,18 +38,18 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.dynamic.InvokeMemberBinder;
-import system.dynamic.GetMemberBinder;
-import system.dynamic.InvokeBinder;
-import system.dynamic.SetMemberBinder;
-import system.dynamic.GetIndexBinder;
-import system.dynamic.SetIndexBinder;
-import system.dynamic.DeleteMemberBinder;
+import system.dynamic.BinaryOperationBinder;
 import system.dynamic.ConvertBinder;
 import system.dynamic.CreateInstanceBinder;
-import system.dynamic.BinaryOperationBinder;
-import system.dynamic.UnaryOperationBinder;
 import system.dynamic.DeleteIndexBinder;
+import system.dynamic.DeleteMemberBinder;
+import system.dynamic.GetIndexBinder;
+import system.dynamic.GetMemberBinder;
+import system.dynamic.InvokeBinder;
+import system.dynamic.InvokeMemberBinder;
+import system.dynamic.SetIndexBinder;
+import system.dynamic.SetMemberBinder;
+import system.dynamic.UnaryOperationBinder;
 import system.dynamic.DynamicMetaObject;
 import system.linq.expressions.Expression;
 
@@ -126,21 +126,11 @@ public class DynamicScriptObject extends NetObject  {
     
     // Methods section
     
-    public boolean TrySetMember(SetMemberBinder binder, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
+    public boolean TryDeleteIndex(DeleteIndexBinder binder, NetObject[] indexes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("TrySetMember", binder == null ? null : binder.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean TrySetIndex(SetIndexBinder binder, NetObject[] indexes, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.RankException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("TrySetIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance());
+            return (boolean)classInstance.Invoke("TryDeleteIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,11 +146,21 @@ public class DynamicScriptObject extends NetObject  {
         }
     }
 
-    public boolean TryDeleteIndex(DeleteIndexBinder binder, NetObject[] indexes) throws Throwable {
+    public boolean TrySetIndex(SetIndexBinder binder, NetObject[] indexes, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.RankException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("TryDeleteIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes));
+            return (boolean)classInstance.Invoke("TrySetIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TrySetMember(SetMemberBinder binder, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TrySetMember", binder == null ? null : binder.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -40,17 +40,17 @@ import java.util.ArrayList;
 // Import section
 import system.reflection.ICustomAttributeProvider;
 import system.reflection.ICustomAttributeProviderImplementation;
-import system.xml.serialization.XmlElementAttributes;
-import system.xml.serialization.XmlAttributeAttribute;
-import system.xml.serialization.XmlEnumAttribute;
-import system.xml.serialization.XmlTextAttribute;
+import system.xml.serialization.XmlAnyAttributeAttribute;
+import system.xml.serialization.XmlAnyElementAttributes;
 import system.xml.serialization.XmlArrayAttribute;
 import system.xml.serialization.XmlArrayItemAttributes;
-import system.xml.serialization.XmlTypeAttribute;
-import system.xml.serialization.XmlRootAttribute;
-import system.xml.serialization.XmlAnyElementAttributes;
-import system.xml.serialization.XmlAnyAttributeAttribute;
+import system.xml.serialization.XmlAttributeAttribute;
 import system.xml.serialization.XmlChoiceIdentifierAttribute;
+import system.xml.serialization.XmlElementAttributes;
+import system.xml.serialization.XmlEnumAttribute;
+import system.xml.serialization.XmlRootAttribute;
+import system.xml.serialization.XmlTextAttribute;
+import system.xml.serialization.XmlTypeAttribute;
 
 
 /**
@@ -150,75 +150,94 @@ public class XmlAttributes extends NetObject  {
     
     // Properties section
     
-    public XmlElementAttributes getXmlElements() throws Throwable {
+    public boolean getXmlIgnore() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlElements");
-            return new XmlElementAttributes(val);
+            return (boolean)classInstance.Get("XmlIgnore");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlAttributeAttribute getXmlAttribute() throws Throwable {
+    public void setXmlIgnore(boolean XmlIgnore) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlAttribute");
-            return new XmlAttributeAttribute(val);
+            classInstance.Set("XmlIgnore", XmlIgnore);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setXmlAttribute(XmlAttributeAttribute XmlAttribute) throws Throwable {
+    public boolean getXmlns() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("XmlAttribute", XmlAttribute == null ? null : XmlAttribute.getJCOInstance());
+            return (boolean)classInstance.Get("Xmlns");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlEnumAttribute getXmlEnum() throws Throwable {
+    public void setXmlns(boolean Xmlns) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlEnum");
-            return new XmlEnumAttribute(val);
+            classInstance.Set("Xmlns", Xmlns);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setXmlEnum(XmlEnumAttribute XmlEnum) throws Throwable {
+    public NetObject getXmlDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("XmlEnum", XmlEnum == null ? null : XmlEnum.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("XmlDefaultValue");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlTextAttribute getXmlText() throws Throwable {
+    public void setXmlDefaultValue(NetObject XmlDefaultValue) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlText");
-            return new XmlTextAttribute(val);
+            classInstance.Set("XmlDefaultValue", XmlDefaultValue == null ? null : XmlDefaultValue.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setXmlText(XmlTextAttribute XmlText) throws Throwable {
+    public XmlAnyAttributeAttribute getXmlAnyAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("XmlText", XmlText == null ? null : XmlText.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("XmlAnyAttribute");
+            return new XmlAnyAttributeAttribute(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setXmlAnyAttribute(XmlAnyAttributeAttribute XmlAnyAttribute) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("XmlAnyAttribute", XmlAnyAttribute == null ? null : XmlAnyAttribute.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlAnyElementAttributes getXmlAnyElements() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("XmlAnyElements");
+            return new XmlAnyElementAttributes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,63 +275,65 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
-    public NetObject getXmlDefaultValue() throws Throwable {
+    public XmlAttributeAttribute getXmlAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlDefaultValue");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("XmlAttribute");
+            return new XmlAttributeAttribute(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setXmlDefaultValue(NetObject XmlDefaultValue) throws Throwable {
+    public void setXmlAttribute(XmlAttributeAttribute XmlAttribute) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("XmlDefaultValue", XmlDefaultValue == null ? null : XmlDefaultValue.getJCOInstance());
+            classInstance.Set("XmlAttribute", XmlAttribute == null ? null : XmlAttribute.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getXmlIgnore() throws Throwable {
+    public XmlChoiceIdentifierAttribute getXmlChoiceIdentifier() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("XmlIgnore");
+            JCObject val = (JCObject)classInstance.Get("XmlChoiceIdentifier");
+            return new XmlChoiceIdentifierAttribute(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setXmlIgnore(boolean XmlIgnore) throws Throwable {
+    public XmlElementAttributes getXmlElements() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("XmlIgnore", XmlIgnore);
+            JCObject val = (JCObject)classInstance.Get("XmlElements");
+            return new XmlElementAttributes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlTypeAttribute getXmlType() throws Throwable {
+    public XmlEnumAttribute getXmlEnum() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlType");
-            return new XmlTypeAttribute(val);
+            JCObject val = (JCObject)classInstance.Get("XmlEnum");
+            return new XmlEnumAttribute(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setXmlType(XmlTypeAttribute XmlType) throws Throwable {
+    public void setXmlEnum(XmlEnumAttribute XmlEnum) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("XmlType", XmlType == null ? null : XmlType.getJCOInstance());
+            classInstance.Set("XmlEnum", XmlEnum == null ? null : XmlEnum.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,64 +360,43 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
-    public XmlAnyElementAttributes getXmlAnyElements() throws Throwable {
+    public XmlTextAttribute getXmlText() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlAnyElements");
-            return new XmlAnyElementAttributes(val);
+            JCObject val = (JCObject)classInstance.Get("XmlText");
+            return new XmlTextAttribute(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlAnyAttributeAttribute getXmlAnyAttribute() throws Throwable {
+    public void setXmlText(XmlTextAttribute XmlText) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlAnyAttribute");
-            return new XmlAnyAttributeAttribute(val);
+            classInstance.Set("XmlText", XmlText == null ? null : XmlText.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setXmlAnyAttribute(XmlAnyAttributeAttribute XmlAnyAttribute) throws Throwable {
+    public XmlTypeAttribute getXmlType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("XmlAnyAttribute", XmlAnyAttribute == null ? null : XmlAnyAttribute.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("XmlType");
+            return new XmlTypeAttribute(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlChoiceIdentifierAttribute getXmlChoiceIdentifier() throws Throwable {
+    public void setXmlType(XmlTypeAttribute XmlType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlChoiceIdentifier");
-            return new XmlChoiceIdentifierAttribute(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getXmlns() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Xmlns");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setXmlns(boolean Xmlns) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Xmlns", Xmlns);
+            classInstance.Set("XmlType", XmlType == null ? null : XmlType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -104,21 +104,30 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
 
     // Methods section
     
-    public void Initialize() throws Throwable {
+    public byte[] Promote() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Initialize");
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Promote");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexPromote = 0; indexPromote < resultingArrayList.size(); indexPromote++ ) {
+				resultingArray[indexPromote] = (byte)resultingArrayList.get(indexPromote);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void SinglePhaseCommit(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable {
+    public void Initialize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SinglePhaseCommit", singlePhaseEnlistment == null ? null : singlePhaseEnlistment.getJCOInstance());
+            classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -134,20 +143,11 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
         }
     }
 
-    public byte[] Promote() throws Throwable {
+    public void SinglePhaseCommit(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Promote");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexPromote = 0; indexPromote < resultingArrayList.size(); indexPromote++ ) {
-				resultingArray[indexPromote] = (byte)resultingArrayList.get(indexPromote);
-            }
-            return resultingArray;
+            classInstance.Invoke("SinglePhaseCommit", singlePhaseEnlistment == null ? null : singlePhaseEnlistment.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

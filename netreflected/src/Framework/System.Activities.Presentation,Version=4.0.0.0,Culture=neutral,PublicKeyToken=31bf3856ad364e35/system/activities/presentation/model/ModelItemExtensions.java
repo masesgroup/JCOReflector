@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.presentation.EditingContext;
 import system.activities.presentation.model.ModelItem;
+import system.activities.presentation.EditingContext;
 
 
 /**
@@ -114,22 +114,22 @@ public class ModelItemExtensions extends NetObject  {
     
     // Methods section
     
+    public static boolean IsParentOf(ModelItem item, ModelItem child) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsParentOf", item == null ? null : item.getJCOInstance(), child == null ? null : child.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static EditingContext GetEditingContext(ModelItem modelItem) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetEditingContext = (JCObject)classType.Invoke("GetEditingContext", modelItem == null ? null : modelItem.getJCOInstance());
             return new EditingContext(objGetEditingContext);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String GetModelPath(ModelItem modelItem) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetModelPath", modelItem == null ? null : modelItem.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -146,11 +146,11 @@ public class ModelItemExtensions extends NetObject  {
         }
     }
 
-    public static boolean IsParentOf(ModelItem item, ModelItem child) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static java.lang.String GetModelPath(ModelItem modelItem) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsParentOf", item == null ? null : item.getJCOInstance(), child == null ? null : child.getJCOInstance());
+            return (java.lang.String)classType.Invoke("GetModelPath", modelItem == null ? null : modelItem.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

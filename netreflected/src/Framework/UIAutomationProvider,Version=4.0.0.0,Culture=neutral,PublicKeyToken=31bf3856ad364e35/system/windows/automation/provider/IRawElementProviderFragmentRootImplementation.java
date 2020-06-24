@@ -43,10 +43,10 @@ import system.windows.automation.provider.IRawElementProviderFragmentImplementat
 import system.windows.automation.provider.NavigateDirection;
 import system.windows.automation.provider.IRawElementProviderSimple;
 import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
-import system.windows.Rect;
 import system.windows.automation.provider.IRawElementProviderFragmentRoot;
 import system.windows.automation.provider.IRawElementProviderFragmentRootImplementation;
 import system.windows.automation.provider.ProviderOptions;
+import system.windows.Rect;
 
 
 /**
@@ -112,6 +112,47 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
 
     // Methods section
     
+    public int[] GetRuntimeId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRuntimeId");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            int[] resultingArray = new int[resultingArrayList.size()];
+            for(int indexGetRuntimeId = 0; indexGetRuntimeId < resultingArrayList.size(); indexGetRuntimeId++ ) {
+				resultingArray[indexGetRuntimeId] = (int)resultingArrayList.get(indexGetRuntimeId);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetPatternProvider(int patternId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetPatternProvider = (JCObject)classInstance.Invoke("GetPatternProvider", patternId);
+            return new NetObject(objGetPatternProvider);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetPropertyValue(int propertyId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", propertyId);
+            return new NetObject(objGetPropertyValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IRawElementProviderFragment ElementProviderFromPoint(double x, double y) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,25 +186,6 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
-    public int[] GetRuntimeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRuntimeId");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            int[] resultingArray = new int[resultingArrayList.size()];
-            for(int indexGetRuntimeId = 0; indexGetRuntimeId < resultingArrayList.size(); indexGetRuntimeId++ ) {
-				resultingArray[indexGetRuntimeId] = (int)resultingArrayList.get(indexGetRuntimeId);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IRawElementProviderSimple[] GetEmbeddedFragmentRoots() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -191,49 +213,27 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
-    public NetObject GetPatternProvider(int patternId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetPatternProvider = (JCObject)classInstance.Invoke("GetPatternProvider", patternId);
-            return new NetObject(objGetPatternProvider);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetPropertyValue(int propertyId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", propertyId);
-            return new NetObject(objGetPropertyValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public Rect getBoundingRectangle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BoundingRectangle");
-            return new Rect(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IRawElementProviderFragmentRoot getFragmentRoot() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("FragmentRoot");
             return new IRawElementProviderFragmentRootImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IRawElementProviderSimple getHostRawElementProvider() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("HostRawElementProvider");
+            return new IRawElementProviderSimpleImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,12 +250,12 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
-    public IRawElementProviderSimple getHostRawElementProvider() throws Throwable {
+    public Rect getBoundingRectangle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("HostRawElementProvider");
-            return new IRawElementProviderSimpleImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("BoundingRectangle");
+            return new Rect(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,13 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.MetadataReader;
-import system.reflection.metadata.ecma335.TableIndex;
 import system.reflection.metadata.ecma335.HeapIndex;
-import system.reflection.metadata.UserStringHandle;
+import system.reflection.metadata.ecma335.TableIndex;
 import system.reflection.metadata.BlobHandle;
-import system.reflection.metadata.StringHandle;
 import system.reflection.metadata.SignatureTypeKind;
 import system.reflection.metadata.EntityHandle;
+import system.reflection.metadata.StringHandle;
+import system.reflection.metadata.UserStringHandle;
 
 
 /**
@@ -120,6 +120,36 @@ public class MetadataReaderExtensions extends NetObject  {
     
     // Methods section
     
+    public static int GetHeapMetadataOffset(MetadataReader reader, HeapIndex heapIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetHeapMetadataOffset", reader == null ? null : reader.getJCOInstance(), heapIndex == null ? null : heapIndex.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int GetHeapSize(MetadataReader reader, HeapIndex heapIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetHeapSize", reader == null ? null : reader.getJCOInstance(), heapIndex == null ? null : heapIndex.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int GetTableMetadataOffset(MetadataReader reader, TableIndex tableIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetTableMetadataOffset", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int GetTableRowCount(MetadataReader reader, TableIndex tableIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -140,53 +170,23 @@ public class MetadataReaderExtensions extends NetObject  {
         }
     }
 
-    public static int GetTableMetadataOffset(MetadataReader reader, TableIndex tableIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("GetTableMetadataOffset", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int GetHeapSize(MetadataReader reader, HeapIndex heapIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("GetHeapSize", reader == null ? null : reader.getJCOInstance(), heapIndex == null ? null : heapIndex.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int GetHeapMetadataOffset(MetadataReader reader, HeapIndex heapIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("GetHeapMetadataOffset", reader == null ? null : reader.getJCOInstance(), heapIndex == null ? null : heapIndex.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UserStringHandle GetNextHandle(MetadataReader reader, UserStringHandle handle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.BadImageFormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetNextHandle = (JCObject)classType.Invoke("GetNextHandle", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
-            return new UserStringHandle(objGetNextHandle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static BlobHandle GetNextHandle(MetadataReader reader, BlobHandle handle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetNextHandle = (JCObject)classType.Invoke("GetNextHandle", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
             return new BlobHandle(objGetNextHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SignatureTypeKind ResolveSignatureTypeKind(MetadataReader reader, EntityHandle typeHandle, byte rawTypeKind) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.BadImageFormatException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objResolveSignatureTypeKind = (JCObject)classType.Invoke("ResolveSignatureTypeKind", reader == null ? null : reader.getJCOInstance(), typeHandle == null ? null : typeHandle.getJCOInstance(), rawTypeKind);
+            return new SignatureTypeKind(objResolveSignatureTypeKind);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,12 +203,12 @@ public class MetadataReaderExtensions extends NetObject  {
         }
     }
 
-    public static SignatureTypeKind ResolveSignatureTypeKind(MetadataReader reader, EntityHandle typeHandle, byte rawTypeKind) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.BadImageFormatException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+    public static UserStringHandle GetNextHandle(MetadataReader reader, UserStringHandle handle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objResolveSignatureTypeKind = (JCObject)classType.Invoke("ResolveSignatureTypeKind", reader == null ? null : reader.getJCOInstance(), typeHandle == null ? null : typeHandle.getJCOInstance(), rawTypeKind);
-            return new SignatureTypeKind(objResolveSignatureTypeKind);
+            JCObject objGetNextHandle = (JCObject)classType.Invoke("GetNextHandle", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            return new UserStringHandle(objGetNextHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -37,15 +37,15 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.windows.xps.packaging.XpsResource;
-import system.Uri;
-import system.windows.xps.packaging.XpsFont;
 import system.windows.xps.packaging.XpsColorContext;
-import system.windows.xps.packaging.XpsResourceDictionary;
+import system.windows.xps.packaging.XpsFont;
 import system.windows.xps.packaging.XpsImage;
 import system.windows.xps.packaging.XpsImageType;
-import system.windows.xps.packaging.XpsThumbnail;
+import system.windows.xps.packaging.XpsResource;
+import system.Uri;
+import system.windows.xps.packaging.XpsResourceDictionary;
 import system.windows.xps.packaging.XpsStructure;
+import system.windows.xps.packaging.XpsThumbnail;
 import system.printing.PrintTicket;
 import system.xml.XmlWriter;
 
@@ -100,7 +100,7 @@ public interface IXpsFixedPageWriter extends IJCOBridgeReflected {
 
     // Methods section
     
-    public XpsResource AddResource(NetType resourceType, Uri resourceUri) throws Throwable;
+    public XpsColorContext AddColorContext() throws Throwable;
 
     public XpsFont AddFont() throws Throwable;
 
@@ -108,31 +108,31 @@ public interface IXpsFixedPageWriter extends IJCOBridgeReflected {
 
     public XpsFont AddFont(boolean obfuscate, boolean addRestrictedRelationship) throws Throwable;
 
-    public XpsColorContext AddColorContext() throws Throwable;
-
-    public XpsResourceDictionary AddResourceDictionary() throws Throwable;
-
     public XpsImage AddImage(java.lang.String mimeType) throws Throwable;
 
     public XpsImage AddImage(XpsImageType imageType) throws Throwable;
+
+    public XpsResource AddResource(NetType resourceType, Uri resourceUri) throws Throwable;
+
+    public XpsResourceDictionary AddResourceDictionary() throws Throwable;
+
+    public XpsStructure AddStoryFragment() throws Throwable;
 
     public XpsThumbnail AddThumbnail(XpsImageType imageType) throws Throwable;
 
     public void Commit() throws Throwable;
 
-    public XpsStructure AddStoryFragment() throws Throwable;
-
 
     
     // Properties section
     
+    public int getPageNumber() throws Throwable;
+
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable;
 
     public Uri getUri() throws Throwable;
 
     public XmlWriter getXmlWriter() throws Throwable;
-
-    public int getPageNumber() throws Throwable;
 
 
 

@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.common.commandtrees.DbExpressionVisitor;
+import system.data.common.commandtrees.DbExpressionKind;
 import system.data.common.commandtrees.DbLambda;
 import system.data.metadata.edm.TypeUsage;
-import system.data.common.commandtrees.DbExpressionKind;
 
 
 /**
@@ -130,6 +130,17 @@ public class DbLambdaExpression extends NetObject  {
     
     // Properties section
     
+    public DbExpressionKind getExpressionKind() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ExpressionKind");
+            return new DbExpressionKind(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DbLambda getLambda() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -147,17 +158,6 @@ public class DbLambdaExpression extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ResultType");
             return new TypeUsage(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbExpressionKind getExpressionKind() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExpressionKind");
-            return new DbExpressionKind(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

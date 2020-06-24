@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.drawing.SizeF;
-import system.drawing.PointF;
 import system.Single;
+import system.drawing.PointF;
+import system.drawing.SizeF;
 import system.drawing.Size;
 
 
@@ -113,11 +113,11 @@ public class SizeF extends NetObject  {
     // Constructors section
     
 
-    public SizeF(SizeF size) throws Throwable {
+    public SizeF(Single width, Single height) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(size == null ? null : size.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -133,11 +133,11 @@ public class SizeF extends NetObject  {
         }
     }
 
-    public SizeF(Single width, Single height) throws Throwable {
+    public SizeF(SizeF size) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(size == null ? null : size.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,28 +147,6 @@ public class SizeF extends NetObject  {
     
     // Methods section
     
-    public static SizeF Add(SizeF sz1, SizeF sz2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", sz1 == null ? null : sz1.getJCOInstance(), sz2 == null ? null : sz2.getJCOInstance());
-            return new SizeF(objAdd);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SizeF Subtract(SizeF sz1, SizeF sz2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", sz1 == null ? null : sz1.getJCOInstance(), sz2 == null ? null : sz2.getJCOInstance());
-            return new SizeF(objSubtract);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Equals(SizeF other) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -201,6 +179,28 @@ public class SizeF extends NetObject  {
         }
     }
 
+    public static SizeF Add(SizeF sz1, SizeF sz2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAdd = (JCObject)classType.Invoke("Add", sz1 == null ? null : sz1.getJCOInstance(), sz2 == null ? null : sz2.getJCOInstance());
+            return new SizeF(objAdd);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SizeF Subtract(SizeF sz1, SizeF sz2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", sz1 == null ? null : sz1.getJCOInstance(), sz2 == null ? null : sz2.getJCOInstance());
+            return new SizeF(objSubtract);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -210,27 +210,6 @@ public class SizeF extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsEmpty");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Single getWidth() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Width");
-            return new Single(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setWidth(Single Width) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Width", Width == null ? null : Width.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,6 +231,27 @@ public class SizeF extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Height", Height == null ? null : Height.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Single getWidth() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Width");
+            return new Single(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setWidth(Single Width) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Width", Width == null ? null : Width.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

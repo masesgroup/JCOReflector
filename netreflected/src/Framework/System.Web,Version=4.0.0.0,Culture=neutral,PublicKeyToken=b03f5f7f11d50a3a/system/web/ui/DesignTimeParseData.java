@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
-import system.EventHandler;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.EventHandler;
 
 
 /**
@@ -162,6 +162,28 @@ public class DesignTimeParseData extends NetObject  {
         }
     }
 
+    public ICollection getUserControlRegisterEntries() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("UserControlRegisterEntries");
+            return new ICollectionImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDesignerHost getDesignerHost() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DesignerHost");
+            return new IDesignerHostImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EventHandler getDataBindingHandler() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -177,17 +199,6 @@ public class DesignTimeParseData extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataBindingHandler", DataBindingHandler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDesignerHost getDesignerHost() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DesignerHost");
-            return new IDesignerHostImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,17 +239,6 @@ public class DesignTimeParseData extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("ParseText");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ICollection getUserControlRegisterEntries() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserControlRegisterEntries");
-            return new ICollectionImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

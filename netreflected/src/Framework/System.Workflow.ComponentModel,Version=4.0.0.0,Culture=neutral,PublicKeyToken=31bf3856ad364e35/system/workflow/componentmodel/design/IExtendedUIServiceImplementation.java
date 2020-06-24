@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.forms.DialogResult;
-import system.Uri;
-import system.workflow.componentmodel.design.DesignerAction;
 import system.componentmodel.ITypeDescriptorContext;
 import system.componentmodel.ITypeDescriptorContextImplementation;
+import system.Uri;
+import system.windows.forms.DialogResult;
 import system.reflection.AssemblyName;
+import system.workflow.componentmodel.design.DesignerAction;
 
 
 /**
@@ -109,12 +109,22 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
 
     // Methods section
     
-    public Uri GetUrlForProxyClass(NetType proxyClass) throws Throwable {
+    public boolean NavigateToProperty(java.lang.String propName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetUrlForProxyClass = (JCObject)classInstance.Invoke("GetUrlForProxyClass", proxyClass == null ? null : proxyClass.getJCOInstance());
-            return new Uri(objGetUrlForProxyClass);
+            return (boolean)classInstance.Invoke("NavigateToProperty", propName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ITypeDescriptorContext GetSelectedPropertyContext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetSelectedPropertyContext = (JCObject)classInstance.Invoke("GetSelectedPropertyContext");
+            return new ITypeDescriptorContextImplementation(objGetSelectedPropertyContext);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -126,6 +136,27 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         try {
             JCObject objGetProxyClassForUrl = (JCObject)classInstance.Invoke("GetProxyClassForUrl", url == null ? null : url.getJCOInstance());
             return new NetType(objGetProxyClassForUrl);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Uri GetUrlForProxyClass(NetType proxyClass) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetUrlForProxyClass = (JCObject)classInstance.Invoke("GetUrlForProxyClass", proxyClass == null ? null : proxyClass.getJCOInstance());
+            return new Uri(objGetUrlForProxyClass);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddAssemblyReference(AssemblyName assemblyName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddAssemblyReference", assemblyName == null ? null : assemblyName.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,42 +182,11 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         }
     }
 
-    public boolean NavigateToProperty(java.lang.String propName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("NavigateToProperty", propName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITypeDescriptorContext GetSelectedPropertyContext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSelectedPropertyContext = (JCObject)classInstance.Invoke("GetSelectedPropertyContext");
-            return new ITypeDescriptorContextImplementation(objGetSelectedPropertyContext);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void ShowToolsOptions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowToolsOptions");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddAssemblyReference(AssemblyName assemblyName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddAssemblyReference", assemblyName == null ? null : assemblyName.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

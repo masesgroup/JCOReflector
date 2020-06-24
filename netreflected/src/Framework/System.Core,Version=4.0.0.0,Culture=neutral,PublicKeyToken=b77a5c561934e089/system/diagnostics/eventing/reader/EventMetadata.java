@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.diagnostics.eventing.reader.EventLogLink;
 import system.diagnostics.eventing.reader.EventLevel;
+import system.diagnostics.eventing.reader.EventLogLink;
 import system.diagnostics.eventing.reader.EventOpcode;
 import system.diagnostics.eventing.reader.EventTask;
 
@@ -120,16 +120,6 @@ public class EventMetadata extends NetObject  {
     
     // Properties section
     
-    public long getId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("Id");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte getVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -140,12 +130,11 @@ public class EventMetadata extends NetObject  {
         }
     }
 
-    public EventLogLink getLogLink() throws Throwable {
+    public long getId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("LogLink");
-            return new EventLogLink(val);
+            return (long)classInstance.Get("Id");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,6 +146,17 @@ public class EventMetadata extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Level");
             return new EventLevel(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventLogLink getLogLink() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("LogLink");
+            return new EventLogLink(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,21 +184,21 @@ public class EventMetadata extends NetObject  {
         }
     }
 
-    public java.lang.String getTemplate() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Template");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Description");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getTemplate() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Template");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

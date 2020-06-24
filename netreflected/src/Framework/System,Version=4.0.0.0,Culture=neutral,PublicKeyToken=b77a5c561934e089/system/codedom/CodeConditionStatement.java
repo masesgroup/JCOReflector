@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.codedom.CodeExpression;
 import system.codedom.CodeStatement;
-import system.codedom.CodeStatementCollection;
-import system.codedom.CodeLinePragma;
 import system.codedom.CodeDirectiveCollection;
+import system.codedom.CodeLinePragma;
+import system.codedom.CodeStatementCollection;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 
@@ -154,6 +154,28 @@ public class CodeConditionStatement extends NetObject  {
     
     // Properties section
     
+    public CodeDirectiveCollection getEndDirectives() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EndDirectives");
+            return new CodeDirectiveCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeDirectiveCollection getStartDirectives() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("StartDirectives");
+            return new CodeDirectiveCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CodeExpression getCondition() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -170,28 +192,6 @@ public class CodeConditionStatement extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Condition", Condition == null ? null : Condition.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeStatementCollection getTrueStatements() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TrueStatements");
-            return new CodeStatementCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeStatementCollection getFalseStatements() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("FalseStatements");
-            return new CodeStatementCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,23 +218,23 @@ public class CodeConditionStatement extends NetObject  {
         }
     }
 
-    public CodeDirectiveCollection getStartDirectives() throws Throwable {
+    public CodeStatementCollection getFalseStatements() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StartDirectives");
-            return new CodeDirectiveCollection(val);
+            JCObject val = (JCObject)classInstance.Get("FalseStatements");
+            return new CodeStatementCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CodeDirectiveCollection getEndDirectives() throws Throwable {
+    public CodeStatementCollection getTrueStatements() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EndDirectives");
-            return new CodeDirectiveCollection(val);
+            JCObject val = (JCObject)classInstance.Get("TrueStatements");
+            return new CodeStatementCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

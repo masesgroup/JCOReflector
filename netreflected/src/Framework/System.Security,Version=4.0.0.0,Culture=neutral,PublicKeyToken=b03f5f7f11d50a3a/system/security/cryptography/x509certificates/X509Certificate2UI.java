@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.x509certificates.X509Certificate2Collection;
 import system.security.cryptography.x509certificates.X509SelectionFlag;
+import system.security.cryptography.x509certificates.X509Certificate2;
 
 
 /**
@@ -115,22 +115,22 @@ public class X509Certificate2UI extends NetObject  {
     
     // Methods section
     
-    public static void DisplayCertificate(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.AccessViolationException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("DisplayCertificate", certificate == null ? null : certificate.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static X509Certificate2Collection SelectFromCollection(X509Certificate2Collection certificates, java.lang.String title, java.lang.String message, X509SelectionFlag selectionFlag) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.security.cryptography.CryptographicException, system.AccessViolationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objSelectFromCollection = (JCObject)classType.Invoke("SelectFromCollection", certificates == null ? null : certificates.getJCOInstance(), title, message, selectionFlag == null ? null : selectionFlag.getJCOInstance());
             return new X509Certificate2Collection(objSelectFromCollection);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void DisplayCertificate(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.AccessViolationException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("DisplayCertificate", certificate == null ? null : certificate.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

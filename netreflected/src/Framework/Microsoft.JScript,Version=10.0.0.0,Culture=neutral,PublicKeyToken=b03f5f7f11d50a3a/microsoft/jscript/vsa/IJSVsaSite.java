@@ -93,9 +93,9 @@ public interface IJSVsaSite extends IJCOBridgeReflected {
     
     public boolean OnCompilerError(IJSVsaError error) throws Throwable;
 
-    public NetObject GetGlobalInstance(java.lang.String name) throws Throwable;
-
     public NetObject GetEventSourceInstance(java.lang.String itemName, java.lang.String eventSourceName) throws Throwable;
+
+    public NetObject GetGlobalInstance(java.lang.String name) throws Throwable;
 
     public void Notify(java.lang.String notify, NetObject info) throws Throwable;
 

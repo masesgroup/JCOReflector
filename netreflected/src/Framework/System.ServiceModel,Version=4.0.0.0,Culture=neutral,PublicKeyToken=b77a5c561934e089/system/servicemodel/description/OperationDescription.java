@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.description.ContractDescription;
-import system.reflection.MethodInfo;
 import system.net.security.ProtectionLevel;
+import system.reflection.MethodInfo;
 import system.servicemodel.description.FaultDescriptionCollection;
 import system.servicemodel.description.MessageDescriptionCollection;
 
@@ -142,64 +142,61 @@ public class OperationDescription extends NetObject  {
     
     // Properties section
     
-    public MethodInfo getTaskMethod() throws Throwable {
+    public boolean getHasProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TaskMethod");
-            return new MethodInfo(val);
+            return (boolean)classInstance.Get("HasProtectionLevel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTaskMethod(MethodInfo TaskMethod) throws Throwable {
+    public boolean getIsInitiating() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("TaskMethod", TaskMethod == null ? null : TaskMethod.getJCOInstance());
+            return (boolean)classInstance.Get("IsInitiating");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MethodInfo getSyncMethod() throws Throwable {
+    public void setIsInitiating(boolean IsInitiating) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SyncMethod");
-            return new MethodInfo(val);
+            classInstance.Set("IsInitiating", IsInitiating);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSyncMethod(MethodInfo SyncMethod) throws Throwable {
+    public boolean getIsOneWay() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SyncMethod", SyncMethod == null ? null : SyncMethod.getJCOInstance());
+            return (boolean)classInstance.Get("IsOneWay");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MethodInfo getBeginMethod() throws Throwable {
+    public boolean getIsTerminating() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BeginMethod");
-            return new MethodInfo(val);
+            return (boolean)classInstance.Get("IsTerminating");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setBeginMethod(MethodInfo BeginMethod) throws Throwable {
+    public void setIsTerminating(boolean IsTerminating) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("BeginMethod", BeginMethod == null ? null : BeginMethod.getJCOInstance());
+            classInstance.Set("IsTerminating", IsTerminating);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,11 +223,22 @@ public class OperationDescription extends NetObject  {
         }
     }
 
-    public boolean getHasProtectionLevel() throws Throwable {
+    public MethodInfo getBeginMethod() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HasProtectionLevel");
+            JCObject val = (JCObject)classInstance.Get("BeginMethod");
+            return new MethodInfo(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBeginMethod(MethodInfo BeginMethod) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("BeginMethod", BeginMethod == null ? null : BeginMethod.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,6 +260,48 @@ public class OperationDescription extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EndMethod", EndMethod == null ? null : EndMethod.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo getSyncMethod() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SyncMethod");
+            return new MethodInfo(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSyncMethod(MethodInfo SyncMethod) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SyncMethod", SyncMethod == null ? null : SyncMethod.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo getTaskMethod() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TaskMethod");
+            return new MethodInfo(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTaskMethod(MethodInfo TaskMethod) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TaskMethod", TaskMethod == null ? null : TaskMethod.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,56 +334,6 @@ public class OperationDescription extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Faults");
             return new FaultDescriptionCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsOneWay() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsOneWay");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsInitiating() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsInitiating");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIsInitiating(boolean IsInitiating) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IsInitiating", IsInitiating);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsTerminating() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsTerminating");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIsTerminating(boolean IsTerminating) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IsTerminating", IsTerminating);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

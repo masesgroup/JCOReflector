@@ -98,13 +98,13 @@ public interface IDataGridViewEditingCell extends IJCOBridgeReflected {
     
     // Properties section
     
-    public NetObject getEditingCellFormattedValue() throws Throwable;
-
-    public void setEditingCellFormattedValue(NetObject EditingCellFormattedValue) throws Throwable;
-
     public boolean getEditingCellValueChanged() throws Throwable;
 
     public void setEditingCellValueChanged(boolean EditingCellValueChanged) throws Throwable;
+
+    public NetObject getEditingCellFormattedValue() throws Throwable;
+
+    public void setEditingCellFormattedValue(NetObject EditingCellFormattedValue) throws Throwable;
 
 
 

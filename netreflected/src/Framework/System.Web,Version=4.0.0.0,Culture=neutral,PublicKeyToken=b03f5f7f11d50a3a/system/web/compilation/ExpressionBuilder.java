@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.compilation.ExpressionBuilderContext;
-import system.web.ui.BoundPropertyEntry;
 import system.codedom.CodeExpression;
+import system.web.ui.BoundPropertyEntry;
+import system.web.compilation.ExpressionBuilderContext;
 
 
 /**
@@ -115,12 +115,12 @@ public class ExpressionBuilder extends NetObject  {
     
     // Methods section
     
-    public NetObject ParseExpression(java.lang.String expression, NetType propertyType, ExpressionBuilderContext context) throws Throwable {
+    public CodeExpression GetCodeExpression(BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objParseExpression = (JCObject)classInstance.Invoke("ParseExpression", expression, propertyType == null ? null : propertyType.getJCOInstance(), context == null ? null : context.getJCOInstance());
-            return new NetObject(objParseExpression);
+            JCObject objGetCodeExpression = (JCObject)classInstance.Invoke("GetCodeExpression", entry == null ? null : entry.getJCOInstance(), parsedData == null ? null : parsedData.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            return new CodeExpression(objGetCodeExpression);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -137,12 +137,12 @@ public class ExpressionBuilder extends NetObject  {
         }
     }
 
-    public CodeExpression GetCodeExpression(BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable {
+    public NetObject ParseExpression(java.lang.String expression, NetType propertyType, ExpressionBuilderContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetCodeExpression = (JCObject)classInstance.Invoke("GetCodeExpression", entry == null ? null : entry.getJCOInstance(), parsedData == null ? null : parsedData.getJCOInstance(), context == null ? null : context.getJCOInstance());
-            return new CodeExpression(objGetCodeExpression);
+            JCObject objParseExpression = (JCObject)classInstance.Invoke("ParseExpression", expression, propertyType == null ? null : propertyType.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            return new NetObject(objParseExpression);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

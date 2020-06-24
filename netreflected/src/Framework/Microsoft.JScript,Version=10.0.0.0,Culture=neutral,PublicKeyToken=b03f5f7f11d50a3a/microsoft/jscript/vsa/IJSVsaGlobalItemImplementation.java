@@ -129,16 +129,6 @@ public class IJSVsaGlobalItemImplementation extends NetObject implements IJSVsaG
     
     // Properties section
     
-    public void setTypeString(java.lang.String TypeString) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TypeString", TypeString);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getExposeMembers() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,6 +144,27 @@ public class IJSVsaGlobalItemImplementation extends NetObject implements IJSVsaG
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExposeMembers", ExposeMembers);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsDirty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsDirty");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public JSVsaItemType getItemType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ItemType");
+            return new JSVsaItemType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,22 +190,11 @@ public class IJSVsaGlobalItemImplementation extends NetObject implements IJSVsaG
         }
     }
 
-    public JSVsaItemType getItemType() throws Throwable {
+    public void setTypeString(java.lang.String TypeString) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemType");
-            return new JSVsaItemType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsDirty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsDirty");
+            classInstance.Set("TypeString", TypeString);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

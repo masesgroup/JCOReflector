@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.TypeDefinitionHandle;
-import system.reflection.metadata.ParameterHandleCollection;
-import system.reflection.metadata.GenericParameterHandleCollection;
-import system.reflection.metadata.MethodImport;
 import system.reflection.metadata.CustomAttributeHandleCollection;
 import system.reflection.metadata.DeclarativeSecurityAttributeHandleCollection;
-import system.reflection.metadata.StringHandle;
+import system.reflection.metadata.GenericParameterHandleCollection;
+import system.reflection.metadata.MethodImport;
+import system.reflection.metadata.ParameterHandleCollection;
+import system.reflection.metadata.TypeDefinitionHandle;
 import system.reflection.metadata.BlobHandle;
+import system.reflection.metadata.StringHandle;
 import system.reflection.MethodAttributes;
 import system.reflection.MethodImplAttributes;
 
@@ -122,23 +122,23 @@ public class MethodDefinition extends NetObject  {
     
     // Methods section
     
-    public TypeDefinitionHandle GetDeclaringType() throws Throwable, system.BadImageFormatException {
+    public CustomAttributeHandleCollection GetCustomAttributes() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetDeclaringType = (JCObject)classInstance.Invoke("GetDeclaringType");
-            return new TypeDefinitionHandle(objGetDeclaringType);
+            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes");
+            return new CustomAttributeHandleCollection(objGetCustomAttributes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ParameterHandleCollection GetParameters() throws Throwable, system.BadImageFormatException {
+    public DeclarativeSecurityAttributeHandleCollection GetDeclarativeSecurityAttributes() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetParameters = (JCObject)classInstance.Invoke("GetParameters");
-            return new ParameterHandleCollection(objGetParameters);
+            JCObject objGetDeclarativeSecurityAttributes = (JCObject)classInstance.Invoke("GetDeclarativeSecurityAttributes");
+            return new DeclarativeSecurityAttributeHandleCollection(objGetDeclarativeSecurityAttributes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,23 +166,23 @@ public class MethodDefinition extends NetObject  {
         }
     }
 
-    public CustomAttributeHandleCollection GetCustomAttributes() throws Throwable, system.BadImageFormatException {
+    public ParameterHandleCollection GetParameters() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes");
-            return new CustomAttributeHandleCollection(objGetCustomAttributes);
+            JCObject objGetParameters = (JCObject)classInstance.Invoke("GetParameters");
+            return new ParameterHandleCollection(objGetParameters);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DeclarativeSecurityAttributeHandleCollection GetDeclarativeSecurityAttributes() throws Throwable, system.BadImageFormatException {
+    public TypeDefinitionHandle GetDeclaringType() throws Throwable, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetDeclarativeSecurityAttributes = (JCObject)classInstance.Invoke("GetDeclarativeSecurityAttributes");
-            return new DeclarativeSecurityAttributeHandleCollection(objGetDeclarativeSecurityAttributes);
+            JCObject objGetDeclaringType = (JCObject)classInstance.Invoke("GetDeclaringType");
+            return new TypeDefinitionHandle(objGetDeclaringType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,12 +192,11 @@ public class MethodDefinition extends NetObject  {
     
     // Properties section
     
-    public StringHandle getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public int getRelativeVirtualAddress() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
-            return new StringHandle(val);
+            return (int)classInstance.Get("RelativeVirtualAddress");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,11 +213,12 @@ public class MethodDefinition extends NetObject  {
         }
     }
 
-    public int getRelativeVirtualAddress() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
+    public StringHandle getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("RelativeVirtualAddress");
+            JCObject val = (JCObject)classInstance.Get("Name");
+            return new StringHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

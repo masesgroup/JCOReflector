@@ -91,11 +91,11 @@ public interface _MemberInfo extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
+    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable;
 
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
 
-    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable;
+    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
 
 
     

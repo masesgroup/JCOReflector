@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.drawing.design.PropertyValueUIHandler;
 import system.drawing.design.PropertyValueUIItem;
 import system.componentmodel.ITypeDescriptorContext;
 import system.componentmodel.ITypeDescriptorContextImplementation;
 import system.componentmodel.PropertyDescriptor;
+import system.drawing.design.PropertyValueUIHandler;
 import system.EventHandler;
 
 
@@ -109,16 +109,6 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
 
     // Methods section
     
-    public void AddPropertyValueUIHandler(PropertyValueUIHandler newHandler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddPropertyValueUIHandler", newHandler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PropertyValueUIItem[] GetPropertyUIValueItems(ITypeDescriptorContext context, PropertyDescriptor propDesc) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -131,6 +121,16 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
             PropertyValueUIItem[] resultingArray = new PropertyValueUIItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddPropertyValueUIHandler(PropertyValueUIHandler newHandler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddPropertyValueUIHandler", newHandler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

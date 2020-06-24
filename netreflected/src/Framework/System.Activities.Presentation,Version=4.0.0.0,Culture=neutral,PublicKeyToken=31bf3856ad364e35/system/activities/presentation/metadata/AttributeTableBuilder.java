@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.presentation.metadata.AttributeTable;
 import system.activities.presentation.metadata.AttributeCallback;
 import system.Attribute;
 import system.componentmodel.MemberDescriptor;
 import system.reflection.MemberInfo;
 import system.windows.DependencyProperty;
-import system.activities.presentation.metadata.AttributeTable;
 
 
 /**
@@ -129,6 +129,17 @@ public class AttributeTableBuilder extends NetObject  {
     
     // Methods section
     
+    public AttributeTable CreateTable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateTable = (JCObject)classInstance.Invoke("CreateTable");
+            return new AttributeTable(objCreateTable);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddCallback(NetType type, AttributeCallback callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -194,17 +205,6 @@ public class AttributeTableBuilder extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddTable", table == null ? null : table.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AttributeTable CreateTable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateTable = (JCObject)classInstance.Invoke("CreateTable");
-            return new AttributeTable(objCreateTable);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

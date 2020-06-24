@@ -105,22 +105,22 @@ public class IDispatchMessageFormatterImplementation extends NetObject implement
 
     // Methods section
     
-    public void DeserializeRequest(Message message, NetObject[] parameters) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DeserializeRequest", message == null ? null : message.getJCOInstance(), toObjectFromArray(parameters));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Message SerializeReply(MessageVersion messageVersion, NetObject[] parameters, NetObject result) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objSerializeReply = (JCObject)classInstance.Invoke("SerializeReply", messageVersion == null ? null : messageVersion.getJCOInstance(), toObjectFromArray(parameters), result == null ? null : result.getJCOInstance());
             return new Message(objSerializeReply);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DeserializeRequest(Message message, NetObject[] parameters) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DeserializeRequest", message == null ? null : message.getJCOInstance(), toObjectFromArray(parameters));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

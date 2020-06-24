@@ -103,21 +103,21 @@ public class IProcessInitializerImplementation extends NetObject implements IPro
 
     // Methods section
     
-    public void Startup(NetObject punkProcessControl) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Startup", punkProcessControl == null ? null : punkProcessControl.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Shutdown() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Startup(NetObject punkProcessControl) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Startup", punkProcessControl == null ? null : punkProcessControl.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

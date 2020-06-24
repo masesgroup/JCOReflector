@@ -127,22 +127,22 @@ public class CollectionsUtil extends NetObject  {
     
     // Methods section
     
-    public static Hashtable CreateCaseInsensitiveHashtable(int capacity) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+    public static Hashtable CreateCaseInsensitiveHashtable() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateCaseInsensitiveHashtable = (JCObject)classType.Invoke("CreateCaseInsensitiveHashtable", capacity);
+            JCObject objCreateCaseInsensitiveHashtable = (JCObject)classType.Invoke("CreateCaseInsensitiveHashtable");
             return new Hashtable(objCreateCaseInsensitiveHashtable);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Hashtable CreateCaseInsensitiveHashtable() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+    public static Hashtable CreateCaseInsensitiveHashtable(int capacity) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateCaseInsensitiveHashtable = (JCObject)classType.Invoke("CreateCaseInsensitiveHashtable");
+            JCObject objCreateCaseInsensitiveHashtable = (JCObject)classType.Invoke("CreateCaseInsensitiveHashtable", capacity);
             return new Hashtable(objCreateCaseInsensitiveHashtable);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

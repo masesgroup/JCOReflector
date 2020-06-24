@@ -97,11 +97,11 @@ public interface IProduct extends IJCOBridgeReflected {
     
     public ProductBuilder getProductBuilder() throws Throwable;
 
+    public ProductCollection getIncludes() throws Throwable;
+
     public java.lang.String getName() throws Throwable;
 
     public java.lang.String getProductCode() throws Throwable;
-
-    public ProductCollection getIncludes() throws Throwable;
 
 
 

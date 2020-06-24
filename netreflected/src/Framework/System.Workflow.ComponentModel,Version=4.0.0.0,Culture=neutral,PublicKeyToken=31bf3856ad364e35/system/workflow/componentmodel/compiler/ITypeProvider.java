@@ -107,13 +107,13 @@ public interface ITypeProvider extends IJCOBridgeReflected {
 
     // Instance Events section
     
-    public void addTypesChanged(EventHandler handler) throws Throwable;
-
-    public void removeTypesChanged(EventHandler handler) throws Throwable;
-
     public void addTypeLoadErrorsChanged(EventHandler handler) throws Throwable;
 
     public void removeTypeLoadErrorsChanged(EventHandler handler) throws Throwable;
+
+    public void addTypesChanged(EventHandler handler) throws Throwable;
+
+    public void removeTypesChanged(EventHandler handler) throws Throwable;
 
 
 }

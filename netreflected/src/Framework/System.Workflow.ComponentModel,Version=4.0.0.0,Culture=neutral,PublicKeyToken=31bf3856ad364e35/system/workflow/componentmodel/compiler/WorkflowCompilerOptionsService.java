@@ -127,11 +127,11 @@ public class WorkflowCompilerOptionsService extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getRootNamespace() throws Throwable {
+    public boolean getCheckTypes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("RootNamespace");
+            return (boolean)classInstance.Get("CheckTypes");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,11 +147,11 @@ public class WorkflowCompilerOptionsService extends NetObject  {
         }
     }
 
-    public boolean getCheckTypes() throws Throwable {
+    public java.lang.String getRootNamespace() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CheckTypes");
+            return (java.lang.String)classInstance.Get("RootNamespace");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

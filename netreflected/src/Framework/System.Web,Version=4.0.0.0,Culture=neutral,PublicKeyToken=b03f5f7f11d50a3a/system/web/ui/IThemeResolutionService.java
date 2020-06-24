@@ -90,11 +90,11 @@ public interface IThemeResolutionService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public ThemeProvider[] GetAllThemeProviders() throws Throwable;
+    public ThemeProvider GetStylesheetThemeProvider() throws Throwable;
 
     public ThemeProvider GetThemeProvider() throws Throwable;
 
-    public ThemeProvider GetStylesheetThemeProvider() throws Throwable;
+    public ThemeProvider[] GetAllThemeProviders() throws Throwable;
 
 
     

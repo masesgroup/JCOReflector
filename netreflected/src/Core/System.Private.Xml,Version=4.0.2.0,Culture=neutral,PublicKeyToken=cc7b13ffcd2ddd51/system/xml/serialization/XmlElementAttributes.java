@@ -124,21 +124,21 @@ public class XmlElementAttributes extends NetObject  {
     
     // Methods section
     
-    public int Add(XmlElementAttribute attribute) throws Throwable {
+    public boolean Contains(XmlElementAttribute attribute) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", attribute == null ? null : attribute.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", attribute == null ? null : attribute.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, XmlElementAttribute attribute) throws Throwable {
+    public int Add(XmlElementAttribute attribute) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, attribute == null ? null : attribute.getJCOInstance());
+            return (int)classInstance.Invoke("Add", attribute == null ? null : attribute.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,21 +154,11 @@ public class XmlElementAttributes extends NetObject  {
         }
     }
 
-    public boolean Contains(XmlElementAttribute attribute) throws Throwable {
+    public void Clear() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", attribute == null ? null : attribute.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(XmlElementAttribute attribute) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", attribute == null ? null : attribute.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,11 +174,21 @@ public class XmlElementAttributes extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public void Insert(int index, XmlElementAttribute attribute) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, attribute == null ? null : attribute.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(XmlElementAttribute attribute) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", attribute == null ? null : attribute.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

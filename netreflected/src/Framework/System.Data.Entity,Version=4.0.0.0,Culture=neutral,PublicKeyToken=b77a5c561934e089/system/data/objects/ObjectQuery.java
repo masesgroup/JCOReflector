@@ -117,16 +117,6 @@ public class ObjectQuery extends NetObject  {
     
     // Methods section
     
-    public java.lang.String ToTraceString() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ToTraceString");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TypeUsage GetResultType() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.data.MappingException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.threading.LockRecursionException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -149,26 +139,35 @@ public class ObjectQuery extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public java.lang.String getCommandText() throws Throwable {
+    public java.lang.String ToTraceString() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("CommandText");
+            return (java.lang.String)classInstance.Invoke("ToTraceString");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ObjectContext getContext() throws Throwable {
+
+    
+    // Properties section
+    
+    public boolean getEnablePlanCaching() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
-            return new ObjectContext(val);
+            return (boolean)classInstance.Get("EnablePlanCaching");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setEnablePlanCaching(boolean EnablePlanCaching) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("EnablePlanCaching", EnablePlanCaching);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,6 +194,17 @@ public class ObjectQuery extends NetObject  {
         }
     }
 
+    public ObjectContext getContext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Context");
+            return new ObjectContext(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ObjectParameterCollection getParameters() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -206,21 +216,11 @@ public class ObjectQuery extends NetObject  {
         }
     }
 
-    public boolean getEnablePlanCaching() throws Throwable {
+    public java.lang.String getCommandText() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("EnablePlanCaching");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEnablePlanCaching(boolean EnablePlanCaching) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EnablePlanCaching", EnablePlanCaching);
+            return (java.lang.String)classInstance.Get("CommandText");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

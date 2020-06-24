@@ -94,9 +94,9 @@ public interface IDbTransaction extends IJCOBridgeReflected {
     
     public void Commit() throws Throwable;
 
-    public void Rollback() throws Throwable;
-
     public void Dispose() throws Throwable;
+
+    public void Rollback() throws Throwable;
 
 
     

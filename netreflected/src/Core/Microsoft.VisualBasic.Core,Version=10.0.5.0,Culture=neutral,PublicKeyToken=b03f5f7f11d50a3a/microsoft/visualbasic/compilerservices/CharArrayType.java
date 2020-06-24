@@ -112,25 +112,6 @@ public class CharArrayType extends NetObject  {
     
     // Methods section
     
-    public static char[] FromString(java.lang.String Value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("FromString", Value);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            char[] resultingArray = new char[resultingArrayList.size()];
-            for(int indexFromString = 0; indexFromString < resultingArrayList.size(); indexFromString++ ) {
-				resultingArray[indexFromString] = (char)resultingArrayList.get(indexFromString);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static char[] FromObject(NetObject Value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -143,6 +124,25 @@ public class CharArrayType extends NetObject  {
             char[] resultingArray = new char[resultingArrayList.size()];
             for(int indexFromObject = 0; indexFromObject < resultingArrayList.size(); indexFromObject++ ) {
 				resultingArray[indexFromObject] = (char)resultingArrayList.get(indexFromObject);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static char[] FromString(java.lang.String Value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("FromString", Value);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            char[] resultingArray = new char[resultingArrayList.size()];
+            for(int indexFromString = 0; indexFromString < resultingArrayList.size(); indexFromString++ ) {
+				resultingArray[indexFromString] = (char)resultingArrayList.get(indexFromString);
             }
             return resultingArray;
         } catch (JCNativeException jcne) {

@@ -91,11 +91,11 @@ public interface IDebuggerObject extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean HasEnumerableMember(java.lang.String name) throws Throwable;
+
     public boolean IsCOMObject() throws Throwable;
 
     public boolean IsEqual(IDebuggerObject o) throws Throwable;
-
-    public boolean HasEnumerableMember(java.lang.String name) throws Throwable;
 
     public boolean IsScriptFunction() throws Throwable;
 

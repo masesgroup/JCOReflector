@@ -37,16 +37,16 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.TypeCode;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
 import system.SByte;
+import system.Single;
+import system.DateTime;
+import system.Decimal;
+import system.TypeCode;
 import system.UInt16;
 import system.UInt32;
 import system.UInt64;
-import system.Single;
-import system.Decimal;
-import system.DateTime;
 
 
 /**
@@ -99,39 +99,39 @@ public interface IConvertible extends IJCOBridgeReflected {
 
     // Methods section
     
-    public TypeCode GetTypeCode() throws Throwable;
-
     public boolean ToBoolean(IFormatProvider provider) throws Throwable;
-
-    public char ToChar(IFormatProvider provider) throws Throwable;
-
-    public SByte ToSByte(IFormatProvider provider) throws Throwable;
 
     public byte ToByte(IFormatProvider provider) throws Throwable;
 
-    public short ToInt16(IFormatProvider provider) throws Throwable;
-
-    public UInt16 ToUInt16(IFormatProvider provider) throws Throwable;
-
-    public int ToInt32(IFormatProvider provider) throws Throwable;
-
-    public UInt32 ToUInt32(IFormatProvider provider) throws Throwable;
-
-    public long ToInt64(IFormatProvider provider) throws Throwable;
-
-    public UInt64 ToUInt64(IFormatProvider provider) throws Throwable;
-
-    public Single ToSingle(IFormatProvider provider) throws Throwable;
+    public char ToChar(IFormatProvider provider) throws Throwable;
 
     public double ToDouble(IFormatProvider provider) throws Throwable;
 
-    public Decimal ToDecimal(IFormatProvider provider) throws Throwable;
+    public short ToInt16(IFormatProvider provider) throws Throwable;
+
+    public int ToInt32(IFormatProvider provider) throws Throwable;
+
+    public long ToInt64(IFormatProvider provider) throws Throwable;
+
+    public SByte ToSByte(IFormatProvider provider) throws Throwable;
+
+    public Single ToSingle(IFormatProvider provider) throws Throwable;
 
     public DateTime ToDateTime(IFormatProvider provider) throws Throwable;
 
-    public java.lang.String ToString(IFormatProvider provider) throws Throwable;
+    public Decimal ToDecimal(IFormatProvider provider) throws Throwable;
 
     public NetObject ToType(NetType conversionType, IFormatProvider provider) throws Throwable;
+
+    public java.lang.String ToString(IFormatProvider provider) throws Throwable;
+
+    public TypeCode GetTypeCode() throws Throwable;
+
+    public UInt16 ToUInt16(IFormatProvider provider) throws Throwable;
+
+    public UInt32 ToUInt32(IFormatProvider provider) throws Throwable;
+
+    public UInt64 ToUInt64(IFormatProvider provider) throws Throwable;
 
 
     

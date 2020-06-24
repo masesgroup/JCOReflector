@@ -42,9 +42,9 @@ import system.servicemodel.description.OperationDescription;
 import system.servicemodel.DataContractFormatAttribute;
 import system.runtime.serialization.XmlObjectSerializer;
 import system.xml.XmlDictionaryString;
+import system.runtime.serialization.DataContractResolver;
 import system.runtime.serialization.IDataContractSurrogate;
 import system.runtime.serialization.IDataContractSurrogateImplementation;
-import system.runtime.serialization.DataContractResolver;
 
 
 /**
@@ -144,12 +144,21 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
     
     // Properties section
     
-    public DataContractFormatAttribute getDataContractFormatAttribute() throws Throwable {
+    public boolean getIgnoreExtensionDataObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DataContractFormatAttribute");
-            return new DataContractFormatAttribute(val);
+            return (boolean)classInstance.Get("IgnoreExtensionDataObject");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIgnoreExtensionDataObject(boolean IgnoreExtensionDataObject) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IgnoreExtensionDataObject", IgnoreExtensionDataObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,21 +184,22 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
         }
     }
 
-    public boolean getIgnoreExtensionDataObject() throws Throwable {
+    public DataContractResolver getDataContractResolver() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IgnoreExtensionDataObject");
+            JCObject val = (JCObject)classInstance.Get("DataContractResolver");
+            return new DataContractResolver(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIgnoreExtensionDataObject(boolean IgnoreExtensionDataObject) throws Throwable {
+    public void setDataContractResolver(DataContractResolver DataContractResolver) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IgnoreExtensionDataObject", IgnoreExtensionDataObject);
+            classInstance.Set("DataContractResolver", DataContractResolver == null ? null : DataContractResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,22 +226,12 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
         }
     }
 
-    public DataContractResolver getDataContractResolver() throws Throwable {
+    public DataContractFormatAttribute getDataContractFormatAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DataContractResolver");
-            return new DataContractResolver(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDataContractResolver(DataContractResolver DataContractResolver) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DataContractResolver", DataContractResolver == null ? null : DataContractResolver.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("DataContractFormatAttribute");
+            return new DataContractFormatAttribute(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

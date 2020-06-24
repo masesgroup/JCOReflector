@@ -152,16 +152,6 @@ public class StateMachineWorkflowInstance extends NetObject  {
         }
     }
 
-    public void SetState(StateActivity targetState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetState", targetState == null ? null : targetState.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void SetState(java.lang.String targetStateName) throws Throwable, system.ArgumentNullException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.workflow.componentmodel.compiler.WorkflowValidationFailedException, system.xml.XmlException, system.NotSupportedException, system.UnauthorizedAccessException, system.configuration.ConfigurationErrorsException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -172,21 +162,20 @@ public class StateMachineWorkflowInstance extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public StateMachineWorkflowActivity getStateMachineWorkflow() throws Throwable, system.OverflowException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.workflow.componentmodel.compiler.WorkflowValidationFailedException, system.xml.XmlException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
+    public void SetState(StateActivity targetState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StateMachineWorkflow");
-            return new StateMachineWorkflowActivity(val);
+            classInstance.Invoke("SetState", targetState == null ? null : targetState.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public Guid getInstanceId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -198,12 +187,11 @@ public class StateMachineWorkflowInstance extends NetObject  {
         }
     }
 
-    public WorkflowInstance getWorkflowInstance() throws Throwable {
+    public java.lang.String getCurrentStateName() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.workflow.componentmodel.compiler.WorkflowValidationFailedException, system.xml.XmlException, system.NotSupportedException, system.UnauthorizedAccessException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowInstance");
-            return new WorkflowInstance(val);
+            return (java.lang.String)classInstance.Get("CurrentStateName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,11 +208,23 @@ public class StateMachineWorkflowInstance extends NetObject  {
         }
     }
 
-    public java.lang.String getCurrentStateName() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.workflow.componentmodel.compiler.WorkflowValidationFailedException, system.xml.XmlException, system.NotSupportedException, system.UnauthorizedAccessException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException {
+    public StateMachineWorkflowActivity getStateMachineWorkflow() throws Throwable, system.OverflowException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.workflow.componentmodel.compiler.WorkflowValidationFailedException, system.xml.XmlException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("CurrentStateName");
+            JCObject val = (JCObject)classInstance.Get("StateMachineWorkflow");
+            return new StateMachineWorkflowActivity(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WorkflowInstance getWorkflowInstance() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("WorkflowInstance");
+            return new WorkflowInstance(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

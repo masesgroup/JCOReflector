@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.TimeSpan;
 import system.threading.LockCookie;
+import system.TimeSpan;
 
 
 /**
@@ -125,6 +125,49 @@ public class ReaderWriterLock extends NetObject  {
     
     // Methods section
     
+    public boolean AnyWritersSince(int seqNum) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("AnyWritersSince", seqNum);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LockCookie ReleaseLock() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objReleaseLock = (JCObject)classInstance.Invoke("ReleaseLock");
+            return new LockCookie(objReleaseLock);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LockCookie UpgradeToWriterLock(int millisecondsTimeout) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objUpgradeToWriterLock = (JCObject)classInstance.Invoke("UpgradeToWriterLock", millisecondsTimeout);
+            return new LockCookie(objUpgradeToWriterLock);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LockCookie UpgradeToWriterLock(TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objUpgradeToWriterLock = (JCObject)classInstance.Invoke("UpgradeToWriterLock", timeout == null ? null : timeout.getJCOInstance());
+            return new LockCookie(objUpgradeToWriterLock);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AcquireReaderLock(int millisecondsTimeout) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -160,69 +203,6 @@ public class ReaderWriterLock extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AcquireWriterLock", timeout == null ? null : timeout.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ReleaseReaderLock() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReleaseReaderLock");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ReleaseWriterLock() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReleaseWriterLock");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LockCookie UpgradeToWriterLock(int millisecondsTimeout) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objUpgradeToWriterLock = (JCObject)classInstance.Invoke("UpgradeToWriterLock", millisecondsTimeout);
-            return new LockCookie(objUpgradeToWriterLock);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LockCookie UpgradeToWriterLock(TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objUpgradeToWriterLock = (JCObject)classInstance.Invoke("UpgradeToWriterLock", timeout == null ? null : timeout.getJCOInstance());
-            return new LockCookie(objUpgradeToWriterLock);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LockCookie ReleaseLock() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objReleaseLock = (JCObject)classInstance.Invoke("ReleaseLock");
-            return new LockCookie(objReleaseLock);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean AnyWritersSince(int seqNum) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("AnyWritersSince", seqNum);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

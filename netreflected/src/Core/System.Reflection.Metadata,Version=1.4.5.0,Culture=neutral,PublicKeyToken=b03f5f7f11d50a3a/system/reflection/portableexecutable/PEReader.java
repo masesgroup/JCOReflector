@@ -40,11 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.io.Stream;
 import system.reflection.portableexecutable.PEStreamOptions;
-import system.reflection.portableexecutable.PEMemoryBlock;
-import system.reflection.portableexecutable.CodeViewDebugDirectoryData;
-import system.reflection.portableexecutable.DebugDirectoryEntry;
-import system.reflection.portableexecutable.PdbChecksumDebugDirectoryData;
 import system.reflection.metadata.MetadataReaderProvider;
+import system.reflection.portableexecutable.DebugDirectoryEntry;
+import system.reflection.portableexecutable.CodeViewDebugDirectoryData;
+import system.reflection.portableexecutable.PdbChecksumDebugDirectoryData;
+import system.reflection.portableexecutable.PEMemoryBlock;
 import system.reflection.portableexecutable.PEHeaders;
 
 
@@ -151,55 +151,12 @@ public class PEReader extends NetObject  {
     
     // Methods section
     
-    public PEMemoryBlock GetSectionData(int relativeVirtualAddress) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.BadImageFormatException {
+    public MetadataReaderProvider ReadEmbeddedPortablePdbDebugDirectoryData(DebugDirectoryEntry entry) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.BadImageFormatException, system.ObjectDisposedException, system.io.compression.ZLibException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetSectionData = (JCObject)classInstance.Invoke("GetSectionData", relativeVirtualAddress);
-            return new PEMemoryBlock(objGetSectionData);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PEMemoryBlock GetMetadata() throws Throwable, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.BadImageFormatException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMetadata = (JCObject)classInstance.Invoke("GetMetadata");
-            return new PEMemoryBlock(objGetMetadata);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PEMemoryBlock GetEntireImage() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEntireImage = (JCObject)classInstance.Invoke("GetEntireImage");
-            return new PEMemoryBlock(objGetEntireImage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PEMemoryBlock GetSectionData(java.lang.String sectionName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSectionData = (JCObject)classInstance.Invoke("GetSectionData", sectionName);
-            return new PEMemoryBlock(objGetSectionData);
+            JCObject objReadEmbeddedPortablePdbDebugDirectoryData = (JCObject)classInstance.Invoke("ReadEmbeddedPortablePdbDebugDirectoryData", entry == null ? null : entry.getJCOInstance());
+            return new MetadataReaderProvider(objReadEmbeddedPortablePdbDebugDirectoryData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,12 +184,55 @@ public class PEReader extends NetObject  {
         }
     }
 
-    public MetadataReaderProvider ReadEmbeddedPortablePdbDebugDirectoryData(DebugDirectoryEntry entry) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.BadImageFormatException, system.ObjectDisposedException, system.io.compression.ZLibException {
+    public PEMemoryBlock GetEntireImage() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objReadEmbeddedPortablePdbDebugDirectoryData = (JCObject)classInstance.Invoke("ReadEmbeddedPortablePdbDebugDirectoryData", entry == null ? null : entry.getJCOInstance());
-            return new MetadataReaderProvider(objReadEmbeddedPortablePdbDebugDirectoryData);
+            JCObject objGetEntireImage = (JCObject)classInstance.Invoke("GetEntireImage");
+            return new PEMemoryBlock(objGetEntireImage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PEMemoryBlock GetMetadata() throws Throwable, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.BadImageFormatException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetMetadata = (JCObject)classInstance.Invoke("GetMetadata");
+            return new PEMemoryBlock(objGetMetadata);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PEMemoryBlock GetSectionData(int relativeVirtualAddress) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetSectionData = (JCObject)classInstance.Invoke("GetSectionData", relativeVirtualAddress);
+            return new PEMemoryBlock(objGetSectionData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PEMemoryBlock GetSectionData(java.lang.String sectionName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetSectionData = (JCObject)classInstance.Invoke("GetSectionData", sectionName);
+            return new PEMemoryBlock(objGetSectionData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,6 +242,26 @@ public class PEReader extends NetObject  {
     
     // Properties section
     
+    public boolean getHasMetadata() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.BadImageFormatException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("HasMetadata");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIsEntireImageAvailable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsEntireImageAvailable");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean getIsLoadedImage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -258,26 +278,6 @@ public class PEReader extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("PEHeaders");
             return new PEHeaders(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsEntireImageAvailable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsEntireImageAvailable");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getHasMetadata() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.BadImageFormatException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("HasMetadata");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

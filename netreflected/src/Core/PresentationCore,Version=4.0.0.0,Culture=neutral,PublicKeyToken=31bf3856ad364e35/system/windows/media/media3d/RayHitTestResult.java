@@ -38,7 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.media.media3d.Visual3D;
+import system.windows.DependencyObject;
 import system.windows.media.media3d.Model3D;
 import system.windows.media.media3d.Point3D;
 
@@ -119,12 +119,22 @@ public class RayHitTestResult extends NetObject  {
     
     // Properties section
     
-    public Visual3D getVisualHit() throws Throwable {
+    public double getDistanceToRayOrigin() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("DistanceToRayOrigin");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DependencyObject getVisualHit() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("VisualHit");
-            return new Visual3D(val);
+            return new DependencyObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,16 +157,6 @@ public class RayHitTestResult extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("PointHit");
             return new Point3D(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getDistanceToRayOrigin() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("DistanceToRayOrigin");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

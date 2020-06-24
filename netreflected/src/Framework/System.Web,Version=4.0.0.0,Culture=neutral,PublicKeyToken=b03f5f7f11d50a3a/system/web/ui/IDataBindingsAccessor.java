@@ -94,9 +94,9 @@ public interface IDataBindingsAccessor extends IJCOBridgeReflected {
     
     // Properties section
     
-    public DataBindingCollection getDataBindings() throws Throwable;
-
     public boolean getHasDataBindings() throws Throwable;
+
+    public DataBindingCollection getDataBindings() throws Throwable;
 
 
 

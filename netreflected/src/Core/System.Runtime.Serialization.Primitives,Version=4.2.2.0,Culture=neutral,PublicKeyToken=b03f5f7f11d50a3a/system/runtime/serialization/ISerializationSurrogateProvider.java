@@ -89,11 +89,11 @@ public interface ISerializationSurrogateProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetType GetSurrogateType(NetType type) throws Throwable;
+    public NetObject GetDeserializedObject(NetObject obj, NetType targetType) throws Throwable;
 
     public NetObject GetObjectToSerialize(NetObject obj, NetType targetType) throws Throwable;
 
-    public NetObject GetDeserializedObject(NetObject obj, NetType targetType) throws Throwable;
+    public NetType GetSurrogateType(NetType type) throws Throwable;
 
 
     

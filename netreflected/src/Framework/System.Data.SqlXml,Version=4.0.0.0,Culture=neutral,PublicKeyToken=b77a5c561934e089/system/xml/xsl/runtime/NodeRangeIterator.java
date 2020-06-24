@@ -114,21 +114,21 @@ public class NodeRangeIterator extends NetObject  {
     
     // Methods section
     
-    public void Create(XPathNavigator start, XmlNavigatorFilter filter, XPathNavigator end) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Create", start == null ? null : start.getJCOInstance(), filter == null ? null : filter.getJCOInstance(), end == null ? null : end.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean MoveNext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("MoveNext");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Create(XPathNavigator start, XmlNavigatorFilter filter, XPathNavigator end) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Create", start == null ? null : start.getJCOInstance(), filter == null ? null : filter.getJCOInstance(), end == null ? null : end.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

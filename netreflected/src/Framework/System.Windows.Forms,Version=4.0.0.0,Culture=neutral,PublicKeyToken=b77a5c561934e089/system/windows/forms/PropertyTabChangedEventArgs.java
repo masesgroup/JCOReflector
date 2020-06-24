@@ -128,22 +128,22 @@ public class PropertyTabChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public PropertyTab getOldTab() throws Throwable {
+    public PropertyTab getNewTab() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OldTab");
+            JCObject val = (JCObject)classInstance.Get("NewTab");
             return new PropertyTab(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PropertyTab getNewTab() throws Throwable {
+    public PropertyTab getOldTab() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NewTab");
+            JCObject val = (JCObject)classInstance.Get("OldTab");
             return new PropertyTab(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

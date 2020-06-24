@@ -127,11 +127,11 @@ public class ListViewVirtualItemsSelectionRangeChangedEventArgs extends NetObjec
     
     // Properties section
     
-    public int getStartIndex() throws Throwable {
+    public boolean getIsSelected() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("StartIndex");
+            return (boolean)classInstance.Get("IsSelected");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,11 +147,11 @@ public class ListViewVirtualItemsSelectionRangeChangedEventArgs extends NetObjec
         }
     }
 
-    public boolean getIsSelected() throws Throwable {
+    public int getStartIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsSelected");
+            return (int)classInstance.Get("StartIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

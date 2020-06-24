@@ -136,11 +136,21 @@ public class SamlConstants extends NetObject  {
         }
     }
 
-    public static java.lang.String getNamespace() throws Throwable {
+    public static java.lang.String getEmailName() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Get("Namespace");
+            return (java.lang.String)classType.Get("EmailName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String getEmailNamespace() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Get("EmailNamespace");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,6 +161,16 @@ public class SamlConstants extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Get("HolderOfKey");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String getNamespace() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Get("Namespace");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,26 +201,6 @@ public class SamlConstants extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Get("UserNameNamespace");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String getEmailName() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Get("EmailName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String getEmailNamespace() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Get("EmailNamespace");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

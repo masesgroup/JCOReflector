@@ -114,21 +114,21 @@ public class MorphHelper extends NetObject  {
     
     // Methods section
     
-    public static void AddPropertyValueMorphHelper(NetType propertyType, PropertyValueMorphHelper extension) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("AddPropertyValueMorphHelper", propertyType == null ? null : propertyType.getJCOInstance(), extension);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static PropertyValueMorphHelper GetPropertyValueMorphHelper(NetType propertyType) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (PropertyValueMorphHelper)classType.Invoke("GetPropertyValueMorphHelper", propertyType == null ? null : propertyType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void AddPropertyValueMorphHelper(NetType propertyType, PropertyValueMorphHelper extension) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddPropertyValueMorphHelper", propertyType == null ? null : propertyType.getJCOInstance(), extension);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

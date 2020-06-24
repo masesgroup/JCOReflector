@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.IComparable;
-import system.IComparableImplementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.IComparable;
+import system.IComparableImplementation;
 
 
 /**
@@ -120,23 +120,23 @@ public class WorkflowQueueInfo extends NetObject  {
     
     // Properties section
     
-    public IComparable getQueueName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("QueueName");
-            return new IComparableImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ICollection getItems() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Items");
             return new ICollectionImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IComparable getQueueName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("QueueName");
+            return new IComparableImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -163,12 +163,11 @@ public class StatusBarDrawItemEventArgs extends NetObject  {
     
     // Properties section
     
-    public StatusBarPanel getPanel() throws Throwable {
+    public int getIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Panel");
-            return new StatusBarPanel(val);
+            return (int)classInstance.Get("Index");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,12 +184,12 @@ public class StatusBarDrawItemEventArgs extends NetObject  {
         }
     }
 
-    public Rectangle getBounds() throws Throwable {
+    public Color getForeColor() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
-            return new Rectangle(val);
+            JCObject val = (JCObject)classInstance.Get("ForeColor");
+            return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,17 +206,6 @@ public class StatusBarDrawItemEventArgs extends NetObject  {
         }
     }
 
-    public Color getForeColor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ForeColor");
-            return new Color(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Graphics getGraphics() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -229,11 +217,12 @@ public class StatusBarDrawItemEventArgs extends NetObject  {
         }
     }
 
-    public int getIndex() throws Throwable {
+    public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Index");
+            JCObject val = (JCObject)classInstance.Get("Bounds");
+            return new Rectangle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,6 +234,17 @@ public class StatusBarDrawItemEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("State");
             return new DrawItemState(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StatusBarPanel getPanel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Panel");
+            return new StatusBarPanel(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -130,22 +130,22 @@ public class XmlDataSourceView extends NetObject  {
     
     // Methods section
     
+    public boolean CanExecute(java.lang.String commandName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("CanExecute", commandName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IEnumerable Select(DataSourceSelectArguments arguments) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objSelect = (JCObject)classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance());
             return new IEnumerableImplementation(objSelect);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean CanExecute(java.lang.String commandName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanExecute", commandName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

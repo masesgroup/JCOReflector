@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.management.WebBaseEventCollection;
-import system.web.management.EventNotificationType;
 import system.DateTime;
 import system.net.mail.MailMessage;
+import system.web.management.EventNotificationType;
+import system.web.management.WebBaseEventCollection;
 
 
 /**
@@ -120,23 +120,31 @@ public class MailEventNotificationInfo extends NetObject  {
     
     // Properties section
     
-    public WebBaseEventCollection getEvents() throws Throwable {
+    public int getEventsDiscardedByBuffer() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Events");
-            return new WebBaseEventCollection(val);
+            return (int)classInstance.Get("EventsDiscardedByBuffer");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public EventNotificationType getNotificationType() throws Throwable {
+    public int getEventsDiscardedDueToMessageLimit() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NotificationType");
-            return new EventNotificationType(val);
+            return (int)classInstance.Get("EventsDiscardedDueToMessageLimit");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getEventsInBuffer() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("EventsInBuffer");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,6 +170,16 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
 
+    public int getMessageSequence() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("MessageSequence");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int getMessagesInNotification() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -172,51 +190,11 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
 
-    public int getEventsInBuffer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("EventsInBuffer");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getEventsDiscardedByBuffer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("EventsDiscardedByBuffer");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getEventsDiscardedDueToMessageLimit() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("EventsDiscardedDueToMessageLimit");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getNotificationSequence() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("NotificationSequence");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getMessageSequence() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MessageSequence");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,6 +217,28 @@ public class MailEventNotificationInfo extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Message");
             return new MailMessage(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventNotificationType getNotificationType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NotificationType");
+            return new EventNotificationType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WebBaseEventCollection getEvents() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Events");
+            return new WebBaseEventCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

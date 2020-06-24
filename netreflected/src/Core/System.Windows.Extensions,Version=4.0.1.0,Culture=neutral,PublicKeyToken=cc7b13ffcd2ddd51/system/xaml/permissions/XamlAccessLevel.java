@@ -137,22 +137,22 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
 
-    public static XamlAccessLevel PrivateAccessTo(NetType type) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static XamlAccessLevel PrivateAccessTo(java.lang.String assemblyQualifiedTypeName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.io.FileLoadException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPrivateAccessTo = (JCObject)classType.Invoke("PrivateAccessTo", type == null ? null : type.getJCOInstance());
+            JCObject objPrivateAccessTo = (JCObject)classType.Invoke("PrivateAccessTo", assemblyQualifiedTypeName);
             return new XamlAccessLevel(objPrivateAccessTo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static XamlAccessLevel PrivateAccessTo(java.lang.String assemblyQualifiedTypeName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.io.FileLoadException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException {
+    public static XamlAccessLevel PrivateAccessTo(NetType type) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPrivateAccessTo = (JCObject)classType.Invoke("PrivateAccessTo", assemblyQualifiedTypeName);
+            JCObject objPrivateAccessTo = (JCObject)classType.Invoke("PrivateAccessTo", type == null ? null : type.getJCOInstance());
             return new XamlAccessLevel(objPrivateAccessTo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

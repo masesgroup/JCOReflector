@@ -95,13 +95,13 @@ public interface IGridItemProvider extends IJCOBridgeReflected {
     
     // Properties section
     
-    public int getRow() throws Throwable;
-
     public int getColumn() throws Throwable;
 
-    public int getRowSpan() throws Throwable;
-
     public int getColumnSpan() throws Throwable;
+
+    public int getRow() throws Throwable;
+
+    public int getRowSpan() throws Throwable;
 
     public IRawElementProviderSimple getContainingGrid() throws Throwable;
 

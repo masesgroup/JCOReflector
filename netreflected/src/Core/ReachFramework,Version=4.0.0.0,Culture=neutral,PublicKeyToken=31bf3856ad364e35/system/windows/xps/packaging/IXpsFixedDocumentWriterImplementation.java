@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.windows.xps.packaging.IXpsFixedPageWriter;
 import system.windows.xps.packaging.IXpsFixedPageWriterImplementation;
+import system.windows.xps.packaging.XpsStructure;
 import system.windows.xps.packaging.XpsThumbnail;
 import system.windows.xps.packaging.XpsImageType;
-import system.windows.xps.packaging.XpsStructure;
 import system.printing.PrintTicket;
 import system.Uri;
 
@@ -121,6 +121,17 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
         }
     }
 
+    public XpsStructure AddDocumentStructure() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddDocumentStructure = (JCObject)classInstance.Invoke("AddDocumentStructure");
+            return new XpsStructure(objAddDocumentStructure);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XpsThumbnail AddThumbnail(XpsImageType imageType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -142,21 +153,20 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
         }
     }
 
-    public XpsStructure AddDocumentStructure() throws Throwable {
+
+    
+    // Properties section
+    
+    public int getDocumentNumber() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAddDocumentStructure = (JCObject)classInstance.Invoke("AddDocumentStructure");
-            return new XpsStructure(objAddDocumentStructure);
+            return (int)classInstance.Get("DocumentNumber");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-
-    
-    // Properties section
-    
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -173,16 +183,6 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
         try {
             JCObject val = (JCObject)classInstance.Get("Uri");
             return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getDocumentNumber() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("DocumentNumber");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

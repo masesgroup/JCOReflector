@@ -43,7 +43,6 @@ import system.data.IDbCommand;
 import system.data.IDbCommandImplementation;
 import system.data.StatementType;
 import system.data.common.DataTableMapping;
-import system.data.sqlclient.SqlCommand;
 import system.data.UpdateStatus;
 
 
@@ -134,43 +133,12 @@ public class SqlRowUpdatingEventArgs extends NetObject  {
     
     // Properties section
     
-    public SqlCommand getCommand() throws Throwable {
+    public DataTableMapping getTableMapping() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Command");
-            return new SqlCommand(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCommand(SqlCommand Command) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Command", Command == null ? null : Command.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetException getErrors() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Errors");
-            return new NetException(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setErrors(NetException Errors) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Errors", Errors == null ? null : Errors.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("TableMapping");
+            return new DataTableMapping(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,6 +150,27 @@ public class SqlRowUpdatingEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Row");
             return new DataRow(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDbCommand getCommand() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Command");
+            return new IDbCommandImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCommand(IDbCommand Command) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Command", Command == null ? null : Command.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,12 +208,22 @@ public class SqlRowUpdatingEventArgs extends NetObject  {
         }
     }
 
-    public DataTableMapping getTableMapping() throws Throwable {
+    public NetException getErrors() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TableMapping");
-            return new DataTableMapping(val);
+            JCObject val = (JCObject)classInstance.Get("Errors");
+            return new NetException(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setErrors(NetException Errors) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Errors", Errors == null ? null : Errors.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

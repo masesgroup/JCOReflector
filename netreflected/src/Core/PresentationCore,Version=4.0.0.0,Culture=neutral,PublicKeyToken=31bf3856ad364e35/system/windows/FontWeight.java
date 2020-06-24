@@ -113,22 +113,11 @@ public class FontWeight extends NetObject  {
     
     // Methods section
     
-    public static FontWeight FromOpenTypeWeight(int weightValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFromOpenTypeWeight = (JCObject)classType.Invoke("FromOpenTypeWeight", weightValue);
-            return new FontWeight(objFromOpenTypeWeight);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int ToOpenTypeWeight() throws Throwable {
+    public boolean Equals(FontWeight obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ToOpenTypeWeight");
+            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,11 +133,22 @@ public class FontWeight extends NetObject  {
         }
     }
 
-    public boolean Equals(FontWeight obj) throws Throwable {
+    public int ToOpenTypeWeight() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            return (int)classInstance.Invoke("ToOpenTypeWeight");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static FontWeight FromOpenTypeWeight(int weightValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromOpenTypeWeight = (JCObject)classType.Invoke("FromOpenTypeWeight", weightValue);
+            return new FontWeight(objFromOpenTypeWeight);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

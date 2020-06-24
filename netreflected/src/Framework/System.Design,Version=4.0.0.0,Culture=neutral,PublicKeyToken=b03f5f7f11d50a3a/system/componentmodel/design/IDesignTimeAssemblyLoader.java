@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.reflection.Assembly;
 import system.reflection.AssemblyName;
 import system.runtime.versioning.FrameworkName;
-import system.reflection.Assembly;
 
 
 /**
@@ -92,9 +92,9 @@ public interface IDesignTimeAssemblyLoader extends IJCOBridgeReflected {
 
     // Methods section
     
-    public java.lang.String GetTargetAssemblyPath(AssemblyName runtimeOrTargetAssemblyName, java.lang.String suggestedAssemblyPath, FrameworkName targetFramework) throws Throwable;
-
     public Assembly LoadRuntimeAssembly(AssemblyName targetAssemblyName) throws Throwable;
+
+    public java.lang.String GetTargetAssemblyPath(AssemblyName runtimeOrTargetAssemblyName, java.lang.String suggestedAssemblyPath, FrameworkName targetFramework) throws Throwable;
 
 
     

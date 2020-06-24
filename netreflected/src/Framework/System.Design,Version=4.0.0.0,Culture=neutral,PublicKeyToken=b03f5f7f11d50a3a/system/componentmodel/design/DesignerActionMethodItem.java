@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.design.DesignerActionList;
-import system.componentmodel.IComponent;
-import system.componentmodel.IComponentImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.componentmodel.IComponent;
+import system.componentmodel.IComponentImplementation;
 
 
 /**
@@ -114,16 +114,6 @@ public class DesignerActionMethodItem extends NetObject  {
     // Constructors section
     
 
-    public DesignerActionMethodItem(DesignerActionList actionList, java.lang.String memberName, java.lang.String displayName, java.lang.String category, java.lang.String description, boolean includeAsDesignerVerb) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(actionList == null ? null : actionList.getJCOInstance(), memberName, displayName, category, description, includeAsDesignerVerb));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DesignerActionMethodItem(DesignerActionList actionList, java.lang.String memberName, java.lang.String displayName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +164,16 @@ public class DesignerActionMethodItem extends NetObject  {
         }
     }
 
+    public DesignerActionMethodItem(DesignerActionList actionList, java.lang.String memberName, java.lang.String displayName, java.lang.String category, java.lang.String description, boolean includeAsDesignerVerb) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(actionList == null ? null : actionList.getJCOInstance(), memberName, displayName, category, description, includeAsDesignerVerb));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -192,11 +192,62 @@ public class DesignerActionMethodItem extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getMemberName() throws Throwable {
+    public boolean getAllowAssociate() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("MemberName");
+            return (boolean)classInstance.Get("AllowAssociate");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAllowAssociate(boolean AllowAssociate) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AllowAssociate", AllowAssociate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getIncludeAsDesignerVerb() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IncludeAsDesignerVerb");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getShowInSourceView() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("ShowInSourceView");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setShowInSourceView(boolean ShowInSourceView) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ShowInSourceView", ShowInSourceView);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary getProperties() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Properties");
+            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,36 +269,6 @@ public class DesignerActionMethodItem extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RelatedComponent", RelatedComponent == null ? null : RelatedComponent.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIncludeAsDesignerVerb() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IncludeAsDesignerVerb");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getAllowAssociate() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("AllowAssociate");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAllowAssociate(boolean AllowAssociate) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AllowAssociate", AllowAssociate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,32 +304,11 @@ public class DesignerActionMethodItem extends NetObject  {
         }
     }
 
-    public IDictionary getProperties() throws Throwable {
+    public java.lang.String getMemberName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
-            return new IDictionaryImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getShowInSourceView() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ShowInSourceView");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setShowInSourceView(boolean ShowInSourceView) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ShowInSourceView", ShowInSourceView);
+            return (java.lang.String)classInstance.Get("MemberName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

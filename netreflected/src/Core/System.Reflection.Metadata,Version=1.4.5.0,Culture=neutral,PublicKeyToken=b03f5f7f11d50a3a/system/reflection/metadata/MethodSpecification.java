@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.CustomAttributeHandleCollection;
-import system.reflection.metadata.EntityHandle;
 import system.reflection.metadata.BlobHandle;
+import system.reflection.metadata.EntityHandle;
 
 
 /**
@@ -130,23 +130,23 @@ public class MethodSpecification extends NetObject  {
     
     // Properties section
     
-    public EntityHandle getMethod() throws Throwable, system.BadImageFormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Method");
-            return new EntityHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public BlobHandle getSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Signature");
             return new BlobHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EntityHandle getMethod() throws Throwable, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Method");
+            return new EntityHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

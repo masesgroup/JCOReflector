@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.drawing.design.ToolboxItemCreatorCallback;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
 import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
 import system.drawing.design.ToolboxItem;
 import system.drawing.design.ToolboxItemCollection;
-import system.collections.ICollection;
-import system.collections.ICollectionImplementation;
+import system.drawing.design.ToolboxItemCreatorCallback;
 import system.drawing.design.CategoryNameCollection;
 
 
@@ -111,61 +111,51 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     // Methods section
     
-    public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format) throws Throwable {
+    public boolean IsSupported(NetObject serializedObject, ICollection filterAttributes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddCreator", creator, format);
+            return (boolean)classInstance.Invoke("IsSupported", serializedObject == null ? null : serializedObject.getJCOInstance(), filterAttributes == null ? null : filterAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format, IDesignerHost host) throws Throwable {
+    public boolean IsSupported(NetObject serializedObject, IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddCreator", creator, format, host == null ? null : host.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsSupported", serializedObject == null ? null : serializedObject.getJCOInstance(), host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void AddLinkedToolboxItem(ToolboxItem toolboxItem, IDesignerHost host) throws Throwable {
+    public boolean IsToolboxItem(NetObject serializedObject) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddLinkedToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsToolboxItem", serializedObject == null ? null : serializedObject.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void AddLinkedToolboxItem(ToolboxItem toolboxItem, java.lang.String category, IDesignerHost host) throws Throwable {
+    public boolean IsToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddLinkedToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance(), category, host == null ? null : host.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsToolboxItem", serializedObject == null ? null : serializedObject.getJCOInstance(), host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void AddToolboxItem(ToolboxItem toolboxItem) throws Throwable {
+    public boolean SetCursor() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance(), category);
+            return (boolean)classInstance.Invoke("SetCursor");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,41 +249,72 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
-    public boolean IsSupported(NetObject serializedObject, IDesignerHost host) throws Throwable {
+    public NetObject SerializeToolboxItem(ToolboxItem toolboxItem) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsSupported", serializedObject == null ? null : serializedObject.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            JCObject objSerializeToolboxItem = (JCObject)classInstance.Invoke("SerializeToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance());
+            return new NetObject(objSerializeToolboxItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean IsSupported(NetObject serializedObject, ICollection filterAttributes) throws Throwable {
+    public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsSupported", serializedObject == null ? null : serializedObject.getJCOInstance(), filterAttributes == null ? null : filterAttributes.getJCOInstance());
+            classInstance.Invoke("AddCreator", creator, format);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean IsToolboxItem(NetObject serializedObject) throws Throwable {
+    public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format, IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsToolboxItem", serializedObject == null ? null : serializedObject.getJCOInstance());
+            classInstance.Invoke("AddCreator", creator, format, host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean IsToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable {
+    public void AddLinkedToolboxItem(ToolboxItem toolboxItem, IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsToolboxItem", serializedObject == null ? null : serializedObject.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            classInstance.Invoke("AddLinkedToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance(), host == null ? null : host.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddLinkedToolboxItem(ToolboxItem toolboxItem, java.lang.String category, IDesignerHost host) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddLinkedToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance(), category, host == null ? null : host.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddToolboxItem(ToolboxItem toolboxItem) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance(), category);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,27 +375,6 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SelectedToolboxItemUsed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject SerializeToolboxItem(ToolboxItem toolboxItem) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSerializeToolboxItem = (JCObject)classInstance.Invoke("SerializeToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance());
-            return new NetObject(objSerializeToolboxItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean SetCursor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SetCursor");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

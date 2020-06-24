@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.ControlBuilder;
-import system.web.ui.CompilationMode;
 import system.web.ui.VirtualReferenceType;
+import system.web.ui.CodeConstructType;
+import system.web.ui.CompilationMode;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
-import system.web.ui.CodeConstructType;
 
 
 /**
@@ -118,22 +118,11 @@ public class PageParserFilter extends NetObject  {
     
     // Methods section
     
-    public void ParseComplete(ControlBuilder rootBuilder) throws Throwable {
+    public boolean AllowBaseType(NetType baseType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ParseComplete", rootBuilder == null ? null : rootBuilder.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CompilationMode GetCompilationMode(CompilationMode current) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCompilationMode = (JCObject)classInstance.Invoke("GetCompilationMode", current == null ? null : current.getJCOInstance());
-            return new CompilationMode(objGetCompilationMode);
+            return (boolean)classInstance.Invoke("AllowBaseType", baseType == null ? null : baseType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,26 +138,6 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
-    public boolean AllowBaseType(NetType baseType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("AllowBaseType", baseType == null ? null : baseType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean AllowVirtualReference(java.lang.String referenceVirtualPath, VirtualReferenceType referenceType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("AllowVirtualReference", referenceVirtualPath, referenceType == null ? null : referenceType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean AllowServerSideInclude(java.lang.String includeVirtualPath) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -179,11 +148,11 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
-    public void PreprocessDirective(java.lang.String directiveName, IDictionary attributes) throws Throwable {
+    public boolean AllowVirtualReference(java.lang.String referenceVirtualPath, VirtualReferenceType referenceType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("PreprocessDirective", directiveName, attributes == null ? null : attributes.getJCOInstance());
+            return (boolean)classInstance.Invoke("AllowVirtualReference", referenceVirtualPath, referenceType == null ? null : referenceType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,6 +199,37 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    public CompilationMode GetCompilationMode(CompilationMode current) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetCompilationMode = (JCObject)classInstance.Invoke("GetCompilationMode", current == null ? null : current.getJCOInstance());
+            return new CompilationMode(objGetCompilationMode);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ParseComplete(ControlBuilder rootBuilder) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ParseComplete", rootBuilder == null ? null : rootBuilder.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PreprocessDirective(java.lang.String directiveName, IDictionary attributes) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PreprocessDirective", directiveName, attributes == null ? null : attributes.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -254,21 +254,21 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
-    public int getTotalNumberOfDependenciesAllowed() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("TotalNumberOfDependenciesAllowed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getNumberOfDirectDependenciesAllowed() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("NumberOfDirectDependenciesAllowed");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getTotalNumberOfDependenciesAllowed() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("TotalNumberOfDependenciesAllowed");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

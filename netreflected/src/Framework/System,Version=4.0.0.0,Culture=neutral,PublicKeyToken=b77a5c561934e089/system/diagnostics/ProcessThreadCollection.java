@@ -124,21 +124,21 @@ public class ProcessThreadCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(ProcessThread thread) throws Throwable, system.ArgumentOutOfRangeException {
+    public boolean Contains(ProcessThread thread) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", thread == null ? null : thread.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", thread == null ? null : thread.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, ProcessThread thread) throws Throwable, system.ArgumentOutOfRangeException {
+    public int Add(ProcessThread thread) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, thread == null ? null : thread.getJCOInstance());
+            return (int)classInstance.Invoke("Add", thread == null ? null : thread.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,11 +154,21 @@ public class ProcessThreadCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(ProcessThread thread) throws Throwable {
+    public void CopyTo(ProcessThread[] array, int index) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", thread == null ? null : thread.getJCOInstance());
+            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Insert(int index, ProcessThread thread) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Insert", index, thread == null ? null : thread.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,16 +179,6 @@ public class ProcessThreadCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", thread == null ? null : thread.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(ProcessThread[] array, int index) throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

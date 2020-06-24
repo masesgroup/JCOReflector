@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.windows.forms.IWin32Window;
 import system.windows.forms.IWin32WindowImplementation;
+import system.Guid;
 import system.windows.forms.DialogResult;
 import system.windows.forms.Form;
 import system.windows.forms.MessageBoxButtons;
-import system.Guid;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 
@@ -121,32 +121,21 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
-    public IWin32Window GetDialogOwnerWindow() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDialogOwnerWindow = (JCObject)classInstance.Invoke("GetDialogOwnerWindow");
-            return new IWin32WindowImplementation(objGetDialogOwnerWindow);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetUIDirty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetUIDirty");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean ShowComponentEditor(NetObject component, IWin32Window parent) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("ShowComponentEditor", component == null ? null : component.getJCOInstance(), parent == null ? null : parent.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean ShowToolWindow(Guid toolWindow) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ShowToolWindow", toolWindow == null ? null : toolWindow.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,11 +152,33 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
-    public void ShowError(java.lang.String message) throws Throwable {
+    public DialogResult ShowMessage(java.lang.String message, java.lang.String caption, MessageBoxButtons buttons) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ShowError", message);
+            JCObject objShowMessage = (JCObject)classInstance.Invoke("ShowMessage", message, caption, buttons == null ? null : buttons.getJCOInstance());
+            return new DialogResult(objShowMessage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IWin32Window GetDialogOwnerWindow() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDialogOwnerWindow = (JCObject)classInstance.Invoke("GetDialogOwnerWindow");
+            return new IWin32WindowImplementation(objGetDialogOwnerWindow);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetUIDirty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetUIDirty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,6 +204,16 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
+    public void ShowError(java.lang.String message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ShowError", message);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ShowMessage(java.lang.String message) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -208,27 +229,6 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowMessage", message, caption);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DialogResult ShowMessage(java.lang.String message, java.lang.String caption, MessageBoxButtons buttons) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objShowMessage = (JCObject)classInstance.Invoke("ShowMessage", message, caption, buttons == null ? null : buttons.getJCOInstance());
-            return new DialogResult(objShowMessage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean ShowToolWindow(Guid toolWindow) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ShowToolWindow", toolWindow == null ? null : toolWindow.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

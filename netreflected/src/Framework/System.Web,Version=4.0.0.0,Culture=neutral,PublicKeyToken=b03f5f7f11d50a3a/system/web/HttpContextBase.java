@@ -38,31 +38,31 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.globalization.CultureInfo;
 import system.web.ISubscriptionToken;
 import system.web.ISubscriptionTokenImplementation;
 import system.IDisposable;
 import system.IDisposableImplementation;
-import system.globalization.CultureInfo;
 import system.web.IHttpHandler;
 import system.web.IHttpHandlerImplementation;
 import system.web.sessionstate.SessionStateBehavior;
-import system.web.HttpApplicationStateBase;
-import system.web.HttpApplication;
-import system.web.configuration.AsyncPreloadModeFlags;
-import system.web.caching.Cache;
-import system.web.RequestNotification;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
-import system.web.instrumentation.PageInstrumentationService;
-import system.web.profile.ProfileBase;
+import system.DateTime;
+import system.security.principal.IPrincipal;
+import system.security.principal.IPrincipalImplementation;
+import system.web.caching.Cache;
+import system.web.configuration.AsyncPreloadModeFlags;
+import system.web.HttpApplication;
+import system.web.HttpApplicationStateBase;
 import system.web.HttpRequestBase;
 import system.web.HttpResponseBase;
 import system.web.HttpServerUtilityBase;
 import system.web.HttpSessionStateBase;
-import system.DateTime;
+import system.web.instrumentation.PageInstrumentationService;
+import system.web.profile.ProfileBase;
+import system.web.RequestNotification;
 import system.web.TraceContext;
-import system.security.principal.IPrincipal;
-import system.security.principal.IPrincipalImplementation;
 
 
 /**
@@ -137,37 +137,6 @@ public class HttpContextBase extends NetObject  {
     
     // Methods section
     
-    public void AddError(NetException errorInfo) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddError", errorInfo == null ? null : errorInfo.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ClearError() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ClearError");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ISubscriptionToken DisposeOnPipelineCompleted(IDisposable target) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDisposeOnPipelineCompleted = (JCObject)classInstance.Invoke("DisposeOnPipelineCompleted", target == null ? null : target.getJCOInstance());
-            return new ISubscriptionTokenImplementation(objDisposeOnPipelineCompleted);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetGlobalResourceObject(java.lang.String classKey, java.lang.String resourceKey) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -218,6 +187,48 @@ public class HttpContextBase extends NetObject  {
         try {
             JCObject objGetSection = (JCObject)classInstance.Invoke("GetSection", sectionName);
             return new NetObject(objGetSection);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetService(NetType serviceType) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            return new NetObject(objGetService);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ISubscriptionToken DisposeOnPipelineCompleted(IDisposable target) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDisposeOnPipelineCompleted = (JCObject)classInstance.Invoke("DisposeOnPipelineCompleted", target == null ? null : target.getJCOInstance());
+            return new ISubscriptionTokenImplementation(objDisposeOnPipelineCompleted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddError(NetException errorInfo) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddError", errorInfo == null ? null : errorInfo.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ClearError() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ClearError");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,38 +294,10 @@ public class HttpContextBase extends NetObject  {
         }
     }
 
-    public NetObject GetService(NetType serviceType) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
-            return new NetObject(objGetService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public NetException[] getAllErrors() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<NetException> resultingArrayList = new ArrayList<NetException>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AllErrors");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetException(resultingObject));
-            }
-            NetException[] resultingArray = new NetException[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getAllowAsyncDuringSyncStages() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -330,124 +313,6 @@ public class HttpContextBase extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowAsyncDuringSyncStages", AllowAsyncDuringSyncStages);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HttpApplicationStateBase getApplication() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Application");
-            return new HttpApplicationStateBase(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HttpApplication getApplicationInstance() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationInstance");
-            return new HttpApplication(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setApplicationInstance(HttpApplication ApplicationInstance) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ApplicationInstance", ApplicationInstance == null ? null : ApplicationInstance.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AsyncPreloadModeFlags getAsyncPreloadMode() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AsyncPreloadMode");
-            return new AsyncPreloadModeFlags(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAsyncPreloadMode(AsyncPreloadModeFlags AsyncPreloadMode) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AsyncPreloadMode", AsyncPreloadMode == null ? null : AsyncPreloadMode.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Cache getCache() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Cache");
-            return new Cache(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IHttpHandler getCurrentHandler() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CurrentHandler");
-            return new IHttpHandlerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public RequestNotification getCurrentNotification() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CurrentNotification");
-            return new RequestNotification(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetException getError() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Error");
-            return new NetException(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IHttpHandler getHandler() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Handler");
-            return new IHttpHandlerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHandler(IHttpHandler Handler) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Handler", Handler == null ? null : Handler.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,6 +368,46 @@ public class HttpContextBase extends NetObject  {
         }
     }
 
+    public boolean getSkipAuthorization() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("SkipAuthorization");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSkipAuthorization(boolean SkipAuthorization) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SkipAuthorization", SkipAuthorization);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getThreadAbortOnTimeout() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("ThreadAbortOnTimeout");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setThreadAbortOnTimeout(boolean ThreadAbortOnTimeout) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ThreadAbortOnTimeout", ThreadAbortOnTimeout);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IDictionary getItems() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -514,34 +419,135 @@ public class HttpContextBase extends NetObject  {
         }
     }
 
-    public PageInstrumentationService getPageInstrumentation() throws Throwable, system.NotImplementedException {
+    public DateTime getTimestamp() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PageInstrumentation");
-            return new PageInstrumentationService(val);
+            JCObject val = (JCObject)classInstance.Get("Timestamp");
+            return new DateTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IHttpHandler getPreviousHandler() throws Throwable, system.NotImplementedException {
+    public NetException getError() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousHandler");
-            return new IHttpHandlerImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("Error");
+            return new NetException(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ProfileBase getProfile() throws Throwable, system.NotImplementedException {
+    public NetException[] getAllErrors() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Profile");
-            return new ProfileBase(val);
+            ArrayList<NetException> resultingArrayList = new ArrayList<NetException>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("AllErrors");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new NetException(resultingObject));
+            }
+            NetException[] resultingArray = new NetException[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IPrincipal getUser() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("User");
+            return new IPrincipalImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setUser(IPrincipal User) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("User", User == null ? null : User.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getWebSocketNegotiatedProtocol() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("WebSocketNegotiatedProtocol");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Cache getCache() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Cache");
+            return new Cache(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AsyncPreloadModeFlags getAsyncPreloadMode() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("AsyncPreloadMode");
+            return new AsyncPreloadModeFlags(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAsyncPreloadMode(AsyncPreloadModeFlags AsyncPreloadMode) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AsyncPreloadMode", AsyncPreloadMode == null ? null : AsyncPreloadMode.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HttpApplication getApplicationInstance() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ApplicationInstance");
+            return new HttpApplication(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setApplicationInstance(HttpApplication ApplicationInstance) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ApplicationInstance", ApplicationInstance == null ? null : ApplicationInstance.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HttpApplicationStateBase getApplication() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Application");
+            return new HttpApplicationStateBase(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -591,52 +597,77 @@ public class HttpContextBase extends NetObject  {
         }
     }
 
-    public boolean getSkipAuthorization() throws Throwable, system.NotImplementedException {
+    public IHttpHandler getCurrentHandler() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("SkipAuthorization");
+            JCObject val = (JCObject)classInstance.Get("CurrentHandler");
+            return new IHttpHandlerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSkipAuthorization(boolean SkipAuthorization) throws Throwable, system.NotImplementedException {
+    public IHttpHandler getHandler() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SkipAuthorization", SkipAuthorization);
+            JCObject val = (JCObject)classInstance.Get("Handler");
+            return new IHttpHandlerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DateTime getTimestamp() throws Throwable, system.NotImplementedException {
+    public void setHandler(IHttpHandler Handler) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Timestamp");
-            return new DateTime(val);
+            classInstance.Set("Handler", Handler == null ? null : Handler.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getThreadAbortOnTimeout() throws Throwable, system.NotImplementedException {
+    public IHttpHandler getPreviousHandler() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("ThreadAbortOnTimeout");
+            JCObject val = (JCObject)classInstance.Get("PreviousHandler");
+            return new IHttpHandlerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setThreadAbortOnTimeout(boolean ThreadAbortOnTimeout) throws Throwable, system.NotImplementedException {
+    public PageInstrumentationService getPageInstrumentation() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ThreadAbortOnTimeout", ThreadAbortOnTimeout);
+            JCObject val = (JCObject)classInstance.Get("PageInstrumentation");
+            return new PageInstrumentationService(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ProfileBase getProfile() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Profile");
+            return new ProfileBase(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RequestNotification getCurrentNotification() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CurrentNotification");
+            return new RequestNotification(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -648,37 +679,6 @@ public class HttpContextBase extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Trace");
             return new TraceContext(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IPrincipal getUser() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("User");
-            return new IPrincipalImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setUser(IPrincipal User) throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("User", User == null ? null : User.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getWebSocketNegotiatedProtocol() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("WebSocketNegotiatedProtocol");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

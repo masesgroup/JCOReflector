@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.design.data.DataSourceGroupCollection;
-import system.componentmodel.design.data.DataSourceGroup;
 import system.windows.forms.IWin32Window;
 import system.windows.forms.IWin32WindowImplementation;
 import system.windows.forms.FormStartPosition;
 import system.componentmodel.design.data.DataSourceDescriptor;
+import system.componentmodel.design.data.DataSourceGroup;
+import system.componentmodel.design.data.DataSourceGroupCollection;
 import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
 
@@ -120,12 +120,11 @@ public class DataSourceProviderService extends NetObject  {
     
     // Methods section
     
-    public DataSourceGroupCollection GetDataSources() throws Throwable {
+    public boolean InvokeConfigureDataSource(IWin32Window parentWindow, FormStartPosition startPosition, DataSourceDescriptor dataSourceDescriptor) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetDataSources = (JCObject)classInstance.Invoke("GetDataSources");
-            return new DataSourceGroupCollection(objGetDataSources);
+            return (boolean)classInstance.Invoke("InvokeConfigureDataSource", parentWindow == null ? null : parentWindow.getJCOInstance(), startPosition == null ? null : startPosition.getJCOInstance(), dataSourceDescriptor == null ? null : dataSourceDescriptor.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -142,11 +141,12 @@ public class DataSourceProviderService extends NetObject  {
         }
     }
 
-    public boolean InvokeConfigureDataSource(IWin32Window parentWindow, FormStartPosition startPosition, DataSourceDescriptor dataSourceDescriptor) throws Throwable {
+    public DataSourceGroupCollection GetDataSources() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("InvokeConfigureDataSource", parentWindow == null ? null : parentWindow.getJCOInstance(), startPosition == null ? null : startPosition.getJCOInstance(), dataSourceDescriptor == null ? null : dataSourceDescriptor.getJCOInstance());
+            JCObject objGetDataSources = (JCObject)classInstance.Invoke("GetDataSources");
+            return new DataSourceGroupCollection(objGetDataSources);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

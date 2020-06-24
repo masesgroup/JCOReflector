@@ -144,17 +144,6 @@ public class OracleBoolean extends NetObject  {
         }
     }
 
-    public static OracleBoolean Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
-            return new OracleBoolean(objParse);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static OracleBoolean And(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -205,6 +194,17 @@ public class OracleBoolean extends NetObject  {
         try {
             JCObject objOr = (JCObject)classType.Invoke("Or", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
             return new OracleBoolean(objOr);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static OracleBoolean Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            return new OracleBoolean(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

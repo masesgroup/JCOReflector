@@ -117,21 +117,21 @@ public class ITypeDescriptorFilterServiceImplementation extends NetObject implem
         }
     }
 
-    public boolean FilterProperties(IComponent component, IDictionary properties) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("FilterProperties", component == null ? null : component.getJCOInstance(), properties == null ? null : properties.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean FilterEvents(IComponent component, IDictionary events) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("FilterEvents", component == null ? null : component.getJCOInstance(), events == null ? null : events.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean FilterProperties(IComponent component, IDictionary properties) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("FilterProperties", component == null ? null : component.getJCOInstance(), properties == null ? null : properties.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

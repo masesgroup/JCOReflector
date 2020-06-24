@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.services.protocols.LogicalMethodInfo;
 import system.reflection.ParameterInfo;
+import system.web.services.protocols.LogicalMethodInfo;
 import system.web.HttpRequest;
 
 
@@ -115,12 +115,11 @@ public class ValueCollectionParameterReader extends NetObject  {
     
     // Methods section
     
-    public NetObject GetInitializer(LogicalMethodInfo methodInfo) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean IsSupported(ParameterInfo paramInfo) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetInitializer = (JCObject)classInstance.Invoke("GetInitializer", methodInfo == null ? null : methodInfo.getJCOInstance());
-            return new NetObject(objGetInitializer);
+            return (boolean)classType.Invoke("IsSupported", paramInfo == null ? null : paramInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -136,21 +135,29 @@ public class ValueCollectionParameterReader extends NetObject  {
         }
     }
 
-    public static boolean IsSupported(ParameterInfo paramInfo) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetObject GetInitializer(LogicalMethodInfo methodInfo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Invoke("IsSupported", paramInfo == null ? null : paramInfo.getJCOInstance());
+            JCObject objGetInitializer = (JCObject)classInstance.Invoke("GetInitializer", methodInfo == null ? null : methodInfo.getJCOInstance());
+            return new NetObject(objGetInitializer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Initialize(NetObject o) throws Throwable {
+    public NetObject[] GetInitializers(LogicalMethodInfo[] methodInfos) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Initialize", o == null ? null : o.getJCOInstance());
+            ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInitializers", (Object)toObjectFromArray(methodInfos));
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new NetObject(resultingObject));
+            }
+            NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,18 +180,11 @@ public class ValueCollectionParameterReader extends NetObject  {
         }
     }
 
-    public NetObject[] GetInitializers(LogicalMethodInfo[] methodInfos) throws Throwable {
+    public void Initialize(NetObject o) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInitializers", (Object)toObjectFromArray(methodInfos));
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetObject(resultingObject));
-            }
-            NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            classInstance.Invoke("Initialize", o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.specialized.StringDictionary;
-import system.text.Encoding;
 import system.diagnostics.ProcessWindowStyle;
 import system.security.SecureString;
+import system.text.Encoding;
 
 
 /**
@@ -151,26 +151,6 @@ public class ProcessStartInfo extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getArguments() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Arguments");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setArguments(java.lang.String Arguments) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Arguments", Arguments);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCreateNoWindow() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -191,12 +171,61 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
-    public StringDictionary getEnvironmentVariables() throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public boolean getErrorDialog() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EnvironmentVariables");
-            return new StringDictionary(val);
+            return (boolean)classInstance.Get("ErrorDialog");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setErrorDialog(boolean ErrorDialog) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ErrorDialog", ErrorDialog);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getLoadUserProfile() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("LoadUserProfile");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setLoadUserProfile(boolean LoadUserProfile) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("LoadUserProfile", LoadUserProfile);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getRedirectStandardError() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("RedirectStandardError");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRedirectStandardError(boolean RedirectStandardError) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RedirectStandardError", RedirectStandardError);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,84 +271,114 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
-    public boolean getRedirectStandardError() throws Throwable {
+    public boolean getUseShellExecute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("RedirectStandardError");
+            return (boolean)classInstance.Get("UseShellExecute");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRedirectStandardError(boolean RedirectStandardError) throws Throwable {
+    public void setUseShellExecute(boolean UseShellExecute) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("RedirectStandardError", RedirectStandardError);
+            classInstance.Set("UseShellExecute", UseShellExecute);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Encoding getStandardInputEncoding() throws Throwable {
+    public StringDictionary getEnvironmentVariables() throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StandardInputEncoding");
-            return new Encoding(val);
+            JCObject val = (JCObject)classInstance.Get("EnvironmentVariables");
+            return new StringDictionary(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setStandardInputEncoding(Encoding StandardInputEncoding) throws Throwable {
+    public ProcessWindowStyle getWindowStyle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("StandardInputEncoding", StandardInputEncoding == null ? null : StandardInputEncoding.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("WindowStyle");
+            return new ProcessWindowStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Encoding getStandardErrorEncoding() throws Throwable {
+    public void setWindowStyle(ProcessWindowStyle WindowStyle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StandardErrorEncoding");
-            return new Encoding(val);
+            classInstance.Set("WindowStyle", WindowStyle == null ? null : WindowStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setStandardErrorEncoding(Encoding StandardErrorEncoding) throws Throwable {
+    public SecureString getPassword() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("StandardErrorEncoding", StandardErrorEncoding == null ? null : StandardErrorEncoding.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("Password");
+            return new SecureString(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Encoding getStandardOutputEncoding() throws Throwable {
+    public void setPassword(SecureString Password) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StandardOutputEncoding");
-            return new Encoding(val);
+            classInstance.Set("Password", Password == null ? null : Password.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setStandardOutputEncoding(Encoding StandardOutputEncoding) throws Throwable {
+    public java.lang.String getArguments() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("StandardOutputEncoding", StandardOutputEncoding == null ? null : StandardOutputEncoding.getJCOInstance());
+            return (java.lang.String)classInstance.Get("Arguments");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setArguments(java.lang.String Arguments) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Arguments", Arguments);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getDomain() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Domain");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDomain(java.lang.String Domain) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Domain", Domain);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,41 +404,21 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
-    public java.lang.String getWorkingDirectory() throws Throwable {
+    public java.lang.String getPasswordInClearText() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("WorkingDirectory");
+            return (java.lang.String)classInstance.Get("PasswordInClearText");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setWorkingDirectory(java.lang.String WorkingDirectory) throws Throwable {
+    public void setPasswordInClearText(java.lang.String PasswordInClearText) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("WorkingDirectory", WorkingDirectory);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getErrorDialog() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ErrorDialog");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setErrorDialog(boolean ErrorDialog) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ErrorDialog", ErrorDialog);
+            classInstance.Set("PasswordInClearText", PasswordInClearText);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,103 +464,21 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
-    public ProcessWindowStyle getWindowStyle() throws Throwable {
+    public java.lang.String getWorkingDirectory() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WindowStyle");
-            return new ProcessWindowStyle(val);
+            return (java.lang.String)classInstance.Get("WorkingDirectory");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setWindowStyle(ProcessWindowStyle WindowStyle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
+    public void setWorkingDirectory(java.lang.String WorkingDirectory) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("WindowStyle", WindowStyle == null ? null : WindowStyle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getPasswordInClearText() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("PasswordInClearText");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPasswordInClearText(java.lang.String PasswordInClearText) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PasswordInClearText", PasswordInClearText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDomain() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Domain");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDomain(java.lang.String Domain) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Domain", Domain);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getLoadUserProfile() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("LoadUserProfile");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLoadUserProfile(boolean LoadUserProfile) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("LoadUserProfile", LoadUserProfile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecureString getPassword() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Password");
-            return new SecureString(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPassword(SecureString Password) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Password", Password == null ? null : Password.getJCOInstance());
+            classInstance.Set("WorkingDirectory", WorkingDirectory);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -546,21 +503,64 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
-    public boolean getUseShellExecute() throws Throwable {
+    public Encoding getStandardErrorEncoding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("UseShellExecute");
+            JCObject val = (JCObject)classInstance.Get("StandardErrorEncoding");
+            return new Encoding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUseShellExecute(boolean UseShellExecute) throws Throwable {
+    public void setStandardErrorEncoding(Encoding StandardErrorEncoding) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("UseShellExecute", UseShellExecute);
+            classInstance.Set("StandardErrorEncoding", StandardErrorEncoding == null ? null : StandardErrorEncoding.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Encoding getStandardInputEncoding() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("StandardInputEncoding");
+            return new Encoding(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setStandardInputEncoding(Encoding StandardInputEncoding) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("StandardInputEncoding", StandardInputEncoding == null ? null : StandardInputEncoding.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Encoding getStandardOutputEncoding() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("StandardOutputEncoding");
+            return new Encoding(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setStandardOutputEncoding(Encoding StandardOutputEncoding) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("StandardOutputEncoding", StandardOutputEncoding == null ? null : StandardOutputEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.GCMemoryInfo;
-import system.GCCollectionMode;
 import system.WeakReference;
+import system.GCMemoryInfo;
 import system.GCNotificationStatus;
+import system.GCCollectionMode;
 
 
 /**
@@ -116,102 +116,41 @@ public class GC extends NetObject  {
     
     // Methods section
     
-    public static void KeepAlive(NetObject obj) throws Throwable {
+    public static boolean TryStartNoGCRegion(long totalSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("KeepAlive", obj == null ? null : obj.getJCOInstance());
+            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static GCMemoryInfo GetGCMemoryInfo() throws Throwable {
+    public static boolean TryStartNoGCRegion(long totalSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetGCMemoryInfo = (JCObject)classType.Invoke("GetGCMemoryInfo");
-            return new GCMemoryInfo(objGetGCMemoryInfo);
+            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize, disallowFullBlockingGC);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void AddMemoryPressure(long bytesAllocated) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static boolean TryStartNoGCRegion(long totalSize, long lohSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("AddMemoryPressure", bytesAllocated);
+            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize, lohSize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void RemoveMemoryPressure(long bytesAllocated) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static boolean TryStartNoGCRegion(long totalSize, long lohSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RemoveMemoryPressure", bytesAllocated);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int GetGeneration(NetObject obj) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("GetGeneration", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Collect(int generation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Collect", generation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Collect() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Collect");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Collect(int generation, GCCollectionMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Collect", generation, mode == null ? null : mode.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Collect(int generation, GCCollectionMode mode, boolean blocking) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Collect", generation, mode == null ? null : mode.getJCOInstance(), blocking);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Collect(int generation, GCCollectionMode mode, boolean blocking, boolean compacting) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Collect", generation, mode == null ? null : mode.getJCOInstance(), blocking, compacting);
+            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize, lohSize, disallowFullBlockingGC);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,51 +166,21 @@ public class GC extends NetObject  {
         }
     }
 
+    public static int GetGeneration(NetObject obj) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("GetGeneration", obj == null ? null : obj.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int GetGeneration(WeakReference wo) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (int)classType.Invoke("GetGeneration", wo == null ? null : wo.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void WaitForPendingFinalizers() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("WaitForPendingFinalizers");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void SuppressFinalize(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SuppressFinalize", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void ReRegisterForFinalize(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("ReRegisterForFinalize", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static long GetTotalMemory(boolean forceFullCollection) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (long)classType.Invoke("GetTotalMemory", forceFullCollection);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,21 +206,22 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void RegisterForFullGCNotification(int maxGenerationThreshold, int largeObjectHeapThreshold) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static long GetTotalMemory(boolean forceFullCollection) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RegisterForFullGCNotification", maxGenerationThreshold, largeObjectHeapThreshold);
+            return (long)classType.Invoke("GetTotalMemory", forceFullCollection);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void CancelFullGCNotification() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static GCMemoryInfo GetGCMemoryInfo() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("CancelFullGCNotification");
+            JCObject objGetGCMemoryInfo = (JCObject)classType.Invoke("GetGCMemoryInfo");
+            return new GCMemoryInfo(objGetGCMemoryInfo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,41 +271,71 @@ public class GC extends NetObject  {
         }
     }
 
-    public static boolean TryStartNoGCRegion(long totalSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static void AddMemoryPressure(long bytesAllocated) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize);
+            classType.Invoke("AddMemoryPressure", bytesAllocated);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean TryStartNoGCRegion(long totalSize, long lohSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static void CancelFullGCNotification() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize, lohSize);
+            classType.Invoke("CancelFullGCNotification");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean TryStartNoGCRegion(long totalSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static void Collect() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize, disallowFullBlockingGC);
+            classType.Invoke("Collect");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean TryStartNoGCRegion(long totalSize, long lohSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static void Collect(int generation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize, lohSize, disallowFullBlockingGC);
+            classType.Invoke("Collect", generation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Collect(int generation, GCCollectionMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Collect", generation, mode == null ? null : mode.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Collect(int generation, GCCollectionMode mode, boolean blocking) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Collect", generation, mode == null ? null : mode.getJCOInstance(), blocking);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Collect(int generation, GCCollectionMode mode, boolean blocking, boolean compacting) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Collect", generation, mode == null ? null : mode.getJCOInstance(), blocking, compacting);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,6 +346,66 @@ public class GC extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("EndNoGCRegion");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void KeepAlive(NetObject obj) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("KeepAlive", obj == null ? null : obj.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RegisterForFullGCNotification(int maxGenerationThreshold, int largeObjectHeapThreshold) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RegisterForFullGCNotification", maxGenerationThreshold, largeObjectHeapThreshold);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RemoveMemoryPressure(long bytesAllocated) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RemoveMemoryPressure", bytesAllocated);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ReRegisterForFinalize(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ReRegisterForFinalize", obj == null ? null : obj.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SuppressFinalize(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SuppressFinalize", obj == null ? null : obj.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WaitForPendingFinalizers() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WaitForPendingFinalizers");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

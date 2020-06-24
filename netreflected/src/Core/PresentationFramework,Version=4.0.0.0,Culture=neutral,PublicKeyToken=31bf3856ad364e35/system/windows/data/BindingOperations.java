@@ -38,17 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.data.BindingExpressionBase;
 import system.windows.DependencyObject;
 import system.windows.DependencyProperty;
 import system.windows.data.BindingBase;
-import system.windows.data.PriorityBinding;
-import system.windows.data.MultiBinding;
 import system.windows.data.BindingExpression;
+import system.windows.data.BindingExpressionBase;
+import system.windows.data.MultiBinding;
 import system.windows.data.MultiBindingExpression;
+import system.windows.data.PriorityBinding;
 import system.windows.data.PriorityBindingExpression;
-import system.windows.data.CollectionSynchronizationCallback;
 import system.Action;
+import system.windows.data.CollectionSynchronizationCallback;
 
 
 /**
@@ -123,23 +123,11 @@ public class BindingOperations extends NetObject  {
     
     // Methods section
     
-    public static BindingExpressionBase SetBinding(DependencyObject target, DependencyProperty dp, BindingBase binding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static boolean IsDataBound(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSetBinding = (JCObject)classType.Invoke("SetBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance(), binding == null ? null : binding.getJCOInstance());
-            return new BindingExpressionBase(objSetBinding);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BindingBase GetBindingBase(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetBindingBase = (JCObject)classType.Invoke("GetBindingBase", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
-            return new BindingBase(objGetBindingBase);
+            return (boolean)classType.Invoke("IsDataBound", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,34 +144,12 @@ public class BindingOperations extends NetObject  {
         }
     }
 
-    public static PriorityBinding GetPriorityBinding(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
+    public static BindingBase GetBindingBase(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetPriorityBinding = (JCObject)classType.Invoke("GetPriorityBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
-            return new PriorityBinding(objGetPriorityBinding);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MultiBinding GetMultiBinding(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetMultiBinding = (JCObject)classType.Invoke("GetMultiBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
-            return new MultiBinding(objGetMultiBinding);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BindingExpressionBase GetBindingExpressionBase(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetBindingExpressionBase = (JCObject)classType.Invoke("GetBindingExpressionBase", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
-            return new BindingExpressionBase(objGetBindingExpressionBase);
+            JCObject objGetBindingBase = (JCObject)classType.Invoke("GetBindingBase", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            return new BindingBase(objGetBindingBase);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,12 +166,56 @@ public class BindingOperations extends NetObject  {
         }
     }
 
+    public static BindingExpressionBase GetBindingExpressionBase(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetBindingExpressionBase = (JCObject)classType.Invoke("GetBindingExpressionBase", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            return new BindingExpressionBase(objGetBindingExpressionBase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BindingExpressionBase SetBinding(DependencyObject target, DependencyProperty dp, BindingBase binding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSetBinding = (JCObject)classType.Invoke("SetBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance(), binding == null ? null : binding.getJCOInstance());
+            return new BindingExpressionBase(objSetBinding);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MultiBinding GetMultiBinding(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetMultiBinding = (JCObject)classType.Invoke("GetMultiBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            return new MultiBinding(objGetMultiBinding);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static MultiBindingExpression GetMultiBindingExpression(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetMultiBindingExpression = (JCObject)classType.Invoke("GetMultiBindingExpression", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
             return new MultiBindingExpression(objGetMultiBindingExpression);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PriorityBinding GetPriorityBinding(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetPriorityBinding = (JCObject)classType.Invoke("GetPriorityBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            return new PriorityBinding(objGetPriorityBinding);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,11 +232,11 @@ public class BindingOperations extends NetObject  {
         }
     }
 
-    public static void ClearBinding(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static void AccessCollection(IEnumerable collection, Action accessMethod, boolean writeAccess) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("ClearBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            classType.Invoke("AccessCollection", collection == null ? null : collection.getJCOInstance(), accessMethod, writeAccess);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,31 +252,11 @@ public class BindingOperations extends NetObject  {
         }
     }
 
-    public static boolean IsDataBound(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static void ClearBinding(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsDataBound", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void EnableCollectionSynchronization(IEnumerable collection, NetObject context, CollectionSynchronizationCallback synchronizationCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("EnableCollectionSynchronization", collection == null ? null : collection.getJCOInstance(), context == null ? null : context.getJCOInstance(), synchronizationCallback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void EnableCollectionSynchronization(IEnumerable collection, NetObject lockObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("EnableCollectionSynchronization", collection == null ? null : collection.getJCOInstance(), lockObject == null ? null : lockObject.getJCOInstance());
+            classType.Invoke("ClearBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,11 +272,21 @@ public class BindingOperations extends NetObject  {
         }
     }
 
-    public static void AccessCollection(IEnumerable collection, Action accessMethod, boolean writeAccess) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
+    public static void EnableCollectionSynchronization(IEnumerable collection, NetObject lockObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("AccessCollection", collection == null ? null : collection.getJCOInstance(), accessMethod, writeAccess);
+            classType.Invoke("EnableCollectionSynchronization", collection == null ? null : collection.getJCOInstance(), lockObject == null ? null : lockObject.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void EnableCollectionSynchronization(IEnumerable collection, NetObject context, CollectionSynchronizationCallback synchronizationCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("EnableCollectionSynchronization", collection == null ? null : collection.getJCOInstance(), context == null ? null : context.getJCOInstance(), synchronizationCallback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

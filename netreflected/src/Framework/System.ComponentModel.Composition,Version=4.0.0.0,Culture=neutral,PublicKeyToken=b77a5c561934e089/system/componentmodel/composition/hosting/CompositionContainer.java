@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.composition.hosting.ExportProvider;
 import system.componentmodel.composition.hosting.CompositionOptions;
+import system.componentmodel.composition.hosting.ExportProvider;
 import system.componentmodel.composition.primitives.ComposablePartCatalog;
+import system.componentmodel.composition.primitives.ImportDefinition;
+import system.componentmodel.composition.hosting.AtomicComposition;
 import system.componentmodel.composition.hosting.CompositionBatch;
 import system.componentmodel.composition.primitives.Export;
 import system.componentmodel.composition.primitives.ComposablePart;
-import system.componentmodel.composition.primitives.ImportDefinition;
-import system.componentmodel.composition.hosting.AtomicComposition;
 
 
 /**
@@ -127,16 +127,6 @@ public class CompositionContainer extends NetObject  {
         }
     }
 
-    public CompositionContainer(ExportProvider... providers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.MulticastNotSupportedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(providers)));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CompositionContainer(CompositionOptions compositionOptions, ExportProvider... providers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.LockRecursionException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException, system.threading.SynchronizationLockException {
         try {
             // add reference to assemblyName.dll file
@@ -147,11 +137,11 @@ public class CompositionContainer extends NetObject  {
         }
     }
 
-    public CompositionContainer(ComposablePartCatalog catalog, ExportProvider... providers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.threading.SynchronizationLockException {
+    public CompositionContainer(ExportProvider... providers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(catalog == null ? null : catalog.getJCOInstance(), toObjectFromArray(providers)));
+            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(providers)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,25 +167,35 @@ public class CompositionContainer extends NetObject  {
         }
     }
 
-
-    
-    // Methods section
-    
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.SynchronizationLockException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public CompositionContainer(ComposablePartCatalog catalog, ExportProvider... providers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.threading.SynchronizationLockException {
         try {
-            classInstance.Invoke("Dispose");
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(catalog == null ? null : catalog.getJCOInstance(), toObjectFromArray(providers)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Methods section
+    
     public void Compose(CompositionBatch batch) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.NotImplementedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.componentmodel.composition.CompositionException, system.MulticastNotSupportedException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Compose", batch == null ? null : batch.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

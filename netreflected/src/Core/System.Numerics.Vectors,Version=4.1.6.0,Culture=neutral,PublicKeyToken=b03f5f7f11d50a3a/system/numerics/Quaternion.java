@@ -137,6 +137,27 @@ public class Quaternion extends NetObject  {
     
     // Methods section
     
+    public boolean Equals(Quaternion other) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single Dot(Quaternion quaternion1, Quaternion quaternion2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDot = (JCObject)classType.Invoke("Dot", quaternion1 == null ? null : quaternion1.getJCOInstance(), quaternion2 == null ? null : quaternion2.getJCOInstance());
+            return new Single(objDot);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Single Length() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -159,100 +180,12 @@ public class Quaternion extends NetObject  {
         }
     }
 
-    public static Quaternion Normalize(Quaternion value) throws Throwable {
+    public static Quaternion Add(Quaternion value1, Quaternion value2) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNormalize = (JCObject)classType.Invoke("Normalize", value == null ? null : value.getJCOInstance());
-            return new Quaternion(objNormalize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Quaternion Conjugate(Quaternion value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objConjugate = (JCObject)classType.Invoke("Conjugate", value == null ? null : value.getJCOInstance());
-            return new Quaternion(objConjugate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Quaternion Inverse(Quaternion value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objInverse = (JCObject)classType.Invoke("Inverse", value == null ? null : value.getJCOInstance());
-            return new Quaternion(objInverse);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Quaternion CreateFromAxisAngle(Vector3 axis, Single angle) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateFromAxisAngle = (JCObject)classType.Invoke("CreateFromAxisAngle", axis == null ? null : axis.getJCOInstance(), angle == null ? null : angle.getJCOInstance());
-            return new Quaternion(objCreateFromAxisAngle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Quaternion CreateFromYawPitchRoll(Single yaw, Single pitch, Single roll) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateFromYawPitchRoll = (JCObject)classType.Invoke("CreateFromYawPitchRoll", yaw == null ? null : yaw.getJCOInstance(), pitch == null ? null : pitch.getJCOInstance(), roll == null ? null : roll.getJCOInstance());
-            return new Quaternion(objCreateFromYawPitchRoll);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Quaternion CreateFromRotationMatrix(Matrix4x4 matrix) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateFromRotationMatrix = (JCObject)classType.Invoke("CreateFromRotationMatrix", matrix == null ? null : matrix.getJCOInstance());
-            return new Quaternion(objCreateFromRotationMatrix);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single Dot(Quaternion quaternion1, Quaternion quaternion2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDot = (JCObject)classType.Invoke("Dot", quaternion1 == null ? null : quaternion1.getJCOInstance(), quaternion2 == null ? null : quaternion2.getJCOInstance());
-            return new Single(objDot);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Quaternion Slerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSlerp = (JCObject)classType.Invoke("Slerp", quaternion1 == null ? null : quaternion1.getJCOInstance(), quaternion2 == null ? null : quaternion2.getJCOInstance(), amount == null ? null : amount.getJCOInstance());
-            return new Quaternion(objSlerp);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Quaternion Lerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLerp = (JCObject)classType.Invoke("Lerp", quaternion1 == null ? null : quaternion1.getJCOInstance(), quaternion2 == null ? null : quaternion2.getJCOInstance(), amount == null ? null : amount.getJCOInstance());
-            return new Quaternion(objLerp);
+            JCObject objAdd = (JCObject)classType.Invoke("Add", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            return new Quaternion(objAdd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,56 +202,45 @@ public class Quaternion extends NetObject  {
         }
     }
 
-    public static Quaternion Negate(Quaternion value) throws Throwable {
+    public static Quaternion Conjugate(Quaternion value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNegate = (JCObject)classType.Invoke("Negate", value == null ? null : value.getJCOInstance());
-            return new Quaternion(objNegate);
+            JCObject objConjugate = (JCObject)classType.Invoke("Conjugate", value == null ? null : value.getJCOInstance());
+            return new Quaternion(objConjugate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Quaternion Add(Quaternion value1, Quaternion value2) throws Throwable {
+    public static Quaternion CreateFromAxisAngle(Vector3 axis, Single angle) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
-            return new Quaternion(objAdd);
+            JCObject objCreateFromAxisAngle = (JCObject)classType.Invoke("CreateFromAxisAngle", axis == null ? null : axis.getJCOInstance(), angle == null ? null : angle.getJCOInstance());
+            return new Quaternion(objCreateFromAxisAngle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Quaternion Subtract(Quaternion value1, Quaternion value2) throws Throwable {
+    public static Quaternion CreateFromRotationMatrix(Matrix4x4 matrix) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
-            return new Quaternion(objSubtract);
+            JCObject objCreateFromRotationMatrix = (JCObject)classType.Invoke("CreateFromRotationMatrix", matrix == null ? null : matrix.getJCOInstance());
+            return new Quaternion(objCreateFromRotationMatrix);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Quaternion Multiply(Quaternion value1, Quaternion value2) throws Throwable {
+    public static Quaternion CreateFromYawPitchRoll(Single yaw, Single pitch, Single roll) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
-            return new Quaternion(objMultiply);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Quaternion Multiply(Quaternion value1, Single value2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
-            return new Quaternion(objMultiply);
+            JCObject objCreateFromYawPitchRoll = (JCObject)classType.Invoke("CreateFromYawPitchRoll", yaw == null ? null : yaw.getJCOInstance(), pitch == null ? null : pitch.getJCOInstance(), roll == null ? null : roll.getJCOInstance());
+            return new Quaternion(objCreateFromYawPitchRoll);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,11 +257,89 @@ public class Quaternion extends NetObject  {
         }
     }
 
-    public boolean Equals(Quaternion other) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Quaternion Inverse(Quaternion value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            JCObject objInverse = (JCObject)classType.Invoke("Inverse", value == null ? null : value.getJCOInstance());
+            return new Quaternion(objInverse);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Quaternion Lerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLerp = (JCObject)classType.Invoke("Lerp", quaternion1 == null ? null : quaternion1.getJCOInstance(), quaternion2 == null ? null : quaternion2.getJCOInstance(), amount == null ? null : amount.getJCOInstance());
+            return new Quaternion(objLerp);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Quaternion Multiply(Quaternion value1, Single value2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            return new Quaternion(objMultiply);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Quaternion Multiply(Quaternion value1, Quaternion value2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            return new Quaternion(objMultiply);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Quaternion Negate(Quaternion value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objNegate = (JCObject)classType.Invoke("Negate", value == null ? null : value.getJCOInstance());
+            return new Quaternion(objNegate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Quaternion Normalize(Quaternion value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objNormalize = (JCObject)classType.Invoke("Normalize", value == null ? null : value.getJCOInstance());
+            return new Quaternion(objNormalize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Quaternion Slerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSlerp = (JCObject)classType.Invoke("Slerp", quaternion1 == null ? null : quaternion1.getJCOInstance(), quaternion2 == null ? null : quaternion2.getJCOInstance(), amount == null ? null : amount.getJCOInstance());
+            return new Quaternion(objSlerp);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Quaternion Subtract(Quaternion value1, Quaternion value2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            return new Quaternion(objSubtract);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

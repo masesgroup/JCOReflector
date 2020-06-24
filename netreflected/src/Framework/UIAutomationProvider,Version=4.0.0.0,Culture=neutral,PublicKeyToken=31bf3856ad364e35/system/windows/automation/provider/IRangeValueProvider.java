@@ -95,17 +95,17 @@ public interface IRangeValueProvider extends IJCOBridgeReflected {
     
     // Properties section
     
-    public double getValue() throws Throwable;
-
     public boolean getIsReadOnly() throws Throwable;
+
+    public double getLargeChange() throws Throwable;
 
     public double getMaximum() throws Throwable;
 
     public double getMinimum() throws Throwable;
 
-    public double getLargeChange() throws Throwable;
-
     public double getSmallChange() throws Throwable;
+
+    public double getValue() throws Throwable;
 
 
 

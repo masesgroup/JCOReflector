@@ -139,12 +139,11 @@ public class CustomAttributeNamedArgument extends NetObject  {
     
     // Properties section
     
-    public MemberInfo getMemberInfo() throws Throwable {
+    public boolean getIsField() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MemberInfo");
-            return new MemberInfo(val);
+            return (boolean)classInstance.Get("IsField");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,21 +160,22 @@ public class CustomAttributeNamedArgument extends NetObject  {
         }
     }
 
-    public java.lang.String getMemberName() throws Throwable {
+    public MemberInfo getMemberInfo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("MemberName");
+            JCObject val = (JCObject)classInstance.Get("MemberInfo");
+            return new MemberInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsField() throws Throwable {
+    public java.lang.String getMemberName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsField");
+            return (java.lang.String)classInstance.Get("MemberName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

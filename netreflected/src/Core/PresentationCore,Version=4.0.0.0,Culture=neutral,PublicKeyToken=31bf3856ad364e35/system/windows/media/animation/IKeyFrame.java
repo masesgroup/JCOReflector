@@ -94,13 +94,13 @@ public interface IKeyFrame extends IJCOBridgeReflected {
     
     // Properties section
     
-    public KeyTime getKeyTime() throws Throwable;
-
-    public void setKeyTime(KeyTime KeyTime) throws Throwable;
-
     public NetObject getValue() throws Throwable;
 
     public void setValue(NetObject Value) throws Throwable;
+
+    public KeyTime getKeyTime() throws Throwable;
+
+    public void setKeyTime(KeyTime KeyTime) throws Throwable;
 
 
 

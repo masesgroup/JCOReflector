@@ -127,6 +127,16 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
         }
     }
 
+    public java.lang.String GetPathOfAssembly(AssemblyName name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetPathOfAssembly", name == null ? null : name.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetType GetType(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -165,16 +175,6 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReferenceAssembly", name == null ? null : name.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetPathOfAssembly(AssemblyName name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetPathOfAssembly", name == null ? null : name.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

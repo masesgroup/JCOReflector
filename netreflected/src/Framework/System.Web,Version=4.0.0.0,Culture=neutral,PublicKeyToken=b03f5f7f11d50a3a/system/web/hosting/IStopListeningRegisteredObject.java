@@ -89,9 +89,9 @@ public interface IStopListeningRegisteredObject extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void StopListening() throws Throwable;
-
     public void Stop(boolean immediate) throws Throwable;
+
+    public void StopListening() throws Throwable;
 
 
     

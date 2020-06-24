@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
-import system.componentmodel.design.DesignerVerb;
-import system.componentmodel.design.MenuCommand;
 import system.componentmodel.design.CommandID;
+import system.componentmodel.design.MenuCommand;
+import system.componentmodel.design.DesignerVerb;
 import system.componentmodel.design.DesignerVerbCollection;
 import system.componentmodel.design.MenuCommandsChangedEventHandler;
 
@@ -130,21 +130,21 @@ public class MenuCommandService extends NetObject  {
     
     // Methods section
     
-    public void AddVerb(DesignerVerb verb) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.MulticastNotSupportedException {
+    public boolean GlobalInvoke(CommandID commandID) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddVerb", verb == null ? null : verb.getJCOInstance());
+            return (boolean)classInstance.Invoke("GlobalInvoke", commandID == null ? null : commandID.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Dispose() throws Throwable, system.InvalidOperationException, system.ArgumentException {
+    public boolean GlobalInvoke(CommandID commandId, NetObject arg) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Dispose");
+            return (boolean)classInstance.Invoke("GlobalInvoke", commandId == null ? null : commandId.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,21 +161,31 @@ public class MenuCommandService extends NetObject  {
         }
     }
 
-    public boolean GlobalInvoke(CommandID commandID) throws Throwable {
+    public void AddCommand(MenuCommand command) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("GlobalInvoke", commandID == null ? null : commandID.getJCOInstance());
+            classInstance.Invoke("AddCommand", command == null ? null : command.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean GlobalInvoke(CommandID commandId, NetObject arg) throws Throwable {
+    public void AddVerb(DesignerVerb verb) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("GlobalInvoke", commandId == null ? null : commandId.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
+            classInstance.Invoke("AddVerb", verb == null ? null : verb.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable, system.InvalidOperationException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,16 +216,6 @@ public class MenuCommandService extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowContextMenu", menuID == null ? null : menuID.getJCOInstance(), x, y);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddCommand(MenuCommand command) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddCommand", command == null ? null : command.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

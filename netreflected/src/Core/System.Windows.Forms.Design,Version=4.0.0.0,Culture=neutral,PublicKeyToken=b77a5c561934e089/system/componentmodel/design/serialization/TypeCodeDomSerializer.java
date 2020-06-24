@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.codedom.CodeTypeDeclaration;
 import system.componentmodel.design.serialization.IDesignerSerializationManager;
 import system.componentmodel.design.serialization.IDesignerSerializationManagerImplementation;
-import system.codedom.CodeTypeDeclaration;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 
@@ -128,23 +128,23 @@ public class TypeCodeDomSerializer extends NetObject  {
     
     // Methods section
     
-    public NetObject Deserialize(IDesignerSerializationManager manager, CodeTypeDeclaration declaration) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.xml.XmlException, system.TypeLoadException, system.runtime.serialization.SerializationException, system.RankException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", manager == null ? null : manager.getJCOInstance(), declaration == null ? null : declaration.getJCOInstance());
-            return new NetObject(objDeserialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CodeTypeDeclaration Serialize(IDesignerSerializationManager manager, NetObject root, ICollection members) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objSerialize = (JCObject)classInstance.Invoke("Serialize", manager == null ? null : manager.getJCOInstance(), root == null ? null : root.getJCOInstance(), members == null ? null : members.getJCOInstance());
             return new CodeTypeDeclaration(objSerialize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject Deserialize(IDesignerSerializationManager manager, CodeTypeDeclaration declaration) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.xml.XmlException, system.TypeLoadException, system.runtime.serialization.SerializationException, system.RankException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", manager == null ? null : manager.getJCOInstance(), declaration == null ? null : declaration.getJCOInstance());
+            return new NetObject(objDeserialize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

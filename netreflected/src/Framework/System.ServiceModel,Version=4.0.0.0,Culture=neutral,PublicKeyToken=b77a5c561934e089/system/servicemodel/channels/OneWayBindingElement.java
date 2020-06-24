@@ -125,6 +125,16 @@ public class OneWayBindingElement extends NetObject  {
     
     // Methods section
     
+    public boolean ShouldSerializeChannelPoolSettings() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ShouldSerializeChannelPoolSettings");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BindingElement Clone() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,36 +146,25 @@ public class OneWayBindingElement extends NetObject  {
         }
     }
 
-    public boolean ShouldSerializeChannelPoolSettings() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ShouldSerializeChannelPoolSettings");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public ChannelPoolSettings getChannelPoolSettings() throws Throwable {
+    public boolean getPacketRoutable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ChannelPoolSettings");
-            return new ChannelPoolSettings(val);
+            return (boolean)classInstance.Get("PacketRoutable");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setChannelPoolSettings(ChannelPoolSettings ChannelPoolSettings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public void setPacketRoutable(boolean PacketRoutable) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ChannelPoolSettings", ChannelPoolSettings == null ? null : ChannelPoolSettings.getJCOInstance());
+            classInstance.Set("PacketRoutable", PacketRoutable);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,21 +190,22 @@ public class OneWayBindingElement extends NetObject  {
         }
     }
 
-    public boolean getPacketRoutable() throws Throwable {
+    public ChannelPoolSettings getChannelPoolSettings() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("PacketRoutable");
+            JCObject val = (JCObject)classInstance.Get("ChannelPoolSettings");
+            return new ChannelPoolSettings(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setPacketRoutable(boolean PacketRoutable) throws Throwable {
+    public void setChannelPoolSettings(ChannelPoolSettings ChannelPoolSettings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("PacketRoutable", PacketRoutable);
+            classInstance.Set("ChannelPoolSettings", ChannelPoolSettings == null ? null : ChannelPoolSettings.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

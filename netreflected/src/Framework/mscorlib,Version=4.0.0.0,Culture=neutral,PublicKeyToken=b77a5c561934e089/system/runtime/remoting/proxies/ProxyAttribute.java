@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.MarshalByRefObject;
-import system.runtime.remoting.proxies.RealProxy;
-import system.runtime.remoting.ObjRef;
 import system.runtime.remoting.contexts.Context;
 import system.runtime.remoting.activation.IConstructionCallMessage;
 import system.runtime.remoting.activation.IConstructionCallMessageImplementation;
+import system.MarshalByRefObject;
+import system.runtime.remoting.proxies.RealProxy;
+import system.runtime.remoting.ObjRef;
 
 
 /**
@@ -129,6 +129,36 @@ public class ProxyAttribute extends NetObject  {
     
     // Methods section
     
+    public boolean IsContextOK(Context ctx, IConstructionCallMessage msg) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), msg == null ? null : msg.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsDefaultAttribute() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Match(NetObject obj) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MarshalByRefObject CreateInstance(NetType serverType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -151,41 +181,11 @@ public class ProxyAttribute extends NetObject  {
         }
     }
 
-    public boolean IsContextOK(Context ctx, IConstructionCallMessage msg) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), msg == null ? null : msg.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void GetPropertiesForNewContext(IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetPropertiesForNewContext", msg == null ? null : msg.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

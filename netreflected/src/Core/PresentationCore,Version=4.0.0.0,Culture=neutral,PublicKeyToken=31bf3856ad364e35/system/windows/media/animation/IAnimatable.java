@@ -93,6 +93,8 @@ public interface IAnimatable extends IJCOBridgeReflected {
 
     // Methods section
     
+    public NetObject GetAnimationBaseValue(DependencyProperty dp) throws Throwable;
+
     public void ApplyAnimationClock(DependencyProperty dp, AnimationClock clock) throws Throwable;
 
     public void ApplyAnimationClock(DependencyProperty dp, AnimationClock clock, HandoffBehavior handoffBehavior) throws Throwable;
@@ -100,8 +102,6 @@ public interface IAnimatable extends IJCOBridgeReflected {
     public void BeginAnimation(DependencyProperty dp, AnimationTimeline animation) throws Throwable;
 
     public void BeginAnimation(DependencyProperty dp, AnimationTimeline animation, HandoffBehavior handoffBehavior) throws Throwable;
-
-    public NetObject GetAnimationBaseValue(DependencyProperty dp) throws Throwable;
 
 
     

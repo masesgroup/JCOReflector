@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.PeerNodeAddress;
+import system.TimeSpan;
 import system.servicemodel.EndpointAddress;
 import system.servicemodel.description.ClientCredentials;
 import system.servicemodel.peerresolvers.PeerReferralPolicy;
-import system.servicemodel.PeerNodeAddress;
-import system.TimeSpan;
 
 
 /**
@@ -117,22 +117,22 @@ public class PeerResolver extends NetObject  {
     
     // Methods section
     
-    public void Initialize(EndpointAddress address, system.servicemodel.channels.Binding binding, ClientCredentials credentials, PeerReferralPolicy referralPolicy) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", address == null ? null : address.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), credentials == null ? null : credentials.getJCOInstance(), referralPolicy == null ? null : referralPolicy.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject Register(java.lang.String meshId, PeerNodeAddress nodeAddress, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objRegister = (JCObject)classInstance.Invoke("Register", meshId, nodeAddress == null ? null : nodeAddress.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
             return new NetObject(objRegister);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Initialize(EndpointAddress address, system.servicemodel.channels.Binding binding, ClientCredentials credentials, PeerReferralPolicy referralPolicy) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Initialize", address == null ? null : address.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), credentials == null ? null : credentials.getJCOInstance(), referralPolicy == null ? null : referralPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

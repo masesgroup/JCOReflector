@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.media.Visual;
 import system.windows.documents.DocumentPaginator;
-import system.windows.controls.PageRangeSelection;
-import system.windows.controls.PageRange;
-import system.UInt32;
+import system.windows.media.Visual;
 import system.printing.PrintQueue;
 import system.printing.PrintTicket;
+import system.windows.controls.PageRange;
+import system.windows.controls.PageRangeSelection;
+import system.UInt32;
 
 
 /**
@@ -130,16 +130,6 @@ public class PrintDialog extends NetObject  {
     
     // Methods section
     
-    public void PrintVisual(Visual visual, java.lang.String description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.controls.PrintDialogException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PrintVisual", visual == null ? null : visual.getJCOInstance(), description);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void PrintDocument(DocumentPaginator documentPaginator, java.lang.String description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.controls.PrintDialogException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -150,67 +140,35 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    public void PrintVisual(Visual visual, java.lang.String description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.controls.PrintDialogException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PrintVisual", visual == null ? null : visual.getJCOInstance(), description);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public PageRangeSelection getPageRangeSelection() throws Throwable {
+    public boolean getCurrentPageEnabled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PageRangeSelection");
-            return new PageRangeSelection(val);
+            return (boolean)classInstance.Get("CurrentPageEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setPageRangeSelection(PageRangeSelection PageRangeSelection) throws Throwable {
+    public void setCurrentPageEnabled(boolean CurrentPageEnabled) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("PageRangeSelection", PageRangeSelection == null ? null : PageRangeSelection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PageRange getPageRange() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PageRange");
-            return new PageRange(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPageRange(PageRange PageRange) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PageRange", PageRange == null ? null : PageRange.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getUserPageRangeEnabled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("UserPageRangeEnabled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setUserPageRangeEnabled(boolean UserPageRangeEnabled) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("UserPageRangeEnabled", UserPageRangeEnabled);
+            classInstance.Set("CurrentPageEnabled", CurrentPageEnabled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,63 +194,41 @@ public class PrintDialog extends NetObject  {
         }
     }
 
-    public boolean getCurrentPageEnabled() throws Throwable {
+    public boolean getUserPageRangeEnabled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CurrentPageEnabled");
+            return (boolean)classInstance.Get("UserPageRangeEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCurrentPageEnabled(boolean CurrentPageEnabled) throws Throwable {
+    public void setUserPageRangeEnabled(boolean UserPageRangeEnabled) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("CurrentPageEnabled", CurrentPageEnabled);
+            classInstance.Set("UserPageRangeEnabled", UserPageRangeEnabled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public UInt32 getMinPage() throws Throwable {
+    public double getPrintableAreaHeight() throws Throwable, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.controls.PrintDialogException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.xml.XmlException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MinPage");
-            return new UInt32(val);
+            return (double)classInstance.Get("PrintableAreaHeight");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMinPage(UInt32 MinPage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public double getPrintableAreaWidth() throws Throwable, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.controls.PrintDialogException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.xml.XmlException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("MinPage", MinPage == null ? null : MinPage.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UInt32 getMaxPage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MaxPage");
-            return new UInt32(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMaxPage(UInt32 MaxPage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MaxPage", MaxPage == null ? null : MaxPage.getJCOInstance());
+            return (double)classInstance.Get("PrintableAreaWidth");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,21 +276,85 @@ public class PrintDialog extends NetObject  {
         }
     }
 
-    public double getPrintableAreaWidth() throws Throwable, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.controls.PrintDialogException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.xml.XmlException, system.OverflowException {
+    public PageRange getPageRange() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("PrintableAreaWidth");
+            JCObject val = (JCObject)classInstance.Get("PageRange");
+            return new PageRange(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public double getPrintableAreaHeight() throws Throwable, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.controls.PrintDialogException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.xml.XmlException, system.OverflowException {
+    public void setPageRange(PageRange PageRange) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("PrintableAreaHeight");
+            classInstance.Set("PageRange", PageRange == null ? null : PageRange.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PageRangeSelection getPageRangeSelection() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PageRangeSelection");
+            return new PageRangeSelection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPageRangeSelection(PageRangeSelection PageRangeSelection) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PageRangeSelection", PageRangeSelection == null ? null : PageRangeSelection.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UInt32 getMaxPage() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MaxPage");
+            return new UInt32(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMaxPage(UInt32 MaxPage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MaxPage", MaxPage == null ? null : MaxPage.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UInt32 getMinPage() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("MinPage");
+            return new UInt32(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMinPage(UInt32 MinPage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MinPage", MinPage == null ? null : MinPage.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

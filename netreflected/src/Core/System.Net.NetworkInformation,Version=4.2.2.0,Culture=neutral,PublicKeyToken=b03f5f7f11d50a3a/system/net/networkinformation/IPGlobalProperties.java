@@ -38,18 +38,18 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.networkinformation.IPGlobalProperties;
-import system.net.IPEndPoint;
-import system.net.networkinformation.TcpConnectionInformation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
-import system.net.networkinformation.UnicastIPAddressInformationCollection;
-import system.net.networkinformation.TcpStatistics;
-import system.net.networkinformation.UdpStatistics;
+import system.net.IPEndPoint;
 import system.net.networkinformation.IcmpV4Statistics;
 import system.net.networkinformation.IcmpV6Statistics;
+import system.net.networkinformation.IPGlobalProperties;
 import system.net.networkinformation.IPGlobalStatistics;
+import system.net.networkinformation.TcpConnectionInformation;
+import system.net.networkinformation.TcpStatistics;
+import system.net.networkinformation.UdpStatistics;
+import system.net.networkinformation.UnicastIPAddressInformationCollection;
 import system.net.networkinformation.NetBiosNodeType;
 
 
@@ -125,29 +125,12 @@ public class IPGlobalProperties extends NetObject  {
     
     // Methods section
     
-    public static IPGlobalProperties GetIPGlobalProperties() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetIPGlobalProperties = (JCObject)classType.Invoke("GetIPGlobalProperties");
-            return new IPGlobalProperties(objGetIPGlobalProperties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IPEndPoint[] GetActiveUdpListeners() throws Throwable {
+    public IAsyncResult BeginGetUnicastAddresses(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<IPEndPoint> resultingArrayList = new ArrayList<IPEndPoint>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetActiveUdpListeners");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new IPEndPoint(resultingObject));
-            }
-            IPEndPoint[] resultingArray = new IPEndPoint[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            JCObject objBeginGetUnicastAddresses = (JCObject)classInstance.Invoke("BeginGetUnicastAddresses", callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginGetUnicastAddresses);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,6 +153,78 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    public IPEndPoint[] GetActiveUdpListeners() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<IPEndPoint> resultingArrayList = new ArrayList<IPEndPoint>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetActiveUdpListeners");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new IPEndPoint(resultingObject));
+            }
+            IPEndPoint[] resultingArray = new IPEndPoint[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IcmpV4Statistics GetIcmpV4Statistics() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetIcmpV4Statistics = (JCObject)classInstance.Invoke("GetIcmpV4Statistics");
+            return new IcmpV4Statistics(objGetIcmpV4Statistics);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IcmpV6Statistics GetIcmpV6Statistics() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetIcmpV6Statistics = (JCObject)classInstance.Invoke("GetIcmpV6Statistics");
+            return new IcmpV6Statistics(objGetIcmpV6Statistics);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IPGlobalProperties GetIPGlobalProperties() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetIPGlobalProperties = (JCObject)classType.Invoke("GetIPGlobalProperties");
+            return new IPGlobalProperties(objGetIPGlobalProperties);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IPGlobalStatistics GetIPv4GlobalStatistics() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetIPv4GlobalStatistics = (JCObject)classInstance.Invoke("GetIPv4GlobalStatistics");
+            return new IPGlobalStatistics(objGetIPv4GlobalStatistics);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IPGlobalStatistics GetIPv6GlobalStatistics() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetIPv6GlobalStatistics = (JCObject)classInstance.Invoke("GetIPv6GlobalStatistics");
+            return new IPGlobalStatistics(objGetIPv6GlobalStatistics);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TcpConnectionInformation[] GetActiveTcpConnections() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -182,28 +237,6 @@ public class IPGlobalProperties extends NetObject  {
             TcpConnectionInformation[] resultingArray = new TcpConnectionInformation[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IAsyncResult BeginGetUnicastAddresses(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBeginGetUnicastAddresses = (JCObject)classInstance.Invoke("BeginGetUnicastAddresses", callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginGetUnicastAddresses);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UnicastIPAddressInformationCollection EndGetUnicastAddresses(IAsyncResult asyncResult) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEndGetUnicastAddresses = (JCObject)classInstance.Invoke("EndGetUnicastAddresses", asyncResult == null ? null : asyncResult.getJCOInstance());
-            return new UnicastIPAddressInformationCollection(objEndGetUnicastAddresses);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,45 +286,12 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
-    public IcmpV4Statistics GetIcmpV4Statistics() throws Throwable {
+    public UnicastIPAddressInformationCollection EndGetUnicastAddresses(IAsyncResult asyncResult) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetIcmpV4Statistics = (JCObject)classInstance.Invoke("GetIcmpV4Statistics");
-            return new IcmpV4Statistics(objGetIcmpV4Statistics);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IcmpV6Statistics GetIcmpV6Statistics() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetIcmpV6Statistics = (JCObject)classInstance.Invoke("GetIcmpV6Statistics");
-            return new IcmpV6Statistics(objGetIcmpV6Statistics);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IPGlobalStatistics GetIPv4GlobalStatistics() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetIPv4GlobalStatistics = (JCObject)classInstance.Invoke("GetIPv4GlobalStatistics");
-            return new IPGlobalStatistics(objGetIPv4GlobalStatistics);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IPGlobalStatistics GetIPv6GlobalStatistics() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetIPv6GlobalStatistics = (JCObject)classInstance.Invoke("GetIPv6GlobalStatistics");
-            return new IPGlobalStatistics(objGetIPv6GlobalStatistics);
+            JCObject objEndGetUnicastAddresses = (JCObject)classInstance.Invoke("EndGetUnicastAddresses", asyncResult == null ? null : asyncResult.getJCOInstance());
+            return new UnicastIPAddressInformationCollection(objEndGetUnicastAddresses);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,6 +312,27 @@ public class IPGlobalProperties extends NetObject  {
     
     // Properties section
     
+    public boolean getIsWinsProxy() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsWinsProxy");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetBiosNodeType getNodeType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NodeType");
+            return new NetBiosNodeType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getDhcpScopeName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -337,27 +358,6 @@ public class IPGlobalProperties extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("HostName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsWinsProxy() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsWinsProxy");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetBiosNodeType getNodeType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NodeType");
-            return new NetBiosNodeType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

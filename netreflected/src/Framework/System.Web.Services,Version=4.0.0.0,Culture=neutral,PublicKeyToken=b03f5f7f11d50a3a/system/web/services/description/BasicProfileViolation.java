@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.services.WsiProfiles;
 import system.collections.specialized.StringCollection;
+import system.web.services.WsiProfiles;
 
 
 /**
@@ -118,12 +118,12 @@ public class BasicProfileViolation extends NetObject  {
     
     // Properties section
     
-    public WsiProfiles getClaims() throws Throwable {
+    public StringCollection getElements() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Claims");
-            return new WsiProfiles(val);
+            JCObject val = (JCObject)classInstance.Get("Elements");
+            return new StringCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -134,17 +134,6 @@ public class BasicProfileViolation extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Details");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StringCollection getElements() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Elements");
-            return new StringCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,6 +154,17 @@ public class BasicProfileViolation extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Recommendation");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WsiProfiles getClaims() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Claims");
+            return new WsiProfiles(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.workflow.componentmodel.compiler.AttributeInfo;
 import system.codedom.MemberAttributes;
 import system.codedom.CodeSnippetExpression;
-import system.workflow.componentmodel.compiler.AttributeInfo;
 import system.workflow.componentmodel.Activity;
 
 
@@ -93,27 +93,27 @@ public interface IMemberCreationService extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void CreateEvent(java.lang.String className, java.lang.String eventName, NetType eventType, AttributeInfo[] attributes, boolean emitDependencyProperty) throws Throwable;
+
     public void CreateField(java.lang.String className, java.lang.String fieldName, NetType fieldType, NetType[] genericParameterTypes, MemberAttributes attributes, CodeSnippetExpression initializationExpression, boolean overwriteExisting) throws Throwable;
 
     public void CreateProperty(java.lang.String className, java.lang.String propertyName, NetType propertyType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty, boolean isAttached, NetType ownerType, boolean isReadOnly) throws Throwable;
 
-    public void CreateEvent(java.lang.String className, java.lang.String eventName, NetType eventType, AttributeInfo[] attributes, boolean emitDependencyProperty) throws Throwable;
-
-    public void UpdateTypeName(java.lang.String oldClassName, java.lang.String newClassName) throws Throwable;
-
-    public void UpdateBaseType(java.lang.String className, NetType baseType) throws Throwable;
-
-    public void UpdateProperty(java.lang.String className, java.lang.String oldPropertyName, NetType oldPropertyType, java.lang.String newPropertyName, NetType newPropertyType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty) throws Throwable;
-
-    public void UpdateEvent(java.lang.String className, java.lang.String oldEventName, NetType oldEventType, java.lang.String newEventName, NetType newEventType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty) throws Throwable;
+    public void RemoveEvent(java.lang.String className, java.lang.String eventName, NetType eventType) throws Throwable;
 
     public void RemoveProperty(java.lang.String className, java.lang.String propertyName, NetType propertyType) throws Throwable;
 
-    public void RemoveEvent(java.lang.String className, java.lang.String eventName, NetType eventType) throws Throwable;
+    public void ShowCode() throws Throwable;
 
     public void ShowCode(Activity activity, java.lang.String methodName, NetType delegateType) throws Throwable;
 
-    public void ShowCode() throws Throwable;
+    public void UpdateBaseType(java.lang.String className, NetType baseType) throws Throwable;
+
+    public void UpdateEvent(java.lang.String className, java.lang.String oldEventName, NetType oldEventType, java.lang.String newEventName, NetType newEventType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty) throws Throwable;
+
+    public void UpdateProperty(java.lang.String className, java.lang.String oldPropertyName, NetType oldPropertyType, java.lang.String newPropertyName, NetType newPropertyType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty) throws Throwable;
+
+    public void UpdateTypeName(java.lang.String oldClassName, java.lang.String newClassName) throws Throwable;
 
 
     

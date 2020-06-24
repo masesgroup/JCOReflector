@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.workflow.runtime.CorrelationProperty;
 import system.workflow.activities.EventQueueName;
+import system.workflow.runtime.CorrelationProperty;
 
 
 /**
@@ -125,23 +125,6 @@ public class EventQueueName extends NetObject  {
     
     // Methods section
     
-    public CorrelationProperty[] GetCorrelationValues() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<CorrelationProperty> resultingArrayList = new ArrayList<CorrelationProperty>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCorrelationValues");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new CorrelationProperty(resultingObject));
-            }
-            CorrelationProperty[] resultingArray = new CorrelationProperty[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int CompareTo(NetObject toCompare) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -162,26 +145,43 @@ public class EventQueueName extends NetObject  {
         }
     }
 
+    public CorrelationProperty[] GetCorrelationValues() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<CorrelationProperty> resultingArrayList = new ArrayList<CorrelationProperty>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCorrelationValues");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new CorrelationProperty(resultingObject));
+            }
+            CorrelationProperty[] resultingArray = new CorrelationProperty[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public java.lang.String getMethodName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("MethodName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetType getInterfaceType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("InterfaceType");
             return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getMethodName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("MethodName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

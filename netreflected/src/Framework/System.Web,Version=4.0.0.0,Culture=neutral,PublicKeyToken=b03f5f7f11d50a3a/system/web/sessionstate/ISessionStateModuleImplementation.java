@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.HttpContext;
 import system.threading.tasks.Task;
+import system.web.HttpContext;
 import system.web.HttpApplication;
 
 
@@ -106,22 +106,22 @@ public class ISessionStateModuleImplementation extends NetObject implements ISes
 
     // Methods section
     
-    public void ReleaseSessionState(HttpContext context) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReleaseSessionState", context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Task ReleaseSessionStateAsync(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objReleaseSessionStateAsync = (JCObject)classInstance.Invoke("ReleaseSessionStateAsync", context == null ? null : context.getJCOInstance());
             return new Task(objReleaseSessionStateAsync);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -137,11 +137,11 @@ public class ISessionStateModuleImplementation extends NetObject implements ISes
         }
     }
 
-    public void Dispose() throws Throwable {
+    public void ReleaseSessionState(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Dispose");
+            classInstance.Invoke("ReleaseSessionState", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

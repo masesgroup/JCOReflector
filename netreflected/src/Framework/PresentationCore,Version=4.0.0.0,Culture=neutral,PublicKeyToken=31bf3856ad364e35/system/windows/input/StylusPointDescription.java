@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.input.StylusPointDescription;
 import system.windows.input.StylusPointProperty;
 import system.windows.input.StylusPointPropertyInfo;
-import system.windows.input.StylusPointDescription;
 
 
 /**
@@ -126,6 +126,16 @@ public class StylusPointDescription extends NetObject  {
     
     // Methods section
     
+    public static boolean AreCompatible(StylusPointDescription stylusPointDescription1, StylusPointDescription stylusPointDescription2) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("AreCompatible", stylusPointDescription1 == null ? null : stylusPointDescription1.getJCOInstance(), stylusPointDescription2 == null ? null : stylusPointDescription2.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean HasProperty(StylusPointProperty stylusPointProperty) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,22 +146,11 @@ public class StylusPointDescription extends NetObject  {
         }
     }
 
-    public StylusPointPropertyInfo GetPropertyInfo(StylusPointProperty stylusPointProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public boolean IsSubsetOf(StylusPointDescription stylusPointDescriptionSuperset) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPropertyInfo = (JCObject)classInstance.Invoke("GetPropertyInfo", stylusPointProperty == null ? null : stylusPointProperty.getJCOInstance());
-            return new StylusPointPropertyInfo(objGetPropertyInfo);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean AreCompatible(StylusPointDescription stylusPointDescription1, StylusPointDescription stylusPointDescription2) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("AreCompatible", stylusPointDescription1 == null ? null : stylusPointDescription1.getJCOInstance(), stylusPointDescription2 == null ? null : stylusPointDescription2.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsSubsetOf", stylusPointDescriptionSuperset == null ? null : stylusPointDescriptionSuperset.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,11 +167,12 @@ public class StylusPointDescription extends NetObject  {
         }
     }
 
-    public boolean IsSubsetOf(StylusPointDescription stylusPointDescriptionSuperset) throws Throwable, system.ArgumentNullException {
+    public StylusPointPropertyInfo GetPropertyInfo(StylusPointProperty stylusPointProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsSubsetOf", stylusPointDescriptionSuperset == null ? null : stylusPointDescriptionSuperset.getJCOInstance());
+            JCObject objGetPropertyInfo = (JCObject)classInstance.Invoke("GetPropertyInfo", stylusPointProperty == null ? null : stylusPointProperty.getJCOInstance());
+            return new StylusPointPropertyInfo(objGetPropertyInfo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

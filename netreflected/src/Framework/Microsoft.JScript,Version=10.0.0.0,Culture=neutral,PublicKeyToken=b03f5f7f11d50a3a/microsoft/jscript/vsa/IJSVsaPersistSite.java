@@ -89,9 +89,9 @@ public interface IJSVsaPersistSite extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void SaveElement(java.lang.String name, java.lang.String source) throws Throwable;
-
     public java.lang.String LoadElement(java.lang.String name) throws Throwable;
+
+    public void SaveElement(java.lang.String name, java.lang.String source) throws Throwable;
 
 
     

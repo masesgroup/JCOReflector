@@ -129,23 +129,23 @@ public class DataGridViewAutoSizeColumnModeEventArgs extends NetObject  {
     
     // Properties section
     
-    public DataGridViewColumn getColumn() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Column");
-            return new DataGridViewColumn(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataGridViewAutoSizeColumnMode getPreviousMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("PreviousMode");
             return new DataGridViewAutoSizeColumnMode(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataGridViewColumn getColumn() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Column");
+            return new DataGridViewColumn(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,66 +38,66 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.ecma335.HeapIndex;
-import system.reflection.metadata.BlobHandle;
-import system.reflection.metadata.BlobBuilder;
-import system.reflection.metadata.GuidHandle;
-import system.Guid;
-import system.reflection.metadata.StringHandle;
-import system.reflection.metadata.UserStringHandle;
 import system.reflection.metadata.ecma335.TableIndex;
-import system.reflection.metadata.ModuleDefinitionHandle;
 import system.reflection.metadata.AssemblyDefinitionHandle;
+import system.reflection.metadata.StringHandle;
 import system.Version;
+import system.reflection.metadata.BlobHandle;
 import system.reflection.AssemblyFlags;
 import system.reflection.AssemblyHashAlgorithm;
-import system.reflection.metadata.AssemblyReferenceHandle;
-import system.reflection.metadata.TypeDefinitionHandle;
-import system.reflection.TypeAttributes;
-import system.reflection.metadata.EntityHandle;
-import system.reflection.metadata.FieldDefinitionHandle;
-import system.reflection.metadata.MethodDefinitionHandle;
-import system.UInt16;
-import system.UInt32;
-import system.reflection.metadata.InterfaceImplementationHandle;
-import system.reflection.metadata.TypeReferenceHandle;
-import system.reflection.metadata.TypeSpecificationHandle;
-import system.reflection.metadata.StandaloneSignatureHandle;
-import system.reflection.metadata.PropertyDefinitionHandle;
-import system.reflection.PropertyAttributes;
-import system.reflection.metadata.EventDefinitionHandle;
-import system.reflection.EventAttributes;
-import system.reflection.metadata.ConstantHandle;
-import system.reflection.MethodSemanticsAttributes;
-import system.reflection.metadata.CustomAttributeHandle;
-import system.reflection.metadata.MethodSpecificationHandle;
-import system.reflection.metadata.ModuleReferenceHandle;
-import system.reflection.metadata.ParameterHandle;
-import system.reflection.ParameterAttributes;
-import system.reflection.metadata.GenericParameterHandle;
-import system.reflection.GenericParameterAttributes;
-import system.reflection.metadata.GenericParameterConstraintHandle;
-import system.reflection.FieldAttributes;
-import system.reflection.MethodAttributes;
-import system.reflection.MethodImplAttributes;
-import system.reflection.MethodImportAttributes;
-import system.reflection.metadata.MethodImplementationHandle;
-import system.reflection.metadata.MemberReferenceHandle;
-import system.reflection.metadata.ManifestResourceHandle;
-import system.reflection.ManifestResourceAttributes;
 import system.reflection.metadata.AssemblyFileHandle;
-import system.reflection.metadata.ExportedTypeHandle;
+import system.reflection.metadata.AssemblyReferenceHandle;
+import system.reflection.metadata.BlobBuilder;
+import system.reflection.metadata.ConstantHandle;
+import system.reflection.metadata.EntityHandle;
+import system.reflection.metadata.CustomAttributeHandle;
+import system.reflection.metadata.CustomDebugInformationHandle;
+import system.reflection.metadata.GuidHandle;
 import system.reflection.metadata.DeclarativeSecurityAttributeHandle;
 import system.reflection.DeclarativeSecurityAction;
-import system.reflection.metadata.ecma335.EditAndContinueOperation;
 import system.reflection.metadata.DocumentHandle;
-import system.reflection.metadata.MethodDebugInformationHandle;
-import system.reflection.metadata.LocalScopeHandle;
+import system.reflection.metadata.EventDefinitionHandle;
+import system.reflection.EventAttributes;
+import system.reflection.metadata.ExportedTypeHandle;
+import system.reflection.TypeAttributes;
+import system.reflection.metadata.FieldDefinitionHandle;
+import system.reflection.FieldAttributes;
+import system.reflection.metadata.GenericParameterConstraintHandle;
+import system.reflection.metadata.GenericParameterHandle;
+import system.reflection.GenericParameterAttributes;
+import system.Guid;
 import system.reflection.metadata.ImportScopeHandle;
-import system.reflection.metadata.LocalVariableHandle;
+import system.reflection.metadata.InterfaceImplementationHandle;
+import system.reflection.metadata.TypeDefinitionHandle;
 import system.reflection.metadata.LocalConstantHandle;
+import system.reflection.metadata.LocalScopeHandle;
+import system.reflection.metadata.MethodDefinitionHandle;
+import system.reflection.metadata.LocalVariableHandle;
 import system.reflection.metadata.LocalVariableAttributes;
-import system.reflection.metadata.CustomDebugInformationHandle;
+import system.reflection.metadata.ManifestResourceHandle;
+import system.reflection.ManifestResourceAttributes;
+import system.UInt32;
+import system.reflection.metadata.MemberReferenceHandle;
+import system.reflection.metadata.MethodDebugInformationHandle;
+import system.reflection.MethodAttributes;
+import system.reflection.MethodImplAttributes;
+import system.reflection.metadata.ParameterHandle;
+import system.reflection.metadata.MethodImplementationHandle;
+import system.reflection.metadata.MethodSpecificationHandle;
+import system.reflection.metadata.ModuleDefinitionHandle;
+import system.reflection.metadata.ModuleReferenceHandle;
+import system.reflection.ParameterAttributes;
+import system.reflection.metadata.PropertyDefinitionHandle;
+import system.reflection.PropertyAttributes;
+import system.reflection.metadata.StandaloneSignatureHandle;
+import system.reflection.metadata.TypeReferenceHandle;
+import system.reflection.metadata.TypeSpecificationHandle;
+import system.reflection.metadata.UserStringHandle;
+import system.reflection.metadata.ecma335.EditAndContinueOperation;
+import system.reflection.MethodImportAttributes;
+import system.reflection.MethodSemanticsAttributes;
+import system.UInt16;
+import system.reflection.metadata.ecma335.HeapIndex;
 
 
 /**
@@ -183,22 +183,44 @@ public class MetadataBuilder extends NetObject  {
     
     // Methods section
     
-    public void SetCapacity(HeapIndex heap, int byteCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public int GetRowCount(TableIndex table) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetCapacity", heap == null ? null : heap.getJCOInstance(), byteCount);
+            return (int)classInstance.Invoke("GetRowCount", table == null ? null : table.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public BlobHandle GetOrAddBlob(BlobBuilder value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public AssemblyDefinitionHandle AddAssembly(StringHandle name, Version version, StringHandle culture, BlobHandle publicKey, AssemblyFlags flags, AssemblyHashAlgorithm hashAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetOrAddBlob = (JCObject)classInstance.Invoke("GetOrAddBlob", value == null ? null : value.getJCOInstance());
-            return new BlobHandle(objGetOrAddBlob);
+            JCObject objAddAssembly = (JCObject)classInstance.Invoke("AddAssembly", name == null ? null : name.getJCOInstance(), version == null ? null : version.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), publicKey == null ? null : publicKey.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            return new AssemblyDefinitionHandle(objAddAssembly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AssemblyFileHandle AddAssemblyFile(StringHandle name, BlobHandle hashValue, boolean containsMetadata) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddAssemblyFile = (JCObject)classInstance.Invoke("AddAssemblyFile", name == null ? null : name.getJCOInstance(), hashValue == null ? null : hashValue.getJCOInstance(), containsMetadata);
+            return new AssemblyFileHandle(objAddAssemblyFile);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AssemblyReferenceHandle AddAssemblyReference(StringHandle name, Version version, StringHandle culture, BlobHandle publicKeyOrToken, AssemblyFlags flags, BlobHandle hashValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddAssemblyReference = (JCObject)classInstance.Invoke("AddAssemblyReference", name == null ? null : name.getJCOInstance(), version == null ? null : version.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), publicKeyOrToken == null ? null : publicKeyOrToken.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), hashValue == null ? null : hashValue.getJCOInstance());
+            return new AssemblyReferenceHandle(objAddAssemblyReference);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,12 +237,12 @@ public class MetadataBuilder extends NetObject  {
         }
     }
 
-    public BlobHandle GetOrAddConstantBlob(NetObject value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException {
+    public BlobHandle GetOrAddBlob(BlobBuilder value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetOrAddConstantBlob = (JCObject)classInstance.Invoke("GetOrAddConstantBlob", value == null ? null : value.getJCOInstance());
-            return new BlobHandle(objGetOrAddConstantBlob);
+            JCObject objGetOrAddBlob = (JCObject)classInstance.Invoke("GetOrAddBlob", value == null ? null : value.getJCOInstance());
+            return new BlobHandle(objGetOrAddBlob);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,215 +270,23 @@ public class MetadataBuilder extends NetObject  {
         }
     }
 
+    public BlobHandle GetOrAddConstantBlob(NetObject value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetOrAddConstantBlob = (JCObject)classInstance.Invoke("GetOrAddConstantBlob", value == null ? null : value.getJCOInstance());
+            return new BlobHandle(objGetOrAddConstantBlob);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BlobHandle GetOrAddDocumentName(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetOrAddDocumentName = (JCObject)classInstance.Invoke("GetOrAddDocumentName", value);
             return new BlobHandle(objGetOrAddDocumentName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public GuidHandle GetOrAddGuid(Guid guid) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetOrAddGuid = (JCObject)classInstance.Invoke("GetOrAddGuid", guid == null ? null : guid.getJCOInstance());
-            return new GuidHandle(objGetOrAddGuid);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StringHandle GetOrAddString(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetOrAddString = (JCObject)classInstance.Invoke("GetOrAddString", value);
-            return new StringHandle(objGetOrAddString);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UserStringHandle GetOrAddUserString(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.reflection.metadata.ImageFormatLimitationException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetOrAddUserString = (JCObject)classInstance.Invoke("GetOrAddUserString", value);
-            return new UserStringHandle(objGetOrAddUserString);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetCapacity(TableIndex table, int rowCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetCapacity", table == null ? null : table.getJCOInstance(), rowCount);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetRowCount(TableIndex table) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetRowCount", table == null ? null : table.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModuleDefinitionHandle AddModule(int generation, StringHandle moduleName, GuidHandle mvid, GuidHandle encId, GuidHandle encBaseId) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddModule = (JCObject)classInstance.Invoke("AddModule", generation, moduleName == null ? null : moduleName.getJCOInstance(), mvid == null ? null : mvid.getJCOInstance(), encId == null ? null : encId.getJCOInstance(), encBaseId == null ? null : encBaseId.getJCOInstance());
-            return new ModuleDefinitionHandle(objAddModule);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AssemblyDefinitionHandle AddAssembly(StringHandle name, Version version, StringHandle culture, BlobHandle publicKey, AssemblyFlags flags, AssemblyHashAlgorithm hashAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddAssembly = (JCObject)classInstance.Invoke("AddAssembly", name == null ? null : name.getJCOInstance(), version == null ? null : version.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), publicKey == null ? null : publicKey.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
-            return new AssemblyDefinitionHandle(objAddAssembly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AssemblyReferenceHandle AddAssemblyReference(StringHandle name, Version version, StringHandle culture, BlobHandle publicKeyOrToken, AssemblyFlags flags, BlobHandle hashValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddAssemblyReference = (JCObject)classInstance.Invoke("AddAssemblyReference", name == null ? null : name.getJCOInstance(), version == null ? null : version.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), publicKeyOrToken == null ? null : publicKeyOrToken.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), hashValue == null ? null : hashValue.getJCOInstance());
-            return new AssemblyReferenceHandle(objAddAssemblyReference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeDefinitionHandle AddTypeDefinition(TypeAttributes attributes, StringHandle namespace, StringHandle name, EntityHandle baseType, FieldDefinitionHandle fieldList, MethodDefinitionHandle methodList) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddTypeDefinition = (JCObject)classInstance.Invoke("AddTypeDefinition", attributes == null ? null : attributes.getJCOInstance(), namespace == null ? null : namespace.getJCOInstance(), name == null ? null : name.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), fieldList == null ? null : fieldList.getJCOInstance(), methodList == null ? null : methodList.getJCOInstance());
-            return new TypeDefinitionHandle(objAddTypeDefinition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddTypeLayout(TypeDefinitionHandle type, UInt16 packingSize, UInt32 size) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddTypeLayout", type == null ? null : type.getJCOInstance(), packingSize == null ? null : packingSize.getJCOInstance(), size == null ? null : size.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public InterfaceImplementationHandle AddInterfaceImplementation(TypeDefinitionHandle type, EntityHandle implementedInterface) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddInterfaceImplementation = (JCObject)classInstance.Invoke("AddInterfaceImplementation", type == null ? null : type.getJCOInstance(), implementedInterface == null ? null : implementedInterface.getJCOInstance());
-            return new InterfaceImplementationHandle(objAddInterfaceImplementation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddNestedType(TypeDefinitionHandle type, TypeDefinitionHandle enclosingType) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddNestedType", type == null ? null : type.getJCOInstance(), enclosingType == null ? null : enclosingType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeReferenceHandle AddTypeReference(EntityHandle resolutionScope, StringHandle namespace, StringHandle name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddTypeReference = (JCObject)classInstance.Invoke("AddTypeReference", resolutionScope == null ? null : resolutionScope.getJCOInstance(), namespace == null ? null : namespace.getJCOInstance(), name == null ? null : name.getJCOInstance());
-            return new TypeReferenceHandle(objAddTypeReference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeSpecificationHandle AddTypeSpecification(BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddTypeSpecification = (JCObject)classInstance.Invoke("AddTypeSpecification", signature == null ? null : signature.getJCOInstance());
-            return new TypeSpecificationHandle(objAddTypeSpecification);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StandaloneSignatureHandle AddStandaloneSignature(BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddStandaloneSignature = (JCObject)classInstance.Invoke("AddStandaloneSignature", signature == null ? null : signature.getJCOInstance());
-            return new StandaloneSignatureHandle(objAddStandaloneSignature);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyDefinitionHandle AddProperty(PropertyAttributes attributes, StringHandle name, BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddProperty = (JCObject)classInstance.Invoke("AddProperty", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
-            return new PropertyDefinitionHandle(objAddProperty);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddPropertyMap(TypeDefinitionHandle declaringType, PropertyDefinitionHandle propertyList) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddPropertyMap", declaringType == null ? null : declaringType.getJCOInstance(), propertyList == null ? null : propertyList.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EventDefinitionHandle AddEvent(EventAttributes attributes, StringHandle name, EntityHandle type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddEvent = (JCObject)classInstance.Invoke("AddEvent", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), type == null ? null : type.getJCOInstance());
-            return new EventDefinitionHandle(objAddEvent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddEventMap(TypeDefinitionHandle declaringType, EventDefinitionHandle eventList) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddEventMap", declaringType == null ? null : declaringType.getJCOInstance(), eventList == null ? null : eventList.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,16 +303,6 @@ public class MetadataBuilder extends NetObject  {
         }
     }
 
-    public void AddMethodSemantics(EntityHandle association, MethodSemanticsAttributes semantics, MethodDefinitionHandle methodDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddMethodSemantics", association == null ? null : association.getJCOInstance(), semantics == null ? null : semantics.getJCOInstance(), methodDefinition == null ? null : methodDefinition.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CustomAttributeHandle AddCustomAttribute(EntityHandle parent, EntityHandle constructor, BlobHandle value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -494,173 +314,12 @@ public class MetadataBuilder extends NetObject  {
         }
     }
 
-    public MethodSpecificationHandle AddMethodSpecification(EntityHandle method, BlobHandle instantiation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+    public CustomDebugInformationHandle AddCustomDebugInformation(EntityHandle parent, GuidHandle kind, BlobHandle value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAddMethodSpecification = (JCObject)classInstance.Invoke("AddMethodSpecification", method == null ? null : method.getJCOInstance(), instantiation == null ? null : instantiation.getJCOInstance());
-            return new MethodSpecificationHandle(objAddMethodSpecification);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModuleReferenceHandle AddModuleReference(StringHandle moduleName) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddModuleReference = (JCObject)classInstance.Invoke("AddModuleReference", moduleName == null ? null : moduleName.getJCOInstance());
-            return new ModuleReferenceHandle(objAddModuleReference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ParameterHandle AddParameter(ParameterAttributes attributes, StringHandle name, int sequenceNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddParameter = (JCObject)classInstance.Invoke("AddParameter", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), sequenceNumber);
-            return new ParameterHandle(objAddParameter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public GenericParameterHandle AddGenericParameter(EntityHandle parent, GenericParameterAttributes attributes, StringHandle name, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddGenericParameter = (JCObject)classInstance.Invoke("AddGenericParameter", parent == null ? null : parent.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), index);
-            return new GenericParameterHandle(objAddGenericParameter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public GenericParameterConstraintHandle AddGenericParameterConstraint(GenericParameterHandle genericParameter, EntityHandle constraint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddGenericParameterConstraint = (JCObject)classInstance.Invoke("AddGenericParameterConstraint", genericParameter == null ? null : genericParameter.getJCOInstance(), constraint == null ? null : constraint.getJCOInstance());
-            return new GenericParameterConstraintHandle(objAddGenericParameterConstraint);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FieldDefinitionHandle AddFieldDefinition(FieldAttributes attributes, StringHandle name, BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddFieldDefinition = (JCObject)classInstance.Invoke("AddFieldDefinition", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
-            return new FieldDefinitionHandle(objAddFieldDefinition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddFieldLayout(FieldDefinitionHandle field, int offset) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddFieldLayout", field == null ? null : field.getJCOInstance(), offset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddMarshallingDescriptor(EntityHandle parent, BlobHandle descriptor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddMarshallingDescriptor", parent == null ? null : parent.getJCOInstance(), descriptor == null ? null : descriptor.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddFieldRelativeVirtualAddress(FieldDefinitionHandle field, int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddFieldRelativeVirtualAddress", field == null ? null : field.getJCOInstance(), offset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodDefinitionHandle AddMethodDefinition(MethodAttributes attributes, MethodImplAttributes implAttributes, StringHandle name, BlobHandle signature, int bodyOffset, ParameterHandle parameterList) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddMethodDefinition = (JCObject)classInstance.Invoke("AddMethodDefinition", attributes == null ? null : attributes.getJCOInstance(), implAttributes == null ? null : implAttributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance(), bodyOffset, parameterList == null ? null : parameterList.getJCOInstance());
-            return new MethodDefinitionHandle(objAddMethodDefinition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddMethodImport(MethodDefinitionHandle method, MethodImportAttributes attributes, StringHandle name, ModuleReferenceHandle module) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddMethodImport", method == null ? null : method.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), module == null ? null : module.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodImplementationHandle AddMethodImplementation(TypeDefinitionHandle type, EntityHandle methodBody, EntityHandle methodDeclaration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddMethodImplementation = (JCObject)classInstance.Invoke("AddMethodImplementation", type == null ? null : type.getJCOInstance(), methodBody == null ? null : methodBody.getJCOInstance(), methodDeclaration == null ? null : methodDeclaration.getJCOInstance());
-            return new MethodImplementationHandle(objAddMethodImplementation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MemberReferenceHandle AddMemberReference(EntityHandle parent, StringHandle name, BlobHandle signature) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddMemberReference = (JCObject)classInstance.Invoke("AddMemberReference", parent == null ? null : parent.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
-            return new MemberReferenceHandle(objAddMemberReference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManifestResourceHandle AddManifestResource(ManifestResourceAttributes attributes, StringHandle name, EntityHandle implementation, UInt32 offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddManifestResource = (JCObject)classInstance.Invoke("AddManifestResource", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), implementation == null ? null : implementation.getJCOInstance(), offset == null ? null : offset.getJCOInstance());
-            return new ManifestResourceHandle(objAddManifestResource);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AssemblyFileHandle AddAssemblyFile(StringHandle name, BlobHandle hashValue, boolean containsMetadata) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddAssemblyFile = (JCObject)classInstance.Invoke("AddAssemblyFile", name == null ? null : name.getJCOInstance(), hashValue == null ? null : hashValue.getJCOInstance(), containsMetadata);
-            return new AssemblyFileHandle(objAddAssemblyFile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ExportedTypeHandle AddExportedType(TypeAttributes attributes, StringHandle namespace, StringHandle name, EntityHandle implementation, int typeDefinitionId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddExportedType = (JCObject)classInstance.Invoke("AddExportedType", attributes == null ? null : attributes.getJCOInstance(), namespace == null ? null : namespace.getJCOInstance(), name == null ? null : name.getJCOInstance(), implementation == null ? null : implementation.getJCOInstance(), typeDefinitionId);
-            return new ExportedTypeHandle(objAddExportedType);
+            JCObject objAddCustomDebugInformation = (JCObject)classInstance.Invoke("AddCustomDebugInformation", parent == null ? null : parent.getJCOInstance(), kind == null ? null : kind.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return new CustomDebugInformationHandle(objAddCustomDebugInformation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -677,26 +336,6 @@ public class MetadataBuilder extends NetObject  {
         }
     }
 
-    public void AddEncLogEntry(EntityHandle entity, EditAndContinueOperation code) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddEncLogEntry", entity == null ? null : entity.getJCOInstance(), code == null ? null : code.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddEncMapEntry(EntityHandle entity) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddEncMapEntry", entity == null ? null : entity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DocumentHandle AddDocument(BlobHandle name, GuidHandle hashAlgorithm, BlobHandle hash, GuidHandle language) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -708,12 +347,100 @@ public class MetadataBuilder extends NetObject  {
         }
     }
 
-    public MethodDebugInformationHandle AddMethodDebugInformation(DocumentHandle document, BlobHandle sequencePoints) throws Throwable, system.ArgumentOutOfRangeException {
+    public EventDefinitionHandle AddEvent(EventAttributes attributes, StringHandle name, EntityHandle type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAddMethodDebugInformation = (JCObject)classInstance.Invoke("AddMethodDebugInformation", document == null ? null : document.getJCOInstance(), sequencePoints == null ? null : sequencePoints.getJCOInstance());
-            return new MethodDebugInformationHandle(objAddMethodDebugInformation);
+            JCObject objAddEvent = (JCObject)classInstance.Invoke("AddEvent", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            return new EventDefinitionHandle(objAddEvent);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ExportedTypeHandle AddExportedType(TypeAttributes attributes, StringHandle namespace, StringHandle name, EntityHandle implementation, int typeDefinitionId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddExportedType = (JCObject)classInstance.Invoke("AddExportedType", attributes == null ? null : attributes.getJCOInstance(), namespace == null ? null : namespace.getJCOInstance(), name == null ? null : name.getJCOInstance(), implementation == null ? null : implementation.getJCOInstance(), typeDefinitionId);
+            return new ExportedTypeHandle(objAddExportedType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FieldDefinitionHandle AddFieldDefinition(FieldAttributes attributes, StringHandle name, BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddFieldDefinition = (JCObject)classInstance.Invoke("AddFieldDefinition", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
+            return new FieldDefinitionHandle(objAddFieldDefinition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public GenericParameterConstraintHandle AddGenericParameterConstraint(GenericParameterHandle genericParameter, EntityHandle constraint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddGenericParameterConstraint = (JCObject)classInstance.Invoke("AddGenericParameterConstraint", genericParameter == null ? null : genericParameter.getJCOInstance(), constraint == null ? null : constraint.getJCOInstance());
+            return new GenericParameterConstraintHandle(objAddGenericParameterConstraint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public GenericParameterHandle AddGenericParameter(EntityHandle parent, GenericParameterAttributes attributes, StringHandle name, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddGenericParameter = (JCObject)classInstance.Invoke("AddGenericParameter", parent == null ? null : parent.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), index);
+            return new GenericParameterHandle(objAddGenericParameter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public GuidHandle GetOrAddGuid(Guid guid) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetOrAddGuid = (JCObject)classInstance.Invoke("GetOrAddGuid", guid == null ? null : guid.getJCOInstance());
+            return new GuidHandle(objGetOrAddGuid);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImportScopeHandle AddImportScope(ImportScopeHandle parentScope, BlobHandle imports) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddImportScope = (JCObject)classInstance.Invoke("AddImportScope", parentScope == null ? null : parentScope.getJCOInstance(), imports == null ? null : imports.getJCOInstance());
+            return new ImportScopeHandle(objAddImportScope);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InterfaceImplementationHandle AddInterfaceImplementation(TypeDefinitionHandle type, EntityHandle implementedInterface) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddInterfaceImplementation = (JCObject)classInstance.Invoke("AddInterfaceImplementation", type == null ? null : type.getJCOInstance(), implementedInterface == null ? null : implementedInterface.getJCOInstance());
+            return new InterfaceImplementationHandle(objAddInterfaceImplementation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LocalConstantHandle AddLocalConstant(StringHandle name, BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddLocalConstant = (JCObject)classInstance.Invoke("AddLocalConstant", name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
+            return new LocalConstantHandle(objAddLocalConstant);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -741,23 +468,277 @@ public class MetadataBuilder extends NetObject  {
         }
     }
 
-    public LocalConstantHandle AddLocalConstant(StringHandle name, BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException {
+    public ManifestResourceHandle AddManifestResource(ManifestResourceAttributes attributes, StringHandle name, EntityHandle implementation, UInt32 offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAddLocalConstant = (JCObject)classInstance.Invoke("AddLocalConstant", name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
-            return new LocalConstantHandle(objAddLocalConstant);
+            JCObject objAddManifestResource = (JCObject)classInstance.Invoke("AddManifestResource", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), implementation == null ? null : implementation.getJCOInstance(), offset == null ? null : offset.getJCOInstance());
+            return new ManifestResourceHandle(objAddManifestResource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ImportScopeHandle AddImportScope(ImportScopeHandle parentScope, BlobHandle imports) throws Throwable, system.ArgumentOutOfRangeException {
+    public MemberReferenceHandle AddMemberReference(EntityHandle parent, StringHandle name, BlobHandle signature) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAddImportScope = (JCObject)classInstance.Invoke("AddImportScope", parentScope == null ? null : parentScope.getJCOInstance(), imports == null ? null : imports.getJCOInstance());
-            return new ImportScopeHandle(objAddImportScope);
+            JCObject objAddMemberReference = (JCObject)classInstance.Invoke("AddMemberReference", parent == null ? null : parent.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
+            return new MemberReferenceHandle(objAddMemberReference);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodDebugInformationHandle AddMethodDebugInformation(DocumentHandle document, BlobHandle sequencePoints) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddMethodDebugInformation = (JCObject)classInstance.Invoke("AddMethodDebugInformation", document == null ? null : document.getJCOInstance(), sequencePoints == null ? null : sequencePoints.getJCOInstance());
+            return new MethodDebugInformationHandle(objAddMethodDebugInformation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodDefinitionHandle AddMethodDefinition(MethodAttributes attributes, MethodImplAttributes implAttributes, StringHandle name, BlobHandle signature, int bodyOffset, ParameterHandle parameterList) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddMethodDefinition = (JCObject)classInstance.Invoke("AddMethodDefinition", attributes == null ? null : attributes.getJCOInstance(), implAttributes == null ? null : implAttributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance(), bodyOffset, parameterList == null ? null : parameterList.getJCOInstance());
+            return new MethodDefinitionHandle(objAddMethodDefinition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodImplementationHandle AddMethodImplementation(TypeDefinitionHandle type, EntityHandle methodBody, EntityHandle methodDeclaration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddMethodImplementation = (JCObject)classInstance.Invoke("AddMethodImplementation", type == null ? null : type.getJCOInstance(), methodBody == null ? null : methodBody.getJCOInstance(), methodDeclaration == null ? null : methodDeclaration.getJCOInstance());
+            return new MethodImplementationHandle(objAddMethodImplementation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodSpecificationHandle AddMethodSpecification(EntityHandle method, BlobHandle instantiation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddMethodSpecification = (JCObject)classInstance.Invoke("AddMethodSpecification", method == null ? null : method.getJCOInstance(), instantiation == null ? null : instantiation.getJCOInstance());
+            return new MethodSpecificationHandle(objAddMethodSpecification);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModuleDefinitionHandle AddModule(int generation, StringHandle moduleName, GuidHandle mvid, GuidHandle encId, GuidHandle encBaseId) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddModule = (JCObject)classInstance.Invoke("AddModule", generation, moduleName == null ? null : moduleName.getJCOInstance(), mvid == null ? null : mvid.getJCOInstance(), encId == null ? null : encId.getJCOInstance(), encBaseId == null ? null : encBaseId.getJCOInstance());
+            return new ModuleDefinitionHandle(objAddModule);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModuleReferenceHandle AddModuleReference(StringHandle moduleName) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddModuleReference = (JCObject)classInstance.Invoke("AddModuleReference", moduleName == null ? null : moduleName.getJCOInstance());
+            return new ModuleReferenceHandle(objAddModuleReference);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ParameterHandle AddParameter(ParameterAttributes attributes, StringHandle name, int sequenceNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddParameter = (JCObject)classInstance.Invoke("AddParameter", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), sequenceNumber);
+            return new ParameterHandle(objAddParameter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyDefinitionHandle AddProperty(PropertyAttributes attributes, StringHandle name, BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddProperty = (JCObject)classInstance.Invoke("AddProperty", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
+            return new PropertyDefinitionHandle(objAddProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StandaloneSignatureHandle AddStandaloneSignature(BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddStandaloneSignature = (JCObject)classInstance.Invoke("AddStandaloneSignature", signature == null ? null : signature.getJCOInstance());
+            return new StandaloneSignatureHandle(objAddStandaloneSignature);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StringHandle GetOrAddString(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetOrAddString = (JCObject)classInstance.Invoke("GetOrAddString", value);
+            return new StringHandle(objGetOrAddString);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeDefinitionHandle AddTypeDefinition(TypeAttributes attributes, StringHandle namespace, StringHandle name, EntityHandle baseType, FieldDefinitionHandle fieldList, MethodDefinitionHandle methodList) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddTypeDefinition = (JCObject)classInstance.Invoke("AddTypeDefinition", attributes == null ? null : attributes.getJCOInstance(), namespace == null ? null : namespace.getJCOInstance(), name == null ? null : name.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), fieldList == null ? null : fieldList.getJCOInstance(), methodList == null ? null : methodList.getJCOInstance());
+            return new TypeDefinitionHandle(objAddTypeDefinition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeReferenceHandle AddTypeReference(EntityHandle resolutionScope, StringHandle namespace, StringHandle name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddTypeReference = (JCObject)classInstance.Invoke("AddTypeReference", resolutionScope == null ? null : resolutionScope.getJCOInstance(), namespace == null ? null : namespace.getJCOInstance(), name == null ? null : name.getJCOInstance());
+            return new TypeReferenceHandle(objAddTypeReference);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeSpecificationHandle AddTypeSpecification(BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddTypeSpecification = (JCObject)classInstance.Invoke("AddTypeSpecification", signature == null ? null : signature.getJCOInstance());
+            return new TypeSpecificationHandle(objAddTypeSpecification);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UserStringHandle GetOrAddUserString(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.reflection.metadata.ImageFormatLimitationException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetOrAddUserString = (JCObject)classInstance.Invoke("GetOrAddUserString", value);
+            return new UserStringHandle(objGetOrAddUserString);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddEncLogEntry(EntityHandle entity, EditAndContinueOperation code) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddEncLogEntry", entity == null ? null : entity.getJCOInstance(), code == null ? null : code.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddEncMapEntry(EntityHandle entity) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddEncMapEntry", entity == null ? null : entity.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddEventMap(TypeDefinitionHandle declaringType, EventDefinitionHandle eventList) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddEventMap", declaringType == null ? null : declaringType.getJCOInstance(), eventList == null ? null : eventList.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddFieldLayout(FieldDefinitionHandle field, int offset) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddFieldLayout", field == null ? null : field.getJCOInstance(), offset);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddFieldRelativeVirtualAddress(FieldDefinitionHandle field, int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddFieldRelativeVirtualAddress", field == null ? null : field.getJCOInstance(), offset);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddMarshallingDescriptor(EntityHandle parent, BlobHandle descriptor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddMarshallingDescriptor", parent == null ? null : parent.getJCOInstance(), descriptor == null ? null : descriptor.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddMethodImport(MethodDefinitionHandle method, MethodImportAttributes attributes, StringHandle name, ModuleReferenceHandle module) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddMethodImport", method == null ? null : method.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), module == null ? null : module.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddMethodSemantics(EntityHandle association, MethodSemanticsAttributes semantics, MethodDefinitionHandle methodDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddMethodSemantics", association == null ? null : association.getJCOInstance(), semantics == null ? null : semantics.getJCOInstance(), methodDefinition == null ? null : methodDefinition.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddNestedType(TypeDefinitionHandle type, TypeDefinitionHandle enclosingType) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddNestedType", type == null ? null : type.getJCOInstance(), enclosingType == null ? null : enclosingType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddPropertyMap(TypeDefinitionHandle declaringType, PropertyDefinitionHandle propertyList) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddPropertyMap", declaringType == null ? null : declaringType.getJCOInstance(), propertyList == null ? null : propertyList.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -773,12 +754,31 @@ public class MetadataBuilder extends NetObject  {
         }
     }
 
-    public CustomDebugInformationHandle AddCustomDebugInformation(EntityHandle parent, GuidHandle kind, BlobHandle value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+    public void AddTypeLayout(TypeDefinitionHandle type, UInt16 packingSize, UInt32 size) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAddCustomDebugInformation = (JCObject)classInstance.Invoke("AddCustomDebugInformation", parent == null ? null : parent.getJCOInstance(), kind == null ? null : kind.getJCOInstance(), value == null ? null : value.getJCOInstance());
-            return new CustomDebugInformationHandle(objAddCustomDebugInformation);
+            classInstance.Invoke("AddTypeLayout", type == null ? null : type.getJCOInstance(), packingSize == null ? null : packingSize.getJCOInstance(), size == null ? null : size.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetCapacity(HeapIndex heap, int byteCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetCapacity", heap == null ? null : heap.getJCOInstance(), byteCount);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetCapacity(TableIndex table, int rowCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetCapacity", table == null ? null : table.getJCOInstance(), rowCount);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -127,22 +127,22 @@ public class SoapExtension extends NetObject  {
         }
     }
 
-    public NetObject GetInitializer(LogicalMethodInfo methodInfo, SoapExtensionAttribute attribute) throws Throwable {
+    public NetObject GetInitializer(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetInitializer = (JCObject)classInstance.Invoke("GetInitializer", methodInfo == null ? null : methodInfo.getJCOInstance(), attribute == null ? null : attribute.getJCOInstance());
+            JCObject objGetInitializer = (JCObject)classInstance.Invoke("GetInitializer", serviceType == null ? null : serviceType.getJCOInstance());
             return new NetObject(objGetInitializer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject GetInitializer(NetType serviceType) throws Throwable {
+    public NetObject GetInitializer(LogicalMethodInfo methodInfo, SoapExtensionAttribute attribute) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetInitializer = (JCObject)classInstance.Invoke("GetInitializer", serviceType == null ? null : serviceType.getJCOInstance());
+            JCObject objGetInitializer = (JCObject)classInstance.Invoke("GetInitializer", methodInfo == null ? null : methodInfo.getJCOInstance(), attribute == null ? null : attribute.getJCOInstance());
             return new NetObject(objGetInitializer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -96,11 +96,11 @@ public interface IBuildResults extends IJCOBridgeReflected {
     
     public boolean getSucceeded() throws Throwable;
 
+    public BuildMessage[] getMessages() throws Throwable;
+
     public java.lang.String getKeyFile() throws Throwable;
 
     public java.lang.String[] getComponentFiles() throws Throwable;
-
-    public BuildMessage[] getMessages() throws Throwable;
 
 
 

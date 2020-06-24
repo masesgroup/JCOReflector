@@ -106,21 +106,21 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
 
     // Methods section
     
-    public void Initialize(IEventSource eventSource, int nodeCount) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", eventSource == null ? null : eventSource.getJCOInstance(), nodeCount);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Initialize(IEventSource eventSource) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", eventSource == null ? null : eventSource.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Initialize(IEventSource eventSource, int nodeCount) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Initialize", eventSource == null ? null : eventSource.getJCOInstance(), nodeCount);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

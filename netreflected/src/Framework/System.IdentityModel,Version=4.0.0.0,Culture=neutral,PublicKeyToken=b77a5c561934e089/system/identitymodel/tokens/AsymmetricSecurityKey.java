@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.AsymmetricAlgorithm;
-import system.security.cryptography.HashAlgorithm;
 import system.security.cryptography.AsymmetricSignatureDeformatter;
 import system.security.cryptography.AsymmetricSignatureFormatter;
+import system.security.cryptography.HashAlgorithm;
 
 
 /**
@@ -116,55 +116,41 @@ public class AsymmetricSecurityKey extends NetObject  {
     
     // Methods section
     
-    public AsymmetricAlgorithm GetAsymmetricAlgorithm(java.lang.String algorithm, boolean privateKey) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetAsymmetricAlgorithm = (JCObject)classInstance.Invoke("GetAsymmetricAlgorithm", algorithm, privateKey);
-            return new AsymmetricAlgorithm(objGetAsymmetricAlgorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public HashAlgorithm GetHashAlgorithmForSignature(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetHashAlgorithmForSignature = (JCObject)classInstance.Invoke("GetHashAlgorithmForSignature", algorithm);
-            return new HashAlgorithm(objGetHashAlgorithmForSignature);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AsymmetricSignatureDeformatter GetSignatureDeformatter(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSignatureDeformatter = (JCObject)classInstance.Invoke("GetSignatureDeformatter", algorithm);
-            return new AsymmetricSignatureDeformatter(objGetSignatureDeformatter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AsymmetricSignatureFormatter GetSignatureFormatter(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSignatureFormatter = (JCObject)classInstance.Invoke("GetSignatureFormatter", algorithm);
-            return new AsymmetricSignatureFormatter(objGetSignatureFormatter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean HasPrivateKey() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("HasPrivateKey");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsAsymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsAsymmetricAlgorithm", algorithm);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsSupportedAlgorithm(java.lang.String algorithm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsSupportedAlgorithm", algorithm);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsSymmetricAlgorithm", algorithm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,31 +194,45 @@ public class AsymmetricSecurityKey extends NetObject  {
         }
     }
 
-    public boolean IsAsymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
+    public AsymmetricAlgorithm GetAsymmetricAlgorithm(java.lang.String algorithm, boolean privateKey) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsAsymmetricAlgorithm", algorithm);
+            JCObject objGetAsymmetricAlgorithm = (JCObject)classInstance.Invoke("GetAsymmetricAlgorithm", algorithm, privateKey);
+            return new AsymmetricAlgorithm(objGetAsymmetricAlgorithm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean IsSupportedAlgorithm(java.lang.String algorithm) throws Throwable {
+    public AsymmetricSignatureDeformatter GetSignatureDeformatter(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsSupportedAlgorithm", algorithm);
+            JCObject objGetSignatureDeformatter = (JCObject)classInstance.Invoke("GetSignatureDeformatter", algorithm);
+            return new AsymmetricSignatureDeformatter(objGetSignatureDeformatter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean IsSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
+    public AsymmetricSignatureFormatter GetSignatureFormatter(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsSymmetricAlgorithm", algorithm);
+            JCObject objGetSignatureFormatter = (JCObject)classInstance.Invoke("GetSignatureFormatter", algorithm);
+            return new AsymmetricSignatureFormatter(objGetSignatureFormatter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HashAlgorithm GetHashAlgorithmForSignature(java.lang.String algorithm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetHashAlgorithmForSignature = (JCObject)classInstance.Invoke("GetHashAlgorithmForSignature", algorithm);
+            return new HashAlgorithm(objGetHashAlgorithmForSignature);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

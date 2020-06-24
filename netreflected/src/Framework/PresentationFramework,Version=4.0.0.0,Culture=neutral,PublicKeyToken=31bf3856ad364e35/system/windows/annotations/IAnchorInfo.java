@@ -95,11 +95,11 @@ public interface IAnchorInfo extends IJCOBridgeReflected {
     
     // Properties section
     
+    public NetObject getResolvedAnchor() throws Throwable;
+
     public Annotation getAnnotation() throws Throwable;
 
     public AnnotationResource getAnchor() throws Throwable;
-
-    public NetObject getResolvedAnchor() throws Throwable;
 
 
 

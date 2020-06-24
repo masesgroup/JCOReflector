@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.common.entitysql.ParseResult;
-import system.data.common.commandtrees.DbParameterReferenceExpression;
 import system.data.common.commandtrees.DbLambda;
 import system.data.common.commandtrees.DbVariableReferenceExpression;
+import system.data.common.entitysql.ParseResult;
+import system.data.common.commandtrees.DbParameterReferenceExpression;
 
 
 /**
@@ -116,23 +116,23 @@ public class EntitySqlParser extends NetObject  {
     
     // Methods section
     
-    public ParseResult Parse(java.lang.String query, DbParameterReferenceExpression... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.EntitySqlException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objParse = (JCObject)classInstance.Invoke("Parse", query, toObjectFromArray(parameters));
-            return new ParseResult(objParse);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DbLambda ParseLambda(java.lang.String query, DbVariableReferenceExpression... variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.EntitySqlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objParseLambda = (JCObject)classInstance.Invoke("ParseLambda", query, toObjectFromArray(variables));
             return new DbLambda(objParseLambda);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ParseResult Parse(java.lang.String query, DbParameterReferenceExpression... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.EntitySqlException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objParse = (JCObject)classInstance.Invoke("Parse", query, toObjectFromArray(parameters));
+            return new ParseResult(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

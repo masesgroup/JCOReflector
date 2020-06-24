@@ -93,9 +93,9 @@ public interface IPphManager extends IJCOBridgeReflected {
     
     public void StartProcessProtocolListenerChannel(java.lang.String protocolId, IListenerChannelCallback listenerChannelCallback) throws Throwable;
 
-    public void StopProcessProtocolListenerChannel(java.lang.String protocolId, int listenerChannelId, boolean immediate) throws Throwable;
-
     public void StopProcessProtocol(java.lang.String protocolId, boolean immediate) throws Throwable;
+
+    public void StopProcessProtocolListenerChannel(java.lang.String protocolId, int listenerChannelId, boolean immediate) throws Throwable;
 
 
     

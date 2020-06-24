@@ -37,15 +37,15 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.runtime.remoting.channels.IServerChannelSink;
-import system.runtime.remoting.channels.IServerChannelSinkImplementation;
-import system.IAsyncResult;
-import system.IAsyncResultImplementation;
+import system.io.Stream;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
 import system.runtime.remoting.channels.ITransportHeaders;
 import system.runtime.remoting.channels.ITransportHeadersImplementation;
-import system.io.Stream;
+import system.runtime.remoting.channels.IServerChannelSink;
+import system.runtime.remoting.channels.IServerChannelSinkImplementation;
+import system.IAsyncResult;
+import system.IAsyncResultImplementation;
 
 
 /**
@@ -98,19 +98,19 @@ public interface IServerChannelSinkStack extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Push(IServerChannelSink sink, NetObject state) throws Throwable;
+    public Stream GetResponseStream(IMessage msg, ITransportHeaders headers) throws Throwable;
 
     public NetObject Pop(IServerChannelSink sink) throws Throwable;
+
+    public void AsyncProcessResponse(IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable;
+
+    public void Push(IServerChannelSink sink, NetObject state) throws Throwable;
+
+    public void ServerCallback(IAsyncResult ar) throws Throwable;
 
     public void Store(IServerChannelSink sink, NetObject state) throws Throwable;
 
     public void StoreAndDispatch(IServerChannelSink sink, NetObject state) throws Throwable;
-
-    public void ServerCallback(IAsyncResult ar) throws Throwable;
-
-    public void AsyncProcessResponse(IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable;
-
-    public Stream GetResponseStream(IMessage msg, ITransportHeaders headers) throws Throwable;
 
 
     

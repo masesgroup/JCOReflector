@@ -116,11 +116,11 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
     
     // Properties section
     
-    public static java.lang.String getSpnego() throws Throwable {
+    public static java.lang.String getAnonymousSslnego() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Get("Spnego");
+            return (java.lang.String)classType.Get("AnonymousSslnego");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -136,11 +136,11 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
         }
     }
 
-    public static java.lang.String getAnonymousSslnego() throws Throwable {
+    public static java.lang.String getSecureConversation() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Get("AnonymousSslnego");
+            return (java.lang.String)classType.Get("SecureConversation");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,11 +156,11 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
         }
     }
 
-    public static java.lang.String getSecureConversation() throws Throwable {
+    public static java.lang.String getSpnego() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Get("SecureConversation");
+            return (java.lang.String)classType.Get("Spnego");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

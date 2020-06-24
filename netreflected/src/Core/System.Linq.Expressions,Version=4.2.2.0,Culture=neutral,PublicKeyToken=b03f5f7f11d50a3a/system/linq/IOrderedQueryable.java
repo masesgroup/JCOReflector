@@ -98,9 +98,9 @@ public interface IOrderedQueryable extends IJCOBridgeReflected {
     
     public Expression getExpression() throws Throwable;
 
-    public NetType getElementType() throws Throwable;
-
     public IQueryProvider getProvider() throws Throwable;
+
+    public NetType getElementType() throws Throwable;
 
 
 

@@ -157,22 +157,22 @@ public class BinaryExchange extends NetObject  {
         }
     }
 
-    public Uri getValueType() throws Throwable {
+    public Uri getEncodingType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ValueType");
+            JCObject val = (JCObject)classInstance.Get("EncodingType");
             return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Uri getEncodingType() throws Throwable {
+    public Uri getValueType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EncodingType");
+            JCObject val = (JCObject)classInstance.Get("ValueType");
             return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

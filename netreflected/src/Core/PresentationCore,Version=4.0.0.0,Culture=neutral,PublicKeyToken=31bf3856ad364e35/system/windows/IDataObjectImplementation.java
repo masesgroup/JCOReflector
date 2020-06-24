@@ -103,22 +103,41 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
 
     // Methods section
     
-    public NetObject GetData(java.lang.String format) throws Throwable {
+    public boolean GetDataPresent(java.lang.String format) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", format);
-            return new NetObject(objGetData);
+            return (boolean)classInstance.Invoke("GetDataPresent", format);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject GetData(NetType format) throws Throwable {
+    public boolean GetDataPresent(java.lang.String format, boolean autoConvert) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", format == null ? null : format.getJCOInstance());
+            return (boolean)classInstance.Invoke("GetDataPresent", format, autoConvert);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean GetDataPresent(NetType format) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("GetDataPresent", format == null ? null : format.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetData(java.lang.String format) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", format);
             return new NetObject(objGetData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -136,31 +155,12 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
-    public boolean GetDataPresent(java.lang.String format) throws Throwable {
+    public NetObject GetData(NetType format) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("GetDataPresent", format);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean GetDataPresent(NetType format) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetDataPresent", format == null ? null : format.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean GetDataPresent(java.lang.String format, boolean autoConvert) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetDataPresent", format, autoConvert);
+            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", format == null ? null : format.getJCOInstance());
+            return new NetObject(objGetData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,21 +224,21 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
-    public void SetData(NetType format, NetObject data) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetData", format == null ? null : format.getJCOInstance(), data == null ? null : data.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void SetData(java.lang.String format, NetObject data, boolean autoConvert) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetData", format, data == null ? null : data.getJCOInstance(), autoConvert);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetData(NetType format, NetObject data) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetData", format == null ? null : format.getJCOInstance(), data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

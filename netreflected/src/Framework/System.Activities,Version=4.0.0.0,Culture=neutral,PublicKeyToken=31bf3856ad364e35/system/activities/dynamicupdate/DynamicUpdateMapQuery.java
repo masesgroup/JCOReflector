@@ -114,6 +114,16 @@ public class DynamicUpdateMapQuery extends NetObject  {
     
     // Methods section
     
+    public boolean CanApplyUpdateWhileRunning(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("CanApplyUpdateWhileRunning", activity == null ? null : activity.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Activity FindMatch(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -131,16 +141,6 @@ public class DynamicUpdateMapQuery extends NetObject  {
         try {
             JCObject objFindMatch = (JCObject)classInstance.Invoke("FindMatch", variable == null ? null : variable.getJCOInstance());
             return new Variable(objFindMatch);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean CanApplyUpdateWhileRunning(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanApplyUpdateWhileRunning", activity == null ? null : activity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -103,16 +103,6 @@ public class ISimpleTransactionSuperiorImplementation extends NetObject implemen
 
     // Methods section
     
-    public void Rollback() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Rollback");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] Promote() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -127,6 +117,16 @@ public class ISimpleTransactionSuperiorImplementation extends NetObject implemen
 				resultingArray[indexPromote] = (byte)resultingArrayList.get(indexPromote);
             }
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Rollback() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Rollback");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -113,11 +113,11 @@ public class AttachablePropertyServices extends NetObject  {
     
     // Methods section
     
-    public static void SetProperty(NetObject instance, AttachableMemberIdentifier name, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+    public static boolean RemoveProperty(NetObject instance, AttachableMemberIdentifier name) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetProperty", instance == null ? null : instance.getJCOInstance(), name == null ? null : name.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return (boolean)classType.Invoke("RemoveProperty", instance == null ? null : instance.getJCOInstance(), name == null ? null : name.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -133,11 +133,11 @@ public class AttachablePropertyServices extends NetObject  {
         }
     }
 
-    public static boolean RemoveProperty(NetObject instance, AttachableMemberIdentifier name) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static void SetProperty(NetObject instance, AttachableMemberIdentifier name, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("RemoveProperty", instance == null ? null : instance.getJCOInstance(), name == null ? null : name.getJCOInstance());
+            classType.Invoke("SetProperty", instance == null ? null : instance.getJCOInstance(), name == null ? null : name.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

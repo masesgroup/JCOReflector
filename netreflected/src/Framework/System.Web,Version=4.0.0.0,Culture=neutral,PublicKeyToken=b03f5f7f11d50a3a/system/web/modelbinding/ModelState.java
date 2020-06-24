@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.modelbinding.ValueProviderResult;
 import system.web.modelbinding.ModelErrorCollection;
+import system.web.modelbinding.ValueProviderResult;
 
 
 /**
@@ -129,6 +129,17 @@ public class ModelState extends NetObject  {
     
     // Properties section
     
+    public ModelErrorCollection getErrors() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Errors");
+            return new ModelErrorCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ValueProviderResult getValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,17 +156,6 @@ public class ModelState extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value == null ? null : Value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelErrorCollection getErrors() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Errors");
-            return new ModelErrorCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -125,11 +125,11 @@ public class ControlFlowBuilder extends NetObject  {
     
     // Methods section
     
-    public void AddFinallyRegion(LabelHandle tryStart, LabelHandle tryEnd, LabelHandle handlerStart, LabelHandle handlerEnd) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public void AddCatchRegion(LabelHandle tryStart, LabelHandle tryEnd, LabelHandle handlerStart, LabelHandle handlerEnd, EntityHandle catchType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddFinallyRegion", tryStart == null ? null : tryStart.getJCOInstance(), tryEnd == null ? null : tryEnd.getJCOInstance(), handlerStart == null ? null : handlerStart.getJCOInstance(), handlerEnd == null ? null : handlerEnd.getJCOInstance());
+            classInstance.Invoke("AddCatchRegion", tryStart == null ? null : tryStart.getJCOInstance(), tryEnd == null ? null : tryEnd.getJCOInstance(), handlerStart == null ? null : handlerStart.getJCOInstance(), handlerEnd == null ? null : handlerEnd.getJCOInstance(), catchType == null ? null : catchType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,21 +145,21 @@ public class ControlFlowBuilder extends NetObject  {
         }
     }
 
-    public void AddCatchRegion(LabelHandle tryStart, LabelHandle tryEnd, LabelHandle handlerStart, LabelHandle handlerEnd, EntityHandle catchType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddCatchRegion", tryStart == null ? null : tryStart.getJCOInstance(), tryEnd == null ? null : tryEnd.getJCOInstance(), handlerStart == null ? null : handlerStart.getJCOInstance(), handlerEnd == null ? null : handlerEnd.getJCOInstance(), catchType == null ? null : catchType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AddFilterRegion(LabelHandle tryStart, LabelHandle tryEnd, LabelHandle handlerStart, LabelHandle handlerEnd, LabelHandle filterStart) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddFilterRegion", tryStart == null ? null : tryStart.getJCOInstance(), tryEnd == null ? null : tryEnd.getJCOInstance(), handlerStart == null ? null : handlerStart.getJCOInstance(), handlerEnd == null ? null : handlerEnd.getJCOInstance(), filterStart == null ? null : filterStart.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddFinallyRegion(LabelHandle tryStart, LabelHandle tryEnd, LabelHandle handlerStart, LabelHandle handlerEnd) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddFinallyRegion", tryStart == null ? null : tryStart.getJCOInstance(), tryEnd == null ? null : tryEnd.getJCOInstance(), handlerStart == null ? null : handlerStart.getJCOInstance(), handlerEnd == null ? null : handlerEnd.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,13 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.design.MenuCommand;
-import system.componentmodel.design.CommandID;
 import system.windows.forms.design.behavior.Glyph;
-import system.EventArgs;
 import system.windows.forms.MouseButtons;
 import system.drawing.Point;
+import system.componentmodel.design.MenuCommand;
+import system.componentmodel.design.CommandID;
 import system.windows.forms.DragEventArgs;
+import system.EventArgs;
 import system.windows.forms.GiveFeedbackEventArgs;
 import system.windows.forms.QueryContinueDragEventArgs;
 import system.windows.forms.Cursor;
@@ -122,27 +122,6 @@ public class Behavior extends NetObject  {
     
     // Methods section
     
-    public MenuCommand FindCommand(CommandID commandId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objFindCommand = (JCObject)classInstance.Invoke("FindCommand", commandId == null ? null : commandId.getJCOInstance());
-            return new MenuCommand(objFindCommand);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void OnLoseCapture(Glyph g, EventArgs e) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("OnLoseCapture", g == null ? null : g.getJCOInstance(), e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean OnMouseDoubleClick(Glyph g, MouseButtons button, Point mouseLoc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -213,6 +192,17 @@ public class Behavior extends NetObject  {
         }
     }
 
+    public MenuCommand FindCommand(CommandID commandId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objFindCommand = (JCObject)classInstance.Invoke("FindCommand", commandId == null ? null : commandId.getJCOInstance());
+            return new MenuCommand(objFindCommand);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void OnDragDrop(Glyph g, DragEventArgs e) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -263,6 +253,16 @@ public class Behavior extends NetObject  {
         }
     }
 
+    public void OnLoseCapture(Glyph g, EventArgs e) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("OnLoseCapture", g == null ? null : g.getJCOInstance(), e == null ? null : e.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void OnQueryContinueDrag(Glyph g, QueryContinueDragEventArgs e) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -277,22 +277,22 @@ public class Behavior extends NetObject  {
     
     // Properties section
     
+    public boolean getDisableAllCommands() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("DisableAllCommands");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Cursor getCursor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Cursor");
             return new Cursor(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getDisableAllCommands() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("DisableAllCommands");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

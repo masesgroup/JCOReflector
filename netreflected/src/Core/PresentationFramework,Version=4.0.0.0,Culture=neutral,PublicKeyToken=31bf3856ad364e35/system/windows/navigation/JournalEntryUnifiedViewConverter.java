@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.globalization.CultureInfo;
 import system.windows.navigation.JournalEntryPosition;
 import system.windows.DependencyObject;
-import system.globalization.CultureInfo;
 
 
 /**
@@ -126,27 +126,6 @@ public class JournalEntryUnifiedViewConverter extends NetObject  {
     
     // Methods section
     
-    public static JournalEntryPosition GetJournalEntryPosition(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetJournalEntryPosition = (JCObject)classType.Invoke("GetJournalEntryPosition", element == null ? null : element.getJCOInstance());
-            return new JournalEntryPosition(objGetJournalEntryPosition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void SetJournalEntryPosition(DependencyObject element, JournalEntryPosition position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SetJournalEntryPosition", element == null ? null : element.getJCOInstance(), position == null ? null : position.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject Convert(NetObject[] values, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -170,6 +149,27 @@ public class JournalEntryUnifiedViewConverter extends NetObject  {
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JournalEntryPosition GetJournalEntryPosition(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetJournalEntryPosition = (JCObject)classType.Invoke("GetJournalEntryPosition", element == null ? null : element.getJCOInstance());
+            return new JournalEntryPosition(objGetJournalEntryPosition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetJournalEntryPosition(DependencyObject element, JournalEntryPosition position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetJournalEntryPosition", element == null ? null : element.getJCOInstance(), position == null ? null : position.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

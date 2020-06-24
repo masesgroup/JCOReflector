@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.drawing.Graphics;
 import system.windows.forms.ToolStrip;
+import system.drawing.Color;
 import system.drawing.Rectangle;
 import system.windows.forms.ToolStripGripDisplayStyle;
 import system.windows.forms.ToolStripGripStyle;
-import system.drawing.Color;
 
 
 /**
@@ -133,34 +133,12 @@ public class ToolStripGripRenderEventArgs extends NetObject  {
     
     // Properties section
     
-    public Rectangle getGripBounds() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception {
+    public Color getBackColor() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("GripBounds");
-            return new Rectangle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ToolStripGripDisplayStyle getGripDisplayStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("GripDisplayStyle");
-            return new ToolStripGripDisplayStyle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ToolStripGripStyle getGripStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("GripStyle");
-            return new ToolStripGripStyle(val);
+            JCObject val = (JCObject)classInstance.Get("BackColor");
+            return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,6 +166,28 @@ public class ToolStripGripRenderEventArgs extends NetObject  {
         }
     }
 
+    public Rectangle getConnectedArea() throws Throwable, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.threading.ThreadStateException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ApplicationException, system.OverflowException, system.ArgumentException, system.NotSupportedException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ConnectedArea");
+            return new Rectangle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Rectangle getGripBounds() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("GripBounds");
+            return new Rectangle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ToolStrip getToolStrip() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -199,23 +199,23 @@ public class ToolStripGripRenderEventArgs extends NetObject  {
         }
     }
 
-    public Color getBackColor() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException {
+    public ToolStripGripDisplayStyle getGripDisplayStyle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BackColor");
-            return new Color(val);
+            JCObject val = (JCObject)classInstance.Get("GripDisplayStyle");
+            return new ToolStripGripDisplayStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Rectangle getConnectedArea() throws Throwable, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.threading.ThreadStateException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ApplicationException, system.OverflowException, system.ArgumentException, system.NotSupportedException, system.MulticastNotSupportedException {
+    public ToolStripGripStyle getGripStyle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectedArea");
-            return new Rectangle(val);
+            JCObject val = (JCObject)classInstance.Get("GripStyle");
+            return new ToolStripGripStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

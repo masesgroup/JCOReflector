@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.componentmodel.AttributeCollection;
-import system.componentmodel.TypeConverter;
 import system.componentmodel.EventDescriptor;
-import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.EventDescriptorCollection;
 import system.Attribute;
+import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.PropertyDescriptorCollection;
+import system.componentmodel.TypeConverter;
 
 
 /**
@@ -98,27 +98,27 @@ public interface ICustomTypeDescriptor extends IJCOBridgeReflected {
     
     public AttributeCollection GetAttributes() throws Throwable;
 
-    public java.lang.String GetClassName() throws Throwable;
-
-    public java.lang.String GetComponentName() throws Throwable;
-
-    public TypeConverter GetConverter() throws Throwable;
-
     public EventDescriptor GetDefaultEvent() throws Throwable;
-
-    public PropertyDescriptor GetDefaultProperty() throws Throwable;
-
-    public NetObject GetEditor(NetType editorBaseType) throws Throwable;
 
     public EventDescriptorCollection GetEvents() throws Throwable;
 
     public EventDescriptorCollection GetEvents(Attribute[] attributes) throws Throwable;
 
+    public PropertyDescriptor GetDefaultProperty() throws Throwable;
+
     public PropertyDescriptorCollection GetProperties() throws Throwable;
 
     public PropertyDescriptorCollection GetProperties(Attribute[] attributes) throws Throwable;
 
+    public TypeConverter GetConverter() throws Throwable;
+
+    public NetObject GetEditor(NetType editorBaseType) throws Throwable;
+
     public NetObject GetPropertyOwner(PropertyDescriptor pd) throws Throwable;
+
+    public java.lang.String GetClassName() throws Throwable;
+
+    public java.lang.String GetComponentName() throws Throwable;
 
 
     

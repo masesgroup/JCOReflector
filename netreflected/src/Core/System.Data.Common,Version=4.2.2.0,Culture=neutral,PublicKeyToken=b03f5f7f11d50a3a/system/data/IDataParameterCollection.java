@@ -90,19 +90,19 @@ public interface IDataParameterCollection extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean Contains(NetObject value) throws Throwable;
+
     public boolean Contains(java.lang.String parameterName) throws Throwable;
-
-    public int IndexOf(java.lang.String parameterName) throws Throwable;
-
-    public void RemoveAt(java.lang.String parameterName) throws Throwable;
 
     public int Add(NetObject value) throws Throwable;
 
-    public boolean Contains(NetObject value) throws Throwable;
+    public int IndexOf(NetObject value) throws Throwable;
+
+    public int IndexOf(java.lang.String parameterName) throws Throwable;
 
     public void Clear() throws Throwable;
 
-    public int IndexOf(NetObject value) throws Throwable;
+    public void CopyTo(Array array, int index) throws Throwable;
 
     public void Insert(int index, NetObject value) throws Throwable;
 
@@ -110,21 +110,21 @@ public interface IDataParameterCollection extends IJCOBridgeReflected {
 
     public void RemoveAt(int index) throws Throwable;
 
-    public void CopyTo(Array array, int index) throws Throwable;
+    public void RemoveAt(java.lang.String parameterName) throws Throwable;
 
 
     
     // Properties section
     
+    public boolean getIsFixedSize() throws Throwable;
+
     public boolean getIsReadOnly() throws Throwable;
 
-    public boolean getIsFixedSize() throws Throwable;
+    public boolean getIsSynchronized() throws Throwable;
 
     public int getCount() throws Throwable;
 
     public NetObject getSyncRoot() throws Throwable;
-
-    public boolean getIsSynchronized() throws Throwable;
 
 
 

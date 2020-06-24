@@ -165,6 +165,26 @@ public class NotifyDataErrorValidationRule extends NetObject  {
     
     // Properties section
     
+    public boolean getValidatesOnTargetUpdated() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("ValidatesOnTargetUpdated");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setValidatesOnTargetUpdated(boolean ValidatesOnTargetUpdated) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ValidatesOnTargetUpdated", ValidatesOnTargetUpdated);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ValidationStep getValidationStep() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -181,26 +201,6 @@ public class NotifyDataErrorValidationRule extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidationStep", ValidationStep == null ? null : ValidationStep.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getValidatesOnTargetUpdated() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ValidatesOnTargetUpdated");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setValidatesOnTargetUpdated(boolean ValidatesOnTargetUpdated) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ValidatesOnTargetUpdated", ValidatesOnTargetUpdated);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,21 +160,12 @@ public class CodeCatchClause extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getLocalName() throws Throwable {
+    public CodeStatementCollection getStatements() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("LocalName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLocalName(java.lang.String LocalName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("LocalName", LocalName);
+            JCObject val = (JCObject)classInstance.Get("Statements");
+            return new CodeStatementCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,12 +192,21 @@ public class CodeCatchClause extends NetObject  {
         }
     }
 
-    public CodeStatementCollection getStatements() throws Throwable {
+    public java.lang.String getLocalName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Statements");
-            return new CodeStatementCollection(val);
+            return (java.lang.String)classInstance.Get("LocalName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setLocalName(java.lang.String LocalName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("LocalName", LocalName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

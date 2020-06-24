@@ -128,22 +128,21 @@ public class ClientBuildManagerParameter extends NetObject  {
     
     // Properties section
     
-    public PrecompilationFlags getPrecompilationFlags() throws Throwable {
+    public java.lang.String getStrongNameKeyContainer() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PrecompilationFlags");
-            return new PrecompilationFlags(val);
+            return (java.lang.String)classInstance.Get("StrongNameKeyContainer");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setPrecompilationFlags(PrecompilationFlags PrecompilationFlags) throws Throwable {
+    public void setStrongNameKeyContainer(java.lang.String StrongNameKeyContainer) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("PrecompilationFlags", PrecompilationFlags == null ? null : PrecompilationFlags.getJCOInstance());
+            classInstance.Set("StrongNameKeyContainer", StrongNameKeyContainer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,21 +168,22 @@ public class ClientBuildManagerParameter extends NetObject  {
         }
     }
 
-    public java.lang.String getStrongNameKeyContainer() throws Throwable {
+    public PrecompilationFlags getPrecompilationFlags() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("StrongNameKeyContainer");
+            JCObject val = (JCObject)classInstance.Get("PrecompilationFlags");
+            return new PrecompilationFlags(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setStrongNameKeyContainer(java.lang.String StrongNameKeyContainer) throws Throwable {
+    public void setPrecompilationFlags(PrecompilationFlags PrecompilationFlags) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("StrongNameKeyContainer", StrongNameKeyContainer);
+            classInstance.Set("PrecompilationFlags", PrecompilationFlags == null ? null : PrecompilationFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

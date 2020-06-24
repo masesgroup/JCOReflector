@@ -93,9 +93,9 @@ public interface ISerializationSurrogate extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void GetObjectData(NetObject obj, SerializationInfo info, StreamingContext context) throws Throwable;
-
     public NetObject SetObjectData(NetObject obj, SerializationInfo info, StreamingContext context, ISurrogateSelector selector) throws Throwable;
+
+    public void GetObjectData(NetObject obj, SerializationInfo info, StreamingContext context) throws Throwable;
 
 
     

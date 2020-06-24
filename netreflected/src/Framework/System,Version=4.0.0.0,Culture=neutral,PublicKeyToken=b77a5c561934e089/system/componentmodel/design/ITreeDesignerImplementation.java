@@ -42,9 +42,9 @@ import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.componentmodel.design.DesignerVerbCollection;
 import system.componentmodel.design.IDesigner;
 import system.componentmodel.design.IDesignerImplementation;
-import system.componentmodel.design.DesignerVerbCollection;
 
 
 /**
@@ -110,6 +110,16 @@ public class ITreeDesignerImplementation extends NetObject implements ITreeDesig
 
     // Methods section
     
+    public void Dispose() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void DoDefaultAction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -130,16 +140,6 @@ public class ITreeDesignerImplementation extends NetObject implements ITreeDesig
         }
     }
 
-    public void Dispose() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -150,6 +150,17 @@ public class ITreeDesignerImplementation extends NetObject implements ITreeDesig
         try {
             JCObject val = (JCObject)classInstance.Get("Children");
             return new ICollectionImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DesignerVerbCollection getVerbs() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Verbs");
+            return new DesignerVerbCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,17 +183,6 @@ public class ITreeDesignerImplementation extends NetObject implements ITreeDesig
         try {
             JCObject val = (JCObject)classInstance.Get("Component");
             return new IComponentImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DesignerVerbCollection getVerbs() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Verbs");
-            return new DesignerVerbCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

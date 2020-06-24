@@ -38,14 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.TypeCode;
-import system.SByte;
 import system.UInt16;
-import system.UInt32;
 import system.UInt64;
-import system.Single;
+import system.TypeCode;
 import microsoft.jscript.vsa.IJSVsaEngine;
 import microsoft.jscript.vsa.IJSVsaEngineImplementation;
+import system.SByte;
+import system.Single;
+import system.UInt32;
 
 
 /**
@@ -111,163 +111,12 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     // Methods section
     
-    public NetObject ToPrimitive(NetObject value, TypeCode typeCode, boolean truncationPermitted) throws Throwable {
+    public NetObject GetManagedCharObject(UInt16 i) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objToPrimitive = (JCObject)classInstance.Invoke("ToPrimitive", value == null ? null : value.getJCOInstance(), typeCode == null ? null : typeCode.getJCOInstance(), truncationPermitted);
-            return new NetObject(objToPrimitive);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String ByteToString(byte value, int radix) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ByteToString", value, radix);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String SByteToString(SByte value, int radix) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("SByteToString", value == null ? null : value.getJCOInstance(), radix);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String Int16ToString(short value, int radix) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("Int16ToString", value, radix);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String UInt16ToString(UInt16 value, int radix) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("UInt16ToString", value == null ? null : value.getJCOInstance(), radix);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String Int32ToString(int value, int radix) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("Int32ToString", value, radix);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String UInt32ToString(UInt32 value, int radix) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("UInt32ToString", value == null ? null : value.getJCOInstance(), radix);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String Int64ToString(long value, int radix) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("Int64ToString", value, radix);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String UInt64ToString(UInt64 value, int radix) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("UInt64ToString", value == null ? null : value.getJCOInstance(), radix);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String SingleToString(Single value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("SingleToString", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String DoubleToString(double value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("DoubleToString", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String BooleanToString(boolean value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("BooleanToString", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String DoubleToDateString(double value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("DoubleToDateString", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String RegexpToString(java.lang.String source, boolean ignoreCase, boolean global, boolean multiline) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("RegexpToString", source, ignoreCase, global, multiline);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String StringToPrintable(java.lang.String source) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("StringToPrintable", source);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetManagedObject(NetObject value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetManagedObject = (JCObject)classInstance.Invoke("GetManagedObject", value == null ? null : value.getJCOInstance());
-            return new NetObject(objGetManagedObject);
+            JCObject objGetManagedCharObject = (JCObject)classInstance.Invoke("GetManagedCharObject", i == null ? null : i.getJCOInstance());
+            return new NetObject(objGetManagedCharObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,6 +133,17 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    public NetObject GetManagedObject(NetObject value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetManagedObject = (JCObject)classInstance.Invoke("GetManagedObject", value == null ? null : value.getJCOInstance());
+            return new NetObject(objGetManagedObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetManagedUInt64Object(UInt64 i) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -295,12 +155,52 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
-    public NetObject GetManagedCharObject(UInt16 i) throws Throwable {
+    public NetObject ToPrimitive(NetObject value, TypeCode typeCode, boolean truncationPermitted) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetManagedCharObject = (JCObject)classInstance.Invoke("GetManagedCharObject", i == null ? null : i.getJCOInstance());
-            return new NetObject(objGetManagedCharObject);
+            JCObject objToPrimitive = (JCObject)classInstance.Invoke("ToPrimitive", value == null ? null : value.getJCOInstance(), typeCode == null ? null : typeCode.getJCOInstance(), truncationPermitted);
+            return new NetObject(objToPrimitive);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String BooleanToString(boolean value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("BooleanToString", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ByteToString(byte value, int radix) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ByteToString", value, radix);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String DoubleToDateString(double value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("DoubleToDateString", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String DoubleToString(double value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("DoubleToString", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,6 +211,106 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("GetErrorMessageForHR", hr, engine == null ? null : engine.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String Int16ToString(short value, int radix) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("Int16ToString", value, radix);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String Int32ToString(int value, int radix) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("Int32ToString", value, radix);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String Int64ToString(long value, int radix) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("Int64ToString", value, radix);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String RegexpToString(java.lang.String source, boolean ignoreCase, boolean global, boolean multiline) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("RegexpToString", source, ignoreCase, global, multiline);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String SByteToString(SByte value, int radix) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("SByteToString", value == null ? null : value.getJCOInstance(), radix);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String SingleToString(Single value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("SingleToString", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String StringToPrintable(java.lang.String source) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("StringToPrintable", source);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String UInt16ToString(UInt16 value, int radix) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("UInt16ToString", value == null ? null : value.getJCOInstance(), radix);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String UInt32ToString(UInt32 value, int radix) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("UInt32ToString", value == null ? null : value.getJCOInstance(), radix);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String UInt64ToString(UInt64 value, int radix) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("UInt64ToString", value == null ? null : value.getJCOInstance(), radix);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

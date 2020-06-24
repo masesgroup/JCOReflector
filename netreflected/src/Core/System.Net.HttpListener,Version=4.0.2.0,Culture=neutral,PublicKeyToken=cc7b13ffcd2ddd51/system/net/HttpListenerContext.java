@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.HttpListenerRequest;
+import system.net.HttpListenerResponse;
 import system.security.principal.IPrincipal;
 import system.security.principal.IPrincipalImplementation;
-import system.net.HttpListenerResponse;
 
 
 /**
@@ -131,23 +131,23 @@ public class HttpListenerContext extends NetObject  {
         }
     }
 
-    public IPrincipal getUser() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("User");
-            return new IPrincipalImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public HttpListenerResponse getResponse() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Response");
             return new HttpListenerResponse(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IPrincipal getUser() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("User");
+            return new IPrincipalImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

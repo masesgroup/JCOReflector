@@ -40,8 +40,8 @@ import org.mases.jcobridge.netreflection.*;
 import system.windows.xps.packaging.IXpsFixedPageReader;
 import system.windows.xps.packaging.IXpsFixedPageReaderImplementation;
 import system.Uri;
-import system.windows.xps.packaging.XpsSignatureDefinition;
 import system.windows.xps.packaging.XpsStructure;
+import system.windows.xps.packaging.XpsSignatureDefinition;
 import system.printing.PrintTicket;
 import system.windows.xps.packaging.XpsThumbnail;
 
@@ -98,27 +98,27 @@ public interface IXpsFixedDocumentReader extends IJCOBridgeReflected {
     
     public IXpsFixedPageReader GetFixedPage(Uri pageSource) throws Throwable;
 
-    public void AddSignatureDefinition(XpsSignatureDefinition signatureDefinition) throws Throwable;
+    public XpsStructure AddDocumentStructure() throws Throwable;
 
-    public void RemoveSignatureDefinition(XpsSignatureDefinition signatureDefinition) throws Throwable;
+    public void AddSignatureDefinition(XpsSignatureDefinition signatureDefinition) throws Throwable;
 
     public void CommitSignatureDefinition() throws Throwable;
 
-    public XpsStructure AddDocumentStructure() throws Throwable;
+    public void RemoveSignatureDefinition(XpsSignatureDefinition signatureDefinition) throws Throwable;
 
 
     
     // Properties section
     
+    public int getDocumentNumber() throws Throwable;
+
     public PrintTicket getPrintTicket() throws Throwable;
 
     public Uri getUri() throws Throwable;
 
-    public int getDocumentNumber() throws Throwable;
+    public XpsStructure getDocumentStructure() throws Throwable;
 
     public XpsThumbnail getThumbnail() throws Throwable;
-
-    public XpsStructure getDocumentStructure() throws Throwable;
 
 
 

@@ -38,16 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.SecurityState;
 import system.AppDomain;
 import system.security.policy.Evidence;
 import system.AppDomainSetup;
-import system.security.SecurityState;
 import system.runtime.remoting.ObjRef;
 import system.AppDomainManagerInitializationOptions;
+import system.reflection.Assembly;
 import system.runtime.hosting.ApplicationActivator;
 import system.security.HostSecurityManager;
 import system.threading.HostExecutionContextManager;
-import system.reflection.Assembly;
 
 
 /**
@@ -133,32 +133,22 @@ public class AppDomainManager extends NetObject  {
     
     // Methods section
     
+    public boolean CheckSecuritySettings(SecurityState state) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("CheckSecuritySettings", state == null ? null : state.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AppDomain CreateDomain(java.lang.String friendlyName, Evidence securityInfo, AppDomainSetup appDomainInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.security.XmlSyntaxException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateDomain = (JCObject)classInstance.Invoke("CreateDomain", friendlyName, securityInfo == null ? null : securityInfo.getJCOInstance(), appDomainInfo == null ? null : appDomainInfo.getJCOInstance());
             return new AppDomain(objCreateDomain);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void InitializeNewDomain(AppDomainSetup appDomainInfo) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("InitializeNewDomain", appDomainInfo == null ? null : appDomainInfo.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean CheckSecuritySettings(SecurityState state) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CheckSecuritySettings", state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,6 +187,16 @@ public class AppDomainManager extends NetObject  {
         }
     }
 
+    public void InitializeNewDomain(AppDomainSetup appDomainInfo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InitializeNewDomain", appDomainInfo == null ? null : appDomainInfo.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -217,6 +217,17 @@ public class AppDomainManager extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitializationFlags", InitializationFlags == null ? null : InitializationFlags.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly getEntryAssembly() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EntryAssembly");
+            return new Assembly(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,17 +261,6 @@ public class AppDomainManager extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("HostExecutionContextManager");
             return new HostExecutionContextManager(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Assembly getEntryAssembly() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EntryAssembly");
-            return new Assembly(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

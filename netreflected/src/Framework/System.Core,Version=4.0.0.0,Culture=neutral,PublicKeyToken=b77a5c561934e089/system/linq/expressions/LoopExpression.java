@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.linq.expressions.Expression;
 import system.linq.expressions.LoopExpression;
 import system.linq.expressions.LabelTarget;
-import system.linq.expressions.Expression;
 import system.linq.expressions.ExpressionType;
 
 
@@ -116,17 +116,6 @@ public class LoopExpression extends NetObject  {
     
     // Methods section
     
-    public LoopExpression Update(LabelTarget breakLabel, LabelTarget continueLabel, Expression body) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objUpdate = (JCObject)classInstance.Invoke("Update", breakLabel == null ? null : breakLabel.getJCOInstance(), continueLabel == null ? null : continueLabel.getJCOInstance(), body == null ? null : body.getJCOInstance());
-            return new LoopExpression(objUpdate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Expression Reduce() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -160,27 +149,26 @@ public class LoopExpression extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public NetType getType() throws Throwable {
+    public LoopExpression Update(LabelTarget breakLabel, LabelTarget continueLabel, Expression body) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new NetType(val);
+            JCObject objUpdate = (JCObject)classInstance.Invoke("Update", breakLabel == null ? null : breakLabel.getJCOInstance(), continueLabel == null ? null : continueLabel.getJCOInstance(), body == null ? null : body.getJCOInstance());
+            return new LoopExpression(objUpdate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ExpressionType getNodeType() throws Throwable {
+
+    
+    // Properties section
+    
+    public boolean getCanReduce() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NodeType");
-            return new ExpressionType(val);
+            return (boolean)classInstance.Get("CanReduce");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,6 +180,17 @@ public class LoopExpression extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Body");
             return new Expression(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ExpressionType getNodeType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NodeType");
+            return new ExpressionType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,11 +218,12 @@ public class LoopExpression extends NetObject  {
         }
     }
 
-    public boolean getCanReduce() throws Throwable {
+    public NetType getType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CanReduce");
+            JCObject val = (JCObject)classInstance.Get("Type");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

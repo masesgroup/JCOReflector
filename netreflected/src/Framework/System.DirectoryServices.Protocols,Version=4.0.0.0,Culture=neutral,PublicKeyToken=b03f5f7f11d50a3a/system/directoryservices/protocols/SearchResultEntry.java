@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.directoryservices.protocols.SearchResultAttributeCollection;
 import system.directoryservices.protocols.DirectoryControl;
+import system.directoryservices.protocols.SearchResultAttributeCollection;
 
 
 /**
@@ -118,11 +118,18 @@ public class SearchResultEntry extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getDistinguishedName() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException {
+    public DirectoryControl[] getControls() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.FormatException, system.OutOfMemoryException, system.directoryservices.protocols.BerConversionException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("DistinguishedName");
+            ArrayList<DirectoryControl> resultingArrayList = new ArrayList<DirectoryControl>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("Controls");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new DirectoryControl(resultingObject));
+            }
+            DirectoryControl[] resultingArray = new DirectoryControl[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -139,18 +146,11 @@ public class SearchResultEntry extends NetObject  {
         }
     }
 
-    public DirectoryControl[] getControls() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.FormatException, system.OutOfMemoryException, system.directoryservices.protocols.BerConversionException, system.AccessViolationException {
+    public java.lang.String getDistinguishedName() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<DirectoryControl> resultingArrayList = new ArrayList<DirectoryControl>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Controls");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new DirectoryControl(resultingObject));
-            }
-            DirectoryControl[] resultingArray = new DirectoryControl[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            return (java.lang.String)classInstance.Get("DistinguishedName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

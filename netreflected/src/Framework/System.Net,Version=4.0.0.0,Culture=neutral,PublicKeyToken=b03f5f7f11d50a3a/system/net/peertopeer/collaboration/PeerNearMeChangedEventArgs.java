@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.peertopeer.collaboration.PeerNearMe;
 import system.net.peertopeer.collaboration.PeerChangeType;
+import system.net.peertopeer.collaboration.PeerNearMe;
 
 
 /**
@@ -118,23 +118,23 @@ public class PeerNearMeChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public PeerNearMe getPeerNearMe() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PeerNearMe");
-            return new PeerNearMe(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PeerChangeType getPeerChangeType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("PeerChangeType");
             return new PeerChangeType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PeerNearMe getPeerNearMe() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PeerNearMe");
+            return new PeerNearMe(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -112,21 +112,11 @@ public class EncoderFallbackBuffer extends NetObject  {
     
     // Methods section
     
-    public void Reset() throws Throwable {
+    public boolean Fallback(char charUnknownHigh, char charUnknownLow, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Reset");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public char GetNextChar() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (char)classInstance.Invoke("GetNextChar");
+            return (boolean)classInstance.Invoke("Fallback", charUnknownHigh, charUnknownLow, index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -142,21 +132,31 @@ public class EncoderFallbackBuffer extends NetObject  {
         }
     }
 
-    public boolean Fallback(char charUnknownHigh, char charUnknownLow, int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Fallback", charUnknownHigh, charUnknownLow, index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean MovePrevious() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("MovePrevious");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public char GetNextChar() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (char)classInstance.Invoke("GetNextChar");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Reset() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

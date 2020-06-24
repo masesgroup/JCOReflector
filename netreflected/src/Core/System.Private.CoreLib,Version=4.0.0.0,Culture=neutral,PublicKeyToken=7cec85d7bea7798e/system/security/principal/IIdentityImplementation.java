@@ -107,11 +107,11 @@ public class IIdentityImplementation extends NetObject implements IIdentity {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable {
+    public boolean getIsAuthenticated() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            return (boolean)classInstance.Get("IsAuthenticated");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -127,11 +127,11 @@ public class IIdentityImplementation extends NetObject implements IIdentity {
         }
     }
 
-    public boolean getIsAuthenticated() throws Throwable {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsAuthenticated");
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

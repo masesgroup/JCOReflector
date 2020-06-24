@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.xsl.runtime.XmlNavigatorFilter;
 import system.xml.xsl.runtime.IteratorResult;
 import system.xml.xpath.XPathNavigator;
+import system.xml.xsl.runtime.XmlNavigatorFilter;
 
 
 /**
@@ -115,22 +115,22 @@ public class ContentMergeIterator extends NetObject  {
     
     // Methods section
     
-    public void Create(XmlNavigatorFilter filter) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Create", filter == null ? null : filter.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IteratorResult MoveNext(XPathNavigator input) throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objMoveNext = (JCObject)classInstance.Invoke("MoveNext", input == null ? null : input.getJCOInstance());
             return new IteratorResult(objMoveNext);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Create(XmlNavigatorFilter filter) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Create", filter == null ? null : filter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

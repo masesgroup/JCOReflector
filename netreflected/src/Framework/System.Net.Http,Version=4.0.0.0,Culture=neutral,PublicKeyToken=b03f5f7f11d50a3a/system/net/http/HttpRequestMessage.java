@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.net.http.HttpMethod;
 import system.Uri;
-import system.Version;
-import system.net.http.HttpContent;
 import system.net.http.headers.HttpRequestHeaders;
+import system.net.http.HttpContent;
+import system.Version;
 
 
 /**
@@ -124,21 +124,21 @@ public class HttpRequestMessage extends NetObject  {
         }
     }
 
-    public HttpRequestMessage(HttpMethod method, Uri requestUri) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(method == null ? null : method.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public HttpRequestMessage(HttpMethod method, java.lang.String requestUri) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.security.SecurityException, system.MemberAccessException, system.IndexOutOfRangeException, system.UriFormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(method == null ? null : method.getJCOInstance(), requestUri));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HttpRequestMessage(HttpMethod method, Uri requestUri) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(method == null ? null : method.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,22 +162,12 @@ public class HttpRequestMessage extends NetObject  {
     
     // Properties section
     
-    public Version getVersion() throws Throwable {
+    public HttpRequestHeaders getHeaders() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Version");
-            return new Version(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setVersion(Version Version) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Version", Version == null ? null : Version.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("Headers");
+            return new HttpRequestHeaders(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,12 +236,22 @@ public class HttpRequestMessage extends NetObject  {
         }
     }
 
-    public HttpRequestHeaders getHeaders() throws Throwable {
+    public Version getVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Headers");
-            return new HttpRequestHeaders(val);
+            JCObject val = (JCObject)classInstance.Get("Version");
+            return new Version(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setVersion(Version Version) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Version", Version == null ? null : Version.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

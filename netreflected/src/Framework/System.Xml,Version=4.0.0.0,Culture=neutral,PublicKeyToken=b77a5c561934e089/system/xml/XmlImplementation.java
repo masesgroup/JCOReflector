@@ -135,22 +135,22 @@ public class XmlImplementation extends NetObject  {
     
     // Methods section
     
+    public boolean HasFeature(java.lang.String strFeature, java.lang.String strVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("HasFeature", strFeature, strVersion);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XmlDocument CreateDocument() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateDocument = (JCObject)classInstance.Invoke("CreateDocument");
             return new XmlDocument(objCreateDocument);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean HasFeature(java.lang.String strFeature, java.lang.String strVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("HasFeature", strFeature, strVersion);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

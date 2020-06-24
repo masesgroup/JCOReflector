@@ -91,13 +91,11 @@ public interface IStream extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void SetSize(long libNewSize) throws Throwable;
-
     public void Commit(int grfCommitFlags) throws Throwable;
 
-    public void Revert() throws Throwable;
-
     public void LockRegion(long libOffset, long cb, int dwLockType) throws Throwable;
+
+    public void SetSize(long libNewSize) throws Throwable;
 
     public void UnlockRegion(long libOffset, long cb, int dwLockType) throws Throwable;
 

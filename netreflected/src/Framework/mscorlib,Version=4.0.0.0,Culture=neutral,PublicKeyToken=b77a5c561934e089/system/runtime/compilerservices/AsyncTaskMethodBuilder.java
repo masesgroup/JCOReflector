@@ -127,11 +127,11 @@ public class AsyncTaskMethodBuilder extends NetObject  {
         }
     }
 
-    public void SetStateMachine(IAsyncStateMachine stateMachine) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
+    public void SetException(NetException exception) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetStateMachine", stateMachine == null ? null : stateMachine.getJCOInstance());
+            classInstance.Invoke("SetException", exception == null ? null : exception.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,11 +147,11 @@ public class AsyncTaskMethodBuilder extends NetObject  {
         }
     }
 
-    public void SetException(NetException exception) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MulticastNotSupportedException {
+    public void SetStateMachine(IAsyncStateMachine stateMachine) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetException", exception == null ? null : exception.getJCOInstance());
+            classInstance.Invoke("SetStateMachine", stateMachine == null ? null : stateMachine.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

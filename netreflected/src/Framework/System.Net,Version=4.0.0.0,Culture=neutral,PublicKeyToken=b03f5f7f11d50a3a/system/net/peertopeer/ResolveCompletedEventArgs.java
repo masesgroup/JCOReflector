@@ -128,17 +128,6 @@ public class ResolveCompletedEventArgs extends NetObject  {
     
     // Properties section
     
-    public PeerNameRecordCollection getPeerNameRecordCollection() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PeerNameRecordCollection");
-            return new PeerNameRecordCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCancelled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -155,6 +144,17 @@ public class ResolveCompletedEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Error");
             return new NetException(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PeerNameRecordCollection getPeerNameRecordCollection() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("PeerNameRecordCollection");
+            return new PeerNameRecordCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

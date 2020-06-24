@@ -42,8 +42,8 @@ import system.security.rightsmanagement.UnsignedPublishLicense;
 import system.security.rightsmanagement.CryptoProvider;
 import system.security.rightsmanagement.UseLicense;
 import system.security.rightsmanagement.SecureEnvironment;
-import system.Uri;
 import system.Guid;
+import system.Uri;
 
 
 /**
@@ -166,6 +166,17 @@ public class PublishLicense extends NetObject  {
     
     // Properties section
     
+    public Guid getContentId() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ContentId");
+            return new Guid(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getReferralInfoName() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -182,17 +193,6 @@ public class PublishLicense extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ReferralInfoUri");
             return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Guid getContentId() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ContentId");
-            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

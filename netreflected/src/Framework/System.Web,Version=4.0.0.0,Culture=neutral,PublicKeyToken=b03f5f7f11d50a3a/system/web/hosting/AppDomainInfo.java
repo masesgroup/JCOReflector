@@ -112,31 +112,11 @@ public class AppDomainInfo extends NetObject  {
     
     // Methods section
     
-    public java.lang.String GetId() throws Throwable {
+    public boolean IsIdle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetVirtualPath() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetVirtualPath");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetPhysicalPath() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetPhysicalPath");
+            return (boolean)classInstance.Invoke("IsIdle");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,11 +132,31 @@ public class AppDomainInfo extends NetObject  {
         }
     }
 
-    public boolean IsIdle() throws Throwable {
+    public java.lang.String GetId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsIdle");
+            return (java.lang.String)classInstance.Invoke("GetId");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetPhysicalPath() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetPhysicalPath");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetVirtualPath() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetVirtualPath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

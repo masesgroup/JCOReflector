@@ -153,23 +153,23 @@ public class DataGridPreparingCellForEditEventArgs extends NetObject  {
         }
     }
 
-    public RoutedEventArgs getEditingEventArgs() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EditingEventArgs");
-            return new RoutedEventArgs(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FrameworkElement getEditingElement() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("EditingElement");
             return new FrameworkElement(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RoutedEventArgs getEditingEventArgs() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EditingEventArgs");
+            return new RoutedEventArgs(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

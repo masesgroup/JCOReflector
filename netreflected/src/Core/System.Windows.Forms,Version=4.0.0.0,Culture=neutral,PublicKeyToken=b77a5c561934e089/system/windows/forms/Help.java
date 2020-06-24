@@ -115,26 +115,6 @@ public class Help extends NetObject  {
     
     // Methods section
     
-    public static void ShowHelp(Control parent, java.lang.String url, java.lang.String keyword) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.UriFormatException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("ShowHelp", parent == null ? null : parent.getJCOInstance(), url, keyword);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void ShowHelp(Control parent, java.lang.String url, HelpNavigator command, NetObject parameter) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("ShowHelp", parent == null ? null : parent.getJCOInstance(), url, command == null ? null : command.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void ShowHelp(Control parent, java.lang.String url) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.UriFormatException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -145,11 +125,31 @@ public class Help extends NetObject  {
         }
     }
 
+    public static void ShowHelp(Control parent, java.lang.String url, java.lang.String keyword) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.UriFormatException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ShowHelp", parent == null ? null : parent.getJCOInstance(), url, keyword);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void ShowHelp(Control parent, java.lang.String url, HelpNavigator navigator) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.UriFormatException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ShowHelp", parent == null ? null : parent.getJCOInstance(), url, navigator == null ? null : navigator.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ShowHelp(Control parent, java.lang.String url, HelpNavigator command, NetObject parameter) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ShowHelp", parent == null ? null : parent.getJCOInstance(), url, command == null ? null : command.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

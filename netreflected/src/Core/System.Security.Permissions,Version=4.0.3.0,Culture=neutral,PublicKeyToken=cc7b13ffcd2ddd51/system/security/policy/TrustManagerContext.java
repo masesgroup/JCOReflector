@@ -219,27 +219,6 @@ public class TrustManagerContext extends NetObject  {
         }
     }
 
-    public TrustManagerUIContext getUIContext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UIContext");
-            return new TrustManagerUIContext(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setUIContext(TrustManagerUIContext UIContext) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("UIContext", UIContext == null ? null : UIContext.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ApplicationIdentity getPreviousApplicationIdentity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -256,6 +235,27 @@ public class TrustManagerContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreviousApplicationIdentity", PreviousApplicationIdentity == null ? null : PreviousApplicationIdentity.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TrustManagerUIContext getUIContext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("UIContext");
+            return new TrustManagerUIContext(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setUIContext(TrustManagerUIContext UIContext) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("UIContext", UIContext == null ? null : UIContext.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

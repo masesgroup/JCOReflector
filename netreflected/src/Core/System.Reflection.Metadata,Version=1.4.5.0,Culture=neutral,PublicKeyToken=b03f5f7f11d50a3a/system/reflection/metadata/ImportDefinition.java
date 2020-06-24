@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.metadata.ImportDefinitionKind;
-import system.reflection.metadata.BlobHandle;
 import system.reflection.metadata.AssemblyReferenceHandle;
+import system.reflection.metadata.BlobHandle;
 import system.reflection.metadata.EntityHandle;
+import system.reflection.metadata.ImportDefinitionKind;
 
 
 /**
@@ -120,12 +120,12 @@ public class ImportDefinition extends NetObject  {
     
     // Properties section
     
-    public ImportDefinitionKind getKind() throws Throwable {
+    public AssemblyReferenceHandle getTargetAssembly() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Kind");
-            return new ImportDefinitionKind(val);
+            JCObject val = (JCObject)classInstance.Get("TargetAssembly");
+            return new AssemblyReferenceHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -137,17 +137,6 @@ public class ImportDefinition extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Alias");
             return new BlobHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AssemblyReferenceHandle getTargetAssembly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TargetAssembly");
-            return new AssemblyReferenceHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,6 +159,17 @@ public class ImportDefinition extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("TargetType");
             return new EntityHandle(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImportDefinitionKind getKind() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Kind");
+            return new ImportDefinitionKind(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

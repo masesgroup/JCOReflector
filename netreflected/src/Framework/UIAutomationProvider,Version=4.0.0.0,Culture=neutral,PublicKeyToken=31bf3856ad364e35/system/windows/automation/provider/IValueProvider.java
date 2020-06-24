@@ -95,9 +95,9 @@ public interface IValueProvider extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String getValue() throws Throwable;
-
     public boolean getIsReadOnly() throws Throwable;
+
+    public java.lang.String getValue() throws Throwable;
 
 
 

@@ -103,16 +103,6 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
 
     // Methods section
     
-    public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("TransformBlock", inputBuffer, inputOffset, inputCount, outputBuffer, outputOffset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -132,6 +122,16 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
         }
     }
 
+    public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("TransformBlock", inputBuffer, inputOffset, inputCount, outputBuffer, outputOffset);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -146,21 +146,11 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
     
     // Properties section
     
-    public int getInputBlockSize() throws Throwable {
+    public boolean getCanReuseTransform() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("InputBlockSize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getOutputBlockSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("OutputBlockSize");
+            return (boolean)classInstance.Get("CanReuseTransform");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,11 +166,21 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
         }
     }
 
-    public boolean getCanReuseTransform() throws Throwable {
+    public int getInputBlockSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CanReuseTransform");
+            return (int)classInstance.Get("InputBlockSize");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getOutputBlockSize() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("OutputBlockSize");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

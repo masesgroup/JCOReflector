@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Guid;
 import system.xml.linq.XName;
 import system.xml.linq.XNamespace;
-import system.Guid;
 
 
 /**
@@ -120,43 +120,22 @@ public class CorrelationKey extends NetObject  {
     
     // Properties section
     
-    public XName getScopeName() throws Throwable {
+    public boolean getIsValid() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ScopeName");
-            return new XName(val);
+            return (boolean)classInstance.Get("IsValid");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setScopeName(XName ScopeName) throws Throwable {
+    public Guid getValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ScopeName", ScopeName == null ? null : ScopeName.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XNamespace getProvider() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Provider");
-            return new XNamespace(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setProvider(XNamespace Provider) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Provider", Provider == null ? null : Provider.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("Value");
+            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,22 +181,43 @@ public class CorrelationKey extends NetObject  {
         }
     }
 
-    public boolean getIsValid() throws Throwable {
+    public XName getScopeName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsValid");
+            JCObject val = (JCObject)classInstance.Get("ScopeName");
+            return new XName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Guid getValue() throws Throwable {
+    public void setScopeName(XName ScopeName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
-            return new Guid(val);
+            classInstance.Set("ScopeName", ScopeName == null ? null : ScopeName.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XNamespace getProvider() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Provider");
+            return new XNamespace(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setProvider(XNamespace Provider) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Provider", Provider == null ? null : Provider.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

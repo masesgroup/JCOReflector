@@ -37,12 +37,12 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.runtime.remoting.channels.IChannelDataStore;
-import system.runtime.remoting.channels.IChannelDataStoreImplementation;
 import system.runtime.remoting.channels.IServerChannelSink;
 import system.runtime.remoting.channels.IServerChannelSinkImplementation;
 import system.runtime.remoting.channels.IChannelReceiver;
 import system.runtime.remoting.channels.IChannelReceiverImplementation;
+import system.runtime.remoting.channels.IChannelDataStore;
+import system.runtime.remoting.channels.IChannelDataStoreImplementation;
 import system.runtime.remoting.channels.IServerChannelSinkProvider;
 import system.runtime.remoting.channels.IServerChannelSinkProviderImplementation;
 
@@ -97,9 +97,9 @@ public interface IServerChannelSinkProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void GetChannelData(IChannelDataStore channelData) throws Throwable;
-
     public IServerChannelSink CreateSink(IChannelReceiver channel) throws Throwable;
+
+    public void GetChannelData(IChannelDataStore channelData) throws Throwable;
 
 
     

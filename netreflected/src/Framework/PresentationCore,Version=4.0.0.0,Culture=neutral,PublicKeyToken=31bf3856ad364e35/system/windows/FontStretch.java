@@ -113,11 +113,11 @@ public class FontStretch extends NetObject  {
     
     // Methods section
     
-    public int ToOpenTypeStretch() throws Throwable {
+    public boolean Equals(FontStretch obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ToOpenTypeStretch");
+            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -133,11 +133,11 @@ public class FontStretch extends NetObject  {
         }
     }
 
-    public boolean Equals(FontStretch obj) throws Throwable {
+    public int ToOpenTypeStretch() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            return (int)classInstance.Invoke("ToOpenTypeStretch");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

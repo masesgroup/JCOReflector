@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.tokens.GenericXmlSecurityToken;
-import system.xml.XmlElement;
 import system.identitymodel.selectors.CardSpacePolicyElement;
 import system.identitymodel.selectors.SecurityTokenSerializer;
+import system.xml.XmlElement;
 
 
 /**
@@ -127,21 +127,21 @@ public class CardSpaceSelector extends NetObject  {
         }
     }
 
-    public static void Manage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Manage");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void Import(java.lang.String fileName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Import", fileName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Manage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.componentmodel.Win32Exception {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Manage");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

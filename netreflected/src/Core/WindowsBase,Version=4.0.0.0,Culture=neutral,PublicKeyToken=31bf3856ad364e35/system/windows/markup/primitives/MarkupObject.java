@@ -129,12 +129,12 @@ public class MarkupObject extends NetObject  {
     
     // Properties section
     
-    public NetType getObjectType() throws Throwable {
+    public AttributeCollection getAttributes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectType");
-            return new NetType(val);
+            JCObject val = (JCObject)classInstance.Get("Attributes");
+            return new AttributeCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,12 +151,12 @@ public class MarkupObject extends NetObject  {
         }
     }
 
-    public AttributeCollection getAttributes() throws Throwable {
+    public NetType getObjectType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new AttributeCollection(val);
+            JCObject val = (JCObject)classInstance.Get("ObjectType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -112,11 +112,20 @@ public class SqlCacheDependencyAdmin extends NetObject  {
     
     // Methods section
     
-    public static void EnableNotifications(java.lang.String connectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.FormatException, system.web.caching.DatabaseNotEnabledForNotificationException {
+    public static java.lang.String[] GetTablesEnabledForNotifications(java.lang.String connectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.data.sqlclient.SqlException, system.threading.tasks.TaskSchedulerException, system.web.caching.DatabaseNotEnabledForNotificationException, system.web.HttpException, system.TypeLoadException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("EnableNotifications", connectionString);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetTablesEnabledForNotifications", connectionString);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetTablesEnabledForNotifications = 0; indexGetTablesEnabledForNotifications < resultingArrayList.size(); indexGetTablesEnabledForNotifications++ ) {
+				resultingArray[indexGetTablesEnabledForNotifications] = (java.lang.String)resultingArrayList.get(indexGetTablesEnabledForNotifications);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -127,26 +136,6 @@ public class SqlCacheDependencyAdmin extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DisableNotifications", connectionString);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void EnableTableForNotifications(java.lang.String connectionString, java.lang.String table) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.FormatException, system.web.caching.DatabaseNotEnabledForNotificationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("EnableTableForNotifications", connectionString, table);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void EnableTableForNotifications(java.lang.String connectionString, java.lang.String[] tables) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.FormatException, system.web.caching.DatabaseNotEnabledForNotificationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("EnableTableForNotifications", connectionString, tables);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,20 +161,31 @@ public class SqlCacheDependencyAdmin extends NetObject  {
         }
     }
 
-    public static java.lang.String[] GetTablesEnabledForNotifications(java.lang.String connectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.data.sqlclient.SqlException, system.threading.tasks.TaskSchedulerException, system.web.caching.DatabaseNotEnabledForNotificationException, system.web.HttpException, system.TypeLoadException {
+    public static void EnableNotifications(java.lang.String connectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.FormatException, system.web.caching.DatabaseNotEnabledForNotificationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetTablesEnabledForNotifications", connectionString);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetTablesEnabledForNotifications = 0; indexGetTablesEnabledForNotifications < resultingArrayList.size(); indexGetTablesEnabledForNotifications++ ) {
-				resultingArray[indexGetTablesEnabledForNotifications] = (java.lang.String)resultingArrayList.get(indexGetTablesEnabledForNotifications);
-            }
-            return resultingArray;
+            classType.Invoke("EnableNotifications", connectionString);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void EnableTableForNotifications(java.lang.String connectionString, java.lang.String table) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.FormatException, system.web.caching.DatabaseNotEnabledForNotificationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("EnableTableForNotifications", connectionString, table);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void EnableTableForNotifications(java.lang.String connectionString, java.lang.String[] tables) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.FormatException, system.web.caching.DatabaseNotEnabledForNotificationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("EnableTableForNotifications", connectionString, tables);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

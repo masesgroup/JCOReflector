@@ -130,17 +130,6 @@ public class SqlNotificationEventArgs extends NetObject  {
     
     // Properties section
     
-    public SqlNotificationType getType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new SqlNotificationType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SqlNotificationInfo getInfo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -158,6 +147,17 @@ public class SqlNotificationEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Source");
             return new SqlNotificationSource(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlNotificationType getType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Type");
+            return new SqlNotificationType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

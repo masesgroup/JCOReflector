@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.Array;
-import system.web.sessionstate.SessionStateMode;
 import system.web.HttpCookieMode;
 import system.web.HttpStaticObjectsCollection;
+import system.web.sessionstate.SessionStateMode;
 
 
 /**
@@ -93,57 +93,57 @@ public interface IHttpSessionState extends IJCOBridgeReflected {
 
     // Methods section
     
+    public IEnumerator GetEnumerator() throws Throwable;
+
     public void Abandon() throws Throwable;
 
     public void Add(java.lang.String name, NetObject value) throws Throwable;
 
-    public void Remove(java.lang.String name) throws Throwable;
-
-    public void RemoveAt(int index) throws Throwable;
-
     public void Clear() throws Throwable;
+
+    public void CopyTo(Array array, int index) throws Throwable;
+
+    public void Remove(java.lang.String name) throws Throwable;
 
     public void RemoveAll() throws Throwable;
 
-    public IEnumerator GetEnumerator() throws Throwable;
-
-    public void CopyTo(Array array, int index) throws Throwable;
+    public void RemoveAt(int index) throws Throwable;
 
 
     
     // Properties section
     
-    public java.lang.String getSessionID() throws Throwable;
-
-    public int getTimeout() throws Throwable;
-
-    public void setTimeout(int Timeout) throws Throwable;
+    public boolean getIsCookieless() throws Throwable;
 
     public boolean getIsNewSession() throws Throwable;
 
-    public SessionStateMode getMode() throws Throwable;
+    public boolean getIsReadOnly() throws Throwable;
 
-    public boolean getIsCookieless() throws Throwable;
-
-    public HttpCookieMode getCookieMode() throws Throwable;
-
-    public int getLCID() throws Throwable;
-
-    public void setLCID(int LCID) throws Throwable;
+    public boolean getIsSynchronized() throws Throwable;
 
     public int getCodePage() throws Throwable;
 
     public void setCodePage(int CodePage) throws Throwable;
 
-    public HttpStaticObjectsCollection getStaticObjects() throws Throwable;
-
     public int getCount() throws Throwable;
+
+    public int getLCID() throws Throwable;
+
+    public void setLCID(int LCID) throws Throwable;
+
+    public int getTimeout() throws Throwable;
+
+    public void setTimeout(int Timeout) throws Throwable;
 
     public NetObject getSyncRoot() throws Throwable;
 
-    public boolean getIsReadOnly() throws Throwable;
+    public java.lang.String getSessionID() throws Throwable;
 
-    public boolean getIsSynchronized() throws Throwable;
+    public HttpCookieMode getCookieMode() throws Throwable;
+
+    public HttpStaticObjectsCollection getStaticObjects() throws Throwable;
+
+    public SessionStateMode getMode() throws Throwable;
 
 
 

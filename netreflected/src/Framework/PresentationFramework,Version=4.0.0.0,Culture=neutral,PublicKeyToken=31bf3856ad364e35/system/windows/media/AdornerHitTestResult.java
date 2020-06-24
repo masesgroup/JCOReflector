@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.DependencyObject;
 import system.windows.documents.Adorner;
 import system.windows.Point;
-import system.windows.media.Visual;
 
 
 /**
@@ -119,6 +119,17 @@ public class AdornerHitTestResult extends NetObject  {
     
     // Properties section
     
+    public DependencyObject getVisualHit() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("VisualHit");
+            return new DependencyObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Adorner getAdorner() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,17 +147,6 @@ public class AdornerHitTestResult extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("PointHit");
             return new Point(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Visual getVisualHit() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("VisualHit");
-            return new Visual(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

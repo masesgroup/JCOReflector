@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.componentmodel.PropertyDescriptorCollection;
 import system.windows.forms.BindingsCollection;
-import system.windows.forms.BindingCompleteEventHandler;
 import system.EventHandler;
+import system.windows.forms.BindingCompleteEventHandler;
 import system.windows.forms.BindingManagerDataErrorEventHandler;
 
 
@@ -128,6 +128,16 @@ public class BindingManagerBase extends NetObject  {
         }
     }
 
+    public void AddNew() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddNew");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void CancelCurrentEdit() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,31 +158,11 @@ public class BindingManagerBase extends NetObject  {
         }
     }
 
-    public void AddNew() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddNew");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SuspendBinding() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SuspendBinding");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,27 +178,35 @@ public class BindingManagerBase extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public BindingsCollection getBindings() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException {
+    public void SuspendBinding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Bindings");
-            return new BindingsCollection(val);
+            classInstance.Invoke("SuspendBinding");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject getCurrent() throws Throwable {
+
+    
+    // Properties section
+    
+    public boolean getIsBindingSuspended() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Current");
-            return new NetObject(val);
+            return (boolean)classInstance.Get("IsBindingSuspended");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Count");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,21 +232,23 @@ public class BindingManagerBase extends NetObject  {
         }
     }
 
-    public boolean getIsBindingSuspended() throws Throwable {
+    public NetObject getCurrent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsBindingSuspended");
+            JCObject val = (JCObject)classInstance.Get("Current");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getCount() throws Throwable {
+    public BindingsCollection getBindings() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Count");
+            JCObject val = (JCObject)classInstance.Get("Bindings");
+            return new BindingsCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,26 +258,6 @@ public class BindingManagerBase extends NetObject  {
 
     // Instance Events section
     
-
-    public void addBindingComplete(BindingCompleteEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("BindingComplete", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeBindingComplete(BindingCompleteEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("BindingComplete", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
     public void addCurrentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
@@ -319,26 +299,6 @@ public class BindingManagerBase extends NetObject  {
         }
     }
 
-    public void addDataError(BindingManagerDataErrorEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("DataError", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeDataError(BindingManagerDataErrorEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("DataError", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void addPositionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -354,6 +314,46 @@ public class BindingManagerBase extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PositionChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addBindingComplete(BindingCompleteEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("BindingComplete", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeBindingComplete(BindingCompleteEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("BindingComplete", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addDataError(BindingManagerDataErrorEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("DataError", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeDataError(BindingManagerDataErrorEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("DataError", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

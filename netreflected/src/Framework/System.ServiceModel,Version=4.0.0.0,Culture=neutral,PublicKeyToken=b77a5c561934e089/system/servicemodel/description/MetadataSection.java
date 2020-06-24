@@ -174,6 +174,27 @@ public class MetadataSection extends NetObject  {
     
     // Properties section
     
+    public NetObject getMetadata() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Metadata");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMetadata(NetObject Metadata) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Metadata", Metadata == null ? null : Metadata.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getDialect() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -214,22 +235,21 @@ public class MetadataSection extends NetObject  {
         }
     }
 
-    public NetObject getMetadata() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getMetadataExchangeDialect() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Metadata");
-            return new NetObject(val);
+            return (java.lang.String)classType.Get("MetadataExchangeDialect");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMetadata(NetObject Metadata) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getPolicyDialect() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("Metadata", Metadata == null ? null : Metadata.getJCOInstance());
+            return (java.lang.String)classType.Get("PolicyDialect");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,26 +270,6 @@ public class MetadataSection extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Get("XmlSchemaDialect");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String getPolicyDialect() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Get("PolicyDialect");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String getMetadataExchangeDialect() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Get("MetadataExchangeDialect");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

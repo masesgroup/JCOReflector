@@ -179,16 +179,6 @@ public class DataGridLength extends NetObject  {
         }
     }
 
-    public boolean getIsStar() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsStar");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsSizeToCells() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -209,22 +199,11 @@ public class DataGridLength extends NetObject  {
         }
     }
 
-    public double getValue() throws Throwable {
+    public boolean getIsStar() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("Value");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DataGridLengthUnitType getUnitType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UnitType");
-            return new DataGridLengthUnitType(val);
+            return (boolean)classInstance.Get("IsStar");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,6 +224,16 @@ public class DataGridLength extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (double)classInstance.Get("DisplayValue");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("Value");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,6 +267,17 @@ public class DataGridLength extends NetObject  {
         try {
             JCObject val = (JCObject)classType.Get("SizeToHeader");
             return new DataGridLength(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataGridLengthUnitType getUnitType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("UnitType");
+            return new DataGridLengthUnitType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

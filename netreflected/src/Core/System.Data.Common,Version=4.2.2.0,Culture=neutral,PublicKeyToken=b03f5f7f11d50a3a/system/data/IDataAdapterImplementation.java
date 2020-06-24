@@ -38,15 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.DataTable;
 import system.data.DataSet;
+import system.data.DataTable;
 import system.data.SchemaType;
 import system.data.IDataParameter;
 import system.data.IDataParameterImplementation;
-import system.data.MissingMappingAction;
-import system.data.MissingSchemaAction;
 import system.data.ITableMappingCollection;
 import system.data.ITableMappingCollectionImplementation;
+import system.data.MissingMappingAction;
+import system.data.MissingSchemaAction;
 
 
 /**
@@ -112,6 +112,26 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
 
     // Methods section
     
+    public int Fill(DataSet dataSet) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int Update(DataSet dataSet) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Update", dataSet == null ? null : dataSet.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DataTable[] FillSchema(DataSet dataSet, SchemaType schemaType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -124,16 +144,6 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
             DataTable[] resultingArray = new DataTable[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int Fill(DataSet dataSet) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,20 +166,21 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
         }
     }
 
-    public int Update(DataSet dataSet) throws Throwable {
+
+    
+    // Properties section
+    
+    public ITableMappingCollection getTableMappings() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Update", dataSet == null ? null : dataSet.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("TableMappings");
+            return new ITableMappingCollectionImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-
-    
-    // Properties section
-    
     public MissingMappingAction getMissingMappingAction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -207,17 +218,6 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MissingSchemaAction", MissingSchemaAction == null ? null : MissingSchemaAction.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITableMappingCollection getTableMappings() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TableMappings");
-            return new ITableMappingCollectionImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -91,27 +91,27 @@ public interface IWindowProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void SetVisualState(WindowVisualState state) throws Throwable;
+    public boolean WaitForInputIdle(int milliseconds) throws Throwable;
 
     public void Close() throws Throwable;
 
-    public boolean WaitForInputIdle(int milliseconds) throws Throwable;
+    public void SetVisualState(WindowVisualState state) throws Throwable;
 
 
     
     // Properties section
     
+    public boolean getIsModal() throws Throwable;
+
+    public boolean getIsTopmost() throws Throwable;
+
     public boolean getMaximizable() throws Throwable;
 
     public boolean getMinimizable() throws Throwable;
 
-    public boolean getIsModal() throws Throwable;
-
-    public WindowVisualState getVisualState() throws Throwable;
-
     public WindowInteractionState getInteractionState() throws Throwable;
 
-    public boolean getIsTopmost() throws Throwable;
+    public WindowVisualState getVisualState() throws Throwable;
 
 
 

@@ -138,16 +138,6 @@ public class CngProvider extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getProvider() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Provider");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static CngProvider getMicrosoftSmartCardKeyStorageProvider() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -165,6 +155,16 @@ public class CngProvider extends NetObject  {
         try {
             JCObject val = (JCObject)classType.Get("MicrosoftSoftwareKeyStorageProvider");
             return new CngProvider(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getProvider() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Provider");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -104,11 +104,11 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
 
     // Methods section
     
-    public java.lang.String GetSessionID(HttpContext context) throws Throwable {
+    public boolean Validate(java.lang.String id) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetSessionID", context == null ? null : context.getJCOInstance());
+            return (boolean)classInstance.Invoke("Validate", id);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -124,21 +124,11 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
         }
     }
 
-    public void RemoveSessionID(HttpContext context) throws Throwable {
+    public java.lang.String GetSessionID(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RemoveSessionID", context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Validate(java.lang.String id) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Validate", id);
+            return (java.lang.String)classInstance.Invoke("GetSessionID", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,6 +139,16 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveSessionID(HttpContext context) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveSessionID", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

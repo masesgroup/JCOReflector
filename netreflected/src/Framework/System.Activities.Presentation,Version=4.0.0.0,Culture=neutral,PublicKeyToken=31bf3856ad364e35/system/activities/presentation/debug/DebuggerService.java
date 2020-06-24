@@ -126,42 +126,12 @@ public class DebuggerService extends NetObject  {
     
     // Methods section
     
-    public void EnsureVisible(SourceLocation sourceLocation) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("EnsureVisible", sourceLocation == null ? null : sourceLocation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SourceLocation GetExactLocation(SourceLocation approximateLocation) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetExactLocation = (JCObject)classInstance.Invoke("GetExactLocation", approximateLocation == null ? null : approximateLocation.getJCOInstance());
             return new SourceLocation(objGetExactLocation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void InsertBreakpoint(SourceLocation sourceLocation, BreakpointTypes breakpointType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("InsertBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance(), breakpointType == null ? null : breakpointType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void UpdateBreakpoint(SourceLocation sourceLocation, BreakpointTypes newBreakpointType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UpdateBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance(), newBreakpointType == null ? null : newBreakpointType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,6 +147,26 @@ public class DebuggerService extends NetObject  {
         }
     }
 
+    public void EnsureVisible(SourceLocation sourceLocation) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EnsureVisible", sourceLocation == null ? null : sourceLocation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InsertBreakpoint(SourceLocation sourceLocation, BreakpointTypes breakpointType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InsertBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance(), breakpointType == null ? null : breakpointType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ResetBreakpoints() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -187,37 +177,55 @@ public class DebuggerService extends NetObject  {
         }
     }
 
+    public void UpdateBreakpoint(SourceLocation sourceLocation, BreakpointTypes newBreakpointType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance(), newBreakpointType == null ? null : newBreakpointType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public SourceLocation getSelectedLocation() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.NotImplementedException {
+    public boolean getHideSourceFileName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedLocation");
-            return new SourceLocation(val);
+            return (boolean)classInstance.Get("HideSourceFileName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SourceLocation getCurrentLocation() throws Throwable {
+    public void setHideSourceFileName(boolean HideSourceFileName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentLocation");
-            return new SourceLocation(val);
+            classInstance.Set("HideSourceFileName", HideSourceFileName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCurrentLocation(SourceLocation CurrentLocation) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public boolean getIsDebugging() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("CurrentLocation", CurrentLocation == null ? null : CurrentLocation.getJCOInstance());
+            return (boolean)classInstance.Get("IsDebugging");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIsDebugging(boolean IsDebugging) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IsDebugging", IsDebugging);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,41 +252,33 @@ public class DebuggerService extends NetObject  {
         }
     }
 
-    public boolean getIsDebugging() throws Throwable {
+    public SourceLocation getCurrentLocation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsDebugging");
+            JCObject val = (JCObject)classInstance.Get("CurrentLocation");
+            return new SourceLocation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIsDebugging(boolean IsDebugging) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException {
+    public void setCurrentLocation(SourceLocation CurrentLocation) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IsDebugging", IsDebugging);
+            classInstance.Set("CurrentLocation", CurrentLocation == null ? null : CurrentLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getHideSourceFileName() throws Throwable {
+    public SourceLocation getSelectedLocation() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HideSourceFileName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHideSourceFileName(boolean HideSourceFileName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HideSourceFileName", HideSourceFileName);
+            JCObject val = (JCObject)classInstance.Get("SelectedLocation");
+            return new SourceLocation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

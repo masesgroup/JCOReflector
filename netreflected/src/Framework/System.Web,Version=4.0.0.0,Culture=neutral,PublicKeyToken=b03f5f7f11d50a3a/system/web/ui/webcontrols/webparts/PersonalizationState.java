@@ -114,11 +114,11 @@ public class PersonalizationState extends NetObject  {
     
     // Methods section
     
-    public void ApplyWebPartPersonalization(WebPart webPart) throws Throwable {
+    public java.lang.String GetAuthorizationFilter(java.lang.String webPartID) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ApplyWebPartPersonalization", webPart == null ? null : webPart.getJCOInstance());
+            return (java.lang.String)classInstance.Invoke("GetAuthorizationFilter", webPartID);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -134,11 +134,11 @@ public class PersonalizationState extends NetObject  {
         }
     }
 
-    public void ExtractWebPartPersonalization(WebPart webPart) throws Throwable {
+    public void ApplyWebPartPersonalization(WebPart webPart) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ExtractWebPartPersonalization", webPart == null ? null : webPart.getJCOInstance());
+            classInstance.Invoke("ApplyWebPartPersonalization", webPart == null ? null : webPart.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,11 +154,11 @@ public class PersonalizationState extends NetObject  {
         }
     }
 
-    public java.lang.String GetAuthorizationFilter(java.lang.String webPartID) throws Throwable {
+    public void ExtractWebPartPersonalization(WebPart webPart) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetAuthorizationFilter", webPartID);
+            classInstance.Invoke("ExtractWebPartPersonalization", webPart == null ? null : webPart.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

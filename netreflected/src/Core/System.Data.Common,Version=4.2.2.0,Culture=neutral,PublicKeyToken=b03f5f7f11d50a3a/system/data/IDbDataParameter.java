@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.data.DataRowVersion;
 import system.data.DbType;
 import system.data.ParameterDirection;
-import system.data.DataRowVersion;
 
 
 /**
@@ -96,6 +96,8 @@ public interface IDbDataParameter extends IJCOBridgeReflected {
     
     // Properties section
     
+    public boolean getIsNullable() throws Throwable;
+
     public byte getPrecision() throws Throwable;
 
     public void setPrecision(byte Precision) throws Throwable;
@@ -108,6 +110,10 @@ public interface IDbDataParameter extends IJCOBridgeReflected {
 
     public void setSize(int Size) throws Throwable;
 
+    public DataRowVersion getSourceVersion() throws Throwable;
+
+    public void setSourceVersion(DataRowVersion SourceVersion) throws Throwable;
+
     public DbType getDbType() throws Throwable;
 
     public void setDbType(DbType DbType) throws Throwable;
@@ -116,7 +122,9 @@ public interface IDbDataParameter extends IJCOBridgeReflected {
 
     public void setDirection(ParameterDirection Direction) throws Throwable;
 
-    public boolean getIsNullable() throws Throwable;
+    public NetObject getValue() throws Throwable;
+
+    public void setValue(NetObject Value) throws Throwable;
 
     public java.lang.String getParameterName() throws Throwable;
 
@@ -125,14 +133,6 @@ public interface IDbDataParameter extends IJCOBridgeReflected {
     public java.lang.String getSourceColumn() throws Throwable;
 
     public void setSourceColumn(java.lang.String SourceColumn) throws Throwable;
-
-    public DataRowVersion getSourceVersion() throws Throwable;
-
-    public void setSourceVersion(DataRowVersion SourceVersion) throws Throwable;
-
-    public NetObject getValue() throws Throwable;
-
-    public void setValue(NetObject Value) throws Throwable;
 
 
 

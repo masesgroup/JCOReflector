@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.peertopeer.collaboration.PeerEndPoint;
-import system.net.peertopeer.collaboration.PeerContact;
 import system.net.peertopeer.collaboration.PeerChangeType;
+import system.net.peertopeer.collaboration.PeerContact;
+import system.net.peertopeer.collaboration.PeerEndPoint;
 import system.net.peertopeer.collaboration.PeerObject;
 
 
@@ -120,12 +120,12 @@ public class ObjectChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public PeerEndPoint getPeerEndPoint() throws Throwable {
+    public PeerChangeType getPeerChangeType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerEndPoint");
-            return new PeerEndPoint(val);
+            JCObject val = (JCObject)classInstance.Get("PeerChangeType");
+            return new PeerChangeType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -142,12 +142,12 @@ public class ObjectChangedEventArgs extends NetObject  {
         }
     }
 
-    public PeerChangeType getPeerChangeType() throws Throwable {
+    public PeerEndPoint getPeerEndPoint() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerChangeType");
-            return new PeerChangeType(val);
+            JCObject val = (JCObject)classInstance.Get("PeerEndPoint");
+            return new PeerEndPoint(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

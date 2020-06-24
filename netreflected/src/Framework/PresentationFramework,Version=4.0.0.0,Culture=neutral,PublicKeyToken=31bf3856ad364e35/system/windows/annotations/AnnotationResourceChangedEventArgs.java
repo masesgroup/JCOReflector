@@ -141,23 +141,23 @@ public class AnnotationResourceChangedEventArgs extends NetObject  {
         }
     }
 
-    public AnnotationResource getResource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Resource");
-            return new AnnotationResource(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AnnotationAction getAction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Action");
             return new AnnotationAction(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AnnotationResource getResource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Resource");
+            return new AnnotationResource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

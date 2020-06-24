@@ -113,11 +113,11 @@ public class FontWeight extends NetObject  {
     
     // Methods section
     
-    public int ToOpenTypeWeight() throws Throwable {
+    public boolean Equals(FontWeight obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ToOpenTypeWeight");
+            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -133,11 +133,11 @@ public class FontWeight extends NetObject  {
         }
     }
 
-    public boolean Equals(FontWeight obj) throws Throwable {
+    public int ToOpenTypeWeight() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            return (int)classInstance.Invoke("ToOpenTypeWeight");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

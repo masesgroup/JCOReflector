@@ -91,15 +91,15 @@ public interface IActivationObject extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject GetDefaultThisObject() throws Throwable;
-
     public GlobalScope GetGlobalScope() throws Throwable;
 
-    public FieldInfo GetLocalField(java.lang.String name) throws Throwable;
+    public NetObject GetDefaultThisObject() throws Throwable;
 
     public NetObject GetMemberValue(java.lang.String name, int lexlevel) throws Throwable;
 
     public FieldInfo GetField(java.lang.String name, int lexLevel) throws Throwable;
+
+    public FieldInfo GetLocalField(java.lang.String name) throws Throwable;
 
 
     

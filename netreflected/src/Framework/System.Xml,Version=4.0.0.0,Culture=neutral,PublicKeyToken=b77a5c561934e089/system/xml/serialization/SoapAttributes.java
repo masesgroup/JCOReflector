@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.reflection.ICustomAttributeProvider;
 import system.reflection.ICustomAttributeProviderImplementation;
-import system.xml.serialization.SoapTypeAttribute;
-import system.xml.serialization.SoapEnumAttribute;
-import system.xml.serialization.SoapElementAttribute;
 import system.xml.serialization.SoapAttributeAttribute;
+import system.xml.serialization.SoapElementAttribute;
+import system.xml.serialization.SoapEnumAttribute;
+import system.xml.serialization.SoapTypeAttribute;
 
 
 /**
@@ -143,48 +143,6 @@ public class SoapAttributes extends NetObject  {
     
     // Properties section
     
-    public SoapTypeAttribute getSoapType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SoapType");
-            return new SoapTypeAttribute(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSoapType(SoapTypeAttribute SoapType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SoapType", SoapType == null ? null : SoapType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SoapEnumAttribute getSoapEnum() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SoapEnum");
-            return new SoapEnumAttribute(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSoapEnum(SoapEnumAttribute SoapEnum) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SoapEnum", SoapEnum == null ? null : SoapEnum.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getSoapIgnore() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -205,22 +163,22 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
-    public SoapElementAttribute getSoapElement() throws Throwable {
+    public NetObject getSoapDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapElement");
-            return new SoapElementAttribute(val);
+            JCObject val = (JCObject)classInstance.Get("SoapDefaultValue");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSoapElement(SoapElementAttribute SoapElement) throws Throwable {
+    public void setSoapDefaultValue(NetObject SoapDefaultValue) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SoapElement", SoapElement == null ? null : SoapElement.getJCOInstance());
+            classInstance.Set("SoapDefaultValue", SoapDefaultValue == null ? null : SoapDefaultValue.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,22 +205,64 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
-    public NetObject getSoapDefaultValue() throws Throwable {
+    public SoapElementAttribute getSoapElement() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapDefaultValue");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("SoapElement");
+            return new SoapElementAttribute(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSoapDefaultValue(NetObject SoapDefaultValue) throws Throwable {
+    public void setSoapElement(SoapElementAttribute SoapElement) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SoapDefaultValue", SoapDefaultValue == null ? null : SoapDefaultValue.getJCOInstance());
+            classInstance.Set("SoapElement", SoapElement == null ? null : SoapElement.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SoapEnumAttribute getSoapEnum() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SoapEnum");
+            return new SoapEnumAttribute(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSoapEnum(SoapEnumAttribute SoapEnum) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SoapEnum", SoapEnum == null ? null : SoapEnum.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SoapTypeAttribute getSoapType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SoapType");
+            return new SoapTypeAttribute(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSoapType(SoapTypeAttribute SoapType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SoapType", SoapType == null ? null : SoapType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

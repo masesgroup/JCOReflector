@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.compilerservices.AsyncTaskMethodBuilder;
 import system.runtime.compilerservices.IAsyncStateMachine;
 import system.runtime.compilerservices.IAsyncStateMachineImplementation;
-import system.runtime.compilerservices.AsyncTaskMethodBuilder;
 import system.threading.tasks.Task;
 
 
@@ -116,26 +116,6 @@ public class AsyncTaskMethodBuilder extends NetObject  {
     
     // Methods section
     
-    public void SetStateMachine(IAsyncStateMachine stateMachine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetStateMachine", stateMachine == null ? null : stateMachine.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetResult() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetResult");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static AsyncTaskMethodBuilder Create() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -152,6 +132,26 @@ public class AsyncTaskMethodBuilder extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetException", exception == null ? null : exception.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetResult() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetResult");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetStateMachine(IAsyncStateMachine stateMachine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetStateMachine", stateMachine == null ? null : stateMachine.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -130,21 +130,21 @@ public class ImportOptions extends NetObject  {
     
     // Properties section
     
-    public boolean getGenerateSerializable() throws Throwable {
+    public boolean getEnableDataBinding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("GenerateSerializable");
+            return (boolean)classInstance.Get("EnableDataBinding");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setGenerateSerializable(boolean GenerateSerializable) throws Throwable {
+    public void setEnableDataBinding(boolean EnableDataBinding) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("GenerateSerializable", GenerateSerializable);
+            classInstance.Set("EnableDataBinding", EnableDataBinding);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,21 +170,41 @@ public class ImportOptions extends NetObject  {
         }
     }
 
-    public boolean getEnableDataBinding() throws Throwable {
+    public boolean getGenerateSerializable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("EnableDataBinding");
+            return (boolean)classInstance.Get("GenerateSerializable");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEnableDataBinding(boolean EnableDataBinding) throws Throwable {
+    public void setGenerateSerializable(boolean GenerateSerializable) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("EnableDataBinding", EnableDataBinding);
+            classInstance.Set("GenerateSerializable", GenerateSerializable);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getImportXmlType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("ImportXmlType");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setImportXmlType(boolean ImportXmlType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ImportXmlType", ImportXmlType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,26 +226,6 @@ public class ImportOptions extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CodeProvider", CodeProvider == null ? null : CodeProvider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getImportXmlType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ImportXmlType");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setImportXmlType(boolean ImportXmlType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ImportXmlType", ImportXmlType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

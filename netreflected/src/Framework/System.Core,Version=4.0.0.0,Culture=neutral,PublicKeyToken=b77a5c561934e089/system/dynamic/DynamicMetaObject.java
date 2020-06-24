@@ -41,18 +41,18 @@ import java.util.ArrayList;
 import system.linq.expressions.Expression;
 import system.dynamic.BindingRestrictions;
 import system.dynamic.DynamicMetaObject;
+import system.dynamic.BinaryOperationBinder;
 import system.dynamic.ConvertBinder;
-import system.dynamic.GetMemberBinder;
-import system.dynamic.SetMemberBinder;
+import system.dynamic.CreateInstanceBinder;
+import system.dynamic.DeleteIndexBinder;
 import system.dynamic.DeleteMemberBinder;
 import system.dynamic.GetIndexBinder;
-import system.dynamic.SetIndexBinder;
-import system.dynamic.DeleteIndexBinder;
-import system.dynamic.InvokeMemberBinder;
+import system.dynamic.GetMemberBinder;
 import system.dynamic.InvokeBinder;
-import system.dynamic.CreateInstanceBinder;
+import system.dynamic.InvokeMemberBinder;
+import system.dynamic.SetIndexBinder;
+import system.dynamic.SetMemberBinder;
 import system.dynamic.UnaryOperationBinder;
-import system.dynamic.BinaryOperationBinder;
 
 
 /**
@@ -148,6 +148,17 @@ public class DynamicMetaObject extends NetObject  {
     
     // Methods section
     
+    public DynamicMetaObject BindBinaryOperation(BinaryOperationBinder binder, DynamicMetaObject arg) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBindBinaryOperation = (JCObject)classInstance.Invoke("BindBinaryOperation", binder == null ? null : binder.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
+            return new DynamicMetaObject(objBindBinaryOperation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DynamicMetaObject BindConvert(ConvertBinder binder) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -159,23 +170,23 @@ public class DynamicMetaObject extends NetObject  {
         }
     }
 
-    public DynamicMetaObject BindGetMember(GetMemberBinder binder) throws Throwable, system.ArgumentNullException {
+    public DynamicMetaObject BindCreateInstance(CreateInstanceBinder binder, DynamicMetaObject[] args) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBindGetMember = (JCObject)classInstance.Invoke("BindGetMember", binder == null ? null : binder.getJCOInstance());
-            return new DynamicMetaObject(objBindGetMember);
+            JCObject objBindCreateInstance = (JCObject)classInstance.Invoke("BindCreateInstance", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args));
+            return new DynamicMetaObject(objBindCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DynamicMetaObject BindSetMember(SetMemberBinder binder, DynamicMetaObject value) throws Throwable, system.ArgumentNullException {
+    public DynamicMetaObject BindDeleteIndex(DeleteIndexBinder binder, DynamicMetaObject[] indexes) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBindSetMember = (JCObject)classInstance.Invoke("BindSetMember", binder == null ? null : binder.getJCOInstance(), value == null ? null : value.getJCOInstance());
-            return new DynamicMetaObject(objBindSetMember);
+            JCObject objBindDeleteIndex = (JCObject)classInstance.Invoke("BindDeleteIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes));
+            return new DynamicMetaObject(objBindDeleteIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,34 +214,12 @@ public class DynamicMetaObject extends NetObject  {
         }
     }
 
-    public DynamicMetaObject BindSetIndex(SetIndexBinder binder, DynamicMetaObject[] indexes, DynamicMetaObject value) throws Throwable, system.ArgumentNullException {
+    public DynamicMetaObject BindGetMember(GetMemberBinder binder) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBindSetIndex = (JCObject)classInstance.Invoke("BindSetIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance());
-            return new DynamicMetaObject(objBindSetIndex);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DynamicMetaObject BindDeleteIndex(DeleteIndexBinder binder, DynamicMetaObject[] indexes) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBindDeleteIndex = (JCObject)classInstance.Invoke("BindDeleteIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes));
-            return new DynamicMetaObject(objBindDeleteIndex);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DynamicMetaObject BindInvokeMember(InvokeMemberBinder binder, DynamicMetaObject[] args) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBindInvokeMember = (JCObject)classInstance.Invoke("BindInvokeMember", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args));
-            return new DynamicMetaObject(objBindInvokeMember);
+            JCObject objBindGetMember = (JCObject)classInstance.Invoke("BindGetMember", binder == null ? null : binder.getJCOInstance());
+            return new DynamicMetaObject(objBindGetMember);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,12 +236,34 @@ public class DynamicMetaObject extends NetObject  {
         }
     }
 
-    public DynamicMetaObject BindCreateInstance(CreateInstanceBinder binder, DynamicMetaObject[] args) throws Throwable, system.ArgumentNullException {
+    public DynamicMetaObject BindInvokeMember(InvokeMemberBinder binder, DynamicMetaObject[] args) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBindCreateInstance = (JCObject)classInstance.Invoke("BindCreateInstance", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args));
-            return new DynamicMetaObject(objBindCreateInstance);
+            JCObject objBindInvokeMember = (JCObject)classInstance.Invoke("BindInvokeMember", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args));
+            return new DynamicMetaObject(objBindInvokeMember);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DynamicMetaObject BindSetIndex(SetIndexBinder binder, DynamicMetaObject[] indexes, DynamicMetaObject value) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBindSetIndex = (JCObject)classInstance.Invoke("BindSetIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance());
+            return new DynamicMetaObject(objBindSetIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DynamicMetaObject BindSetMember(SetMemberBinder binder, DynamicMetaObject value) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBindSetMember = (JCObject)classInstance.Invoke("BindSetMember", binder == null ? null : binder.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return new DynamicMetaObject(objBindSetMember);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,17 +275,6 @@ public class DynamicMetaObject extends NetObject  {
         try {
             JCObject objBindUnaryOperation = (JCObject)classInstance.Invoke("BindUnaryOperation", binder == null ? null : binder.getJCOInstance());
             return new DynamicMetaObject(objBindUnaryOperation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DynamicMetaObject BindBinaryOperation(BinaryOperationBinder binder, DynamicMetaObject arg) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBindBinaryOperation = (JCObject)classInstance.Invoke("BindBinaryOperation", binder == null ? null : binder.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
-            return new DynamicMetaObject(objBindBinaryOperation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,12 +295,11 @@ public class DynamicMetaObject extends NetObject  {
     
     // Properties section
     
-    public Expression getExpression() throws Throwable {
+    public boolean getHasValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Expression");
-            return new Expression(val);
+            return (boolean)classInstance.Get("HasValue");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,6 +316,17 @@ public class DynamicMetaObject extends NetObject  {
         }
     }
 
+    public Expression getExpression() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Expression");
+            return new Expression(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -328,11 +338,12 @@ public class DynamicMetaObject extends NetObject  {
         }
     }
 
-    public boolean getHasValue() throws Throwable {
+    public NetType getLimitType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HasValue");
+            JCObject val = (JCObject)classInstance.Get("LimitType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,17 +354,6 @@ public class DynamicMetaObject extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("RuntimeType");
-            return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType getLimitType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LimitType");
             return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

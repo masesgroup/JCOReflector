@@ -89,11 +89,11 @@ public interface IApplicationMonitor extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void Dispose() throws Throwable;
+
     public void Start() throws Throwable;
 
     public void Stop() throws Throwable;
-
-    public void Dispose() throws Throwable;
 
 
     

@@ -37,10 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.runtime.remoting.messaging.LogicalCallContext;
-import system.reflection.MethodBase;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.reflection.MethodBase;
+import system.runtime.remoting.messaging.LogicalCallContext;
 
 
 /**
@@ -93,45 +93,45 @@ public interface IConstructionReturnMessage extends IJCOBridgeReflected {
 
     // Methods section
     
-    public java.lang.String GetOutArgName(int index) throws Throwable;
+    public NetObject GetArg(int argNum) throws Throwable;
 
     public NetObject GetOutArg(int argNum) throws Throwable;
 
-    public NetObject GetArg(int argNum) throws Throwable;
-
     public java.lang.String GetArgName(int index) throws Throwable;
+
+    public java.lang.String GetOutArgName(int index) throws Throwable;
 
 
     
     // Properties section
     
+    public boolean getHasVarArgs() throws Throwable;
+
+    public int getArgCount() throws Throwable;
+
     public int getOutArgCount() throws Throwable;
 
-    public NetObject[] getOutArgs() throws Throwable;
+    public IDictionary getProperties() throws Throwable;
 
     public NetException getException() throws Throwable;
 
+    public NetObject getMethodSignature() throws Throwable;
+
     public NetObject getReturnValue() throws Throwable;
 
-    public java.lang.String getUri() throws Throwable;
+    public NetObject[] getArgs() throws Throwable;
+
+    public NetObject[] getOutArgs() throws Throwable;
+
+    public MethodBase getMethodBase() throws Throwable;
+
+    public LogicalCallContext getLogicalCallContext() throws Throwable;
 
     public java.lang.String getMethodName() throws Throwable;
 
     public java.lang.String getTypeName() throws Throwable;
 
-    public NetObject getMethodSignature() throws Throwable;
-
-    public int getArgCount() throws Throwable;
-
-    public NetObject[] getArgs() throws Throwable;
-
-    public boolean getHasVarArgs() throws Throwable;
-
-    public LogicalCallContext getLogicalCallContext() throws Throwable;
-
-    public MethodBase getMethodBase() throws Throwable;
-
-    public IDictionary getProperties() throws Throwable;
+    public java.lang.String getUri() throws Throwable;
 
 
 

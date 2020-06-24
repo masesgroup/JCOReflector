@@ -91,13 +91,13 @@ public interface IApplicationHost extends IJCOBridgeReflected {
 
     // Methods section
     
-    public java.lang.String GetSiteName() throws Throwable;
+    public java.lang.String GetPhysicalPath() throws Throwable;
 
     public java.lang.String GetSiteID() throws Throwable;
 
-    public java.lang.String GetVirtualPath() throws Throwable;
+    public java.lang.String GetSiteName() throws Throwable;
 
-    public java.lang.String GetPhysicalPath() throws Throwable;
+    public java.lang.String GetVirtualPath() throws Throwable;
 
     public IConfigMapPathFactory GetConfigMapPathFactory() throws Throwable;
 

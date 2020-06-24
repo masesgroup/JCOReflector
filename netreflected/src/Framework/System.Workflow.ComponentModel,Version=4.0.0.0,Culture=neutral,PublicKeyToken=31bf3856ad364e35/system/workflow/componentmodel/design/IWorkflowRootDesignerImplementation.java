@@ -41,8 +41,8 @@ import java.util.ArrayList;
 import system.componentmodel.design.ViewTechnology;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
-import system.workflow.componentmodel.design.CompositeActivityDesigner;
 import system.componentmodel.design.DesignerVerbCollection;
+import system.workflow.componentmodel.design.CompositeActivityDesigner;
 
 
 /**
@@ -129,6 +129,16 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
         }
     }
 
+    public void Dispose() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void DoDefaultAction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -149,46 +159,26 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
         }
     }
 
-    public void Dispose() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public CompositeActivityDesigner getInvokingDesigner() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InvokingDesigner");
-            return new CompositeActivityDesigner(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInvokingDesigner(CompositeActivityDesigner InvokingDesigner) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InvokingDesigner", InvokingDesigner == null ? null : InvokingDesigner.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getSupportsLayoutPersistence() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("SupportsLayoutPersistence");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DesignerVerbCollection getVerbs() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Verbs");
+            return new DesignerVerbCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,12 +212,22 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
         }
     }
 
-    public DesignerVerbCollection getVerbs() throws Throwable {
+    public CompositeActivityDesigner getInvokingDesigner() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Verbs");
-            return new DesignerVerbCollection(val);
+            JCObject val = (JCObject)classInstance.Get("InvokingDesigner");
+            return new CompositeActivityDesigner(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInvokingDesigner(CompositeActivityDesigner InvokingDesigner) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InvokingDesigner", InvokingDesigner == null ? null : InvokingDesigner.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

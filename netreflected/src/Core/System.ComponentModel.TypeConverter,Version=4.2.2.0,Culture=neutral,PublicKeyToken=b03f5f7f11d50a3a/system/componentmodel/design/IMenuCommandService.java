@@ -37,9 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.componentmodel.design.CommandID;
 import system.componentmodel.design.MenuCommand;
 import system.componentmodel.design.DesignerVerb;
-import system.componentmodel.design.CommandID;
 import system.componentmodel.design.DesignerVerbCollection;
 
 
@@ -93,13 +93,13 @@ public interface IMenuCommandService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void AddCommand(MenuCommand command) throws Throwable;
-
-    public void AddVerb(DesignerVerb verb) throws Throwable;
+    public boolean GlobalInvoke(CommandID commandID) throws Throwable;
 
     public MenuCommand FindCommand(CommandID commandID) throws Throwable;
 
-    public boolean GlobalInvoke(CommandID commandID) throws Throwable;
+    public void AddCommand(MenuCommand command) throws Throwable;
+
+    public void AddVerb(DesignerVerb verb) throws Throwable;
 
     public void RemoveCommand(MenuCommand command) throws Throwable;
 

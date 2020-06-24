@@ -115,45 +115,23 @@ public class IWSTrustFeb2005SyncContractImplementation extends NetObject impleme
         }
     }
 
-    public Message ProcessTrustFeb2005Issue(Message message) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objProcessTrustFeb2005Issue = (JCObject)classInstance.Invoke("ProcessTrustFeb2005Issue", message == null ? null : message.getJCOInstance());
-            return new Message(objProcessTrustFeb2005Issue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Message ProcessTrustFeb2005Renew(Message message) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objProcessTrustFeb2005Renew = (JCObject)classInstance.Invoke("ProcessTrustFeb2005Renew", message == null ? null : message.getJCOInstance());
-            return new Message(objProcessTrustFeb2005Renew);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Message ProcessTrustFeb2005Validate(Message message) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objProcessTrustFeb2005Validate = (JCObject)classInstance.Invoke("ProcessTrustFeb2005Validate", message == null ? null : message.getJCOInstance());
-            return new Message(objProcessTrustFeb2005Validate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Message ProcessTrustFeb2005CancelResponse(Message message) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objProcessTrustFeb2005CancelResponse = (JCObject)classInstance.Invoke("ProcessTrustFeb2005CancelResponse", message == null ? null : message.getJCOInstance());
             return new Message(objProcessTrustFeb2005CancelResponse);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message ProcessTrustFeb2005Issue(Message message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objProcessTrustFeb2005Issue = (JCObject)classInstance.Invoke("ProcessTrustFeb2005Issue", message == null ? null : message.getJCOInstance());
+            return new Message(objProcessTrustFeb2005Issue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,12 +148,34 @@ public class IWSTrustFeb2005SyncContractImplementation extends NetObject impleme
         }
     }
 
+    public Message ProcessTrustFeb2005Renew(Message message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objProcessTrustFeb2005Renew = (JCObject)classInstance.Invoke("ProcessTrustFeb2005Renew", message == null ? null : message.getJCOInstance());
+            return new Message(objProcessTrustFeb2005Renew);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Message ProcessTrustFeb2005RenewResponse(Message message) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objProcessTrustFeb2005RenewResponse = (JCObject)classInstance.Invoke("ProcessTrustFeb2005RenewResponse", message == null ? null : message.getJCOInstance());
             return new Message(objProcessTrustFeb2005RenewResponse);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message ProcessTrustFeb2005Validate(Message message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objProcessTrustFeb2005Validate = (JCObject)classInstance.Invoke("ProcessTrustFeb2005Validate", message == null ? null : message.getJCOInstance());
+            return new Message(objProcessTrustFeb2005Validate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

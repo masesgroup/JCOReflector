@@ -37,10 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.web.compilation.ImplicitResourceKey;
-import system.globalization.CultureInfo;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.web.compilation.ImplicitResourceKey;
+import system.globalization.CultureInfo;
 
 
 /**
@@ -93,9 +93,9 @@ public interface IImplicitResourceProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject GetObject(ImplicitResourceKey key, CultureInfo culture) throws Throwable;
-
     public ICollection GetImplicitResourceKeys(java.lang.String keyPrefix) throws Throwable;
+
+    public NetObject GetObject(ImplicitResourceKey key, CultureInfo culture) throws Throwable;
 
 
     

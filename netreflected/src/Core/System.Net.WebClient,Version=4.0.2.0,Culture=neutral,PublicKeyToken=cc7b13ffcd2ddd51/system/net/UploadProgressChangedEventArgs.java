@@ -116,21 +116,21 @@ public class UploadProgressChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public long getBytesReceived() throws Throwable {
+    public int getProgressPercentage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Get("BytesReceived");
+            return (int)classInstance.Get("ProgressPercentage");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public long getTotalBytesToReceive() throws Throwable {
+    public long getBytesReceived() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Get("TotalBytesToReceive");
+            return (long)classInstance.Get("BytesReceived");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -146,21 +146,21 @@ public class UploadProgressChangedEventArgs extends NetObject  {
         }
     }
 
-    public long getTotalBytesToSend() throws Throwable {
+    public long getTotalBytesToReceive() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Get("TotalBytesToSend");
+            return (long)classInstance.Get("TotalBytesToReceive");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getProgressPercentage() throws Throwable {
+    public long getTotalBytesToSend() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("ProgressPercentage");
+            return (long)classInstance.Get("TotalBytesToSend");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

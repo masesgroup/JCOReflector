@@ -114,12 +114,12 @@ public class WebFormsReferenceManager extends NetObject  {
     
     // Methods section
     
-    public NetType GetType(java.lang.String tagPrefix, java.lang.String tagName) throws Throwable {
+    public ICollection GetRegisterDirectives() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", tagPrefix, tagName);
-            return new NetType(objGetType);
+            JCObject objGetRegisterDirectives = (JCObject)classInstance.Invoke("GetRegisterDirectives");
+            return new ICollectionImplementation(objGetRegisterDirectives);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -135,6 +135,16 @@ public class WebFormsReferenceManager extends NetObject  {
         }
     }
 
+    public java.lang.String GetUserControlPath(java.lang.String tagPrefix, java.lang.String tagName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetUserControlPath", tagPrefix, tagName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String RegisterTagPrefix(NetType objectType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,22 +155,12 @@ public class WebFormsReferenceManager extends NetObject  {
         }
     }
 
-    public ICollection GetRegisterDirectives() throws Throwable {
+    public NetType GetType(java.lang.String tagPrefix, java.lang.String tagName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetRegisterDirectives = (JCObject)classInstance.Invoke("GetRegisterDirectives");
-            return new ICollectionImplementation(objGetRegisterDirectives);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetUserControlPath(java.lang.String tagPrefix, java.lang.String tagName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetUserControlPath", tagPrefix, tagName);
+            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", tagPrefix, tagName);
+            return new NetType(objGetType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

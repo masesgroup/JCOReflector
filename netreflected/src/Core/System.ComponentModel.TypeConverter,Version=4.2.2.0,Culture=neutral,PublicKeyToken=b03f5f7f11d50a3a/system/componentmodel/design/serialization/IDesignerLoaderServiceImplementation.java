@@ -105,6 +105,16 @@ public class IDesignerLoaderServiceImplementation extends NetObject implements I
 
     // Methods section
     
+    public boolean Reload() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Reload");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddLoadDependency() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -120,16 +130,6 @@ public class IDesignerLoaderServiceImplementation extends NetObject implements I
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DependentLoadComplete", successful, errorCollection == null ? null : errorCollection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Reload() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Reload");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

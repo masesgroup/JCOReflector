@@ -138,22 +138,22 @@ public class SqlTrackingQueryOptions extends NetObject  {
     
     // Properties section
     
-    public NetType getWorkflowType() throws Throwable {
+    public DateTime getStatusMaxDateTime() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowType");
-            return new NetType(val);
+            JCObject val = (JCObject)classInstance.Get("StatusMaxDateTime");
+            return new DateTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setWorkflowType(NetType WorkflowType) throws Throwable {
+    public void setStatusMaxDateTime(DateTime StatusMaxDateTime) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("WorkflowType", WorkflowType == null ? null : WorkflowType.getJCOInstance());
+            classInstance.Set("StatusMaxDateTime", StatusMaxDateTime == null ? null : StatusMaxDateTime.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,22 +180,22 @@ public class SqlTrackingQueryOptions extends NetObject  {
         }
     }
 
-    public DateTime getStatusMaxDateTime() throws Throwable {
+    public NetType getWorkflowType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StatusMaxDateTime");
-            return new DateTime(val);
+            JCObject val = (JCObject)classInstance.Get("WorkflowType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setStatusMaxDateTime(DateTime StatusMaxDateTime) throws Throwable {
+    public void setWorkflowType(NetType WorkflowType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("StatusMaxDateTime", StatusMaxDateTime == null ? null : StatusMaxDateTime.getJCOInstance());
+            classInstance.Set("WorkflowType", WorkflowType == null ? null : WorkflowType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

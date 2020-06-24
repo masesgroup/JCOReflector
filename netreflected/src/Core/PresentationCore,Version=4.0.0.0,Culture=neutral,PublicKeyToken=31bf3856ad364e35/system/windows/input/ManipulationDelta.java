@@ -128,27 +128,6 @@ public class ManipulationDelta extends NetObject  {
     
     // Properties section
     
-    public Vector getTranslation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Translation");
-            return new Vector(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTranslation(Vector Translation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Translation", Translation == null ? null : Translation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public double getRotation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,6 +143,27 @@ public class ManipulationDelta extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Rotation", Rotation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Vector getExpansion() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Expansion");
+            return new Vector(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setExpansion(Vector Expansion) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Expansion", Expansion == null ? null : Expansion.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,22 +190,22 @@ public class ManipulationDelta extends NetObject  {
         }
     }
 
-    public Vector getExpansion() throws Throwable {
+    public Vector getTranslation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Expansion");
+            JCObject val = (JCObject)classInstance.Get("Translation");
             return new Vector(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setExpansion(Vector Expansion) throws Throwable {
+    public void setTranslation(Vector Translation) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Expansion", Expansion == null ? null : Expansion.getJCOInstance());
+            classInstance.Set("Translation", Translation == null ? null : Translation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

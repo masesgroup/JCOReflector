@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.threading.CancellationToken;
 import system.activities.LocationReferenceEnvironment;
+import system.threading.CancellationToken;
 
 
 /**
@@ -129,22 +129,41 @@ public class ValidationSettings extends NetObject  {
     
     // Properties section
     
-    public CancellationToken getCancellationToken() throws Throwable {
+    public boolean getOnlyUseAdditionalConstraints() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CancellationToken");
-            return new CancellationToken(val);
+            return (boolean)classInstance.Get("OnlyUseAdditionalConstraints");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCancellationToken(CancellationToken CancellationToken) throws Throwable {
+    public void setOnlyUseAdditionalConstraints(boolean OnlyUseAdditionalConstraints) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("CancellationToken", CancellationToken == null ? null : CancellationToken.getJCOInstance());
+            classInstance.Set("OnlyUseAdditionalConstraints", OnlyUseAdditionalConstraints);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getPrepareForRuntime() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("PrepareForRuntime");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPrepareForRuntime(boolean PrepareForRuntime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PrepareForRuntime", PrepareForRuntime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,46 +209,6 @@ public class ValidationSettings extends NetObject  {
         }
     }
 
-    public boolean getOnlyUseAdditionalConstraints() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("OnlyUseAdditionalConstraints");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOnlyUseAdditionalConstraints(boolean OnlyUseAdditionalConstraints) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("OnlyUseAdditionalConstraints", OnlyUseAdditionalConstraints);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getPrepareForRuntime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("PrepareForRuntime");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPrepareForRuntime(boolean PrepareForRuntime) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PrepareForRuntime", PrepareForRuntime);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public LocationReferenceEnvironment getEnvironment() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -246,6 +225,27 @@ public class ValidationSettings extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Environment", Environment == null ? null : Environment.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CancellationToken getCancellationToken() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CancellationToken");
+            return new CancellationToken(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCancellationToken(CancellationToken CancellationToken) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CancellationToken", CancellationToken == null ? null : CancellationToken.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

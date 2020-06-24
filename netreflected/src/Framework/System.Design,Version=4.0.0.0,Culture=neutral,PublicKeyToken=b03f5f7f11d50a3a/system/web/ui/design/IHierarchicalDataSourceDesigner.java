@@ -91,9 +91,9 @@ public interface IHierarchicalDataSourceDesigner extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Configure() throws Throwable;
-
     public DesignerHierarchicalDataSourceView GetView(java.lang.String viewPath) throws Throwable;
+
+    public void Configure() throws Throwable;
 
     public void RefreshSchema(boolean preferSilent) throws Throwable;
 

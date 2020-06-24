@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.presentation.propertyediting.PropertyFilter;
 import system.activities.presentation.propertyediting.PropertyFilterPredicate;
+import system.activities.presentation.propertyediting.PropertyFilter;
 import system.activities.presentation.propertyediting.PropertyEntry;
 import system.componentmodel.PropertyChangedEventHandler;
 
@@ -116,16 +116,6 @@ public class CategoryEntry extends NetObject  {
     
     // Methods section
     
-    public void ApplyFilter(PropertyFilter filter) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ApplyFilter", filter == null ? null : filter.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean MatchesPredicate(PropertyFilterPredicate predicate) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,20 +126,20 @@ public class CategoryEntry extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public java.lang.String getCategoryName() throws Throwable {
+    public void ApplyFilter(PropertyFilter filter) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("CategoryName");
+            classInstance.Invoke("ApplyFilter", filter == null ? null : filter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public boolean getMatchesFilter() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -165,6 +155,16 @@ public class CategoryEntry extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MatchesFilter", MatchesFilter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getCategoryName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("CategoryName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

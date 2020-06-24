@@ -128,12 +128,11 @@ public class ListViewItemSelectionChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public ListViewItem getItem() throws Throwable {
+    public boolean getIsSelected() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Item");
-            return new ListViewItem(val);
+            return (boolean)classInstance.Get("IsSelected");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,11 +148,12 @@ public class ListViewItemSelectionChangedEventArgs extends NetObject  {
         }
     }
 
-    public boolean getIsSelected() throws Throwable {
+    public ListViewItem getItem() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsSelected");
+            JCObject val = (JCObject)classInstance.Get("Item");
+            return new ListViewItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

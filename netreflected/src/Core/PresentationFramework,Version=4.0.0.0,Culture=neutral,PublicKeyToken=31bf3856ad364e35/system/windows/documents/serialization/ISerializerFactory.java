@@ -98,13 +98,13 @@ public interface ISerializerFactory extends IJCOBridgeReflected {
     
     // Properties section
     
+    public java.lang.String getDefaultFileExtension() throws Throwable;
+
     public java.lang.String getDisplayName() throws Throwable;
 
     public java.lang.String getManufacturerName() throws Throwable;
 
     public Uri getManufacturerWebsite() throws Throwable;
-
-    public java.lang.String getDefaultFileExtension() throws Throwable;
 
 
 

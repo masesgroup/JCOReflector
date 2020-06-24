@@ -187,41 +187,21 @@ public class CommandBinding extends NetObject  {
     // Instance Events section
     
 
-    public void addPreviewExecuted(ExecutedRoutedEventHandler handler) throws Throwable {
+    public void addCanExecute(CanExecuteRoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("PreviewExecuted", handler);
+            classInstance.RegisterEventListener("CanExecute", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removePreviewExecuted(ExecutedRoutedEventHandler handler) throws Throwable {
+    public void removeCanExecute(CanExecuteRoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("PreviewExecuted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addExecuted(ExecutedRoutedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Executed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeExecuted(ExecutedRoutedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Executed", handler);
+            classInstance.UnregisterEventListener("CanExecute", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,21 +227,41 @@ public class CommandBinding extends NetObject  {
         }
     }
 
-    public void addCanExecute(CanExecuteRoutedEventHandler handler) throws Throwable {
+    public void addExecuted(ExecutedRoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("CanExecute", handler);
+            classInstance.RegisterEventListener("Executed", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeCanExecute(CanExecuteRoutedEventHandler handler) throws Throwable {
+    public void removeExecuted(ExecutedRoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("CanExecute", handler);
+            classInstance.UnregisterEventListener("Executed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addPreviewExecuted(ExecutedRoutedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("PreviewExecuted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removePreviewExecuted(ExecutedRoutedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("PreviewExecuted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

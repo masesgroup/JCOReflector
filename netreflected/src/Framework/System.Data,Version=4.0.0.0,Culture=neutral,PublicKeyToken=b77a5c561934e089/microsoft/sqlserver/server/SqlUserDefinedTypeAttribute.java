@@ -124,16 +124,6 @@ public class SqlUserDefinedTypeAttribute extends NetObject  {
     
     // Methods section
     
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -144,25 +134,35 @@ public class SqlUserDefinedTypeAttribute extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public int getMaxByteSize() throws Throwable {
+    public boolean Match(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("MaxByteSize");
+            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMaxByteSize(int MaxByteSize) throws Throwable, system.ArgumentOutOfRangeException {
+
+    
+    // Properties section
+    
+    public boolean getIsByteOrdered() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("MaxByteSize", MaxByteSize);
+            return (boolean)classInstance.Get("IsByteOrdered");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIsByteOrdered(boolean IsByteOrdered) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IsByteOrdered", IsByteOrdered);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,21 +188,21 @@ public class SqlUserDefinedTypeAttribute extends NetObject  {
         }
     }
 
-    public boolean getIsByteOrdered() throws Throwable {
+    public int getMaxByteSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsByteOrdered");
+            return (int)classInstance.Get("MaxByteSize");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIsByteOrdered(boolean IsByteOrdered) throws Throwable {
+    public void setMaxByteSize(int MaxByteSize) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IsByteOrdered", IsByteOrdered);
+            classInstance.Set("MaxByteSize", MaxByteSize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,21 +219,12 @@ public class SqlUserDefinedTypeAttribute extends NetObject  {
         }
     }
 
-    public java.lang.String getValidationMethodName() throws Throwable {
+    public NetObject getTypeId() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ValidationMethodName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setValidationMethodName(java.lang.String ValidationMethodName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ValidationMethodName", ValidationMethodName);
+            JCObject val = (JCObject)classInstance.Get("TypeId");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,12 +250,21 @@ public class SqlUserDefinedTypeAttribute extends NetObject  {
         }
     }
 
-    public NetObject getTypeId() throws Throwable {
+    public java.lang.String getValidationMethodName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
+            return (java.lang.String)classInstance.Get("ValidationMethodName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setValidationMethodName(java.lang.String ValidationMethodName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ValidationMethodName", ValidationMethodName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

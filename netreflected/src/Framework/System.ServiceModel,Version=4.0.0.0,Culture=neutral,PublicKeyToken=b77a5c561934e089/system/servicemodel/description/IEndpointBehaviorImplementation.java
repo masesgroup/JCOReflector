@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.ServiceEndpoint;
 import system.servicemodel.channels.BindingParameterCollection;
-import system.servicemodel.dispatcher.EndpointDispatcher;
 import system.servicemodel.dispatcher.ClientRuntime;
+import system.servicemodel.dispatcher.EndpointDispatcher;
 
 
 /**
@@ -107,21 +107,21 @@ public class IEndpointBehaviorImplementation extends NetObject implements IEndpo
 
     // Methods section
     
-    public void Validate(ServiceEndpoint endpoint) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Validate", endpoint == null ? null : endpoint.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBindingParameters", endpoint == null ? null : endpoint.getJCOInstance(), bindingParameters == null ? null : bindingParameters.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ApplyClientBehavior", endpoint == null ? null : endpoint.getJCOInstance(), clientRuntime == null ? null : clientRuntime.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -137,11 +137,11 @@ public class IEndpointBehaviorImplementation extends NetObject implements IEndpo
         }
     }
 
-    public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
+    public void Validate(ServiceEndpoint endpoint) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ApplyClientBehavior", endpoint == null ? null : endpoint.getJCOInstance(), clientRuntime == null ? null : clientRuntime.getJCOInstance());
+            classInstance.Invoke("Validate", endpoint == null ? null : endpoint.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

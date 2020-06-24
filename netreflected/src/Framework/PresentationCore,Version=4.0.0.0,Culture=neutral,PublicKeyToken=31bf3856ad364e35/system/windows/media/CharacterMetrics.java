@@ -137,31 +137,11 @@ public class CharacterMetrics extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getMetrics() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public double getBaseline() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Metrics");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMetrics(java.lang.String Metrics) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Metrics", Metrics);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getBlackBoxWidth() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("BlackBoxWidth");
+            return (double)classInstance.Get("Baseline");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,11 +157,21 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
-    public double getBaseline() throws Throwable {
+    public double getBlackBoxWidth() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("Baseline");
+            return (double)classInstance.Get("BlackBoxWidth");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getBottomSideBearing() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("BottomSideBearing");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,11 +207,21 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
-    public double getBottomSideBearing() throws Throwable {
+    public java.lang.String getMetrics() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("BottomSideBearing");
+            return (java.lang.String)classInstance.Get("Metrics");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMetrics(java.lang.String Metrics) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Metrics", Metrics);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -103,21 +103,21 @@ public class ICustomMarshalerImplementation extends NetObject implements ICustom
 
     // Methods section
     
-    public void CleanUpManagedData(NetObject ManagedObj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CleanUpManagedData", ManagedObj == null ? null : ManagedObj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int GetNativeDataSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetNativeDataSize");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CleanUpManagedData(NetObject ManagedObj) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CleanUpManagedData", ManagedObj == null ? null : ManagedObj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

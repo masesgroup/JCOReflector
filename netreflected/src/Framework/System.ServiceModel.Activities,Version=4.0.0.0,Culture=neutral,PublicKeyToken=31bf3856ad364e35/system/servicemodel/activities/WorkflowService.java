@@ -41,8 +41,8 @@ import java.util.ArrayList;
 import system.activities.Activity;
 import system.activities.validation.ValidationResults;
 import system.activities.validation.ValidationSettings;
-import system.xml.linq.XName;
 import system.activities.WorkflowIdentity;
+import system.xml.linq.XName;
 
 
 /**
@@ -154,6 +154,26 @@ public class WorkflowService extends NetObject  {
     
     // Properties section
     
+    public boolean getAllowBufferedReceive() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("AllowBufferedReceive");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAllowBufferedReceive(boolean AllowBufferedReceive) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AllowBufferedReceive", AllowBufferedReceive);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Activity getBody() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -175,22 +195,22 @@ public class WorkflowService extends NetObject  {
         }
     }
 
-    public XName getName() throws Throwable {
+    public WorkflowIdentity getDefinitionIdentity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
-            return new XName(val);
+            JCObject val = (JCObject)classInstance.Get("DefinitionIdentity");
+            return new WorkflowIdentity(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setName(XName Name) throws Throwable {
+    public void setDefinitionIdentity(WorkflowIdentity DefinitionIdentity) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Name", Name == null ? null : Name.getJCOInstance());
+            classInstance.Set("DefinitionIdentity", DefinitionIdentity == null ? null : DefinitionIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,42 +236,22 @@ public class WorkflowService extends NetObject  {
         }
     }
 
-    public boolean getAllowBufferedReceive() throws Throwable {
+    public XName getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("AllowBufferedReceive");
+            JCObject val = (JCObject)classInstance.Get("Name");
+            return new XName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAllowBufferedReceive(boolean AllowBufferedReceive) throws Throwable {
+    public void setName(XName Name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("AllowBufferedReceive", AllowBufferedReceive);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WorkflowIdentity getDefinitionIdentity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DefinitionIdentity");
-            return new WorkflowIdentity(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDefinitionIdentity(WorkflowIdentity DefinitionIdentity) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DefinitionIdentity", DefinitionIdentity == null ? null : DefinitionIdentity.getJCOInstance());
+            classInstance.Set("Name", Name == null ? null : Name.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

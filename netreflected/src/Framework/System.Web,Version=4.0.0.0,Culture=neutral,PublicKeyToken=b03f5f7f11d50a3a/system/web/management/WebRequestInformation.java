@@ -129,11 +129,12 @@ public class WebRequestInformation extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getRequestUrl() throws Throwable {
+    public IPrincipal getPrincipal() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("RequestUrl");
+            JCObject val = (JCObject)classInstance.Get("Principal");
+            return new IPrincipalImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,22 +150,11 @@ public class WebRequestInformation extends NetObject  {
         }
     }
 
-    public IPrincipal getPrincipal() throws Throwable {
+    public java.lang.String getRequestUrl() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Principal");
-            return new IPrincipalImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getUserHostAddress() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("UserHostAddress");
+            return (java.lang.String)classInstance.Get("RequestUrl");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,6 +165,16 @@ public class WebRequestInformation extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("ThreadAccountName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getUserHostAddress() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("UserHostAddress");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

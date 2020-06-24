@@ -121,16 +121,6 @@ public class ScrollEventArgs extends NetObject  {
         }
     }
 
-    public ScrollEventArgs(ScrollEventType type, int newValue, ScrollOrientation scroll) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), newValue, scroll == null ? null : scroll.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ScrollEventArgs(ScrollEventType type, int oldValue, int newValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -151,6 +141,16 @@ public class ScrollEventArgs extends NetObject  {
         }
     }
 
+    public ScrollEventArgs(ScrollEventType type, int newValue, ScrollOrientation scroll) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), newValue, scroll == null ? null : scroll.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -159,28 +159,6 @@ public class ScrollEventArgs extends NetObject  {
     
     // Properties section
     
-    public ScrollOrientation getScrollOrientation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ScrollOrientation");
-            return new ScrollOrientation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ScrollEventType getType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new ScrollEventType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getNewValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -206,6 +184,28 @@ public class ScrollEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("OldValue");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ScrollEventType getType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Type");
+            return new ScrollEventType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ScrollOrientation getScrollOrientation() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ScrollOrientation");
+            return new ScrollOrientation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

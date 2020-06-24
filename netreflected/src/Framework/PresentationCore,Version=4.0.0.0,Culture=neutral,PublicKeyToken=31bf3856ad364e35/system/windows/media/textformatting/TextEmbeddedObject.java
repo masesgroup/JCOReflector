@@ -155,12 +155,21 @@ public class TextEmbeddedObject extends NetObject  {
     
     // Properties section
     
-    public LineBreakCondition getBreakBefore() throws Throwable {
+    public boolean getHasFixedSize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BreakBefore");
-            return new LineBreakCondition(val);
+            return (boolean)classInstance.Get("HasFixedSize");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Length");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,11 +186,12 @@ public class TextEmbeddedObject extends NetObject  {
         }
     }
 
-    public boolean getHasFixedSize() throws Throwable {
+    public LineBreakCondition getBreakBefore() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HasFixedSize");
+            JCObject val = (JCObject)classInstance.Get("BreakBefore");
+            return new LineBreakCondition(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,16 +203,6 @@ public class TextEmbeddedObject extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("CharacterBufferReference");
             return new CharacterBufferReference(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Length");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

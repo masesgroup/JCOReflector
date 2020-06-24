@@ -127,21 +127,21 @@ public class WebThreadInformation extends NetObject  {
     
     // Properties section
     
-    public int getThreadID() throws Throwable {
+    public boolean getIsImpersonating() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("ThreadID");
+            return (boolean)classInstance.Get("IsImpersonating");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getThreadAccountName() throws Throwable {
+    public int getThreadID() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ThreadAccountName");
+            return (int)classInstance.Get("ThreadID");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,11 +157,11 @@ public class WebThreadInformation extends NetObject  {
         }
     }
 
-    public boolean getIsImpersonating() throws Throwable {
+    public java.lang.String getThreadAccountName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsImpersonating");
+            return (java.lang.String)classInstance.Get("ThreadAccountName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -129,22 +129,21 @@ public class VisualTreeChangeEventArgs extends NetObject  {
     
     // Properties section
     
-    public DependencyObject getParent() throws Throwable {
+    public int getChildIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new DependencyObject(val);
+            return (int)classInstance.Get("ChildIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setParent(DependencyObject Parent) throws Throwable {
+    public void setChildIndex(int ChildIndex) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Parent", Parent == null ? null : Parent.getJCOInstance());
+            classInstance.Set("ChildIndex", ChildIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,21 +170,22 @@ public class VisualTreeChangeEventArgs extends NetObject  {
         }
     }
 
-    public int getChildIndex() throws Throwable {
+    public DependencyObject getParent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("ChildIndex");
+            JCObject val = (JCObject)classInstance.Get("Parent");
+            return new DependencyObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setChildIndex(int ChildIndex) throws Throwable {
+    public void setParent(DependencyObject Parent) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ChildIndex", ChildIndex);
+            classInstance.Set("Parent", Parent == null ? null : Parent.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

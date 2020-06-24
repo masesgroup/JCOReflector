@@ -91,9 +91,9 @@ public interface MemberInfoInitializer extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Initialize(java.lang.String name, COMMemberInfo dispatch) throws Throwable;
-
     public COMMemberInfo GetCOMMemberInfo() throws Throwable;
+
+    public void Initialize(java.lang.String name, COMMemberInfo dispatch) throws Throwable;
 
 
     

@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Array;
 import microsoft.visualbasic.ErrObject;
 import microsoft.visualbasic.VariantType;
-import system.Array;
 
 
 /**
@@ -115,27 +115,6 @@ public class Information extends NetObject  {
     
     // Methods section
     
-    public static ErrObject Err() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objErr = (JCObject)classType.Invoke("Err");
-            return new ErrObject(objErr);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int Erl() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("Erl");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean IsArray(NetObject VarName) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -166,6 +145,16 @@ public class Information extends NetObject  {
         }
     }
 
+    public static boolean IsError(NetObject Expression) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsError", Expression == null ? null : Expression.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static boolean IsNothing(NetObject Expression) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -176,11 +165,11 @@ public class Information extends NetObject  {
         }
     }
 
-    public static boolean IsError(NetObject Expression) throws Throwable {
+    public static boolean IsNumeric(NetObject Expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsError", Expression == null ? null : Expression.getJCOInstance());
+            return (boolean)classType.Invoke("IsNumeric", Expression == null ? null : Expression.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,22 +185,11 @@ public class Information extends NetObject  {
         }
     }
 
-    public static VariantType VarType(NetObject VarName) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static int Erl() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objVarType = (JCObject)classType.Invoke("VarType", VarName == null ? null : VarName.getJCOInstance());
-            return new VariantType(objVarType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String VbTypeName(java.lang.String UrtName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("VbTypeName", UrtName);
+            return (int)classType.Invoke("Erl");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,16 +200,6 @@ public class Information extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (int)classType.Invoke("LBound", Array == null ? null : Array.getJCOInstance(), Rank);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int UBound(Array Array, int Rank) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.RankException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("UBound", Array == null ? null : Array.getJCOInstance(), Rank);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,11 +225,43 @@ public class Information extends NetObject  {
         }
     }
 
-    public static boolean IsNumeric(NetObject Expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException {
+    public static int UBound(Array Array, int Rank) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.RankException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsNumeric", Expression == null ? null : Expression.getJCOInstance());
+            return (int)classType.Invoke("UBound", Array == null ? null : Array.getJCOInstance(), Rank);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ErrObject Err() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objErr = (JCObject)classType.Invoke("Err");
+            return new ErrObject(objErr);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static VariantType VarType(NetObject VarName) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objVarType = (JCObject)classType.Invoke("VarType", VarName == null ? null : VarName.getJCOInstance());
+            return new VariantType(objVarType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String SystemTypeName(java.lang.String VbName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("SystemTypeName", VbName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,11 +277,11 @@ public class Information extends NetObject  {
         }
     }
 
-    public static java.lang.String SystemTypeName(java.lang.String VbName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+    public static java.lang.String VbTypeName(java.lang.String UrtName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("SystemTypeName", VbName);
+            return (java.lang.String)classType.Invoke("VbTypeName", UrtName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

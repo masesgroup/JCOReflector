@@ -90,13 +90,15 @@ public interface IList extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean Contains(NetObject value) throws Throwable;
+
     public int Add(NetObject value) throws Throwable;
 
-    public boolean Contains(NetObject value) throws Throwable;
+    public int IndexOf(NetObject value) throws Throwable;
 
     public void Clear() throws Throwable;
 
-    public int IndexOf(NetObject value) throws Throwable;
+    public void CopyTo(Array array, int index) throws Throwable;
 
     public void Insert(int index, NetObject value) throws Throwable;
 
@@ -104,21 +106,19 @@ public interface IList extends IJCOBridgeReflected {
 
     public void RemoveAt(int index) throws Throwable;
 
-    public void CopyTo(Array array, int index) throws Throwable;
-
 
     
     // Properties section
     
+    public boolean getIsFixedSize() throws Throwable;
+
     public boolean getIsReadOnly() throws Throwable;
 
-    public boolean getIsFixedSize() throws Throwable;
+    public boolean getIsSynchronized() throws Throwable;
 
     public int getCount() throws Throwable;
 
     public NetObject getSyncRoot() throws Throwable;
-
-    public boolean getIsSynchronized() throws Throwable;
 
 
 

@@ -37,12 +37,12 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.TimeSpan;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.TimeSpan;
 import system.AsyncCallback;
-import system.Uri;
 import system.servicemodel.CommunicationState;
+import system.Uri;
 import system.EventHandler;
 
 
@@ -96,41 +96,41 @@ public interface IChannelListener extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean WaitForChannel(TimeSpan timeout) throws Throwable;
-
-    public IAsyncResult BeginWaitForChannel(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
-
     public boolean EndWaitForChannel(IAsyncResult result) throws Throwable;
 
-    public void Abort() throws Throwable;
+    public boolean WaitForChannel(TimeSpan timeout) throws Throwable;
 
     public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public void EndClose(IAsyncResult result) throws Throwable;
-
-    public void Open() throws Throwable;
-
-    public void Open(TimeSpan timeout) throws Throwable;
-
     public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public void EndOpen(IAsyncResult result) throws Throwable;
+    public IAsyncResult BeginWaitForChannel(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
+
+    public void Abort() throws Throwable;
 
     public void Close() throws Throwable;
 
     public void Close(TimeSpan timeout) throws Throwable;
 
+    public void EndClose(IAsyncResult result) throws Throwable;
+
+    public void EndOpen(IAsyncResult result) throws Throwable;
+
+    public void Open() throws Throwable;
+
+    public void Open(TimeSpan timeout) throws Throwable;
+
 
     
     // Properties section
     
-    public Uri getUri() throws Throwable;
-
     public CommunicationState getState() throws Throwable;
+
+    public Uri getUri() throws Throwable;
 
 
 

@@ -89,11 +89,11 @@ public interface IWebFormReferenceManager extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetType GetObjectType(java.lang.String tagPrefix, java.lang.String typeName) throws Throwable;
+    public java.lang.String GetRegisterDirectives() throws Throwable;
 
     public java.lang.String GetTagPrefix(NetType objectType) throws Throwable;
 
-    public java.lang.String GetRegisterDirectives() throws Throwable;
+    public NetType GetObjectType(java.lang.String tagPrefix, java.lang.String typeName) throws Throwable;
 
 
     

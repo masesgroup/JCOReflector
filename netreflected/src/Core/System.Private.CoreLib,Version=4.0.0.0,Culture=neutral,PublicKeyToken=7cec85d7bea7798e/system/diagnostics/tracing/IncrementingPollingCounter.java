@@ -115,16 +115,6 @@ public class IncrementingPollingCounter extends NetObject  {
     
     // Methods section
     
-    public void Dispose() throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AddMetadata(java.lang.String key, java.lang.String value) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -135,26 +125,26 @@ public class IncrementingPollingCounter extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public TimeSpan getDisplayRateTimeScale() throws Throwable {
+    public void Dispose() throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DisplayRateTimeScale");
-            return new TimeSpan(val);
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDisplayRateTimeScale(TimeSpan DisplayRateTimeScale) throws Throwable {
+
+    
+    // Properties section
+    
+    public EventSource getEventSource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("DisplayRateTimeScale", DisplayRateTimeScale == null ? null : DisplayRateTimeScale.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("EventSource");
+            return new EventSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,12 +200,22 @@ public class IncrementingPollingCounter extends NetObject  {
         }
     }
 
-    public EventSource getEventSource() throws Throwable {
+    public TimeSpan getDisplayRateTimeScale() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EventSource");
-            return new EventSource(val);
+            JCObject val = (JCObject)classInstance.Get("DisplayRateTimeScale");
+            return new TimeSpan(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDisplayRateTimeScale(TimeSpan DisplayRateTimeScale) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DisplayRateTimeScale", DisplayRateTimeScale == null ? null : DisplayRateTimeScale.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

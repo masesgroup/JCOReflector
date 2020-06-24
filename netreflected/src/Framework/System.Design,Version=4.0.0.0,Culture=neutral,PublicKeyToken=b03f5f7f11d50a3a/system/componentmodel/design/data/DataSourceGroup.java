@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.drawing.Bitmap;
 import system.componentmodel.design.data.DataSourceDescriptorCollection;
+import system.drawing.Bitmap;
 
 
 /**
@@ -118,22 +118,11 @@ public class DataSourceGroup extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable {
+    public boolean getIsDefault() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Bitmap getImage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Image");
-            return new Bitmap(val);
+            return (boolean)classInstance.Get("IsDefault");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -150,11 +139,22 @@ public class DataSourceGroup extends NetObject  {
         }
     }
 
-    public boolean getIsDefault() throws Throwable {
+    public Bitmap getImage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsDefault");
+            JCObject val = (JCObject)classInstance.Get("Image");
+            return new Bitmap(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

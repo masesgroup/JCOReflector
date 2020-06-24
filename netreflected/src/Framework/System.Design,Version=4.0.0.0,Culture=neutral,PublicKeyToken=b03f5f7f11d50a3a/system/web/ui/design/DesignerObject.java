@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.ui.design.ControlDesigner;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.web.ui.design.ControlDesigner;
 
 
 /**
@@ -119,12 +119,12 @@ public class DesignerObject extends NetObject  {
     
     // Properties section
     
-    public ControlDesigner getDesigner() throws Throwable {
+    public IDictionary getProperties() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Designer");
-            return new ControlDesigner(val);
+            JCObject val = (JCObject)classInstance.Get("Properties");
+            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -140,12 +140,12 @@ public class DesignerObject extends NetObject  {
         }
     }
 
-    public IDictionary getProperties() throws Throwable {
+    public ControlDesigner getDesigner() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
-            return new IDictionaryImplementation(val);
+            JCObject val = (JCObject)classInstance.Get("Designer");
+            return new ControlDesigner(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

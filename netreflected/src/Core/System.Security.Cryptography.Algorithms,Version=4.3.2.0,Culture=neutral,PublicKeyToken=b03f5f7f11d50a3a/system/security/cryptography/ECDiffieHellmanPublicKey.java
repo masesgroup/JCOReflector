@@ -113,16 +113,6 @@ public class ECDiffieHellmanPublicKey extends NetObject  {
     
     // Methods section
     
-    public void Dispose() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] ToByteArray() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -142,11 +132,12 @@ public class ECDiffieHellmanPublicKey extends NetObject  {
         }
     }
 
-    public java.lang.String ToXmlString() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {
+    public ECParameters ExportExplicitParameters() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("ToXmlString");
+            JCObject objExportExplicitParameters = (JCObject)classInstance.Invoke("ExportExplicitParameters");
+            return new ECParameters(objExportExplicitParameters);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,12 +154,21 @@ public class ECDiffieHellmanPublicKey extends NetObject  {
         }
     }
 
-    public ECParameters ExportExplicitParameters() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+    public java.lang.String ToXmlString() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objExportExplicitParameters = (JCObject)classInstance.Invoke("ExportExplicitParameters");
-            return new ECParameters(objExportExplicitParameters);
+            return (java.lang.String)classInstance.Invoke("ToXmlString");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

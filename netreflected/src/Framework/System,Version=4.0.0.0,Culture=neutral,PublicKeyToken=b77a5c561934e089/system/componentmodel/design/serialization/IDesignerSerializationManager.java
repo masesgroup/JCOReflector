@@ -37,10 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.componentmodel.design.serialization.IDesignerSerializationProvider;
-import system.componentmodel.design.serialization.IDesignerSerializationProviderImplementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.componentmodel.design.serialization.IDesignerSerializationProvider;
+import system.componentmodel.design.serialization.IDesignerSerializationProviderImplementation;
 import system.componentmodel.design.serialization.ContextStack;
 import system.componentmodel.PropertyDescriptorCollection;
 import system.componentmodel.design.serialization.ResolveNameEventHandler;
@@ -97,25 +97,25 @@ public interface IDesignerSerializationManager extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void AddSerializationProvider(IDesignerSerializationProvider provider) throws Throwable;
-
     public NetObject CreateInstance(NetType type, ICollection arguments, java.lang.String name, boolean addToContainer) throws Throwable;
 
     public NetObject GetInstance(java.lang.String name) throws Throwable;
 
-    public java.lang.String GetName(NetObject value) throws Throwable;
-
     public NetObject GetSerializer(NetType objectType, NetType serializerType) throws Throwable;
 
+    public NetObject GetService(NetType serviceType) throws Throwable;
+
+    public java.lang.String GetName(NetObject value) throws Throwable;
+
     public NetType GetType(java.lang.String typeName) throws Throwable;
+
+    public void AddSerializationProvider(IDesignerSerializationProvider provider) throws Throwable;
 
     public void RemoveSerializationProvider(IDesignerSerializationProvider provider) throws Throwable;
 
     public void ReportError(NetObject errorInformation) throws Throwable;
 
     public void SetName(NetObject instance, java.lang.String name) throws Throwable;
-
-    public NetObject GetService(NetType serviceType) throws Throwable;
 
 
     

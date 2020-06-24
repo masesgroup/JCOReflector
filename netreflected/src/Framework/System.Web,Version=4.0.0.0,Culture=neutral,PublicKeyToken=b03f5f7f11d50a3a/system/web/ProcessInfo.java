@@ -113,21 +113,21 @@ public class ProcessInfo extends NetObject  {
     // Constructors section
     
 
-    public ProcessInfo(DateTime startTime, TimeSpan age, int processID, int requestCount, ProcessStatus status, ProcessShutdownReason shutdownReason, int peakMemoryUsed) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(startTime == null ? null : startTime.getJCOInstance(), age == null ? null : age.getJCOInstance(), processID, requestCount, status == null ? null : status.getJCOInstance(), shutdownReason == null ? null : shutdownReason.getJCOInstance(), peakMemoryUsed));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ProcessInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ProcessInfo(DateTime startTime, TimeSpan age, int processID, int requestCount, ProcessStatus status, ProcessShutdownReason shutdownReason, int peakMemoryUsed) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(startTime == null ? null : startTime.getJCOInstance(), age == null ? null : age.getJCOInstance(), processID, requestCount, status == null ? null : status.getJCOInstance(), shutdownReason == null ? null : shutdownReason.getJCOInstance(), peakMemoryUsed));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,23 +151,11 @@ public class ProcessInfo extends NetObject  {
     
     // Properties section
     
-    public DateTime getStartTime() throws Throwable {
+    public int getPeakMemoryUsed() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StartTime");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TimeSpan getAge() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Age");
-            return new TimeSpan(val);
+            return (int)classInstance.Get("PeakMemoryUsed");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,12 +181,23 @@ public class ProcessInfo extends NetObject  {
         }
     }
 
-    public ProcessStatus getStatus() throws Throwable {
+    public DateTime getStartTime() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Status");
-            return new ProcessStatus(val);
+            JCObject val = (JCObject)classInstance.Get("StartTime");
+            return new DateTime(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TimeSpan getAge() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Age");
+            return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,11 +214,12 @@ public class ProcessInfo extends NetObject  {
         }
     }
 
-    public int getPeakMemoryUsed() throws Throwable {
+    public ProcessStatus getStatus() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("PeakMemoryUsed");
+            JCObject val = (JCObject)classInstance.Get("Status");
+            return new ProcessStatus(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

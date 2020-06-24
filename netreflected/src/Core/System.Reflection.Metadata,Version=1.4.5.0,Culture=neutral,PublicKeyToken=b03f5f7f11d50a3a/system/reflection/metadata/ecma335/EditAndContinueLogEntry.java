@@ -140,23 +140,23 @@ public class EditAndContinueLogEntry extends NetObject  {
     
     // Properties section
     
-    public EntityHandle getHandle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Handle");
-            return new EntityHandle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EditAndContinueOperation getOperation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Operation");
             return new EditAndContinueOperation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EntityHandle getHandle() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Handle");
+            return new EntityHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

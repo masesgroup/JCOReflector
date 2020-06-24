@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.transactions.PreparingEnlistment;
 import system.transactions.Enlistment;
+import system.transactions.PreparingEnlistment;
 
 
 /**
@@ -105,16 +105,6 @@ public class IEnlistmentNotificationImplementation extends NetObject implements 
 
     // Methods section
     
-    public void Prepare(PreparingEnlistment preparingEnlistment) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Prepare", preparingEnlistment == null ? null : preparingEnlistment.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Commit(Enlistment enlistment) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -125,21 +115,31 @@ public class IEnlistmentNotificationImplementation extends NetObject implements 
         }
     }
 
-    public void Rollback(Enlistment enlistment) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Rollback", enlistment == null ? null : enlistment.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void InDoubt(Enlistment enlistment) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InDoubt", enlistment == null ? null : enlistment.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Prepare(PreparingEnlistment preparingEnlistment) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Prepare", preparingEnlistment == null ? null : preparingEnlistment.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Rollback(Enlistment enlistment) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Rollback", enlistment == null ? null : enlistment.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

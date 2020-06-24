@@ -168,26 +168,6 @@ public class ExeConfigurationFileMap extends NetObject  {
         }
     }
 
-    public java.lang.String getRoamingUserConfigFilename() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("RoamingUserConfigFilename");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRoamingUserConfigFilename(java.lang.String RoamingUserConfigFilename) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RoamingUserConfigFilename", RoamingUserConfigFilename);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getLocalUserConfigFilename() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -223,6 +203,26 @@ public class ExeConfigurationFileMap extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MachineConfigFilename", MachineConfigFilename);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getRoamingUserConfigFilename() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("RoamingUserConfigFilename");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRoamingUserConfigFilename(java.lang.String RoamingUserConfigFilename) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RoamingUserConfigFilename", RoamingUserConfigFilename);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

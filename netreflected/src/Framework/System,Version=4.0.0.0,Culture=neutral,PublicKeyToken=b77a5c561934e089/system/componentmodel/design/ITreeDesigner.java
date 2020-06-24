@@ -41,9 +41,9 @@ import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.componentmodel.design.DesignerVerbCollection;
 import system.componentmodel.design.IDesigner;
 import system.componentmodel.design.IDesignerImplementation;
-import system.componentmodel.design.DesignerVerbCollection;
 
 
 /**
@@ -96,11 +96,11 @@ public interface ITreeDesigner extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void Dispose() throws Throwable;
+
     public void DoDefaultAction() throws Throwable;
 
     public void Initialize(IComponent component) throws Throwable;
-
-    public void Dispose() throws Throwable;
 
 
     
@@ -108,11 +108,11 @@ public interface ITreeDesigner extends IJCOBridgeReflected {
     
     public ICollection getChildren() throws Throwable;
 
+    public DesignerVerbCollection getVerbs() throws Throwable;
+
     public IDesigner getParent() throws Throwable;
 
     public IComponent getComponent() throws Throwable;
-
-    public DesignerVerbCollection getVerbs() throws Throwable;
 
 
 

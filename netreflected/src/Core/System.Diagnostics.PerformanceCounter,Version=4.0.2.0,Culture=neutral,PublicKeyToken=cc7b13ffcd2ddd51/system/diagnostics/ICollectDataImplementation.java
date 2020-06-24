@@ -103,6 +103,16 @@ public class ICollectDataImplementation extends NetObject implements ICollectDat
 
     // Methods section
     
+    public void CloseData() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CloseData");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

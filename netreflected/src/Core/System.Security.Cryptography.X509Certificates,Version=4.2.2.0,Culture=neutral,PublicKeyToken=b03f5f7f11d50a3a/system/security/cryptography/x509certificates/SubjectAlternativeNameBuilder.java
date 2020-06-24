@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Uri;
-import system.net.IPAddress;
 import system.security.cryptography.x509certificates.X509Extension;
+import system.net.IPAddress;
+import system.Uri;
 
 
 /**
@@ -126,11 +126,12 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
     
     // Methods section
     
-    public void AddEmailAddress(java.lang.String emailAddress) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.ObjectDisposedException, system.OverflowException, system.ArrayTypeMismatchException {
+    public X509Extension Build(boolean critical) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddEmailAddress", emailAddress);
+            JCObject objBuild = (JCObject)classInstance.Invoke("Build", critical);
+            return new X509Extension(objBuild);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -146,11 +147,11 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
         }
     }
 
-    public void AddUri(Uri uri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.FormatException, system.security.cryptography.CryptographicException, system.OverflowException {
+    public void AddEmailAddress(java.lang.String emailAddress) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.ObjectDisposedException, system.OverflowException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddUri", uri == null ? null : uri.getJCOInstance());
+            classInstance.Invoke("AddEmailAddress", emailAddress);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,22 +167,21 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
         }
     }
 
-    public void AddUserPrincipalName(java.lang.String upn) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
+    public void AddUri(Uri uri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.FormatException, system.security.cryptography.CryptographicException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddUserPrincipalName", upn);
+            classInstance.Invoke("AddUri", uri == null ? null : uri.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public X509Extension Build(boolean critical) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public void AddUserPrincipalName(java.lang.String upn) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBuild = (JCObject)classInstance.Invoke("Build", critical);
-            return new X509Extension(objBuild);
+            classInstance.Invoke("AddUserPrincipalName", upn);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

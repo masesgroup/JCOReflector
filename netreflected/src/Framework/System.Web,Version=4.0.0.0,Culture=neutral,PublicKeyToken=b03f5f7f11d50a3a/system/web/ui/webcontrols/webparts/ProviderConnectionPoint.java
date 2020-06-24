@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.MethodInfo;
-import system.web.ui.webcontrols.webparts.ConnectionInterfaceCollection;
 import system.web.ui.Control;
+import system.web.ui.webcontrols.webparts.ConnectionInterfaceCollection;
 
 
 /**
@@ -126,12 +126,11 @@ public class ProviderConnectionPoint extends NetObject  {
     
     // Methods section
     
-    public ConnectionInterfaceCollection GetSecondaryInterfaces(Control control) throws Throwable {
+    public boolean GetEnabled(Control control) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetSecondaryInterfaces = (JCObject)classInstance.Invoke("GetSecondaryInterfaces", control == null ? null : control.getJCOInstance());
-            return new ConnectionInterfaceCollection(objGetSecondaryInterfaces);
+            return (boolean)classInstance.Invoke("GetEnabled", control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,11 +147,12 @@ public class ProviderConnectionPoint extends NetObject  {
         }
     }
 
-    public boolean GetEnabled(Control control) throws Throwable {
+    public ConnectionInterfaceCollection GetSecondaryInterfaces(Control control) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("GetEnabled", control == null ? null : control.getJCOInstance());
+            JCObject objGetSecondaryInterfaces = (JCObject)classInstance.Invoke("GetSecondaryInterfaces", control == null ? null : control.getJCOInstance());
+            return new ConnectionInterfaceCollection(objGetSecondaryInterfaces);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,6 +167,26 @@ public class ProviderConnectionPoint extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("AllowsMultipleConnections");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getDisplayName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("DisplayName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getID() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ID");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,26 +209,6 @@ public class ProviderConnectionPoint extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("InterfaceType");
             return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getID() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ID");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDisplayName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DisplayName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -129,22 +129,11 @@ public class PeerCustomResolverSettings extends NetObject  {
     
     // Properties section
     
-    public EndpointAddress getAddress() throws Throwable {
+    public boolean getIsBindingSpecified() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Address");
-            return new EndpointAddress(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAddress(EndpointAddress Address) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Address", Address == null ? null : Address.getJCOInstance());
+            return (boolean)classInstance.Get("IsBindingSpecified");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,11 +160,22 @@ public class PeerCustomResolverSettings extends NetObject  {
         }
     }
 
-    public boolean getIsBindingSpecified() throws Throwable {
+    public EndpointAddress getAddress() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsBindingSpecified");
+            JCObject val = (JCObject)classInstance.Get("Address");
+            return new EndpointAddress(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAddress(EndpointAddress Address) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Address", Address == null ? null : Address.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

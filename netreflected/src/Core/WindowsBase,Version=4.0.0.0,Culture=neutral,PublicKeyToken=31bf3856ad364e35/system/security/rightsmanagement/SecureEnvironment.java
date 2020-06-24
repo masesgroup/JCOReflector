@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.rightsmanagement.SecureEnvironment;
 import system.security.rightsmanagement.ContentUser;
+import system.security.rightsmanagement.SecureEnvironment;
 import system.security.rightsmanagement.AuthenticationType;
 import system.security.rightsmanagement.UserActivationMode;
 
@@ -116,12 +116,11 @@ public class SecureEnvironment extends NetObject  {
     
     // Methods section
     
-    public static SecureEnvironment Create(java.lang.String applicationManifest, ContentUser user) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.security.rightsmanagement.RightsManagementException {
+    public static boolean IsUserActivated(ContentUser user) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.security.rightsmanagement.RightsManagementException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", applicationManifest, user == null ? null : user.getJCOInstance());
-            return new SecureEnvironment(objCreate);
+            return (boolean)classType.Invoke("IsUserActivated", user == null ? null : user.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -138,11 +137,22 @@ public class SecureEnvironment extends NetObject  {
         }
     }
 
-    public static boolean IsUserActivated(ContentUser user) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.security.rightsmanagement.RightsManagementException {
+    public static SecureEnvironment Create(java.lang.String applicationManifest, ContentUser user) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.security.rightsmanagement.RightsManagementException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsUserActivated", user == null ? null : user.getJCOInstance());
+            JCObject objCreate = (JCObject)classType.Invoke("Create", applicationManifest, user == null ? null : user.getJCOInstance());
+            return new SecureEnvironment(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.rightsmanagement.RightsManagementException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,15 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.services.description.OperationBinding;
-import system.servicemodel.description.OperationDescription;
-import system.web.services.description.MessageBinding;
-import system.servicemodel.description.MessageDescription;
-import system.web.services.description.FaultBinding;
 import system.servicemodel.description.FaultDescription;
+import system.web.services.description.FaultBinding;
+import system.servicemodel.description.MessageDescription;
+import system.web.services.description.MessageBinding;
+import system.servicemodel.description.OperationDescription;
+import system.web.services.description.OperationBinding;
 import system.servicemodel.description.ServiceEndpoint;
-import system.web.services.description.Port;
 import system.servicemodel.description.WsdlContractConversionContext;
+import system.web.services.description.Port;
 
 
 /**
@@ -121,45 +121,12 @@ public class WsdlEndpointConversionContext extends NetObject  {
     
     // Methods section
     
-    public OperationBinding GetOperationBinding(OperationDescription operation) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
+    public FaultDescription GetFaultDescription(FaultBinding faultBinding) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetOperationBinding = (JCObject)classInstance.Invoke("GetOperationBinding", operation == null ? null : operation.getJCOInstance());
-            return new OperationBinding(objGetOperationBinding);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MessageBinding GetMessageBinding(MessageDescription message) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMessageBinding = (JCObject)classInstance.Invoke("GetMessageBinding", message == null ? null : message.getJCOInstance());
-            return new MessageBinding(objGetMessageBinding);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FaultBinding GetFaultBinding(FaultDescription fault) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetFaultBinding = (JCObject)classInstance.Invoke("GetFaultBinding", fault == null ? null : fault.getJCOInstance());
-            return new FaultBinding(objGetFaultBinding);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OperationDescription GetOperationDescription(OperationBinding operationBinding) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetOperationDescription = (JCObject)classInstance.Invoke("GetOperationDescription", operationBinding == null ? null : operationBinding.getJCOInstance());
-            return new OperationDescription(objGetOperationDescription);
+            JCObject objGetFaultDescription = (JCObject)classInstance.Invoke("GetFaultDescription", faultBinding == null ? null : faultBinding.getJCOInstance());
+            return new FaultDescription(objGetFaultDescription);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,12 +143,45 @@ public class WsdlEndpointConversionContext extends NetObject  {
         }
     }
 
-    public FaultDescription GetFaultDescription(FaultBinding faultBinding) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
+    public OperationDescription GetOperationDescription(OperationBinding operationBinding) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetFaultDescription = (JCObject)classInstance.Invoke("GetFaultDescription", faultBinding == null ? null : faultBinding.getJCOInstance());
-            return new FaultDescription(objGetFaultDescription);
+            JCObject objGetOperationDescription = (JCObject)classInstance.Invoke("GetOperationDescription", operationBinding == null ? null : operationBinding.getJCOInstance());
+            return new OperationDescription(objGetOperationDescription);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FaultBinding GetFaultBinding(FaultDescription fault) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetFaultBinding = (JCObject)classInstance.Invoke("GetFaultBinding", fault == null ? null : fault.getJCOInstance());
+            return new FaultBinding(objGetFaultBinding);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MessageBinding GetMessageBinding(MessageDescription message) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetMessageBinding = (JCObject)classInstance.Invoke("GetMessageBinding", message == null ? null : message.getJCOInstance());
+            return new MessageBinding(objGetMessageBinding);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public OperationBinding GetOperationBinding(OperationDescription operation) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetOperationBinding = (JCObject)classInstance.Invoke("GetOperationBinding", operation == null ? null : operation.getJCOInstance());
+            return new OperationBinding(objGetOperationBinding);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,6 +197,17 @@ public class WsdlEndpointConversionContext extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Endpoint");
             return new ServiceEndpoint(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WsdlContractConversionContext getContractConversionContext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ContractConversionContext");
+            return new WsdlContractConversionContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,17 +230,6 @@ public class WsdlEndpointConversionContext extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("WsdlPort");
             return new Port(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WsdlContractConversionContext getContractConversionContext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ContractConversionContext");
-            return new WsdlContractConversionContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -42,10 +42,10 @@ import system.windows.automation.provider.IRawElementProviderFragmentImplementat
 import system.windows.automation.provider.NavigateDirection;
 import system.windows.automation.provider.IRawElementProviderSimple;
 import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
-import system.windows.Rect;
 import system.windows.automation.provider.IRawElementProviderFragmentRoot;
 import system.windows.automation.provider.IRawElementProviderFragmentRootImplementation;
 import system.windows.automation.provider.ProviderOptions;
+import system.windows.Rect;
 
 
 /**
@@ -98,33 +98,33 @@ public interface IRawElementProviderFragmentRoot extends IJCOBridgeReflected {
 
     // Methods section
     
+    public int[] GetRuntimeId() throws Throwable;
+
+    public NetObject GetPatternProvider(int patternId) throws Throwable;
+
+    public NetObject GetPropertyValue(int propertyId) throws Throwable;
+
     public IRawElementProviderFragment ElementProviderFromPoint(double x, double y) throws Throwable;
 
     public IRawElementProviderFragment GetFocus() throws Throwable;
 
     public IRawElementProviderFragment Navigate(NavigateDirection direction) throws Throwable;
 
-    public int[] GetRuntimeId() throws Throwable;
-
     public IRawElementProviderSimple[] GetEmbeddedFragmentRoots() throws Throwable;
 
     public void SetFocus() throws Throwable;
-
-    public NetObject GetPatternProvider(int patternId) throws Throwable;
-
-    public NetObject GetPropertyValue(int propertyId) throws Throwable;
 
 
     
     // Properties section
     
-    public Rect getBoundingRectangle() throws Throwable;
-
     public IRawElementProviderFragmentRoot getFragmentRoot() throws Throwable;
+
+    public IRawElementProviderSimple getHostRawElementProvider() throws Throwable;
 
     public ProviderOptions getProviderOptions() throws Throwable;
 
-    public IRawElementProviderSimple getHostRawElementProvider() throws Throwable;
+    public Rect getBoundingRectangle() throws Throwable;
 
 
 

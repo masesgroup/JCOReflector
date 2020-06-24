@@ -91,9 +91,9 @@ public interface IMenuEditorService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public Menu GetMenu() throws Throwable;
-
     public boolean IsActive() throws Throwable;
+
+    public Menu GetMenu() throws Throwable;
 
     public void SetMenu(Menu menu) throws Throwable;
 

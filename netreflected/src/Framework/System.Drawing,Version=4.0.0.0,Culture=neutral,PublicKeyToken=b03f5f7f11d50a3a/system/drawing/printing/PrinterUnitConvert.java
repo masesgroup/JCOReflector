@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.drawing.printing.PrinterUnit;
 import system.drawing.Point;
-import system.drawing.Size;
-import system.drawing.Rectangle;
 import system.drawing.printing.Margins;
+import system.drawing.Rectangle;
+import system.drawing.Size;
 
 
 /**
@@ -148,12 +148,12 @@ public class PrinterUnitConvert extends NetObject  {
         }
     }
 
-    public static Size Convert(Size value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable {
+    public static Margins Convert(Margins value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objConvert = (JCObject)classType.Invoke("Convert", value == null ? null : value.getJCOInstance(), fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
-            return new Size(objConvert);
+            return new Margins(objConvert);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,12 +170,12 @@ public class PrinterUnitConvert extends NetObject  {
         }
     }
 
-    public static Margins Convert(Margins value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static Size Convert(Size value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objConvert = (JCObject)classType.Invoke("Convert", value == null ? null : value.getJCOInstance(), fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
-            return new Margins(objConvert);
+            return new Size(objConvert);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

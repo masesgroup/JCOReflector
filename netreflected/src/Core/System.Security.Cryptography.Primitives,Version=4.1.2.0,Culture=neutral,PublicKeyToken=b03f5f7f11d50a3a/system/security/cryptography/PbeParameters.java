@@ -129,12 +129,11 @@ public class PbeParameters extends NetObject  {
     
     // Properties section
     
-    public PbeEncryptionAlgorithm getEncryptionAlgorithm() throws Throwable {
+    public int getIterationCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptionAlgorithm");
-            return new PbeEncryptionAlgorithm(val);
+            return (int)classInstance.Get("IterationCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,11 +150,12 @@ public class PbeParameters extends NetObject  {
         }
     }
 
-    public int getIterationCount() throws Throwable {
+    public PbeEncryptionAlgorithm getEncryptionAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("IterationCount");
+            JCObject val = (JCObject)classInstance.Get("EncryptionAlgorithm");
+            return new PbeEncryptionAlgorithm(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

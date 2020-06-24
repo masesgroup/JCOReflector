@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.sqltypes.SqlXml;
 import microsoft.sqlserver.server.TriggerAction;
+import system.data.sqltypes.SqlXml;
 
 
 /**
@@ -138,23 +138,23 @@ public class SqlTriggerContext extends NetObject  {
         }
     }
 
-    public SqlXml getEventData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EventData");
-            return new SqlXml(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TriggerAction getTriggerAction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("TriggerAction");
             return new TriggerAction(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SqlXml getEventData() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("EventData");
+            return new SqlXml(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -102,9 +102,9 @@ public interface IWebFormsDocumentService extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String getDocumentUrl() throws Throwable;
-
     public boolean getIsLoading() throws Throwable;
+
+    public java.lang.String getDocumentUrl() throws Throwable;
 
 
 

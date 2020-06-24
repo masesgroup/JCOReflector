@@ -114,23 +114,12 @@ public class BindingRestrictions extends NetObject  {
     
     // Methods section
     
-    public BindingRestrictions Merge(BindingRestrictions restrictions) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objMerge = (JCObject)classInstance.Invoke("Merge", restrictions == null ? null : restrictions.getJCOInstance());
-            return new BindingRestrictions(objMerge);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BindingRestrictions GetTypeRestriction(Expression expression, NetType type) throws Throwable, system.ArgumentNullException {
+    public static BindingRestrictions GetExpressionRestriction(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetTypeRestriction = (JCObject)classType.Invoke("GetTypeRestriction", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
-            return new BindingRestrictions(objGetTypeRestriction);
+            JCObject objGetExpressionRestriction = (JCObject)classType.Invoke("GetExpressionRestriction", expression == null ? null : expression.getJCOInstance());
+            return new BindingRestrictions(objGetExpressionRestriction);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,12 +136,23 @@ public class BindingRestrictions extends NetObject  {
         }
     }
 
-    public static BindingRestrictions GetExpressionRestriction(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static BindingRestrictions GetTypeRestriction(Expression expression, NetType type) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetExpressionRestriction = (JCObject)classType.Invoke("GetExpressionRestriction", expression == null ? null : expression.getJCOInstance());
-            return new BindingRestrictions(objGetExpressionRestriction);
+            JCObject objGetTypeRestriction = (JCObject)classType.Invoke("GetTypeRestriction", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            return new BindingRestrictions(objGetTypeRestriction);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BindingRestrictions Merge(BindingRestrictions restrictions) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objMerge = (JCObject)classInstance.Invoke("Merge", restrictions == null ? null : restrictions.getJCOInstance());
+            return new BindingRestrictions(objMerge);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

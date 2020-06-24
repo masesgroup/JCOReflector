@@ -92,17 +92,17 @@ public interface IWSTrustFeb2005SyncContract extends IJCOBridgeReflected {
     
     public Message ProcessTrustFeb2005Cancel(Message message) throws Throwable;
 
-    public Message ProcessTrustFeb2005Issue(Message message) throws Throwable;
-
-    public Message ProcessTrustFeb2005Renew(Message message) throws Throwable;
-
-    public Message ProcessTrustFeb2005Validate(Message message) throws Throwable;
-
     public Message ProcessTrustFeb2005CancelResponse(Message message) throws Throwable;
+
+    public Message ProcessTrustFeb2005Issue(Message message) throws Throwable;
 
     public Message ProcessTrustFeb2005IssueResponse(Message message) throws Throwable;
 
+    public Message ProcessTrustFeb2005Renew(Message message) throws Throwable;
+
     public Message ProcessTrustFeb2005RenewResponse(Message message) throws Throwable;
+
+    public Message ProcessTrustFeb2005Validate(Message message) throws Throwable;
 
     public Message ProcessTrustFeb2005ValidateResponse(Message message) throws Throwable;
 

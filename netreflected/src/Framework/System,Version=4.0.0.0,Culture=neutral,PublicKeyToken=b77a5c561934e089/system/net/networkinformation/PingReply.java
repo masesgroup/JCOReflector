@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.networkinformation.IPStatus;
 import system.net.IPAddress;
+import system.net.networkinformation.IPStatus;
 import system.net.networkinformation.PingOptions;
 
 
@@ -119,12 +119,30 @@ public class PingReply extends NetObject  {
     
     // Properties section
     
-    public IPStatus getStatus() throws Throwable {
+    public byte[] getBuffer() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Status");
-            return new IPStatus(val);
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("Buffer");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+			for(int indexBuffer = 0; indexBuffer < resultingArrayList.size(); indexBuffer++ ) {
+				resultingArray[indexBuffer] = (byte)resultingArrayList.get(indexBuffer);
+			}
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long getRoundtripTime() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Get("RoundtripTime");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -141,11 +159,12 @@ public class PingReply extends NetObject  {
         }
     }
 
-    public long getRoundtripTime() throws Throwable {
+    public IPStatus getStatus() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Get("RoundtripTime");
+            JCObject val = (JCObject)classInstance.Get("Status");
+            return new IPStatus(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,25 +176,6 @@ public class PingReply extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Options");
             return new PingOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] getBuffer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Buffer");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-			for(int indexBuffer = 0; indexBuffer < resultingArrayList.size(); indexBuffer++ ) {
-				resultingArray[indexBuffer] = (byte)resultingArrayList.get(indexBuffer);
-			}
-            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

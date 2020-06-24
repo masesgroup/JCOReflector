@@ -116,16 +116,6 @@ public class ValueSerializer extends NetObject  {
     
     // Methods section
     
-    public boolean CanConvertToString(NetObject value, IValueSerializerContext context) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanConvertToString", value == null ? null : value.getJCOInstance(), context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean CanConvertFromString(java.lang.String value, IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -136,11 +126,11 @@ public class ValueSerializer extends NetObject  {
         }
     }
 
-    public java.lang.String ConvertToString(NetObject value, IValueSerializerContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
+    public boolean CanConvertToString(NetObject value, IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("ConvertToString", value == null ? null : value.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            return (boolean)classInstance.Invoke("CanConvertToString", value == null ? null : value.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,12 +147,11 @@ public class ValueSerializer extends NetObject  {
         }
     }
 
-    public static ValueSerializer GetSerializerFor(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String ConvertToString(NetObject value, IValueSerializerContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetSerializerFor = (JCObject)classType.Invoke("GetSerializerFor", type == null ? null : type.getJCOInstance());
-            return new ValueSerializer(objGetSerializerFor);
+            return (java.lang.String)classInstance.Invoke("ConvertToString", value == null ? null : value.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,22 +168,33 @@ public class ValueSerializer extends NetObject  {
         }
     }
 
-    public static ValueSerializer GetSerializerFor(NetType type, IValueSerializerContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException {
+    public static ValueSerializer GetSerializerFor(PropertyDescriptor descriptor, IValueSerializerContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetSerializerFor = (JCObject)classType.Invoke("GetSerializerFor", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objGetSerializerFor = (JCObject)classType.Invoke("GetSerializerFor", descriptor == null ? null : descriptor.getJCOInstance(), context == null ? null : context.getJCOInstance());
             return new ValueSerializer(objGetSerializerFor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ValueSerializer GetSerializerFor(PropertyDescriptor descriptor, IValueSerializerContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static ValueSerializer GetSerializerFor(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetSerializerFor = (JCObject)classType.Invoke("GetSerializerFor", descriptor == null ? null : descriptor.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objGetSerializerFor = (JCObject)classType.Invoke("GetSerializerFor", type == null ? null : type.getJCOInstance());
+            return new ValueSerializer(objGetSerializerFor);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueSerializer GetSerializerFor(NetType type, IValueSerializerContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetSerializerFor = (JCObject)classType.Invoke("GetSerializerFor", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance());
             return new ValueSerializer(objGetSerializerFor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

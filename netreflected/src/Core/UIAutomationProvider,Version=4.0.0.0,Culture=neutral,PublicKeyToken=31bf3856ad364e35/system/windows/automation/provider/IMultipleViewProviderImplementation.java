@@ -103,6 +103,25 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
 
     // Methods section
     
+    public int[] GetSupportedViews() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSupportedViews");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            int[] resultingArray = new int[resultingArrayList.size()];
+            for(int indexGetSupportedViews = 0; indexGetSupportedViews < resultingArrayList.size(); indexGetSupportedViews++ ) {
+				resultingArray[indexGetSupportedViews] = (int)resultingArrayList.get(indexGetSupportedViews);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String GetViewName(int viewId) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -118,25 +137,6 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCurrentView", viewId);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int[] GetSupportedViews() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSupportedViews");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            int[] resultingArray = new int[resultingArrayList.size()];
-            for(int indexGetSupportedViews = 0; indexGetSupportedViews < resultingArrayList.size(); indexGetSupportedViews++ ) {
-				resultingArray[indexGetSupportedViews] = (int)resultingArrayList.get(indexGetSupportedViews);
-            }
-            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

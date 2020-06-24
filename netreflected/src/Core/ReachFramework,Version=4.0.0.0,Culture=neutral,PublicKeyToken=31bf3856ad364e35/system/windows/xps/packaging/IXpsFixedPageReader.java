@@ -37,16 +37,16 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.windows.xps.packaging.XpsResource;
+import system.windows.xps.packaging.XpsColorContext;
 import system.Uri;
 import system.windows.xps.packaging.XpsFont;
-import system.windows.xps.packaging.XpsColorContext;
-import system.windows.xps.packaging.XpsResourceDictionary;
 import system.windows.xps.packaging.XpsImage;
+import system.windows.xps.packaging.XpsResource;
+import system.windows.xps.packaging.XpsResourceDictionary;
 import system.windows.xps.packaging.XpsStructure;
 import system.printing.PrintTicket;
-import system.xml.XmlReader;
 import system.windows.xps.packaging.XpsThumbnail;
+import system.xml.XmlReader;
 
 
 /**
@@ -99,15 +99,15 @@ public interface IXpsFixedPageReader extends IJCOBridgeReflected {
 
     // Methods section
     
-    public XpsResource GetResource(Uri resourceUri) throws Throwable;
+    public XpsColorContext GetColorContext(Uri uri) throws Throwable;
 
     public XpsFont GetFont(Uri uri) throws Throwable;
 
-    public XpsColorContext GetColorContext(Uri uri) throws Throwable;
+    public XpsImage GetImage(Uri uri) throws Throwable;
+
+    public XpsResource GetResource(Uri resourceUri) throws Throwable;
 
     public XpsResourceDictionary GetResourceDictionary(Uri uri) throws Throwable;
-
-    public XpsImage GetImage(Uri uri) throws Throwable;
 
     public XpsStructure AddStoryFragment() throws Throwable;
 
@@ -115,17 +115,17 @@ public interface IXpsFixedPageReader extends IJCOBridgeReflected {
     
     // Properties section
     
+    public int getPageNumber() throws Throwable;
+
     public PrintTicket getPrintTicket() throws Throwable;
 
     public Uri getUri() throws Throwable;
 
-    public XmlReader getXmlReader() throws Throwable;
-
-    public int getPageNumber() throws Throwable;
+    public XpsStructure getStoryFragment() throws Throwable;
 
     public XpsThumbnail getThumbnail() throws Throwable;
 
-    public XpsStructure getStoryFragment() throws Throwable;
+    public XmlReader getXmlReader() throws Throwable;
 
 
 

@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.schema.XmlSchemaSet;
-import system.xml.XmlQualifiedName;
 import system.xml.schema.XmlSchemaType;
+import system.xml.XmlQualifiedName;
 import system.runtime.serialization.ExportOptions;
 
 
@@ -137,22 +137,11 @@ public class XsdDataContractExporter extends NetObject  {
     
     // Methods section
     
-    public void Export(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.RankException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public boolean CanExport(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Export", type == null ? null : type.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlQualifiedName GetSchemaTypeName(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSchemaTypeName = (JCObject)classInstance.Invoke("GetSchemaTypeName", type == null ? null : type.getJCOInstance());
-            return new XmlQualifiedName(objGetSchemaTypeName);
+            return (boolean)classInstance.Invoke("CanExport", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,11 +169,22 @@ public class XsdDataContractExporter extends NetObject  {
         }
     }
 
-    public boolean CanExport(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public XmlQualifiedName GetSchemaTypeName(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("CanExport", type == null ? null : type.getJCOInstance());
+            JCObject objGetSchemaTypeName = (JCObject)classInstance.Invoke("GetSchemaTypeName", type == null ? null : type.getJCOInstance());
+            return new XmlQualifiedName(objGetSchemaTypeName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Export(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.RankException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Export", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -91,11 +91,11 @@ public interface ISelectionItemProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Select() throws Throwable;
-
     public void AddToSelection() throws Throwable;
 
     public void RemoveFromSelection() throws Throwable;
+
+    public void Select() throws Throwable;
 
 
     

@@ -122,21 +122,21 @@ public class SyntaxCheck extends NetObject  {
         }
     }
 
-    public static boolean CheckRootedPath(java.lang.String value) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("CheckRootedPath", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean CheckPath(java.lang.String value) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("CheckPath", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean CheckRootedPath(java.lang.String value) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("CheckRootedPath", value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

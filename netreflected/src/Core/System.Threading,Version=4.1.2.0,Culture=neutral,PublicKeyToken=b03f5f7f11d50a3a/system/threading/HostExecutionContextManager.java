@@ -124,23 +124,23 @@ public class HostExecutionContextManager extends NetObject  {
     
     // Methods section
     
-    public HostExecutionContext Capture() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCapture = (JCObject)classInstance.Invoke("Capture");
-            return new HostExecutionContext(objCapture);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject SetHostExecutionContext(HostExecutionContext hostExecutionContext) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objSetHostExecutionContext = (JCObject)classInstance.Invoke("SetHostExecutionContext", hostExecutionContext == null ? null : hostExecutionContext.getJCOInstance());
             return new NetObject(objSetHostExecutionContext);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HostExecutionContext Capture() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCapture = (JCObject)classInstance.Invoke("Capture");
+            return new HostExecutionContext(objCapture);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -128,22 +128,22 @@ public class ActiveDesignSurfaceChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public DesignSurface getOldSurface() throws Throwable {
+    public DesignSurface getNewSurface() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OldSurface");
+            JCObject val = (JCObject)classInstance.Get("NewSurface");
             return new DesignSurface(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DesignSurface getNewSurface() throws Throwable {
+    public DesignSurface getOldSurface() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NewSurface");
+            JCObject val = (JCObject)classInstance.Get("OldSurface");
             return new DesignSurface(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

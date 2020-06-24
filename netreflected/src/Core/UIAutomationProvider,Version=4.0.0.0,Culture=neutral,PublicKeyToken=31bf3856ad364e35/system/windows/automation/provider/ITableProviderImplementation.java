@@ -106,18 +106,12 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
 
     // Methods section
     
-    public IRawElementProviderSimple[] GetRowHeaders() throws Throwable {
+    public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<IRawElementProviderSimple> resultingArrayList = new ArrayList<IRawElementProviderSimple>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRowHeaders");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new IRawElementProviderSimpleImplementation(resultingObject));
-            }
-            IRawElementProviderSimple[] resultingArray = new IRawElementProviderSimple[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", row, column);
+            return new IRawElementProviderSimpleImplementation(objGetItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -140,12 +134,18 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
         }
     }
 
-    public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
+    public IRawElementProviderSimple[] GetRowHeaders() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", row, column);
-            return new IRawElementProviderSimpleImplementation(objGetItem);
+            ArrayList<IRawElementProviderSimple> resultingArrayList = new ArrayList<IRawElementProviderSimple>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRowHeaders");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new IRawElementProviderSimpleImplementation(resultingObject));
+            }
+            IRawElementProviderSimple[] resultingArray = new IRawElementProviderSimple[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,12 +155,11 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
     
     // Properties section
     
-    public RowOrColumnMajor getRowOrColumnMajor() throws Throwable {
+    public int getColumnCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RowOrColumnMajor");
-            return new RowOrColumnMajor(val);
+            return (int)classInstance.Get("ColumnCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,11 +175,12 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
         }
     }
 
-    public int getColumnCount() throws Throwable {
+    public RowOrColumnMajor getRowOrColumnMajor() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("ColumnCount");
+            JCObject val = (JCObject)classInstance.Get("RowOrColumnMajor");
+            return new RowOrColumnMajor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

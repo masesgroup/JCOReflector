@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.description.MetadataSet;
 import system.servicemodel.description.ContractDescription;
 import system.servicemodel.description.ServiceEndpoint;
-import system.servicemodel.description.MetadataSet;
+import system.servicemodel.description.PolicyVersion;
 import system.web.services.description.ServiceDescriptionCollection;
 import system.xml.schema.XmlSchemaSet;
-import system.servicemodel.description.PolicyVersion;
 
 
 /**
@@ -129,6 +129,17 @@ public class WsdlExporter extends NetObject  {
     
     // Methods section
     
+    public MetadataSet GetGeneratedMetadata() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetGeneratedMetadata = (JCObject)classInstance.Invoke("GetGeneratedMetadata");
+            return new MetadataSet(objGetGeneratedMetadata);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ExportContract(ContractDescription contract) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -149,21 +160,31 @@ public class WsdlExporter extends NetObject  {
         }
     }
 
-    public MetadataSet GetGeneratedMetadata() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+
+    
+    // Properties section
+    
+    public PolicyVersion getPolicyVersion() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetGeneratedMetadata = (JCObject)classInstance.Invoke("GetGeneratedMetadata");
-            return new MetadataSet(objGetGeneratedMetadata);
+            JCObject val = (JCObject)classInstance.Get("PolicyVersion");
+            return new PolicyVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+    public void setPolicyVersion(PolicyVersion PolicyVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PolicyVersion", PolicyVersion == null ? null : PolicyVersion.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
-    
-    // Properties section
-    
     public ServiceDescriptionCollection getGeneratedWsdlDocuments() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -181,27 +202,6 @@ public class WsdlExporter extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("GeneratedXmlSchemas");
             return new XmlSchemaSet(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PolicyVersion getPolicyVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PolicyVersion");
-            return new PolicyVersion(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPolicyVersion(PolicyVersion PolicyVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PolicyVersion", PolicyVersion == null ? null : PolicyVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

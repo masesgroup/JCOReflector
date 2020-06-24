@@ -95,33 +95,33 @@ public interface IWSTrust13AsyncContract extends IJCOBridgeReflected {
     
     public IAsyncResult BeginTrust13Cancel(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public Message EndTrust13Cancel(IAsyncResult ar) throws Throwable;
+    public IAsyncResult BeginTrust13CancelResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginTrust13Issue(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public Message EndTrust13Issue(IAsyncResult ar) throws Throwable;
+    public IAsyncResult BeginTrust13IssueResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginTrust13Renew(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public Message EndTrust13Renew(IAsyncResult ar) throws Throwable;
+    public IAsyncResult BeginTrust13RenewResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginTrust13Validate(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public Message EndTrust13Validate(IAsyncResult ar) throws Throwable;
+    public IAsyncResult BeginTrust13ValidateResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginTrust13CancelResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
+    public Message EndTrust13Cancel(IAsyncResult ar) throws Throwable;
 
     public Message EndTrust13CancelResponse(IAsyncResult ar) throws Throwable;
 
-    public IAsyncResult BeginTrust13IssueResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
+    public Message EndTrust13Issue(IAsyncResult ar) throws Throwable;
 
     public Message EndTrust13IssueResponse(IAsyncResult ar) throws Throwable;
 
-    public IAsyncResult BeginTrust13RenewResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
+    public Message EndTrust13Renew(IAsyncResult ar) throws Throwable;
 
     public Message EndTrust13RenewResponse(IAsyncResult ar) throws Throwable;
 
-    public IAsyncResult BeginTrust13ValidateResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable;
+    public Message EndTrust13Validate(IAsyncResult ar) throws Throwable;
 
     public Message EndTrust13ValidateResponse(IAsyncResult ar) throws Throwable;
 

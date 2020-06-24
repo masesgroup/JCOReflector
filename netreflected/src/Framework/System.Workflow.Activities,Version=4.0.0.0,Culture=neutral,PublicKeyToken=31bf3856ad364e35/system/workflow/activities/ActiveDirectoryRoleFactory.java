@@ -126,23 +126,23 @@ public class ActiveDirectoryRoleFactory extends NetObject  {
         }
     }
 
-    public static ActiveDirectoryRole CreateFromSecurityIdentifier(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateFromSecurityIdentifier = (JCObject)classType.Invoke("CreateFromSecurityIdentifier", sid == null ? null : sid.getJCOInstance());
-            return new ActiveDirectoryRole(objCreateFromSecurityIdentifier);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static ActiveDirectoryRole CreateFromEmailAddress(java.lang.String emailAddress) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateFromEmailAddress = (JCObject)classType.Invoke("CreateFromEmailAddress", emailAddress);
             return new ActiveDirectoryRole(objCreateFromEmailAddress);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ActiveDirectoryRole CreateFromSecurityIdentifier(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateFromSecurityIdentifier = (JCObject)classType.Invoke("CreateFromSecurityIdentifier", sid == null ? null : sid.getJCOInstance());
+            return new ActiveDirectoryRole(objCreateFromSecurityIdentifier);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

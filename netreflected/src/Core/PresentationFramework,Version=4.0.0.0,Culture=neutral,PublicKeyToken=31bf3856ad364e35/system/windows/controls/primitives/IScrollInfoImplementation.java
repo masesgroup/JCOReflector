@@ -106,11 +106,12 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     // Methods section
     
-    public void LineUp() throws Throwable {
+    public Rect MakeVisible(Visual visual, Rect rectangle) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("LineUp");
+            JCObject objMakeVisible = (JCObject)classInstance.Invoke("MakeVisible", visual == null ? null : visual.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
+            return new Rect(objMakeVisible);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -146,51 +147,11 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
-    public void PageUp() throws Throwable {
+    public void LineUp() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("PageUp");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PageDown() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PageDown");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PageLeft() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PageLeft");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PageRight() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PageRight");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void MouseWheelUp() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("MouseWheelUp");
+            classInstance.Invoke("LineUp");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,6 +187,56 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    public void MouseWheelUp() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("MouseWheelUp");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PageDown() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PageDown");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PageLeft() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PageLeft");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PageRight() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PageRight");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PageUp() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PageUp");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SetHorizontalOffset(double offset) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -246,41 +257,10 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
-    public Rect MakeVisible(Visual visual, Rect rectangle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objMakeVisible = (JCObject)classInstance.Invoke("MakeVisible", visual == null ? null : visual.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
-            return new Rect(objMakeVisible);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getCanVerticallyScroll() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanVerticallyScroll");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCanVerticallyScroll(boolean CanVerticallyScroll) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CanVerticallyScroll", CanVerticallyScroll);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCanHorizontallyScroll() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -301,11 +281,21 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
-    public double getExtentWidth() throws Throwable {
+    public boolean getCanVerticallyScroll() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("ExtentWidth");
+            return (boolean)classInstance.Get("CanVerticallyScroll");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCanVerticallyScroll(boolean CanVerticallyScroll) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CanVerticallyScroll", CanVerticallyScroll);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,21 +311,11 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
-    public double getViewportWidth() throws Throwable {
+    public double getExtentWidth() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classInstance.Get("ViewportWidth");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getViewportHeight() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("ViewportHeight");
+            return (double)classInstance.Get("ExtentWidth");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,6 +336,26 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (double)classInstance.Get("VerticalOffset");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getViewportHeight() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("ViewportHeight");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getViewportWidth() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("ViewportWidth");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

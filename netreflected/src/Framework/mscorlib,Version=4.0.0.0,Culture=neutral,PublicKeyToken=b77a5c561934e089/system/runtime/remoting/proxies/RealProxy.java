@@ -38,16 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.remoting.proxies.RealProxy;
 import system.runtime.remoting.activation.IConstructionReturnMessage;
 import system.runtime.remoting.activation.IConstructionReturnMessageImplementation;
 import system.runtime.remoting.activation.IConstructionCallMessage;
 import system.runtime.remoting.activation.IConstructionCallMessageImplementation;
+import system.runtime.remoting.messaging.IMessage;
+import system.runtime.remoting.messaging.IMessageImplementation;
 import system.runtime.remoting.ObjRef;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.runtime.remoting.proxies.RealProxy;
-import system.runtime.remoting.messaging.IMessage;
-import system.runtime.remoting.messaging.IMessageImplementation;
 
 
 /**
@@ -122,33 +122,12 @@ public class RealProxy extends NetObject  {
     
     // Methods section
     
-    public IConstructionReturnMessage InitializeServerObject(IConstructionCallMessage ctorMsg) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.InvalidCastException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static NetObject GetStubData(RealProxy rp) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objInitializeServerObject = (JCObject)classInstance.Invoke("InitializeServerObject", ctorMsg == null ? null : ctorMsg.getJCOInstance());
-            return new IConstructionReturnMessageImplementation(objInitializeServerObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
-            return new ObjRef(objCreateObjRef);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objGetStubData = (JCObject)classType.Invoke("GetStubData", rp == null ? null : rp.getJCOInstance());
+            return new NetObject(objGetStubData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,22 +144,34 @@ public class RealProxy extends NetObject  {
         }
     }
 
-    public static void SetStubData(RealProxy rp, NetObject stubData) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IConstructionReturnMessage InitializeServerObject(IConstructionCallMessage ctorMsg) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Invoke("SetStubData", rp == null ? null : rp.getJCOInstance(), stubData == null ? null : stubData.getJCOInstance());
+            JCObject objInitializeServerObject = (JCObject)classInstance.Invoke("InitializeServerObject", ctorMsg == null ? null : ctorMsg.getJCOInstance());
+            return new IConstructionReturnMessageImplementation(objInitializeServerObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject GetStubData(RealProxy rp) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IMessage Invoke(IMessage msg) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetStubData = (JCObject)classType.Invoke("GetStubData", rp == null ? null : rp.getJCOInstance());
-            return new NetObject(objGetStubData);
+            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", msg == null ? null : msg.getJCOInstance());
+            return new IMessageImplementation(objInvoke);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
+            return new ObjRef(objCreateObjRef);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,12 +188,21 @@ public class RealProxy extends NetObject  {
         }
     }
 
-    public IMessage Invoke(IMessage msg) throws Throwable {
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", msg == null ? null : msg.getJCOInstance());
-            return new IMessageImplementation(objInvoke);
+            classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetStubData(RealProxy rp, NetObject stubData) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetStubData", rp == null ? null : rp.getJCOInstance(), stubData == null ? null : stubData.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

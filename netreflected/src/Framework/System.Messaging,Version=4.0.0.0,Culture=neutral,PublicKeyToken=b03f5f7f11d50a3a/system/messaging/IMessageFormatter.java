@@ -92,11 +92,11 @@ public interface IMessageFormatter extends IJCOBridgeReflected {
     
     public boolean CanRead(Message message) throws Throwable;
 
+    public NetObject Clone() throws Throwable;
+
     public NetObject Read(Message message) throws Throwable;
 
     public void Write(Message message, NetObject obj) throws Throwable;
-
-    public NetObject Clone() throws Throwable;
 
 
     

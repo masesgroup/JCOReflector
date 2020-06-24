@@ -95,27 +95,27 @@ public interface IChannel extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Abort() throws Throwable;
-
     public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public void EndClose(IAsyncResult result) throws Throwable;
-
-    public void Open() throws Throwable;
-
-    public void Open(TimeSpan timeout) throws Throwable;
 
     public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public void EndOpen(IAsyncResult result) throws Throwable;
+    public void Abort() throws Throwable;
 
     public void Close() throws Throwable;
 
     public void Close(TimeSpan timeout) throws Throwable;
+
+    public void EndClose(IAsyncResult result) throws Throwable;
+
+    public void EndOpen(IAsyncResult result) throws Throwable;
+
+    public void Open() throws Throwable;
+
+    public void Open(TimeSpan timeout) throws Throwable;
 
 
     

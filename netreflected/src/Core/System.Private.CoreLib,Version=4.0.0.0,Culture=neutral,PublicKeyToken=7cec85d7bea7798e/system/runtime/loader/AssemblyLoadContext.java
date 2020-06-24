@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.AssemblyName;
 import system.reflection.Assembly;
+import system.reflection.AssemblyName;
 import system.io.Stream;
 import system.runtime.loader.AssemblyLoadContext;
 
@@ -127,17 +127,6 @@ public class AssemblyLoadContext extends NetObject  {
     
     // Methods section
     
-    public static AssemblyName GetAssemblyName(java.lang.String assemblyPath) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetAssemblyName = (JCObject)classType.Invoke("GetAssemblyName", assemblyPath);
-            return new AssemblyName(objGetAssemblyName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Assembly LoadFromAssemblyName(AssemblyName assemblyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -193,11 +182,12 @@ public class AssemblyLoadContext extends NetObject  {
         }
     }
 
-    public void Unload() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static AssemblyName GetAssemblyName(java.lang.String assemblyPath) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("Unload");
+            JCObject objGetAssemblyName = (JCObject)classType.Invoke("GetAssemblyName", assemblyPath);
+            return new AssemblyName(objGetAssemblyName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,6 +224,16 @@ public class AssemblyLoadContext extends NetObject  {
         }
     }
 
+    public void Unload() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Unload");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -248,11 +248,12 @@ public class AssemblyLoadContext extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static AssemblyLoadContext getCurrentContextualReflectionContext() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            JCObject val = (JCObject)classType.Get("CurrentContextualReflectionContext");
+            return new AssemblyLoadContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,12 +270,11 @@ public class AssemblyLoadContext extends NetObject  {
         }
     }
 
-    public static AssemblyLoadContext getCurrentContextualReflectionContext() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentContextualReflectionContext");
-            return new AssemblyLoadContext(val);
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

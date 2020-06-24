@@ -140,27 +140,6 @@ public class Saml2AuthenticationStatement extends NetObject  {
     
     // Properties section
     
-    public Saml2AuthenticationContext getAuthenticationContext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticationContext");
-            return new Saml2AuthenticationContext(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAuthenticationContext(Saml2AuthenticationContext AuthenticationContext) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AuthenticationContext", AuthenticationContext == null ? null : AuthenticationContext.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DateTime getAuthenticationInstant() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -182,21 +161,22 @@ public class Saml2AuthenticationStatement extends NetObject  {
         }
     }
 
-    public java.lang.String getSessionIndex() throws Throwable {
+    public Saml2AuthenticationContext getAuthenticationContext() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("SessionIndex");
+            JCObject val = (JCObject)classInstance.Get("AuthenticationContext");
+            return new Saml2AuthenticationContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSessionIndex(java.lang.String SessionIndex) throws Throwable {
+    public void setAuthenticationContext(Saml2AuthenticationContext AuthenticationContext) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SessionIndex", SessionIndex);
+            classInstance.Set("AuthenticationContext", AuthenticationContext == null ? null : AuthenticationContext.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,6 +198,26 @@ public class Saml2AuthenticationStatement extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubjectLocality", SubjectLocality == null ? null : SubjectLocality.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getSessionIndex() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("SessionIndex");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSessionIndex(java.lang.String SessionIndex) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SessionIndex", SessionIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

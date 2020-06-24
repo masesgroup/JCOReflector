@@ -104,6 +104,17 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
 
     // Methods section
     
+    public Expression GetArgument(int index) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetArgument = (JCObject)classInstance.Invoke("GetArgument", index);
+            return new Expression(objGetArgument);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Expression Rewrite(Expression[] args) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -126,37 +137,26 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
         }
     }
 
-    public Expression GetArgument(int index) throws Throwable {
+
+    
+    // Properties section
+    
+    public int getArgumentCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetArgument = (JCObject)classInstance.Invoke("GetArgument", index);
-            return new Expression(objGetArgument);
+            return (int)classInstance.Get("ArgumentCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-
-    
-    // Properties section
-    
     public NetType getDelegateType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("DelegateType");
             return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getArgumentCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("ArgumentCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

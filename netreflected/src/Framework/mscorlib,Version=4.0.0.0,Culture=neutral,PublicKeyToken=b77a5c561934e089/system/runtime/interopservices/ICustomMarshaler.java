@@ -89,9 +89,9 @@ public interface ICustomMarshaler extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void CleanUpManagedData(NetObject ManagedObj) throws Throwable;
-
     public int GetNativeDataSize() throws Throwable;
+
+    public void CleanUpManagedData(NetObject ManagedObj) throws Throwable;
 
 
     

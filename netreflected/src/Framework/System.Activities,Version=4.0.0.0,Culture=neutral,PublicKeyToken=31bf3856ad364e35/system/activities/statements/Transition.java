@@ -150,21 +150,22 @@ public class Transition extends NetObject  {
         }
     }
 
-    public java.lang.String getDisplayName() throws Throwable {
+    public Activity getTrigger() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            JCObject val = (JCObject)classInstance.Get("Trigger");
+            return new Activity(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDisplayName(java.lang.String DisplayName) throws Throwable {
+    public void setTrigger(Activity Trigger) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("DisplayName", DisplayName);
+            classInstance.Set("Trigger", Trigger == null ? null : Trigger.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,22 +192,21 @@ public class Transition extends NetObject  {
         }
     }
 
-    public Activity getTrigger() throws Throwable {
+    public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Trigger");
-            return new Activity(val);
+            return (java.lang.String)classInstance.Get("DisplayName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTrigger(Activity Trigger) throws Throwable {
+    public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Trigger", Trigger == null ? null : Trigger.getJCOInstance());
+            classInstance.Set("DisplayName", DisplayName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

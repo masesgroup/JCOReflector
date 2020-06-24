@@ -39,9 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.HttpApplication;
+import system.web.profile.ProfileAutoSaveEventHandler;
 import system.web.profile.ProfileEventHandler;
 import system.web.profile.ProfileMigrateEventHandler;
-import system.web.profile.ProfileAutoSaveEventHandler;
 
 
 /**
@@ -156,6 +156,26 @@ public class ProfileModule extends NetObject  {
     // Instance Events section
     
 
+    public void addProfileAutoSaving(ProfileAutoSaveEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ProfileAutoSaving", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeProfileAutoSaving(ProfileAutoSaveEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ProfileAutoSaving", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void addPersonalize(ProfileEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -191,26 +211,6 @@ public class ProfileModule extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MigrateAnonymous", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addProfileAutoSaving(ProfileAutoSaveEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("ProfileAutoSaving", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeProfileAutoSaving(ProfileAutoSaveEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("ProfileAutoSaving", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

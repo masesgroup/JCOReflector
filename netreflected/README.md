@@ -93,16 +93,16 @@ Parsed assemblies are:
 > * Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 
-> Total Types: Analyzed = 43249 - Implemented = 10115 - Discarded = 30940 - Non Public = 30483 - Generic = 354 - Internals = 50
+> Total Types: Analyzed = 43249 - Implemented = 12308 - Discarded = 30940 - Non Public = 30483 - Generic = 354 - Internals = 50
 > * Total Enumerators: Analyzed = 26 - Implemented = 25
 > * Total Delegates: Analyzed = 554 - Implemented = 554
 > * Total Enums: Implemented = 1660 - Flags = 314
 > * Total Interfaces: Implemented = 847
 > * Total Classes: Implemented = 9222 Exceptions = 396
 >   * Total Constructors: Analyzed 11699 - Implemented = 10186
->   * Total Methods: Analyzed 328600 - Implemented = 84642
->   * Total Properties: Analyzed 88838 - Implemented = 83680
->   * Total Events: Analyzed 30583 - Implemented = 26843
+>   * Total Methods: Analyzed 132209 - Implemented = 85222
+>   * Total Properties: Analyzed 88696 - Implemented = 83680
+>   * Total Events: Analyzed 30366 - Implemented = 26843
 
 ## CoreCLR (reference is .NET Core 3.1)
 
@@ -371,16 +371,13 @@ Parsed assemblies are:
 > * System.Security.Claims, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Net.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> Total Types: Analyzed = 28143 - Implemented = 6817 - Discarded = 19730 - Non Public = 19314 - Generic = 338 - Internals = 35
-> * Total Enumerators: Analyzed = 36 - Implemented = 35
-> * Total Delegates: Analyzed = 414 - Implemented = 414
-> * Total Enums: Implemented = 1423 - Flags = 333
-> * Total Interfaces: Implemented = 505
-> * Total Classes: Implemented = 6035 Exceptions = 283
->   * Total Constructors: Analyzed 7826 - Implemented = 6775
->   * Total Methods: Analyzed 233345 - Implemented = 64871
->   * Total Properties: Analyzed 54635 - Implemented = 51465
->   * Total Events: Analyzed 25364 - Implemented = 22408
-
-
-
+> Total Types: Analyzed = 27373 - Implemented = 8137 - Discarded = 19235 - Non Public = 18826 - Generic = 331 - Internals = 35
+> * Total Enumerators: Analyzed = 30 - Implemented = 29
+> * Total Delegates: Analyzed = 402 - Implemented = 402
+> * Total Enums: Implemented = 1365 - Flags = 316
+> * Total Interfaces: Implemented = 489
+> * Total Classes: Implemented = 5852 Exceptions = 259
+>   * Total Constructors: Analyzed 7549 - Implemented = 6579
+>   * Total Methods: Analyzed 97235 - Implemented = 63696
+>   * Total Properties: Analyzed 53437 - Implemented = 50508
+>   * Total Events: Analyzed 25299 - Implemented = 22364

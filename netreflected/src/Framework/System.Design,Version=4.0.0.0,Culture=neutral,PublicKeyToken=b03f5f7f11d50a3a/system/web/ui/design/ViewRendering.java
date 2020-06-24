@@ -138,6 +138,16 @@ public class ViewRendering extends NetObject  {
     
     // Properties section
     
+    public boolean getVisible() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("Visible");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getContent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,16 +164,6 @@ public class ViewRendering extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Regions");
             return new DesignerRegionCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getVisible() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Visible");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

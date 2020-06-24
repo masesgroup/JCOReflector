@@ -105,16 +105,6 @@ public class ISelectionItemProviderImplementation extends NetObject implements I
 
     // Methods section
     
-    public void Select() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Select");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AddToSelection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -130,6 +120,16 @@ public class ISelectionItemProviderImplementation extends NetObject implements I
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveFromSelection");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Select() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Select");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.caching.CacheDependency;
 import system.DateTime;
 import system.TimeSpan;
+import system.web.caching.CacheDependency;
 import system.web.caching.CacheItemPriority;
 import system.web.caching.CacheItemRemovedCallback;
 
@@ -132,27 +132,6 @@ public class CacheInsertOptions extends NetObject  {
     
     // Properties section
     
-    public CacheDependency getDependencies() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Dependencies");
-            return new CacheDependency(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDependencies(CacheDependency Dependencies) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Dependencies", Dependencies == null ? null : Dependencies.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DateTime getAbsoluteExpiration() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -190,6 +169,27 @@ public class CacheInsertOptions extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SlidingExpiration", SlidingExpiration == null ? null : SlidingExpiration.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CacheDependency getDependencies() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Dependencies");
+            return new CacheDependency(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDependencies(CacheDependency Dependencies) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Dependencies", Dependencies == null ? null : Dependencies.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

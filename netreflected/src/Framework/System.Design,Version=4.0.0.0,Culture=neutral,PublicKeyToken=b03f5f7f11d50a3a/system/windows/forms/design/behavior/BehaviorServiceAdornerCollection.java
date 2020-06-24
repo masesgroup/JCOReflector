@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.design.behavior.Adorner;
 import system.windows.forms.design.behavior.BehaviorService;
 import system.windows.forms.design.behavior.BehaviorServiceAdornerCollection;
-import system.windows.forms.design.behavior.Adorner;
 import system.windows.forms.design.behavior.BehaviorServiceAdornerCollectionEnumerator;
 
 
@@ -113,6 +113,16 @@ public class BehaviorServiceAdornerCollection extends NetObject implements Itera
     // Constructors section
     
 
+    public BehaviorServiceAdornerCollection(Adorner[] value) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(value)));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BehaviorServiceAdornerCollection(BehaviorService behaviorService) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -133,20 +143,20 @@ public class BehaviorServiceAdornerCollection extends NetObject implements Itera
         }
     }
 
-    public BehaviorServiceAdornerCollection(Adorner[] value) throws Throwable {
+
+    
+    // Methods section
+    
+    public boolean Contains(Adorner value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(value)));
+            return (boolean)classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-
-    
-    // Methods section
-    
     public int Add(Adorner value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,25 @@ public class BehaviorServiceAdornerCollection extends NetObject implements Itera
             throw translateException(jcne);
         }
     }
+
+    public int IndexOf(Adorner value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BehaviorServiceAdornerCollectionEnumerator GetEnumerator() throws Throwable {
+        return new BehaviorServiceAdornerCollectionEnumerator(classInstance);
+    }
+
+	@SuppressWarnings("unchecked")
+	public java.util.Iterator<Adorner> iterator() {
+		return new BehaviorServiceAdornerCollectionEnumerator(classInstance);
+	}
 
     public void AddRange(Adorner[] value) throws Throwable {
         if (classInstance == null)
@@ -177,11 +206,11 @@ public class BehaviorServiceAdornerCollection extends NetObject implements Itera
         }
     }
 
-    public boolean Contains(Adorner value) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,16 +226,6 @@ public class BehaviorServiceAdornerCollection extends NetObject implements Itera
         }
     }
 
-    public int IndexOf(Adorner value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Insert(int index, Adorner value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -217,30 +236,11 @@ public class BehaviorServiceAdornerCollection extends NetObject implements Itera
         }
     }
 
-    public BehaviorServiceAdornerCollectionEnumerator GetEnumerator() throws Throwable {
-        return new BehaviorServiceAdornerCollectionEnumerator(classInstance);
-    }
-
-	@SuppressWarnings("unchecked")
-	public java.util.Iterator<Adorner> iterator() {
-		return new BehaviorServiceAdornerCollectionEnumerator(classInstance);
-	}
-
     public void Remove(Adorner value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Clear() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

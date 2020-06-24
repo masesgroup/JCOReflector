@@ -107,16 +107,6 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
     
     // Properties section
     
-    public boolean getCanChangeLiveSorting() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanChangeLiveSorting");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCanChangeLiveFiltering() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -132,6 +122,16 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("CanChangeLiveGrouping");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getCanChangeLiveSorting() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("CanChangeLiveSorting");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

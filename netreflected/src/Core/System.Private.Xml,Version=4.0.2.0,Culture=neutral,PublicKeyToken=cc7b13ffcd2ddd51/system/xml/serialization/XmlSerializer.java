@@ -41,19 +41,19 @@ import java.util.ArrayList;
 import system.xml.serialization.XmlAttributeOverrides;
 import system.xml.serialization.XmlRootAttribute;
 import system.xml.serialization.XmlTypeMapping;
-import system.io.TextWriter;
-import system.xml.serialization.XmlSerializerNamespaces;
-import system.io.Stream;
-import system.xml.XmlWriter;
-import system.io.TextReader;
 import system.xml.XmlReader;
+import system.io.Stream;
+import system.io.TextReader;
 import system.xml.serialization.XmlDeserializationEvents;
 import system.xml.serialization.XmlSerializer;
 import system.xml.serialization.XmlMapping;
-import system.xml.serialization.XmlNodeEventHandler;
+import system.xml.serialization.XmlSerializerNamespaces;
+import system.io.TextWriter;
+import system.xml.XmlWriter;
+import system.xml.serialization.UnreferencedObjectEventHandler;
 import system.xml.serialization.XmlAttributeEventHandler;
 import system.xml.serialization.XmlElementEventHandler;
-import system.xml.serialization.UnreferencedObjectEventHandler;
+import system.xml.serialization.XmlNodeEventHandler;
 
 
 /**
@@ -125,21 +125,21 @@ public class XmlSerializer extends NetObject  {
     // Constructors section
     
 
-    public XmlSerializer(NetType type, XmlAttributeOverrides overrides, NetType[] extraTypes, XmlRootAttribute root, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public XmlSerializer(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.RankException, system.diagnostics.tracing.EventSourceException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), overrides == null ? null : overrides.getJCOInstance(), toObjectFromArray(extraTypes), root == null ? null : root.getJCOInstance(), defaultNamespace));
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlSerializer(NetType type, XmlRootAttribute root) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public XmlSerializer(NetType type, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.RankException, system.diagnostics.tracing.EventSourceException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), root == null ? null : root.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), defaultNamespace));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,31 +165,11 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public XmlSerializer(XmlTypeMapping xmlTypeMapping) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public XmlSerializer(NetType type, XmlAttributeOverrides overrides, NetType[] extraTypes, XmlRootAttribute root, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(xmlTypeMapping == null ? null : xmlTypeMapping.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSerializer(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.RankException, system.diagnostics.tracing.EventSourceException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSerializer(NetType type, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.RankException, system.diagnostics.tracing.EventSourceException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.collections.generic.KeyNotFoundException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), defaultNamespace));
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), overrides == null ? null : overrides.getJCOInstance(), toObjectFromArray(extraTypes), root == null ? null : root.getJCOInstance(), defaultNamespace));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,85 +185,35 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
+    public XmlSerializer(NetType type, XmlRootAttribute root) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), root == null ? null : root.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSerializer(XmlTypeMapping xmlTypeMapping) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(xmlTypeMapping == null ? null : xmlTypeMapping.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
     
-    public void Serialize(TextWriter textWriter, NetObject o) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException {
+    public boolean CanDeserialize(XmlReader xmlReader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Serialize", textWriter == null ? null : textWriter.getJCOInstance(), o == null ? null : o.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Serialize(TextWriter textWriter, NetObject o, XmlSerializerNamespaces namespaces) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.NotImplementedException, system.MissingMethodException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Serialize", textWriter == null ? null : textWriter.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Serialize(Stream stream, NetObject o) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Serialize", stream == null ? null : stream.getJCOInstance(), o == null ? null : o.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Serialize(Stream stream, NetObject o, XmlSerializerNamespaces namespaces) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.NotImplementedException, system.MissingMethodException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Serialize", stream == null ? null : stream.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Serialize(XmlWriter xmlWriter, NetObject o) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Serialize", xmlWriter == null ? null : xmlWriter.getJCOInstance(), o == null ? null : o.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Serialize(XmlWriter xmlWriter, NetObject o, XmlSerializerNamespaces namespaces) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.MissingMethodException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Serialize", xmlWriter == null ? null : xmlWriter.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Serialize(XmlWriter xmlWriter, NetObject o, XmlSerializerNamespaces namespaces, java.lang.String encodingStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.NotImplementedException, system.MissingMethodException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Serialize", xmlWriter == null ? null : xmlWriter.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance(), encodingStyle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Serialize(XmlWriter xmlWriter, NetObject o, XmlSerializerNamespaces namespaces, java.lang.String encodingStyle, java.lang.String id) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.NotImplementedException, system.MissingMethodException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Serialize", xmlWriter == null ? null : xmlWriter.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance(), encodingStyle, id);
+            return (boolean)classInstance.Invoke("CanDeserialize", xmlReader == null ? null : xmlReader.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,17 +252,6 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public NetObject Deserialize(XmlReader xmlReader, XmlDeserializationEvents events) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.OverflowException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", xmlReader == null ? null : xmlReader.getJCOInstance(), events == null ? null : events.getJCOInstance());
-            return new NetObject(objDeserialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject Deserialize(XmlReader xmlReader, java.lang.String encodingStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.OverflowException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -355,11 +274,32 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public boolean CanDeserialize(XmlReader xmlReader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
+    public NetObject Deserialize(XmlReader xmlReader, XmlDeserializationEvents events) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.OverflowException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("CanDeserialize", xmlReader == null ? null : xmlReader.getJCOInstance());
+            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", xmlReader == null ? null : xmlReader.getJCOInstance(), events == null ? null : events.getJCOInstance());
+            return new NetObject(objDeserialize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetXmlSerializerAssemblyName(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetXmlSerializerAssemblyName", type == null ? null : type.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetXmlSerializerAssemblyName(NetType type, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetXmlSerializerAssemblyName", type == null ? null : type.getJCOInstance(), defaultNamespace);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,21 +356,81 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public static java.lang.String GetXmlSerializerAssemblyName(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void Serialize(Stream stream, NetObject o) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetXmlSerializerAssemblyName", type == null ? null : type.getJCOInstance());
+            classInstance.Invoke("Serialize", stream == null ? null : stream.getJCOInstance(), o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String GetXmlSerializerAssemblyName(NetType type, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void Serialize(Stream stream, NetObject o, XmlSerializerNamespaces namespaces) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.NotImplementedException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetXmlSerializerAssemblyName", type == null ? null : type.getJCOInstance(), defaultNamespace);
+            classInstance.Invoke("Serialize", stream == null ? null : stream.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Serialize(TextWriter textWriter, NetObject o) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Serialize", textWriter == null ? null : textWriter.getJCOInstance(), o == null ? null : o.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Serialize(TextWriter textWriter, NetObject o, XmlSerializerNamespaces namespaces) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.NotImplementedException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Serialize", textWriter == null ? null : textWriter.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Serialize(XmlWriter xmlWriter, NetObject o) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Serialize", xmlWriter == null ? null : xmlWriter.getJCOInstance(), o == null ? null : o.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Serialize(XmlWriter xmlWriter, NetObject o, XmlSerializerNamespaces namespaces) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Serialize", xmlWriter == null ? null : xmlWriter.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Serialize(XmlWriter xmlWriter, NetObject o, XmlSerializerNamespaces namespaces, java.lang.String encodingStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.NotImplementedException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Serialize", xmlWriter == null ? null : xmlWriter.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance(), encodingStyle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Serialize(XmlWriter xmlWriter, NetObject o, XmlSerializerNamespaces namespaces, java.lang.String encodingStyle, java.lang.String id) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.NotImplementedException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Serialize", xmlWriter == null ? null : xmlWriter.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance(), encodingStyle, id);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -445,21 +445,21 @@ public class XmlSerializer extends NetObject  {
     // Instance Events section
     
 
-    public void addUnknownNode(XmlNodeEventHandler handler) throws Throwable {
+    public void addUnreferencedObject(UnreferencedObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("UnknownNode", handler);
+            classInstance.RegisterEventListener("UnreferencedObject", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeUnknownNode(XmlNodeEventHandler handler) throws Throwable {
+    public void removeUnreferencedObject(UnreferencedObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("UnknownNode", handler);
+            classInstance.UnregisterEventListener("UnreferencedObject", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -505,21 +505,21 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public void addUnreferencedObject(UnreferencedObjectEventHandler handler) throws Throwable {
+    public void addUnknownNode(XmlNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.RegisterEventListener("UnreferencedObject", handler);
+            classInstance.RegisterEventListener("UnknownNode", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void removeUnreferencedObject(UnreferencedObjectEventHandler handler) throws Throwable {
+    public void removeUnknownNode(XmlNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.UnregisterEventListener("UnreferencedObject", handler);
+            classInstance.UnregisterEventListener("UnknownNode", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

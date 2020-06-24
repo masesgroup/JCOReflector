@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.security.rightsmanagement.PublishLicense;
 import system.security.rightsmanagement.SecureEnvironment;
+import system.Guid;
 import system.security.rightsmanagement.ContentUser;
 import system.Uri;
-import system.Guid;
 
 
 /**
@@ -142,6 +142,27 @@ public class UnsignedPublishLicense extends NetObject  {
     
     // Properties section
     
+    public Guid getContentId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ContentId");
+            return new Guid(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setContentId(Guid ContentId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ContentId", ContentId == null ? null : ContentId.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ContentUser getOwner() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -199,27 +220,6 @@ public class UnsignedPublishLicense extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferralInfoUri", ReferralInfoUri == null ? null : ReferralInfoUri.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Guid getContentId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ContentId");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setContentId(Guid ContentId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ContentId", ContentId == null ? null : ContentId.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

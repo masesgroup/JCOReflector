@@ -113,11 +113,12 @@ public class VisualDiagnostics extends NetObject  {
     
     // Methods section
     
-    public static void EnableVisualTreeChanged() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
+    public static XamlSourceInfo GetXamlSourceInfo(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("EnableVisualTreeChanged");
+            JCObject objGetXamlSourceInfo = (JCObject)classType.Invoke("GetXamlSourceInfo", obj == null ? null : obj.getJCOInstance());
+            return new XamlSourceInfo(objGetXamlSourceInfo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -133,12 +134,11 @@ public class VisualDiagnostics extends NetObject  {
         }
     }
 
-    public static XamlSourceInfo GetXamlSourceInfo(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static void EnableVisualTreeChanged() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetXamlSourceInfo = (JCObject)classType.Invoke("GetXamlSourceInfo", obj == null ? null : obj.getJCOInstance());
-            return new XamlSourceInfo(objGetXamlSourceInfo);
+            classType.Invoke("EnableVisualTreeChanged");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

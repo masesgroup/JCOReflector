@@ -109,6 +109,28 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
 
     // Methods section
     
+    public ITextRangeProvider RangeFromChild(IRawElementProviderSimple childElement) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objRangeFromChild = (JCObject)classInstance.Invoke("RangeFromChild", childElement == null ? null : childElement.getJCOInstance());
+            return new ITextRangeProviderImplementation(objRangeFromChild);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ITextRangeProvider RangeFromPoint(Point screenLocation) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objRangeFromPoint = (JCObject)classInstance.Invoke("RangeFromPoint", screenLocation == null ? null : screenLocation.getJCOInstance());
+            return new ITextRangeProviderImplementation(objRangeFromPoint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ITextRangeProvider[] GetSelection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -138,28 +160,6 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
             ITextRangeProvider[] resultingArray = new ITextRangeProvider[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITextRangeProvider RangeFromChild(IRawElementProviderSimple childElement) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRangeFromChild = (JCObject)classInstance.Invoke("RangeFromChild", childElement == null ? null : childElement.getJCOInstance());
-            return new ITextRangeProviderImplementation(objRangeFromChild);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITextRangeProvider RangeFromPoint(Point screenLocation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRangeFromPoint = (JCObject)classInstance.Invoke("RangeFromPoint", screenLocation == null ? null : screenLocation.getJCOInstance());
-            return new ITextRangeProviderImplementation(objRangeFromPoint);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

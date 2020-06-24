@@ -96,11 +96,11 @@ public interface ICollection extends IJCOBridgeReflected {
     
     // Properties section
     
+    public boolean getIsSynchronized() throws Throwable;
+
     public int getCount() throws Throwable;
 
     public NetObject getSyncRoot() throws Throwable;
-
-    public boolean getIsSynchronized() throws Throwable;
 
 
 

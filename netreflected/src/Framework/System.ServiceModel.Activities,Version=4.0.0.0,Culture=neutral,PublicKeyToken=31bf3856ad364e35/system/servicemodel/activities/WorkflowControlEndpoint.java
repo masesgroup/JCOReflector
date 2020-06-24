@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.EndpointAddress;
 import system.servicemodel.description.ContractDescription;
-import system.Uri;
 import system.servicemodel.description.ListenUriMode;
+import system.Uri;
 
 
 /**
@@ -141,22 +141,21 @@ public class WorkflowControlEndpoint extends NetObject  {
     
     // Properties section
     
-    public EndpointAddress getAddress() throws Throwable {
+    public boolean getIsSystemEndpoint() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Address");
-            return new EndpointAddress(val);
+            return (boolean)classInstance.Get("IsSystemEndpoint");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAddress(EndpointAddress Address) throws Throwable {
+    public void setIsSystemEndpoint(boolean IsSystemEndpoint) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Address", Address == null ? null : Address.getJCOInstance());
+            classInstance.Set("IsSystemEndpoint", IsSystemEndpoint);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,21 +203,43 @@ public class WorkflowControlEndpoint extends NetObject  {
         }
     }
 
-    public boolean getIsSystemEndpoint() throws Throwable {
+    public ListenUriMode getListenUriMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsSystemEndpoint");
+            JCObject val = (JCObject)classInstance.Get("ListenUriMode");
+            return new ListenUriMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIsSystemEndpoint(boolean IsSystemEndpoint) throws Throwable {
+    public void setListenUriMode(ListenUriMode ListenUriMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("IsSystemEndpoint", IsSystemEndpoint);
+            classInstance.Set("ListenUriMode", ListenUriMode == null ? null : ListenUriMode.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EndpointAddress getAddress() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Address");
+            return new EndpointAddress(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAddress(EndpointAddress Address) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Address", Address == null ? null : Address.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,27 +281,6 @@ public class WorkflowControlEndpoint extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListenUri", ListenUri == null ? null : ListenUri.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ListenUriMode getListenUriMode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ListenUriMode");
-            return new ListenUriMode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setListenUriMode(ListenUriMode ListenUriMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ListenUriMode", ListenUriMode == null ? null : ListenUriMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

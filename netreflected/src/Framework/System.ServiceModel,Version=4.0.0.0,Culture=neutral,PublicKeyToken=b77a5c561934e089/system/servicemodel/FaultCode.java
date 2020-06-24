@@ -154,6 +154,17 @@ public class FaultCode extends NetObject  {
     
     // Methods section
     
+    public static FaultCode CreateReceiverFaultCode(FaultCode subCode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateReceiverFaultCode = (JCObject)classType.Invoke("CreateReceiverFaultCode", subCode == null ? null : subCode.getJCOInstance());
+            return new FaultCode(objCreateReceiverFaultCode);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static FaultCode CreateReceiverFaultCode(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -187,17 +198,6 @@ public class FaultCode extends NetObject  {
         }
     }
 
-    public static FaultCode CreateReceiverFaultCode(FaultCode subCode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateReceiverFaultCode = (JCObject)classType.Invoke("CreateReceiverFaultCode", subCode == null ? null : subCode.getJCOInstance());
-            return new FaultCode(objCreateReceiverFaultCode);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -207,16 +207,6 @@ public class FaultCode extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsPredefinedFault");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsSenderFault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsSenderFault");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,11 +222,22 @@ public class FaultCode extends NetObject  {
         }
     }
 
-    public java.lang.String getNamespace() throws Throwable {
+    public boolean getIsSenderFault() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            return (boolean)classInstance.Get("IsSenderFault");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FaultCode getSubCode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SubCode");
+            return new FaultCode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,12 +253,11 @@ public class FaultCode extends NetObject  {
         }
     }
 
-    public FaultCode getSubCode() throws Throwable {
+    public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SubCode");
-            return new FaultCode(val);
+            return (java.lang.String)classInstance.Get("Namespace");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

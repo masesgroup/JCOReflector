@@ -108,21 +108,21 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
 
     // Methods section
     
-    public void Initialize(IEventSource eventSource, int nodeCount) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", eventSource == null ? null : eventSource.getJCOInstance(), nodeCount);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Initialize(IEventSource eventSource) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", eventSource == null ? null : eventSource.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Initialize(IEventSource eventSource, int nodeCount) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Initialize", eventSource == null ? null : eventSource.getJCOInstance(), nodeCount);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -142,6 +142,26 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
     
     // Properties section
     
+    public int getNodeId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("NodeId");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setNodeId(int NodeId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("NodeId", NodeId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IEventRedirector getBuildEventRedirector() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -158,26 +178,6 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BuildEventRedirector", BuildEventRedirector == null ? null : BuildEventRedirector.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getNodeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("NodeId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setNodeId(int NodeId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("NodeId", NodeId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.transactions.TransactionScopeOption;
-import system.transactions.TransactionScopeAsyncFlowOption;
-import system.TimeSpan;
-import system.transactions.TransactionOptions;
-import system.transactions.EnterpriseServicesInteropOption;
 import system.transactions.Transaction;
+import system.TimeSpan;
+import system.transactions.EnterpriseServicesInteropOption;
+import system.transactions.TransactionScopeAsyncFlowOption;
+import system.transactions.TransactionScopeOption;
+import system.transactions.TransactionOptions;
 
 
 /**
@@ -125,11 +125,51 @@ public class TransactionScope extends NetObject  {
         }
     }
 
-    public TransactionScope(TransactionScopeOption scopeOption) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.transactions.TransactionException, system.OutOfMemoryException, system.transactions.TransactionPromotionException, system.transactions.TransactionInDoubtException {
+    public TransactionScope(Transaction transactionToUse) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.transactions.TransactionException, system.NullReferenceException, system.OutOfMemoryException, system.transactions.TransactionInDoubtException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(scopeOption == null ? null : scopeOption.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TransactionScope(Transaction transactionToUse, TimeSpan scopeTimeout) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.transactions.TransactionException, system.NullReferenceException, system.OutOfMemoryException, system.transactions.TransactionInDoubtException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance(), scopeTimeout == null ? null : scopeTimeout.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TransactionScope(Transaction transactionToUse, TimeSpan scopeTimeout, EnterpriseServicesInteropOption interopOption) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.NotSupportedException, system.OutOfMemoryException, system.transactions.TransactionPromotionException, system.transactions.TransactionInDoubtException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance(), scopeTimeout == null ? null : scopeTimeout.getJCOInstance(), interopOption == null ? null : interopOption.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TransactionScope(Transaction transactionToUse, TimeSpan scopeTimeout, TransactionScopeAsyncFlowOption asyncFlowOption) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.NotSupportedException, system.OutOfMemoryException, system.transactions.TransactionPromotionException, system.transactions.TransactionInDoubtException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance(), scopeTimeout == null ? null : scopeTimeout.getJCOInstance(), asyncFlowOption == null ? null : asyncFlowOption.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TransactionScope(Transaction transactionToUse, TransactionScopeAsyncFlowOption asyncFlowOption) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.NotSupportedException, system.OutOfMemoryException, system.transactions.TransactionPromotionException, system.transactions.TransactionInDoubtException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance(), asyncFlowOption == null ? null : asyncFlowOption.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,11 +185,11 @@ public class TransactionScope extends NetObject  {
         }
     }
 
-    public TransactionScope(TransactionScopeOption scopeOption, TransactionScopeAsyncFlowOption asyncFlowOption) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.OutOfMemoryException, system.transactions.TransactionPromotionException, system.transactions.TransactionInDoubtException {
+    public TransactionScope(TransactionScopeOption scopeOption) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.transactions.TransactionException, system.OutOfMemoryException, system.transactions.TransactionPromotionException, system.transactions.TransactionInDoubtException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(scopeOption == null ? null : scopeOption.getJCOInstance(), asyncFlowOption == null ? null : asyncFlowOption.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(scopeOption == null ? null : scopeOption.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,16 +225,6 @@ public class TransactionScope extends NetObject  {
         }
     }
 
-    public TransactionScope(TransactionScopeOption scopeOption, TransactionOptions transactionOptions, TransactionScopeAsyncFlowOption asyncFlowOption) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.transactions.TransactionPromotionException, system.transactions.TransactionInDoubtException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(scopeOption == null ? null : scopeOption.getJCOInstance(), transactionOptions == null ? null : transactionOptions.getJCOInstance(), asyncFlowOption == null ? null : asyncFlowOption.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TransactionScope(TransactionScopeOption scopeOption, TransactionOptions transactionOptions, EnterpriseServicesInteropOption interopOption) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.transactions.TransactionPromotionException, system.transactions.TransactionInDoubtException {
         try {
             // add reference to assemblyName.dll file
@@ -205,51 +235,21 @@ public class TransactionScope extends NetObject  {
         }
     }
 
-    public TransactionScope(Transaction transactionToUse) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.transactions.TransactionException, system.NullReferenceException, system.OutOfMemoryException, system.transactions.TransactionInDoubtException {
+    public TransactionScope(TransactionScopeOption scopeOption, TransactionOptions transactionOptions, TransactionScopeAsyncFlowOption asyncFlowOption) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.transactions.TransactionPromotionException, system.transactions.TransactionInDoubtException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(scopeOption == null ? null : scopeOption.getJCOInstance(), transactionOptions == null ? null : transactionOptions.getJCOInstance(), asyncFlowOption == null ? null : asyncFlowOption.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TransactionScope(Transaction transactionToUse, TransactionScopeAsyncFlowOption asyncFlowOption) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.NotSupportedException, system.OutOfMemoryException, system.transactions.TransactionPromotionException, system.transactions.TransactionInDoubtException {
+    public TransactionScope(TransactionScopeOption scopeOption, TransactionScopeAsyncFlowOption asyncFlowOption) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.OutOfMemoryException, system.transactions.TransactionPromotionException, system.transactions.TransactionInDoubtException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance(), asyncFlowOption == null ? null : asyncFlowOption.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TransactionScope(Transaction transactionToUse, TimeSpan scopeTimeout) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.transactions.TransactionException, system.NullReferenceException, system.OutOfMemoryException, system.transactions.TransactionInDoubtException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance(), scopeTimeout == null ? null : scopeTimeout.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TransactionScope(Transaction transactionToUse, TimeSpan scopeTimeout, TransactionScopeAsyncFlowOption asyncFlowOption) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.NotSupportedException, system.OutOfMemoryException, system.transactions.TransactionPromotionException, system.transactions.TransactionInDoubtException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance(), scopeTimeout == null ? null : scopeTimeout.getJCOInstance(), asyncFlowOption == null ? null : asyncFlowOption.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TransactionScope(Transaction transactionToUse, TimeSpan scopeTimeout, EnterpriseServicesInteropOption interopOption) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.NotSupportedException, system.OutOfMemoryException, system.transactions.TransactionPromotionException, system.transactions.TransactionInDoubtException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance(), scopeTimeout == null ? null : scopeTimeout.getJCOInstance(), interopOption == null ? null : interopOption.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(scopeOption == null ? null : scopeOption.getJCOInstance(), asyncFlowOption == null ? null : asyncFlowOption.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,21 +259,21 @@ public class TransactionScope extends NetObject  {
     
     // Methods section
     
-    public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Complete() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complete");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

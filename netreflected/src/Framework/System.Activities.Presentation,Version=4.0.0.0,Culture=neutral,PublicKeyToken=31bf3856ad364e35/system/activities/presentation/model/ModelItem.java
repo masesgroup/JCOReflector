@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.presentation.model.ModelEditingScope;
-import system.componentmodel.AttributeCollection;
-import system.activities.presentation.model.ModelProperty;
 import system.activities.presentation.model.ModelItem;
+import system.activities.presentation.model.ModelProperty;
 import system.activities.presentation.model.ModelPropertyCollection;
+import system.componentmodel.AttributeCollection;
 import system.windows.DependencyObject;
 import system.componentmodel.PropertyChangedEventHandler;
 
@@ -130,22 +130,22 @@ public class ModelItem extends NetObject  {
         }
     }
 
-    public ModelEditingScope BeginEdit(java.lang.String description) throws Throwable {
+    public ModelEditingScope BeginEdit(boolean shouldApplyChangesImmediately) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginEdit = (JCObject)classInstance.Invoke("BeginEdit", description);
+            JCObject objBeginEdit = (JCObject)classInstance.Invoke("BeginEdit", shouldApplyChangesImmediately);
             return new ModelEditingScope(objBeginEdit);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ModelEditingScope BeginEdit(boolean shouldApplyChangesImmediately) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public ModelEditingScope BeginEdit(java.lang.String description) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginEdit = (JCObject)classInstance.Invoke("BeginEdit", shouldApplyChangesImmediately);
+            JCObject objBeginEdit = (JCObject)classInstance.Invoke("BeginEdit", description);
             return new ModelEditingScope(objBeginEdit);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -178,12 +178,23 @@ public class ModelItem extends NetObject  {
     
     // Properties section
     
-    public AttributeCollection getAttributes() throws Throwable {
+    public ModelItem getParent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new AttributeCollection(val);
+            JCObject val = (JCObject)classInstance.Get("Parent");
+            return new ModelItem(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModelItem getRoot() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Root");
+            return new ModelItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,12 +211,34 @@ public class ModelItem extends NetObject  {
         }
     }
 
-    public NetType getItemType() throws Throwable {
+    public ModelProperty getSource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemType");
-            return new NetType(val);
+            JCObject val = (JCObject)classInstance.Get("Source");
+            return new ModelProperty(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModelPropertyCollection getProperties() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Properties");
+            return new ModelPropertyCollection(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AttributeCollection getAttributes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Attributes");
+            return new AttributeCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,45 +264,12 @@ public class ModelItem extends NetObject  {
         }
     }
 
-    public ModelItem getParent() throws Throwable {
+    public NetType getItemType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new ModelItem(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelItem getRoot() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Root");
-            return new ModelItem(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelPropertyCollection getProperties() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
-            return new ModelPropertyCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelProperty getSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Source");
-            return new ModelProperty(val);
+            JCObject val = (JCObject)classInstance.Get("ItemType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

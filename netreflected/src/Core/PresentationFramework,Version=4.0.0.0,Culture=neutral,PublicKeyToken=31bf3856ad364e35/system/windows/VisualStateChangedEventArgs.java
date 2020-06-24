@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.VisualState;
 import system.windows.FrameworkElement;
+import system.windows.VisualState;
 
 
 /**
@@ -118,28 +118,6 @@ public class VisualStateChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public VisualState getOldState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("OldState");
-            return new VisualState(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public VisualState getNewState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NewState");
-            return new VisualState(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FrameworkElement getControl() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -157,6 +135,28 @@ public class VisualStateChangedEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("StateGroupsRoot");
             return new FrameworkElement(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public VisualState getNewState() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NewState");
+            return new VisualState(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public VisualState getOldState() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("OldState");
+            return new VisualState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

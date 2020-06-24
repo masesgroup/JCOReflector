@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.ink.RecognitionConfidence;
 import system.windows.ink.ApplicationGesture;
+import system.windows.ink.RecognitionConfidence;
 
 
 /**
@@ -118,23 +118,23 @@ public class GestureRecognitionResult extends NetObject  {
     
     // Properties section
     
-    public RecognitionConfidence getRecognitionConfidence() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RecognitionConfidence");
-            return new RecognitionConfidence(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ApplicationGesture getApplicationGesture() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ApplicationGesture");
             return new ApplicationGesture(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RecognitionConfidence getRecognitionConfidence() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RecognitionConfidence");
+            return new RecognitionConfidence(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

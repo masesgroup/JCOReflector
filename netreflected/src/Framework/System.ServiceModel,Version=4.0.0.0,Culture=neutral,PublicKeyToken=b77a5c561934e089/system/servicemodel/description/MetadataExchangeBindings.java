@@ -134,23 +134,23 @@ public class MetadataExchangeBindings extends NetObject  {
         }
     }
 
-    public static system.servicemodel.channels.Binding CreateMexTcpBinding() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateMexTcpBinding = (JCObject)classType.Invoke("CreateMexTcpBinding");
-            return new system.servicemodel.channels.Binding(objCreateMexTcpBinding);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static system.servicemodel.channels.Binding CreateMexNamedPipeBinding() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateMexNamedPipeBinding = (JCObject)classType.Invoke("CreateMexNamedPipeBinding");
             return new system.servicemodel.channels.Binding(objCreateMexNamedPipeBinding);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static system.servicemodel.channels.Binding CreateMexTcpBinding() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateMexTcpBinding = (JCObject)classType.Invoke("CreateMexTcpBinding");
+            return new system.servicemodel.channels.Binding(objCreateMexTcpBinding);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

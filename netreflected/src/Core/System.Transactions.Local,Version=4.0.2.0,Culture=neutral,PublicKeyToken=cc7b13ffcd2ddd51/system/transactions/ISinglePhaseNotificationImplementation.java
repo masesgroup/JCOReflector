@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.transactions.SinglePhaseEnlistment;
-import system.transactions.PreparingEnlistment;
 import system.transactions.Enlistment;
+import system.transactions.PreparingEnlistment;
+import system.transactions.SinglePhaseEnlistment;
 
 
 /**
@@ -106,11 +106,21 @@ public class ISinglePhaseNotificationImplementation extends NetObject implements
 
     // Methods section
     
-    public void SinglePhaseCommit(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable {
+    public void Commit(Enlistment enlistment) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SinglePhaseCommit", singlePhaseEnlistment == null ? null : singlePhaseEnlistment.getJCOInstance());
+            classInstance.Invoke("Commit", enlistment == null ? null : enlistment.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InDoubt(Enlistment enlistment) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InDoubt", enlistment == null ? null : enlistment.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -126,16 +136,6 @@ public class ISinglePhaseNotificationImplementation extends NetObject implements
         }
     }
 
-    public void Commit(Enlistment enlistment) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Commit", enlistment == null ? null : enlistment.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Rollback(Enlistment enlistment) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -146,11 +146,11 @@ public class ISinglePhaseNotificationImplementation extends NetObject implements
         }
     }
 
-    public void InDoubt(Enlistment enlistment) throws Throwable {
+    public void SinglePhaseCommit(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InDoubt", enlistment == null ? null : enlistment.getJCOInstance());
+            classInstance.Invoke("SinglePhaseCommit", singlePhaseEnlistment == null ? null : singlePhaseEnlistment.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

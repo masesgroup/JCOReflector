@@ -96,17 +96,17 @@ public interface INestedContainer extends IJCOBridgeReflected {
 
     public void Add(IComponent component, java.lang.String name) throws Throwable;
 
-    public void Remove(IComponent component) throws Throwable;
-
     public void Dispose() throws Throwable;
+
+    public void Remove(IComponent component) throws Throwable;
 
 
     
     // Properties section
     
-    public IComponent getOwner() throws Throwable;
-
     public ComponentCollection getComponents() throws Throwable;
+
+    public IComponent getOwner() throws Throwable;
 
 
 

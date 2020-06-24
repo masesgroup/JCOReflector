@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.DependencyObject;
 import system.IDisposable;
 import system.IDisposableImplementation;
-import system.windows.DependencyObject;
 import system.windows.controls.primitives.GeneratorStatus;
-import system.windows.controls.primitives.ItemsChangedEventHandler;
 import system.EventHandler;
+import system.windows.controls.primitives.ItemsChangedEventHandler;
 
 
 /**
@@ -118,17 +118,6 @@ public class ItemContainerGenerator extends NetObject  {
     
     // Methods section
     
-    public IDisposable GenerateBatches() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidCastException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGenerateBatches = (JCObject)classInstance.Invoke("GenerateBatches");
-            return new IDisposableImplementation(objGenerateBatches);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int IndexFromContainer(DependencyObject container) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -139,12 +128,22 @@ public class ItemContainerGenerator extends NetObject  {
         }
     }
 
-    public DependencyObject ContainerFromIndex(int index) throws Throwable {
+    public int IndexFromContainer(DependencyObject container, boolean returnLocalIndex) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objContainerFromIndex = (JCObject)classInstance.Invoke("ContainerFromIndex", index);
-            return new DependencyObject(objContainerFromIndex);
+            return (int)classInstance.Invoke("IndexFromContainer", container == null ? null : container.getJCOInstance(), returnLocalIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDisposable GenerateBatches() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidCastException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGenerateBatches = (JCObject)classInstance.Invoke("GenerateBatches");
+            return new IDisposableImplementation(objGenerateBatches);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,22 +160,23 @@ public class ItemContainerGenerator extends NetObject  {
         }
     }
 
+    public DependencyObject ContainerFromIndex(int index) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objContainerFromIndex = (JCObject)classInstance.Invoke("ContainerFromIndex", index);
+            return new DependencyObject(objContainerFromIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DependencyObject ContainerFromItem(NetObject item) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objContainerFromItem = (JCObject)classInstance.Invoke("ContainerFromItem", item == null ? null : item.getJCOInstance());
             return new DependencyObject(objContainerFromItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int IndexFromContainer(DependencyObject container, boolean returnLocalIndex) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("IndexFromContainer", container == null ? null : container.getJCOInstance(), returnLocalIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,26 +202,6 @@ public class ItemContainerGenerator extends NetObject  {
     // Instance Events section
     
 
-    public void addItemsChanged(ItemsChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("ItemsChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeItemsChanged(ItemsChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("ItemsChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void addStatusChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -237,6 +217,26 @@ public class ItemContainerGenerator extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StatusChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void addItemsChanged(ItemsChangedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ItemsChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void removeItemsChanged(ItemsChangedEventHandler handler) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ItemsChanged", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

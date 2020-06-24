@@ -124,21 +124,21 @@ public class SoapHeaderCollection extends NetObject  {
     
     // Methods section
     
-    public int Add(SoapHeader header) throws Throwable {
+    public boolean Contains(SoapHeader header) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", header == null ? null : header.getJCOInstance());
+            return (boolean)classInstance.Invoke("Contains", header == null ? null : header.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(int index, SoapHeader header) throws Throwable {
+    public int Add(SoapHeader header) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", index, header == null ? null : header.getJCOInstance());
+            return (int)classInstance.Invoke("Add", header == null ? null : header.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,21 +154,11 @@ public class SoapHeaderCollection extends NetObject  {
         }
     }
 
-    public boolean Contains(SoapHeader header) throws Throwable {
+    public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", header == null ? null : header.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(SoapHeader header) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", header == null ? null : header.getJCOInstance());
+            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,11 +174,21 @@ public class SoapHeaderCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public void Insert(int index, SoapHeader header) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
+            classInstance.Invoke("Insert", index, header == null ? null : header.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Remove(SoapHeader header) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Remove", header == null ? null : header.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

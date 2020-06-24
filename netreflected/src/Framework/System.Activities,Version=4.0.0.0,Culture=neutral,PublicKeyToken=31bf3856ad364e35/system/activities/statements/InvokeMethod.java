@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.OutArgument;
 import system.activities.InArgument;
+import system.activities.OutArgument;
 
 
 /**
@@ -139,42 +139,21 @@ public class InvokeMethod extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getMethodName() throws Throwable {
+    public boolean getRunAsynchronously() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("MethodName");
+            return (boolean)classInstance.Get("RunAsynchronously");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMethodName(java.lang.String MethodName) throws Throwable {
+    public void setRunAsynchronously(boolean RunAsynchronously) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("MethodName", MethodName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public OutArgument getResult() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Result");
-            return new OutArgument(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setResult(OutArgument Result) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Result", Result == null ? null : Result.getJCOInstance());
+            classInstance.Set("RunAsynchronously", RunAsynchronously);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,42 +180,22 @@ public class InvokeMethod extends NetObject  {
         }
     }
 
-    public NetType getTargetType() throws Throwable {
+    public OutArgument getResult() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetType");
-            return new NetType(val);
+            JCObject val = (JCObject)classInstance.Get("Result");
+            return new OutArgument(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTargetType(NetType TargetType) throws Throwable {
+    public void setResult(OutArgument Result) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("TargetType", TargetType == null ? null : TargetType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getRunAsynchronously() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("RunAsynchronously");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRunAsynchronously(boolean RunAsynchronously) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RunAsynchronously", RunAsynchronously);
+            classInstance.Set("Result", Result == null ? null : Result.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,6 +226,47 @@ public class InvokeMethod extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Id");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getMethodName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("MethodName");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMethodName(java.lang.String MethodName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MethodName", MethodName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType getTargetType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TargetType");
+            return new NetType(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTargetType(NetType TargetType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TargetType", TargetType == null ? null : TargetType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

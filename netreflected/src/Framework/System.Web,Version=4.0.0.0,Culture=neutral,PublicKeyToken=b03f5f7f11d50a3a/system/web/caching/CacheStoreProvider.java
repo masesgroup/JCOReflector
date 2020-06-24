@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.caching.CacheInsertOptions;
-import system.web.caching.CacheItemRemovedReason;
-import system.collections.specialized.NameValueCollection;
 import system.web.caching.CacheDependency;
 import system.collections.IDictionaryEnumerator;
 import system.collections.IDictionaryEnumeratorImplementation;
+import system.web.caching.CacheInsertOptions;
+import system.web.caching.CacheItemRemovedReason;
+import system.collections.specialized.NameValueCollection;
 
 
 /**
@@ -118,43 +118,22 @@ public class CacheStoreProvider extends NetObject  {
     
     // Methods section
     
-    public NetObject Get(java.lang.String key) throws Throwable {
+    public long Trim(int percent) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGet = (JCObject)classInstance.Invoke("Get", key);
-            return new NetObject(objGet);
+            return (long)classInstance.Invoke("Trim", percent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Insert(java.lang.String key, NetObject item, CacheInsertOptions options) throws Throwable {
+    public IDictionaryEnumerator GetEnumerator() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Insert", key, item == null ? null : item.getJCOInstance(), options == null ? null : options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject Remove(java.lang.String key, CacheItemRemovedReason reason) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRemove = (JCObject)classInstance.Invoke("Remove", key, reason == null ? null : reason.getJCOInstance());
-            return new NetObject(objRemove);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
+            JCObject objGetEnumerator = (JCObject)classInstance.Invoke("GetEnumerator");
+            return new IDictionaryEnumeratorImplementation(objGetEnumerator);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,6 +150,17 @@ public class CacheStoreProvider extends NetObject  {
         }
     }
 
+    public NetObject Get(java.lang.String key) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGet = (JCObject)classInstance.Invoke("Get", key);
+            return new NetObject(objGet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject Remove(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -182,21 +172,12 @@ public class CacheStoreProvider extends NetObject  {
         }
     }
 
-    public long Trim(int percent) throws Throwable {
+    public NetObject Remove(java.lang.String key, CacheItemRemovedReason reason) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Invoke("Trim", percent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveDependent(java.lang.String key, CacheDependency dependency) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveDependent", key, dependency == null ? null : dependency.getJCOInstance());
+            JCObject objRemove = (JCObject)classInstance.Invoke("Remove", key, reason == null ? null : reason.getJCOInstance());
+            return new NetObject(objRemove);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,12 +193,31 @@ public class CacheStoreProvider extends NetObject  {
         }
     }
 
-    public IDictionaryEnumerator GetEnumerator() throws Throwable {
+    public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetEnumerator = (JCObject)classInstance.Invoke("GetEnumerator");
-            return new IDictionaryEnumeratorImplementation(objGetEnumerator);
+            classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Insert(java.lang.String key, NetObject item, CacheInsertOptions options) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Insert", key, item == null ? null : item.getJCOInstance(), options == null ? null : options.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveDependent(java.lang.String key, CacheDependency dependency) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveDependent", key, dependency == null ? null : dependency.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,21 +247,21 @@ public class CacheStoreProvider extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Description");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -98,19 +98,19 @@ public interface IJSVsaGlobalItem extends IJCOBridgeReflected {
     
     // Properties section
     
-    public void setTypeString(java.lang.String TypeString) throws Throwable;
-
     public boolean getExposeMembers() throws Throwable;
 
     public void setExposeMembers(boolean ExposeMembers) throws Throwable;
+
+    public boolean getIsDirty() throws Throwable;
+
+    public JSVsaItemType getItemType() throws Throwable;
 
     public java.lang.String getName() throws Throwable;
 
     public void setName(java.lang.String Name) throws Throwable;
 
-    public JSVsaItemType getItemType() throws Throwable;
-
-    public boolean getIsDirty() throws Throwable;
+    public void setTypeString(java.lang.String TypeString) throws Throwable;
 
 
 

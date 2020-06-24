@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.policy.Site;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
 import system.security.policy.Evidence;
 import system.security.policy.EvidenceBase;
+import system.security.policy.Site;
 
 
 /**
@@ -139,17 +139,6 @@ public class Site extends NetObject  {
         }
     }
 
-    public static Site CreateFromUrl(java.lang.String url) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateFromUrl = (JCObject)classType.Invoke("CreateFromUrl", url);
-            return new Site(objCreateFromUrl);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IPermission CreateIdentityPermission(Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -167,6 +156,17 @@ public class Site extends NetObject  {
         try {
             JCObject objClone = (JCObject)classInstance.Invoke("Clone");
             return new EvidenceBase(objClone);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Site CreateFromUrl(java.lang.String url) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateFromUrl = (JCObject)classType.Invoke("CreateFromUrl", url);
+            return new Site(objCreateFromUrl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

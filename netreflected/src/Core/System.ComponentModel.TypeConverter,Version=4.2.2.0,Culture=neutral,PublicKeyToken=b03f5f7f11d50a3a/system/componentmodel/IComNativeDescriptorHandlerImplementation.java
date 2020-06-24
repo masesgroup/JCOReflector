@@ -39,12 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.AttributeCollection;
-import system.componentmodel.TypeConverter;
 import system.componentmodel.EventDescriptor;
-import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.EventDescriptorCollection;
 import system.Attribute;
+import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.PropertyDescriptorCollection;
+import system.componentmodel.TypeConverter;
 
 
 /**
@@ -121,65 +121,12 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
-    public java.lang.String GetClassName(NetObject component) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetClassName", component == null ? null : component.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeConverter GetConverter(NetObject component) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetConverter = (JCObject)classInstance.Invoke("GetConverter", component == null ? null : component.getJCOInstance());
-            return new TypeConverter(objGetConverter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EventDescriptor GetDefaultEvent(NetObject component) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetDefaultEvent = (JCObject)classInstance.Invoke("GetDefaultEvent", component == null ? null : component.getJCOInstance());
             return new EventDescriptor(objGetDefaultEvent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyDescriptor GetDefaultProperty(NetObject component) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDefaultProperty = (JCObject)classInstance.Invoke("GetDefaultProperty", component == null ? null : component.getJCOInstance());
-            return new PropertyDescriptor(objGetDefaultProperty);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetEditor(NetObject component, NetType baseEditorType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEditor = (JCObject)classInstance.Invoke("GetEditor", component == null ? null : component.getJCOInstance(), baseEditorType == null ? null : baseEditorType.getJCOInstance());
-            return new NetObject(objGetEditor);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetName(NetObject component) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetName", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,12 +154,65 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
+    public PropertyDescriptor GetDefaultProperty(NetObject component) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDefaultProperty = (JCObject)classInstance.Invoke("GetDefaultProperty", component == null ? null : component.getJCOInstance());
+            return new PropertyDescriptor(objGetDefaultProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PropertyDescriptorCollection GetProperties(NetObject component, Attribute[] attributes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
             return new PropertyDescriptorCollection(objGetProperties);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeConverter GetConverter(NetObject component) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetConverter = (JCObject)classInstance.Invoke("GetConverter", component == null ? null : component.getJCOInstance());
+            return new TypeConverter(objGetConverter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetEditor(NetObject component, NetType baseEditorType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetEditor = (JCObject)classInstance.Invoke("GetEditor", component == null ? null : component.getJCOInstance(), baseEditorType == null ? null : baseEditorType.getJCOInstance());
+            return new NetObject(objGetEditor);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetClassName(NetObject component) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetClassName", component == null ? null : component.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetName(NetObject component) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetName", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

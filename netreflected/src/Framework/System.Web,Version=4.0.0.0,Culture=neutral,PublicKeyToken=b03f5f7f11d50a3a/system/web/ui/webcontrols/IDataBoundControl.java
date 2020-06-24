@@ -95,23 +95,23 @@ public interface IDataBoundControl extends IJCOBridgeReflected {
     
     // Properties section
     
-    public java.lang.String getDataSourceID() throws Throwable;
-
-    public void setDataSourceID(java.lang.String DataSourceID) throws Throwable;
-
-    public IDataSource getDataSourceObject() throws Throwable;
-
     public NetObject getDataSource() throws Throwable;
 
     public void setDataSource(NetObject DataSource) throws Throwable;
+
+    public java.lang.String getDataMember() throws Throwable;
+
+    public void setDataMember(java.lang.String DataMember) throws Throwable;
+
+    public java.lang.String getDataSourceID() throws Throwable;
+
+    public void setDataSourceID(java.lang.String DataSourceID) throws Throwable;
 
     public java.lang.String[] getDataKeyNames() throws Throwable;
 
     public void setDataKeyNames(java.lang.String[] DataKeyNames) throws Throwable;
 
-    public java.lang.String getDataMember() throws Throwable;
-
-    public void setDataMember(java.lang.String DataMember) throws Throwable;
+    public IDataSource getDataSourceObject() throws Throwable;
 
 
 

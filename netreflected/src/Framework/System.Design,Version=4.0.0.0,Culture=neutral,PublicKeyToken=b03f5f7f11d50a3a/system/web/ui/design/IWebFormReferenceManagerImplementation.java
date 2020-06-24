@@ -103,12 +103,11 @@ public class IWebFormReferenceManagerImplementation extends NetObject implements
 
     // Methods section
     
-    public NetType GetObjectType(java.lang.String tagPrefix, java.lang.String typeName) throws Throwable {
+    public java.lang.String GetRegisterDirectives() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetObjectType = (JCObject)classInstance.Invoke("GetObjectType", tagPrefix, typeName);
-            return new NetType(objGetObjectType);
+            return (java.lang.String)classInstance.Invoke("GetRegisterDirectives");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -124,11 +123,12 @@ public class IWebFormReferenceManagerImplementation extends NetObject implements
         }
     }
 
-    public java.lang.String GetRegisterDirectives() throws Throwable {
+    public NetType GetObjectType(java.lang.String tagPrefix, java.lang.String typeName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetRegisterDirectives");
+            JCObject objGetObjectType = (JCObject)classInstance.Invoke("GetObjectType", tagPrefix, typeName);
+            return new NetType(objGetObjectType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

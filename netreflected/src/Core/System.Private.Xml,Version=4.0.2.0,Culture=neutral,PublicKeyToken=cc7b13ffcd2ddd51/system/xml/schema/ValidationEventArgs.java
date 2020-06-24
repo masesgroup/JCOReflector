@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.schema.XmlSeverityType;
 import system.xml.schema.XmlSchemaException;
+import system.xml.schema.XmlSeverityType;
 
 
 /**
@@ -118,12 +118,11 @@ public class ValidationEventArgs extends NetObject  {
     
     // Properties section
     
-    public XmlSeverityType getSeverity() throws Throwable {
+    public java.lang.String getMessage() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Severity");
-            return new XmlSeverityType(val);
+            return (java.lang.String)classInstance.Get("Message");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -140,11 +139,12 @@ public class ValidationEventArgs extends NetObject  {
         }
     }
 
-    public java.lang.String getMessage() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public XmlSeverityType getSeverity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            JCObject val = (JCObject)classInstance.Get("Severity");
+            return new XmlSeverityType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

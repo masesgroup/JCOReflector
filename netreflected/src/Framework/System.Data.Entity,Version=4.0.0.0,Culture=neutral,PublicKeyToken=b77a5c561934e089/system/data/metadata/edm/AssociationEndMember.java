@@ -40,11 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.data.metadata.edm.EntityType;
 import system.data.metadata.edm.BuiltInTypeKind;
+import system.data.metadata.edm.Documentation;
 import system.data.metadata.edm.OperationAction;
 import system.data.metadata.edm.RelationshipMultiplicity;
 import system.data.metadata.edm.StructuralType;
 import system.data.metadata.edm.TypeUsage;
-import system.data.metadata.edm.Documentation;
 
 
 /**
@@ -145,6 +145,27 @@ public class AssociationEndMember extends NetObject  {
         }
     }
 
+    public Documentation getDocumentation() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Documentation");
+            return new Documentation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDocumentation(Documentation Documentation) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Documentation", Documentation == null ? null : Documentation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public OperationAction getDeleteBehavior() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -177,16 +198,6 @@ public class AssociationEndMember extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public StructuralType getDeclaringType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -209,22 +220,11 @@ public class AssociationEndMember extends NetObject  {
         }
     }
 
-    public Documentation getDocumentation() throws Throwable {
+    public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Documentation");
-            return new Documentation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDocumentation(Documentation Documentation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Documentation", Documentation == null ? null : Documentation.getJCOInstance());
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

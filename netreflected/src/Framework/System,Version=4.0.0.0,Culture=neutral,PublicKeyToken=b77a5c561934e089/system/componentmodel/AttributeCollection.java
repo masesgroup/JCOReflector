@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.Attribute;
-import system.Array;
 import system.componentmodel.AttributeCollection;
+import system.Array;
 
 
 /**
@@ -166,22 +166,22 @@ public class AttributeCollection extends NetObject  {
         }
     }
 
-    public void CopyTo(Array array, int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static AttributeCollection FromExisting(AttributeCollection existing, Attribute... newAttributes) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objFromExisting = (JCObject)classType.Invoke("FromExisting", existing == null ? null : existing.getJCOInstance(), toObjectFromArray(newAttributes));
             return new AttributeCollection(objFromExisting);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CopyTo(Array array, int index) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

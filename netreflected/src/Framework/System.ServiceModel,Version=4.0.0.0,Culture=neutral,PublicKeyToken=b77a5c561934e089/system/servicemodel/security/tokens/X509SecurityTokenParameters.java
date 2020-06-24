@@ -162,22 +162,21 @@ public class X509SecurityTokenParameters extends NetObject  {
     
     // Properties section
     
-    public X509KeyIdentifierClauseType getX509ReferenceStyle() throws Throwable {
+    public boolean getRequireDerivedKeys() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("X509ReferenceStyle");
-            return new X509KeyIdentifierClauseType(val);
+            return (boolean)classInstance.Get("RequireDerivedKeys");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setX509ReferenceStyle(X509KeyIdentifierClauseType X509ReferenceStyle) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public void setRequireDerivedKeys(boolean RequireDerivedKeys) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("X509ReferenceStyle", X509ReferenceStyle == null ? null : X509ReferenceStyle.getJCOInstance());
+            classInstance.Set("RequireDerivedKeys", RequireDerivedKeys);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,21 +224,22 @@ public class X509SecurityTokenParameters extends NetObject  {
         }
     }
 
-    public boolean getRequireDerivedKeys() throws Throwable {
+    public X509KeyIdentifierClauseType getX509ReferenceStyle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("RequireDerivedKeys");
+            JCObject val = (JCObject)classInstance.Get("X509ReferenceStyle");
+            return new X509KeyIdentifierClauseType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRequireDerivedKeys(boolean RequireDerivedKeys) throws Throwable {
+    public void setX509ReferenceStyle(X509KeyIdentifierClauseType X509ReferenceStyle) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("RequireDerivedKeys", RequireDerivedKeys);
+            classInstance.Set("X509ReferenceStyle", X509ReferenceStyle == null ? null : X509ReferenceStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

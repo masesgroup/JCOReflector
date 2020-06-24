@@ -129,23 +129,23 @@ public class DataGridCommandEventArgs extends NetObject  {
     
     // Properties section
     
-    public NetObject getCommandSource() throws Throwable {
+    public NetObject getCommandArgument() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandSource");
+            JCObject val = (JCObject)classInstance.Get("CommandArgument");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DataGridItem getItem() throws Throwable {
+    public NetObject getCommandSource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Item");
-            return new DataGridItem(val);
+            JCObject val = (JCObject)classInstance.Get("CommandSource");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,12 +161,12 @@ public class DataGridCommandEventArgs extends NetObject  {
         }
     }
 
-    public NetObject getCommandArgument() throws Throwable {
+    public DataGridItem getItem() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandArgument");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("Item");
+            return new DataGridItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

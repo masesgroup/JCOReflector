@@ -137,22 +137,11 @@ public class DataGridRowClipboardEventArgs extends NetObject  {
     
     // Properties section
     
-    public NetObject getItem() throws Throwable {
+    public boolean getIsColumnHeadersRow() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Item");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getStartColumnDisplayIndex() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("StartColumnDisplayIndex");
+            return (boolean)classInstance.Get("IsColumnHeadersRow");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,11 +157,22 @@ public class DataGridRowClipboardEventArgs extends NetObject  {
         }
     }
 
-    public boolean getIsColumnHeadersRow() throws Throwable {
+    public int getStartColumnDisplayIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsColumnHeadersRow");
+            return (int)classInstance.Get("StartColumnDisplayIndex");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject getItem() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Item");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

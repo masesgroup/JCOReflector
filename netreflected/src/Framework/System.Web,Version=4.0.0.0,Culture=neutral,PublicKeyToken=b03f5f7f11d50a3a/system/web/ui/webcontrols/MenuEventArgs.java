@@ -111,21 +111,21 @@ public class MenuEventArgs extends NetObject  {
     // Constructors section
     
 
-    public MenuEventArgs(MenuItem item, NetObject commandSource, CommandEventArgs originalArgs) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(item == null ? null : item.getJCOInstance(), commandSource == null ? null : commandSource.getJCOInstance(), originalArgs == null ? null : originalArgs.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MenuEventArgs(MenuItem item) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(item == null ? null : item.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MenuEventArgs(MenuItem item, NetObject commandSource, CommandEventArgs originalArgs) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(item == null ? null : item.getJCOInstance(), commandSource == null ? null : commandSource.getJCOInstance(), originalArgs == null ? null : originalArgs.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -139,23 +139,23 @@ public class MenuEventArgs extends NetObject  {
     
     // Properties section
     
-    public NetObject getCommandSource() throws Throwable {
+    public NetObject getCommandArgument() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandSource");
+            JCObject val = (JCObject)classInstance.Get("CommandArgument");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MenuItem getItem() throws Throwable {
+    public NetObject getCommandSource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Item");
-            return new MenuItem(val);
+            JCObject val = (JCObject)classInstance.Get("CommandSource");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,12 +171,12 @@ public class MenuEventArgs extends NetObject  {
         }
     }
 
-    public NetObject getCommandArgument() throws Throwable {
+    public MenuItem getItem() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandArgument");
-            return new NetObject(val);
+            JCObject val = (JCObject)classInstance.Get("Item");
+            return new MenuItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

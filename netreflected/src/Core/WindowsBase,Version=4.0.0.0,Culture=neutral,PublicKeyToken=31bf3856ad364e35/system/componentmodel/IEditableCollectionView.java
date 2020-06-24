@@ -92,39 +92,39 @@ public interface IEditableCollectionView extends IJCOBridgeReflected {
     
     public NetObject AddNew() throws Throwable;
 
-    public void CommitNew() throws Throwable;
+    public void CancelEdit() throws Throwable;
 
     public void CancelNew() throws Throwable;
 
-    public void RemoveAt(int index) throws Throwable;
+    public void CommitEdit() throws Throwable;
 
-    public void Remove(NetObject item) throws Throwable;
+    public void CommitNew() throws Throwable;
 
     public void EditItem(NetObject item) throws Throwable;
 
-    public void CommitEdit() throws Throwable;
+    public void Remove(NetObject item) throws Throwable;
 
-    public void CancelEdit() throws Throwable;
+    public void RemoveAt(int index) throws Throwable;
 
 
     
     // Properties section
     
+    public boolean getCanAddNew() throws Throwable;
+
+    public boolean getCanCancelEdit() throws Throwable;
+
+    public boolean getCanRemove() throws Throwable;
+
+    public boolean getIsAddingNew() throws Throwable;
+
+    public boolean getIsEditingItem() throws Throwable;
+
     public NewItemPlaceholderPosition getNewItemPlaceholderPosition() throws Throwable;
 
     public void setNewItemPlaceholderPosition(NewItemPlaceholderPosition NewItemPlaceholderPosition) throws Throwable;
 
-    public boolean getCanAddNew() throws Throwable;
-
-    public boolean getIsAddingNew() throws Throwable;
-
     public NetObject getCurrentAddItem() throws Throwable;
-
-    public boolean getCanRemove() throws Throwable;
-
-    public boolean getCanCancelEdit() throws Throwable;
-
-    public boolean getIsEditingItem() throws Throwable;
 
     public NetObject getCurrentEditItem() throws Throwable;
 

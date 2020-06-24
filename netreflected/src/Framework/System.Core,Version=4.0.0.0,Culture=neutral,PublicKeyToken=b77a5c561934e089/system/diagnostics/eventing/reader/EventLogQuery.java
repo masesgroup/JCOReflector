@@ -139,22 +139,21 @@ public class EventLogQuery extends NetObject  {
     
     // Properties section
     
-    public EventLogSession getSession() throws Throwable {
+    public boolean getReverseDirection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Session");
-            return new EventLogSession(val);
+            return (boolean)classInstance.Get("ReverseDirection");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSession(EventLogSession Session) throws Throwable {
+    public void setReverseDirection(boolean ReverseDirection) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Session", Session == null ? null : Session.getJCOInstance());
+            classInstance.Set("ReverseDirection", ReverseDirection);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,21 +179,22 @@ public class EventLogQuery extends NetObject  {
         }
     }
 
-    public boolean getReverseDirection() throws Throwable {
+    public EventLogSession getSession() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("ReverseDirection");
+            JCObject val = (JCObject)classInstance.Get("Session");
+            return new EventLogSession(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setReverseDirection(boolean ReverseDirection) throws Throwable {
+    public void setSession(EventLogSession Session) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ReverseDirection", ReverseDirection);
+            classInstance.Set("Session", Session == null ? null : Session.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

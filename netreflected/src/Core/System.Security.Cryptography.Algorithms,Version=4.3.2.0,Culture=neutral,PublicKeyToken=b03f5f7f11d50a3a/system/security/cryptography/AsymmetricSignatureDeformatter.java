@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.cryptography.AsymmetricAlgorithm;
 import system.security.cryptography.HashAlgorithm;
+import system.security.cryptography.AsymmetricAlgorithm;
 
 
 /**
@@ -114,21 +114,11 @@ public class AsymmetricSignatureDeformatter extends NetObject  {
     
     // Methods section
     
-    public void SetKey(AsymmetricAlgorithm key) throws Throwable {
+    public boolean VerifySignature(byte[] rgbHash, byte[] rgbSignature) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetKey", key == null ? null : key.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetHashAlgorithm(java.lang.String strName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetHashAlgorithm", strName);
+            return (boolean)classInstance.Invoke("VerifySignature", rgbHash, rgbSignature);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,11 +134,21 @@ public class AsymmetricSignatureDeformatter extends NetObject  {
         }
     }
 
-    public boolean VerifySignature(byte[] rgbHash, byte[] rgbSignature) throws Throwable {
+    public void SetHashAlgorithm(java.lang.String strName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", rgbHash, rgbSignature);
+            classInstance.Invoke("SetHashAlgorithm", strName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetKey(AsymmetricAlgorithm key) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetKey", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

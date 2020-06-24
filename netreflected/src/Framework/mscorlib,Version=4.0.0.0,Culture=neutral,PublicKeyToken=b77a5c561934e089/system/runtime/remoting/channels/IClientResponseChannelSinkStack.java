@@ -96,9 +96,9 @@ public interface IClientResponseChannelSinkStack extends IJCOBridgeReflected {
     
     public void AsyncProcessResponse(ITransportHeaders headers, Stream stream) throws Throwable;
 
-    public void DispatchReplyMessage(IMessage msg) throws Throwable;
-
     public void DispatchException(NetException e) throws Throwable;
+
+    public void DispatchReplyMessage(IMessage msg) throws Throwable;
 
 
     

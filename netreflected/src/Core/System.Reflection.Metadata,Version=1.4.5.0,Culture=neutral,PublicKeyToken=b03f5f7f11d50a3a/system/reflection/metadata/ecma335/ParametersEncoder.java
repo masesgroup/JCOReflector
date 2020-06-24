@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.BlobBuilder;
-import system.reflection.metadata.ecma335.ParameterTypeEncoder;
 import system.reflection.metadata.ecma335.ParametersEncoder;
+import system.reflection.metadata.ecma335.ParameterTypeEncoder;
 
 
 /**
@@ -126,17 +126,6 @@ public class ParametersEncoder extends NetObject  {
     
     // Methods section
     
-    public ParameterTypeEncoder AddParameter() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAddParameter = (JCObject)classInstance.Invoke("AddParameter");
-            return new ParameterTypeEncoder(objAddParameter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ParametersEncoder StartVarArgs() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,26 +137,37 @@ public class ParametersEncoder extends NetObject  {
         }
     }
 
+    public ParameterTypeEncoder AddParameter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddParameter = (JCObject)classInstance.Invoke("AddParameter");
+            return new ParameterTypeEncoder(objAddParameter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public boolean getHasVarArgs() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("HasVarArgs");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Builder");
             return new BlobBuilder(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getHasVarArgs() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("HasVarArgs");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

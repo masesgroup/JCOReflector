@@ -109,42 +109,21 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
     
     // Properties section
     
-    public Uri getDeploymentPath() throws Throwable {
+    public boolean getErrorFlag() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DeploymentPath");
-            return new Uri(val);
+            return (boolean)classInstance.Get("ErrorFlag");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDeploymentPath(Uri DeploymentPath) throws Throwable {
+    public void setErrorFlag(boolean ErrorFlag) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("DeploymentPath", DeploymentPath == null ? null : DeploymentPath.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getErrorTitle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ErrorTitle");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setErrorTitle(java.lang.String ErrorTitle) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ErrorTitle", ErrorTitle);
+            classInstance.Set("ErrorFlag", ErrorFlag);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,21 +149,21 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
-    public boolean getErrorFlag() throws Throwable {
+    public java.lang.String getErrorTitle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("ErrorFlag");
+            return (java.lang.String)classInstance.Get("ErrorTitle");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setErrorFlag(boolean ErrorFlag) throws Throwable {
+    public void setErrorTitle(java.lang.String ErrorTitle) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("ErrorFlag", ErrorFlag);
+            classInstance.Set("ErrorTitle", ErrorTitle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,6 +184,27 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LogFilePath", LogFilePath);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Uri getDeploymentPath() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("DeploymentPath");
+            return new Uri(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDeploymentPath(Uri DeploymentPath) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DeploymentPath", DeploymentPath == null ? null : DeploymentPath.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,26 +231,6 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
-    public DispatcherOperationCallback getRefreshCallback() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (DispatcherOperationCallback)classInstance.Get("RefreshCallback");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRefreshCallback(DispatcherOperationCallback RefreshCallback) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RefreshCallback", RefreshCallback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DispatcherOperationCallback getGetWinFxCallback() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -266,6 +246,26 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GetWinFxCallback", GetWinFxCallback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DispatcherOperationCallback getRefreshCallback() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (DispatcherOperationCallback)classInstance.Get("RefreshCallback");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRefreshCallback(DispatcherOperationCallback RefreshCallback) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RefreshCallback", RefreshCallback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

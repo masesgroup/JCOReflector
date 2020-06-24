@@ -126,16 +126,6 @@ public class Activity extends NetObject  {
     
     // Methods section
     
-    public void SynchronousCall(IServiceCall serviceCall) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SynchronousCall", serviceCall == null ? null : serviceCall.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AsynchronousCall(IServiceCall serviceCall) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -151,6 +141,16 @@ public class Activity extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BindToCurrentThread");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SynchronousCall(IServiceCall serviceCall) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SynchronousCall", serviceCall == null ? null : serviceCall.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

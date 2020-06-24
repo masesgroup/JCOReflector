@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.description.MetadataSet;
 import system.servicemodel.description.ContractDescription;
 import system.servicemodel.description.ServiceEndpoint;
-import system.servicemodel.description.MetadataSet;
 import system.servicemodel.description.PolicyVersion;
 
 
@@ -116,6 +116,17 @@ public class MetadataExporter extends NetObject  {
     
     // Methods section
     
+    public MetadataSet GetGeneratedMetadata() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetGeneratedMetadata = (JCObject)classInstance.Invoke("GetGeneratedMetadata");
+            return new MetadataSet(objGetGeneratedMetadata);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ExportContract(ContractDescription contract) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -131,17 +142,6 @@ public class MetadataExporter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportEndpoint", endpoint == null ? null : endpoint.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MetadataSet GetGeneratedMetadata() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetGeneratedMetadata = (JCObject)classInstance.Invoke("GetGeneratedMetadata");
-            return new MetadataSet(objGetGeneratedMetadata);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -103,11 +103,12 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
 
     // Methods section
     
-    public void accSelect(int flagsSelect, NetObject varChild) throws Throwable {
+    public NetObject accHitTest(int xLeft, int yTop) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("accSelect", flagsSelect, varChild == null ? null : varChild.getJCOInstance());
+            JCObject objaccHitTest = (JCObject)classInstance.Invoke("accHitTest", xLeft, yTop);
+            return new NetObject(objaccHitTest);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -124,17 +125,6 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
         }
     }
 
-    public NetObject accHitTest(int xLeft, int yTop) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objaccHitTest = (JCObject)classInstance.Invoke("accHitTest", xLeft, yTop);
-            return new NetObject(objaccHitTest);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void accDoDefaultAction(NetObject varChild) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,21 +135,20 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
         }
     }
 
-
-    
-    // Properties section
-    
-    public NetObject getaccParent() throws Throwable {
+    public void accSelect(int flagsSelect, NetObject varChild) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("accParent");
-            return new NetObject(val);
+            classInstance.Invoke("accSelect", flagsSelect, varChild == null ? null : varChild.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public int getaccChildCount() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -175,6 +164,17 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("accFocus");
+            return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject getaccParent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("accParent");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

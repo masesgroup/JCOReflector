@@ -37,11 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.componentmodel.InheritanceAttribute;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.componentmodel.IContainer;
 import system.componentmodel.IContainerImplementation;
-import system.componentmodel.InheritanceAttribute;
 
 
 /**
@@ -94,9 +94,9 @@ public interface IInheritanceService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void AddInheritedComponents(IComponent component, IContainer container) throws Throwable;
-
     public InheritanceAttribute GetInheritanceAttribute(IComponent component) throws Throwable;
+
+    public void AddInheritedComponents(IComponent component, IContainer container) throws Throwable;
 
 
     

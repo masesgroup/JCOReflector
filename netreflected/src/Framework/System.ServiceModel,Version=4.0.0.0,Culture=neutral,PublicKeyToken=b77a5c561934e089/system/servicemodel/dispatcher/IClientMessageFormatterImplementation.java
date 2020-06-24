@@ -105,23 +105,23 @@ public class IClientMessageFormatterImplementation extends NetObject implements 
 
     // Methods section
     
-    public Message SerializeRequest(MessageVersion messageVersion, NetObject[] parameters) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSerializeRequest = (JCObject)classInstance.Invoke("SerializeRequest", messageVersion == null ? null : messageVersion.getJCOInstance(), toObjectFromArray(parameters));
-            return new Message(objSerializeRequest);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject DeserializeReply(Message message, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objDeserializeReply = (JCObject)classInstance.Invoke("DeserializeReply", message == null ? null : message.getJCOInstance(), toObjectFromArray(parameters));
             return new NetObject(objDeserializeReply);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message SerializeRequest(MessageVersion messageVersion, NetObject[] parameters) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSerializeRequest = (JCObject)classInstance.Invoke("SerializeRequest", messageVersion == null ? null : messageVersion.getJCOInstance(), toObjectFromArray(parameters));
+            return new Message(objSerializeRequest);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

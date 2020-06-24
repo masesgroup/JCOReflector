@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.metadata.edm.MetadataWorkspace;
-import system.data.objects.ObjectStateEntry;
-import system.data.EntityState;
 import system.data.EntityKey;
 import system.data.objects.dataclasses.RelationshipManager;
+import system.data.objects.ObjectStateEntry;
+import system.data.EntityState;
 import system.componentmodel.CollectionChangeEventHandler;
 
 
@@ -129,6 +129,17 @@ public class ObjectStateManager extends NetObject  {
     
     // Methods section
     
+    public RelationshipManager GetRelationshipManager(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetRelationshipManager = (JCObject)classInstance.Invoke("GetRelationshipManager", entity == null ? null : entity.getJCOInstance());
+            return new RelationshipManager(objGetRelationshipManager);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ObjectStateEntry ChangeObjectState(NetObject entity, EntityState entityState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.data.MetadataException, system.data.MappingException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -179,17 +190,6 @@ public class ObjectStateManager extends NetObject  {
         try {
             JCObject objGetObjectStateEntry = (JCObject)classInstance.Invoke("GetObjectStateEntry", entity == null ? null : entity.getJCOInstance());
             return new ObjectStateEntry(objGetObjectStateEntry);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public RelationshipManager GetRelationshipManager(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRelationshipManager = (JCObject)classInstance.Invoke("GetRelationshipManager", entity == null ? null : entity.getJCOInstance());
-            return new RelationshipManager(objGetRelationshipManager);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -148,21 +148,21 @@ public class VirtualizationCacheLength extends NetObject  {
     
     // Properties section
     
-    public double getCacheBeforeViewport() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("CacheBeforeViewport");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public double getCacheAfterViewport() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (double)classInstance.Get("CacheAfterViewport");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public double getCacheBeforeViewport() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (double)classInstance.Get("CacheBeforeViewport");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

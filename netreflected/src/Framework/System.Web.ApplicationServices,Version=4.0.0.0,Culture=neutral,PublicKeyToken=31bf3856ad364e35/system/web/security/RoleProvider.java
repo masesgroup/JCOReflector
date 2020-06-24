@@ -113,50 +113,21 @@ public class RoleProvider extends NetObject  {
     
     // Methods section
     
-    public boolean IsUserInRole(java.lang.String username, java.lang.String roleName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsUserInRole", username, roleName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String[] GetRolesForUser(java.lang.String username) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRolesForUser", username);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetRolesForUser = 0; indexGetRolesForUser < resultingArrayList.size(); indexGetRolesForUser++ ) {
-				resultingArray[indexGetRolesForUser] = (java.lang.String)resultingArrayList.get(indexGetRolesForUser);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CreateRole(java.lang.String roleName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CreateRole", roleName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean DeleteRole(java.lang.String roleName, boolean throwOnPopulatedRole) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("DeleteRole", roleName, throwOnPopulatedRole);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsUserInRole(java.lang.String username, java.lang.String roleName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsUserInRole", username, roleName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,38 +143,18 @@ public class RoleProvider extends NetObject  {
         }
     }
 
-    public void AddUsersToRoles(java.lang.String[] usernames, java.lang.String[] roleNames) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddUsersToRoles", usernames, roleNames);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveUsersFromRoles(java.lang.String[] usernames, java.lang.String[] roleNames) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveUsersFromRoles", usernames, roleNames);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String[] GetUsersInRole(java.lang.String roleName) throws Throwable {
+    public java.lang.String[] FindUsersInRole(java.lang.String roleName, java.lang.String usernameToMatch) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetUsersInRole", roleName);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindUsersInRole", roleName, usernameToMatch);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetUsersInRole = 0; indexGetUsersInRole < resultingArrayList.size(); indexGetUsersInRole++ ) {
-				resultingArray[indexGetUsersInRole] = (java.lang.String)resultingArrayList.get(indexGetUsersInRole);
+            for(int indexFindUsersInRole = 0; indexFindUsersInRole < resultingArrayList.size(); indexFindUsersInRole++ ) {
+				resultingArray[indexFindUsersInRole] = (java.lang.String)resultingArrayList.get(indexFindUsersInRole);
             }
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -230,20 +181,59 @@ public class RoleProvider extends NetObject  {
         }
     }
 
-    public java.lang.String[] FindUsersInRole(java.lang.String roleName, java.lang.String usernameToMatch) throws Throwable {
+    public java.lang.String[] GetRolesForUser(java.lang.String username) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindUsersInRole", roleName, usernameToMatch);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRolesForUser", username);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexFindUsersInRole = 0; indexFindUsersInRole < resultingArrayList.size(); indexFindUsersInRole++ ) {
-				resultingArray[indexFindUsersInRole] = (java.lang.String)resultingArrayList.get(indexFindUsersInRole);
+            for(int indexGetRolesForUser = 0; indexGetRolesForUser < resultingArrayList.size(); indexGetRolesForUser++ ) {
+				resultingArray[indexGetRolesForUser] = (java.lang.String)resultingArrayList.get(indexGetRolesForUser);
             }
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String[] GetUsersInRole(java.lang.String roleName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetUsersInRole", roleName);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetUsersInRole = 0; indexGetUsersInRole < resultingArrayList.size(); indexGetUsersInRole++ ) {
+				resultingArray[indexGetUsersInRole] = (java.lang.String)resultingArrayList.get(indexGetUsersInRole);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddUsersToRoles(java.lang.String[] usernames, java.lang.String[] roleNames) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddUsersToRoles", usernames, roleNames);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CreateRole(java.lang.String roleName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CreateRole", roleName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,6 +244,16 @@ public class RoleProvider extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveUsersFromRoles(java.lang.String[] usernames, java.lang.String[] roleNames) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveUsersFromRoles", usernames, roleNames);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,21 +283,21 @@ public class RoleProvider extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Description");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

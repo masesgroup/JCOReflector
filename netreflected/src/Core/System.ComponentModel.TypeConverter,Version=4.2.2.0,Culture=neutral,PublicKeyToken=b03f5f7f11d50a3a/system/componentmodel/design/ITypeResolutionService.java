@@ -37,8 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.reflection.AssemblyName;
 import system.reflection.Assembly;
+import system.reflection.AssemblyName;
 
 
 /**
@@ -91,11 +91,11 @@ public interface ITypeResolutionService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public java.lang.String GetPathOfAssembly(AssemblyName name) throws Throwable;
-
     public Assembly GetAssembly(AssemblyName name) throws Throwable;
 
     public Assembly GetAssembly(AssemblyName name, boolean throwOnError) throws Throwable;
+
+    public java.lang.String GetPathOfAssembly(AssemblyName name) throws Throwable;
 
     public NetType GetType(java.lang.String name) throws Throwable;
 

@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.description.MetadataSet;
-import system.servicemodel.description.ServiceEndpointCollection;
 import system.servicemodel.description.ContractDescription;
 import system.web.services.description.PortType;
 import system.servicemodel.description.ServiceEndpoint;
 import system.web.services.description.Port;
+import system.servicemodel.description.ServiceEndpointCollection;
 import system.web.services.description.Service;
 import system.web.services.description.ServiceDescriptionCollection;
 import system.xml.schema.XmlSchemaSet;
@@ -132,12 +132,12 @@ public class WsdlImporter extends NetObject  {
     
     // Methods section
     
-    public ServiceEndpointCollection ImportAllEndpoints() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public system.servicemodel.channels.Binding ImportBinding(system.web.services.description.Binding wsdlBinding) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objImportAllEndpoints = (JCObject)classInstance.Invoke("ImportAllEndpoints");
-            return new ServiceEndpointCollection(objImportAllEndpoints);
+            JCObject objImportBinding = (JCObject)classInstance.Invoke("ImportBinding", wsdlBinding == null ? null : wsdlBinding.getJCOInstance());
+            return new system.servicemodel.channels.Binding(objImportBinding);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,17 +154,6 @@ public class WsdlImporter extends NetObject  {
         }
     }
 
-    public system.servicemodel.channels.Binding ImportBinding(system.web.services.description.Binding wsdlBinding) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objImportBinding = (JCObject)classInstance.Invoke("ImportBinding", wsdlBinding == null ? null : wsdlBinding.getJCOInstance());
-            return new system.servicemodel.channels.Binding(objImportBinding);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ServiceEndpoint ImportEndpoint(Port wsdlPort) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,12 +165,12 @@ public class WsdlImporter extends NetObject  {
         }
     }
 
-    public ServiceEndpointCollection ImportEndpoints(PortType wsdlPortType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public ServiceEndpointCollection ImportAllEndpoints() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objImportEndpoints = (JCObject)classInstance.Invoke("ImportEndpoints", wsdlPortType == null ? null : wsdlPortType.getJCOInstance());
-            return new ServiceEndpointCollection(objImportEndpoints);
+            JCObject objImportAllEndpoints = (JCObject)classInstance.Invoke("ImportAllEndpoints");
+            return new ServiceEndpointCollection(objImportAllEndpoints);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,6 +181,17 @@ public class WsdlImporter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objImportEndpoints = (JCObject)classInstance.Invoke("ImportEndpoints", wsdlBinding == null ? null : wsdlBinding.getJCOInstance());
+            return new ServiceEndpointCollection(objImportEndpoints);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ServiceEndpointCollection ImportEndpoints(PortType wsdlPortType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objImportEndpoints = (JCObject)classInstance.Invoke("ImportEndpoints", wsdlPortType == null ? null : wsdlPortType.getJCOInstance());
             return new ServiceEndpointCollection(objImportEndpoints);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

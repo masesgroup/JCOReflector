@@ -148,61 +148,42 @@ public class DataSource extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getPersistence() throws Throwable {
+    public boolean getHasConfigurationCondition() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Persistence");
+            return (boolean)classInstance.Get("HasConfigurationCondition");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setPersistence(java.lang.String Persistence) throws Throwable {
+    public void setHasConfigurationCondition(boolean HasConfigurationCondition) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Persistence", Persistence);
+            classInstance.Set("HasConfigurationCondition", HasConfigurationCondition);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getPersistedName() throws Throwable {
+    public DefaultValueSourceLocation getSourceOfDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("PersistedName");
+            JCObject val = (JCObject)classInstance.Get("SourceOfDefaultValue");
+            return new DefaultValueSourceLocation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setPersistedName(java.lang.String PersistedName) throws Throwable {
+    public void setSourceOfDefaultValue(DefaultValueSourceLocation SourceOfDefaultValue) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("PersistedName", PersistedName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getLabel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Label");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLabel(java.lang.String Label) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Label", Label);
+            classInstance.Set("SourceOfDefaultValue", SourceOfDefaultValue == null ? null : SourceOfDefaultValue.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,41 +209,21 @@ public class DataSource extends NetObject  {
         }
     }
 
-    public boolean getHasConfigurationCondition() throws Throwable {
+    public java.lang.String getLabel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("HasConfigurationCondition");
+            return (java.lang.String)classInstance.Get("Label");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHasConfigurationCondition(boolean HasConfigurationCondition) throws Throwable {
+    public void setLabel(java.lang.String Label) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("HasConfigurationCondition", HasConfigurationCondition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getSourceType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("SourceType");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSourceType(java.lang.String SourceType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SourceType", SourceType);
+            classInstance.Set("Label", Label);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,22 +249,61 @@ public class DataSource extends NetObject  {
         }
     }
 
-    public DefaultValueSourceLocation getSourceOfDefaultValue() throws Throwable {
+    public java.lang.String getPersistedName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceOfDefaultValue");
-            return new DefaultValueSourceLocation(val);
+            return (java.lang.String)classInstance.Get("PersistedName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSourceOfDefaultValue(DefaultValueSourceLocation SourceOfDefaultValue) throws Throwable {
+    public void setPersistedName(java.lang.String PersistedName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SourceOfDefaultValue", SourceOfDefaultValue == null ? null : SourceOfDefaultValue.getJCOInstance());
+            classInstance.Set("PersistedName", PersistedName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getPersistence() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Persistence");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPersistence(java.lang.String Persistence) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Persistence", Persistence);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getSourceType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("SourceType");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSourceType(java.lang.String SourceType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SourceType", SourceType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

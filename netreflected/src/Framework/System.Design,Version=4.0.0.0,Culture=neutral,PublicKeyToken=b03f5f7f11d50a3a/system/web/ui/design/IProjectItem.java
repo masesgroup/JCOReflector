@@ -99,9 +99,9 @@ public interface IProjectItem extends IJCOBridgeReflected {
 
     public java.lang.String getName() throws Throwable;
 
-    public IProjectItem getParent() throws Throwable;
-
     public java.lang.String getPhysicalPath() throws Throwable;
+
+    public IProjectItem getParent() throws Throwable;
 
 
 

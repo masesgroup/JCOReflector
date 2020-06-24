@@ -37,16 +37,16 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.diagnostics.symbolstore.SymbolToken;
 import system.diagnostics.symbolstore.ISymbolDocument;
 import system.diagnostics.symbolstore.ISymbolDocumentImplementation;
 import system.Guid;
 import system.diagnostics.symbolstore.ISymbolMethod;
 import system.diagnostics.symbolstore.ISymbolMethodImplementation;
-import system.diagnostics.symbolstore.SymbolToken;
-import system.diagnostics.symbolstore.ISymbolVariable;
-import system.diagnostics.symbolstore.ISymbolVariableImplementation;
 import system.diagnostics.symbolstore.ISymbolNamespace;
 import system.diagnostics.symbolstore.ISymbolNamespaceImplementation;
+import system.diagnostics.symbolstore.ISymbolVariable;
+import system.diagnostics.symbolstore.ISymbolVariableImplementation;
 
 
 /**
@@ -99,6 +99,8 @@ public interface ISymbolReader extends IJCOBridgeReflected {
 
     // Methods section
     
+    public byte[] GetSymAttribute(SymbolToken parent, java.lang.String name) throws Throwable;
+
     public ISymbolDocument GetDocument(java.lang.String url, Guid language, Guid languageVendor, Guid documentType) throws Throwable;
 
     public ISymbolDocument[] GetDocuments() throws Throwable;
@@ -107,15 +109,13 @@ public interface ISymbolReader extends IJCOBridgeReflected {
 
     public ISymbolMethod GetMethod(SymbolToken method, int version) throws Throwable;
 
-    public ISymbolVariable[] GetVariables(SymbolToken parent) throws Throwable;
+    public ISymbolMethod GetMethodFromDocumentPosition(ISymbolDocument document, int line, int column) throws Throwable;
+
+    public ISymbolNamespace[] GetNamespaces() throws Throwable;
 
     public ISymbolVariable[] GetGlobalVariables() throws Throwable;
 
-    public ISymbolMethod GetMethodFromDocumentPosition(ISymbolDocument document, int line, int column) throws Throwable;
-
-    public byte[] GetSymAttribute(SymbolToken parent, java.lang.String name) throws Throwable;
-
-    public ISymbolNamespace[] GetNamespaces() throws Throwable;
+    public ISymbolVariable[] GetVariables(SymbolToken parent) throws Throwable;
 
 
     

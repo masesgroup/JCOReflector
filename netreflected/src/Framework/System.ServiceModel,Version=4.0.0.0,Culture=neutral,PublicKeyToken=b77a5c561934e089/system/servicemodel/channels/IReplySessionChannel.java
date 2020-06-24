@@ -37,15 +37,15 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.servicemodel.channels.RequestContext;
-import system.TimeSpan;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.TimeSpan;
 import system.AsyncCallback;
-import system.servicemodel.EndpointAddress;
-import system.servicemodel.CommunicationState;
+import system.servicemodel.channels.RequestContext;
 import system.servicemodel.channels.IInputSession;
 import system.servicemodel.channels.IInputSessionImplementation;
+import system.servicemodel.CommunicationState;
+import system.servicemodel.EndpointAddress;
 import system.EventHandler;
 
 
@@ -99,55 +99,55 @@ public interface IReplySessionChannel extends IJCOBridgeReflected {
 
     // Methods section
     
-    public RequestContext ReceiveRequest() throws Throwable;
-
-    public RequestContext ReceiveRequest(TimeSpan timeout) throws Throwable;
-
-    public IAsyncResult BeginReceiveRequest(AsyncCallback callback, NetObject state) throws Throwable;
-
-    public IAsyncResult BeginReceiveRequest(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public RequestContext EndReceiveRequest(IAsyncResult result) throws Throwable;
-
-    public IAsyncResult BeginTryReceiveRequest(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public boolean WaitForRequest(TimeSpan timeout) throws Throwable;
-
-    public IAsyncResult BeginWaitForRequest(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
-
     public boolean EndWaitForRequest(IAsyncResult result) throws Throwable;
 
-    public void Abort() throws Throwable;
+    public boolean WaitForRequest(TimeSpan timeout) throws Throwable;
 
     public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public void EndClose(IAsyncResult result) throws Throwable;
-
-    public void Open() throws Throwable;
-
-    public void Open(TimeSpan timeout) throws Throwable;
-
     public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public void EndOpen(IAsyncResult result) throws Throwable;
+    public IAsyncResult BeginReceiveRequest(AsyncCallback callback, NetObject state) throws Throwable;
+
+    public IAsyncResult BeginReceiveRequest(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
+
+    public IAsyncResult BeginTryReceiveRequest(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
+
+    public IAsyncResult BeginWaitForRequest(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
+
+    public RequestContext EndReceiveRequest(IAsyncResult result) throws Throwable;
+
+    public RequestContext ReceiveRequest() throws Throwable;
+
+    public RequestContext ReceiveRequest(TimeSpan timeout) throws Throwable;
+
+    public void Abort() throws Throwable;
 
     public void Close() throws Throwable;
 
     public void Close(TimeSpan timeout) throws Throwable;
 
+    public void EndClose(IAsyncResult result) throws Throwable;
+
+    public void EndOpen(IAsyncResult result) throws Throwable;
+
+    public void Open() throws Throwable;
+
+    public void Open(TimeSpan timeout) throws Throwable;
+
 
     
     // Properties section
     
-    public EndpointAddress getLocalAddress() throws Throwable;
+    public IInputSession getSession() throws Throwable;
 
     public CommunicationState getState() throws Throwable;
 
-    public IInputSession getSession() throws Throwable;
+    public EndpointAddress getLocalAddress() throws Throwable;
 
 
 

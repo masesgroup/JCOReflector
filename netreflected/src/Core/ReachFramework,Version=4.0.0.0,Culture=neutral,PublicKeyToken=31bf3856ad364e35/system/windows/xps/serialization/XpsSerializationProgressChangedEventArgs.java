@@ -128,17 +128,6 @@ public class XpsSerializationProgressChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public XpsWritingProgressChangeLevel getWritingLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("WritingLevel");
-            return new XpsWritingProgressChangeLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getPageNumber() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -165,6 +154,17 @@ public class XpsSerializationProgressChangedEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("UserState");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XpsWritingProgressChangeLevel getWritingLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("WritingLevel");
+            return new XpsWritingProgressChangeLevel(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

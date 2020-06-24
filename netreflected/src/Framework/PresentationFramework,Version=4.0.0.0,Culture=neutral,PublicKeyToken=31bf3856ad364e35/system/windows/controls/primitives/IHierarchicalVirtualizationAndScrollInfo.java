@@ -97,6 +97,14 @@ public interface IHierarchicalVirtualizationAndScrollInfo extends IJCOBridgeRefl
     
     // Properties section
     
+    public boolean getInBackgroundLayout() throws Throwable;
+
+    public void setInBackgroundLayout(boolean InBackgroundLayout) throws Throwable;
+
+    public boolean getMustDisableVirtualization() throws Throwable;
+
+    public void setMustDisableVirtualization(boolean MustDisableVirtualization) throws Throwable;
+
     public HierarchicalVirtualizationConstraints getConstraints() throws Throwable;
 
     public void setConstraints(HierarchicalVirtualizationConstraints Constraints) throws Throwable;
@@ -108,14 +116,6 @@ public interface IHierarchicalVirtualizationAndScrollInfo extends IJCOBridgeRefl
     public void setItemDesiredSizes(HierarchicalVirtualizationItemDesiredSizes ItemDesiredSizes) throws Throwable;
 
     public Panel getItemsHost() throws Throwable;
-
-    public boolean getMustDisableVirtualization() throws Throwable;
-
-    public void setMustDisableVirtualization(boolean MustDisableVirtualization) throws Throwable;
-
-    public boolean getInBackgroundLayout() throws Throwable;
-
-    public void setInBackgroundLayout(boolean InBackgroundLayout) throws Throwable;
 
 
 

@@ -124,23 +124,23 @@ public class NumericBinary extends NetObject  {
     
     // Methods section
     
-    public NetObject EvaluateNumericBinary(NetObject v1, NetObject v2) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.TypeInitializationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEvaluateNumericBinary = (JCObject)classInstance.Invoke("EvaluateNumericBinary", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
-            return new NetObject(objEvaluateNumericBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static NetObject DoOp(NetObject v1, NetObject v2, JSToken operatorTok) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.OverflowException, system.FormatException, system.ArithmeticException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.TypeInitializationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objDoOp = (JCObject)classType.Invoke("DoOp", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance(), operatorTok == null ? null : operatorTok.getJCOInstance());
             return new NetObject(objDoOp);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject EvaluateNumericBinary(NetObject v1, NetObject v2) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.TypeInitializationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEvaluateNumericBinary = (JCObject)classInstance.Invoke("EvaluateNumericBinary", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            return new NetObject(objEvaluateNumericBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

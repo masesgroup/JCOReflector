@@ -125,22 +125,31 @@ public class Duration extends NetObject  {
     
     // Methods section
     
-    public static int Compare(Duration t1, Duration t2) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean Equals(Duration duration) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Invoke("Compare", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
+            return (boolean)classInstance.Invoke("Equals", duration == null ? null : duration.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Duration Plus(Duration duration) throws Throwable {
+    public static boolean Equals(Duration t1, Duration t2) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPlus = (JCObject)classType.Invoke("Plus", duration == null ? null : duration.getJCOInstance());
-            return new Duration(objPlus);
+            return (boolean)classType.Invoke("Equals", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int Compare(Duration t1, Duration t2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("Compare", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,21 +166,12 @@ public class Duration extends NetObject  {
         }
     }
 
-    public boolean Equals(Duration duration) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Equals", duration == null ? null : duration.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean Equals(Duration t1, Duration t2) throws Throwable {
+    public static Duration Plus(Duration duration) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("Equals", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
+            JCObject objPlus = (JCObject)classType.Invoke("Plus", duration == null ? null : duration.getJCOInstance());
+            return new Duration(objPlus);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

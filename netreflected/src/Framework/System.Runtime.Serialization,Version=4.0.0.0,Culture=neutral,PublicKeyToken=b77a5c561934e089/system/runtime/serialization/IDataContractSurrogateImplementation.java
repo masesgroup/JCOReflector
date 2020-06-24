@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.reflection.MemberInfo;
 import system.codedom.CodeTypeDeclaration;
 import system.codedom.CodeCompileUnit;
+import system.reflection.MemberInfo;
 
 
 /**
@@ -106,34 +106,12 @@ public class IDataContractSurrogateImplementation extends NetObject implements I
 
     // Methods section
     
-    public NetType GetDataContractType(NetType type) throws Throwable {
+    public CodeTypeDeclaration ProcessImportedType(CodeTypeDeclaration typeDeclaration, CodeCompileUnit compileUnit) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetDataContractType = (JCObject)classInstance.Invoke("GetDataContractType", type == null ? null : type.getJCOInstance());
-            return new NetType(objGetDataContractType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetObjectToSerialize(NetObject obj, NetType targetType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetObjectToSerialize = (JCObject)classInstance.Invoke("GetObjectToSerialize", obj == null ? null : obj.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
-            return new NetObject(objGetObjectToSerialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetDeserializedObject(NetObject obj, NetType targetType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDeserializedObject = (JCObject)classInstance.Invoke("GetDeserializedObject", obj == null ? null : obj.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
-            return new NetObject(objGetDeserializedObject);
+            JCObject objProcessImportedType = (JCObject)classInstance.Invoke("ProcessImportedType", typeDeclaration == null ? null : typeDeclaration.getJCOInstance(), compileUnit == null ? null : compileUnit.getJCOInstance());
+            return new CodeTypeDeclaration(objProcessImportedType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,23 +139,45 @@ public class IDataContractSurrogateImplementation extends NetObject implements I
         }
     }
 
+    public NetObject GetDeserializedObject(NetObject obj, NetType targetType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDeserializedObject = (JCObject)classInstance.Invoke("GetDeserializedObject", obj == null ? null : obj.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
+            return new NetObject(objGetDeserializedObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetObjectToSerialize(NetObject obj, NetType targetType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetObjectToSerialize = (JCObject)classInstance.Invoke("GetObjectToSerialize", obj == null ? null : obj.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
+            return new NetObject(objGetObjectToSerialize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType GetDataContractType(NetType type) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDataContractType = (JCObject)classInstance.Invoke("GetDataContractType", type == null ? null : type.getJCOInstance());
+            return new NetType(objGetDataContractType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetType GetReferencedTypeOnImport(java.lang.String typeName, java.lang.String typeNamespace, NetObject customData) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetReferencedTypeOnImport = (JCObject)classInstance.Invoke("GetReferencedTypeOnImport", typeName, typeNamespace, customData == null ? null : customData.getJCOInstance());
             return new NetType(objGetReferencedTypeOnImport);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeTypeDeclaration ProcessImportedType(CodeTypeDeclaration typeDeclaration, CodeCompileUnit compileUnit) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objProcessImportedType = (JCObject)classInstance.Invoke("ProcessImportedType", typeDeclaration == null ? null : typeDeclaration.getJCOInstance(), compileUnit == null ? null : compileUnit.getJCOInstance());
-            return new CodeTypeDeclaration(objProcessImportedType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

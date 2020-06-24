@@ -113,26 +113,6 @@ public class DecimalAggregator extends NetObject  {
     
     // Methods section
     
-    public void Create() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Create");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Sum(Decimal value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Sum", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Average(Decimal value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -143,11 +123,11 @@ public class DecimalAggregator extends NetObject  {
         }
     }
 
-    public void Minimum(Decimal value) throws Throwable {
+    public void Create() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Minimum", value == null ? null : value.getJCOInstance());
+            classInstance.Invoke("Create");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,16 +143,35 @@ public class DecimalAggregator extends NetObject  {
         }
     }
 
+    public void Minimum(Decimal value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Minimum", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Sum(Decimal value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Sum", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public Decimal getSumResult() throws Throwable {
+    public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SumResult");
-            return new Decimal(val);
+            return (boolean)classInstance.Get("IsEmpty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,17 +182,6 @@ public class DecimalAggregator extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("AverageResult");
-            return new Decimal(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Decimal getMinimumResult() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MinimumResult");
             return new Decimal(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -211,11 +199,23 @@ public class DecimalAggregator extends NetObject  {
         }
     }
 
-    public boolean getIsEmpty() throws Throwable {
+    public Decimal getMinimumResult() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            JCObject val = (JCObject)classInstance.Get("MinimumResult");
+            return new Decimal(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Decimal getSumResult() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SumResult");
+            return new Decimal(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

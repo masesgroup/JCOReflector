@@ -161,11 +161,11 @@ public class NavigationCommands extends NetObject  {
         }
     }
 
-    public static RoutedUICommand getRefresh() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
+    public static RoutedUICommand getDecreaseZoom() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Refresh");
+            JCObject val = (JCObject)classType.Get("DecreaseZoom");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -183,11 +183,22 @@ public class NavigationCommands extends NetObject  {
         }
     }
 
-    public static RoutedUICommand getSearch() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
+    public static RoutedUICommand getFirstPage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Search");
+            JCObject val = (JCObject)classType.Get("FirstPage");
+            return new RoutedUICommand(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static RoutedUICommand getGoToPage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("GoToPage");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -205,22 +216,22 @@ public class NavigationCommands extends NetObject  {
         }
     }
 
-    public static RoutedUICommand getDecreaseZoom() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
+    public static RoutedUICommand getLastPage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DecreaseZoom");
+            JCObject val = (JCObject)classType.Get("LastPage");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getZoom() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
+    public static RoutedUICommand getNavigateJournal() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Zoom");
+            JCObject val = (JCObject)classType.Get("NavigateJournal");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,44 +260,33 @@ public class NavigationCommands extends NetObject  {
         }
     }
 
-    public static RoutedUICommand getFirstPage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
+    public static RoutedUICommand getRefresh() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("FirstPage");
+            JCObject val = (JCObject)classType.Get("Refresh");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getLastPage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
+    public static RoutedUICommand getSearch() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("LastPage");
+            JCObject val = (JCObject)classType.Get("Search");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getGoToPage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
+    public static RoutedUICommand getZoom() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classType.Get("GoToPage");
-            return new RoutedUICommand(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static RoutedUICommand getNavigateJournal() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("NavigateJournal");
+            JCObject val = (JCObject)classType.Get("Zoom");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

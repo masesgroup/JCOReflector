@@ -91,20 +91,30 @@ public interface IDesignerDebugView extends IJCOBridgeReflected {
 
     // Methods section
     
+    public SourceLocation GetExactLocation(SourceLocation approximateLocation) throws Throwable;
+
     public void DeleteBreakpoint(SourceLocation sourceLocation) throws Throwable;
 
-    public SourceLocation GetExactLocation(SourceLocation approximateLocation) throws Throwable;
+    public void EnsureVisible(SourceLocation sourceLocation) throws Throwable;
 
     public void InsertBreakpoint(SourceLocation sourceLocation, BreakpointTypes breakpointType) throws Throwable;
 
-    public void UpdateBreakpoint(SourceLocation sourceLocation, BreakpointTypes breakpointType) throws Throwable;
+    public void ResetBreakpoints() throws Throwable;
 
-    public void EnsureVisible(SourceLocation sourceLocation) throws Throwable;
+    public void UpdateBreakpoint(SourceLocation sourceLocation, BreakpointTypes breakpointType) throws Throwable;
 
 
     
     // Properties section
     
+    public boolean getHideSourceFileName() throws Throwable;
+
+    public void setHideSourceFileName(boolean HideSourceFileName) throws Throwable;
+
+    public boolean getIsDebugging() throws Throwable;
+
+    public void setIsDebugging(boolean IsDebugging) throws Throwable;
+
     public SourceLocation getCurrentContext() throws Throwable;
 
     public void setCurrentContext(SourceLocation CurrentContext) throws Throwable;
@@ -112,14 +122,6 @@ public interface IDesignerDebugView extends IJCOBridgeReflected {
     public SourceLocation getCurrentLocation() throws Throwable;
 
     public void setCurrentLocation(SourceLocation CurrentLocation) throws Throwable;
-
-    public boolean getIsDebugging() throws Throwable;
-
-    public void setIsDebugging(boolean IsDebugging) throws Throwable;
-
-    public boolean getHideSourceFileName() throws Throwable;
-
-    public void setHideSourceFileName(boolean HideSourceFileName) throws Throwable;
 
     public SourceLocation getSelectedLocation() throws Throwable;
 

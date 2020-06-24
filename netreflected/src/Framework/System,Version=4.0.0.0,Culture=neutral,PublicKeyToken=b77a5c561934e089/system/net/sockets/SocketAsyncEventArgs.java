@@ -38,15 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.sockets.SocketClientAccessPolicyProtocol;
+import system.net.EndPoint;
+import system.net.sockets.IPPacketInformation;
+import system.net.sockets.SendPacketsElement;
 import system.net.sockets.Socket;
 import system.net.sockets.SocketAsyncOperation;
-import system.net.sockets.IPPacketInformation;
-import system.net.EndPoint;
-import system.net.sockets.SendPacketsElement;
-import system.net.sockets.TransmitFileOptions;
+import system.net.sockets.SocketClientAccessPolicyProtocol;
 import system.net.sockets.SocketError;
 import system.net.sockets.SocketFlags;
+import system.net.sockets.TransmitFileOptions;
 
 
 /**
@@ -132,6 +132,16 @@ public class SocketAsyncEventArgs extends NetObject  {
     
     // Methods section
     
+    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SetBuffer(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -152,36 +162,164 @@ public class SocketAsyncEventArgs extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public SocketClientAccessPolicyProtocol getSocketClientAccessPolicyProtocol() throws Throwable {
+    public boolean getDisconnectReuseSocket() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SocketClientAccessPolicyProtocol");
-            return new SocketClientAccessPolicyProtocol(val);
+            return (boolean)classInstance.Get("DisconnectReuseSocket");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSocketClientAccessPolicyProtocol(SocketClientAccessPolicyProtocol SocketClientAccessPolicyProtocol) throws Throwable {
+    public void setDisconnectReuseSocket(boolean DisconnectReuseSocket) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("SocketClientAccessPolicyProtocol", SocketClientAccessPolicyProtocol == null ? null : SocketClientAccessPolicyProtocol.getJCOInstance());
+            classInstance.Set("DisconnectReuseSocket", DisconnectReuseSocket);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] getBuffer() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("Buffer");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+			for(int indexBuffer = 0; indexBuffer < resultingArrayList.size(); indexBuffer++ ) {
+				resultingArray[indexBuffer] = (byte)resultingArrayList.get(indexBuffer);
+			}
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getBytesTransferred() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("BytesTransferred");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Count");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getOffset() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("Offset");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getSendPacketsSendSize() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("SendPacketsSendSize");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSendPacketsSendSize(int SendPacketsSendSize) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SendPacketsSendSize", SendPacketsSendSize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetException getConnectByNameError() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ConnectByNameError");
+            return new NetException(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EndPoint getRemoteEndPoint() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("RemoteEndPoint");
+            return new EndPoint(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRemoteEndPoint(EndPoint RemoteEndPoint) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RemoteEndPoint", RemoteEndPoint == null ? null : RemoteEndPoint.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IPPacketInformation getReceiveMessageFromPacketInfo() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ReceiveMessageFromPacketInfo");
+            return new IPPacketInformation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SendPacketsElement[] getSendPacketsElements() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<SendPacketsElement> resultingArrayList = new ArrayList<SendPacketsElement>();
+            JCObject resultingObjects = (JCObject)classInstance.Get("SendPacketsElements");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new SendPacketsElement(resultingObject));
+            }
+            SendPacketsElement[] resultingArray = new SendPacketsElement[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSendPacketsElements(SendPacketsElement[] SendPacketsElements) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SendPacketsElements", toObjectFromArray(SendPacketsElements));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,75 +357,6 @@ public class SocketAsyncEventArgs extends NetObject  {
         }
     }
 
-    public byte[] getBuffer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Buffer");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-			for(int indexBuffer = 0; indexBuffer < resultingArrayList.size(); indexBuffer++ ) {
-				resultingArray[indexBuffer] = (byte)resultingArrayList.get(indexBuffer);
-			}
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getOffset() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Offset");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getBytesTransferred() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("BytesTransferred");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getDisconnectReuseSocket() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("DisconnectReuseSocket");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDisconnectReuseSocket(boolean DisconnectReuseSocket) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DisconnectReuseSocket", DisconnectReuseSocket);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SocketAsyncOperation getLastOperation() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -299,101 +368,22 @@ public class SocketAsyncEventArgs extends NetObject  {
         }
     }
 
-    public IPPacketInformation getReceiveMessageFromPacketInfo() throws Throwable {
+    public SocketClientAccessPolicyProtocol getSocketClientAccessPolicyProtocol() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ReceiveMessageFromPacketInfo");
-            return new IPPacketInformation(val);
+            JCObject val = (JCObject)classInstance.Get("SocketClientAccessPolicyProtocol");
+            return new SocketClientAccessPolicyProtocol(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public EndPoint getRemoteEndPoint() throws Throwable {
+    public void setSocketClientAccessPolicyProtocol(SocketClientAccessPolicyProtocol SocketClientAccessPolicyProtocol) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoteEndPoint");
-            return new EndPoint(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRemoteEndPoint(EndPoint RemoteEndPoint) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RemoteEndPoint", RemoteEndPoint == null ? null : RemoteEndPoint.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SendPacketsElement[] getSendPacketsElements() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<SendPacketsElement> resultingArrayList = new ArrayList<SendPacketsElement>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SendPacketsElements");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new SendPacketsElement(resultingObject));
-            }
-            SendPacketsElement[] resultingArray = new SendPacketsElement[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSendPacketsElements(SendPacketsElement[] SendPacketsElements) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SendPacketsElements", toObjectFromArray(SendPacketsElements));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TransmitFileOptions getSendPacketsFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SendPacketsFlags");
-            return new TransmitFileOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSendPacketsFlags(TransmitFileOptions SendPacketsFlags) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SendPacketsFlags", SendPacketsFlags == null ? null : SendPacketsFlags.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getSendPacketsSendSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("SendPacketsSendSize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSendPacketsSendSize(int SendPacketsSendSize) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SendPacketsSendSize", SendPacketsSendSize);
+            classInstance.Set("SocketClientAccessPolicyProtocol", SocketClientAccessPolicyProtocol == null ? null : SocketClientAccessPolicyProtocol.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,17 +410,6 @@ public class SocketAsyncEventArgs extends NetObject  {
         }
     }
 
-    public NetException getConnectByNameError() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ConnectByNameError");
-            return new NetException(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SocketFlags getSocketFlags() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -447,6 +426,27 @@ public class SocketAsyncEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SocketFlags", SocketFlags == null ? null : SocketFlags.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TransmitFileOptions getSendPacketsFlags() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("SendPacketsFlags");
+            return new TransmitFileOptions(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSendPacketsFlags(TransmitFileOptions SendPacketsFlags) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SendPacketsFlags", SendPacketsFlags == null ? null : SendPacketsFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

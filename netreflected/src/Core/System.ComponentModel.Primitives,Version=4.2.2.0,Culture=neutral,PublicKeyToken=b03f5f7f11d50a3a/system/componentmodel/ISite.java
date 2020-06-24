@@ -99,11 +99,11 @@ public interface ISite extends IJCOBridgeReflected {
     
     // Properties section
     
+    public boolean getDesignMode() throws Throwable;
+
     public IComponent getComponent() throws Throwable;
 
     public IContainer getContainer() throws Throwable;
-
-    public boolean getDesignMode() throws Throwable;
 
     public java.lang.String getName() throws Throwable;
 

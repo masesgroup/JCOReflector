@@ -128,12 +128,11 @@ public class GetPageNumberCompletedEventArgs extends NetObject  {
     
     // Properties section
     
-    public ContentPosition getContentPosition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.reflection.TargetInvocationException {
+    public boolean getCancelled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentPosition");
-            return new ContentPosition(val);
+            return (boolean)classInstance.Get("Cancelled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -144,16 +143,6 @@ public class GetPageNumberCompletedEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("PageNumber");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCancelled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancelled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,6 +165,17 @@ public class GetPageNumberCompletedEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("UserState");
             return new NetObject(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ContentPosition getContentPosition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("ContentPosition");
+            return new ContentPosition(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

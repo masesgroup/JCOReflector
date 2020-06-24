@@ -37,18 +37,18 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.collections.ICollection;
-import system.collections.ICollectionImplementation;
-import system.componentmodel.IComponent;
-import system.componentmodel.IComponentImplementation;
 import system.componentmodel.design.DesignerTransaction;
 import system.componentmodel.design.IDesigner;
 import system.componentmodel.design.IDesignerImplementation;
+import system.componentmodel.IComponent;
+import system.componentmodel.IComponentImplementation;
 import system.componentmodel.design.ServiceCreatorCallback;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
 import system.componentmodel.IContainer;
 import system.componentmodel.IContainerImplementation;
-import system.EventHandler;
 import system.componentmodel.design.DesignerTransactionCloseEventHandler;
+import system.EventHandler;
 
 
 /**
@@ -101,59 +101,59 @@ public interface IDesignerLoaderHost2 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void EndLoad(java.lang.String baseClassName, boolean successful, ICollection errorCollection) throws Throwable;
+    public DesignerTransaction CreateTransaction() throws Throwable;
 
-    public void Reload() throws Throwable;
+    public DesignerTransaction CreateTransaction(java.lang.String description) throws Throwable;
 
-    public void Activate() throws Throwable;
+    public IDesigner GetDesigner(IComponent component) throws Throwable;
 
     public IComponent CreateComponent(NetType componentClass) throws Throwable;
 
     public IComponent CreateComponent(NetType componentClass, java.lang.String name) throws Throwable;
 
-    public DesignerTransaction CreateTransaction() throws Throwable;
-
-    public DesignerTransaction CreateTransaction(java.lang.String description) throws Throwable;
-
-    public void DestroyComponent(IComponent component) throws Throwable;
-
-    public IDesigner GetDesigner(IComponent component) throws Throwable;
+    public NetObject GetService(NetType serviceType) throws Throwable;
 
     public NetType GetType(java.lang.String typeName) throws Throwable;
 
-    public void AddService(NetType serviceType, NetObject serviceInstance, boolean promote) throws Throwable;
-
-    public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable;
+    public void Activate() throws Throwable;
 
     public void AddService(NetType serviceType, ServiceCreatorCallback callback) throws Throwable;
 
     public void AddService(NetType serviceType, ServiceCreatorCallback callback, boolean promote) throws Throwable;
 
+    public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable;
+
+    public void AddService(NetType serviceType, NetObject serviceInstance, boolean promote) throws Throwable;
+
+    public void DestroyComponent(IComponent component) throws Throwable;
+
+    public void EndLoad(java.lang.String baseClassName, boolean successful, ICollection errorCollection) throws Throwable;
+
+    public void Reload() throws Throwable;
+
     public void RemoveService(NetType serviceType) throws Throwable;
 
     public void RemoveService(NetType serviceType, boolean promote) throws Throwable;
-
-    public NetObject GetService(NetType serviceType) throws Throwable;
 
 
     
     // Properties section
     
-    public boolean getIgnoreErrorsDuringReload() throws Throwable;
-
-    public void setIgnoreErrorsDuringReload(boolean IgnoreErrorsDuringReload) throws Throwable;
-
     public boolean getCanReloadWithErrors() throws Throwable;
 
     public void setCanReloadWithErrors(boolean CanReloadWithErrors) throws Throwable;
 
-    public boolean getLoading() throws Throwable;
+    public boolean getIgnoreErrorsDuringReload() throws Throwable;
+
+    public void setIgnoreErrorsDuringReload(boolean IgnoreErrorsDuringReload) throws Throwable;
 
     public boolean getInTransaction() throws Throwable;
 
-    public IContainer getContainer() throws Throwable;
+    public boolean getLoading() throws Throwable;
 
     public IComponent getRootComponent() throws Throwable;
+
+    public IContainer getContainer() throws Throwable;
 
     public java.lang.String getRootComponentClassName() throws Throwable;
 
@@ -163,6 +163,14 @@ public interface IDesignerLoaderHost2 extends IJCOBridgeReflected {
 
     // Instance Events section
     
+    public void addTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable;
+
+    public void removeTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable;
+
+    public void addTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable;
+
+    public void removeTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable;
+
     public void addActivated(EventHandler handler) throws Throwable;
 
     public void removeActivated(EventHandler handler) throws Throwable;
@@ -174,14 +182,6 @@ public interface IDesignerLoaderHost2 extends IJCOBridgeReflected {
     public void addLoadComplete(EventHandler handler) throws Throwable;
 
     public void removeLoadComplete(EventHandler handler) throws Throwable;
-
-    public void addTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable;
-
-    public void removeTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable;
-
-    public void addTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable;
-
-    public void removeTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable;
 
     public void addTransactionOpened(EventHandler handler) throws Throwable;
 

@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.drawing.Graphics;
 import system.windows.forms.ToolStripItem;
-import system.drawing.Rectangle;
 import system.drawing.Image;
+import system.drawing.Rectangle;
 import system.windows.forms.ToolStrip;
 
 
@@ -114,21 +114,21 @@ public class ToolStripItemImageRenderEventArgs extends NetObject  {
     // Constructors section
     
 
-    public ToolStripItemImageRenderEventArgs(Graphics g, ToolStripItem item, Rectangle imageRectangle) throws Throwable, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OverflowException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(g == null ? null : g.getJCOInstance(), item == null ? null : item.getJCOInstance(), imageRectangle == null ? null : imageRectangle.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ToolStripItemImageRenderEventArgs(Graphics g, ToolStripItem item, Image image, Rectangle imageRectangle) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(g == null ? null : g.getJCOInstance(), item == null ? null : item.getJCOInstance(), image == null ? null : image.getJCOInstance(), imageRectangle == null ? null : imageRectangle.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ToolStripItemImageRenderEventArgs(Graphics g, ToolStripItem item, Rectangle imageRectangle) throws Throwable, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OverflowException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(g == null ? null : g.getJCOInstance(), item == null ? null : item.getJCOInstance(), imageRectangle == null ? null : imageRectangle.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -142,6 +142,17 @@ public class ToolStripItemImageRenderEventArgs extends NetObject  {
     
     // Properties section
     
+    public Graphics getGraphics() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Graphics");
+            return new Graphics(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Image getImage() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,12 +175,12 @@ public class ToolStripItemImageRenderEventArgs extends NetObject  {
         }
     }
 
-    public Graphics getGraphics() throws Throwable {
+    public ToolStrip getToolStrip() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
-            return new Graphics(val);
+            JCObject val = (JCObject)classInstance.Get("ToolStrip");
+            return new ToolStrip(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,17 +192,6 @@ public class ToolStripItemImageRenderEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Item");
             return new ToolStripItem(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ToolStrip getToolStrip() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ToolStrip");
-            return new ToolStrip(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

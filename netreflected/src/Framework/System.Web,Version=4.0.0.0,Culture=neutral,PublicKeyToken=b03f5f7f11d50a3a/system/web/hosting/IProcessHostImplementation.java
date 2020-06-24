@@ -113,16 +113,6 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
         }
     }
 
-    public void Shutdown() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Shutdown");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section

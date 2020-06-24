@@ -153,43 +153,32 @@ public class RowUpdatedEventArgs extends NetObject  {
     
     // Properties section
     
-    public IDbCommand getCommand() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Command");
-            return new IDbCommandImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetException getErrors() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Errors");
-            return new NetException(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setErrors(NetException Errors) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Errors", Errors == null ? null : Errors.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getRecordsAffected() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("RecordsAffected");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getRowCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("RowCount");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataTableMapping getTableMapping() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TableMapping");
+            return new DataTableMapping(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,11 +195,12 @@ public class RowUpdatedEventArgs extends NetObject  {
         }
     }
 
-    public int getRowCount() throws Throwable {
+    public IDbCommand getCommand() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("RowCount");
+            JCObject val = (JCObject)classInstance.Get("Command");
+            return new IDbCommandImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,12 +238,22 @@ public class RowUpdatedEventArgs extends NetObject  {
         }
     }
 
-    public DataTableMapping getTableMapping() throws Throwable {
+    public NetException getErrors() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TableMapping");
-            return new DataTableMapping(val);
+            JCObject val = (JCObject)classInstance.Get("Errors");
+            return new NetException(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setErrors(NetException Errors) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Errors", Errors == null ? null : Errors.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

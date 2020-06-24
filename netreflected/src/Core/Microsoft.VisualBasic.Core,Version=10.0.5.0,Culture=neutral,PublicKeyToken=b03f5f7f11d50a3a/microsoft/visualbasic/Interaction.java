@@ -113,22 +113,12 @@ public class Interaction extends NetObject  {
     
     // Methods section
     
-    public static void Beep() throws Throwable {
+    public static NetObject CallByName(NetObject ObjectRef, java.lang.String ProcName, CallType UseCallType, NetObject... Args) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMemberException, system.InvalidCastException, system.OverflowException, system.MissingMethodException, system.NullReferenceException, system.reflection.AmbiguousMatchException, system.RankException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Beep");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject IIf(boolean Expression, NetObject TruePart, NetObject FalsePart) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objIIf = (JCObject)classType.Invoke("IIf", Expression, TruePart == null ? null : TruePart.getJCOInstance(), FalsePart == null ? null : FalsePart.getJCOInstance());
-            return new NetObject(objIIf);
+            JCObject objCallByName = (JCObject)classType.Invoke("CallByName", ObjectRef == null ? null : ObjectRef.getJCOInstance(), ProcName, UseCallType == null ? null : UseCallType.getJCOInstance(), toObjectFromArray(Args));
+            return new NetObject(objCallByName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -145,12 +135,22 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static NetObject CallByName(NetObject ObjectRef, java.lang.String ProcName, CallType UseCallType, NetObject... Args) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMemberException, system.InvalidCastException, system.OverflowException, system.MissingMethodException, system.NullReferenceException, system.reflection.AmbiguousMatchException, system.RankException {
+    public static NetObject IIf(boolean Expression, NetObject TruePart, NetObject FalsePart) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCallByName = (JCObject)classType.Invoke("CallByName", ObjectRef == null ? null : ObjectRef.getJCOInstance(), ProcName, UseCallType == null ? null : UseCallType.getJCOInstance(), toObjectFromArray(Args));
-            return new NetObject(objCallByName);
+            JCObject objIIf = (JCObject)classType.Invoke("IIf", Expression, TruePart == null ? null : TruePart.getJCOInstance(), FalsePart == null ? null : FalsePart.getJCOInstance());
+            return new NetObject(objIIf);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Beep() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Beep");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

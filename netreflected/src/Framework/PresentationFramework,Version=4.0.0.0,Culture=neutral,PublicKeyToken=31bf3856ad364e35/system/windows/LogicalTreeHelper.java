@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.DependencyObject;
-import system.windows.FrameworkElement;
 import system.windows.FrameworkContentElement;
+import system.windows.FrameworkElement;
 
 
 /**
@@ -115,29 +115,18 @@ public class LogicalTreeHelper extends NetObject  {
     
     // Methods section
     
-    public static DependencyObject FindLogicalNode(DependencyObject logicalTreeNode, java.lang.String elementName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFindLogicalNode = (JCObject)classType.Invoke("FindLogicalNode", logicalTreeNode == null ? null : logicalTreeNode.getJCOInstance(), elementName);
-            return new DependencyObject(objFindLogicalNode);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DependencyObject GetParent(DependencyObject current) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetParent = (JCObject)classType.Invoke("GetParent", current == null ? null : current.getJCOInstance());
-            return new DependencyObject(objGetParent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static IEnumerable GetChildren(DependencyObject current) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetChildren = (JCObject)classType.Invoke("GetChildren", current == null ? null : current.getJCOInstance());
+            return new IEnumerableImplementation(objGetChildren);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable GetChildren(FrameworkContentElement current) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -159,12 +148,23 @@ public class LogicalTreeHelper extends NetObject  {
         }
     }
 
-    public static IEnumerable GetChildren(FrameworkContentElement current) throws Throwable, system.ArgumentNullException {
+    public static DependencyObject FindLogicalNode(DependencyObject logicalTreeNode, java.lang.String elementName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetChildren = (JCObject)classType.Invoke("GetChildren", current == null ? null : current.getJCOInstance());
-            return new IEnumerableImplementation(objGetChildren);
+            JCObject objFindLogicalNode = (JCObject)classType.Invoke("FindLogicalNode", logicalTreeNode == null ? null : logicalTreeNode.getJCOInstance(), elementName);
+            return new DependencyObject(objFindLogicalNode);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DependencyObject GetParent(DependencyObject current) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetParent = (JCObject)classType.Invoke("GetParent", current == null ? null : current.getJCOInstance());
+            return new DependencyObject(objGetParent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

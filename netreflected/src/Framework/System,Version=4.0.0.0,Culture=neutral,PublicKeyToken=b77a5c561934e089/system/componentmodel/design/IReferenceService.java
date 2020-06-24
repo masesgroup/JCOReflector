@@ -95,11 +95,11 @@ public interface IReferenceService extends IJCOBridgeReflected {
 
     public NetObject GetReference(java.lang.String name) throws Throwable;
 
-    public java.lang.String GetName(NetObject reference) throws Throwable;
-
     public NetObject[] GetReferences() throws Throwable;
 
     public NetObject[] GetReferences(NetType baseType) throws Throwable;
+
+    public java.lang.String GetName(NetObject reference) throws Throwable;
 
 
     

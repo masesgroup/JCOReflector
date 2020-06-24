@@ -92,17 +92,17 @@ public interface ISecurityContextSecurityTokenCache extends IJCOBridgeReflected 
 
     // Methods section
     
-    public void AddContext(SecurityContextSecurityToken token) throws Throwable;
-
     public boolean TryAddContext(SecurityContextSecurityToken token) throws Throwable;
+
+    public SecurityContextSecurityToken GetContext(UniqueId contextId, UniqueId generation) throws Throwable;
+
+    public void AddContext(SecurityContextSecurityToken token) throws Throwable;
 
     public void ClearContexts() throws Throwable;
 
-    public void RemoveContext(UniqueId contextId, UniqueId generation) throws Throwable;
-
     public void RemoveAllContexts(UniqueId contextId) throws Throwable;
 
-    public SecurityContextSecurityToken GetContext(UniqueId contextId, UniqueId generation) throws Throwable;
+    public void RemoveContext(UniqueId contextId, UniqueId generation) throws Throwable;
 
     public void UpdateContextCachingTime(SecurityContextSecurityToken context, DateTime expirationTime) throws Throwable;
 

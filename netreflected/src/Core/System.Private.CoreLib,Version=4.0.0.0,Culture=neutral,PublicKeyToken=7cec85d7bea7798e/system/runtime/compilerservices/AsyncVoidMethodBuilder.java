@@ -126,11 +126,11 @@ public class AsyncVoidMethodBuilder extends NetObject  {
         }
     }
 
-    public void SetStateMachine(IAsyncStateMachine stateMachine) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
+    public void SetException(NetException exception) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetStateMachine", stateMachine == null ? null : stateMachine.getJCOInstance());
+            classInstance.Invoke("SetException", exception == null ? null : exception.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -146,11 +146,11 @@ public class AsyncVoidMethodBuilder extends NetObject  {
         }
     }
 
-    public void SetException(NetException exception) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public void SetStateMachine(IAsyncStateMachine stateMachine) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetException", exception == null ? null : exception.getJCOInstance());
+            classInstance.Invoke("SetStateMachine", stateMachine == null ? null : stateMachine.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

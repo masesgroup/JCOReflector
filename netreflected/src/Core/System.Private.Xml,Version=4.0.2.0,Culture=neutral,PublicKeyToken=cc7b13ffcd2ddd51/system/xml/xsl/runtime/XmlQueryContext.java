@@ -114,23 +114,11 @@ public class XmlQueryContext extends NetObject  {
     
     // Methods section
     
-    public XPathNavigator GetDataSource(java.lang.String uriRelative, java.lang.String uriBase) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.UriFormatException, system.OutOfMemoryException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
+    public boolean LateBoundFunctionExists(java.lang.String name, java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetDataSource = (JCObject)classInstance.Invoke("GetDataSource", uriRelative, uriBase);
-            return new XPathNavigator(objGetDataSource);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetParameter(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetParameter = (JCObject)classInstance.Invoke("GetParameter", localName, namespaceUri);
-            return new NetObject(objGetParameter);
+            return (boolean)classInstance.Invoke("LateBoundFunctionExists", name, namespaceUri);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,11 +135,23 @@ public class XmlQueryContext extends NetObject  {
         }
     }
 
-    public boolean LateBoundFunctionExists(java.lang.String name, java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public NetObject GetParameter(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("LateBoundFunctionExists", name, namespaceUri);
+            JCObject objGetParameter = (JCObject)classInstance.Invoke("GetParameter", localName, namespaceUri);
+            return new NetObject(objGetParameter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XPathNavigator GetDataSource(java.lang.String uriRelative, java.lang.String uriBase) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.UriFormatException, system.OutOfMemoryException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDataSource = (JCObject)classInstance.Invoke("GetDataSource", uriRelative, uriBase);
+            return new XPathNavigator(objGetDataSource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,22 +171,22 @@ public class XmlQueryContext extends NetObject  {
     
     // Properties section
     
-    public XmlNameTable getQueryNameTable() throws Throwable {
+    public XmlNameTable getDefaultNameTable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("QueryNameTable");
+            JCObject val = (JCObject)classInstance.Get("DefaultNameTable");
             return new XmlNameTable(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlNameTable getDefaultNameTable() throws Throwable {
+    public XmlNameTable getQueryNameTable() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultNameTable");
+            JCObject val = (JCObject)classInstance.Get("QueryNameTable");
             return new XmlNameTable(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

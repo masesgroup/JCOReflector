@@ -103,31 +103,21 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
 
     // Methods section
     
+    public int RevokeObjectParam(java.lang.String pszKey) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("RevokeObjectParam", pszKey);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void RegisterObjectBound(NetObject punk) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterObjectBound", punk == null ? null : punk.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RevokeObjectBound(NetObject punk) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RevokeObjectBound", punk == null ? null : punk.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ReleaseBoundObjects() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReleaseBoundObjects");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,11 +133,21 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
 
-    public int RevokeObjectParam(java.lang.String pszKey) throws Throwable {
+    public void ReleaseBoundObjects() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("RevokeObjectParam", pszKey);
+            classInstance.Invoke("ReleaseBoundObjects");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RevokeObjectBound(NetObject punk) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RevokeObjectBound", punk == null ? null : punk.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

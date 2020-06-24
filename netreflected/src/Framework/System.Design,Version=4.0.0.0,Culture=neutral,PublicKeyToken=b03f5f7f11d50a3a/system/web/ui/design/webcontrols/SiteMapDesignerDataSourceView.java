@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.design.webcontrols.SiteMapDataSourceDesigner;
-import system.web.ui.design.IDataSourceViewSchema;
-import system.web.ui.design.IDataSourceViewSchemaImplementation;
 import system.web.ui.design.IDataSourceDesigner;
 import system.web.ui.design.IDataSourceDesignerImplementation;
+import system.web.ui.design.IDataSourceViewSchema;
+import system.web.ui.design.IDataSourceViewSchemaImplementation;
 
 
 /**
@@ -132,17 +132,6 @@ public class SiteMapDesignerDataSourceView extends NetObject  {
     
     // Properties section
     
-    public IDataSourceViewSchema getSchema() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Schema");
-            return new IDataSourceViewSchemaImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCanDelete() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -203,6 +192,16 @@ public class SiteMapDesignerDataSourceView extends NetObject  {
         }
     }
 
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IDataSourceDesigner getDataSourceDesigner() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -214,11 +213,12 @@ public class SiteMapDesignerDataSourceView extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
+    public IDataSourceViewSchema getSchema() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            JCObject val = (JCObject)classInstance.Get("Schema");
+            return new IDataSourceViewSchemaImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

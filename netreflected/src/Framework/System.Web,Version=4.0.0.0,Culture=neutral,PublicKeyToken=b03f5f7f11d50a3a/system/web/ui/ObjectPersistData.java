@@ -41,9 +41,9 @@ import java.util.ArrayList;
 import system.web.ui.ControlBuilder;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
-import system.web.ui.PropertyEntry;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.web.ui.PropertyEntry;
 
 
 /**
@@ -129,22 +129,12 @@ public class ObjectPersistData extends NetObject  {
     
     // Methods section
     
-    public void AddToObjectControlBuilderTable(IDictionary table) throws Throwable {
+    public ICollection GetPropertyAllFilters(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddToObjectControlBuilderTable", table == null ? null : table.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyEntry GetFilteredProperty(java.lang.String filter, java.lang.String name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetFilteredProperty = (JCObject)classInstance.Invoke("GetFilteredProperty", filter, name);
-            return new PropertyEntry(objGetFilteredProperty);
+            JCObject objGetPropertyAllFilters = (JCObject)classInstance.Invoke("GetPropertyAllFilters", name);
+            return new ICollectionImplementation(objGetPropertyAllFilters);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,12 +151,22 @@ public class ObjectPersistData extends NetObject  {
         }
     }
 
-    public ICollection GetPropertyAllFilters(java.lang.String name) throws Throwable {
+    public PropertyEntry GetFilteredProperty(java.lang.String filter, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPropertyAllFilters = (JCObject)classInstance.Invoke("GetPropertyAllFilters", name);
-            return new ICollectionImplementation(objGetPropertyAllFilters);
+            JCObject objGetFilteredProperty = (JCObject)classInstance.Invoke("GetFilteredProperty", filter, name);
+            return new PropertyEntry(objGetFilteredProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddToObjectControlBuilderTable(IDictionary table) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddToObjectControlBuilderTable", table == null ? null : table.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,23 +176,32 @@ public class ObjectPersistData extends NetObject  {
     
     // Properties section
     
+    public boolean getIsCollection() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("IsCollection");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getLocalize() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("Localize");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ICollection getAllPropertyEntries() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("AllPropertyEntries");
             return new ICollectionImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary getBuiltObjects() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuiltObjects");
-            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,21 +229,22 @@ public class ObjectPersistData extends NetObject  {
         }
     }
 
-    public boolean getIsCollection() throws Throwable {
+    public IDictionary getBuiltObjects() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsCollection");
+            JCObject val = (JCObject)classInstance.Get("BuiltObjects");
+            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getLocalize() throws Throwable {
+    public java.lang.String getResourceKey() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Localize");
+            return (java.lang.String)classInstance.Get("ResourceKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,16 +256,6 @@ public class ObjectPersistData extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ObjectType");
             return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getResourceKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ResourceKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

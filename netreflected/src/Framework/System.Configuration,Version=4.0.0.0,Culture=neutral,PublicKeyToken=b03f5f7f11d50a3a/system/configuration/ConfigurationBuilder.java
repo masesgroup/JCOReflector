@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.XmlNode;
 import system.configuration.ConfigurationSection;
+import system.xml.XmlNode;
 import system.collections.specialized.NameValueCollection;
 
 
@@ -115,23 +115,23 @@ public class ConfigurationBuilder extends NetObject  {
     
     // Methods section
     
-    public XmlNode ProcessRawXml(XmlNode rawXml) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objProcessRawXml = (JCObject)classInstance.Invoke("ProcessRawXml", rawXml == null ? null : rawXml.getJCOInstance());
-            return new XmlNode(objProcessRawXml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ConfigurationSection ProcessConfigurationSection(ConfigurationSection configSection) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objProcessConfigurationSection = (JCObject)classInstance.Invoke("ProcessConfigurationSection", configSection == null ? null : configSection.getJCOInstance());
             return new ConfigurationSection(objProcessConfigurationSection);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlNode ProcessRawXml(XmlNode rawXml) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objProcessRawXml = (JCObject)classInstance.Invoke("ProcessRawXml", rawXml == null ? null : rawXml.getJCOInstance());
+            return new XmlNode(objProcessRawXml);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,21 +151,21 @@ public class ConfigurationBuilder extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Description");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

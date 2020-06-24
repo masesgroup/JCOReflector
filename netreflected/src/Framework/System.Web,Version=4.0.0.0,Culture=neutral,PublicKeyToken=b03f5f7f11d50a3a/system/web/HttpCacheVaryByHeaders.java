@@ -123,11 +123,20 @@ public class HttpCacheVaryByHeaders extends NetObject  {
     
     // Methods section
     
-    public void VaryByUnspecifiedParameters() throws Throwable {
+    public java.lang.String[] GetHeaders() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("VaryByUnspecifiedParameters");
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetHeaders");
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetHeaders = 0; indexGetHeaders < resultingArrayList.size(); indexGetHeaders++ ) {
+				resultingArray[indexGetHeaders] = (java.lang.String)resultingArrayList.get(indexGetHeaders);
+            }
+            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -143,20 +152,11 @@ public class HttpCacheVaryByHeaders extends NetObject  {
         }
     }
 
-    public java.lang.String[] GetHeaders() throws Throwable, system.ArgumentOutOfRangeException {
+    public void VaryByUnspecifiedParameters() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetHeaders");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetHeaders = 0; indexGetHeaders < resultingArrayList.size(); indexGetHeaders++ ) {
-				resultingArray[indexGetHeaders] = (java.lang.String)resultingArrayList.get(indexGetHeaders);
-            }
-            return resultingArray;
+            classInstance.Invoke("VaryByUnspecifiedParameters");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,26 +181,6 @@ public class HttpCacheVaryByHeaders extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptTypes", AcceptTypes);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getUserLanguage() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("UserLanguage");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setUserLanguage(boolean UserLanguage) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("UserLanguage", UserLanguage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,6 +221,26 @@ public class HttpCacheVaryByHeaders extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserCharSet", UserCharSet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean getUserLanguage() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("UserLanguage");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setUserLanguage(boolean UserLanguage) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("UserLanguage", UserLanguage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

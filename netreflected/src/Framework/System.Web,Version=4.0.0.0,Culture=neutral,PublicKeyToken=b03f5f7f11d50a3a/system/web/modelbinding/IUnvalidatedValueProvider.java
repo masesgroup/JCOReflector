@@ -90,11 +90,11 @@ public interface IUnvalidatedValueProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public ValueProviderResult GetValue(java.lang.String key, boolean skipValidation) throws Throwable;
-
     public boolean ContainsPrefix(java.lang.String prefix) throws Throwable;
 
     public ValueProviderResult GetValue(java.lang.String key) throws Throwable;
+
+    public ValueProviderResult GetValue(java.lang.String key, boolean skipValidation) throws Throwable;
 
 
     

@@ -141,12 +141,21 @@ public class XamlSetMarkupExtensionEventArgs extends NetObject  {
     
     // Properties section
     
-    public MarkupExtension getMarkupExtension() throws Throwable {
+    public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MarkupExtension");
-            return new MarkupExtension(val);
+            return (boolean)classInstance.Get("Handled");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setHandled(boolean Handled) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Handled", Handled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,17 +182,6 @@ public class XamlSetMarkupExtensionEventArgs extends NetObject  {
         }
     }
 
-    public XamlMember getMember() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Member");
-            return new XamlMember(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -195,21 +193,23 @@ public class XamlSetMarkupExtensionEventArgs extends NetObject  {
         }
     }
 
-    public boolean getHandled() throws Throwable {
+    public MarkupExtension getMarkupExtension() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Handled");
+            JCObject val = (JCObject)classInstance.Get("MarkupExtension");
+            return new MarkupExtension(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHandled(boolean Handled) throws Throwable {
+    public XamlMember getMember() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Handled", Handled);
+            JCObject val = (JCObject)classInstance.Get("Member");
+            return new XamlMember(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

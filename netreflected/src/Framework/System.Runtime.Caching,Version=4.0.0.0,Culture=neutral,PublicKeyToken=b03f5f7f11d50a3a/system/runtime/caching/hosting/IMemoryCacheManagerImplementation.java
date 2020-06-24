@@ -104,21 +104,21 @@ public class IMemoryCacheManagerImplementation extends NetObject implements IMem
 
     // Methods section
     
-    public void UpdateCacheSize(long size, MemoryCache cache) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("UpdateCacheSize", size, cache == null ? null : cache.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void ReleaseCache(MemoryCache cache) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseCache", cache == null ? null : cache.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UpdateCacheSize(long size, MemoryCache cache) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateCacheSize", size, cache == null ? null : cache.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

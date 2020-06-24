@@ -143,16 +143,6 @@ public class GenericXmlSecurityToken extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Id");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DateTime getValidFrom() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -175,17 +165,6 @@ public class GenericXmlSecurityToken extends NetObject  {
         }
     }
 
-    public SecurityKeyIdentifierClause getInternalTokenReference() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InternalTokenReference");
-            return new SecurityKeyIdentifierClause(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecurityKeyIdentifierClause getExternalTokenReference() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -197,12 +176,12 @@ public class GenericXmlSecurityToken extends NetObject  {
         }
     }
 
-    public XmlElement getTokenXml() throws Throwable {
+    public SecurityKeyIdentifierClause getInternalTokenReference() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TokenXml");
-            return new XmlElement(val);
+            JCObject val = (JCObject)classInstance.Get("InternalTokenReference");
+            return new SecurityKeyIdentifierClause(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,6 +193,27 @@ public class GenericXmlSecurityToken extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ProofToken");
             return new SecurityToken(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Id");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlElement getTokenXml() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("TokenXml");
+            return new XmlElement(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

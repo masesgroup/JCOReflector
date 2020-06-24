@@ -37,10 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.TimeSpan;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
+import system.TimeSpan;
 
 
 /**
@@ -93,13 +93,13 @@ public interface IDuplexSession extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void CloseOutputSession() throws Throwable;
-
-    public void CloseOutputSession(TimeSpan timeout) throws Throwable;
-
     public IAsyncResult BeginCloseOutputSession(AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginCloseOutputSession(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
+
+    public void CloseOutputSession() throws Throwable;
+
+    public void CloseOutputSession(TimeSpan timeout) throws Throwable;
 
     public void EndCloseOutputSession(IAsyncResult result) throws Throwable;
 

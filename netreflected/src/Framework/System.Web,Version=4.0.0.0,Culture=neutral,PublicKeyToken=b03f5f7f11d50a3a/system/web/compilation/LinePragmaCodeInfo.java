@@ -137,11 +137,21 @@ public class LinePragmaCodeInfo extends NetObject  {
     
     // Properties section
     
-    public int getStartLine() throws Throwable {
+    public boolean getIsCodeNugget() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("StartLine");
+            return (boolean)classInstance.Get("IsCodeNugget");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getCodeLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("CodeLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,21 +177,11 @@ public class LinePragmaCodeInfo extends NetObject  {
         }
     }
 
-    public int getCodeLength() throws Throwable {
+    public int getStartLine() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("CodeLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsCodeNugget() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsCodeNugget");
+            return (int)classInstance.Get("StartLine");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

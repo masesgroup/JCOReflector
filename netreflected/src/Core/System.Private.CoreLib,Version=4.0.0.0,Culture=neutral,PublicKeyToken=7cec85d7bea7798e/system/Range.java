@@ -135,17 +135,6 @@ public class Range extends NetObject  {
         }
     }
 
-    public static Range StartAt(Index start) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objStartAt = (JCObject)classType.Invoke("StartAt", start == null ? null : start.getJCOInstance());
-            return new Range(objStartAt);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Range EndAt(Index end) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -157,26 +146,37 @@ public class Range extends NetObject  {
         }
     }
 
+    public static Range StartAt(Index start) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objStartAt = (JCObject)classType.Invoke("StartAt", start == null ? null : start.getJCOInstance());
+            return new Range(objStartAt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public Index getStart() throws Throwable {
+    public Index getEnd() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Start");
+            JCObject val = (JCObject)classInstance.Get("End");
             return new Index(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Index getEnd() throws Throwable {
+    public Index getStart() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("End");
+            JCObject val = (JCObject)classInstance.Get("Start");
             return new Index(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

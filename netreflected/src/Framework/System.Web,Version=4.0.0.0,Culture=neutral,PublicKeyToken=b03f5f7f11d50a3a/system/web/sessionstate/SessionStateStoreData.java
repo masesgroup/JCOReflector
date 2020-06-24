@@ -130,12 +130,21 @@ public class SessionStateStoreData extends NetObject  {
     
     // Properties section
     
-    public ISessionStateItemCollection getItems() throws Throwable {
+    public int getTimeout() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Items");
-            return new ISessionStateItemCollectionImplementation(val);
+            return (int)classInstance.Get("Timeout");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTimeout(int Timeout) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Timeout", Timeout);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,21 +161,12 @@ public class SessionStateStoreData extends NetObject  {
         }
     }
 
-    public int getTimeout() throws Throwable {
+    public ISessionStateItemCollection getItems() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Timeout");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTimeout(int Timeout) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Timeout", Timeout);
+            JCObject val = (JCObject)classInstance.Get("Items");
+            return new ISessionStateItemCollectionImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

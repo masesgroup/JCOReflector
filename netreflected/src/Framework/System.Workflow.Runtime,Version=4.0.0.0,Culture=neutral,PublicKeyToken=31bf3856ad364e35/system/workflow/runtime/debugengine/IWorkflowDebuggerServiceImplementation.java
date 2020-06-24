@@ -103,6 +103,16 @@ public class IWorkflowDebuggerServiceImplementation extends NetObject implements
 
     // Methods section
     
+    public void NotifyHandlerInvoked() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("NotifyHandlerInvoked");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

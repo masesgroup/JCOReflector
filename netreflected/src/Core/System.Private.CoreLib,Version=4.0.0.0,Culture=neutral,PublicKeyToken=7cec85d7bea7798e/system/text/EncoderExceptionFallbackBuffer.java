@@ -123,16 +123,6 @@ public class EncoderExceptionFallbackBuffer extends NetObject  {
     
     // Methods section
     
-    public boolean Fallback(char charUnknown, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.text.EncoderFallbackException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Fallback", charUnknown, index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Fallback(char charUnknownHigh, char charUnknownLow, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.text.EncoderFallbackException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -143,11 +133,11 @@ public class EncoderExceptionFallbackBuffer extends NetObject  {
         }
     }
 
-    public char GetNextChar() throws Throwable {
+    public boolean Fallback(char charUnknown, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.text.EncoderFallbackException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (char)classInstance.Invoke("GetNextChar");
+            return (boolean)classInstance.Invoke("Fallback", charUnknown, index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,6 +148,16 @@ public class EncoderExceptionFallbackBuffer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("MovePrevious");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public char GetNextChar() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (char)classInstance.Invoke("GetNextChar");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

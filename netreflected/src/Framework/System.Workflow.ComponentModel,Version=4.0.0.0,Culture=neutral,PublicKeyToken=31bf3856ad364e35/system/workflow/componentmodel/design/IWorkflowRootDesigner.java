@@ -40,8 +40,8 @@ import org.mases.jcobridge.netreflection.*;
 import system.componentmodel.design.ViewTechnology;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
-import system.workflow.componentmodel.design.CompositeActivityDesigner;
 import system.componentmodel.design.DesignerVerbCollection;
+import system.workflow.componentmodel.design.CompositeActivityDesigner;
 
 
 /**
@@ -98,27 +98,27 @@ public interface IWorkflowRootDesigner extends IJCOBridgeReflected {
 
     public NetObject GetView(ViewTechnology technology) throws Throwable;
 
+    public void Dispose() throws Throwable;
+
     public void DoDefaultAction() throws Throwable;
 
     public void Initialize(IComponent component) throws Throwable;
-
-    public void Dispose() throws Throwable;
 
 
     
     // Properties section
     
-    public CompositeActivityDesigner getInvokingDesigner() throws Throwable;
-
-    public void setInvokingDesigner(CompositeActivityDesigner InvokingDesigner) throws Throwable;
-
     public boolean getSupportsLayoutPersistence() throws Throwable;
+
+    public DesignerVerbCollection getVerbs() throws Throwable;
 
     public ViewTechnology[] getSupportedTechnologies() throws Throwable;
 
     public IComponent getComponent() throws Throwable;
 
-    public DesignerVerbCollection getVerbs() throws Throwable;
+    public CompositeActivityDesigner getInvokingDesigner() throws Throwable;
+
+    public void setInvokingDesigner(CompositeActivityDesigner InvokingDesigner) throws Throwable;
 
 
 

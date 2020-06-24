@@ -103,21 +103,21 @@ public class IJSVsaPersistSiteImplementation extends NetObject implements IJSVsa
 
     // Methods section
     
-    public void SaveElement(java.lang.String name, java.lang.String source) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SaveElement", name, source);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String LoadElement(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("LoadElement", name);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SaveElement(java.lang.String name, java.lang.String source) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SaveElement", name, source);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

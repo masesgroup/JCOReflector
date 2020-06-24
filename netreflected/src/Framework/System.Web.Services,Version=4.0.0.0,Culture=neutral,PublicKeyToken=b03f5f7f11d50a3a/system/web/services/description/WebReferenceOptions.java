@@ -39,14 +39,14 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.services.description.WebReferenceOptions;
-import system.io.TextReader;
-import system.xml.schema.ValidationEventHandler;
 import system.io.Stream;
+import system.xml.schema.ValidationEventHandler;
+import system.io.TextReader;
 import system.xml.XmlReader;
-import system.xml.serialization.CodeGenerationOptions;
 import system.collections.specialized.StringCollection;
 import system.web.services.description.ServiceDescriptionImportStyle;
 import system.xml.schema.XmlSchema;
+import system.xml.serialization.CodeGenerationOptions;
 
 
 /**
@@ -132,22 +132,22 @@ public class WebReferenceOptions extends NetObject  {
     
     // Methods section
     
-    public static WebReferenceOptions Read(TextReader reader, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.NullReferenceException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.MissingMethodException {
+    public static WebReferenceOptions Read(Stream stream, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.NullReferenceException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.MissingMethodException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", reader == null ? null : reader.getJCOInstance(), validationEventHandler);
+            JCObject objRead = (JCObject)classType.Invoke("Read", stream == null ? null : stream.getJCOInstance(), validationEventHandler);
             return new WebReferenceOptions(objRead);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static WebReferenceOptions Read(Stream stream, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.NullReferenceException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.MissingMethodException {
+    public static WebReferenceOptions Read(TextReader reader, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.NullReferenceException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.MissingMethodException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", stream == null ? null : stream.getJCOInstance(), validationEventHandler);
+            JCObject objRead = (JCObject)classType.Invoke("Read", reader == null ? null : reader.getJCOInstance(), validationEventHandler);
             return new WebReferenceOptions(objRead);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -169,22 +169,21 @@ public class WebReferenceOptions extends NetObject  {
     
     // Properties section
     
-    public CodeGenerationOptions getCodeGenerationOptions() throws Throwable {
+    public boolean getVerbose() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeGenerationOptions");
-            return new CodeGenerationOptions(val);
+            return (boolean)classInstance.Get("Verbose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCodeGenerationOptions(CodeGenerationOptions CodeGenerationOptions) throws Throwable {
+    public void setVerbose(boolean Verbose) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("CodeGenerationOptions", CodeGenerationOptions == null ? null : CodeGenerationOptions.getJCOInstance());
+            classInstance.Set("Verbose", Verbose);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,32 +221,33 @@ public class WebReferenceOptions extends NetObject  {
         }
     }
 
-    public boolean getVerbose() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Verbose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setVerbose(boolean Verbose) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Verbose", Verbose);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static XmlSchema getSchema() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.resources.MissingManifestResourceException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.UriFormatException, system.NullReferenceException, system.xml.XmlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject val = (JCObject)classType.Get("Schema");
             return new XmlSchema(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeGenerationOptions getCodeGenerationOptions() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CodeGenerationOptions");
+            return new CodeGenerationOptions(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCodeGenerationOptions(CodeGenerationOptions CodeGenerationOptions) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CodeGenerationOptions", CodeGenerationOptions == null ? null : CodeGenerationOptions.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

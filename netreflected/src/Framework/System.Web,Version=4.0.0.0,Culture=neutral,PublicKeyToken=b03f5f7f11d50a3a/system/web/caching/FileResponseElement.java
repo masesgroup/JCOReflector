@@ -127,11 +127,11 @@ public class FileResponseElement extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getPath() throws Throwable {
+    public long getLength() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            return (long)classInstance.Get("Length");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -147,11 +147,11 @@ public class FileResponseElement extends NetObject  {
         }
     }
 
-    public long getLength() throws Throwable {
+    public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Get("Length");
+            return (java.lang.String)classInstance.Get("Path");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

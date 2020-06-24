@@ -38,15 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.peerresolvers.RefreshResponseInfo;
+import system.servicemodel.peerresolvers.RefreshInfo;
 import system.servicemodel.peerresolvers.RegisterResponseInfo;
 import system.servicemodel.peerresolvers.RegisterInfo;
 import system.servicemodel.peerresolvers.UpdateInfo;
 import system.servicemodel.peerresolvers.ResolveResponseInfo;
 import system.servicemodel.peerresolvers.ResolveInfo;
-import system.servicemodel.peerresolvers.UnregisterInfo;
-import system.servicemodel.peerresolvers.RefreshResponseInfo;
-import system.servicemodel.peerresolvers.RefreshInfo;
 import system.servicemodel.peerresolvers.ServiceSettingsResponseInfo;
+import system.servicemodel.peerresolvers.UnregisterInfo;
 
 
 /**
@@ -112,6 +112,17 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
 
     // Methods section
     
+    public RefreshResponseInfo Refresh(RefreshInfo refreshInfo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objRefresh = (JCObject)classInstance.Invoke("Refresh", refreshInfo == null ? null : refreshInfo.getJCOInstance());
+            return new RefreshResponseInfo(objRefresh);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public RegisterResponseInfo Register(RegisterInfo registerInfo) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -145,33 +156,22 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
         }
     }
 
-    public void Unregister(UnregisterInfo unregisterInfo) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Unregister", unregisterInfo == null ? null : unregisterInfo.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public RefreshResponseInfo Refresh(RefreshInfo refreshInfo) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRefresh = (JCObject)classInstance.Invoke("Refresh", refreshInfo == null ? null : refreshInfo.getJCOInstance());
-            return new RefreshResponseInfo(objRefresh);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ServiceSettingsResponseInfo GetServiceSettings() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetServiceSettings = (JCObject)classInstance.Invoke("GetServiceSettings");
             return new ServiceSettingsResponseInfo(objGetServiceSettings);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Unregister(UnregisterInfo unregisterInfo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Unregister", unregisterInfo == null ? null : unregisterInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -37,11 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.Guid;
-import system.activities.WorkflowIdentity;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.Guid;
 import system.AsyncCallback;
+import system.activities.WorkflowIdentity;
 
 
 /**
@@ -94,83 +94,83 @@ public interface IWorkflowUpdateableInstanceManagement extends IJCOBridgeReflect
 
     // Methods section
     
-    public void Update(Guid instanceId, WorkflowIdentity updatedDefinitionIdentity) throws Throwable;
-
-    public IAsyncResult BeginUpdate(Guid instanceId, WorkflowIdentity updatedDefinitionIdentity, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public void EndUpdate(IAsyncResult result) throws Throwable;
-
-    public void TransactedUpdate(Guid instanceId, WorkflowIdentity updatedDefinitionIdentity) throws Throwable;
-
-    public IAsyncResult BeginTransactedUpdate(Guid instanceId, WorkflowIdentity updatedDefinitionIdentity, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public void EndTransactedUpdate(IAsyncResult result) throws Throwable;
-
-    public void Abandon(Guid instanceId, java.lang.String reason) throws Throwable;
-
     public IAsyncResult BeginAbandon(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public void EndAbandon(IAsyncResult result) throws Throwable;
-
-    public void Cancel(Guid instanceId) throws Throwable;
 
     public IAsyncResult BeginCancel(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public void EndCancel(IAsyncResult result) throws Throwable;
-
-    public void Run(Guid instanceId) throws Throwable;
-
     public IAsyncResult BeginRun(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public void EndRun(IAsyncResult result) throws Throwable;
-
-    public void Suspend(Guid instanceId, java.lang.String reason) throws Throwable;
 
     public IAsyncResult BeginSuspend(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public void EndSuspend(IAsyncResult result) throws Throwable;
-
-    public void Terminate(Guid instanceId, java.lang.String reason) throws Throwable;
-
     public IAsyncResult BeginTerminate(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public void EndTerminate(IAsyncResult result) throws Throwable;
-
-    public void Unsuspend(Guid instanceId) throws Throwable;
-
-    public IAsyncResult BeginUnsuspend(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public void EndUnsuspend(IAsyncResult result) throws Throwable;
-
-    public void TransactedCancel(Guid instanceId) throws Throwable;
 
     public IAsyncResult BeginTransactedCancel(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public void EndTransactedCancel(IAsyncResult result) throws Throwable;
-
-    public void TransactedRun(Guid instanceId) throws Throwable;
-
     public IAsyncResult BeginTransactedRun(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public void EndTransactedRun(IAsyncResult result) throws Throwable;
-
-    public void TransactedSuspend(Guid instanceId, java.lang.String reason) throws Throwable;
 
     public IAsyncResult BeginTransactedSuspend(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public void EndTransactedSuspend(IAsyncResult result) throws Throwable;
-
-    public void TransactedTerminate(Guid instanceId, java.lang.String reason) throws Throwable;
-
     public IAsyncResult BeginTransactedTerminate(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable;
-
-    public void EndTransactedTerminate(IAsyncResult result) throws Throwable;
-
-    public void TransactedUnsuspend(Guid instanceId) throws Throwable;
 
     public IAsyncResult BeginTransactedUnsuspend(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable;
 
+    public IAsyncResult BeginTransactedUpdate(Guid instanceId, WorkflowIdentity updatedDefinitionIdentity, AsyncCallback callback, NetObject state) throws Throwable;
+
+    public IAsyncResult BeginUnsuspend(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable;
+
+    public IAsyncResult BeginUpdate(Guid instanceId, WorkflowIdentity updatedDefinitionIdentity, AsyncCallback callback, NetObject state) throws Throwable;
+
+    public void Abandon(Guid instanceId, java.lang.String reason) throws Throwable;
+
+    public void Cancel(Guid instanceId) throws Throwable;
+
+    public void EndAbandon(IAsyncResult result) throws Throwable;
+
+    public void EndCancel(IAsyncResult result) throws Throwable;
+
+    public void EndRun(IAsyncResult result) throws Throwable;
+
+    public void EndSuspend(IAsyncResult result) throws Throwable;
+
+    public void EndTerminate(IAsyncResult result) throws Throwable;
+
+    public void EndTransactedCancel(IAsyncResult result) throws Throwable;
+
+    public void EndTransactedRun(IAsyncResult result) throws Throwable;
+
+    public void EndTransactedSuspend(IAsyncResult result) throws Throwable;
+
+    public void EndTransactedTerminate(IAsyncResult result) throws Throwable;
+
     public void EndTransactedUnsuspend(IAsyncResult result) throws Throwable;
+
+    public void EndTransactedUpdate(IAsyncResult result) throws Throwable;
+
+    public void EndUnsuspend(IAsyncResult result) throws Throwable;
+
+    public void EndUpdate(IAsyncResult result) throws Throwable;
+
+    public void Run(Guid instanceId) throws Throwable;
+
+    public void Suspend(Guid instanceId, java.lang.String reason) throws Throwable;
+
+    public void Terminate(Guid instanceId, java.lang.String reason) throws Throwable;
+
+    public void TransactedCancel(Guid instanceId) throws Throwable;
+
+    public void TransactedRun(Guid instanceId) throws Throwable;
+
+    public void TransactedSuspend(Guid instanceId, java.lang.String reason) throws Throwable;
+
+    public void TransactedTerminate(Guid instanceId, java.lang.String reason) throws Throwable;
+
+    public void TransactedUnsuspend(Guid instanceId) throws Throwable;
+
+    public void TransactedUpdate(Guid instanceId, WorkflowIdentity updatedDefinitionIdentity) throws Throwable;
+
+    public void Unsuspend(Guid instanceId) throws Throwable;
+
+    public void Update(Guid instanceId, WorkflowIdentity updatedDefinitionIdentity) throws Throwable;
 
 
     

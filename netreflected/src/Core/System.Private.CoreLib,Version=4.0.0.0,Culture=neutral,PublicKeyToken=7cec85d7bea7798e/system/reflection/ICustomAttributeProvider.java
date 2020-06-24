@@ -89,11 +89,11 @@ public interface ICustomAttributeProvider extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable;
+
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
 
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
-
-    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable;
 
 
     

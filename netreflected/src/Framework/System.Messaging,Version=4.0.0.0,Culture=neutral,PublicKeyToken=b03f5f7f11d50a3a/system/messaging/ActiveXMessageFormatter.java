@@ -145,22 +145,22 @@ public class ActiveXMessageFormatter extends NetObject  {
         }
     }
 
-    public static void InitStreamedObject(NetObject streamedObject) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("InitStreamedObject", streamedObject == null ? null : streamedObject.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject Read(Message message) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objRead = (JCObject)classInstance.Invoke("Read", message == null ? null : message.getJCOInstance());
             return new NetObject(objRead);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void InitStreamedObject(NetObject streamedObject) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("InitStreamedObject", streamedObject == null ? null : streamedObject.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

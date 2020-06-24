@@ -37,19 +37,19 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.io.Stream;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
 import system.runtime.remoting.channels.ITransportHeaders;
 import system.runtime.remoting.channels.ITransportHeadersImplementation;
-import system.io.Stream;
 import system.runtime.remoting.channels.IClientChannelSinkStack;
 import system.runtime.remoting.channels.IClientChannelSinkStackImplementation;
 import system.runtime.remoting.channels.IClientResponseChannelSinkStack;
 import system.runtime.remoting.channels.IClientResponseChannelSinkStackImplementation;
-import system.runtime.remoting.channels.IClientChannelSink;
-import system.runtime.remoting.channels.IClientChannelSinkImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.runtime.remoting.channels.IClientChannelSink;
+import system.runtime.remoting.channels.IClientChannelSinkImplementation;
 
 
 /**
@@ -102,19 +102,19 @@ public interface IClientChannelSink extends IJCOBridgeReflected {
 
     // Methods section
     
+    public Stream GetRequestStream(IMessage msg, ITransportHeaders headers) throws Throwable;
+
     public void AsyncProcessRequest(IClientChannelSinkStack sinkStack, IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable;
 
     public void AsyncProcessResponse(IClientResponseChannelSinkStack sinkStack, NetObject state, ITransportHeaders headers, Stream stream) throws Throwable;
-
-    public Stream GetRequestStream(IMessage msg, ITransportHeaders headers) throws Throwable;
 
 
     
     // Properties section
     
-    public IClientChannelSink getNextChannelSink() throws Throwable;
-
     public IDictionary getProperties() throws Throwable;
+
+    public IClientChannelSink getNextChannelSink() throws Throwable;
 
 
 

@@ -42,16 +42,16 @@ import system.runtime.remoting.channels.IChannelReceiver;
 import system.runtime.remoting.channels.IChannelReceiverImplementation;
 import system.runtime.remoting.channels.IServerChannelSink;
 import system.runtime.remoting.channels.IServerChannelSinkImplementation;
-import system.runtime.remoting.channels.ServerProcessing;
-import system.runtime.remoting.channels.IServerChannelSinkStack;
-import system.runtime.remoting.channels.IServerChannelSinkStackImplementation;
+import system.io.Stream;
+import system.runtime.remoting.channels.IServerResponseChannelSinkStack;
+import system.runtime.remoting.channels.IServerResponseChannelSinkStackImplementation;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
 import system.runtime.remoting.channels.ITransportHeaders;
 import system.runtime.remoting.channels.ITransportHeadersImplementation;
-import system.io.Stream;
-import system.runtime.remoting.channels.IServerResponseChannelSinkStack;
-import system.runtime.remoting.channels.IServerResponseChannelSinkStackImplementation;
+import system.runtime.remoting.channels.ServerProcessing;
+import system.runtime.remoting.channels.IServerChannelSinkStack;
+import system.runtime.remoting.channels.IServerChannelSinkStackImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 
@@ -139,16 +139,6 @@ public class SdlChannelSink extends NetObject  {
     
     // Methods section
     
-    public void AsyncProcessResponse(IServerResponseChannelSinkStack sinkStack, NetObject state, IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AsyncProcessResponse", sinkStack == null ? null : sinkStack.getJCOInstance(), state == null ? null : state.getJCOInstance(), msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Stream GetResponseStream(IServerResponseChannelSinkStack sinkStack, NetObject state, IMessage msg, ITransportHeaders headers) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -160,27 +150,37 @@ public class SdlChannelSink extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public IServerChannelSink getNextChannelSink() throws Throwable {
+    public void AsyncProcessResponse(IServerResponseChannelSinkStack sinkStack, NetObject state, IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NextChannelSink");
-            return new IServerChannelSinkImplementation(val);
+            classInstance.Invoke("AsyncProcessResponse", sinkStack == null ? null : sinkStack.getJCOInstance(), state == null ? null : state.getJCOInstance(), msg == null ? null : msg.getJCOInstance(), headers == null ? null : headers.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
     public IDictionary getProperties() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Properties");
             return new IDictionaryImplementation(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IServerChannelSink getNextChannelSink() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("NextChannelSink");
+            return new IServerChannelSinkImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

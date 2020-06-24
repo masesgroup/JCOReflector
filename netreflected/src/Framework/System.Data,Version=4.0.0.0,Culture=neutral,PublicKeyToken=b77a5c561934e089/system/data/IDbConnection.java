@@ -37,11 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.data.IDbCommand;
+import system.data.IDbCommandImplementation;
 import system.data.IDbTransaction;
 import system.data.IDbTransactionImplementation;
 import system.data.IsolationLevel;
-import system.data.IDbCommand;
-import system.data.IDbCommandImplementation;
 import system.data.ConnectionState;
 
 
@@ -95,33 +95,33 @@ public interface IDbConnection extends IJCOBridgeReflected {
 
     // Methods section
     
+    public IDbCommand CreateCommand() throws Throwable;
+
     public IDbTransaction BeginTransaction() throws Throwable;
 
     public IDbTransaction BeginTransaction(IsolationLevel il) throws Throwable;
 
-    public void Close() throws Throwable;
-
     public void ChangeDatabase(java.lang.String databaseName) throws Throwable;
 
-    public IDbCommand CreateCommand() throws Throwable;
-
-    public void Open() throws Throwable;
+    public void Close() throws Throwable;
 
     public void Dispose() throws Throwable;
+
+    public void Open() throws Throwable;
 
 
     
     // Properties section
     
+    public int getConnectionTimeout() throws Throwable;
+
+    public ConnectionState getState() throws Throwable;
+
     public java.lang.String getConnectionString() throws Throwable;
 
     public void setConnectionString(java.lang.String ConnectionString) throws Throwable;
 
-    public int getConnectionTimeout() throws Throwable;
-
     public java.lang.String getDatabase() throws Throwable;
-
-    public ConnectionState getState() throws Throwable;
 
 
 

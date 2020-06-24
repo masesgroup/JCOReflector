@@ -37,12 +37,12 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.UInt32;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.globalization.CultureInfo;
 import system.reflection.MethodInfo;
 import system.reflection.ParameterInfo;
+import system.UInt32;
 import system.reflection.MemberTypes;
 import system.reflection.PropertyAttributes;
 
@@ -97,55 +97,55 @@ public interface _PropertyInfo extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
-
-    public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
-
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable;
 
     public NetObject GetValue(NetObject obj, NetObject[] index) throws Throwable;
 
     public NetObject GetValue(NetObject obj, BindingFlags invokeAttr, Binder binder, NetObject[] index, CultureInfo culture) throws Throwable;
 
-    public void SetValue(NetObject obj, NetObject value, NetObject[] index) throws Throwable;
+    public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
 
-    public void SetValue(NetObject obj, NetObject value, BindingFlags invokeAttr, Binder binder, NetObject[] index, CultureInfo culture) throws Throwable;
-
-    public MethodInfo[] GetAccessors(boolean nonPublic) throws Throwable;
-
-    public MethodInfo GetGetMethod(boolean nonPublic) throws Throwable;
-
-    public MethodInfo GetSetMethod(boolean nonPublic) throws Throwable;
-
-    public ParameterInfo[] GetIndexParameters() throws Throwable;
-
-    public MethodInfo[] GetAccessors() throws Throwable;
+    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
 
     public MethodInfo GetGetMethod() throws Throwable;
 
+    public MethodInfo GetGetMethod(boolean nonPublic) throws Throwable;
+
     public MethodInfo GetSetMethod() throws Throwable;
+
+    public MethodInfo GetSetMethod(boolean nonPublic) throws Throwable;
+
+    public MethodInfo[] GetAccessors() throws Throwable;
+
+    public MethodInfo[] GetAccessors(boolean nonPublic) throws Throwable;
+
+    public ParameterInfo[] GetIndexParameters() throws Throwable;
+
+    public void SetValue(NetObject obj, NetObject value, NetObject[] index) throws Throwable;
+
+    public void SetValue(NetObject obj, NetObject value, BindingFlags invokeAttr, Binder binder, NetObject[] index, CultureInfo culture) throws Throwable;
 
 
     
     // Properties section
     
-    public MemberTypes getMemberType() throws Throwable;
-
-    public java.lang.String getName() throws Throwable;
-
-    public NetType getDeclaringType() throws Throwable;
-
-    public NetType getReflectedType() throws Throwable;
-
-    public NetType getPropertyType() throws Throwable;
-
-    public PropertyAttributes getAttributes() throws Throwable;
-
     public boolean getCanRead() throws Throwable;
 
     public boolean getCanWrite() throws Throwable;
 
     public boolean getIsSpecialName() throws Throwable;
+
+    public MemberTypes getMemberType() throws Throwable;
+
+    public PropertyAttributes getAttributes() throws Throwable;
+
+    public java.lang.String getName() throws Throwable;
+
+    public NetType getDeclaringType() throws Throwable;
+
+    public NetType getPropertyType() throws Throwable;
+
+    public NetType getReflectedType() throws Throwable;
 
 
 

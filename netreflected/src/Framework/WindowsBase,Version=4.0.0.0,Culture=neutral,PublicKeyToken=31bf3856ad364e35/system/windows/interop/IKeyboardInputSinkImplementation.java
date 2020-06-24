@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.input.TraversalRequest;
 import system.windows.interop.IKeyboardInputSite;
 import system.windows.interop.IKeyboardInputSiteImplementation;
 import system.windows.interop.IKeyboardInputSink;
 import system.windows.interop.IKeyboardInputSinkImplementation;
-import system.windows.input.TraversalRequest;
 
 
 /**
@@ -108,12 +108,11 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
 
     // Methods section
     
-    public IKeyboardInputSite RegisterKeyboardInputSink(IKeyboardInputSink sink) throws Throwable {
+    public boolean HasFocusWithin() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objRegisterKeyboardInputSink = (JCObject)classInstance.Invoke("RegisterKeyboardInputSink", sink == null ? null : sink.getJCOInstance());
-            return new IKeyboardInputSiteImplementation(objRegisterKeyboardInputSink);
+            return (boolean)classInstance.Invoke("HasFocusWithin");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -129,11 +128,12 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
         }
     }
 
-    public boolean HasFocusWithin() throws Throwable {
+    public IKeyboardInputSite RegisterKeyboardInputSink(IKeyboardInputSink sink) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("HasFocusWithin");
+            JCObject objRegisterKeyboardInputSink = (JCObject)classInstance.Invoke("RegisterKeyboardInputSink", sink == null ? null : sink.getJCOInstance());
+            return new IKeyboardInputSiteImplementation(objRegisterKeyboardInputSink);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

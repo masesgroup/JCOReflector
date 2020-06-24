@@ -129,22 +129,22 @@ public class ActiveDesignerEventArgs extends NetObject  {
     
     // Properties section
     
-    public IDesignerHost getOldDesigner() throws Throwable {
+    public IDesignerHost getNewDesigner() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OldDesigner");
+            JCObject val = (JCObject)classInstance.Get("NewDesigner");
             return new IDesignerHostImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IDesignerHost getNewDesigner() throws Throwable {
+    public IDesignerHost getOldDesigner() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NewDesigner");
+            JCObject val = (JCObject)classInstance.Get("OldDesigner");
             return new IDesignerHostImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

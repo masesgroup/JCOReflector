@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.codedom.CodeCompileUnit;
-import system.codedom.compiler.TempFileCollection;
-import system.security.policy.Evidence;
-import system.reflection.Assembly;
 import system.codedom.compiler.CompilerErrorCollection;
+import system.codedom.compiler.TempFileCollection;
 import system.collections.specialized.StringCollection;
+import system.reflection.Assembly;
+import system.security.policy.Evidence;
 
 
 /**
@@ -122,6 +122,26 @@ public class WorkflowCompilerResults extends NetObject  {
     
     // Properties section
     
+    public int getNativeCompilerReturnValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("NativeCompilerReturnValue");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setNativeCompilerReturnValue(int NativeCompilerReturnValue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("NativeCompilerReturnValue", NativeCompilerReturnValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CodeCompileUnit getCompiledUnit() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -138,6 +158,17 @@ public class WorkflowCompilerResults extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompiledUnit", CompiledUnit == null ? null : CompiledUnit.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CompilerErrorCollection getErrors() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("Errors");
+            return new CompilerErrorCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,22 +195,12 @@ public class WorkflowCompilerResults extends NetObject  {
         }
     }
 
-    public Evidence getEvidence() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public StringCollection getOutput() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Evidence");
-            return new Evidence(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEvidence(Evidence Evidence) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Evidence", Evidence == null ? null : Evidence.getJCOInstance());
+            JCObject val = (JCObject)classInstance.Get("Output");
+            return new StringCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,23 +227,22 @@ public class WorkflowCompilerResults extends NetObject  {
         }
     }
 
-    public CompilerErrorCollection getErrors() throws Throwable {
+    public Evidence getEvidence() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Errors");
-            return new CompilerErrorCollection(val);
+            JCObject val = (JCObject)classInstance.Get("Evidence");
+            return new Evidence(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public StringCollection getOutput() throws Throwable {
+    public void setEvidence(Evidence Evidence) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Output");
-            return new StringCollection(val);
+            classInstance.Set("Evidence", Evidence == null ? null : Evidence.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,26 +263,6 @@ public class WorkflowCompilerResults extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PathToAssembly", PathToAssembly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getNativeCompilerReturnValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("NativeCompilerReturnValue");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setNativeCompilerReturnValue(int NativeCompilerReturnValue) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("NativeCompilerReturnValue", NativeCompilerReturnValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

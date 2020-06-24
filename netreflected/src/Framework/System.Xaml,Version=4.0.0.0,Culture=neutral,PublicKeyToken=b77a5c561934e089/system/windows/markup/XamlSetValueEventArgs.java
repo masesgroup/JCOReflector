@@ -138,22 +138,21 @@ public class XamlSetValueEventArgs extends NetObject  {
     
     // Properties section
     
-    public XamlMember getMember() throws Throwable {
+    public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Member");
-            return new XamlMember(val);
+            return (boolean)classInstance.Get("Handled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMember(XamlMember Member) throws Throwable {
+    public void setHandled(boolean Handled) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Member", Member == null ? null : Member.getJCOInstance());
+            classInstance.Set("Handled", Handled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,21 +179,22 @@ public class XamlSetValueEventArgs extends NetObject  {
         }
     }
 
-    public boolean getHandled() throws Throwable {
+    public XamlMember getMember() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Handled");
+            JCObject val = (JCObject)classInstance.Get("Member");
+            return new XamlMember(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHandled(boolean Handled) throws Throwable {
+    public void setMember(XamlMember Member) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Handled", Handled);
+            classInstance.Set("Member", Member == null ? null : Member.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

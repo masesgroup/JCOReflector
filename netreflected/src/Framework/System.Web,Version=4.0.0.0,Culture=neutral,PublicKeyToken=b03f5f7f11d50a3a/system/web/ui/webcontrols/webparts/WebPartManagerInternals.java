@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.ui.webcontrols.webparts.WebPart;
 import system.web.ui.webcontrols.webparts.WebPartConnection;
 import system.web.ui.webcontrols.webparts.WebPartTransformer;
+import system.web.ui.webcontrols.webparts.WebPart;
 
 
 /**
@@ -115,6 +115,48 @@ public class WebPartManagerInternals extends NetObject  {
     
     // Methods section
     
+    public boolean ConnectionDeleted(WebPartConnection connection) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ConnectionDeleted", connection == null ? null : connection.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject CreateObjectFromType(NetType type) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.TypeLoadException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateObjectFromType = (JCObject)classInstance.Invoke("CreateObjectFromType", type == null ? null : type.getJCOInstance());
+            return new NetObject(objCreateObjectFromType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject SaveConfigurationState(WebPartTransformer transformer) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSaveConfigurationState = (JCObject)classInstance.Invoke("SaveConfigurationState", transformer == null ? null : transformer.getJCOInstance());
+            return new NetObject(objSaveConfigurationState);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetZoneID(WebPart webPart) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetZoneID", webPart == null ? null : webPart.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddWebPart(WebPart webPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -165,42 +207,11 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
-    public NetObject CreateObjectFromType(NetType type) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.TypeLoadException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateObjectFromType = (JCObject)classInstance.Invoke("CreateObjectFromType", type == null ? null : type.getJCOInstance());
-            return new NetObject(objCreateObjectFromType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean ConnectionDeleted(WebPartConnection connection) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ConnectionDeleted", connection == null ? null : connection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void DeleteConnection(WebPartConnection connection) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteConnection", connection == null ? null : connection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetZoneID(WebPart webPart) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetZoneID", webPart == null ? null : webPart.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,32 +237,11 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
-    public NetObject SaveConfigurationState(WebPartTransformer transformer) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSaveConfigurationState = (JCObject)classInstance.Invoke("SaveConfigurationState", transformer == null ? null : transformer.getJCOInstance());
-            return new NetObject(objSaveConfigurationState);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void SetConnectErrorMessage(WebPart webPart, java.lang.String connectErrorMessage) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetConnectErrorMessage", webPart == null ? null : webPart.getJCOInstance(), connectErrorMessage);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetHasUserData(WebPart webPart, boolean hasUserData) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetHasUserData", webPart == null ? null : webPart.getJCOInstance(), hasUserData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,21 +257,21 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
-    public void SetIsClosed(WebPart webPart, boolean isClosed) throws Throwable {
+    public void SetHasUserData(WebPart webPart, boolean hasUserData) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetIsClosed", webPart == null ? null : webPart.getJCOInstance(), isClosed);
+            classInstance.Invoke("SetHasUserData", webPart == null ? null : webPart.getJCOInstance(), hasUserData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void SetIsShared(WebPartConnection connection, boolean isShared) throws Throwable {
+    public void SetIsClosed(WebPart webPart, boolean isClosed) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetIsShared", connection == null ? null : connection.getJCOInstance(), isShared);
+            classInstance.Invoke("SetIsClosed", webPart == null ? null : webPart.getJCOInstance(), isClosed);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,6 +287,16 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    public void SetIsShared(WebPartConnection connection, boolean isShared) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetIsShared", connection == null ? null : connection.getJCOInstance(), isShared);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SetIsStandalone(WebPart webPart, boolean isStandalone) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -307,21 +307,21 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
-    public void SetIsStatic(WebPartConnection connection, boolean isStatic) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetIsStatic", connection == null ? null : connection.getJCOInstance(), isStatic);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void SetIsStatic(WebPart webPart, boolean isStatic) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetIsStatic", webPart == null ? null : webPart.getJCOInstance(), isStatic);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetIsStatic(WebPartConnection connection, boolean isStatic) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetIsStatic", connection == null ? null : connection.getJCOInstance(), isStatic);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

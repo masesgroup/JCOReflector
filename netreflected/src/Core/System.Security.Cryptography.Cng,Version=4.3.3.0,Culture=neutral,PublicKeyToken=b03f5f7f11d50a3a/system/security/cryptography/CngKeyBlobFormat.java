@@ -138,11 +138,23 @@ public class CngKeyBlobFormat extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getFormat() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static CngKeyBlobFormat getEccFullPrivateBlob() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("Format");
+            JCObject val = (JCObject)classType.Get("EccFullPrivateBlob");
+            return new CngKeyBlobFormat(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CngKeyBlobFormat getEccFullPublicBlob() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("EccFullPublicBlob");
+            return new CngKeyBlobFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,28 +176,6 @@ public class CngKeyBlobFormat extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject val = (JCObject)classType.Get("EccPublicBlob");
-            return new CngKeyBlobFormat(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static CngKeyBlobFormat getEccFullPrivateBlob() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("EccFullPrivateBlob");
-            return new CngKeyBlobFormat(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static CngKeyBlobFormat getEccFullPublicBlob() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("EccFullPublicBlob");
             return new CngKeyBlobFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,6 +221,16 @@ public class CngKeyBlobFormat extends NetObject  {
         try {
             JCObject val = (JCObject)classType.Get("Pkcs8PrivateBlob");
             return new CngKeyBlobFormat(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getFormat() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Format");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.interopservices.UCOMIStream;
-import system.runtime.interopservices.UCOMIStreamImplementation;
 import system.runtime.interopservices.UCOMIBindCtx;
 import system.runtime.interopservices.UCOMIBindCtxImplementation;
 import system.runtime.interopservices.UCOMIMoniker;
 import system.runtime.interopservices.UCOMIMonikerImplementation;
+import system.runtime.interopservices.UCOMIStream;
+import system.runtime.interopservices.UCOMIStreamImplementation;
 
 
 /**
@@ -119,26 +119,6 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
-    public void Load(UCOMIStream pStm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Load", pStm == null ? null : pStm.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Save(UCOMIStream pStm, boolean fClearDirty) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Save", pStm == null ? null : pStm.getJCOInstance(), fClearDirty);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void IsEqual(UCOMIMoniker pmkOtherMoniker) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,6 +134,26 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("IsRunning", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), pmkNewlyRunning == null ? null : pmkNewlyRunning.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Load(UCOMIStream pStm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Load", pStm == null ? null : pStm.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Save(UCOMIStream pStm, boolean fClearDirty) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Save", pStm == null ? null : pStm.getJCOInstance(), fClearDirty);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

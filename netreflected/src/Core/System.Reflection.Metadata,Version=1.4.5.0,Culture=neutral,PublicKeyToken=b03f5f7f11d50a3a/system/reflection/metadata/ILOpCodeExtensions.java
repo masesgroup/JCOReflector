@@ -133,23 +133,23 @@ public class ILOpCodeExtensions extends NetObject  {
         }
     }
 
-    public static ILOpCode GetShortBranch(ILOpCode opCode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetShortBranch = (JCObject)classType.Invoke("GetShortBranch", opCode == null ? null : opCode.getJCOInstance());
-            return new ILOpCode(objGetShortBranch);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static ILOpCode GetLongBranch(ILOpCode opCode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetLongBranch = (JCObject)classType.Invoke("GetLongBranch", opCode == null ? null : opCode.getJCOInstance());
             return new ILOpCode(objGetLongBranch);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ILOpCode GetShortBranch(ILOpCode opCode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetShortBranch = (JCObject)classType.Invoke("GetShortBranch", opCode == null ? null : opCode.getJCOInstance());
+            return new ILOpCode(objGetShortBranch);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

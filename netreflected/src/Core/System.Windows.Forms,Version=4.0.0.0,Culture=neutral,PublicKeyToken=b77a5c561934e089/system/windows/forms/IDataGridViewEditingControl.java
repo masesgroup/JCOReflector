@@ -37,11 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.windows.forms.DataGridViewCellStyle;
 import system.windows.forms.Keys;
 import system.windows.forms.DataGridViewDataErrorContexts;
-import system.windows.forms.DataGridView;
+import system.windows.forms.DataGridViewCellStyle;
 import system.windows.forms.Cursor;
+import system.windows.forms.DataGridView;
 
 
 /**
@@ -94,11 +94,11 @@ public interface IDataGridViewEditingControl extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void ApplyCellStyleToEditingControl(DataGridViewCellStyle dataGridViewCellStyle) throws Throwable;
-
     public boolean EditingControlWantsInputKey(Keys keyData, boolean dataGridViewWantsInputKey) throws Throwable;
 
     public NetObject GetEditingControlFormattedValue(DataGridViewDataErrorContexts context) throws Throwable;
+
+    public void ApplyCellStyleToEditingControl(DataGridViewCellStyle dataGridViewCellStyle) throws Throwable;
 
     public void PrepareEditingControlForEdit(boolean selectAll) throws Throwable;
 
@@ -106,25 +106,25 @@ public interface IDataGridViewEditingControl extends IJCOBridgeReflected {
     
     // Properties section
     
-    public DataGridView getEditingControlDataGridView() throws Throwable;
+    public boolean getEditingControlValueChanged() throws Throwable;
 
-    public void setEditingControlDataGridView(DataGridView EditingControlDataGridView) throws Throwable;
+    public void setEditingControlValueChanged(boolean EditingControlValueChanged) throws Throwable;
 
-    public NetObject getEditingControlFormattedValue() throws Throwable;
-
-    public void setEditingControlFormattedValue(NetObject EditingControlFormattedValue) throws Throwable;
+    public boolean getRepositionEditingControlOnValueChange() throws Throwable;
 
     public int getEditingControlRowIndex() throws Throwable;
 
     public void setEditingControlRowIndex(int EditingControlRowIndex) throws Throwable;
 
-    public boolean getEditingControlValueChanged() throws Throwable;
+    public NetObject getEditingControlFormattedValue() throws Throwable;
 
-    public void setEditingControlValueChanged(boolean EditingControlValueChanged) throws Throwable;
+    public void setEditingControlFormattedValue(NetObject EditingControlFormattedValue) throws Throwable;
 
     public Cursor getEditingPanelCursor() throws Throwable;
 
-    public boolean getRepositionEditingControlOnValueChange() throws Throwable;
+    public DataGridView getEditingControlDataGridView() throws Throwable;
+
+    public void setEditingControlDataGridView(DataGridView EditingControlDataGridView) throws Throwable;
 
 
 

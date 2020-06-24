@@ -128,22 +128,22 @@ public class SamlAuthorizationDecisionClaimResource extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getResource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Resource");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SamlAccessDecision getAccessDecision() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("AccessDecision");
             return new SamlAccessDecision(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String getActionName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("ActionName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,11 +159,11 @@ public class SamlAuthorizationDecisionClaimResource extends NetObject  {
         }
     }
 
-    public java.lang.String getActionName() throws Throwable {
+    public java.lang.String getResource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("ActionName");
+            return (java.lang.String)classInstance.Get("Resource");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

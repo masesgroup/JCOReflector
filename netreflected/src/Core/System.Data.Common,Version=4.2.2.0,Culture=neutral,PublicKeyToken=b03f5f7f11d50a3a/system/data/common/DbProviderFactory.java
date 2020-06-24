@@ -43,8 +43,8 @@ import system.data.common.DbCommandBuilder;
 import system.data.common.DbConnection;
 import system.data.common.DbConnectionStringBuilder;
 import system.data.common.DbDataAdapter;
-import system.data.common.DbParameter;
 import system.data.common.DbDataSourceEnumerator;
+import system.data.common.DbParameter;
 
 
 /**
@@ -174,17 +174,6 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
-    public DbParameter CreateParameter() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateParameter = (JCObject)classInstance.Invoke("CreateParameter");
-            return new DbParameter(objCreateParameter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DbDataSourceEnumerator CreateDataSourceEnumerator() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -196,15 +185,26 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
+    public DbParameter CreateParameter() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateParameter = (JCObject)classInstance.Invoke("CreateParameter");
+            return new DbParameter(objCreateParameter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public boolean getCanCreateDataSourceEnumerator() throws Throwable {
+    public boolean getCanCreateCommandBuilder() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CanCreateDataSourceEnumerator");
+            return (boolean)classInstance.Get("CanCreateCommandBuilder");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,11 +220,11 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
-    public boolean getCanCreateCommandBuilder() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public boolean getCanCreateDataSourceEnumerator() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("CanCreateCommandBuilder");
+            return (boolean)classInstance.Get("CanCreateDataSourceEnumerator");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

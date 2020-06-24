@@ -89,9 +89,9 @@ public interface ISimpleTransactionSuperior extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Rollback() throws Throwable;
-
     public byte[] Promote() throws Throwable;
+
+    public void Rollback() throws Throwable;
 
 
     

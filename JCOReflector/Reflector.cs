@@ -1018,16 +1018,18 @@ namespace MASES.C2JReflector
 
             foreach (var item in methods)
             {
-                Interlocked.Increment(ref analyzedMethods);
-
                 var methodName = item.Name;
 
-                if (methodsSignatureCreated.Contains(item.ToString()) // avoid duplicated methods from inheritance
+                if (!item.IsPublic 
                     || item.IsSpecialName // remove properties
-                    || item.IsGenericMethod // don't manage generic methods
+                    || methodsSignatureCreated.Contains(item.ToString()) // avoid duplicated methods from inheritance
+                   ) continue;
+
+                Interlocked.Increment(ref analyzedMethods);
+
+                if (item.IsGenericMethod // don't manage generic methods
                     || item.ContainsGenericParameters
                     || (withInheritance ? item.DeclaringType != type : false)
-                    || !item.IsPublic
                     || (!methodsNameCreated.Contains(methodName) ? false : isDifferentOnlyForRetVal(methodsSignatureCreated, item.ToString(), methodName))
                    ) continue;
 

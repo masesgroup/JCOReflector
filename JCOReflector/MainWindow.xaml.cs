@@ -88,7 +88,7 @@ namespace MASES.C2JReflector
             cbLogLevel.ItemsSource = Enum.GetValues(typeof(LogLevel));
             cbLogLevel.SelectedValue = LogLevel.Info;
 
-            tbDestinationFolder.Text = Path.GetFullPath(Path.Combine(RepositoryRoot, @"netreflected\src"));
+            tbDestinationFolder.Text = Path.GetFullPath(Path.Combine(RepositoryRoot, @"netreflected"));
             tbJarDestinationFolder.Text = assemblyLoc;
 #if DEBUG
             tbJDKFolder.Text = Path.GetFullPath(Path.Combine(RepositoryRoot, "jdk-14.0.1"));
@@ -118,7 +118,8 @@ namespace MASES.C2JReflector
             ReflectorEventArgs args = new ReflectorEventArgs();
             args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
             args.AssemblyName = tbAssembly.Text;
-            args.RootDestinationFolder = tbDestinationFolder.Text;
+            args.RootDestinationFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, @"src"));
+            args.CsvDestinationFolder =  Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, @"statistics"));
             args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
             args.ForceRebuild = cbForceRebuildIfFolderExist.IsChecked.Value;
             args.UseParallelBuild = cbUseParallel.IsChecked.Value;
@@ -139,7 +140,7 @@ namespace MASES.C2JReflector
             JavaBuilderEventArgs args = new JavaBuilderEventArgs();
             args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
             args.JDKFolder = tbJDKFolder.Text;
-            args.OriginFolder = tbDestinationFolder.Text;
+            args.OriginFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, @"src"));
             args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
 
             var result = JavaBuilder.CreateFolderList(args);
@@ -186,7 +187,7 @@ namespace MASES.C2JReflector
                 args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
                 args.JDKFolder = tbJDKFolder.Text;
                 args.JDKTarget = (JDKVersion)cbTarget.SelectedValue;
-                args.OriginFolder = tbDestinationFolder.Text;
+                args.OriginFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, @"src"));
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
                 args.AssembliesToUse = createList();
 
@@ -206,7 +207,7 @@ namespace MASES.C2JReflector
                 JavaBuilderEventArgs args = new JavaBuilderEventArgs();
                 args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
                 args.JDKFolder = tbJDKFolder.Text;
-                args.OriginFolder = tbDestinationFolder.Text;
+                args.OriginFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, @"src"));
                 args.DestinationFolder = tbJarDestinationFolder.Text;
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
                 args.WithJARSource = cbWithSource.IsChecked.Value;
@@ -247,13 +248,6 @@ namespace MASES.C2JReflector
                 if (args != null)
                 {
                     tbReport.Text = args.Report;
-                    string csvFileName = string.Empty;
-                    #if NET_CORE
-                    csvFileName = Path.GetFullPath(Path.Combine(RepositoryRoot, @"netreflected\statistics\NetcoreStatistics.csv"));
-                    #else
-                    csvFileName = Path.GetFullPath(Path.Combine(RepositoryRoot, @"netreflected\statistics\FrameworkStatistics.csv"));
-                    #endif
-                    File.WriteAllText(csvFileName,args.StatisticsCsv);
                 }
                 else tbReport.Text = "Missing managed event args.";
             });

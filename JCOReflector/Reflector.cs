@@ -40,6 +40,7 @@ namespace MASES.C2JReflector
         public LogLevel LogLevel { get; set; }
         public string AssemblyName { get; set; }
         public string RootDestinationFolder { get; set; }
+        public string CsvDestinationFolder { get; set; }
         public bool SplitFolderByAssembly { get; set; }
         public bool ForceRebuild { get; set; }
         public bool UseParallelBuild { get; set; }
@@ -83,6 +84,7 @@ namespace MASES.C2JReflector
         static LogLevel LogLevel;
         static string RootAssemblyName;
         static string RootDestinationFolder;
+        static string CsvDestinationFolder;
         static bool SplitByAssembly;
         static bool ForceRebuild;
         static bool UseParallelBuild;
@@ -161,71 +163,99 @@ namespace MASES.C2JReflector
             analyzedEvents = 0;
         }
 
-        static string GetStatisticsCsv()
+        static bool WriteStatisticsCsv(string csvString)
+        {
+            bool res = true;
+            try
+            {
+                if(csvString != null)
+                {
+                    string csvFileName = string.Empty;
+                    
+                    if (!Directory.Exists(CsvDestinationFolder)) Directory.CreateDirectory(CsvDestinationFolder);
+                    #if NET_CORE
+                    csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, @"NetcoreStatistics.csv"));
+                    #else
+                    csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, @"FrameworkStatistics.csv"));
+                    #endif
+                    File.WriteAllText(csvFileName,csvString);
+                }
+            }
+            catch(Exception ex)
+            {
+                string errorString = string.Format("Error writing csv files {0}", ex.Message);
+                AppendToConsole(LogLevel.Error, errorString);
+                res = false;
+            }
+            return res;
+        }
+        static string GetStatisticsCsv(out string errorString)
         {
             // Modification in the order and quantity of data shall be done also in 
             // the graph generator (google sheets)
             string res = String.Empty;
+            errorString = null;
             try
             {
                 StringBuilder sb = new StringBuilder();
                 //add header
                 sb.Append("parsedAssemblies;");
                 sb.Append("analyzedTypes;");
-                sb.Append("discardedTypes;");
-                sb.Append("discardedNonPublicTypes;");
-                sb.Append("discardedGenericTypes;");
-                sb.Append("discardedInternalTypes;");
+                sb.Append("discardedTypes;"); 
+                sb.Append("discardedNonPublicTypes;"); 
+                sb.Append("discardedGenericTypes;"); 
+                sb.Append("discardedInternalTypes;"); 
                 sb.Append("implementedEnum ;");
-                sb.Append("implementedEnumsFlags;");
-                sb.Append("analyzedEnumerators;");
-                sb.Append("implementedEnumerators;");
-                sb.Append("analyzedDelegates;");
-                sb.Append("implementedDelegates;");
-                sb.Append("implementedInterfaces;");
-                sb.Append("implementedClasses;");
-                sb.Append("implementedExceptions;");
+                sb.Append("implementedEnumsFlags;"); 
+                sb.Append("analyzedEnumerators;"); 
+                sb.Append("implementedEnumerators;"); 
+                sb.Append("analyzedDelegates;"); 
+                sb.Append("implementedDelegates;"); 
+                sb.Append("implementedInterfaces;"); 
+                sb.Append("implementedClasses;"); 
+                sb.Append("implementedExceptions;"); 
                 sb.Append("analyzedCtors;");
                 sb.Append("implementedCtors ;");
-                sb.Append("analyzedMethods;");
-                sb.Append("implementedMethods;");
-                sb.Append("analyzedProperties;");
-                sb.Append("implementedProperties;");
-                sb.Append("analyzedEvents;");
-                sb.Append("implementedEvents;");
-
+                sb.Append("analyzedMethods;"); 
+                sb.Append("implementedMethods;"); 
+                sb.Append("analyzedProperties;"); 
+                sb.Append("implementedProperties;"); 
+                sb.Append("analyzedEvents;"); 
+                sb.Append("implementedEvents;"); 
+                
                 sb.AppendLine();
                 //Add data
-                sb.AppendFormat("{0};", parsedAssemblies);
-                sb.AppendFormat("{0};", analyzedTypes);
-                sb.AppendFormat("{0};", discardedTypes);
-                sb.AppendFormat("{0};", discardedNonPublicTypes);
-                sb.AppendFormat("{0};", discardedGenericTypes);
-                sb.AppendFormat("{0};", discardedInternalTypes);
-                sb.AppendFormat("{0};", implementedEnums);
-                sb.AppendFormat("{0};", implementedEnumsFlags);
-                sb.AppendFormat("{0};", analyzedEnumerators);
-                sb.AppendFormat("{0};", implementedEnumerators);
-                sb.AppendFormat("{0};", analyzedDelegates);
-                sb.AppendFormat("{0};", implementedDelegates);
-                sb.AppendFormat("{0};", implementedInterfaces);
-                sb.AppendFormat("{0};", implementedClasses);
-                sb.AppendFormat("{0};", implementedExceptions);
-                sb.AppendFormat("{0};", analyzedCtors);
-                sb.AppendFormat("{0};", implementedCtors);
-                sb.AppendFormat("{0};", analyzedMethods);
-                sb.AppendFormat("{0};", implementedMethods);
-                sb.AppendFormat("{0};", analyzedProperties);
-                sb.AppendFormat("{0};", implementedProperties);
-                sb.AppendFormat("{0};", analyzedEvents);
-                sb.AppendFormat("{0};", implementedEvents);
-
+                sb.AppendFormat("{0};", parsedAssemblies );
+                sb.AppendFormat("{0};", analyzedTypes );
+                sb.AppendFormat("{0};", discardedTypes );
+                sb.AppendFormat("{0};", discardedNonPublicTypes );
+                sb.AppendFormat("{0};", discardedGenericTypes );
+                sb.AppendFormat("{0};", discardedInternalTypes );
+                sb.AppendFormat("{0};", implementedEnums );
+                sb.AppendFormat("{0};", implementedEnumsFlags );
+                sb.AppendFormat("{0};", analyzedEnumerators );
+                sb.AppendFormat("{0};", implementedEnumerators );
+                sb.AppendFormat("{0};", analyzedDelegates );
+                sb.AppendFormat("{0};", implementedDelegates );
+                sb.AppendFormat("{0};", implementedInterfaces );
+                sb.AppendFormat("{0};", implementedClasses );
+                sb.AppendFormat("{0};", implementedExceptions );
+                sb.AppendFormat("{0};", analyzedCtors );
+                sb.AppendFormat("{0};", implementedCtors );
+                sb.AppendFormat("{0};", analyzedMethods );
+                sb.AppendFormat("{0};", implementedMethods );
+                sb.AppendFormat("{0};", analyzedProperties );
+                sb.AppendFormat("{0};", implementedProperties );
+                sb.AppendFormat("{0};", analyzedEvents );
+                sb.AppendFormat("{0};", implementedEvents );
+ 
                 res = sb.ToString();
             }
             catch (Exception ex)
             {
-                res = string.Format("Error {0}", ex.Message);
-                AppendToConsole(LogLevel.Error, res);
+                
+                errorString = string.Format("CSV FILES NOT CREATED!!! Error {0}", ex.Message);
+                AppendToConsole(LogLevel.Error, errorString);
             }
             return res;
         }
@@ -267,7 +297,7 @@ namespace MASES.C2JReflector
 
                 res = sb.ToString();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 res = string.Format("Error {0}", ex.Message);
                 AppendToConsole(LogLevel.Error, res);
@@ -286,7 +316,7 @@ namespace MASES.C2JReflector
 
             LogLevel = args.LogLevel;
             RootDestinationFolder = args.RootDestinationFolder;
-
+            CsvDestinationFolder = args.CsvDestinationFolder;
             RootAssemblyName = args.AssemblyName;
             SplitByAssembly = args.SplitFolderByAssembly;
             ForceRebuild = args.ForceRebuild;
@@ -316,16 +346,30 @@ namespace MASES.C2JReflector
 
                 await ExportAssemblyWithReferences(assemblyReferenced, new AssemblyName(assembly.FullName), RootDestinationFolder, SplitByAssembly, ForceRebuild);
                 reportStr = GetReport();
-                statisticsCsv = GetStatisticsCsv();
+                string statisticsError;
+                statisticsCsv = GetStatisticsCsv(out statisticsError);
+                
+                if(! String.IsNullOrEmpty(statisticsError))
+                {
+                    reportStr += statisticsError;
+                }
+                else if(! WriteStatisticsCsv(statisticsCsv))
+                {
+                    reportStr += "ERROR WRITING STATISTICS FILES" + Environment.NewLine ;
+                }
+                else
+                {
+                    reportStr += "STATISTICS FILES CREATED OK" + Environment.NewLine ;
+                }
             }
             catch (Exception ex)
             {
-                AppendToConsole(LogLevel.Error, "ExportAssembly report section error:{0}", ex.Message);
+                AppendToConsole(LogLevel.Error,"ExportAssembly report section error:{0}" ,ex.Message);
 
             }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, statisticsCsv));
+                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr,statisticsCsv));
             }
         }
 

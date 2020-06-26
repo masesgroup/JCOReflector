@@ -43,6 +43,9 @@ PACKAGE_IMPORT_SECTION
 
 /**
  * The base .NET class managing FULLYQUALIFIED_CLASS_NAME, FULL_ASSEMBLY_CLASS_NAME. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME" target="_top">https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME</a>
  */
 public class PACKAGE_CLASS_NAME extends NetObject implements Iterator<PACKAGE_INNER_CLASS_NAME> {
     public static final String assemblyFullName = "FULL_ASSEMBLY_CLASS_NAME";

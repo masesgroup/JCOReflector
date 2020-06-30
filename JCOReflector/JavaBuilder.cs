@@ -165,6 +165,7 @@ namespace MASES.C2JReflector
         }
 
         const string JavaCompiler = @"bin\javac.exe";
+        const string JavaDoc = @"bin\javadoc.exe";
         const string JarCompiler = @"bin\jar.exe";
 
         public static appendToConsoleHandler AppendToConsoleHandler;
@@ -193,6 +194,29 @@ namespace MASES.C2JReflector
             {
                 var classes = CreateSourceListAndCompile(args.JDKFolder, args.JDKTarget, args.OriginFolder, (args.AssembliesToUse == null) ? CreateFolderList(args.OriginFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Compilation of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
+            }
+            catch (Exception ex)
+            {
+                reportStr = string.Format("Error {0}", ex.Message);
+                AppendToConsole(LogLevel.Error, reportStr);
+            }
+            finally
+            {
+                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr));
+            }
+        }
+
+        public static void GenerateDocs(object o)
+        {
+            JavaBuilderEventArgs args = o as JavaBuilderEventArgs;
+
+            logLevel = args.LogLevel;
+            DateTime dtStart = DateTime.Now;
+            string reportStr = string.Empty;
+            try
+            {
+                var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.OriginFolder, args.DestinationFolder, (args.AssembliesToUse == null) ? CreateFolderList(args.OriginFolder) : args.AssembliesToUse, Timeout.Infinite);
+                reportStr = string.Format("Javadoc of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
             catch (Exception ex)
             {
@@ -310,6 +334,37 @@ namespace MASES.C2JReflector
                 string compatibility = string.Format(" -source {0} -target {0}", (int)jdkTarget); // -bootclasspath rt{0}.jar
                 launchProcess(originFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + compatibility + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
             }
+            return counter;
+        }
+
+        static int CreateSourceListAndGenerateDocs(string jdkFolder, JDKVersion jdkTarget, string originFolder, string destinationFolder, IEnumerable<string> assemblies, int timeout)
+        {
+            int counter = 0;
+            var tmpFile = Path.Combine(originFolder, Const.FileNameAndDirectory.SourceFile);
+
+            StringBuilder sb = new StringBuilder();
+            foreach (var assembly in assemblies)
+            {
+                foreach (var item in Directory.EnumerateFiles(Path.Combine(originFolder, assembly), "*.java", SearchOption.AllDirectories))
+                {
+                    sb.AppendLine(item);
+                    counter++;
+                }
+            }
+
+            File.WriteAllText(tmpFile, sb.ToString());
+            var jcoBridgePath = Path.GetDirectoryName(typeof(JavaBuilder).Assembly.Location);
+            var jcoBridgeCp = Path.Combine(jcoBridgePath, "JCOBridge.jar");
+
+#if NET_CORE
+            destinationFolder = Path.Combine(destinationFolder, Const.Framework.NETCoreFolder);
+#else
+            destinationFolder = Path.Combine(destinationFolder, Const.Framework.NETFrameworkFolder);
+#endif
+            destinationFolder = destinationFolder.Replace('\\', '/');
+
+            launchProcess(originFolder, Path.Combine(jdkFolder, JavaDoc), "-quiet -author -public -cp " + jcoBridgeCp + " -d " + destinationFolder + " -link https://www.jcobridge.com/api-java @" + Const.FileNameAndDirectory.SourceFile, timeout);
+
             return counter;
         }
 

@@ -88,7 +88,7 @@ namespace MASES.C2JReflector
             cbLogLevel.ItemsSource = Enum.GetValues(typeof(LogLevel));
             cbLogLevel.SelectedValue = LogLevel.Info;
 
-            tbDestinationFolder.Text = Path.GetFullPath(Path.Combine(RepositoryRoot, @"netreflected"));
+            tbDestinationFolder.Text = Path.GetFullPath(Path.Combine(RepositoryRoot, Const.FileNameAndDirectory.RootDirectory));
             tbJarDestinationFolder.Text = assemblyLoc;
 #if DEBUG
             tbJDKFolder.Text = Path.GetFullPath(Path.Combine(RepositoryRoot, "jdk-14.0.1"));
@@ -118,8 +118,8 @@ namespace MASES.C2JReflector
             ReflectorEventArgs args = new ReflectorEventArgs();
             args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
             args.AssemblyName = tbAssembly.Text;
-            args.RootDestinationFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, @"src"));
-            args.CsvDestinationFolder =  Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, @"statistics"));
+            args.RootDestinationFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, Const.FileNameAndDirectory.SourceDirectory));
+            args.CsvDestinationFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, Const.FileNameAndDirectory.StatsDirectory));
             args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
             args.ForceRebuild = cbForceRebuildIfFolderExist.IsChecked.Value;
             args.UseParallelBuild = cbUseParallel.IsChecked.Value;
@@ -140,7 +140,7 @@ namespace MASES.C2JReflector
             JavaBuilderEventArgs args = new JavaBuilderEventArgs();
             args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
             args.JDKFolder = tbJDKFolder.Text;
-            args.OriginFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, @"src"));
+            args.OriginFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, Const.FileNameAndDirectory.SourceDirectory));
             args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
 
             var result = JavaBuilder.CreateFolderList(args);
@@ -187,12 +187,34 @@ namespace MASES.C2JReflector
                 args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
                 args.JDKFolder = tbJDKFolder.Text;
                 args.JDKTarget = (JDKVersion)cbTarget.SelectedValue;
-                args.OriginFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, @"src"));
+                args.OriginFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, Const.FileNameAndDirectory.SourceDirectory));
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
                 args.AssembliesToUse = createList();
 
                 commandPanel.IsEnabled = false;
                 Task.Factory.StartNew(JavaBuilder.CompileClasses, args);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void btnBuildDoc_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                JavaBuilderEventArgs args = new JavaBuilderEventArgs();
+                args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
+                args.JDKFolder = tbJDKFolder.Text;
+                args.JDKTarget = (JDKVersion)cbTarget.SelectedValue;
+                args.OriginFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, Const.FileNameAndDirectory.SourceDirectory));
+                args.DestinationFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, Const.FileNameAndDirectory.DocsDirectory));
+                args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
+                args.AssembliesToUse = createList();
+
+                commandPanel.IsEnabled = false;
+                Task.Factory.StartNew(JavaBuilder.GenerateDocs, args);
             }
             catch (Exception ex)
             {
@@ -207,7 +229,7 @@ namespace MASES.C2JReflector
                 JavaBuilderEventArgs args = new JavaBuilderEventArgs();
                 args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
                 args.JDKFolder = tbJDKFolder.Text;
-                args.OriginFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, @"src"));
+                args.OriginFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, Const.FileNameAndDirectory.SourceDirectory));
                 args.DestinationFolder = tbJarDestinationFolder.Text;
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
                 args.WithJARSource = cbWithSource.IsChecked.Value;

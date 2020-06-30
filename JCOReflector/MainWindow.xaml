@@ -85,6 +85,7 @@
                         <DockPanel DockPanel.Dock="Top" LastChildFill="False" MinHeight="30">
                             <Button Name="btnGetFolders" Content="Get folders..." Click="btnGetFolders_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
                             <Button Name="btnBuild" Content="Build classes..." Click="btnBuild_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
+                            <Button Name="btnBuildDoc" Content="Build docs..." Click="btnBuildDoc_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
                             <Button Name="btnCreateJars" Content="Create JARs..." Click="btnCreateJars_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
                             <CheckBox Name="cbWithSource" Content="Source" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Enable generation of source JARs"/>
                         </DockPanel>

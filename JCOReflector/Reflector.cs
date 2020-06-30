@@ -1544,6 +1544,7 @@ namespace MASES.C2JReflector
             }
 
             var interfaceStr = interfaceTemplateToUse.Replace(Const.Delegates.PACKAGE_NAME, packageName)
+                                                     .Replace(Const.Delegates.FULLYQUALIFIED_CLASS_NAME, item.FullName)
                                                      .Replace(Const.Delegates.PACKAGE_IMPORT_SECTION, importsStr)
                                                      .Replace(Const.Delegates.PACKAGE_CLASS_NAME, delegateName)
                                                      .Replace(Const.Delegates.DELEGATE_RETURN_TYPE, (isRetValArray) ? returnType + Const.SpecialNames.ArrayTrailer : returnType)

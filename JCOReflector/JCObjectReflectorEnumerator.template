@@ -48,8 +48,17 @@ PACKAGE_IMPORT_SECTION
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME" target="_top">https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME</a>
  */
 public class PACKAGE_CLASS_NAME extends NetObject implements Iterator<PACKAGE_INNER_CLASS_NAME> {
+    /**
+     * Fully assembly qualified name: FULL_ASSEMBLY_CLASS_NAME
+     */
     public static final String assemblyFullName = "FULL_ASSEMBLY_CLASS_NAME";
+    /**
+     * Assembly name: SHORT_ASSEMBLY_CLASS_NAME
+     */
     public static final String assemblyShortName = "SHORT_ASSEMBLY_CLASS_NAME";
+    /**
+     * Qualified class name: FULLYQUALIFIED_CLASS_NAME
+     */
     public static final String className = "FULLYQUALIFIED_CLASS_NAME";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();

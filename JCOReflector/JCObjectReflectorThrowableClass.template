@@ -46,10 +46,22 @@ PACKAGE_IMPORT_SECTION
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME" target="_top">https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME</a>
  */
 public class PACKAGE_CLASS_NAME extends PACKAGE_CLASS_BASE_CLASS {
+    /**
+     * Fully assembly qualified name: FULL_ASSEMBLY_CLASS_NAME
+     */
     public static final String assemblyFullName = "FULL_ASSEMBLY_CLASS_NAME";
+    /**
+     * Assembly name: SHORT_ASSEMBLY_CLASS_NAME
+     */
     public static final String assemblyShortName = "SHORT_ASSEMBLY_CLASS_NAME";
+    /**
+     * Qualified class name: FULLYQUALIFIED_CLASS_NAME
+     */
     public static final String className = "FULLYQUALIFIED_CLASS_NAME";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -123,7 +135,9 @@ public class PACKAGE_CLASS_NAME extends PACKAGE_CLASS_BASE_CLASS {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PACKAGE_CLASS_NAME}, a cast assert is made to check if types are compatible.
+     */
     public static PACKAGE_CLASS_NAME cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PACKAGE_CLASS_NAME(from.getJCOInstance());

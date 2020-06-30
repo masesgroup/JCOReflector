@@ -46,10 +46,22 @@ import org.mases.jcobridge.netreflection.*;
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME" target="_top">https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME</a>
  */
 public class PACKAGE_CLASS_NAME extends NetObject  {
+    /**
+     * Fully assembly qualified name: FULL_ASSEMBLY_CLASS_NAME
+     */
     public static final String assemblyFullName = "FULL_ASSEMBLY_CLASS_NAME";
+    /**
+     * Assembly name: SHORT_ASSEMBLY_CLASS_NAME
+     */
     public static final String assemblyShortName = "SHORT_ASSEMBLY_CLASS_NAME";
+    /**
+     * Qualified class name: FULLYQUALIFIED_CLASS_NAME
+     */
     public static final String className = "FULLYQUALIFIED_CLASS_NAME";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

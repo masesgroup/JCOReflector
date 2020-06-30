@@ -46,10 +46,22 @@ PACKAGE_IMPORT_SECTION
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME" target="_top">https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME</a>
  */
 public class PACKAGE_CLASS_NAME extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: FULL_ASSEMBLY_CLASS_NAME
+     */
     public static final String assemblyFullName = "FULL_ASSEMBLY_CLASS_NAME";
+    /**
+     * Assembly name: SHORT_ASSEMBLY_CLASS_NAME
+     */
     public static final String assemblyShortName = "SHORT_ASSEMBLY_CLASS_NAME";
+    /**
+     * Qualified class name: FULLYQUALIFIED_CLASS_NAME
+     */
     public static final String className = "FULLYQUALIFIED_CLASS_NAME";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IPACKAGE_CLASS_NAME callerInstance = null;
@@ -154,7 +166,9 @@ DELEGATE_RETURN_STATEMENT
     }
 
 DELEGATE_DYNAMIC_INVOKE_SECTION
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public DELEGATE_RETURN_TYPE Invoke(DELEGATE_PARAMETERS) {
         return null;
     }

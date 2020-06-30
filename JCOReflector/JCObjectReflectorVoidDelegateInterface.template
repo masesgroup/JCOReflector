@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 PACKAGE_IMPORT_SECTION
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link PACKAGE_CLASS_NAME}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME" target="_top">https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME</a>
+ */
 public interface IPACKAGE_CLASS_NAME {
     public void Invoke(DELEGATE_PARAMETERS);
 }

@@ -1,15 +1,15 @@
-    public PACKAGE_CLASS_NAME add(PACKAGE_CLASS_NAME val) throws Throwable {
+    public final PACKAGE_CLASS_NAME add(PACKAGE_CLASS_NAME val) throws Throwable {
         return new PACKAGE_CLASS_NAME(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public PACKAGE_CLASS_NAME remove(PACKAGE_CLASS_NAME val) throws Throwable {
+    public final PACKAGE_CLASS_NAME remove(PACKAGE_CLASS_NAME val) throws Throwable {
         return new PACKAGE_CLASS_NAME(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(PACKAGE_CLASS_NAME val) throws Throwable {
+    public final boolean is(PACKAGE_CLASS_NAME val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(PACKAGE_CLASS_NAME val) throws Throwable {
+    public final boolean has(PACKAGE_CLASS_NAME val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }

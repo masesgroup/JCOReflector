@@ -1,4 +1,4 @@
-    public METHOD_MODIFIER_KEYWORDvoid METHOD_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
+    public final METHOD_MODIFIER_KEYWORDvoid METHOD_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
         if (METHOD_OBJECT == null)
             throw new UnsupportedOperationException("METHOD_OBJECT is null.");
         try {

@@ -107,7 +107,7 @@ public class PACKAGE_CLASS_NAME extends NetObject implements Iterator<PACKAGE_IN
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 

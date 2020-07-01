@@ -1,4 +1,4 @@
-    public METHOD_MODIFIER_KEYWORDvoid addEVENT_NAME(EVENT_HANDLER_TYPE handler) throws Throwable {
+    public final METHOD_MODIFIER_KEYWORDvoid addEVENT_NAME(EVENT_HANDLER_TYPE handler) throws Throwable {
         if (EVENT_OBJECT == null)
             throw new UnsupportedOperationException("EVENT_OBJECT is null.");
         try {
@@ -8,7 +8,7 @@
         }
     }
 
-    public METHOD_MODIFIER_KEYWORDvoid removeEVENT_NAME(EVENT_HANDLER_TYPE handler) throws Throwable {
+    public final METHOD_MODIFIER_KEYWORDvoid removeEVENT_NAME(EVENT_HANDLER_TYPE handler) throws Throwable {
         if (EVENT_OBJECT == null)
             throw new UnsupportedOperationException("EVENT_OBJECT is null.");
         try {

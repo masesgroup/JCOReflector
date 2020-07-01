@@ -1,4 +1,4 @@
-	public PACKAGE_INNER_CLASS_NAME next() {
+	public final PACKAGE_INNER_CLASS_NAME next() {
 		try {
 			return new PACKAGE_IMPLEMENTATION_INNER_CLASS_NAME(classInstance.next());
 		} catch (Throwable jce) {

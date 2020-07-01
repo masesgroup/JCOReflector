@@ -1,4 +1,4 @@
-    public METHOD_MODIFIER_KEYWORDPROPERTY_OUTPUTTYPE[] getPROPERTY_NAME(PROPERTY_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
+    public final METHOD_MODIFIER_KEYWORDPROPERTY_OUTPUTTYPE[] getPROPERTY_NAME(PROPERTY_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
         if (PROPERTY_OBJECT == null)
             throw new UnsupportedOperationException("PROPERTY_OBJECT is null.");
         try {

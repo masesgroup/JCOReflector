@@ -30,6 +30,9 @@ import org.mases.jcobridge.*;
  * The base .NET class managing System.Collections.IEnumerable, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}. 
  */
 public interface IEnumerable extends IJCOBridgeReflected, Iterable<NetObject> {
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    public static final String assemblyShortName = "mscorlib";
+    public static final String className = "System.Collections.IEnumerable";
     public static IEnumerable ToIEnumerable(IJCOBridgeReflected from) throws Throwable {
         return new IEnumerableImplementation(from.getJCOInstance());
     }

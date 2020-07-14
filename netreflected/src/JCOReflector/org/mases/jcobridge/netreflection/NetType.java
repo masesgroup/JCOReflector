@@ -50,13 +50,13 @@ public class NetType extends NetObject {
 
     public NetType(Object instance) throws Throwable {
         if (instance instanceof IJCOBridgeReflected) {
-            JCObject obj = (JCObject)((IJCOBridgeReflected) instance).getJCOInstance();
-            classInstance = (JCType)obj.Invoke("GetType");
+            JCObject obj = (JCObject) ((IJCOBridgeReflected) instance).getJCOInstance();
+            classInstance = (JCType) obj.Invoke("GetType");
         } else if (instance instanceof JCType) {
             classInstance = (JCType) instance;
         } else if (instance instanceof JCObject) {
-            JCObject obj = (JCObject)instance;
-            classInstance = (JCType)obj.Invoke("GetType");
+            JCObject obj = (JCObject) instance;
+            classInstance = (JCType) obj.Invoke("GetType");
         } else
             throw new Exception("Cannot manage object, cannot found a JCType");
     }
@@ -96,8 +96,7 @@ public class NetType extends NetObject {
     }
 
     public static boolean CanCast(IJCOBridgeReflected to, IJCOBridgeReflected from) throws Throwable {
-        return IsAssignableFrom(to.getJCOType(), from.getJCOType())
-                || IsSubclassOf(to.getJCOType(), from.getJCOType());
+        return IsAssignableFrom(to.getJCOType(), from.getJCOType()) || IsSubclassOf(to.getJCOType(), from.getJCOType());
     }
 
     public static boolean CanCast(JCType to, IJCOBridgeReflected from) throws Throwable {
@@ -130,5 +129,14 @@ public class NetType extends NetObject {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    public static <T extends IJCOBridgeReflected> String GetType(Class<T> tClass)
+            throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
+        String TClassname = (String) tClass.getField("className").get(null);
+        String assemblyName = JCOBridgeInstance.getUseFullAssemblyName() ? "assemblyFullName" : "assemblyShortName";
+        String TAssemblyname = (String) tClass.getField(assemblyName).get(null);
+
+        return TClassname + ", " + TAssemblyname;
     }
 }

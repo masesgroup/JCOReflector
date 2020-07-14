@@ -32,6 +32,9 @@ import org.mases.jcobridge.*;
  * The base .NET class managing System.Collections.IEnumerator, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}. 
  */
 public interface IEnumerator extends IJCOBridgeReflected, Iterator<NetObject> {
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    public static final String assemblyShortName = "mscorlib";
+    public static final String className = "System.Collections.IEnumerator";
     public static IEnumerator ToIEnumerator(IJCOBridgeReflected from) throws Throwable {
         if (from.getJCOInstance() instanceof JCObject) {
             return new IEnumeratorImplementation((JCObject)from.getJCOInstance());

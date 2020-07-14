@@ -47,11 +47,23 @@ PACKAGE_IMPORT_SECTION
  */
 public interface PACKAGE_CLASS_NAME extends PACKAGE_CLASS_BASE_CLASS {
     /**
+     * Fully assembly qualified name: FULL_ASSEMBLY_CLASS_NAME
+     */
+    public static final String assemblyFullName = "FULL_ASSEMBLY_CLASS_NAME";
+    /**
+     * Assembly name: SHORT_ASSEMBLY_CLASS_NAME
+     */
+    public static final String assemblyShortName = "SHORT_ASSEMBLY_CLASS_NAME";
+    /**
+     * Qualified class name: FULLYQUALIFIED_CLASS_NAME
+     */
+    public static final String className = "FULLYQUALIFIED_CLASS_NAME";
+    /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PACKAGE_CLASS_NAME}, a cast assert is made to check if types are compatible.
      */
     public static PACKAGE_CLASS_NAME ToPACKAGE_CLASS_NAME(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("FULL_ASSEMBLY_CLASS_NAME");
-        JCType classType = bridge.GetType("FULLYQUALIFIED_CLASS_NAME, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "FULL_ASSEMBLY_CLASS_NAME" : "SHORT_ASSEMBLY_CLASS_NAME"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new PACKAGE_CLASS_NAMEImplementation(from.getJCOInstance());
     }

@@ -38,7 +38,7 @@ public class NetException extends Throwable implements IJCOBridgeReflected {
     static long serialVersionUID = 6575785859373L;
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
     public static final String assemblyShortName = "mscorlib";
-    public final static String className = "System.Exception";
+    public static final  String className = "System.Exception";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     public static JCType classType = createType();
     static JCEnum enumInstance = null;

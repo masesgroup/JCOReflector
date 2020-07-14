@@ -211,6 +211,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
      * <p>
      * Until now a single global instance is created
      * 
+     * @param assemblyName The name of the assembly to bind the instance
      * @return An {@link JCOBridge} instance
      */
     public static JCOBridge getInstance(String assemblyName) {

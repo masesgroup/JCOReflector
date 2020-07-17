@@ -63,14 +63,21 @@
                                         <CheckBox Name="cbUseParallel" Content="Use parallel build" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Use parallel build generation"/>
                                         <CheckBox Name="cbDryRun" Content="Dry Run" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Do not write any file on disk"/>
                                     </DockPanel>
-                                    <DockPanel DockPanel.Dock="Top" Height="30">
-                                        <CheckBox Name="cbExportArray" Content="Array" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable arrays export"/>
-                                        <CheckBox Name="cbExportAbstract" Content="Abstract" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable abstract classes export"/>
-                                        <CheckBox Name="cbEnableInheritance" Content="Inheritance" IsChecked="False" IsEnabled="False" VerticalContentAlignment="Center" ToolTip="Enable inheritance"/>
-                                        <CheckBox Name="cbExportExceptions" Content="Exceptions" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable exceptions export"/>
-                                        <Label Content="Max Depth" VerticalContentAlignment="Center" ToolTip="Analyzing depth to search for exception; -1 means no limits"/>
-                                        <TextBox Name="tbMaxDepth" Text="{Binding ElementName=mainWindow, Path=MaxDepth, Mode=TwoWay}" ToolTip="Analyzing depth to search for exception; -1 means no limits"/>
-                                    </DockPanel>
+                                    <GroupBox DockPanel.Dock="Top" Header="Types">
+                                        <DockPanel Height="30">
+                                            <CheckBox Name="cbExportArray" Content="Array" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable arrays export"/>
+                                            <CheckBox Name="cbDuplicateMethodNativeArray" Content="JCRefOut Array" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable duplication of methods with array of native types"/>
+                                            <CheckBox Name="cbExportExceptions" Content="Exceptions" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable exceptions export"/>
+                                            <Label Content="Max Depth" VerticalContentAlignment="Center" ToolTip="Analyzing depth to search for exception; -1 means no limits"/>
+                                            <TextBox Name="tbMaxDepth" Text="{Binding ElementName=mainWindow, Path=MaxDepth, Mode=TwoWay}" ToolTip="Analyzing depth to search for exception; -1 means no limits"/>
+                                        </DockPanel>
+                                    </GroupBox>
+                                    <GroupBox DockPanel.Dock="Top" Header="Classes">
+                                        <DockPanel  Height="30">
+                                            <CheckBox Name="cbExportAbstract" Content="Abstract" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable abstract classes export"/>
+                                            <CheckBox Name="cbEnableInheritance" Content="Inheritance" IsChecked="False" IsEnabled="False" VerticalContentAlignment="Center" ToolTip="Enable inheritance"/>
+                                        </DockPanel>
+                                    </GroupBox>
                                 </DockPanel>
                             </GroupBox>
                             <DockPanel DockPanel.Dock="Top" MinHeight="30" LastChildFill="False">

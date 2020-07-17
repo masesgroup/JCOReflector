@@ -127,6 +127,7 @@ namespace MASES.C2JReflector
             args.ExceptionThrownClauseDepth = MaxDepth;
             args.EnableAbstract = cbExportAbstract.IsChecked.Value;
             args.EnableArray = cbExportArray.IsChecked.Value;
+            args.EnableDuplicateMethodNativeArrayWithJCRefOut = cbDuplicateMethodNativeArray.IsChecked.Value;
             args.EnableInheritance = cbEnableInheritance.IsChecked.Value;
             args.DryRun = cbDryRun.IsChecked.Value;
 

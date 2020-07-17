@@ -73,6 +73,7 @@ namespace MASES.C2JReflector
             public const string VarArgsTrailer = "...";
             public const string ArrayTrailer = "[]";
             public const string MultiArrayTrailer = "[,";
+            public const string JCRefOutType = "JCRefOut";
             public const string NativeStringType = "java.lang.String";
             public const string IJCOBridgeReflected = "IJCOBridgeReflected";
             public const string NetObject = "NetObject";

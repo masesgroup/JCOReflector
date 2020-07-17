@@ -48,6 +48,7 @@ namespace MASES.C2JReflector
         public int ExceptionThrownClauseDepth { get; set; }
         public bool EnableAbstract { get; set; }
         public bool EnableArray { get; set; }
+        public bool EnableDuplicateMethodNativeArrayWithJCRefOut { get; set; }
         public bool EnableInheritance { get; set; }
         public bool DryRun { get; set; }
     }
@@ -79,6 +80,7 @@ namespace MASES.C2JReflector
 
         static bool EnableAbstract = true;
         static bool EnableArray = true;
+        static bool EnableDuplicateMethodNativeArrayWithJCRefOut = true;
         static bool EnableInheritance = false;
 
         static LogLevel LogLevel;
@@ -109,6 +111,7 @@ namespace MASES.C2JReflector
         static long analyzedCtors = 0;
         static long implementedCtors = 0;
         static long implementedMethods = 0;
+        static long implementedDuplicatedMethods = 0;
         static long analyzedMethods = 0;
         static long implementedProperties = 0;
         static long analyzedProperties = 0;
@@ -168,20 +171,20 @@ namespace MASES.C2JReflector
             bool res = true;
             try
             {
-                if(csvString != null)
+                if (csvString != null)
                 {
                     string csvFileName = string.Empty;
-                    
+
                     if (!Directory.Exists(CsvDestinationFolder)) Directory.CreateDirectory(CsvDestinationFolder);
-                    #if NET_CORE
+#if NET_CORE
                     csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, @"NetcoreStatistics.csv"));
-                    #else
+#else
                     csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, @"FrameworkStatistics.csv"));
-                    #endif
-                    File.WriteAllText(csvFileName,csvString);
+#endif
+                    File.WriteAllText(csvFileName, csvString);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string errorString = string.Format("Error writing csv files {0}", ex.Message);
                 AppendToConsole(LogLevel.Error, errorString);
@@ -201,59 +204,59 @@ namespace MASES.C2JReflector
                 //add header
                 sb.Append("parsedAssemblies;");
                 sb.Append("analyzedTypes;");
-                sb.Append("discardedTypes;"); 
-                sb.Append("discardedNonPublicTypes;"); 
-                sb.Append("discardedGenericTypes;"); 
-                sb.Append("discardedInternalTypes;"); 
+                sb.Append("discardedTypes;");
+                sb.Append("discardedNonPublicTypes;");
+                sb.Append("discardedGenericTypes;");
+                sb.Append("discardedInternalTypes;");
                 sb.Append("implementedEnum ;");
-                sb.Append("implementedEnumsFlags;"); 
-                sb.Append("analyzedEnumerators;"); 
-                sb.Append("implementedEnumerators;"); 
-                sb.Append("analyzedDelegates;"); 
-                sb.Append("implementedDelegates;"); 
-                sb.Append("implementedInterfaces;"); 
-                sb.Append("implementedClasses;"); 
-                sb.Append("implementedExceptions;"); 
+                sb.Append("implementedEnumsFlags;");
+                sb.Append("analyzedEnumerators;");
+                sb.Append("implementedEnumerators;");
+                sb.Append("analyzedDelegates;");
+                sb.Append("implementedDelegates;");
+                sb.Append("implementedInterfaces;");
+                sb.Append("implementedClasses;");
+                sb.Append("implementedExceptions;");
                 sb.Append("analyzedCtors;");
                 sb.Append("implementedCtors ;");
-                sb.Append("analyzedMethods;"); 
-                sb.Append("implementedMethods;"); 
-                sb.Append("analyzedProperties;"); 
-                sb.Append("implementedProperties;"); 
-                sb.Append("analyzedEvents;"); 
-                sb.Append("implementedEvents;"); 
-                
+                sb.Append("analyzedMethods;");
+                sb.Append("implementedMethods;");
+                sb.Append("analyzedProperties;");
+                sb.Append("implementedProperties;");
+                sb.Append("analyzedEvents;");
+                sb.Append("implementedEvents;");
+
                 sb.AppendLine();
                 //Add data
-                sb.AppendFormat("{0};", parsedAssemblies );
-                sb.AppendFormat("{0};", analyzedTypes );
-                sb.AppendFormat("{0};", discardedTypes );
-                sb.AppendFormat("{0};", discardedNonPublicTypes );
-                sb.AppendFormat("{0};", discardedGenericTypes );
-                sb.AppendFormat("{0};", discardedInternalTypes );
-                sb.AppendFormat("{0};", implementedEnums );
-                sb.AppendFormat("{0};", implementedEnumsFlags );
-                sb.AppendFormat("{0};", analyzedEnumerators );
-                sb.AppendFormat("{0};", implementedEnumerators );
-                sb.AppendFormat("{0};", analyzedDelegates );
-                sb.AppendFormat("{0};", implementedDelegates );
-                sb.AppendFormat("{0};", implementedInterfaces );
-                sb.AppendFormat("{0};", implementedClasses );
-                sb.AppendFormat("{0};", implementedExceptions );
-                sb.AppendFormat("{0};", analyzedCtors );
-                sb.AppendFormat("{0};", implementedCtors );
-                sb.AppendFormat("{0};", analyzedMethods );
-                sb.AppendFormat("{0};", implementedMethods );
-                sb.AppendFormat("{0};", analyzedProperties );
-                sb.AppendFormat("{0};", implementedProperties );
-                sb.AppendFormat("{0};", analyzedEvents );
-                sb.AppendFormat("{0};", implementedEvents );
- 
+                sb.AppendFormat("{0};", parsedAssemblies);
+                sb.AppendFormat("{0};", analyzedTypes);
+                sb.AppendFormat("{0};", discardedTypes);
+                sb.AppendFormat("{0};", discardedNonPublicTypes);
+                sb.AppendFormat("{0};", discardedGenericTypes);
+                sb.AppendFormat("{0};", discardedInternalTypes);
+                sb.AppendFormat("{0};", implementedEnums);
+                sb.AppendFormat("{0};", implementedEnumsFlags);
+                sb.AppendFormat("{0};", analyzedEnumerators);
+                sb.AppendFormat("{0};", implementedEnumerators);
+                sb.AppendFormat("{0};", analyzedDelegates);
+                sb.AppendFormat("{0};", implementedDelegates);
+                sb.AppendFormat("{0};", implementedInterfaces);
+                sb.AppendFormat("{0};", implementedClasses);
+                sb.AppendFormat("{0};", implementedExceptions);
+                sb.AppendFormat("{0};", analyzedCtors);
+                sb.AppendFormat("{0};", implementedCtors);
+                sb.AppendFormat("{0};", analyzedMethods);
+                sb.AppendFormat("{0};", implementedMethods);
+                sb.AppendFormat("{0};", analyzedProperties);
+                sb.AppendFormat("{0};", implementedProperties);
+                sb.AppendFormat("{0};", analyzedEvents);
+                sb.AppendFormat("{0};", implementedEvents);
+
                 res = sb.ToString();
             }
             catch (Exception ex)
             {
-                
+
                 errorString = string.Format("CSV FILES NOT CREATED!!! Error {0}", ex.Message);
                 AppendToConsole(LogLevel.Error, errorString);
             }
@@ -288,7 +291,7 @@ namespace MASES.C2JReflector
                 sb.AppendLine();
                 sb.AppendFormat(">   * Total Constructors: Analyzed {0} - Implemented = {1}", analyzedCtors, implementedCtors);
                 sb.AppendLine();
-                sb.AppendFormat(">   * Total Methods: Analyzed {0} - Implemented = {1}", analyzedMethods, implementedMethods);
+                sb.AppendFormat(">   * Total Methods: Analyzed {0} - Implemented = {1} - Duplicated = {2}", analyzedMethods, implementedMethods, implementedDuplicatedMethods);
                 sb.AppendLine();
                 sb.AppendFormat(">   * Total Properties: Analyzed {0} - Implemented = {1}", analyzedProperties, implementedProperties);
                 sb.AppendLine();
@@ -297,7 +300,7 @@ namespace MASES.C2JReflector
 
                 res = sb.ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 res = string.Format("Error {0}", ex.Message);
                 AppendToConsole(LogLevel.Error, res);
@@ -325,6 +328,7 @@ namespace MASES.C2JReflector
             ExceptionThrownClauseDepth = args.ExceptionThrownClauseDepth;
             EnableAbstract = args.EnableAbstract;
             EnableArray = args.EnableArray;
+            EnableDuplicateMethodNativeArrayWithJCRefOut = args.EnableDuplicateMethodNativeArrayWithJCRefOut;
             EnableInheritance = args.EnableInheritance;
             EnableWrite = !args.DryRun;
 
@@ -348,28 +352,28 @@ namespace MASES.C2JReflector
                 reportStr = GetReport();
                 string statisticsError;
                 statisticsCsv = GetStatisticsCsv(out statisticsError);
-                
-                if(! String.IsNullOrEmpty(statisticsError))
+
+                if (!String.IsNullOrEmpty(statisticsError))
                 {
                     reportStr += statisticsError;
                 }
-                else if(! WriteStatisticsCsv(statisticsCsv))
+                else if (!WriteStatisticsCsv(statisticsCsv))
                 {
-                    reportStr += "ERROR WRITING STATISTICS FILES" + Environment.NewLine ;
+                    reportStr += "ERROR WRITING STATISTICS FILES" + Environment.NewLine;
                 }
                 else
                 {
-                    reportStr += "STATISTICS FILES CREATED OK" + Environment.NewLine ;
+                    reportStr += "STATISTICS FILES CREATED OK" + Environment.NewLine;
                 }
             }
             catch (Exception ex)
             {
-                AppendToConsole(LogLevel.Error,"ExportAssembly report section error:{0}" ,ex.Message);
+                AppendToConsole(LogLevel.Error, "ExportAssembly report section error:{0}", ex.Message);
 
             }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr,statisticsCsv));
+                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, statisticsCsv));
             }
         }
 
@@ -1115,7 +1119,9 @@ namespace MASES.C2JReflector
                 if (methodName == "Equals" && parameters.Length == 1 && parameters[0].ParameterType == typeof(object)) continue;
 
                 string methodInterfaceStr = string.Empty;
-                var methodStr = string.Empty;
+                string dupMethodInterfaceStr = string.Empty;
+                string methodStr = string.Empty;
+                string dupMethodStr = string.Empty;
                 if (hasEnumerable && methodName == "GetEnumerator" && parameters.Length == 0)
                 {
                     templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumerableTemplate);
@@ -1139,6 +1145,8 @@ namespace MASES.C2JReflector
                 }
                 else
                 {
+                    bool hasNativeArrayInParameter = false;
+
                     isRetValArray = false;
                     string returnType = "void";
                     bool isInterfaceRetVal = false;
@@ -1170,6 +1178,7 @@ namespace MASES.C2JReflector
                     foreach (var parameter in parameters)
                     {
                         string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                        hasNativeArrayInParameter |= isArray && isPrimitive;
                         isManaged &= !parameter.IsOut; // out parameters not managed
                         if (!isManaged) break; // found not managed type, stop here
                         isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
@@ -1215,6 +1224,69 @@ namespace MASES.C2JReflector
                                                                    .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
                                                                    .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                     }
+
+                    if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter)
+                    {
+                        // needs a duplication in method signature
+                        inputParams = new StringBuilder();
+                        execParams = new StringBuilder();
+
+                        foreach (var parameter in parameters)
+                        {
+                            string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                            bool isNativeArrayInParameter = isArray && isPrimitive;
+                            isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
+                            var paramName = checkForkeyword(parameter.Name);
+
+                            string formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
+                            if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
+
+                            if (isNativeArrayInParameter)
+                            {
+                                inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, Const.SpecialNames.JCRefOutType, paramName));
+                                formatter = Const.Parameters.INVOKE_PARAMETER_PRIMITIVE;
+                            }
+                            else
+                            {
+                                inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
+                            }
+
+                            string objectCaster = string.Empty;
+                            if (isArray && parameters.Length == 1)
+                            {
+                                objectCaster = "(Object)";
+                            }
+
+                            execParams.Append(string.Format(formatter, objectCaster, paramName));
+                        }
+                        inputParamStr = inputParams.ToString();
+                        if (!string.IsNullOrEmpty(inputParamStr))
+                        {
+                            inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
+                        }
+
+                        execParamStr = execParams.ToString();
+
+                        dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_NAME, methodName)
+                                                    .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
+                                                    .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
+                                                    .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                    .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                    .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
+                                                    .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
+                                                    .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+
+                        if (isInterface)
+                        {
+                            dupMethodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                          .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
+                                                                          .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                                          .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                                          .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+                        }
+
+                        Interlocked.Increment(ref implementedDuplicatedMethods);
+                    }
                 }
 
                 methodsSignatureCreated.Add(item.ToString());
@@ -1223,9 +1295,17 @@ namespace MASES.C2JReflector
                 if (isInterface)
                 {
                     methodInterfaceBuilder.AppendLine(methodInterfaceStr);
+                    if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodInterfaceStr))
+                    {
+                        methodInterfaceBuilder.AppendLine(dupMethodInterfaceStr);
+                    }
                 }
 
                 methodBuilder.AppendLine(methodStr);
+                if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodStr))
+                {
+                    methodBuilder.AppendLine(dupMethodStr);
+                }
 
                 Interlocked.Increment(ref implementedMethods);
             }

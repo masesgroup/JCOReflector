@@ -1093,6 +1093,7 @@ namespace MASES.C2JReflector
 
             List<string> methodsSignatureCreated = new List<string>();
             List<string> methodsNameCreated = new List<string>();
+            List<string> methodsDuplicatedCreated = new List<string>();
 
             foreach (var item in methods)
             {
@@ -1122,6 +1123,8 @@ namespace MASES.C2JReflector
                 string dupMethodInterfaceStr = string.Empty;
                 string methodStr = string.Empty;
                 string dupMethodStr = string.Empty;
+                string dupMethodSignature = string.Empty;
+
                 if (hasEnumerable && methodName == "GetEnumerator" && parameters.Length == 0)
                 {
                     templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumerableTemplate);
@@ -1236,7 +1239,7 @@ namespace MASES.C2JReflector
                             string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                             bool isNativeArrayInParameter = isArray && isPrimitive;
                             isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
-                            var paramName = checkForkeyword(parameter.Name);
+                            var paramName = string.Format(Const.Methods.DUPLICATED_PARAMETER_PROTO, parameter.Position); // change name to avoid confusion made by parameter name when a duplicated method is searched
 
                             string formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
                             if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
@@ -1285,6 +1288,12 @@ namespace MASES.C2JReflector
                                                                           .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                         }
 
+                        dupMethodSignature = templateInterfaceToUse.Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                   .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
+                                                                   .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                                   .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                                   .Replace(Const.Exceptions.THROWABLE_TEMPLATE, string.Empty);
+
                         Interlocked.Increment(ref implementedDuplicatedMethods);
                     }
                 }
@@ -1295,16 +1304,17 @@ namespace MASES.C2JReflector
                 if (isInterface)
                 {
                     methodInterfaceBuilder.AppendLine(methodInterfaceStr);
-                    if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodInterfaceStr))
+                    if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodInterfaceStr) && !methodsDuplicatedCreated.Contains(dupMethodSignature))
                     {
                         methodInterfaceBuilder.AppendLine(dupMethodInterfaceStr);
                     }
                 }
 
                 methodBuilder.AppendLine(methodStr);
-                if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodStr))
+                if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodStr) && !methodsDuplicatedCreated.Contains(dupMethodSignature))
                 {
                     methodBuilder.AppendLine(dupMethodStr);
+                    methodsDuplicatedCreated.Add(dupMethodSignature);
                 }
 
                 Interlocked.Increment(ref implementedMethods);

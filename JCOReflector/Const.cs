@@ -297,6 +297,8 @@ namespace MASES.C2JReflector
             public const string METHOD_RETURN_INNER_TYPE = "METHOD_RETURN_INNER_TYPE";
             public const string METHOD_PARAMETERS = "METHOD_PARAMETERS";
             public const string METHOD_INVOKE_PARAMETERS = "METHOD_INVOKE_PARAMETERS";
+
+            public const string DUPLICATED_PARAMETER_PROTO = "dupParam{0}";
         }
 
         public class Properties

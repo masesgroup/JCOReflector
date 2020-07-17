@@ -1649,7 +1649,7 @@ namespace MASES.C2JReflector
                                                              .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
                                                              .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
                                                              .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, dynamicInvokeExecParamStr)
-                                                             .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, Const.SpecialNames.FINAL_KEYWORD)
+                                                             .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, string.Empty)
                                                              .Replace(Const.Methods.METHOD_OBJECT, Const.Class.INSTANCE_CLASS_NAME)
                                                              .Replace(Const.Exceptions.THROWABLE_TEMPLATE, string.Empty);
 

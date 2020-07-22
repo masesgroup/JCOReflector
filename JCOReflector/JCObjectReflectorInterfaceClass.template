@@ -46,7 +46,7 @@ PACKAGE_IMPORT_SECTION
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME" target="_top">https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME</a>
  */
-public class PACKAGE_CLASS_NAMEImplementation extends NetObject implements PACKAGE_CLASS_NAME {
+public class PACKAGE_CLASS_NAMEImplementation extends PACKAGE_CLASS_BASE_CLASS implements PACKAGE_CLASS_NAME {
     /**
      * Fully assembly qualified name: FULL_ASSEMBLY_CLASS_NAME
      */

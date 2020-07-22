@@ -48,7 +48,7 @@ public class IEnumerableImplementation extends NetObject implements IEnumerable 
         }
     }
 
-    protected final void addReference(String ref) throws Throwable {
+    void addReference(String ref) throws Throwable {
         try {
             bridge.AddReference(ref);
         } catch (JCNativeException jcne) {

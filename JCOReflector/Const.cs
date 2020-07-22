@@ -285,11 +285,15 @@ namespace MASES.C2JReflector
         {
             public const string CTOR_PARAMETERS = "CTOR_PARAMETERS";
             public const string CTOR_NEWOBJECT_PARAMETERS = "CTOR_NEWOBJECT_PARAMETERS";
+
+            public static string DEFAULT_CTOR = "    public PACKAGE_CLASS_NAME() throws Throwable {" + Environment.NewLine +
+                                                "    }" + Environment.NewLine;
         }
 
         public class Methods
         {
             public const string METHOD_MODIFIER_KEYWORD = "METHOD_MODIFIER_KEYWORD";
+            public const string METHOD_JAVA_NAME = "METHOD_JAVA_NAME";
             public const string METHOD_NAME = "METHOD_NAME";
             public const string METHOD_OBJECT = "METHOD_OBJECT";
             public const string METHOD_RETURN_TYPE = "METHOD_RETURN_TYPE";
@@ -299,11 +303,13 @@ namespace MASES.C2JReflector
             public const string METHOD_INVOKE_PARAMETERS = "METHOD_INVOKE_PARAMETERS";
 
             public const string DUPLICATED_PARAMETER_PROTO = "dupParam{0}";
+            public const string NEW_MODIFIER_PROTO = "{0}New{1}";
         }
 
         public class Properties
         {
             public const string METHOD_MODIFIER_KEYWORD = "METHOD_MODIFIER_KEYWORD";
+            public const string PROPERTY_JAVA_NAME = "PROPERTY_JAVA_NAME";
             public const string PROPERTY_NAME = "PROPERTY_NAME";
             public const string PROPERTY_OBJECT = "PROPERTY_OBJECT";
             public const string PROPERTY_INPUTTYPE = "PROPERTY_INPUTTYPE";
@@ -318,6 +324,7 @@ namespace MASES.C2JReflector
         public class Events
         {
             public const string METHOD_MODIFIER_KEYWORD = "METHOD_MODIFIER_KEYWORD";
+            public const string EVENT_JAVA_NAME = "EVENT_JAVA_NAME";
             public const string EVENT_NAME = "EVENT_NAME";
             public const string EVENT_OBJECT = "EVENT_OBJECT";
             public const string EVENT_HANDLER_TYPE = "EVENT_HANDLER_TYPE";

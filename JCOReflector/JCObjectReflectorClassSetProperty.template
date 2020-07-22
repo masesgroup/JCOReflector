@@ -1,4 +1,4 @@
-    public final METHOD_MODIFIER_KEYWORDvoid setPROPERTY_NAME(PROPERTY_INPUTTYPE PROPERTY_INPUTNAME) throws ThrowableTHROWABLE_TEMPLATE {
+    public METHOD_MODIFIER_KEYWORDvoid setPROPERTY_JAVA_NAME(PROPERTY_INPUTTYPE PROPERTY_INPUTNAME) throws ThrowableTHROWABLE_TEMPLATE {
         if (PROPERTY_OBJECT == null)
             throw new UnsupportedOperationException("PROPERTY_OBJECT is null.");
         try {

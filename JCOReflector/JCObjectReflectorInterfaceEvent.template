@@ -1,3 +1,3 @@
-    public METHOD_MODIFIER_KEYWORDvoid addEVENT_NAME(EVENT_HANDLER_TYPE handler) throws Throwable;
+    public METHOD_MODIFIER_KEYWORDvoid addEVENT_JAVA_NAME(EVENT_HANDLER_TYPE handler) throws Throwable;
 
-    public METHOD_MODIFIER_KEYWORDvoid removeEVENT_NAME(EVENT_HANDLER_TYPE handler) throws Throwable;
+    public METHOD_MODIFIER_KEYWORDvoid removeEVENT_JAVA_NAME(EVENT_HANDLER_TYPE handler) throws Throwable;

@@ -48,7 +48,7 @@ public class IEnumeratorImplementation extends NetObject implements IEnumerator 
         }
     }
 
-    protected final void addReference(String ref) throws Throwable {
+    void addReference(String ref) throws Throwable {
         try {
             bridge.AddReference(ref);
         } catch (JCNativeException jcne) {
@@ -56,8 +56,10 @@ public class IEnumeratorImplementation extends NetObject implements IEnumerator 
         }
     }
 
-    public IEnumeratorImplementation(JCObject instance) {
-        classInstance = instance.iterator();
+    public IEnumeratorImplementation(Object instance) {
+        if (instance instanceof JCObject) {
+            classInstance = ((JCObject) instance).iterator();
+        }
     }
 
     public String getJCOAssemblyName() {
@@ -88,10 +90,14 @@ public class IEnumeratorImplementation extends NetObject implements IEnumerator 
     }
 
 	public boolean hasNext() {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
 		return classInstance.hasNext();
 	}
 
 	public NetObject next() {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
 		try {
 			return new NetObject(classInstance.next());
 		} catch (Throwable jce) {

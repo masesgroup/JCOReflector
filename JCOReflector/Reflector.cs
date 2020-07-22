@@ -628,7 +628,7 @@ namespace MASES.C2JReflector
             bool isException = false;
             string reflectorInterfaceClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceClassTemplate);
             string reflectorInterfaceTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceTemplate);
-
+            string packageBaseClass = Const.SpecialNames.NetObject;
             IList<Type> imports = new List<Type>();
 
             string packageBaseInterface = Const.SpecialNames.IJCOBridgeReflected;
@@ -638,13 +638,18 @@ namespace MASES.C2JReflector
                 withInheritance = true;
                 foreach (var inter in item.GetInterfaces())
                 {
+                    if (!isManagedType(inter, 0, 1)) continue;
+                    if (inter == typeof(IEnumerable)) packageBaseClass = Const.SpecialNames.NetIEnumerable + Const.SpecialNames.ImplementationTrailer;
+                    if (inter == typeof(IEnumerator)) packageBaseClass = Const.SpecialNames.NetIEnumerator + Const.SpecialNames.ImplementationTrailer;
                     packageBaseInterface += string.Format(", {0}", inter.Name);
+                    imports.Add(inter);
                 }
             }
 
             string implementsStr = string.Empty;
             var packageName = item.Namespace.ToLowerInvariant();
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.PACKAGE_NAME, packageName)
+                                                                             .Replace(Const.Class.PACKAGE_CLASS_BASE_CLASS, packageBaseClass)
                                                                              .Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name)
                                                                              .Replace(Const.Class.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                                              .Replace(Const.Class.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
@@ -721,7 +726,7 @@ namespace MASES.C2JReflector
             if (EnableInheritance)
             {
                 withInheritance = true;
-                if (item.BaseType != typeof(object) && item.BaseType != typeof(Exception))
+                if (isManagedType(item.BaseType, 0, 1) && item.BaseType != typeof(object) && item.BaseType != typeof(Exception) && item.BaseType != typeof(Type))
                 {
                     packageBaseClass = item.BaseType.Name;
                     imports.Add(item.BaseType);
@@ -743,7 +748,11 @@ namespace MASES.C2JReflector
             string ctorStr = string.Empty;
             if (EnableAbstract && !item.IsAbstract)
             {
-                ctorStr = exportingConstructors(item, imports, isException, destFolder, assemblyname);
+                ctorStr = exportingConstructors(item, imports, withInheritance, isException, destFolder, assemblyname);
+            }
+            else if (!isException)
+            {
+                ctorStr = Const.CTor.DEFAULT_CTOR.Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name);
             }
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.CONSTRUCTORS_SECTION, ctorStr);
 
@@ -775,9 +784,8 @@ namespace MASES.C2JReflector
                 else implementsStr += ", " + implStr; // proto for other interface
             }
 
-            reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.PACKAGE_CLASS_IMPLEMENTS_SECTION, implementsStr);
-
-            reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.JCOREFLECTOR_VERSION, reflectorVersion);
+            reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.PACKAGE_CLASS_IMPLEMENTS_SECTION, implementsStr)
+                                                           .Replace(Const.Class.JCOREFLECTOR_VERSION, reflectorVersion);
 
             var pathToSaveTo = packageName.Replace('.', '\\');
             pathToSaveTo = System.IO.Path.Combine(destFolder, pathToSaveTo);
@@ -829,10 +837,10 @@ namespace MASES.C2JReflector
             return exceptionStr;
         }
 
-        static string exportingConstructors(Type type, IList<Type> imports, bool isException, string destFolder, string assemblyname)
+        static string exportingConstructors(Type type, IList<Type> imports, bool withInheritance, bool isException, string destFolder, string assemblyname)
         {
             var ctorTypes = type.GetConstructors();
-            if (ctorTypes.Length == 0) return string.Empty;
+            if (!withInheritance && ctorTypes.Length == 0) return string.Empty;
 
             SortedDictionary<string, ConstructorInfo> sortedData = new SortedDictionary<string, ConstructorInfo>();
             foreach (var item in ctorTypes)
@@ -852,11 +860,12 @@ namespace MASES.C2JReflector
             var ctorClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorClassConstructorTemplate);
             ctorClassTemplate = ctorClassTemplate.Replace(Const.Class.PACKAGE_CLASS_NAME, type.Name);
 
-            var defaultCtor = ctorClassTemplate.Replace(Const.CTor.CTOR_PARAMETERS, string.Empty)
-                                               .Replace(Const.CTor.CTOR_NEWOBJECT_PARAMETERS, string.Empty);
+            var defaultCtor = Const.CTor.DEFAULT_CTOR.Replace(Const.Class.PACKAGE_CLASS_NAME, type.Name);
 
             StringBuilder ctors = new StringBuilder();
-            ctors.AppendLine();
+
+            bool hasDefaultCtor = false;
+
             foreach (var item in ctorTypes)
             {
                 Interlocked.Increment(ref analyzedCtors);
@@ -873,6 +882,8 @@ namespace MASES.C2JReflector
                     if (parameters.Length == 1 && (parameters[0].ParameterType == typeof(string) || typeof(Exception).IsAssignableFrom(parameters[0].ParameterType))) continue;
                     if (parameters.Length == 2 && parameters[0].ParameterType == typeof(string) && typeof(Exception).IsAssignableFrom(parameters[1].ParameterType)) continue;
                 }
+
+                hasDefaultCtor |= parameters.Length == 0;
 
                 StringBuilder ctorParams = new StringBuilder();
                 StringBuilder newObjectParams = new StringBuilder();
@@ -925,7 +936,17 @@ namespace MASES.C2JReflector
                 Interlocked.Increment(ref implementedCtors);
             }
 
-            return ctors.ToString();
+            string ctorsStr = ctors.ToString();
+
+            if (!isException && !hasDefaultCtor)
+            {
+                ctors = new StringBuilder();
+                ctors.AppendLine(defaultCtor);
+                ctors.AppendLine(ctorsStr);
+                ctorsStr = ctors.ToString();
+            }
+
+            return ctorsStr;
         }
 
         static bool isDifferentOnlyForRetVal(IList<string> signatures, string signToCheck, string methodName)
@@ -1026,17 +1047,54 @@ namespace MASES.C2JReflector
             return param.IsDefined(typeof(ParamArrayAttribute), false);
         }
 
-        static void searchMethods(Type type, IList<MethodInfo> allMethods)
+        static void searchMethods(Type type, IList<MethodInfo> allMethods, bool isInterface)
         {
-            foreach (var item in type.GetMethods())
+            TypeInfo t = type.GetTypeInfo();
+            foreach (var item in t.GetRuntimeMethods())
             {
                 allMethods.Add(item);
             }
 
-            foreach (var item in type.GetInterfaces())
+            if (isInterface)
             {
-                searchMethods(item, allMethods);
+                foreach (var item in t.ImplementedInterfaces)
+                {
+                    if (!isManagedType(item, 0, 1)) continue;
+                    searchMethods(item, allMethods, isInterface);
+                }
             }
+            else if (type.BaseType != null)
+            {
+                if (!isManagedType(type.BaseType, 0, 1) || type.BaseType == typeof(object) || type.BaseType == typeof(Exception) || type.BaseType == typeof(Type)) return;
+                searchMethods(type.BaseType, allMethods, isInterface);
+            }
+        }
+
+        static string signatureWithoutRetVal(MethodInfo method)
+        {
+            if (method == null) return string.Empty;
+            var sign = method.ToString();
+            sign = sign.Substring(sign.IndexOf(' '));
+            return sign;
+        }
+
+        static bool isNewMethod(Type type, MethodInfo method, IList<MethodInfo> allMethods)
+        {
+            string refSign = signatureWithoutRetVal(method);
+            if (method.GetBaseDefinition().DeclaringType == type)
+            {
+                foreach (var item in allMethods)
+                {
+                    if (item.Name == method.Name
+                        && item.DeclaringType != type
+                        && signatureWithoutRetVal(item) == refSign)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
 
         static string exportingMethods(Type type, IList<Type> imports, bool withInheritance, string destFolder, string assemblyname, out string returnEnumeratorType, out string returnInterfaceSection)
@@ -1048,17 +1106,39 @@ namespace MASES.C2JReflector
 
             MethodInfo[] methods = null;
 
-            if (type.IsInterface && !withInheritance)
+            /*
+            if (withInheritance)
             {
-                isInterface = true;
+                if (type.IsInterface)
+                {
+                    isInterface = true;
+                    List<MethodInfo> allMethods = new List<MethodInfo>();
+                    searchMethods(type, allMethods);
+                    methods = allMethods.ToArray();
+                }
+                else
+                {
+                    methods = type.GetMethods();
+                }
+            }
+            else
+            {
+                if (type.IsInterface)
+                {
+                    isInterface = true;
+                }
                 List<MethodInfo> allMethods = new List<MethodInfo>();
                 searchMethods(type, allMethods);
                 methods = allMethods.ToArray();
             }
-            else
+            */
+            if (type.IsInterface)
             {
-                methods = type.GetMethods();
+                isInterface = true;
             }
+            List<MethodInfo> allMethods = new List<MethodInfo>();
+            searchMethods(type, allMethods, isInterface);
+            methods = allMethods.ToArray();
 
             if (methods.Length == 0) return string.Empty;
 
@@ -1099,6 +1179,13 @@ namespace MASES.C2JReflector
             {
                 var methodName = item.Name;
 
+                isPrimitive = true;
+                defaultPrimitiveValue = string.Empty;
+                isSpecial = false;
+                isArray = false;
+                isRetValArray = false;
+                isManaged = true;
+
                 if (!item.IsPublic
                     || item.IsSpecialName // remove properties
                     || methodsSignatureCreated.Contains(item.ToString()) // avoid duplicated methods from inheritance
@@ -1108,7 +1195,7 @@ namespace MASES.C2JReflector
 
                 if (item.IsGenericMethod // don't manage generic methods
                     || item.ContainsGenericParameters
-                    || (withInheritance ? item.DeclaringType != type : false)
+                    || ((withInheritance && !isInterface) ? item.DeclaringType != type : false)
                     || (!methodsNameCreated.Contains(methodName) ? false : isDifferentOnlyForRetVal(methodsSignatureCreated, item.ToString(), methodName))
                    ) continue;
 
@@ -1210,7 +1297,15 @@ namespace MASES.C2JReflector
 
                     var exceptionStr = exceptionStringBuilder(item, imports);
 
-                    methodStr = templateToUse.Replace(Const.Methods.METHOD_NAME, methodName)
+                    bool isNewMethodVal = (withInheritance && !isInterface) ? isNewMethod(type, item, allMethods) : false;
+                    string newMethodName = string.Empty;
+                    if (isNewMethodVal)
+                    {
+                        newMethodName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, methodName, type.Name);
+                    }
+
+                    methodStr = templateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                             .Replace(Const.Methods.METHOD_NAME, methodName)
                                              .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
                                              .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
                                              .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
@@ -1219,9 +1314,10 @@ namespace MASES.C2JReflector
                                              .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
                                              .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
 
-                    if (isInterface)
+                    if (withInheritance ? (isInterface && (item.GetBaseDefinition().DeclaringType == type)) : isInterface)
                     {
-                        methodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_NAME, methodName)
+                        methodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                                                   .Replace(Const.Methods.METHOD_NAME, methodName)
                                                                    .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
                                                                    .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
                                                                    .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
@@ -1270,7 +1366,8 @@ namespace MASES.C2JReflector
 
                         execParamStr = execParams.ToString();
 
-                        dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_NAME, methodName)
+                        dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                                    .Replace(Const.Methods.METHOD_NAME, methodName)
                                                     .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
                                                     .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
                                                     .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
@@ -1279,16 +1376,18 @@ namespace MASES.C2JReflector
                                                     .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
                                                     .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
 
-                        if (isInterface)
+                        if (withInheritance ? (isInterface && (item.GetBaseDefinition().DeclaringType == type)) : isInterface)
                         {
-                            dupMethodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_NAME, methodName)
+                            dupMethodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                                                          .Replace(Const.Methods.METHOD_NAME, methodName)
                                                                           .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
                                                                           .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
                                                                           .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
                                                                           .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                         }
 
-                        dupMethodSignature = templateInterfaceToUse.Replace(Const.Methods.METHOD_NAME, methodName)
+                        dupMethodSignature = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                                                   .Replace(Const.Methods.METHOD_NAME, methodName)
                                                                    .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
                                                                    .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
                                                                    .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
@@ -1325,12 +1424,12 @@ namespace MASES.C2JReflector
             return methodBuilder.ToString();
         }
 
-        static string buildPropertySignature(string templateToUse, string propertyName, string propertyType, string exceptionStr, bool isPrimitive, bool isArray, bool needInterfaceImplementation, bool statics)
+        static string buildPropertySignature(string templateToUse, string propertyJavaName, string propertyName, string propertyType, string exceptionStr, bool isPrimitive, bool isArray, bool needInterfaceImplementation, bool statics)
         {
             StringBuilder inputParams = new StringBuilder();
             StringBuilder execParams = new StringBuilder();
 
-            propertyName = checkForkeyword(propertyName);
+            propertyJavaName = checkForkeyword(propertyJavaName);
 
             string inputParamStr = inputParams.ToString();
             if (!string.IsNullOrEmpty(inputParamStr))
@@ -1342,7 +1441,8 @@ namespace MASES.C2JReflector
             if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
 
             string execParamStr = execParams.ToString();
-            var propertyStr = templateToUse.Replace(Const.Properties.PROPERTY_NAME, propertyName)
+            var propertyStr = templateToUse.Replace(Const.Properties.PROPERTY_JAVA_NAME, propertyJavaName)
+                                           .Replace(Const.Properties.PROPERTY_NAME, propertyName)
                                            .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr)
                                            .Replace(Const.Properties.PROPERTY_INPUTTYPE, (isArray) ? propertyType + Const.SpecialNames.ArrayTrailer : propertyType)
                                            .Replace(Const.Properties.PROPERTY_INPUTNAME, propertyName)
@@ -1357,16 +1457,45 @@ namespace MASES.C2JReflector
             return propertyStr;
         }
 
-        static void searchProperties(Type type, BindingFlags flags, IList<Tuple<bool, PropertyInfo>> allProperties)
+        static bool isNewProperty(Type type, PropertyInfo property, IList<Tuple<bool, PropertyInfo>> allProperties, bool isGet)
+        {
+            MethodInfo method = isGet ? property.GetMethod : property.SetMethod;
+            string refSign = signatureWithoutRetVal(method);
+            if (method.GetBaseDefinition().DeclaringType == type)
+            {
+                foreach (var item in allProperties)
+                {
+                    if (item.Item2.Name == property.Name
+                        && item.Item2.DeclaringType != type
+                        && signatureWithoutRetVal(isGet ? item.Item2.GetMethod : item.Item2.SetMethod) == refSign)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        static void searchProperties(Type type, BindingFlags flags, IList<Tuple<bool, PropertyInfo>> allProperties, bool isInterface)
         {
             foreach (var item in type.GetProperties(flags))
             {
                 allProperties.Add(new Tuple<bool, PropertyInfo>(false, item));
             }
 
-            foreach (var item in type.GetInterfaces())
+            if (isInterface)
             {
-                searchProperties(item, flags, allProperties);
+                foreach (var item in type.GetInterfaces())
+                {
+                    if (!isManagedType(item, 0, 1)) continue;
+                    searchProperties(item, flags, allProperties, isInterface);
+                }
+            }
+            else if (type.BaseType != null)
+            {
+                if (!isManagedType(type.BaseType, 0, 1) || type.BaseType == typeof(object) || type.BaseType == typeof(Exception) || type.BaseType == typeof(Type)) return;
+                searchProperties(type.BaseType, flags, allProperties, isInterface);
             }
         }
 
@@ -1376,24 +1505,49 @@ namespace MASES.C2JReflector
             returnInterfaceSection = string.Empty;
             List<Tuple<bool, PropertyInfo>> properties = new List<Tuple<bool, PropertyInfo>>();
 
-            if (type.IsInterface && !withInheritance)
+            /*
+            if (withInheritance)
             {
-                isInterface = true;
-                searchProperties(type, BindingFlags.Public | BindingFlags.Instance, properties);
+                if (type.IsInterface)
+                {
+                    isInterface = true;
+                    searchProperties(type, BindingFlags.Public | BindingFlags.Instance, properties);
+                    searchProperties(type, BindingFlags.Public | BindingFlags.Static, properties);
+                }
+                else
+                {
+                    var props = type.GetProperties(BindingFlags.Public | BindingFlags.Instance); // prefer instance properties against static, Java don't like same name of functions
+                    foreach (var item in props)
+                    {
+                        properties.Add(new Tuple<bool, PropertyInfo>(false, item));
+                    }
+                    props = type.GetProperties(BindingFlags.Public | BindingFlags.Static);
+                    foreach (var item in props)
+                    {
+                        properties.Add(new Tuple<bool, PropertyInfo>(true, item));
+                    }
+                }
             }
             else
             {
-                var props = type.GetProperties(BindingFlags.Public | BindingFlags.Instance); // prefer instance properties against static, Java don't like same name of functions
-                foreach (var item in props)
+                if (type.IsInterface)
                 {
-                    properties.Add(new Tuple<bool, PropertyInfo>(false, item));
+                    isInterface = true;
                 }
-                props = type.GetProperties(BindingFlags.Public | BindingFlags.Static);
-                foreach (var item in props)
-                {
-                    properties.Add(new Tuple<bool, PropertyInfo>(true, item));
-                }
+
+                searchProperties(type, BindingFlags.Public | BindingFlags.Instance, properties);
+                searchProperties(type, BindingFlags.Public | BindingFlags.Static, properties);
             }
+
+            */
+
+            if (type.IsInterface)
+            {
+                isInterface = true;
+            }
+
+            searchProperties(type, BindingFlags.Public | BindingFlags.Instance, properties, isInterface);
+            searchProperties(type, BindingFlags.Public | BindingFlags.Static, properties, isInterface);
 
             if (properties.Count == 0) return string.Empty;
 
@@ -1423,7 +1577,7 @@ namespace MASES.C2JReflector
             List<string> propertiesSignaturesCreated = new List<string>();
             List<string> propertiesNameCreated = new List<string>();
 
-            foreach (var prop in properties)
+            foreach (var prop in properties.ToArray())
             {
                 Interlocked.Increment(ref analyzedProperties);
 
@@ -1431,6 +1585,12 @@ namespace MASES.C2JReflector
                 var item = prop.Item2;
 
                 var propertyName = item.Name;
+
+                isPrimitive = true;
+                defaultPrimitiveValue = string.Empty;
+                isManaged = true;
+                isSpecial = false;
+                isArray = false;
 
                 if (isException)
                 {
@@ -1440,7 +1600,7 @@ namespace MASES.C2JReflector
 
                 if (propertiesSignaturesCreated.Contains(item.ToString())
                     || item.IsSpecialName
-                    || (withInheritance ? item.DeclaringType != type : false)
+                    || ((withInheritance && !isInterface) ? item.DeclaringType != type : false)
                     || (!propertiesNameCreated.Contains(propertyName) ? false : isDifferentOnlyForRetVal(propertiesSignaturesCreated, item.ToString(), propertyName))
                    ) continue;
 
@@ -1458,41 +1618,61 @@ namespace MASES.C2JReflector
 
                     var exceptionStr = exceptionStringBuilder(item.GetMethod, imports);
 
-                    if (isInterface)
+                    bool isNewPropertyVal = (withInheritance && !isInterface) ? isNewProperty(type, item, properties, true) : false;
+                    string newPropertyName = string.Empty;
+                    if (isNewPropertyVal)
+                    {
+                        newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, type.Name);
+                    }
+
+                    if (withInheritance ? (isInterface && (item.GetMethod.GetBaseDefinition().DeclaringType == type)) : isInterface)
                     {
                         string propertyInterfaceTemplate = Const.Templates.GetTemplate(isArray ? Const.Templates.ReflectorInterfaceGetArrayTemplate : Const.Templates.ReflectorInterfaceGetTemplate);
 
-                        var propertyInterfaceStr = buildPropertySignature(propertyInterfaceTemplate, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics);
+                        var propertyInterfaceStr = buildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics);
                         propertyInterfaceBuilder.AppendLine(propertyInterfaceStr);
                     }
 
-                    if (isArray)
+                    if (withInheritance ? (isInterface || (item.GetMethod.GetBaseDefinition().DeclaringType == type)) : true)
                     {
-                        templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayGetTemplate : Const.Templates.ReflectorClassObjectArrayGetTemplate);
-                    }
-                    else
-                    {
-                        templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeGetTemplate : Const.Templates.ReflectorClassObjectGetTemplate);
-                    }
+                        if (isArray)
+                        {
+                            templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayGetTemplate : Const.Templates.ReflectorClassObjectArrayGetTemplate);
+                        }
+                        else
+                        {
+                            templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeGetTemplate : Const.Templates.ReflectorClassObjectGetTemplate);
+                        }
 
-                    var propertyStr = buildPropertySignature(templateToUse, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics);
-                    propertyBuilder.AppendLine(propertyStr);
+                        var propertyStr = buildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics);
+                        propertyBuilder.AppendLine(propertyStr);
+                    }
                 }
                 if (item.CanWrite) // set
                 {
                     var exceptionStr = exceptionStringBuilder(item.SetMethod, imports);
 
-                    if (isInterface)
+                    bool isNewPropertyVal = (withInheritance && !isInterface) ? isNewProperty(type, item, properties, false) : false;
+                    string newPropertyName = string.Empty;
+                    if (isNewPropertyVal)
+                    {
+                        newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, type.Name);
+                    }
+
+                    if (withInheritance ? (isInterface && (item.SetMethod.GetBaseDefinition().DeclaringType == type)) : isInterface)
                     {
                         string propertyInterfaceTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceSetTemplate);
 
-                        var propertyInterfaceStr = buildPropertySignature(propertyInterfaceTemplate, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics);
+                        var propertyInterfaceStr = buildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics);
                         propertyInterfaceBuilder.AppendLine(propertyInterfaceStr);
                     }
 
-                    templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassSetTemplate);
-                    var propertyStr = buildPropertySignature(templateToUse, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics);
-                    propertyBuilder.AppendLine(propertyStr);
+                    if (withInheritance ? (isInterface || (item.SetMethod.GetBaseDefinition().DeclaringType == type)) : true)
+                    {
+                        templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassSetTemplate);
+                        var propertyStr = buildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics);
+                        propertyBuilder.AppendLine(propertyStr);
+                    }
                 }
 
                 propertiesSignaturesCreated.Add(item.ToString());
@@ -1694,17 +1874,45 @@ namespace MASES.C2JReflector
             return true;
         }
 
+        static bool isNewEvent(Type type, EventInfo eventInfo, IList<EventInfo> allEvents)
+        {
+            MethodInfo method = eventInfo.AddMethod;
+            string refSign = signatureWithoutRetVal(eventInfo.AddMethod);
+            if (method.GetBaseDefinition().DeclaringType == type)
+            {
+                foreach (var item in allEvents)
+                {
+                    if (item.Name == eventInfo.Name
+                        && item.DeclaringType != type
+                        && signatureWithoutRetVal(item.AddMethod) == refSign)
+                    {
+                        return true;
+                    }
+                }
+            }
 
-        static void searchEvents(Type type, BindingFlags flags, IList<EventInfo> allEvents)
+            return false;
+        }
+
+        static void searchEvents(Type type, BindingFlags flags, IList<EventInfo> allEvents, bool isInterface)
         {
             foreach (var item in type.GetEvents(flags))
             {
                 allEvents.Add(item);
             }
 
-            foreach (var item in type.GetInterfaces())
+            if (isInterface)
             {
-                searchEvents(item, flags, allEvents);
+                foreach (var item in type.GetInterfaces())
+                {
+                    if (!isManagedType(item, 0, 1)) continue;
+                    searchEvents(item, flags, allEvents, isInterface);
+                }
+            }
+            else if (type.BaseType != null)
+            {
+                if (!isManagedType(type.BaseType, 0, 1) || type.BaseType == typeof(object) || type.BaseType == typeof(Exception) || type.BaseType == typeof(Type)) return;
+                searchEvents(type.BaseType, flags, allEvents, isInterface);
             }
         }
 
@@ -1719,16 +1927,37 @@ namespace MASES.C2JReflector
             EventInfo[] events = null;
 
             List<EventInfo> allEvents = new List<EventInfo>();
-            if (type.IsInterface && !withInheritance)
+            /*
+            if (withInheritance)
             {
-                isInterface = true;
-                searchEvents(type, flags, allEvents);
-                events = allEvents.ToArray();
+                if (type.IsInterface)
+                {
+                    isInterface = true;
+                    searchEvents(type, flags, allEvents);
+                    events = allEvents.ToArray();
+                }
+                else
+                {
+                    events = type.GetEvents(flags);
+                }
             }
             else
             {
-                events = type.GetEvents(flags);
+                if (type.IsInterface)
+                {
+                    isInterface = true;
+                }
+                searchEvents(type, flags, allEvents);
+                events = allEvents.ToArray();
             }
+            */
+
+            if (type.IsInterface)
+            {
+                isInterface = true;
+            }
+            searchEvents(type, flags, allEvents, isInterface);
+            events = allEvents.ToArray();
 
             if (events.Length == 0) return string.Empty;
 
@@ -1768,6 +1997,12 @@ namespace MASES.C2JReflector
 
                 var eventName = item.Name;
 
+                isPrimitive = true;
+                defaultPrimitiveValue = string.Empty;
+                isConcrete = true;
+                isSpecial = false;
+                isArray = false;
+
                 if (isException)
                 {
                     if (eventName == "Message") continue;
@@ -1776,7 +2011,7 @@ namespace MASES.C2JReflector
 
                 if (eventsSignaturesCreated.Contains(item.ToString())
                     || item.IsSpecialName
-                    || (withInheritance ? item.DeclaringType != type : false)
+                    || ((withInheritance && !isInterface) ? item.DeclaringType != type : false)
                     || (!eventsNameCreated.Contains(eventName) ? false : isDifferentOnlyForRetVal(eventsSignaturesCreated, item.ToString(), eventName))
                    ) continue;
 
@@ -1789,7 +2024,16 @@ namespace MASES.C2JReflector
                 eventType = convertType(imports, item.EventHandlerType, out isPrimitive, out defaultPrimitiveValue, out isConcrete, out isSpecial, out isArray);
                 if (!isConcrete) continue; // found not managed type, jump to next 
 
-                var eventStr = templateToUse.Replace(Const.Events.EVENT_NAME, eventName)
+                bool isNewEventVal = (withInheritance && !isInterface) ? isNewEvent(type, item, eventLst) : false;
+                string newEventName = string.Empty;
+                if (isNewEventVal)
+                {
+                    newEventName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, eventName, type.Name);
+                }
+
+
+                var eventStr = templateToUse.Replace(Const.Events.EVENT_JAVA_NAME, isNewEventVal ? newEventName : eventName)
+                                            .Replace(Const.Events.EVENT_NAME, eventName)
                                             .Replace(Const.Events.EVENT_HANDLER_TYPE, item.EventHandlerType.Name)
                                             .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, statics ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
                                             .Replace(Const.Events.EVENT_OBJECT, statics ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME);
@@ -1797,12 +2041,13 @@ namespace MASES.C2JReflector
                 eventsSignaturesCreated.Add(item.ToString());
                 eventsNameCreated.Add(item.Name);
 
-                if (isInterface)
+                if (withInheritance ? (isInterface && (item.AddMethod.GetBaseDefinition().DeclaringType == type)) : isInterface)
                 {
-                    var eventInterfaceStr = templateInterfaceToUse.Replace(Const.Events.EVENT_NAME, eventName)
-                                              .Replace(Const.Events.EVENT_HANDLER_TYPE, item.EventHandlerType.Name)
-                                              .Replace(Const.Events.METHOD_MODIFIER_KEYWORD, statics ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
-                                              .Replace(Const.Events.EVENT_OBJECT, statics ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME);
+                    var eventInterfaceStr = templateInterfaceToUse.Replace(Const.Events.EVENT_JAVA_NAME, isNewEventVal ? newEventName : eventName)
+                                                                  .Replace(Const.Events.EVENT_NAME, eventName)
+                                                                  .Replace(Const.Events.EVENT_HANDLER_TYPE, item.EventHandlerType.Name)
+                                                                  .Replace(Const.Events.METHOD_MODIFIER_KEYWORD, statics ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
+                                                                  .Replace(Const.Events.EVENT_OBJECT, statics ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME);
 
                     eventInterfaceBuilder.AppendLine(eventInterfaceStr);
                 }
@@ -1824,13 +2069,13 @@ namespace MASES.C2JReflector
             {
                 if (item.IsInterface)
                 {
-                    if (isManagedType(item, 0, 1) && item != typeof(IEnumerator))
+                    if (isManagedType(item, 0, 1) && item != typeof(IEnumerator) && item != typeof(IEnumerable))
                     {
                         importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, item.Namespace.ToLowerInvariant(), item.Name));
                         importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, item.Namespace.ToLowerInvariant(), item.Name + Const.SpecialNames.ImplementationTrailer));
                     }
                 }
-                else
+                else if (isManagedType(item, 0, 1))
                 {
                     importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, item.Namespace.ToLowerInvariant(), item.Name));
                 }

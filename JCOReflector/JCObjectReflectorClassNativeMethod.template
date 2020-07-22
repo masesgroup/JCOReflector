@@ -1,4 +1,4 @@
-    public final METHOD_MODIFIER_KEYWORDMETHOD_RETURN_TYPE METHOD_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
+    public METHOD_MODIFIER_KEYWORDMETHOD_RETURN_TYPE METHOD_JAVA_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
         if (METHOD_OBJECT == null)
             throw new UnsupportedOperationException("METHOD_OBJECT is null.");
         try {

@@ -74,8 +74,8 @@
                                     </GroupBox>
                                     <GroupBox DockPanel.Dock="Top" Header="Classes">
                                         <DockPanel  Height="30">
-                                            <CheckBox Name="cbExportAbstract" Content="Abstract" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable abstract classes export"/>
-                                            <CheckBox Name="cbEnableInheritance" Content="Inheritance" IsChecked="False" IsEnabled="False" VerticalContentAlignment="Center" ToolTip="Enable inheritance"/>
+                                            <CheckBox Name="cbExportAbstract" Content="Abstract" IsChecked="{Binding ElementName=mainWindow, Path=EnableAbstract, Mode=TwoWay}" VerticalContentAlignment="Center" ToolTip="Enable abstract classes export" />
+                                            <CheckBox Name="cbEnableInheritance" Content="Inheritance" IsChecked="True" IsEnabled="{Binding ElementName=mainWindow, Path=EnableAbstract, Mode=OneWay}" VerticalContentAlignment="Center" ToolTip="Enable inheritance"/>
                                         </DockPanel>
                                     </GroupBox>
                                 </DockPanel>

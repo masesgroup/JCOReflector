@@ -67,6 +67,16 @@ namespace MASES.C2JReflector
         public static readonly DependencyProperty MaxDepthProperty =
             DependencyProperty.Register("MaxDepth", typeof(int), typeof(MainWindow), new PropertyMetadata(10));
 
+        public bool EnableAbstract
+        {
+            get { return (bool)GetValue(EnableAbstractProperty); }
+            set { SetValue(EnableAbstractProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for EnableAbstract.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty EnableAbstractProperty =
+            DependencyProperty.Register("EnableAbstract", typeof(bool), typeof(MainWindow), new PropertyMetadata(true));
+
         public MainWindow()
         {
             InitializeComponent();

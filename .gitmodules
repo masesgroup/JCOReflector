@@ -1,0 +1,6 @@
+[submodule "netreflected/docs/Core"]
+	path = netreflected/docs/Core
+	url = https://github.com/masesgroup/CoreDocs.git
+[submodule "netreflected/docs/Framework"]
+	path = netreflected/docs/Framework
+	url = https://github.com/masesgroup/FrameworkDocs.git

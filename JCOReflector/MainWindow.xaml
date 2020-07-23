@@ -31,6 +31,7 @@
         xmlns:local="clr-namespace:MASES.C2JReflector"
         mc:Ignorable="d" SizeToContent="WidthAndHeight">
     <DockPanel>
+        <Button Name="btnStop" DockPanel.Dock="Top" Content="Abort current operation..." Visibility="Collapsed" Click="btnStop_Click"/>
         <DockPanel DockPanel.Dock="Left" Name="commandPanel">
             <GroupBox DockPanel.Dock="Top" Header="General settings">
                 <DockPanel>

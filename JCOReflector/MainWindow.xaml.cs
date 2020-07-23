@@ -23,9 +23,9 @@
  */
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -37,6 +37,8 @@ namespace MASES.C2JReflector
     /// </summary>
     public partial class MainWindow : Window
     {
+        CancellationTokenSource cts = null;
+
         public string RepositoryRoot
         {
             get { return (string)GetValue(RepositoryRootProperty); }
@@ -125,7 +127,11 @@ namespace MASES.C2JReflector
         private void btnExecute_Click(object sender, RoutedEventArgs e)
         {
             commandPanel.IsEnabled = false;
+            btnStop.Visibility = Visibility.Visible;
+
             ReflectorEventArgs args = new ReflectorEventArgs();
+            cts = new CancellationTokenSource();
+            args.CancellationToken = cts.Token;
             args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
             args.AssemblyName = tbAssembly.Text;
             args.RootDestinationFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, Const.FileNameAndDirectory.SourceDirectory));
@@ -147,6 +153,7 @@ namespace MASES.C2JReflector
         private void btnGetFolders_Click(object sender, RoutedEventArgs e)
         {
             commandPanel.IsEnabled = false;
+            btnStop.Visibility = Visibility.Visible;
 
             JavaBuilderEventArgs args = new JavaBuilderEventArgs();
             args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
@@ -195,6 +202,8 @@ namespace MASES.C2JReflector
             try
             {
                 JavaBuilderEventArgs args = new JavaBuilderEventArgs();
+                cts = new CancellationTokenSource();
+                args.CancellationToken = cts.Token;
                 args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
                 args.JDKFolder = tbJDKFolder.Text;
                 args.JDKTarget = (JDKVersion)cbTarget.SelectedValue;
@@ -203,6 +212,7 @@ namespace MASES.C2JReflector
                 args.AssembliesToUse = createList();
 
                 commandPanel.IsEnabled = false;
+                btnStop.Visibility = Visibility.Visible;
                 Task.Factory.StartNew(JavaBuilder.CompileClasses, args);
             }
             catch (Exception ex)
@@ -216,6 +226,8 @@ namespace MASES.C2JReflector
             try
             {
                 JavaBuilderEventArgs args = new JavaBuilderEventArgs();
+                cts = new CancellationTokenSource();
+                args.CancellationToken = cts.Token;
                 args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
                 args.JDKFolder = tbJDKFolder.Text;
                 args.JDKTarget = (JDKVersion)cbTarget.SelectedValue;
@@ -225,6 +237,7 @@ namespace MASES.C2JReflector
                 args.AssembliesToUse = createList();
 
                 commandPanel.IsEnabled = false;
+                btnStop.Visibility = Visibility.Visible;
                 Task.Factory.StartNew(JavaBuilder.GenerateDocs, args);
             }
             catch (Exception ex)
@@ -238,6 +251,8 @@ namespace MASES.C2JReflector
             try
             {
                 JavaBuilderEventArgs args = new JavaBuilderEventArgs();
+                cts = new CancellationTokenSource();
+                args.CancellationToken = cts.Token;
                 args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
                 args.JDKFolder = tbJDKFolder.Text;
                 args.OriginFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, Const.FileNameAndDirectory.SourceDirectory));
@@ -247,6 +262,7 @@ namespace MASES.C2JReflector
                 args.AssembliesToUse = createList();
 
                 commandPanel.IsEnabled = false;
+                btnStop.Visibility = Visibility.Visible;
                 Task.Factory.StartNew(JavaBuilder.CreateJars, args);
             }
             catch (Exception ex)
@@ -275,9 +291,16 @@ namespace MASES.C2JReflector
 
         void endOperation(object sender, EndOperationEventArgs args)
         {
+            if (cts != null)
+            {
+                cts.Dispose();
+                cts = null;
+            }
+
             this.Dispatcher.Invoke(() =>
             {
                 commandPanel.IsEnabled = true;
+                btnStop.Visibility = Visibility.Collapsed;
                 if (args != null)
                 {
                     tbReport.Text = args.Report;
@@ -292,6 +315,14 @@ namespace MASES.C2JReflector
             {
                 tbConsole.CaretIndex = tbConsole.Text.Length;
                 tbConsole.ScrollToEnd();
+            }
+        }
+
+        private void btnStop_Click(object sender, RoutedEventArgs e)
+        {
+            if (cts != null)
+            {
+                cts.Cancel(true);
             }
         }
     }

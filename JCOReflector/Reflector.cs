@@ -37,6 +37,7 @@ namespace MASES.C2JReflector
 
     public class ReflectorEventArgs : EventArgs
     {
+        public CancellationToken CancellationToken { get; set; }
         public LogLevel LogLevel { get; set; }
         public string AssemblyName { get; set; }
         public string RootDestinationFolder { get; set; }
@@ -75,6 +76,8 @@ namespace MASES.C2JReflector
         static List<string> assemblyReferenced = new List<string>();
         public static appendToConsoleHandler AppendToConsoleHandler;
         public static EventHandler<EndOperationEventArgs> EndOperationHandler;
+
+        static CancellationToken CancellationToken;
 
         static bool EnableWrite = true;
 
@@ -317,6 +320,7 @@ namespace MASES.C2JReflector
             location = Path.GetDirectoryName(location);
             Environment.CurrentDirectory = location;
 
+            CancellationToken = args.CancellationToken;
             LogLevel = args.LogLevel;
             RootDestinationFolder = args.RootDestinationFolder;
             CsvDestinationFolder = args.CsvDestinationFolder;
@@ -369,7 +373,6 @@ namespace MASES.C2JReflector
             catch (Exception ex)
             {
                 AppendToConsole(LogLevel.Error, "ExportAssembly report section error:{0}", ex.Message);
-
             }
             finally
             {
@@ -484,7 +487,10 @@ namespace MASES.C2JReflector
 
             if (UseParallelBuild)
             {
-                Parallel.ForEach(typesToExport, exportingPublicTypeParallel);
+                ParallelOptions po = new ParallelOptions();
+                po.CancellationToken = CancellationToken;
+                po.MaxDegreeOfParallelism = System.Environment.ProcessorCount;
+                Parallel.ForEach(typesToExport, po, exportingPublicTypeParallel);
             }
             else
             {
@@ -502,6 +508,10 @@ namespace MASES.C2JReflector
                 string assemblyname = typeToExport.Assembly.FullName;
                 string destFolder = assemblyDestinationFolder(RootDestinationFolder, new AssemblyName(assemblyname), SplitByAssembly);
                 exportingPublicType(typeToExport, destFolder, assemblyname);
+            }
+            catch (OperationCanceledException)
+            {
+                throw;
             }
             catch (Exception e)
             {
@@ -570,6 +580,8 @@ namespace MASES.C2JReflector
                 exportingClass(typeToExport, destFolder, assemblyname);
             }
             else throw new InvalidOperationException(string.Format("Unchecked and unexported type {0}", typeToExport.FullName));
+
+            CancellationToken.ThrowIfCancellationRequested();
         }
 
         static void exportingEnum(Type item, string destFolder, string assemblyname)

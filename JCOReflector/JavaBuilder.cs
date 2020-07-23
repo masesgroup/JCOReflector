@@ -147,6 +147,7 @@ namespace MASES.C2JReflector
 
     public class JavaBuilderEventArgs : EventArgs
     {
+        public CancellationToken CancellationToken { get; set; }
         public LogLevel LogLevel { get; set; }
         public string JDKFolder { get; set; }
         public JDKVersion JDKTarget { get; set; }
@@ -171,6 +172,8 @@ namespace MASES.C2JReflector
         public static appendToConsoleHandler AppendToConsoleHandler;
         public static EventHandler<EndOperationEventArgs> EndOperationHandler;
 
+        static CancellationToken CancellationToken;
+
         static LogLevel logLevel;
 
         static string reflectorVersion = typeof(JavaBuilder).Assembly.GetName().Version.ToString();
@@ -187,6 +190,7 @@ namespace MASES.C2JReflector
         {
             JavaBuilderEventArgs args = o as JavaBuilderEventArgs;
 
+            CancellationToken = args.CancellationToken;
             logLevel = args.LogLevel;
             DateTime dtStart = DateTime.Now;
             string reportStr = string.Empty;
@@ -209,7 +213,7 @@ namespace MASES.C2JReflector
         public static void GenerateDocs(object o)
         {
             JavaBuilderEventArgs args = o as JavaBuilderEventArgs;
-
+            CancellationToken = args.CancellationToken;
             logLevel = args.LogLevel;
             DateTime dtStart = DateTime.Now;
             string reportStr = string.Empty;
@@ -232,6 +236,7 @@ namespace MASES.C2JReflector
         public static AssemblyDataCollection CreateFolderList(object o)
         {
             JavaBuilderEventArgs args = o as JavaBuilderEventArgs;
+            CancellationToken = args.CancellationToken;
             logLevel = args.LogLevel;
 
             string jdkFolder = args.JDKFolder;
@@ -520,12 +525,29 @@ namespace MASES.C2JReflector
                     {
                         if (timeout == Timeout.Infinite)
                         {
-                            proc.WaitForExit();
+                            while (!proc.WaitForExit(1000))
+                            {
+                                CancellationToken.ThrowIfCancellationRequested();
+                            }
                         }
                         else if (!proc.WaitForExit(timeout * 1000))
                         {
                             AppendToConsole(LogLevel.Warning, "Timeout on operation {0} {1}. Killing it.", processToLaunch, arguments);
+                            proc.Kill();
                         }
+                    }
+                    catch (OperationCanceledException oce)
+                    {
+                        try
+                        {
+                            proc.Kill();
+                        }
+                        catch (Exception ex)
+                        {
+                            AppendToConsole(LogLevel.Error, "Error killing job: {0}", ex.Message);
+                        }
+
+                        AppendToConsole(LogLevel.Error, "Error executing job: {0}", oce.Message);
                     }
                     catch (Exception ex)
                     {
